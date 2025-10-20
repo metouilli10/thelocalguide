@@ -94,8 +94,8 @@
         <div style="position: relative; z-index: 2; text-align: center; color: white;">
             <h1 style="font-size: 64px; font-weight: 900; line-height: 0.9; letter-spacing: -0.02em; text-transform: uppercase; color: #ccff02; margin-bottom: 20px; font-stretch: condensed; font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;">
                 <span style="display: block; font-size: 24px; font-weight: 400; color: white; opacity: 0.9; text-transform: none; letter-spacing: normal; margin-bottom: 10px;">Get in</span>
-                TOUCH
-            </h1>
+            TOUCH
+        </h1>
             <p style="max-width: 800px; margin: 0 auto; font-size: 20px; color: white; opacity: 0.9; line-height: 1.6;">We're here to help you plan your perfect Morocco adventure</p>
         </div>
     </section>
@@ -104,21 +104,43 @@
     <section class="page-content">
         <div class="content-wrapper">
             <!-- Contact Form Section -->
-            <div class="contact-form-section" style="text-align: center; margin-bottom: 80px;">
-                <h1 style="font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; font-size: 2.5rem; margin-bottom: 10px; color: #1F2937; font-weight: 800;">Ready to Explore Morocco?</h1>
-                <h2 style="font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; font-size: 1.5rem; margin-bottom: 20px; color: #6B7280; font-weight: 600; letter-spacing: 1px; text-transform: uppercase;">CONTACT US NOW</h2>
-                <p style="max-width: 700px; margin: 0 auto 40px; font-size: 1.1rem; line-height: 1.8; color: #6B7280;">If you would like to book Camel Rides, Quad Biking, Paradise Valley Tours, Cultural Experiences or any other adventure, please contact us and we'll be happy to assist.</p>
+            <div class="contact-form-section" style="text-align: center; margin-bottom: 80px; padding: 60px 20px;">
+                <h1 style="font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; font-size: 48px; margin-bottom: 15px; color: #1F2937; font-weight: 900;">Ready to Explore Morocco?</h1>
+                <p style="max-width: 700px; margin: 0 auto 50px; font-size: 18px; line-height: 1.8; color: #6B7280;">Fill out the form below and we'll get back to you within 24 hours to help plan your perfect Morocco adventure.</p>
                 
-                <form class="contact-form" id="contactForm" style="max-width: 900px; margin: 0 auto;">
-                    <div class="form-row" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 20px; margin-bottom: 20px;">
-                        <input type="text" name="firstName" placeholder="Enter Your First Name" required style="width: 100%; padding: 15px; border: 1px solid #ddd; font-size: 1rem; font-family: inherit; transition: border-color 0.3s;">
-                        <input type="email" name="email" placeholder="Email Address" required style="width: 100%; padding: 15px; border: 1px solid #ddd; font-size: 1rem; font-family: inherit; transition: border-color 0.3s;">
-                        <input type="tel" name="phone" placeholder="Mobile Number" required style="width: 100%; padding: 15px; border: 1px solid #ddd; font-size: 1rem; font-family: inherit; transition: border-color 0.3s;">
+                <form class="contact-form" id="contactForm" style="max-width: 800px; margin: 0 auto; background: white; padding: 50px; border-radius: 16px; box-shadow: 0 10px 40px rgba(0,0,0,0.1);">
+                    <div class="form-row" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 25px; margin-bottom: 25px;">
+                        <div>
+                            <label style="display: block; text-align: left; margin-bottom: 8px; font-weight: 600; color: #1F2937; font-size: 14px;">First Name *</label>
+                            <input type="text" name="firstName" placeholder="John" required style="width: 100%; padding: 16px; border: 2px solid #E5E7EB; border-radius: 8px; font-size: 16px; font-family: inherit; transition: all 0.3s; background: #F9FAFB;">
                         </div>
-                    <textarea name="message" placeholder="Tell us about your ideal Morocco adventure..." rows="5" required style="width: 100%; padding: 15px; border: 1px solid #ddd; font-size: 1rem; font-family: inherit; transition: border-color 0.3s; margin-bottom: 20px;"></textarea>
-                    <button type="submit" class="submit-button" style="background: #cdff03; color: #000000; padding: 16px 32px; font-size: 1rem; font-weight: 700; letter-spacing: 1px; border: none; border-radius: 6px; cursor: pointer; transition: all 0.3s; text-transform: uppercase;">Submit</button>
-                    </form>
+                        <div>
+                            <label style="display: block; text-align: left; margin-bottom: 8px; font-weight: 600; color: #1F2937; font-size: 14px;">Email Address *</label>
+                            <input type="email" name="email" placeholder="john@example.com" required style="width: 100%; padding: 16px; border: 2px solid #E5E7EB; border-radius: 8px; font-size: 16px; font-family: inherit; transition: all 0.3s; background: #F9FAFB;">
                 </div>
+                    </div>
+                    
+                    <div style="margin-bottom: 25px;">
+                        <label style="display: block; text-align: left; margin-bottom: 8px; font-weight: 600; color: #1F2937; font-size: 14px;">Phone Number *</label>
+                        <input type="tel" name="phone" placeholder="+212 XXX XXX XXX" required style="width: 100%; padding: 16px; border: 2px solid #E5E7EB; border-radius: 8px; font-size: 16px; font-family: inherit; transition: all 0.3s; background: #F9FAFB;">
+                    </div>
+
+                    <div style="margin-bottom: 30px;">
+                        <label style="display: block; text-align: left; margin-bottom: 8px; font-weight: 600; color: #1F2937; font-size: 14px;">Your Message *</label>
+                        <textarea name="message" placeholder="Tell us about your ideal Morocco adventure - which tours interest you, travel dates, group size, special requests..." rows="6" required style="width: 100%; padding: 16px; border: 2px solid #E5E7EB; border-radius: 8px; font-size: 16px; font-family: inherit; transition: all 0.3s; background: #F9FAFB; resize: vertical; min-height: 150px;"></textarea>
+                    </div>
+                    
+                    <button type="submit" class="submit-button" style="background: #cdff03; color: #000000; padding: 18px 48px; font-size: 16px; font-weight: 700; letter-spacing: 0.5px; border: none; border-radius: 8px; cursor: pointer; transition: all 0.3s; text-transform: uppercase; width: 100%; max-width: 300px;">
+                        Send Message
+                    </button>
+                    
+                    <p style="margin-top: 25px; font-size: 14px; color: #6B7280;">
+                        Or contact us directly via 
+                        <a href="https://wa.me/212636372101" style="color: #8B5CF6; font-weight: 600; text-decoration: none;">WhatsApp</a> or 
+                        <a href="tel:+212636372101" style="color: #8B5CF6; font-weight: 600; text-decoration: none;">Phone</a>
+                    </p>
+                </form>
+            </div>
 
         </div>
     </section>
@@ -244,28 +266,69 @@
             font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Lato', 'Helvetica Neue', Arial, sans-serif;
         }
         
-        /* Submit Button Hover Effect */
+        /* Contact Form Wrapper */
+        .contact-form {
+            position: relative;
+        }
+        
+        /* Form Input Styling */
+        .contact-form input,
+        .contact-form textarea {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+        }
+        
+        .contact-form input:focus,
+        .contact-form textarea:focus {
+            border-color: #cdff03 !important;
+            background: #ffffff !important;
+            outline: none;
+            box-shadow: 0 0 0 3px rgba(205, 255, 3, 0.1);
+        }
+        
+        .contact-form input:hover,
+        .contact-form textarea:hover {
+            border-color: #cdff03;
+        }
+        
+        /* Submit Button Styling */
+        .submit-button {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+        }
+        
         .submit-button:hover {
             background: #b8e600 !important;
-            transform: translateY(-1px);
-            box-shadow: 0 4px 12px rgba(205, 255, 3, 0.3);
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(205, 255, 3, 0.4);
         }
         
-        /* Instagram Button Hover Effect */
-        .instagram-section a:hover {
-            background: #b8e600 !important;
-            transform: translateY(-1px);
+        .submit-button:active {
+            transform: translateY(0);
         }
         
-        /* Form Input Focus States */
-        input:focus, textarea:focus {
-            border-color: #cdff03 !important;
-            outline: none;
+        /* Label Animation */
+        .contact-form label {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
         }
         
         /* Link Hover Effects */
-        .contact-info a:hover {
+        .contact-form a:hover {
             color: #7C3AED !important;
+            text-decoration: underline;
+        }
+        
+        /* Mobile Responsive */
+        @media (max-width: 768px) {
+            .contact-form {
+                padding: 30px 20px !important;
+            }
+            
+            .contact-form-section h1 {
+                font-size: 32px !important;
+            }
+            
+            .contact-form-section p {
+                font-size: 16px !important;
+            }
         }
     </style>
 

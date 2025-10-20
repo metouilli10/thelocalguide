@@ -880,7 +880,61 @@
             .footer-section h3 {
                 font-size: 12px;
             }
-        }</style>
+        }
+
+        /* Service Filter Buttons */
+        .service-btn {
+            transition: all 0.3s ease;
+            border: 2px solid #e5e5e5;
+            background: white;
+            color: #1F2937;
+            padding: 12px 24px;
+            border-radius: 6px;
+            font-weight: 600;
+            cursor: pointer;
+            margin: 5px;
+            font-size: 14px;
+        }
+        
+        .service-btn:hover {
+            border-color: #cdff03;
+            background: #cdff03;
+            color: #000000;
+            transform: translateY(-1px);
+        }
+        
+        .service-btn.active {
+            background: #cdff03;
+            color: #000000;
+            border-color: #cdff03;
+        }
+
+        /* Tour Card Hover Effects */
+        .tour-card {
+            transition: all 0.3s ease;
+        }
+        
+        .tour-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 8px 24px rgba(0,0,0,0.12) !important;
+        }
+
+        /* Tour Card Button Hover */
+        .tour-card a[href*="tour-"],
+        .tour-card a[href*="day-trip-"],
+        .tour-card a[href*="contact"] {
+            transition: all 0.3s ease;
+        }
+        
+        .tour-card a[href*="tour-"]:hover,
+        .tour-card a[href*="day-trip-"]:hover,
+        .tour-card a[href*="contact"]:hover {
+            background: #b8e600 !important;
+            color: #000000 !important;
+            transform: translateY(-1px);
+            box-shadow: 0 4px 12px rgba(205, 255, 3, 0.3);
+        }
+    </style>
 </head>
 <body>
     <!-- TOPBAR -->
@@ -939,418 +993,312 @@
     </section>
 
     <!-- Main Content -->
-    <div class="guide-content-wrapper">
-        <!-- Breadcrumb -->
-        <div class="breadcrumb">
-            <a href="index.html">Home</a> / <span>Day Trips from Agadir</span>
+    <section class="page-content">
+        <div class="content-wrapper">
+            <!-- Filter/Category Section -->
+            <div style="text-align: center; margin-bottom: 60px;">
+                <h3 class="section-subtitle" style="font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; font-size: 36px; font-weight: 800; color: #1F2937; margin-bottom: 10px;">Browse by Destination</h3>
+                <div class="service-buttons" style="margin-top: 30px;">
+                    <button class="service-btn active" data-category="all">All Day Trips</button>
+                    <button class="service-btn" data-category="coastal">Coastal Towns</button>
+                    <button class="service-btn" data-category="imperial">Imperial Cities</button>
+                    <button class="service-btn" data-category="nature">Nature & Valleys</button>
+                    <button class="service-btn" data-category="berber">Berber Villages</button>
+                </div>
         </div>
 
-        <!-- Introduction -->
-        <section class="intro-section">
-            <h2>Explore Morocco's Best Destinations from Agadir</h2>
-            <p>
-                Agadir's strategic location in southern Morocco makes it the perfect base for exploring some of the country's most spectacular destinations. Whether you're craving the UNESCO charm of Essaouira, the imperial majesty of Marrakech, or the serene beauty of Paradise Valley, you can reach all these incredible places within a few hours.
-            </p>
-            <p>
-                Our expertly curated <strong>day trips from Agadir</strong> offer comfortable transportation, professional local guides, and carefully planned itineraries that maximize your experience. From half-day adventures to full-day excursions, we've designed each trip to showcase the best of Morocco while ensuring you return to your Agadir hotel in the evening.
-            </p>
-            <p>
-                Below you'll find detailed information on the <strong>10 best day trips from Agadir</strong>, including distances, prices, highlights, and what to expect. All tours include hotel pickup/drop-off, professional guides, and are available year-round with flexible cancellation policies.
-            </p>
-        </section>
-
-        <!-- Quick Navigation -->
-        <div class="quick-nav">
-            <h3>🗺️ Jump to Destination</h3>
-            <div class="quick-nav-grid">
-                <div class="quick-nav-item" onclick="document.getElementById('coastal-trips').scrollIntoView({behavior: 'smooth'})">
-                    <span>🌊</span>
-                    <p>Coastal Towns</p>
+            <!-- Tours Grid -->
+            <div class="tours-grid" style="display: grid; grid-template-columns: repeat(auto-fill, minmax(350px, 1fr)); gap: 30px; margin-bottom: 80px;">
+                <!-- Essaouira -->
+                <div class="tour-card" data-category="coastal">
+                    <div class="tour-image-wrapper" style="position: relative;">
+                        <img src="img/morocco-coastal-2.jpg" alt="Essaouira Day Trip" style="width: 100%; height: 250px; object-fit: cover; border-radius: 10px 10px 0 0;">
+                        <div class="tour-badge" style="position: absolute; top: 15px; right: 15px; background: #e74c3c; color: white; padding: 5px 12px; border-radius: 20px; font-size: 12px; font-weight: 700;">MOST POPULAR</div>
+                        <div class="tour-duration" style="position: absolute; bottom: 15px; left: 15px; background: rgba(255,255,255,0.95); padding: 5px 12px; border-radius: 15px; font-size: 13px; font-weight: 600;">10-11 Hours</div>
                 </div>
-                <div class="quick-nav-item" onclick="document.getElementById('imperial-cities').scrollIntoView({behavior: 'smooth'})">
-                    <span>🏛️</span>
-                    <p>Imperial Cities</p>
+                    <div class="tour-content" style="padding: 25px; background: white; border-radius: 0 0 10px 10px; box-shadow: 0 4px 20px rgba(0,0,0,0.1);">
+                        <div style="display: flex; align-items: center; gap: 8px; margin-bottom: 12px;">
+                            <div style="color: #f39c12; font-size: 14px;">★★★★★</div>
+                            <span style="font-weight: 600; color: #333; font-size: 14px;">4.8 (445 reviews)</span>
                 </div>
-                <div class="quick-nav-item" onclick="document.getElementById('nature-valleys').scrollIntoView({behavior: 'smooth'})">
-                    <span>🏞️</span>
-                    <p>Nature & Valleys</p>
+                        <h3 style="font-size: 1.4rem; font-weight: 700; color: #1F2937; margin-bottom: 12px;">Essaouira Day Trip</h3>
+                        <p style="color: #6B7280; line-height: 1.6; margin-bottom: 15px; font-size: 15px;">Discover the UNESCO coastal city of Essaouira - famous for Game of Thrones filming, fresh seafood, artisan workshops, and stunning beach ramparts.</p>
+                        <div style="display: flex; gap: 15px; margin-bottom: 15px; font-size: 13px; color: #6B7280;">
+                            <span>🚗 Hotel Pickup</span>
+                            <span>🏛️ UNESCO Site</span>
+                            <span>🍽️ Seafood Lunch</span>
                 </div>
-                <div class="quick-nav-item" onclick="document.getElementById('berber-villages').scrollIntoView({behavior: 'smooth'})">
-                    <span>🏔️</span>
-                    <p>Berber Villages</p>
+                        <div style="display: flex; justify-content: space-between; align-items: center; padding-top: 15px; border-top: 1px solid #eee;">
+                            <div>
+                                <span style="font-size: 1.5rem; font-weight: 700; color: #1F2937;">€45</span>
+                                <span style="font-size: 14px; color: #999;"> / person</span>
                 </div>
+                            <a href="day-trip-essaouira-from-agadir.html" style="background: #cdff03; color: #000000; padding: 12px 24px; border-radius: 6px; font-weight: 700; font-size: 14px; text-decoration: none; transition: all 0.3s;">View Tour</a>
             </div>
         </div>
-
-        <!-- CATEGORY 1: Coastal Day Trips -->
-        <section id="coastal-trips" class="category-section">
-            <div class="category-header">
-                <span class="category-icon">🌊</span>
-                <h2>Coastal Day Trips</h2>
             </div>
             
-            <div class="trips-grid">
-                <!-- Essaouira -->
-                <div class="trip-card">
-                    <div class="trip-image">
-                        <img src="img/morocco-coastal-2.jpg" alt="Essaouira blue and white medina UNESCO site">
-                        <span class="trip-badge">Most Popular</span>
-                        <span class="distance-badge">🚗 180km / 3hrs</span>
-                    </div>
-                    <div class="trip-content">
-                        <h3 class="trip-title">Essaouira Day Trip</h3>
-                        <p class="trip-subtitle">UNESCO World Heritage Coastal Gem</p>
-                        <p class="trip-description">
-                            Discover the enchanting blue and white coastal city of Essaouira, famous for Game of Thrones filming, fresh seafood, artisan workshops, and stunning beach ramparts. Wander the UNESCO-listed medina, watch fishermen unload the daily catch, shop for local crafts, and enjoy panoramic ocean views. The perfect blend of culture, history, and seaside charm!
-                        </p>
-                        <div class="trip-highlights">
-                            <h4>Trip Highlights:</h4>
-                            <ul>
-                                <li>UNESCO World Heritage medina exploration</li>
-                                <li>Historic Portuguese ramparts with ocean views</li>
-                                <li>Fresh seafood lunch at the harbor</li>
-                                <li>Artisan workshops (woodwork, jewelry, textiles)</li>
-                                <li>Photo stop at iconic "goat trees"</li>
-                                <li>Free time for shopping and beach stroll</li>
-                            </ul>
-                        </div>
-                        <div class="trip-meta">
-                            <span class="trip-meta-item">⏱️ 10-11 hours</span>
-                            <span class="trip-meta-item">⭐ 4.8/5 (445 reviews)</span>
-                        </div>
-                        <div class="trip-price">From €45-50/person</div>
-                        <a href="contact.html" class="trip-link">Get Information & Book</a>
-                    </div>
-                </div>
-
                 <!-- Legzira Beach -->
-                <div class="trip-card">
-                    <div class="trip-image">
-                        <img src="img/morocco-horizon-4.jpg" alt="Legzira beach red rock arches">
-                        <span class="trip-badge">Instagram Spot</span>
-                        <span class="distance-badge">🚗 100km / 1.5hrs</span>
+                <div class="tour-card" data-category="coastal">
+                    <div class="tour-image-wrapper" style="position: relative;">
+                        <img src="img/morocco-horizon-4.jpg" alt="Legzira Beach" style="width: 100%; height: 250px; object-fit: cover; border-radius: 10px 10px 0 0;">
+                        <div class="tour-badge" style="position: absolute; top: 15px; right: 15px; background: #9b59b6; color: white; padding: 5px 12px; border-radius: 20px; font-size: 12px; font-weight: 700;">INSTAGRAM SPOT</div>
+                        <div class="tour-duration" style="position: absolute; bottom: 15px; left: 15px; background: rgba(255,255,255,0.95); padding: 5px 12px; border-radius: 15px; font-size: 13px; font-weight: 600;">8-9 Hours</div>
                     </div>
-                    <div class="trip-content">
-                        <h3 class="trip-title">Legzira Beach & Tiznit</h3>
-                        <p class="trip-subtitle">Morocco's Most Photogenic Beach</p>
-                        <p class="trip-description">
-                            Visit the stunning Legzira Beach with its dramatic red cliff arches and rock formations rising from golden sands. This geological wonder offers incredible photo opportunities, especially at sunset. Combined with a visit to Tiznit, the "Silver City," famous for traditional Berber silver jewelry and ancient fortified walls. Less touristy than Essaouira but equally spectacular!
-                        </p>
-                        <div class="trip-highlights">
-                            <h4>Trip Highlights:</h4>
-                            <ul>
-                                <li>Spectacular red rock arches (natural wonder)</li>
-                                <li>Beach walk and swimming in Atlantic</li>
-                                <li>Tiznit silver souk and jewelry workshops</li>
-                                <li>Ancient city walls and traditional medina</li>
-                                <li>Sunset photography opportunities</li>
-                                <li>Berber culture and craftsmanship</li>
-                            </ul>
+                    <div class="tour-content" style="padding: 25px; background: white; border-radius: 0 0 10px 10px; box-shadow: 0 4px 20px rgba(0,0,0,0.1);">
+                        <div style="display: flex; align-items: center; gap: 8px; margin-bottom: 12px;">
+                            <div style="color: #f39c12; font-size: 14px;">★★★★★</div>
+                            <span style="font-weight: 600; color: #333; font-size: 14px;">4.7 (167 reviews)</span>
                         </div>
-                        <div class="trip-meta">
-                            <span class="trip-meta-item">⏱️ 8-9 hours</span>
-                            <span class="trip-meta-item">⭐ 4.7/5 (167 reviews)</span>
+                        <h3 style="font-size: 1.4rem; font-weight: 700; color: #1F2937; margin-bottom: 12px;">Legzira Beach & Tiznit</h3>
+                        <p style="color: #6B7280; line-height: 1.6; margin-bottom: 15px; font-size: 15px;">Stunning red cliff arches at Legzira Beach combined with Tiznit silver city. Perfect for photography and traditional Berber crafts shopping.</p>
+                        <div style="display: flex; gap: 15px; margin-bottom: 15px; font-size: 13px; color: #6B7280;">
+                            <span>🚗 Hotel Pickup</span>
+                            <span>📸 Photo Paradise</span>
+                            <span>🏖️ Beach Time</span>
                         </div>
-                        <div class="trip-price">From €40-45/person</div>
-                        <a href="contact.html" class="trip-link">Get Information & Book</a>
+                        <div style="display: flex; justify-content: space-between; align-items: center; padding-top: 15px; border-top: 1px solid #eee;">
+                            <div>
+                                <span style="font-size: 1.5rem; font-weight: 700; color: #1F2937;">€40</span>
+                                <span style="font-size: 14px; color: #999;"> / person</span>
+                    </div>
+                            <a href="contact.html" style="background: #cdff03; color: #000000; padding: 12px 24px; border-radius: 6px; font-weight: 700; font-size: 14px; text-decoration: none; transition: all 0.3s;">View Tour</a>
+                </div>
                     </div>
                 </div>
 
                 <!-- Sidi Ifni -->
-                <div class="trip-card">
-                    <div class="trip-image">
-                        <img src="img/morocco-coastal-2.jpg" alt="Sidi Ifni Spanish colonial architecture">
-                        <span class="trip-badge">Hidden Gem</span>
-                        <span class="distance-badge">🚗 170km / 2.5hrs</span>
+                <div class="tour-card" data-category="coastal">
+                    <div class="tour-image-wrapper" style="position: relative;">
+                        <img src="img/morocco-coastal-2.jpg" alt="Sidi Ifni" style="width: 100%; height: 250px; object-fit: cover; border-radius: 10px 10px 0 0;">
+                        <div class="tour-badge" style="position: absolute; top: 15px; right: 15px; background: #27ae60; color: white; padding: 5px 12px; border-radius: 20px; font-size: 12px; font-weight: 700;">HIDDEN GEM</div>
+                        <div class="tour-duration" style="position: absolute; bottom: 15px; left: 15px; background: rgba(255,255,255,0.95); padding: 5px 12px; border-radius: 15px; font-size: 13px; font-weight: 600;">9-10 Hours</div>
                     </div>
-                    <div class="trip-content">
-                        <h3 class="trip-title">Sidi Ifni Coastal Town</h3>
-                        <p class="trip-subtitle">Spanish Colonial Charm & Wild Beaches</p>
-                        <p class="trip-description">
-                            Explore the unique coastal town of Sidi Ifni, featuring distinctive Spanish Art Deco architecture from its colonial past. This off-the-beaten-path destination offers dramatic clifftop views, pristine beaches, authentic local culture, and some of Morocco's freshest seafood. Perfect for travelers seeking authentic experiences away from tourist crowds. The town's blend of Moroccan and Spanish influences creates a fascinating cultural atmosphere.
-                        </p>
-                        <div class="trip-highlights">
-                            <h4>Trip Highlights:</h4>
-                            <ul>
-                                <li>Spanish Art Deco colonial architecture</li>
-                                <li>Dramatic clifftop Atlantic coastline</li>
-                                <li>Local fish market and seafood lunch</li>
-                                <li>Authentic Moroccan-Spanish fusion culture</li>
-                                <li>Uncrowded beaches and coastal walks</li>
-                                <li>Photography of unique buildings</li>
-                            </ul>
+                    <div class="tour-content" style="padding: 25px; background: white; border-radius: 0 0 10px 10px; box-shadow: 0 4px 20px rgba(0,0,0,0.1);">
+                        <div style="display: flex; align-items: center; gap: 8px; margin-bottom: 12px;">
+                            <div style="color: #f39c12; font-size: 14px;">★★★★☆</div>
+                            <span style="font-weight: 600; color: #333; font-size: 14px;">4.6 (112 reviews)</span>
                         </div>
-                        <div class="trip-meta">
-                            <span class="trip-meta-item">⏱️ 9-10 hours</span>
-                            <span class="trip-meta-item">⭐ 4.6/5 (112 reviews)</span>
+                        <h3 style="font-size: 1.4rem; font-weight: 700; color: #1F2937; margin-bottom: 12px;">Sidi Ifni Coastal Town</h3>
+                        <p style="color: #6B7280; line-height: 1.6; margin-bottom: 15px; font-size: 15px;">Unique Spanish Art Deco architecture, dramatic clifftop views, pristine beaches, and authentic local culture. Off-the-beaten-path coastal gem.</p>
+                        <div style="display: flex; gap: 15px; margin-bottom: 15px; font-size: 13px; color: #6B7280;">
+                            <span>🚗 Hotel Pickup</span>
+                            <span>🏛️ Architecture</span>
+                            <span>🍽️ Fresh Seafood</span>
                         </div>
-                        <div class="trip-price">From €50-55/person</div>
-                        <a href="contact.html" class="trip-link">Get Information & Book</a>
+                        <div style="display: flex; justify-content: space-between; align-items: center; padding-top: 15px; border-top: 1px solid #eee;">
+                            <div>
+                                <span style="font-size: 1.5rem; font-weight: 700; color: #1F2937;">€50</span>
+                                <span style="font-size: 14px; color: #999;"> / person</span>
                     </div>
+                            <a href="contact.html" style="background: #cdff03; color: #000000; padding: 12px 24px; border-radius: 6px; font-weight: 700; font-size: 14px; text-decoration: none; transition: all 0.3s;">View Tour</a>
                 </div>
             </div>
-        </section>
-
-        <!-- CATEGORY 2: Imperial Cities -->
-        <section id="imperial-cities" class="category-section">
-            <div class="category-header">
-                <span class="category-icon">🏛️</span>
-                <h2>Imperial Cities & Historic Towns</h2>
             </div>
             
-            <div class="trips-grid">
                 <!-- Marrakech -->
-                <div class="trip-card">
-                    <div class="trip-image">
-                        <img src="img/morocco-market.jpg" alt="Marrakech Jemaa el-Fnaa square and souks">
-                        <span class="trip-badge">Bucket List</span>
-                        <span class="distance-badge">🚗 250km / 3hrs</span>
+                <div class="tour-card" data-category="imperial">
+                    <div class="tour-image-wrapper" style="position: relative;">
+                        <img src="img/morocco-market.jpg" alt="Marrakech Day Trip" style="width: 100%; height: 250px; object-fit: cover; border-radius: 10px 10px 0 0;">
+                        <div class="tour-badge" style="position: absolute; top: 15px; right: 15px; background: #3498db; color: white; padding: 5px 12px; border-radius: 20px; font-size: 12px; font-weight: 700;">BUCKET LIST</div>
+                        <div class="tour-duration" style="position: absolute; bottom: 15px; left: 15px; background: rgba(255,255,255,0.95); padding: 5px 12px; border-radius: 15px; font-size: 13px; font-weight: 600;">12-13 Hours</div>
                     </div>
-                    <div class="trip-content">
-                        <h3 class="trip-title">Marrakech Day Trip</h3>
-                        <p class="trip-subtitle">The Red City - Morocco's Most Famous Destination</p>
-                        <p class="trip-description">
-                            Experience the magic of Marrakech in a single day! Explore the iconic Red City with visits to Koutoubia Mosque, stunning Bahia Palace with intricate tilework, colorful souks filled with spices and treasures, and the legendary Jemaa el-Fnaa square with snake charmers, food stalls, and storytellers. Drive through scenic Atlas Mountains with Berber villages and breathtaking mountain passes. An unforgettable sensory journey!
-                        </p>
-                        <div class="trip-highlights">
-                            <h4>Trip Highlights:</h4>
-                            <ul>
-                                <li>Koutoubia Mosque (77m minaret landmark)</li>
-                                <li>Bahia Palace with stunning architecture</li>
-                                <li>Bustling souks (spices, carpets, leather goods)</li>
-                                <li>Jemaa el-Fnaa square (UNESCO site)</li>
-                                <li>Scenic Atlas Mountains drive</li>
-                                <li>Traditional Moroccan lunch included</li>
-                            </ul>
+                    <div class="tour-content" style="padding: 25px; background: white; border-radius: 0 0 10px 10px; box-shadow: 0 4px 20px rgba(0,0,0,0.1);">
+                        <div style="display: flex; align-items: center; gap: 8px; margin-bottom: 12px;">
+                            <div style="color: #f39c12; font-size: 14px;">★★★★★</div>
+                            <span style="font-weight: 600; color: #333; font-size: 14px;">4.7 (689 reviews)</span>
                         </div>
-                        <div class="trip-meta">
-                            <span class="trip-meta-item">⏱️ 12-13 hours</span>
-                            <span class="trip-meta-item">⭐ 4.7/5 (689 reviews)</span>
+                        <h3 style="font-size: 1.4rem; font-weight: 700; color: #1F2937; margin-bottom: 12px;">Marrakech Day Trip</h3>
+                        <p style="color: #6B7280; line-height: 1.6; margin-bottom: 15px; font-size: 15px;">Explore the Red City's famous souks, palaces, and gardens. Visit Jemaa el-Fnaa square and experience authentic Marrakech with a local guide.</p>
+                        <div style="display: flex; gap: 15px; margin-bottom: 15px; font-size: 13px; color: #6B7280;">
+                            <span>🚗 Hotel Pickup</span>
+                            <span>🏛️ UNESCO Sites</span>
+                            <span>🍽️ Lunch Included</span>
                         </div>
-                        <div class="trip-price">From €50-55/person</div>
-                        <a href="contact.html" class="trip-link">Get Information & Book</a>
+                        <div style="display: flex; justify-content: space-between; align-items: center; padding-top: 15px; border-top: 1px solid #eee;">
+                            <div>
+                                <span style="font-size: 1.5rem; font-weight: 700; color: #1F2937;">€50</span>
+                                <span style="font-size: 14px; color: #999;"> / person</span>
+                            </div>
+                            <a href="day-trip-marrakech-from-agadir.html" style="background: #cdff03; color: #000000; padding: 12px 24px; border-radius: 6px; font-weight: 700; font-size: 14px; text-decoration: none; transition: all 0.3s;">View Tour</a>
+                        </div>
                     </div>
                 </div>
 
                 <!-- Taroudant -->
-                <div class="trip-card">
-                    <div class="trip-image">
-                        <img src="img/berber-village.jpg" alt="Taroudant ancient ramparts and medina">
-                        <span class="trip-badge">Authentic</span>
-                        <span class="distance-badge">🚗 85km / 1.5hrs</span>
+                <div class="tour-card" data-category="imperial">
+                    <div class="tour-image-wrapper" style="position: relative;">
+                        <img src="img/berber-village.jpg" alt="Taroudant" style="width: 100%; height: 250px; object-fit: cover; border-radius: 10px 10px 0 0;">
+                        <div class="tour-badge" style="position: absolute; top: 15px; right: 15px; background: #af9461; color: white; padding: 5px 12px; border-radius: 20px; font-size: 12px; font-weight: 700;">AUTHENTIC</div>
+                        <div class="tour-duration" style="position: absolute; bottom: 15px; left: 15px; background: rgba(255,255,255,0.95); padding: 5px 12px; border-radius: 15px; font-size: 13px; font-weight: 600;">6-7 Hours</div>
                     </div>
-                    <div class="trip-content">
-                        <h3 class="trip-title">Taroudant - "Mini Marrakech"</h3>
-                        <p class="trip-subtitle">Grandmother of Marrakech</p>
-                        <p class="trip-description">
-                            Discover the walled city of Taroudant, nicknamed "Mini Marrakech" but with far fewer tourists and more authentic charm! Explore 7km of ochre ramparts dating back centuries, wander Arab and Berber souks where locals still shop, visit women's argan oil cooperatives, and experience genuine Moroccan hospitality. Just 1.5 hours from Agadir, this makes for a perfect half-day or full-day cultural escape at a relaxed pace.
-                        </p>
-                        <div class="trip-highlights">
-                            <h4>Trip Highlights:</h4>
-                            <ul>
-                                <li>7km of ancient ramparts (walk or horse carriage)</li>
-                                <li>Two authentic souks (Arab & Berber markets)</li>
-                                <li>Argan oil cooperative visit and tasting</li>
-                                <li>Traditional tanneries and craft workshops</li>
-                                <li>Less touristy, more affordable shopping</li>
-                                <li>Beautiful mountain backdrop views</li>
-                            </ul>
+                    <div class="tour-content" style="padding: 25px; background: white; border-radius: 0 0 10px 10px; box-shadow: 0 4px 20px rgba(0,0,0,0.1);">
+                        <div style="display: flex; align-items: center; gap: 8px; margin-bottom: 12px;">
+                            <div style="color: #f39c12; font-size: 14px;">★★★★☆</div>
+                            <span style="font-weight: 600; color: #333; font-size: 14px;">4.6 (198 reviews)</span>
                         </div>
-                        <div class="trip-meta">
-                            <span class="trip-meta-item">⏱️ 6-7 hours</span>
-                            <span class="trip-meta-item">⭐ 4.6/5 (198 reviews)</span>
+                        <h3 style="font-size: 1.4rem; font-weight: 700; color: #1F2937; margin-bottom: 12px;">Taroudant - "Mini Marrakech"</h3>
+                        <p style="color: #6B7280; line-height: 1.6; margin-bottom: 15px; font-size: 15px;">Walled city with 7km of ancient ramparts, authentic Arab and Berber souks, argan oil cooperatives, and genuine Moroccan hospitality.</p>
+                        <div style="display: flex; gap: 15px; margin-bottom: 15px; font-size: 13px; color: #6B7280;">
+                            <span>🚗 Hotel Pickup</span>
+                            <span>🏛️ Ancient City</span>
+                            <span>🛍️ Local Souks</span>
                         </div>
-                        <div class="trip-price">From €35-40/person</div>
-                        <a href="contact.html" class="trip-link">Get Information & Book</a>
+                        <div style="display: flex; justify-content: space-between; align-items: center; padding-top: 15px; border-top: 1px solid #eee;">
+                            <div>
+                                <span style="font-size: 1.5rem; font-weight: 700; color: #1F2937;">€35</span>
+                                <span style="font-size: 14px; color: #999;"> / person</span>
+                            </div>
+                            <a href="day-trip-taroudant-from-agadir.html" style="background: #cdff03; color: #000000; padding: 12px 24px; border-radius: 6px; font-weight: 700; font-size: 14px; text-decoration: none; transition: all 0.3s;">View Tour</a>
+                        </div>
                     </div>
                 </div>
-            </div>
-        </section>
-
-        <!-- CATEGORY 3: Nature & Valleys -->
-        <section id="nature-valleys" class="category-section">
-            <div class="category-header">
-                <span class="category-icon">🏞️</span>
-                <h2>Nature Escapes & Valley Adventures</h2>
-            </div>
-            
-            <div class="trips-grid">
                 <!-- Paradise Valley -->
-                <div class="trip-card">
-                    <div class="trip-image">
-                        <img src="img/paradise-valley.jpg" alt="Paradise Valley natural pools and palm trees">
-                        <span class="trip-badge">Must-Do!</span>
-                        <span class="distance-badge">🚗 35km / 45min</span>
+                <div class="tour-card" data-category="nature">
+                    <div class="tour-image-wrapper" style="position: relative;">
+                        <img src="img/paradise-valley.jpg" alt="Paradise Valley" style="width: 100%; height: 250px; object-fit: cover; border-radius: 10px 10px 0 0;">
+                        <div class="tour-badge" style="position: absolute; top: 15px; right: 15px; background: #e74c3c; color: white; padding: 5px 12px; border-radius: 20px; font-size: 12px; font-weight: 700;">MUST-DO!</div>
+                        <div class="tour-duration" style="position: absolute; bottom: 15px; left: 15px; background: rgba(255,255,255,0.95); padding: 5px 12px; border-radius: 15px; font-size: 13px; font-weight: 600;">4-5 Hours</div>
+            </div>
+                    <div class="tour-content" style="padding: 25px; background: white; border-radius: 0 0 10px 10px; box-shadow: 0 4px 20px rgba(0,0,0,0.1);">
+                        <div style="display: flex; align-items: center; gap: 8px; margin-bottom: 12px;">
+                            <div style="color: #f39c12; font-size: 14px;">★★★★★</div>
+                            <span style="font-weight: 600; color: #333; font-size: 14px;">4.9 (523 reviews)</span>
+            </div>
+                        <h3 style="font-size: 1.4rem; font-weight: 700; color: #1F2937; margin-bottom: 12px;">Paradise Valley Day Trip</h3>
+                        <p style="color: #6B7280; line-height: 1.6; margin-bottom: 15px; font-size: 15px;">Crystal-clear natural pools for swimming, hiking through palm gorges, and optional cliff jumping. Morocco's most beautiful natural oasis!</p>
+                        <div style="display: flex; gap: 15px; margin-bottom: 15px; font-size: 13px; color: #6B7280;">
+                            <span>🚗 Hotel Pickup</span>
+                            <span>🏊 Swimming</span>
+                            <span>📸 Photo Paradise</span>
                     </div>
-                    <div class="trip-content">
-                        <h3 class="trip-title">Paradise Valley Day Trip</h3>
-                        <p class="trip-subtitle">Morocco's Hidden Oasis</p>
-                        <p class="trip-description">
-                            Escape to Morocco's most beautiful natural oasis! Paradise Valley truly lives up to its name with stunning gorges surrounded by palm trees, crystal-clear natural pools perfect for swimming, dramatic cliffs ideal for adventurous cliff jumping (optional!), and peaceful hiking trails through breathtaking scenery. Just 45 minutes from Agadir but feels a world away. Perfect for nature lovers, photographers, and anyone seeking refreshing mountain beauty.
-                        </p>
-                        <div class="trip-highlights">
-                            <h4>Trip Highlights:</h4>
-                            <ul>
-                                <li>Crystal-clear natural pools for swimming</li>
-                                <li>Hiking through stunning palm gorges</li>
-                                <li>Optional cliff jumping (various heights)</li>
-                                <li>Photo opportunities at every turn</li>
-                                <li>Peaceful escape from city life</li>
-                                <li>Local guide sharing valley secrets</li>
-                            </ul>
+                        <div style="display: flex; justify-content: space-between; align-items: center; padding-top: 15px; border-top: 1px solid #eee;">
+                            <div>
+                                <span style="font-size: 1.5rem; font-weight: 700; color: #1F2937;">€35</span>
+                                <span style="font-size: 14px; color: #999;"> / person</span>
                         </div>
-                        <div class="trip-meta">
-                            <span class="trip-meta-item">⏱️ 4-5 hours</span>
-                            <span class="trip-meta-item">⭐ 4.9/5 (523 reviews)</span>
+                            <a href="tour-paradise-valley-agadir.html" style="background: #cdff03; color: #000000; padding: 12px 24px; border-radius: 6px; font-weight: 700; font-size: 14px; text-decoration: none; transition: all 0.3s;">View Tour</a>
                         </div>
-                        <div class="trip-price">From €35/person</div>
-                        <a href="tour-paradise-valley-agadir.html" class="trip-link">View Details & Book</a>
                     </div>
                 </div>
 
                 <!-- Immouzer Waterfall -->
-                <div class="trip-card">
-                    <div class="trip-image">
-                        <img src="img/morocco-week-3.jpg" alt="Immouzer waterfall and countryside">
-                        <span class="trip-badge">Seasonal</span>
-                        <span class="distance-badge">🚗 60km / 1.5hrs</span>
+                <div class="tour-card" data-category="nature">
+                    <div class="tour-image-wrapper" style="position: relative;">
+                        <img src="img/morocco-week-3.jpg" alt="Immouzer Waterfall" style="width: 100%; height: 250px; object-fit: cover; border-radius: 10px 10px 0 0;">
+                        <div class="tour-badge" style="position: absolute; top: 15px; right: 15px; background: #f39c12; color: white; padding: 5px 12px; border-radius: 20px; font-size: 12px; font-weight: 700;">SEASONAL</div>
+                        <div class="tour-duration" style="position: absolute; bottom: 15px; left: 15px; background: rgba(255,255,255,0.95); padding: 5px 12px; border-radius: 15px; font-size: 13px; font-weight: 600;">6-7 Hours</div>
                     </div>
-                    <div class="trip-content">
-                        <h3 class="trip-title">Immouzer Waterfall & Honey Route</h3>
-                        <p class="trip-subtitle">Mountain Village & Natural Cascades</p>
-                        <p class="trip-description">
-                            Journey to the picturesque mountain village of Immouzer, famous for its seasonal waterfall (best February-May), honey production, and beautiful almond blossoms in spring. Drive through stunning mountain landscapes with argan tree groves, visit local honey cooperatives to taste different varieties, explore the waterfall area, and enjoy authentic Berber hospitality. A perfect combination of nature, culture, and local products!
-                        </p>
-                        <div class="trip-highlights">
-                            <h4>Trip Highlights:</h4>
-                            <ul>
-                                <li>Seasonal waterfall (40m cascade)</li>
-                                <li>Traditional honey farm visits and tasting</li>
-                                <li>Scenic mountain drive through argan forests</li>
-                                <li>Berber village exploration</li>
-                                <li>Almond blossom season (February-March)</li>
-                                <li>Local honey and argan products to buy</li>
-                            </ul>
+                    <div class="tour-content" style="padding: 25px; background: white; border-radius: 0 0 10px 10px; box-shadow: 0 4px 20px rgba(0,0,0,0.1);">
+                        <div style="display: flex; align-items: center; gap: 8px; margin-bottom: 12px;">
+                            <div style="color: #f39c12; font-size: 14px;">★★★★☆</div>
+                            <span style="font-weight: 600; color: #333; font-size: 14px;">4.5 (142 reviews)</span>
                         </div>
-                        <div class="trip-meta">
-                            <span class="trip-meta-item">⏱️ 6-7 hours</span>
-                            <span class="trip-meta-item">⭐ 4.5/5 (142 reviews)</span>
+                        <h3 style="font-size: 1.4rem; font-weight: 700; color: #1F2937; margin-bottom: 12px;">Immouzer Waterfall & Honey Route</h3>
+                        <p style="color: #6B7280; line-height: 1.6; margin-bottom: 15px; font-size: 15px;">Mountain village with seasonal waterfall, honey farms, almond blossoms in spring, and stunning mountain landscapes through argan forests.</p>
+                        <div style="display: flex; gap: 15px; margin-bottom: 15px; font-size: 13px; color: #6B7280;">
+                            <span>🚗 Hotel Pickup</span>
+                            <span>🍯 Honey Tasting</span>
+                            <span>💧 Waterfall</span>
                         </div>
-                        <div class="trip-price">From €40-45/person</div>
-                        <a href="contact.html" class="trip-link">Get Information & Book</a>
+                        <div style="display: flex; justify-content: space-between; align-items: center; padding-top: 15px; border-top: 1px solid #eee;">
+                            <div>
+                                <span style="font-size: 1.5rem; font-weight: 700; color: #1F2937;">€40</span>
+                                <span style="font-size: 14px; color: #999;"> / person</span>
+                            </div>
+                            <a href="contact.html" style="background: #cdff03; color: #000000; padding: 12px 24px; border-radius: 6px; font-weight: 700; font-size: 14px; text-decoration: none; transition: all 0.3s;">View Tour</a>
+                        </div>
                     </div>
                 </div>
 
                 <!-- Souss Massa National Park -->
-                <div class="trip-card">
-                    <div class="trip-image">
-                        <img src="img/morocco-coastal-2.jpg" alt="Souss Massa National Park wildlife">
-                        <span class="trip-badge">Wildlife</span>
-                        <span class="distance-badge">🚗 65km / 1hr</span>
+                <div class="tour-card" data-category="nature">
+                    <div class="tour-image-wrapper" style="position: relative;">
+                        <img src="img/morocco-coastal-2.jpg" alt="Souss Massa Park" style="width: 100%; height: 250px; object-fit: cover; border-radius: 10px 10px 0 0;">
+                        <div class="tour-badge" style="position: absolute; top: 15px; right: 15px; background: #27ae60; color: white; padding: 5px 12px; border-radius: 20px; font-size: 12px; font-weight: 700;">WILDLIFE</div>
+                        <div class="tour-duration" style="position: absolute; bottom: 15px; left: 15px; background: rgba(255,255,255,0.95); padding: 5px 12px; border-radius: 15px; font-size: 13px; font-weight: 600;">4-5 Hours</div>
                     </div>
-                    <div class="trip-content">
-                        <h3 class="trip-title">Souss Massa National Park</h3>
-                        <p class="trip-subtitle">Morocco's Premier Wildlife Reserve</p>
-                        <p class="trip-description">
-                            Discover Morocco's most important wildlife sanctuary! Home to over 250 bird species including the endangered Northern Bald Ibis, pink flamingos, storks, and countless migratory birds. Explore pristine beaches, wetlands, coastal dunes, and river estuaries. Perfect for nature lovers, birdwatchers, photographers, and families seeking peaceful outdoor experiences. Early morning tours offer the best wildlife viewing opportunities when animals are most active.
-                        </p>
-                        <div class="trip-highlights">
-                            <h4>Trip Highlights:</h4>
-                            <ul>
-                                <li>Rare Northern Bald Ibis spotting</li>
-                                <li>Flamingos, storks, and 250+ bird species</li>
-                                <li>Pristine beaches and coastal dunes</li>
-                                <li>Wetland ecosystems and river estuaries</li>
-                                <li>Photography opportunities for wildlife</li>
-                                <li>Conservation education and nature trails</li>
-                            </ul>
+                    <div class="tour-content" style="padding: 25px; background: white; border-radius: 0 0 10px 10px; box-shadow: 0 4px 20px rgba(0,0,0,0.1);">
+                        <div style="display: flex; align-items: center; gap: 8px; margin-bottom: 12px;">
+                            <div style="color: #f39c12; font-size: 14px;">★★★★☆</div>
+                            <span style="font-weight: 600; color: #333; font-size: 14px;">4.6 (142 reviews)</span>
                         </div>
-                        <div class="trip-meta">
-                            <span class="trip-meta-item">⏱️ 4-5 hours</span>
-                            <span class="trip-meta-item">⭐ 4.6/5 (142 reviews)</span>
+                        <h3 style="font-size: 1.4rem; font-weight: 700; color: #1F2937; margin-bottom: 12px;">Souss Massa National Park</h3>
+                        <p style="color: #6B7280; line-height: 1.6; margin-bottom: 15px; font-size: 15px;">Morocco's premier wildlife sanctuary with 250+ bird species, endangered Northern Bald Ibis, pink flamingos, and pristine coastal ecosystems.</p>
+                        <div style="display: flex; gap: 15px; margin-bottom: 15px; font-size: 13px; color: #6B7280;">
+                            <span>🚗 Hotel Pickup</span>
+                            <span>🦅 Birdwatching</span>
+                            <span>📸 Photography</span>
                         </div>
-                        <div class="trip-price">From €40/person</div>
-                        <a href="contact.html" class="trip-link">Get Information & Book</a>
+                        <div style="display: flex; justify-content: space-between; align-items: center; padding-top: 15px; border-top: 1px solid #eee;">
+                            <div>
+                                <span style="font-size: 1.5rem; font-weight: 700; color: #1F2937;">€40</span>
+                                <span style="font-size: 14px; color: #999;"> / person</span>
                     </div>
+                            <a href="tour-souss-massa-park-agadir.html" style="background: #cdff03; color: #000000; padding: 12px 24px; border-radius: 6px; font-weight: 700; font-size: 14px; text-decoration: none; transition: all 0.3s;">View Tour</a>
                 </div>
             </div>
-        </section>
-
-        <!-- CATEGORY 4: Berber Villages & Mountains -->
-        <section id="berber-villages" class="category-section">
-            <div class="category-header">
-                <span class="category-icon">🏔️</span>
-                <h2>Berber Villages & Mountain Experiences</h2>
             </div>
             
-            <div class="trips-grid">
                 <!-- Atlas Mountains -->
-                <div class="trip-card">
-                    <div class="trip-image">
-                        <img src="img/berber-village.jpg" alt="Atlas Mountains and Berber villages">
-                        <span class="trip-badge">Cultural</span>
-                        <span class="distance-badge">🚗 Varies / 8hrs</span>
+                <div class="tour-card" data-category="berber">
+                    <div class="tour-image-wrapper" style="position: relative;">
+                        <img src="img/berber-village.jpg" alt="Atlas Mountains" style="width: 100%; height: 250px; object-fit: cover; border-radius: 10px 10px 0 0;">
+                        <div class="tour-badge" style="position: absolute; top: 15px; right: 15px; background: #af9461; color: white; padding: 5px 12px; border-radius: 20px; font-size: 12px; font-weight: 700;">CULTURAL</div>
+                        <div class="tour-duration" style="position: absolute; bottom: 15px; left: 15px; background: rgba(255,255,255,0.95); padding: 5px 12px; border-radius: 15px; font-size: 13px; font-weight: 600;">8-9 Hours</div>
                     </div>
-                    <div class="trip-content">
-                        <h3 class="trip-title">Atlas Mountains & Berber Villages</h3>
-                        <p class="trip-subtitle">Authentic Mountain Life Experience</p>
-                        <p class="trip-description">
-                            Venture into the stunning Anti-Atlas and High Atlas Mountains to visit authentic Berber villages where life hasn't changed for centuries. Experience traditional mountain hospitality with mint tea in local homes, learn about Berber culture and traditions, visit women's argan oil cooperatives, enjoy breathtaking mountain vistas, and savor a home-cooked Berber lunch. This cultural immersion provides genuine insights into Morocco's indigenous people and their remarkable mountain lifestyle.
-                        </p>
-                        <div class="trip-highlights">
-                            <h4>Trip Highlights:</h4>
-                            <ul>
-                                <li>Visit 2-3 authentic Berber villages</li>
-                                <li>Mint tea with local Berber families</li>
-                                <li>Women's argan oil cooperative visit</li>
-                                <li>Traditional home-cooked Berber lunch</li>
-                                <li>Stunning mountain photography</li>
-                                <li>Learn about Berber traditions and language</li>
-                            </ul>
+                    <div class="tour-content" style="padding: 25px; background: white; border-radius: 0 0 10px 10px; box-shadow: 0 4px 20px rgba(0,0,0,0.1);">
+                        <div style="display: flex; align-items: center; gap: 8px; margin-bottom: 12px;">
+                            <div style="color: #f39c12; font-size: 14px;">★★★★★</div>
+                            <span style="font-weight: 600; color: #333; font-size: 14px;">4.8 (276 reviews)</span>
                         </div>
-                        <div class="trip-meta">
-                            <span class="trip-meta-item">⏱️ 8-9 hours</span>
-                            <span class="trip-meta-item">⭐ 4.8/5 (276 reviews)</span>
+                        <h3 style="font-size: 1.4rem; font-weight: 700; color: #1F2937; margin-bottom: 12px;">Atlas Mountains & Berber Villages</h3>
+                        <p style="color: #6B7280; line-height: 1.6; margin-bottom: 15px; font-size: 15px;">Authentic Berber villages, traditional mint tea hospitality, argan oil cooperatives, and home-cooked lunch. Cultural immersion in the mountains.</p>
+                        <div style="display: flex; gap: 15px; margin-bottom: 15px; font-size: 13px; color: #6B7280;">
+                            <span>🚗 Hotel Pickup</span>
+                            <span>🍵 Tea Ceremony</span>
+                            <span>🍽️ Lunch Included</span>
                         </div>
-                        <div class="trip-price">From €50/person</div>
-                        <a href="contact.html" class="trip-link">Get Information & Book</a>
+                        <div style="display: flex; justify-content: space-between; align-items: center; padding-top: 15px; border-top: 1px solid #eee;">
+                            <div>
+                                <span style="font-size: 1.5rem; font-weight: 700; color: #1F2937;">€50</span>
+                                <span style="font-size: 14px; color: #999;"> / person</span>
+                            </div>
+                            <a href="contact.html" style="background: #cdff03; color: #000000; padding: 12px 24px; border-radius: 6px; font-weight: 700; font-size: 14px; text-decoration: none; transition: all 0.3s;">View Tour</a>
+                        </div>
                     </div>
                 </div>
 
                 <!-- Tafraout -->
-                <div class="trip-card">
-                    <div class="trip-image">
-                        <img src="img/morocco-heritage-1.jpg" alt="Tafraout pink granite rocks">
-                        <span class="trip-badge">Off-the-Beaten-Path</span>
-                        <span class="distance-badge">🚗 160km / 3hrs</span>
+                <div class="tour-card" data-category="berber">
+                    <div class="tour-image-wrapper" style="position: relative;">
+                        <img src="img/morocco-heritage-1.jpg" alt="Tafraout" style="width: 100%; height: 250px; object-fit: cover; border-radius: 10px 10px 0 0;">
+                        <div class="tour-badge" style="position: absolute; top: 15px; right: 15px; background: #9b59b6; color: white; padding: 5px 12px; border-radius: 20px; font-size: 12px; font-weight: 700;">HIDDEN GEM</div>
+                        <div class="tour-duration" style="position: absolute; bottom: 15px; left: 15px; background: rgba(255,255,255,0.95); padding: 5px 12px; border-radius: 15px; font-size: 13px; font-weight: 600;">10-11 Hours</div>
                     </div>
-                    <div class="trip-content">
-                        <h3 class="trip-title">Tafraout & Painted Rocks</h3>
-                        <p class="trip-subtitle">Pink Granite Wonder of the Anti-Atlas</p>
-                        <p class="trip-description">
-                            Discover the surreal beauty of Tafraout, a Berber town surrounded by stunning pink granite rock formations in the heart of the Anti-Atlas Mountains. See the famous "Painted Rocks" art installation by Belgian artist Jean Vérame, visit almond groves (spectacular in blossom season), explore traditional Berber architecture, and experience one of Morocco's most unique and photogenic landscapes. This hidden gem offers dramatic scenery unlike anywhere else in Morocco!
-                        </p>
-                        <div class="trip-highlights">
-                            <h4>Trip Highlights:</h4>
-                            <ul>
-                                <li>Pink granite rock formations (unique geology)</li>
-                                <li>Famous "Painted Rocks" art installation</li>
-                                <li>Almond valley (beautiful in February-March)</li>
-                                <li>Traditional Berber village architecture</li>
-                                <li>Stunning mountain scenery and palm oases</li>
-                                <li>Local markets and authentic culture</li>
-                            </ul>
+                    <div class="tour-content" style="padding: 25px; background: white; border-radius: 0 0 10px 10px; box-shadow: 0 4px 20px rgba(0,0,0,0.1);">
+                        <div style="display: flex; align-items: center; gap: 8px; margin-bottom: 12px;">
+                            <div style="color: #f39c12; font-size: 14px;">★★★★★</div>
+                            <span style="font-weight: 600; color: #333; font-size: 14px;">4.7 (89 reviews)</span>
                         </div>
-                        <div class="trip-meta">
-                            <span class="trip-meta-item">⏱️ 10-11 hours</span>
-                            <span class="trip-meta-item">⭐ 4.7/5 (89 reviews)</span>
+                        <h3 style="font-size: 1.4rem; font-weight: 700; color: #1F2937; margin-bottom: 12px;">Tafraout & Painted Rocks</h3>
+                        <p style="color: #6B7280; line-height: 1.6; margin-bottom: 15px; font-size: 15px;">Surreal pink granite formations, famous "Painted Rocks" art installation, almond valleys, and traditional Berber architecture in the Anti-Atlas Mountains.</p>
+                        <div style="display: flex; gap: 15px; margin-bottom: 15px; font-size: 13px; color: #6B7280;">
+                            <span>🚗 Hotel Pickup</span>
+                            <span>🎨 Art Installation</span>
+                            <span>📸 Unique Scenery</span>
                         </div>
-                        <div class="trip-price">From €55-60/person</div>
-                        <a href="contact.html" class="trip-link">Get Information & Book</a>
+                        <div style="display: flex; justify-content: space-between; align-items: center; padding-top: 15px; border-top: 1px solid #eee;">
+                            <div>
+                                <span style="font-size: 1.5rem; font-weight: 700; color: #1F2937;">€55</span>
+                                <span style="font-size: 14px; color: #999;"> / person</span>
                     </div>
+                            <a href="contact.html" style="background: #cdff03; color: #000000; padding: 12px 24px; border-radius: 6px; font-weight: 700; font-size: 14px; text-decoration: none; transition: all 0.3s;">View Tour</a>
                 </div>
             </div>
-        </section>
+                </div>
+
+            </div>
 
         <!-- Comparison Table -->
         <section class="category-section">
@@ -1440,6 +1388,36 @@
                 </tbody>
             </table>
         </section>
+
+        <!-- Why Book With Us Section -->
+        <div style="background: #f9f9f9; padding: 80px 40px; border-radius: 15px; margin-bottom: 60px;">
+            <div style="text-align: center; margin-bottom: 60px;">
+                <h3 class="section-subtitle" style="font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; font-size: 20px; font-weight: 600; color: #6B7280; margin-bottom: 10px; text-transform: uppercase; letter-spacing: 1px;">Why Book With</h3>
+                <h2 class="section-title" style="font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; font-size: 42px; font-weight: 800; color: #1F2937; margin: 0; line-height: 1.2;">THE LOCAL GUIDE</h2>
+            </div>
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 40px;">
+                <div style="text-align: center;">
+                    <div style="font-size: 3rem; margin-bottom: 15px;">✓</div>
+                    <h4 style="font-size: 1.2rem; font-weight: 700; color: #1F2937; margin-bottom: 10px;">Best Price Guarantee</h4>
+                    <p style="color: #6B7280; line-height: 1.6;">Competitive prices with no hidden fees. Pay the lowest rate available.</p>
+                </div>
+                <div style="text-align: center;">
+                    <div style="font-size: 3rem; margin-bottom: 15px;">🌟</div>
+                    <h4 style="font-size: 1.2rem; font-weight: 700; color: #1F2937; margin-bottom: 10px;">Local Expert Guides</h4>
+                    <p style="color: #6B7280; line-height: 1.6;">Professional, knowledgeable guides who know every corner of Morocco.</p>
+                </div>
+                <div style="text-align: center;">
+                    <div style="font-size: 3rem; margin-bottom: 15px;">🚗</div>
+                    <h4 style="font-size: 1.2rem; font-weight: 700; color: #1F2937; margin-bottom: 10px;">Free Hotel Pickup</h4>
+                    <p style="color: #6B7280; line-height: 1.6;">Complimentary pickup and drop-off from your hotel in Agadir.</p>
+                </div>
+                <div style="text-align: center;">
+                    <div style="font-size: 3rem; margin-bottom: 15px;">❌</div>
+                    <h4 style="font-size: 1.2rem; font-weight: 700; color: #1F2937; margin-bottom: 10px;">Free Cancellation</h4>
+                    <p style="color: #6B7280; line-height: 1.6;">Cancel up to 24 hours before for a full refund. Book with confidence.</p>
+                </div>
+            </div>
+        </div>
 
         <!-- Planning Information -->
         <section class="info-boxes">
@@ -1959,18 +1937,36 @@
             </div>
         </section>
 
-        <!-- CTA Section -->
-        <section class="cta-section">
-            <h2>Ready to Explore Beyond Agadir?</h2>
-            <p>Book your perfect day trip with local experts who know every hidden gem and scenic route</p>
-            <div class="cta-buttons">
-                <a href="agadir-tours.html" class="cta-button cta-button-primary">Browse All Tours</a>
-                <a href="https://wa.me/212645792457?text=Hi!%20I'm%20interested%20in%20booking%20day%20trips%20from%20Agadir" class="cta-button cta-button-secondary" target="_blank">Chat on WhatsApp</a>
-                <a href="contact.html" class="cta-button cta-button-secondary">Contact Us</a>
-            </div>
+        <!-- About Day Trips from Agadir -->
+        <section class="intro-section" style="margin: 60px 0;">
+            <h2 style="font-size: 2rem; color: #1F2937; margin-bottom: 20px; text-align: center;">Explore Morocco's Best Destinations from Agadir</h2>
+            <p style="font-size: 1.05rem; color: #6B7280; line-height: 1.8; margin-bottom: 15px;">
+                Agadir's strategic location in southern Morocco makes it the perfect base for exploring some of the country's most spectacular destinations. Whether you're craving the UNESCO charm of Essaouira, the imperial majesty of Marrakech, or the serene beauty of Paradise Valley, you can reach all these incredible places within a few hours.
+            </p>
+            <p style="font-size: 1.05rem; color: #6B7280; line-height: 1.8; margin-bottom: 15px;">
+                Our expertly curated <strong>day trips from Agadir</strong> offer comfortable transportation, professional local guides, and carefully planned itineraries that maximize your experience. From half-day adventures to full-day excursions, we've designed each trip to showcase the best of Morocco while ensuring you return to your Agadir hotel in the evening.
+            </p>
+            <p style="font-size: 1.05rem; color: #6B7280; line-height: 1.8;">
+                All tours include hotel pickup/drop-off, professional guides, and are available year-round with flexible cancellation policies. Book with confidence knowing you're getting the best local expertise and value for your Morocco adventure!
+            </p>
         </section>
 
-    </div>
+        <!-- CTA Section -->
+        <div style="text-align: center; padding: 60px 40px; background: linear-gradient(135deg, #8B5CF6 0%, #7C3AED 100%); border-radius: 16px; color: white; box-shadow: 0 8px 32px rgba(0,0,0,0.12); margin-bottom: 60px;">
+            <h2 style="font-size: 2.5rem; font-weight: 700; margin-bottom: 20px; color: white;">Ready for Your Agadir Day Trip Adventure?</h2>
+            <p style="font-size: 1.2rem; margin-bottom: 30px; opacity: 0.9; color: white;">Contact us today to book your perfect tour or create a custom experience</p>
+            <div style="display: flex; gap: 20px; justify-content: center; flex-wrap: wrap;">
+                <a href="contact.html" style="background: #cdff03; color: #000000; padding: 16px 32px; border-radius: 6px; font-weight: 700; font-size: 16px; text-decoration: none; transition: all 0.3s; text-transform: uppercase;">Book Now</a>
+                <a href="https://wa.me/212636372101" target="_blank" style="background: #8449f2; color: white; padding: 16px 32px; border-radius: 6px; font-weight: 700; font-size: 16px; text-decoration: none; transition: all 0.3s; display: flex; align-items: center; gap: 10px;">
+                    <svg width="24" height="24" fill="currentColor" viewBox="0 0 24 28">
+                        <path d="M15.391 15.219c0.266 0 2.812 1.328 2.922 1.516 0.031 0.078 0.031 0.172 0.031 0.234 0 0.391-0.125 0.828-0.266 1.188-0.359 0.875-1.813 1.437-2.703 1.437-0.75 0-2.297-0.656-2.969-0.969-2.234-1.016-3.625-2.75-4.969-4.734-0.594-0.875-1.125-1.953-1.109-3.031v-0.125c0.031-1.031 0.406-1.766 1.156-2.469 0.234-0.219 0.484-0.344 0.812-0.344 0.187 0 0.375 0.047 0.578 0.047 0.422 0 0.5 0.125 0.656 0.531 0.109 0.266 0.906 2.391 0.906 2.547 0 0.594-1.078 1.266-1.078 1.625 0 0.078 0.031 0.156 0.078 0.234 0.344 0.734 1 1.578 1.594 2.141 0.719 0.688 1.484 1.141 2.359 1.578 0.109 0.063 0.219 0.109 0.344 0.109 0.469 0 1.25-1.516 1.656-1.516zM12.219 23.5c5.406 0 9.812-4.406 9.812-9.812s-4.406-9.812-9.812-9.812-9.812 4.406-9.812 9.812c0 2.063 0.656 4.078 1.875 5.75l-1.234 3.641 3.781-1.203c1.594 1.047 3.484 1.625 5.391 1.625zM12.219 1.906c6.5 0 11.781 5.281 11.781 11.781s-5.281 11.781-11.781 11.781c-1.984 0-3.953-0.5-5.703-1.469l-6.516 2.094 2.125-6.328c-1.109-1.828-1.687-3.938-1.687-6.078 0-6.5 5.281-11.781 11.781-11.781z"></path>
+                    </svg>
+                    WhatsApp Us
+                </a>
+            </div>
+        </div>
+            </div>
+        </section>
 
     <!-- FOOTER -->
     <footer class="footer">
@@ -2082,11 +2078,29 @@
             });
         });
 
-        // Smooth scroll for quick nav
-        document.querySelectorAll('.quick-nav-item').forEach(item => {
-            item.addEventListener('click', function() {
-                const targetId = this.getAttribute('onclick').match(/'([^']+)'/)[1];
-                document.getElementById(targetId).scrollIntoView({ behavior: 'smooth' });
+        // Category Filter Functionality
+        document.querySelectorAll('.service-btn').forEach(btn => {
+            btn.addEventListener('click', function() {
+                // Remove active class from all buttons
+                document.querySelectorAll('.service-btn').forEach(b => b.classList.remove('active'));
+                // Add active class to clicked button
+                this.classList.add('active');
+                
+                const category = this.getAttribute('data-category');
+                const tourCards = document.querySelectorAll('.tour-card');
+                
+                tourCards.forEach(card => {
+                    if (category === 'all') {
+                        card.style.display = 'block';
+                    } else {
+                        const cardCategories = card.getAttribute('data-category');
+                        if (cardCategories && cardCategories.includes(category)) {
+                            card.style.display = 'block';
+                        } else {
+                            card.style.display = 'none';
+                        }
+                    }
+                });
             });
         });
 
@@ -2104,7 +2118,7 @@
             });
         }, observerOptions);
 
-        document.querySelectorAll('.trip-card').forEach(card => {
+        document.querySelectorAll('.tour-card').forEach(card => {
             observer.observe(card);
         });
     </script>

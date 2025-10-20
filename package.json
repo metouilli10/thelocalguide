@@ -1,0 +1,14 @@
+{
+  "name": "local-guide-agadir",
+  "version": "1.0.0",
+  "description": "Local guide and tour website for Agadir, Morocco",
+  "main": "index.html",
+  "scripts": {
+    "dev": "npx http-server -p 3000",
+    "start": "npx http-server -p 3000"
+  },
+  "keywords": ["agadir", "tours", "morocco", "travel"],
+  "author": "",
+  "license": "MIT"
+}
+

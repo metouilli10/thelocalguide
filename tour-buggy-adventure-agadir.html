@@ -7,6 +7,11 @@
     <meta name="keywords" content="buggy tour Agadir, dune buggy Agadir, buggy adventure Agadir, Agadir buggy prices, buggy ride Agadir, desert buggy tour, Agadir dune buggy experience">
     <title>Buggy Adventure Agadir | Dune Buggy Tours & Prices 2025</title>
     
+    <!-- CSS Styles -->
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/pages.css">
+    <link rel="stylesheet" href="css/updated-styles.css">
+    
     <meta property="og:title" content="Buggy Adventure Agadir | Thrilling Dune Buggy Desert Tours">
     <meta property="og:description" content="Experience powerful dune buggies in Agadir! Desert, beaches & villages. 2-seater & 4-seater options. From €80/buggy. Book now!">
     <meta property="og:type" content="website">
@@ -34,50 +39,55 @@
     
     <link rel="stylesheet" href="css/styles.css">
     <link rel="stylesheet" href="css/pages.css">
+    <link rel="stylesheet" href="css/updated-styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Tangerine:wght@400;700&family=Lato:wght@300;400;700;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;900&family=Lato:wght@300;400;700;900&display=swap" rel="stylesheet">
     <link rel="icon" href="https://www.miracleair.tz/wp-content/uploads/2025/05/miracle_air-removebg-preview-150x150.png">
     <link rel="canonical" href="https://yourdomain.com/tour-buggy-adventure-agadir">
     <style>
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Lato', 'Helvetica Neue', Arial, sans-serif;
+        }
+        
         .tour-detail-hero { position: relative; height: 500px; overflow: hidden; margin-top: 95px; }
         .tour-gallery { display: grid; grid-template-columns: 2fr 1fr 1fr; grid-template-rows: 250px 250px; gap: 10px; height: 500px; }
         .tour-gallery img { width: 100%; height: 100%; object-fit: cover; cursor: pointer; transition: all 0.3s ease; }
         .tour-gallery img:hover { opacity: 0.9; transform: scale(1.02); }
         .tour-gallery .main-image { grid-row: 1 / 3; }
-        .view-all-photos { position: absolute; bottom: 20px; right: 20px; background: white; padding: 12px 25px; border-radius: 25px; font-weight: 600; color: #1a4d2e; cursor: pointer; z-index: 10; box-shadow: 0 4px 15px rgba(0,0,0,0.2); }
+        .view-all-photos { position: absolute; bottom: 20px; right: 20px; background: white; padding: 12px 25px; border-radius: 6px; font-weight: 600; color: #1F2937; cursor: pointer; z-index: 10; box-shadow: 0 4px 15px rgba(0,0,0,0.2); }
         .tour-content-wrapper { max-width: 1400px; margin: 0 auto; padding: 60px 20px; display: grid; grid-template-columns: 1fr 400px; gap: 40px; }
         .tour-main-content { padding-right: 40px; }
         .tour-header { margin-bottom: 30px; }
-        .tour-title { font-size: 2.5rem; font-weight: 700; color: #1a4d2e; margin-bottom: 15px; line-height: 1.2; }
-        .tour-subtitle { font-size: 1.2rem; color: #666; margin-bottom: 20px; font-weight: 400; }
+        .tour-title { font-size: 2.5rem; font-weight: 700; color: #1F2937; margin-bottom: 15px; line-height: 1.2; }
+        .tour-subtitle { font-size: 1.2rem; color: #6B7280; margin-bottom: 20px; font-weight: 400; }
         .tour-rating { display: flex; align-items: center; gap: 15px; margin-bottom: 20px; }
-        .rating-score { background: #1a4d2e; color: white; padding: 8px 15px; border-radius: 8px; font-weight: 700; font-size: 1.2rem; }
-        .rating-details { color: #666; }
+        .rating-score { background: #8B5CF6; color: white; padding: 8px 15px; border-radius: 6px; font-weight: 700; font-size: 1.2rem; }
+        .rating-details { color: #6B7280; }
         .tour-badges { display: flex; gap: 10px; flex-wrap: wrap; }
         .badge { background: #f0f0f0; padding: 8px 15px; border-radius: 20px; font-size: 14px; font-weight: 600; color: #333; display: flex; align-items: center; gap: 8px; }
-        .badge.featured { background: #1a4d2e; color: white; }
+        .badge.featured { background: #8B5CF6; color: white; }
         .price-table { background: #f9f9f9; padding: 30px; border-radius: 10px; margin: 30px 0; }
-        .price-table h3 { font-size: 1.8rem; font-weight: 700; color: #1a4d2e; margin-bottom: 25px; text-align: center; }
+        .price-table h3 { font-size: 1.8rem; font-weight: 700; color: #1F2937; margin-bottom: 25px; text-align: center; }
         .price-options { display: grid; gap: 15px; }
         .price-option { background: white; border: 2px solid #e0e0e0; border-radius: 10px; padding: 20px; display: flex; justify-content: space-between; align-items: center; transition: all 0.3s ease; }
-        .price-option:hover { border-color: #1a4d2e; box-shadow: 0 5px 15px rgba(26,77,46,0.1); }
-        .price-option-details h4 { font-size: 1.2rem; font-weight: 700; color: #1a4d2e; margin-bottom: 8px; }
-        .price-option-details p { color: #666; font-size: 14px; line-height: 1.6; }
-        .price-option-price { font-size: 2rem; font-weight: 700; color: #1a4d2e; }
+        .price-option:hover { border-color: #1F2937; box-shadow: 0 5px 15px rgba(26,77,46,0.1); }
+        .price-option-details h4 { font-size: 1.2rem; font-weight: 700; color: #1F2937; margin-bottom: 8px; }
+        .price-option-details p { color: #6B7280; font-size: 14px; line-height: 1.6; }
+        .price-option-price { font-size: 2rem; font-weight: 700; color: #1F2937; }
         .price-option-price span { font-size: 1rem; color: #999; font-weight: 400; }
         .price-badge { display: inline-block; background: #af9461; color: white; padding: 4px 12px; border-radius: 15px; font-size: 12px; font-weight: 600; margin-top: 8px; }
         .tour-highlights { background: #f9f9f9; padding: 30px; border-radius: 10px; margin: 40px 0; }
-        .tour-highlights h2 { font-size: 1.8rem; font-weight: 700; color: #1a4d2e; margin-bottom: 20px; }
+        .tour-highlights h2 { font-size: 1.8rem; font-weight: 700; color: #1F2937; margin-bottom: 20px; }
         .highlights-list { display: grid; gap: 15px; }
         .highlight-item { display: flex; align-items: flex-start; gap: 15px; }
-        .highlight-icon { width: 24px; height: 24px; background: #1a4d2e; border-radius: 50%; display: flex; align-items: center; justify-content: center; color: white; font-size: 14px; flex-shrink: 0; margin-top: 2px; }
+        .highlight-icon { width: 24px; height: 24px; background: #8B5CF6; border-radius: 50%; display: flex; align-items: center; justify-content: center; color: white; font-size: 14px; flex-shrink: 0; margin-top: 2px; }
         .highlight-text { color: #333; line-height: 1.6; font-size: 15px; }
         .breadcrumb { max-width: 1400px; margin: 0 auto; padding: 30px 20px 0; font-size: 14px; }
-        .breadcrumb a { color: #666; text-decoration: none; }
-        .breadcrumb a:hover { color: #1a4d2e; }
+        .breadcrumb a { color: #6B7280; text-decoration: none; }
+        .breadcrumb a:hover { color: #1F2937; }
         .breadcrumb span { color: #999; margin: 0 8px; }
         @media (max-width: 1024px) {
             .tour-content-wrapper { grid-template-columns: 1fr; }
@@ -474,26 +484,36 @@
         </div>
     </div>
 
-    <div class="top-contact-bar">
-        <p>Book your buggy adventure adventure! WhatsApp: +212645792457 or contact@localguide.com</p>
+    <!-- TOPBAR -->
+    <div class="topbar">
+        <div class="topbar__wrapper">
+            <div class="topbar__left">
+                <a href="agadir-tours.html" class="topbar__link">Agadir Tours</a>
+                <a href="day-trips-from-agadir.html" class="topbar__link">Day Trips</a>
+                <a href="#deals" class="topbar__link">Special Offers</a>
+            </div>
+            <div class="topbar__right">
+                <a href="tel:+212636372101" class="topbar__link">+212 636-372101</a>
+                <a href="contact.html" class="topbar__link">Contact</a>
+            </div>
+        </div>
     </div>
 
-    <header class="site-header">
-        <div class="header-content">
-            <div class="logo">
-                <img src="https://www.miracleair.tz/wp-content/uploads/2025/05/miracle_air-removebg-preview-150x150.png" alt="The Local Guide Logo" class="logo-img">
-                <span class="logo-text">THE LOCAL GUIDE</span>
-            </div>
-            <nav class="main-nav">
-                <a href="index.html" style="font-weight: bold;">Home</a>
-                <a href="agadir-tours.html" style="font-weight: bold;">Agadir Tours</a>
-                <a href="things-to-do.html" style="font-weight: bold;">Things to Do in Agadir</a>
-                <a href="blog.html" style="font-weight: bold;">Blog</a>
-                <a href="contact.html" style="font-weight: bold;">Contact</a>
+    <!-- HEADER -->
+    <header class="header">
+        <div class="header__wrapper">
+            <a href="index.html" class="header__logo">The Local Guide</a>
+            <nav class="header__nav">
+                <a href="index.html" class="header__nav-link">Home</a>
+                <a href="agadir-tours.html" class="header__nav-link">Agadir Tours</a>
+                <a href="day-trips-from-agadir.html" class="header__nav-link">Day Trips</a>
+                <a href="things-to-do-in-agadir.html" class="header__nav-link">Things to Do</a>
+                <a href="contact.html" class="header__nav-link">Contact</a>
             </nav>
-            <button class="hamburger" aria-label="Open menu">
-                <span></span><span></span><span></span>
-            </button>
+            <div class="header__actions">
+                <a href="https://wa.me/212636372101" class="btn btn-whatsapp">WhatsApp Us</a>
+                <a href="contact.html" class="btn btn-primary">Book Now</a>
+            </div>
         </div>
     </header>
 
@@ -577,7 +597,7 @@
                         <div class="price-option-price">€160<span> /buggy</span></div>
                     </div>
                 </div>
-                <p style="text-align: center; color: #666; margin-top: 20px; font-size: 14px;">
+                <p style="text-align: center; color: #6B7280; margin-top: 20px; font-size: 14px;">
                     💰 <strong>Best Price Guarantee</strong> • All prices PER BUGGY (not per person) • Includes equipment, guide, insurance & transfers<br>
                     👨‍👩‍👧‍👦 <strong>Family-Friendly:</strong> 4-seater buggies perfect for parents + kids • Solo drivers can share 2-seater
                 </p>
@@ -626,98 +646,98 @@
             </div>
 
             <div style="margin: 40px 0;">
-                <h2 style="font-size: 1.8rem; font-weight: 700; color: #1a4d2e; margin-bottom: 20px;">Experience the Best Buggy Adventure in Agadir</h2>
-                <p style="color: #666; line-height: 1.8; margin-bottom: 15px; font-size: 16px;">Looking for an adrenaline-pumping adventure in Morocco? Our <strong>buggy adventure Agadir</strong> tours offer the perfect blend of excitement, natural beauty, and cultural immersion. Whether you're a first-time rider or an experienced buggyr, this is one of the most thrilling <strong>things to do in Agadir</strong>!</p>
+                <h2 style="font-size: 1.8rem; font-weight: 700; color: #1F2937; margin-bottom: 20px;">Experience the Best Buggy Adventure in Agadir</h2>
+                <p style="color: #6B7280; line-height: 1.8; margin-bottom: 15px; font-size: 16px;">Looking for an adrenaline-pumping adventure in Morocco? Our <strong>buggy adventure Agadir</strong> tours offer the perfect blend of excitement, natural beauty, and cultural immersion. Whether you're a first-time rider or an experienced buggyr, this is one of the most thrilling <strong>things to do in Agadir</strong>!</p>
                 
-                <p style="color: #666; line-height: 1.8; margin-bottom: 15px; font-size: 16px;">Your <strong>buggy tour in Agadir</strong> begins with a convenient hotel pickup from Agadir, Taghazout, or nearby areas. After a quick safety briefing and equipment fitting at our base, you'll mount your powerful yet easy-to-ride automatic buggy and set off on an unforgettable journey through Morocco's stunning landscapes.</p>
+                <p style="color: #6B7280; line-height: 1.8; margin-bottom: 15px; font-size: 16px;">Your <strong>buggy tour in Agadir</strong> begins with a convenient hotel pickup from Agadir, Taghazout, or nearby areas. After a quick safety briefing and equipment fitting at our base, you'll mount your powerful yet easy-to-ride automatic buggy and set off on an unforgettable journey through Morocco's stunning landscapes.</p>
                 
-                <p style="color: #666; line-height: 1.8; margin-bottom: 15px; font-size: 16px;">Feel the thrill as you navigate through golden sand dunes, race along pristine wild beaches with Atlantic waves crashing beside you, and wind through aromatic eucalyptus forests. The diverse terrain keeps the adventure exciting from start to finish!</p>
+                <p style="color: #6B7280; line-height: 1.8; margin-bottom: 15px; font-size: 16px;">Feel the thrill as you navigate through golden sand dunes, race along pristine wild beaches with Atlantic waves crashing beside you, and wind through aromatic eucalyptus forests. The diverse terrain keeps the adventure exciting from start to finish!</p>
                 
-                <p style="color: #666; line-height: 1.8; margin-bottom: 15px; font-size: 16px;">What makes our <strong>buggy adventure in Agadir</strong> truly special is the combination of adventure and authenticity. We don't just ride - we immerse you in the local culture. Stop at traditional Berber villages where friendly locals welcome you with warm smiles and refreshing mint tea. Learn about their way of life and see how they've lived in harmony with this desert landscape for generations.</p>
+                <p style="color: #6B7280; line-height: 1.8; margin-bottom: 15px; font-size: 16px;">What makes our <strong>buggy adventure in Agadir</strong> truly special is the combination of adventure and authenticity. We don't just ride - we immerse you in the local culture. Stop at traditional Berber villages where friendly locals welcome you with warm smiles and refreshing mint tea. Learn about their way of life and see how they've lived in harmony with this desert landscape for generations.</p>
 
-                <h3 style="font-size: 1.5rem; font-weight: 700; color: #1a4d2e; margin: 30px 0 15px;">What to Expect on Your Agadir Buggy Adventure Adventure</h3>
-                <p style="color: #666; line-height: 1.8; margin-bottom: 15px; font-size: 16px;">Our buggy tours are designed to give you maximum thrills while ensuring complete safety. The terrain varies from easy, flat beaches perfect for beginners to challenging dune climbs for those seeking more excitement. Your experienced guide will adjust the route based on your group's skill level and preferences.</p>
+                <h3 style="font-size: 1.5rem; font-weight: 700; color: #1F2937; margin: 30px 0 15px;">What to Expect on Your Agadir Buggy Adventure Adventure</h3>
+                <p style="color: #6B7280; line-height: 1.8; margin-bottom: 15px; font-size: 16px;">Our buggy tours are designed to give you maximum thrills while ensuring complete safety. The terrain varies from easy, flat beaches perfect for beginners to challenging dune climbs for those seeking more excitement. Your experienced guide will adjust the route based on your group's skill level and preferences.</p>
                 
-                <p style="color: #666; line-height: 1.8; margin-bottom: 15px; font-size: 16px;">For those seeking the ultimate experience, our <strong>buggy adventure and sandboarding Agadir</strong> combo tour adds another dimension of fun. After mastering the buggy, try your hand (and feet!) at sandboarding down massive dunes - it's like snowboarding but on warm sand! This combo has become our most requested package.</p>
+                <p style="color: #6B7280; line-height: 1.8; margin-bottom: 15px; font-size: 16px;">For those seeking the ultimate experience, our <strong>buggy adventure and sandboarding Agadir</strong> combo tour adds another dimension of fun. After mastering the buggy, try your hand (and feet!) at sandboarding down massive dunes - it's like snowboarding but on warm sand! This combo has become our most requested package.</p>
             </div>
 
             <div style="margin: 40px 0;">
-                <h2 style="font-size: 1.8rem; font-weight: 700; color: #1a4d2e; margin-bottom: 30px;">Complete Itinerary: Buggy Adventure Agadir</h2>
+                <h2 style="font-size: 1.8rem; font-weight: 700; color: #1F2937; margin-bottom: 30px;">Complete Itinerary: Buggy Adventure Agadir</h2>
                 
                 <div style="background: white; border: 2px solid #f0f0f0; border-radius: 10px; padding: 25px; margin-bottom: 20px;">
-                    <div style="font-weight: 700; color: #af9461; font-size: 1.1rem; margin-bottom: 10px;">Step 1: Pickup & Base Arrival (30 minutes)</div>
-                    <h4 style="font-size: 1.3rem; font-weight: 700; color: #1a4d2e; margin-bottom: 10px;">Hotel Pickup & Safety Briefing</h4>
-                    <p style="color: #666; line-height: 1.8;">We collect you from your accommodation in our comfortable transport vehicle. Arrive at our buggy adventure base where you'll meet your guide, receive safety equipment (helmet, goggles, bandana), and get a comprehensive safety briefing. Learn the controls, practice techniques, and ask any questions. First-timers spend extra time getting comfortable with their buggy before departure.</p>
+                    <div style="font-weight: 700; color: #8B5CF6; font-size: 1.1rem; margin-bottom: 10px;">Step 1: Pickup & Base Arrival (30 minutes)</div>
+                    <h4 style="font-size: 1.3rem; font-weight: 700; color: #1F2937; margin-bottom: 10px;">Hotel Pickup & Safety Briefing</h4>
+                    <p style="color: #6B7280; line-height: 1.8;">We collect you from your accommodation in our comfortable transport vehicle. Arrive at our buggy adventure base where you'll meet your guide, receive safety equipment (helmet, goggles, bandana), and get a comprehensive safety briefing. Learn the controls, practice techniques, and ask any questions. First-timers spend extra time getting comfortable with their buggy before departure.</p>
                 </div>
                 
                 <div style="background: white; border: 2px solid #f0f0f0; border-radius: 10px; padding: 25px; margin-bottom: 20px;">
-                    <div style="font-weight: 700; color: #af9461; font-size: 1.1rem; margin-bottom: 10px;">Step 2: Desert Dunes Exploration (45-60 minutes)</div>
-                    <h4 style="font-size: 1.3rem; font-weight: 700; color: #1a4d2e; margin-bottom: 10px;">Ride Through Golden Sand Dunes</h4>
-                    <p style="color: #666; line-height: 1.8;">Start your adventure by conquering the stunning sand dunes! Feel the power of your buggy as you climb up and down golden slopes. Stop at the highest point for panoramic desert views and epic photo opportunities. Your guide will show you the best riding lines and photo spots. This is where the real fun begins!</p>
+                    <div style="font-weight: 700; color: #8B5CF6; font-size: 1.1rem; margin-bottom: 10px;">Step 2: Desert Dunes Exploration (45-60 minutes)</div>
+                    <h4 style="font-size: 1.3rem; font-weight: 700; color: #1F2937; margin-bottom: 10px;">Ride Through Golden Sand Dunes</h4>
+                    <p style="color: #6B7280; line-height: 1.8;">Start your adventure by conquering the stunning sand dunes! Feel the power of your buggy as you climb up and down golden slopes. Stop at the highest point for panoramic desert views and epic photo opportunities. Your guide will show you the best riding lines and photo spots. This is where the real fun begins!</p>
                 </div>
                 
                 <div style="background: white; border: 2px solid #f0f0f0; border-radius: 10px; padding: 25px; margin-bottom: 20px;">
-                    <div style="font-weight: 700; color: #af9461; font-size: 1.1rem; margin-bottom: 10px;">Step 3: Wild Beach Riding (30-45 minutes)</div>
-                    <h4 style="font-size: 1.3rem; font-weight: 700; color: #1a4d2e; margin-bottom: 10px;">Atlantic Coast Quad Adventure</h4>
-                    <p style="color: #666; line-height: 1.8;">Experience the unique thrill of buggy adventure along pristine wild beaches with Atlantic waves crashing beside you! Feel the sea breeze as you ride along the coast, splash through shallow water pools (seasonal), and enjoy the contrast of ocean and desert. This section is often guests' favorite part of the tour!</p>
+                    <div style="font-weight: 700; color: #8B5CF6; font-size: 1.1rem; margin-bottom: 10px;">Step 3: Wild Beach Riding (30-45 minutes)</div>
+                    <h4 style="font-size: 1.3rem; font-weight: 700; color: #1F2937; margin-bottom: 10px;">Atlantic Coast Quad Adventure</h4>
+                    <p style="color: #6B7280; line-height: 1.8;">Experience the unique thrill of buggy adventure along pristine wild beaches with Atlantic waves crashing beside you! Feel the sea breeze as you ride along the coast, splash through shallow water pools (seasonal), and enjoy the contrast of ocean and desert. This section is often guests' favorite part of the tour!</p>
                 </div>
                 
                 <div style="background: white; border: 2px solid #f0f0f0; border-radius: 10px; padding: 25px; margin-bottom: 20px;">
-                    <div style="font-weight: 700; color: #af9461; font-size: 1.1rem; margin-bottom: 10px;">Step 4: Berber Village & Tea Break (20-30 minutes)</div>
-                    <h4 style="font-size: 1.3rem; font-weight: 700; color: #1a4d2e; margin-bottom: 10px;">Cultural Stop & Refreshments</h4>
-                    <p style="color: #666; line-height: 1.8;">Take a break at a traditional Berber village. Meet local families, enjoy authentic Moroccan mint tea, and learn about Berber culture and daily life in the desert. Rest, rehydrate, and soak in the peaceful village atmosphere. This cultural touch makes our buggy tours unique!</p>
+                    <div style="font-weight: 700; color: #8B5CF6; font-size: 1.1rem; margin-bottom: 10px;">Step 4: Berber Village & Tea Break (20-30 minutes)</div>
+                    <h4 style="font-size: 1.3rem; font-weight: 700; color: #1F2937; margin-bottom: 10px;">Cultural Stop & Refreshments</h4>
+                    <p style="color: #6B7280; line-height: 1.8;">Take a break at a traditional Berber village. Meet local families, enjoy authentic Moroccan mint tea, and learn about Berber culture and daily life in the desert. Rest, rehydrate, and soak in the peaceful village atmosphere. This cultural touch makes our buggy tours unique!</p>
                 </div>
                 
                 <div style="background: white; border: 2px solid #f0f0f0; border-radius: 10px; padding: 25px; margin-bottom: 20px;">
-                    <div style="font-weight: 700; color: #af9461; font-size: 1.1rem; margin-bottom: 10px;">Step 5: Optional Sandboarding (20-30 minutes - Combo Tour Only)</div>
-                    <h4 style="font-size: 1.3rem; font-weight: 700; color: #1a4d2e; margin-bottom: 10px;">Sandboarding Adventure</h4>
-                    <p style="color: #666; line-height: 1.8;">For combo tour guests: Try sandboarding down massive dunes! Our guide will teach you the technique, provide boards, and ensure your safety. It's easier than it looks and incredibly fun. Great workout and amazing photos guaranteed!</p>
+                    <div style="font-weight: 700; color: #8B5CF6; font-size: 1.1rem; margin-bottom: 10px;">Step 5: Optional Sandboarding (20-30 minutes - Combo Tour Only)</div>
+                    <h4 style="font-size: 1.3rem; font-weight: 700; color: #1F2937; margin-bottom: 10px;">Sandboarding Adventure</h4>
+                    <p style="color: #6B7280; line-height: 1.8;">For combo tour guests: Try sandboarding down massive dunes! Our guide will teach you the technique, provide boards, and ensure your safety. It's easier than it looks and incredibly fun. Great workout and amazing photos guaranteed!</p>
                 </div>
                 
                 <div style="background: white; border: 2px solid #f0f0f0; border-radius: 10px; padding: 25px; margin-bottom: 20px;">
-                    <div style="font-weight: 700; color: #af9461; font-size: 1.1rem; margin-bottom: 10px;">Step 6: Return Journey (30 minutes)</div>
-                    <h4 style="font-size: 1.3rem; font-weight: 700; color: #1a4d2e; margin-bottom: 10px;">Drop-off at Your Hotel</h4>
-                    <p style="color: #666; line-height: 1.8;">Complete your buggy adventure and return to the base. Quick rinse-off available to clean sand and dust. We'll drive you back to your hotel in Agadir or Taghazout, arriving with incredible memories, amazing photos, and the biggest smile!</p>
+                    <div style="font-weight: 700; color: #8B5CF6; font-size: 1.1rem; margin-bottom: 10px;">Step 6: Return Journey (30 minutes)</div>
+                    <h4 style="font-size: 1.3rem; font-weight: 700; color: #1F2937; margin-bottom: 10px;">Drop-off at Your Hotel</h4>
+                    <p style="color: #6B7280; line-height: 1.8;">Complete your buggy adventure and return to the base. Quick rinse-off available to clean sand and dust. We'll drive you back to your hotel in Agadir or Taghazout, arriving with incredible memories, amazing photos, and the biggest smile!</p>
                 </div>
             </div>
 
             <div style="margin: 40px 0; background: #f9f9f9; padding: 30px; border-radius: 10px;">
                 <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 30px;">
                     <div>
-                        <h4 style="font-size: 1.3rem; font-weight: 700; color: #1a4d2e; margin-bottom: 15px;">✅ What's Included</h4>
+                        <h4 style="font-size: 1.3rem; font-weight: 700; color: #1F2937; margin-bottom: 15px;">✅ What's Included</h4>
                         <ul style="list-style: none; padding: 0;">
-                            <li style="padding: 8px 0; color: #666; font-size: 15px;">✓ Hotel pickup and drop-off</li>
-                            <li style="padding: 8px 0; color: #666; font-size: 15px;">✓ Professional buggy guide</li>
-                            <li style="padding: 8px 0; color: #666; font-size: 15px;">✓ Modern automatic buggy (ATV)</li>
-                            <li style="padding: 8px 0; color: #666; font-size: 15px;">✓ Safety helmet and goggles</li>
-                            <li style="padding: 8px 0; color: #666; font-size: 15px;">✓ Safety briefing and training</li>
-                            <li style="padding: 8px 0; color: #666; font-size: 15px;">✓ Fuel and equipment</li>
-                            <li style="padding: 8px 0; color: #666; font-size: 15px;">✓ Moroccan mint tea in Berber village</li>
-                            <li style="padding: 8px 0; color: #666; font-size: 15px;">✓ Bottled water</li>
-                            <li style="padding: 8px 0; color: #666; font-size: 15px;">✓ Insurance coverage</li>
-                            <li style="padding: 8px 0; color: #666; font-size: 15px;">✓ Photos and videos by guide</li>
-                            <li style="padding: 8px 0; color: #666; font-size: 15px;">✓ Sandboarding (combo tour only)</li>
+                            <li style="padding: 8px 0; color: #6B7280; font-size: 15px;">✓ Hotel pickup and drop-off</li>
+                            <li style="padding: 8px 0; color: #6B7280; font-size: 15px;">✓ Professional buggy guide</li>
+                            <li style="padding: 8px 0; color: #6B7280; font-size: 15px;">✓ Modern automatic buggy (ATV)</li>
+                            <li style="padding: 8px 0; color: #6B7280; font-size: 15px;">✓ Safety helmet and goggles</li>
+                            <li style="padding: 8px 0; color: #6B7280; font-size: 15px;">✓ Safety briefing and training</li>
+                            <li style="padding: 8px 0; color: #6B7280; font-size: 15px;">✓ Fuel and equipment</li>
+                            <li style="padding: 8px 0; color: #6B7280; font-size: 15px;">✓ Moroccan mint tea in Berber village</li>
+                            <li style="padding: 8px 0; color: #6B7280; font-size: 15px;">✓ Bottled water</li>
+                            <li style="padding: 8px 0; color: #6B7280; font-size: 15px;">✓ Insurance coverage</li>
+                            <li style="padding: 8px 0; color: #6B7280; font-size: 15px;">✓ Photos and videos by guide</li>
+                            <li style="padding: 8px 0; color: #6B7280; font-size: 15px;">✓ Sandboarding (combo tour only)</li>
                         </ul>
                     </div>
                     <div>
-                        <h4 style="font-size: 1.3rem; font-weight: 700; color: #1a4d2e; margin-bottom: 15px;">❌ What's Not Included</h4>
+                        <h4 style="font-size: 1.3rem; font-weight: 700; color: #1F2937; margin-bottom: 15px;">❌ What's Not Included</h4>
                         <ul style="list-style: none; padding: 0;">
-                            <li style="padding: 8px 0; color: #666; font-size: 15px;">✗ Lunch or dinner (except sunset tour)</li>
-                            <li style="padding: 8px 0; color: #666; font-size: 15px;">✗ Personal expenses</li>
-                            <li style="padding: 8px 0; color: #666; font-size: 15px;">✗ Gratuities for guide (optional)</li>
-                            <li style="padding: 8px 0; color: #666; font-size: 15px;">✗ Professional photos (guide takes with your camera)</li>
-                            <li style="padding: 8px 0; color: #666; font-size: 15px;">✗ Bandana/face covering (recommended to bring)</li>
+                            <li style="padding: 8px 0; color: #6B7280; font-size: 15px;">✗ Lunch or dinner (except sunset tour)</li>
+                            <li style="padding: 8px 0; color: #6B7280; font-size: 15px;">✗ Personal expenses</li>
+                            <li style="padding: 8px 0; color: #6B7280; font-size: 15px;">✗ Gratuities for guide (optional)</li>
+                            <li style="padding: 8px 0; color: #6B7280; font-size: 15px;">✗ Professional photos (guide takes with your camera)</li>
+                            <li style="padding: 8px 0; color: #6B7280; font-size: 15px;">✗ Bandana/face covering (recommended to bring)</li>
                         </ul>
                     </div>
                 </div>
             </div>
 
             <div style="margin: 40px 0;">
-                <h2 style="font-size: 1.8rem; font-weight: 700; color: #1a4d2e; margin-bottom: 20px;">Essential Guide: Buggy Adventure in Agadir</h2>
+                <h2 style="font-size: 1.8rem; font-weight: 700; color: #1F2937; margin-bottom: 20px;">Essential Guide: Buggy Adventure in Agadir</h2>
                 
-                <div style="background: #fff3cd; padding: 20px; border-radius: 10px; border-left: 4px solid #af9461; margin-bottom: 20px;">
+                <div style="background: #fff3cd; padding: 20px; border-radius: 10px; border-left: 4px solid #8B5CF6; margin-bottom: 20px;">
                     <strong style="font-size: 1.1rem;">📋 What to Wear & Bring:</strong>
-                    <ul style="margin-top: 10px; color: #666; line-height: 1.8;">
+                    <ul style="margin-top: 10px; color: #6B7280; line-height: 1.8;">
                         <li><strong>Clothing:</strong> Long pants recommended (protects from sun and sand). Comfortable t-shirt or long sleeves. Avoid loose clothing that could get caught.</li>
                         <li><strong>Footwear:</strong> Closed-toe shoes essential (sneakers perfect). NO sandals or flip-flops allowed for safety.</li>
                         <li><strong>Sun protection:</strong> Sunscreen (SPF 50+), sunglasses with strap, bandana or buff for dust protection</li>
@@ -726,9 +746,9 @@
                     </ul>
                 </div>
                 
-                <div style="background: #d1ecf1; padding: 20px; border-radius: 10px; border-left: 4px solid #1a4d2e; margin-bottom: 20px;">
+                <div style="background: #d1ecf1; padding: 20px; border-radius: 10px; border-left: 4px solid #8B5CF6; margin-bottom: 20px;">
                     <strong style="font-size: 1.1rem;">ℹ️ Important Information:</strong>
-                    <ul style="margin-top: 10px; color: #666; line-height: 1.8;">
+                    <ul style="margin-top: 10px; color: #6B7280; line-height: 1.8;">
                         <li><strong>Age requirement:</strong> Drivers must be 16+ years old. Children 6-15 can ride as passengers with an adult driver (€25)</li>
                         <li><strong>License:</strong> No driving license required for buggys in Morocco</li>
                         <li><strong>Difficulty:</strong> Easy - automatic transmission, suitable for complete beginners</li>
@@ -740,9 +760,9 @@
                     </ul>
                 </div>
 
-                <div style="background: #e8f5e9; padding: 20px; border-radius: 10px; border-left: 4px solid #1a4d2e;">
+                <div style="background: #e8f5e9; padding: 20px; border-radius: 10px; border-left: 4px solid #8B5CF6;">
                     <strong style="font-size: 1.1rem;">💡 Pro Tips from Our Guides:</strong>
-                    <ul style="margin-top: 10px; color: #666; line-height: 1.8;">
+                    <ul style="margin-top: 10px; color: #6B7280; line-height: 1.8;">
                         <li><strong>Best time:</strong> Morning tours (9 AM) are cooler and less crowded. Sunset tours offer magical lighting for photos!</li>
                         <li><strong>Get dusty:</strong> Expect to get sandy! It's part of the fun. Wear clothes you don't mind getting dirty.</li>
                         <li><strong>Bring a bandana:</strong> Protects your face from dust when riding behind others</li>
@@ -755,12 +775,12 @@
             </div>
 
             <div style="margin: 40px 0;">
-                <h2 style="font-size: 1.8rem; font-weight: 700; color: #1a4d2e; margin-bottom: 20px;">Buggy Adventure Agadir Prices: What's the Cost?</h2>
-                <p style="color: #666; line-height: 1.8; margin-bottom: 20px; font-size: 16px;">When searching for <strong>Agadir buggy adventure prices</strong>, you'll find a range of options. Here's our transparent pricing breakdown with everything included - no hidden fees:</p>
+                <h2 style="font-size: 1.8rem; font-weight: 700; color: #1F2937; margin-bottom: 20px;">Buggy Adventure Agadir Prices: What's the Cost?</h2>
+                <p style="color: #6B7280; line-height: 1.8; margin-bottom: 20px; font-size: 16px;">When searching for <strong>Agadir buggy adventure prices</strong>, you'll find a range of options. Here's our transparent pricing breakdown with everything included - no hidden fees:</p>
                 
                 <table style="width: 100%; border-collapse: collapse; margin: 20px 0; background: white; border-radius: 10px; overflow: hidden; box-shadow: 0 2px 10px rgba(0,0,0,0.1);">
                     <thead>
-                        <tr style="background: #1a4d2e; color: white;">
+                        <tr style="background: #8B5CF6; color: white;">
                             <th style="padding: 15px; text-align: left;">Tour Option</th>
                             <th style="padding: 15px; text-align: center;">Duration</th>
                             <th style="padding: 15px; text-align: center;">Price</th>
@@ -770,32 +790,32 @@
                     <tbody>
                         <tr style="border-bottom: 1px solid #f0f0f0;">
                             <td style="padding: 15px; font-weight: 600; color: #333;">2-Hour Desert & Beach Tour</td>
-                            <td style="padding: 15px; text-align: center; color: #666;">2 hours</td>
-                            <td style="padding: 15px; text-align: center; font-weight: 700; color: #1a4d2e; font-size: 1.2rem;">€50</td>
-                            <td style="padding: 15px; text-align: center; color: #666;">First-timers</td>
+                            <td style="padding: 15px; text-align: center; color: #6B7280;">2 hours</td>
+                            <td style="padding: 15px; text-align: center; font-weight: 700; color: #1F2937; font-size: 1.2rem;">€50</td>
+                            <td style="padding: 15px; text-align: center; color: #6B7280;">First-timers</td>
                         </tr>
                         <tr style="border-bottom: 1px solid #f0f0f0; background: #f9f9f9;">
                             <td style="padding: 15px; font-weight: 600; color: #333;">3-Hour Quad & Sandboarding</td>
-                            <td style="padding: 15px; text-align: center; color: #666;">3 hours</td>
-                            <td style="padding: 15px; text-align: center; font-weight: 700; color: #1a4d2e; font-size: 1.2rem;">€65</td>
-                            <td style="padding: 15px; text-align: center; color: #666;">Adventure seekers</td>
+                            <td style="padding: 15px; text-align: center; color: #6B7280;">3 hours</td>
+                            <td style="padding: 15px; text-align: center; font-weight: 700; color: #1F2937; font-size: 1.2rem;">€65</td>
+                            <td style="padding: 15px; text-align: center; color: #6B7280;">Adventure seekers</td>
                         </tr>
                         <tr style="border-bottom: 1px solid #f0f0f0;">
                             <td style="padding: 15px; font-weight: 600; color: #333;">4-Hour Sunset Safari + BBQ</td>
-                            <td style="padding: 15px; text-align: center; color: #666;">4 hours</td>
-                            <td style="padding: 15px; text-align: center; font-weight: 700; color: #1a4d2e; font-size: 1.2rem;">€75</td>
-                            <td style="padding: 15px; text-align: center; color: #666;">Photography lovers</td>
+                            <td style="padding: 15px; text-align: center; color: #6B7280;">4 hours</td>
+                            <td style="padding: 15px; text-align: center; font-weight: 700; color: #1F2937; font-size: 1.2rem;">€75</td>
+                            <td style="padding: 15px; text-align: center; color: #6B7280;">Photography lovers</td>
                         </tr>
                         <tr style="background: #f9f9f9;">
                             <td style="padding: 15px; font-weight: 600; color: #333;">Child Passenger (6-15 years)</td>
-                            <td style="padding: 15px; text-align: center; color: #666;">Same as driver</td>
-                            <td style="padding: 15px; text-align: center; font-weight: 700; color: #1a4d2e; font-size: 1.2rem;">€25</td>
-                            <td style="padding: 15px; text-align: center; color: #666;">Family tours</td>
+                            <td style="padding: 15px; text-align: center; color: #6B7280;">Same as driver</td>
+                            <td style="padding: 15px; text-align: center; font-weight: 700; color: #1F2937; font-size: 1.2rem;">€25</td>
+                            <td style="padding: 15px; text-align: center; color: #6B7280;">Family tours</td>
                         </tr>
                     </tbody>
                 </table>
                 
-                <div style="background: #1a4d2e; color: white; padding: 20px; border-radius: 10px; margin-top: 20px;">
+                <div style="background: #8B5CF6; color: white; padding: 20px; border-radius: 10px; margin-top: 20px;">
                     <p style="font-size: 15px; line-height: 1.8; margin-bottom: 10px;"><strong>✨ Special Offers:</strong></p>
                     <ul style="line-height: 1.8;">
                         <li>👥 Groups of 4-7 people: <strong>10% discount</strong></li>
@@ -807,67 +827,67 @@
             </div>
 
             <div style="margin: 60px 0; background: #f9f9f9; padding: 40px; border-radius: 15px;">
-                <h2 style="font-size: 2rem; font-weight: 700; color: #1a4d2e; margin-bottom: 30px; text-align: center;">Frequently Asked Questions: Buggy Adventure Agadir</h2>
+                <h2 style="font-size: 2rem; font-weight: 700; color: #1F2937; margin-bottom: 30px; text-align: center;">Frequently Asked Questions: Buggy Adventure Agadir</h2>
                 
                 <div style="background: white; border-radius: 10px; margin-bottom: 15px; overflow: hidden; border: 2px solid #e0e0e0; padding: 20px;">
-                    <h3 style="font-size: 1.1rem; font-weight: 700; color: #1a4d2e; margin-bottom: 10px;">How much does buggy adventure in Agadir cost?</h3>
-                    <p style="color: #666; line-height: 1.8;">Agadir buggy adventure prices typically range from €50-€75 per person depending on tour duration and inclusions. Our 2-hour desert and beach tour starts at €50 per person, the 3-hour combo with sandboarding is €65, and the premium 4-hour sunset safari with BBQ is €75. All prices include equipment, guide, insurance, and hotel transfers. We offer the best buggy adventure Agadir prices with no hidden fees!</p>
+                    <h3 style="font-size: 1.1rem; font-weight: 700; color: #1F2937; margin-bottom: 10px;">How much does buggy adventure in Agadir cost?</h3>
+                    <p style="color: #6B7280; line-height: 1.8;">Agadir buggy adventure prices typically range from €50-€75 per person depending on tour duration and inclusions. Our 2-hour desert and beach tour starts at €50 per person, the 3-hour combo with sandboarding is €65, and the premium 4-hour sunset safari with BBQ is €75. All prices include equipment, guide, insurance, and hotel transfers. We offer the best buggy adventure Agadir prices with no hidden fees!</p>
                 </div>
                 
                 <div style="background: white; border-radius: 10px; margin-bottom: 15px; overflow: hidden; border: 2px solid #e0e0e0; padding: 20px;">
-                    <h3 style="font-size: 1.1rem; font-weight: 700; color: #1a4d2e; margin-bottom: 10px;">Is buggy adventure in Agadir safe for beginners?</h3>
-                    <p style="color: #666; line-height: 1.8;">Absolutely! Our buggy adventure tours are perfect for beginners. We use automatic buggys that are very easy to operate - no manual transmission or clutch to worry about. You'll receive comprehensive safety training, wear protective gear, and be guided by experienced professionals. Most of our guests have never ridden a buggy before and have an amazing time!</p>
+                    <h3 style="font-size: 1.1rem; font-weight: 700; color: #1F2937; margin-bottom: 10px;">Is buggy adventure in Agadir safe for beginners?</h3>
+                    <p style="color: #6B7280; line-height: 1.8;">Absolutely! Our buggy adventure tours are perfect for beginners. We use automatic buggys that are very easy to operate - no manual transmission or clutch to worry about. You'll receive comprehensive safety training, wear protective gear, and be guided by experienced professionals. Most of our guests have never ridden a buggy before and have an amazing time!</p>
                 </div>
                 
                 <div style="background: white; border-radius: 10px; margin-bottom: 15px; overflow: hidden; border: 2px solid #e0e0e0; padding: 20px;">
-                    <h3 style="font-size: 1.1rem; font-weight: 700; color: #1a4d2e; margin-bottom: 10px;">What's the best buggy adventure tour in Agadir?</h3>
-                    <p style="color: #666; line-height: 1.8;">The best buggy adventure Agadir tour depends on your preferences! Our 2-hour Desert & Beach tour is perfect for first-timers and those short on time. The 3-hour Quad & Sandboarding combo is our most popular for adventure seekers. The 4-hour Sunset Safari is ideal for photography enthusiasts and romantic experiences. All routes include desert dunes, beaches, and cultural stops.</p>
+                    <h3 style="font-size: 1.1rem; font-weight: 700; color: #1F2937; margin-bottom: 10px;">What's the best buggy adventure tour in Agadir?</h3>
+                    <p style="color: #6B7280; line-height: 1.8;">The best buggy adventure Agadir tour depends on your preferences! Our 2-hour Desert & Beach tour is perfect for first-timers and those short on time. The 3-hour Quad & Sandboarding combo is our most popular for adventure seekers. The 4-hour Sunset Safari is ideal for photography enthusiasts and romantic experiences. All routes include desert dunes, beaches, and cultural stops.</p>
                 </div>
                 
                 <div style="background: white; border-radius: 10px; margin-bottom: 15px; overflow: hidden; border: 2px solid #e0e0e0; padding: 20px;">
-                    <h3 style="font-size: 1.1rem; font-weight: 700; color: #1a4d2e; margin-bottom: 10px;">Can children do buggy adventure in Agadir?</h3>
-                    <p style="color: #666; line-height: 1.8;">Children aged 16+ can drive their own buggy. Kids aged 6-15 can ride as passengers with an adult driver for €25 per child. We provide child-sized helmets and ensure all safety measures. Many families enjoy this as a thrilling shared experience. Kids under 6 are not permitted for safety reasons.</p>
+                    <h3 style="font-size: 1.1rem; font-weight: 700; color: #1F2937; margin-bottom: 10px;">Can children do buggy adventure in Agadir?</h3>
+                    <p style="color: #6B7280; line-height: 1.8;">Children aged 16+ can drive their own buggy. Kids aged 6-15 can ride as passengers with an adult driver for €25 per child. We provide child-sized helmets and ensure all safety measures. Many families enjoy this as a thrilling shared experience. Kids under 6 are not permitted for safety reasons.</p>
                 </div>
                 
                 <div style="background: white; border-radius: 10px; margin-bottom: 15px; overflow: hidden; border: 2px solid #e0e0e0; padding: 20px;">
-                    <h3 style="font-size: 1.1rem; font-weight: 700; color: #1a4d2e; margin-bottom: 10px;">What time is best for buggy adventure in Agadir?</h3>
-                    <p style="color: #666; line-height: 1.8;">Morning tours (9 AM) are cooler and offer crisp light for photos. Afternoon tours (2 PM) are warmer but less crowded. Sunset tours (4-5 PM start) provide spectacular golden hour lighting and cooler temperatures - perfect for photography. We recommend morning for summer visits and afternoon/sunset for winter/spring.</p>
+                    <h3 style="font-size: 1.1rem; font-weight: 700; color: #1F2937; margin-bottom: 10px;">What time is best for buggy adventure in Agadir?</h3>
+                    <p style="color: #6B7280; line-height: 1.8;">Morning tours (9 AM) are cooler and offer crisp light for photos. Afternoon tours (2 PM) are warmer but less crowded. Sunset tours (4-5 PM start) provide spectacular golden hour lighting and cooler temperatures - perfect for photography. We recommend morning for summer visits and afternoon/sunset for winter/spring.</p>
                 </div>
                 
                 <div style="background: white; border-radius: 10px; margin-bottom: 15px; overflow: hidden; border: 2px solid #e0e0e0; padding: 20px;">
-                    <h3 style="font-size: 1.1rem; font-weight: 700; color: #1a4d2e; margin-bottom: 10px;">Where do you pick up for buggy tours in Agadir?</h3>
-                    <p style="color: #666; line-height: 1.8;">We provide free pickup from all hotels and accommodations in Agadir city center, Agadir Marina, Agadir Bay, Taghazout, Tamraght, Aourir (Banana Village), and Paradis Plage. For locations outside these areas, please contact us - we can usually arrange pickup for a small supplement.</p>
+                    <h3 style="font-size: 1.1rem; font-weight: 700; color: #1F2937; margin-bottom: 10px;">Where do you pick up for buggy tours in Agadir?</h3>
+                    <p style="color: #6B7280; line-height: 1.8;">We provide free pickup from all hotels and accommodations in Agadir city center, Agadir Marina, Agadir Bay, Taghazout, Tamraght, Aourir (Banana Village), and Paradis Plage. For locations outside these areas, please contact us - we can usually arrange pickup for a small supplement.</p>
                 </div>
                 
                 <div style="background: white; border-radius: 10px; margin-bottom: 15px; overflow: hidden; border: 2px solid #e0e0e0; padding: 20px;">
-                    <h3 style="font-size: 1.1rem; font-weight: 700; color: #1a4d2e; margin-bottom: 10px;">Can I do buggy adventure and sandboarding in one tour?</h3>
-                    <p style="color: #666; line-height: 1.8;">Yes! Our 3-hour combo tour combines buggy adventure and sandboarding in Agadir for the ultimate adventure. You'll spend about 2 hours on the buggy exploring dunes and beaches, then 30-45 minutes sandboarding down massive sand dunes. This is our most popular option for adventure enthusiasts and costs just €65 per person - incredible value!</p>
+                    <h3 style="font-size: 1.1rem; font-weight: 700; color: #1F2937; margin-bottom: 10px;">Can I do buggy adventure and sandboarding in one tour?</h3>
+                    <p style="color: #6B7280; line-height: 1.8;">Yes! Our 3-hour combo tour combines buggy adventure and sandboarding in Agadir for the ultimate adventure. You'll spend about 2 hours on the buggy exploring dunes and beaches, then 30-45 minutes sandboarding down massive sand dunes. This is our most popular option for adventure enthusiasts and costs just €65 per person - incredible value!</p>
                 </div>
                 
                 <div style="background: white; border-radius: 10px; margin-bottom: 15px; overflow: hidden; border: 2px solid #e0e0e0; padding: 20px;">
-                    <h3 style="font-size: 1.1rem; font-weight: 700; color: #1a4d2e; margin-bottom: 10px;">Do I need experience to go buggy adventure in Agadir?</h3>
-                    <p style="color: #666; line-height: 1.8;">No experience necessary! About 75% of our guests have never ridden a buggy before. Our automatic buggies are very easy to learn - if you can ride a bicycle, you can handle a quad. We provide thorough training, start slowly, and gradually build up speed as you gain confidence. Within 10 minutes, most beginners are riding comfortably!</p>
+                    <h3 style="font-size: 1.1rem; font-weight: 700; color: #1F2937; margin-bottom: 10px;">Do I need experience to go buggy adventure in Agadir?</h3>
+                    <p style="color: #6B7280; line-height: 1.8;">No experience necessary! About 75% of our guests have never ridden a buggy before. Our automatic buggies are very easy to learn - if you can ride a bicycle, you can handle a quad. We provide thorough training, start slowly, and gradually build up speed as you gain confidence. Within 10 minutes, most beginners are riding comfortably!</p>
                 </div>
                 
                 <div style="background: white; border-radius: 10px; margin-bottom: 15px; overflow: hidden; border: 2px solid #e0e0e0; padding: 20px;">
-                    <h3 style="font-size: 1.1rem; font-weight: 700; color: #1a4d2e; margin-bottom: 10px;">What makes your buggy tours different from others in Agadir?</h3>
-                    <p style="color: #666; line-height: 1.8;">We're rated the best buggy adventure in Agadir because of our small groups (max 8 buggies vs. 20+ with competitors), brand-new equipment, experienced local guides, diverse routes covering dunes + beaches + villages, authentic cultural stops, competitive pricing, and genuine passion for showing you the best of Agadir. Plus, we're a local family business - when you book with us, you support the local community!</p>
+                    <h3 style="font-size: 1.1rem; font-weight: 700; color: #1F2937; margin-bottom: 10px;">What makes your buggy tours different from others in Agadir?</h3>
+                    <p style="color: #6B7280; line-height: 1.8;">We're rated the best buggy adventure in Agadir because of our small groups (max 8 buggies vs. 20+ with competitors), brand-new equipment, experienced local guides, diverse routes covering dunes + beaches + villages, authentic cultural stops, competitive pricing, and genuine passion for showing you the best of Agadir. Plus, we're a local family business - when you book with us, you support the local community!</p>
                 </div>
                 
                 <div style="background: white; border-radius: 10px; margin-bottom: 15px; overflow: hidden; border: 2px solid #e0e0e0; padding: 20px;">
-                    <h3 style="font-size: 1.1rem; font-weight: 700; color: #1a4d2e; margin-bottom: 10px;">Can I book buggy adventure in Agadir for today or tomorrow?</h3>
-                    <p style="color: #666; line-height: 1.8;">Yes! We accept last-minute bookings subject to availability. WhatsApp us at +212645792457 and we'll check real-time availability. We typically have morning and afternoon slots available most days. However, we recommend booking 2-3 days in advance during peak season (June-September) to guarantee your preferred time slot.</p>
+                    <h3 style="font-size: 1.1rem; font-weight: 700; color: #1F2937; margin-bottom: 10px;">Can I book buggy adventure in Agadir for today or tomorrow?</h3>
+                    <p style="color: #6B7280; line-height: 1.8;">Yes! We accept last-minute bookings subject to availability. WhatsApp us at +212645792457 and we'll check real-time availability. We typically have morning and afternoon slots available most days. However, we recommend booking 2-3 days in advance during peak season (June-September) to guarantee your preferred time slot.</p>
                 </div>
             </div>
 
             <div style="margin: 60px 0;">
                 <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 30px;">
-                    <h2 style="font-size: 1.8rem; font-weight: 700; color: #1a4d2e;">What Riders Say About Our Quad Tours</h2>
+                    <h2 style="font-size: 1.8rem; font-weight: 700; color: #1F2937;">What Riders Say About Our Quad Tours</h2>
                     <div style="display: flex; align-items: center; gap: 20px;">
-                        <span style="font-size: 3rem; font-weight: 700; color: #1a4d2e;">4.9</span>
+                        <span style="font-size: 3rem; font-weight: 700; color: #1F2937;">4.9</span>
                         <div>
                             <div style="color: #f39c12; font-size: 20px; margin-bottom: 5px;">★★★★★</div>
-                            <span style="color: #666;">Excellent</span><br>
+                            <span style="color: #6B7280;">Excellent</span><br>
                             <span style="color: #999; font-size: 14px;">526 reviews</span>
                         </div>
                     </div>
@@ -876,121 +896,121 @@
                 <div style="background: white; border: 2px solid #f0f0f0; border-radius: 10px; padding: 25px; margin-bottom: 20px;">
                     <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 15px;">
                         <div style="display: flex; align-items: center; gap: 15px;">
-                            <div style="width: 50px; height: 50px; background: #1a4d2e; border-radius: 50%; display: flex; align-items: center; justify-content: center; color: white; font-weight: 700; font-size: 1.2rem;">J</div>
+                            <div style="width: 50px; height: 50px; background: #8B5CF6; border-radius: 50%; display: flex; align-items: center; justify-content: center; color: white; font-weight: 700; font-size: 1.2rem;">J</div>
                             <div>
                                 <div style="font-weight: 700; color: #333;">Jake Thompson</div>
                                 <div style="color: #999; font-size: 14px;">California, USA • Visited Oct 2025</div>
                             </div>
                         </div>
-                        <div style="background: #1a4d2e; color: white; padding: 6px 12px; border-radius: 6px; font-weight: 700;">5.0</div>
+                        <div style="background: #8B5CF6; color: white; padding: 6px 12px; border-radius: 6px; font-weight: 700;">5.0</div>
                     </div>
-                    <p style="color: #666; line-height: 1.6;">Best buggy adventure experience ever! The combination of desert dunes and beach riding was incredible. Our guide Mohammed was fantastic - really knowledgeable and made sure everyone felt safe and had a blast. The equipment was in excellent condition. Definitely the best thing I did in Agadir. Worth every euro!</p>
+                    <p style="color: #6B7280; line-height: 1.6;">Best buggy adventure experience ever! The combination of desert dunes and beach riding was incredible. Our guide Mohammed was fantastic - really knowledgeable and made sure everyone felt safe and had a blast. The equipment was in excellent condition. Definitely the best thing I did in Agadir. Worth every euro!</p>
                 </div>
 
                 <div style="background: white; border: 2px solid #f0f0f0; border-radius: 10px; padding: 25px; margin-bottom: 20px;">
                     <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 15px;">
                         <div style="display: flex; align-items: center; gap: 15px;">
-                            <div style="width: 50px; height: 50px; background: #1a4d2e; border-radius: 50%; display: flex; align-items: center; justify-content: center; color: white; font-weight: 700; font-size: 1.2rem;">S</div>
+                            <div style="width: 50px; height: 50px; background: #8B5CF6; border-radius: 50%; display: flex; align-items: center; justify-content: center; color: white; font-weight: 700; font-size: 1.2rem;">S</div>
                             <div>
                                 <div style="font-weight: 700; color: #333;">Sophie Dubois</div>
                                 <div style="color: #999; font-size: 14px;">Paris, France • Visited Sep 2025</div>
                             </div>
                         </div>
-                        <div style="background: #1a4d2e; color: white; padding: 6px 12px; border-radius: 6px; font-weight: 700;">5.0</div>
+                        <div style="background: #8B5CF6; color: white; padding: 6px 12px; border-radius: 6px; font-weight: 700;">5.0</div>
                     </div>
-                    <p style="color: #666; line-height: 1.6;">Incroyable! The buggy adventure and sandboarding combo was amazing! Never done either before but the guides were so patient and encouraging. Riding through the dunes felt like being in a movie. The sandboarding was hilarious and so much fun. Great value for money and highlight of our Agadir trip. Highly recommend!</p>
+                    <p style="color: #6B7280; line-height: 1.6;">Incroyable! The buggy adventure and sandboarding combo was amazing! Never done either before but the guides were so patient and encouraging. Riding through the dunes felt like being in a movie. The sandboarding was hilarious and so much fun. Great value for money and highlight of our Agadir trip. Highly recommend!</p>
                 </div>
 
                 <div style="background: white; border: 2px solid #f0f0f0; border-radius: 10px; padding: 25px; margin-bottom: 20px;">
                     <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 15px;">
                         <div style="display: flex; align-items: center; gap: 15px;">
-                            <div style="width: 50px; height: 50px; background: #1a4d2e; border-radius: 50%; display: flex; align-items: center; justify-content: center; color: white; font-weight: 700; font-size: 1.2rem;">M</div>
+                            <div style="width: 50px; height: 50px; background: #8B5CF6; border-radius: 50%; display: flex; align-items: center; justify-content: center; color: white; font-weight: 700; font-size: 1.2rem;">M</div>
                             <div>
                                 <div style="font-weight: 700; color: #333;">Marcus Schmidt</div>
                                 <div style="color: #999; font-size: 14px;">Hamburg, Germany • Visited Oct 2025</div>
                             </div>
                         </div>
-                        <div style="background: #1a4d2e; color: white; padding: 6px 12px; border-radius: 6px; font-weight: 700;">4.8</div>
+                        <div style="background: #8B5CF6; color: white; padding: 6px 12px; border-radius: 6px; font-weight: 700;">4.8</div>
                     </div>
-                    <p style="color: #666; line-height: 1.6;">Excellent organization! Picked up on time, equipment was top quality, and the route was perfect - challenging enough to be exciting but safe for our mixed-experience group. The stop at the Berber village was a nice cultural touch. Prices are very competitive compared to other operators. Would definitely do it again!</p>
+                    <p style="color: #6B7280; line-height: 1.6;">Excellent organization! Picked up on time, equipment was top quality, and the route was perfect - challenging enough to be exciting but safe for our mixed-experience group. The stop at the Berber village was a nice cultural touch. Prices are very competitive compared to other operators. Would definitely do it again!</p>
                 </div>
 
                 <div style="background: white; border: 2px solid #f0f0f0; border-radius: 10px; padding: 25px; margin-bottom: 20px;">
                     <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 15px;">
                         <div style="display: flex; align-items: center; gap: 15px;">
-                            <div style="width: 50px; height: 50px; background: #1a4d2e; border-radius: 50%; display: flex; align-items: center; justify-content: center; color: white; font-weight: 700; font-size: 1.2rem;">R</div>
+                            <div style="width: 50px; height: 50px; background: #8B5CF6; border-radius: 50%; display: flex; align-items: center; justify-content: center; color: white; font-weight: 700; font-size: 1.2rem;">R</div>
                             <div>
                                 <div style="font-weight: 700; color: #333;">Rachel Brown</div>
                                 <div style="color: #999; font-size: 14px;">London, UK • Visited Aug 2025</div>
                             </div>
                         </div>
-                        <div style="background: #1a4d2e; color: white; padding: 6px 12px; border-radius: 6px; font-weight: 700;">5.0</div>
+                        <div style="background: #8B5CF6; color: white; padding: 6px 12px; border-radius: 6px; font-weight: 700;">5.0</div>
                     </div>
-                    <p style="color: #666; line-height: 1.6;">So much fun! I was nervous as a first-timer but the guide made me feel completely comfortable. The buggys are powerful but really easy to control. Loved riding on the beach with the waves - such an incredible feeling! Small group size meant we could go at our own pace. Photos turned out amazing. This is a must-do in Agadir!</p>
+                    <p style="color: #6B7280; line-height: 1.6;">So much fun! I was nervous as a first-timer but the guide made me feel completely comfortable. The buggys are powerful but really easy to control. Loved riding on the beach with the waves - such an incredible feeling! Small group size meant we could go at our own pace. Photos turned out amazing. This is a must-do in Agadir!</p>
                 </div>
 
                 <div style="background: white; border: 2px solid #f0f0f0; border-radius: 10px; padding: 25px; margin-bottom: 20px;">
                     <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 15px;">
                         <div style="display: flex; align-items: center; gap: 15px;">
-                            <div style="width: 50px; height: 50px; background: #1a4d2e; border-radius: 50%; display: flex; align-items: center; justify-content: center; color: white; font-weight: 700; font-size: 1.2rem;">A</div>
+                            <div style="width: 50px; height: 50px; background: #8B5CF6; border-radius: 50%; display: flex; align-items: center; justify-content: center; color: white; font-weight: 700; font-size: 1.2rem;">A</div>
                             <div>
                                 <div style="font-weight: 700; color: #333;">Ahmed & Family</div>
                                 <div style="color: #999; font-size: 14px;">Dubai, UAE • Visited Sep 2025</div>
                             </div>
                         </div>
-                        <div style="background: #1a4d2e; color: white; padding: 6px 12px; border-radius: 6px; font-weight: 700;">5.0</div>
+                        <div style="background: #8B5CF6; color: white; padding: 6px 12px; border-radius: 6px; font-weight: 700;">5.0</div>
                     </div>
-                    <p style="color: #666; line-height: 1.6;">Perfect family activity! My wife drove one buggy and I drove another with our kids as passengers. They absolutely loved it - talking about it non-stop! Guide was excellent with the children, very safety-conscious. The route through different terrains kept it interesting. Great memories made. Best buggy adventure prices in Agadir too!</p>
+                    <p style="color: #6B7280; line-height: 1.6;">Perfect family activity! My wife drove one buggy and I drove another with our kids as passengers. They absolutely loved it - talking about it non-stop! Guide was excellent with the children, very safety-conscious. The route through different terrains kept it interesting. Great memories made. Best buggy adventure prices in Agadir too!</p>
                 </div>
             </div>
 
             <div style="margin: 40px 0;">
-                <h2 style="font-size: 1.8rem; font-weight: 700; color: #1a4d2e; margin-bottom: 20px;">Why Book Buggy Adventure with The Local Guide?</h2>
+                <h2 style="font-size: 1.8rem; font-weight: 700; color: #1F2937; margin-bottom: 20px;">Why Book Buggy Adventure with The Local Guide?</h2>
                 <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px; margin-top: 25px;">
                     <div style="background: white; padding: 25px; border-radius: 10px; border: 2px solid #e0e0e0; text-align: center;">
                         <div style="font-size: 2.5rem; margin-bottom: 10px;">🏆</div>
-                        <h4 style="color: #1a4d2e; font-size: 1.1rem; margin-bottom: 10px; font-weight: 700;">Top-Rated</h4>
-                        <p style="color: #666; font-size: 14px; line-height: 1.6;">4.9/5 rating from 526+ reviews. Consistently rated best buggy adventure in Agadir on TripAdvisor & Google</p>
+                        <h4 style="color: #1F2937; font-size: 1.1rem; margin-bottom: 10px; font-weight: 700;">Top-Rated</h4>
+                        <p style="color: #6B7280; font-size: 14px; line-height: 1.6;">4.9/5 rating from 526+ reviews. Consistently rated best buggy adventure in Agadir on TripAdvisor & Google</p>
                     </div>
                     
                     <div style="background: white; padding: 25px; border-radius: 10px; border: 2px solid #e0e0e0; text-align: center;">
                         <div style="font-size: 2.5rem; margin-bottom: 10px;">🏍️</div>
-                        <h4 style="color: #1a4d2e; font-size: 1.1rem; margin-bottom: 10px; font-weight: 700;">New Equipment</h4>
-                        <p style="color: #666; font-size: 14px; line-height: 1.6;">2024/2025 model buggys. Well-maintained, powerful, automatic transmission. Safety checked daily</p>
+                        <h4 style="color: #1F2937; font-size: 1.1rem; margin-bottom: 10px; font-weight: 700;">New Equipment</h4>
+                        <p style="color: #6B7280; font-size: 14px; line-height: 1.6;">2024/2025 model buggys. Well-maintained, powerful, automatic transmission. Safety checked daily</p>
                     </div>
                     
                     <div style="background: white; padding: 25px; border-radius: 10px; border: 2px solid #e0e0e0; text-align: center;">
                         <div style="font-size: 2.5rem; margin-bottom: 10px;">👥</div>
-                        <h4 style="color: #1a4d2e; font-size: 1.1rem; margin-bottom: 10px; font-weight: 700;">Small Groups</h4>
-                        <p style="color: #666; font-size: 14px; line-height: 1.6;">Maximum 8 buggies per guide. More personal attention, better photos, flexible pacing to suit your group</p>
+                        <h4 style="color: #1F2937; font-size: 1.1rem; margin-bottom: 10px; font-weight: 700;">Small Groups</h4>
+                        <p style="color: #6B7280; font-size: 14px; line-height: 1.6;">Maximum 8 buggies per guide. More personal attention, better photos, flexible pacing to suit your group</p>
                     </div>
                     
                     <div style="background: white; padding: 25px; border-radius: 10px; border: 2px solid #e0e0e0; text-align: center;">
                         <div style="font-size: 2.5rem; margin-bottom: 10px;">💰</div>
-                        <h4 style="color: #1a4d2e; font-size: 1.1rem; margin-bottom: 10px; font-weight: 700;">Best Prices</h4>
-                        <p style="color: #666; font-size: 14px; line-height: 1.6;">Competitive buggy adventure Agadir prices with no hidden fees. Group discounts available. Price match guarantee</p>
+                        <h4 style="color: #1F2937; font-size: 1.1rem; margin-bottom: 10px; font-weight: 700;">Best Prices</h4>
+                        <p style="color: #6B7280; font-size: 14px; line-height: 1.6;">Competitive buggy adventure Agadir prices with no hidden fees. Group discounts available. Price match guarantee</p>
                     </div>
                     
                     <div style="background: white; padding: 25px; border-radius: 10px; border: 2px solid #e0e0e0; text-align: center;">
                         <div style="font-size: 2.5rem; margin-bottom: 10px;">🌍</div>
-                        <h4 style="color: #1a4d2e; font-size: 1.1rem; margin-bottom: 10px; font-weight: 700;">Local Experts</h4>
-                        <p style="color: #666; font-size: 14px; line-height: 1.6;">Born and raised in Agadir. We know every dune, beach, and village. Authentic local experience guaranteed</p>
+                        <h4 style="color: #1F2937; font-size: 1.1rem; margin-bottom: 10px; font-weight: 700;">Local Experts</h4>
+                        <p style="color: #6B7280; font-size: 14px; line-height: 1.6;">Born and raised in Agadir. We know every dune, beach, and village. Authentic local experience guaranteed</p>
                     </div>
                     
                     <div style="background: white; padding: 25px; border-radius: 10px; border: 2px solid #e0e0e0; text-align: center;">
                         <div style="font-size: 2.5rem; margin-bottom: 10px;">🔒</div>
-                        <h4 style="color: #1a4d2e; font-size: 1.1rem; margin-bottom: 10px; font-weight: 700;">Fully Insured</h4>
-                        <p style="color: #666; font-size: 14px; line-height: 1.6;">Comprehensive insurance coverage included. Safety is our top priority. Licensed and certified operation</p>
+                        <h4 style="color: #1F2937; font-size: 1.1rem; margin-bottom: 10px; font-weight: 700;">Fully Insured</h4>
+                        <p style="color: #6B7280; font-size: 14px; line-height: 1.6;">Comprehensive insurance coverage included. Safety is our top priority. Licensed and certified operation</p>
                     </div>
                 </div>
             </div>
 
-            <div style="background: linear-gradient(135deg, #1a4d2e 0%, #2a5d3e 100%); padding: 40px; border-radius: 15px; text-align: center; margin: 50px 0; color: white;">
-                <h2 style="color: white; font-size: 2rem; margin-bottom: 15px;">Ready for the Ultimate Buggy Adventure Adventure?</h2>
+            <div style="background: linear-gradient(135deg, #8B5CF6 0%, #7C3AED 100%); padding: 40px; border-radius: 16px; text-align: center; margin: 50px 0; color: white; box-shadow: 0 8px 32px rgba(0,0,0,0.12);">
+                <h2 style="color: white; font-size: 2rem; margin-bottom: 15px; font-family: 'Inter', sans-serif;">Ready for the Ultimate Buggy Adventure?</h2>
                 <p style="font-size: 1.1rem; margin-bottom: 25px; opacity: 0.95;">Join hundreds of happy riders! Book your buggy adventure Agadir tour today.</p>
                 <div style="display: flex; gap: 15px; justify-content: center; flex-wrap: wrap;">
-                    <a href="contact.html" style="background: white; color: #1a4d2e; padding: 15px 35px; border-radius: 8px; text-decoration: none; font-weight: 700; font-size: 1.1rem; display: inline-block;">Book Now</a>
-                    <a href="https://wa.me/212645792457?text=Hi! I want to book buggy adventure in Agadir" target="_blank" style="background: #25D366; color: white; padding: 15px 35px; border-radius: 8px; text-decoration: none; font-weight: 700; font-size: 1.1rem; display: inline-block;">WhatsApp Us</a>
+                    <a href="contact.html" style="background: #cdff03; color: #000000; padding: 16px 32px; border-radius: 6px; text-decoration: none; font-weight: 700; font-size: 1.1rem; display: inline-block;">Book Now</a>
+                    <a href="https://wa.me/212645792457?text=Hi! I want to book buggy adventure in Agadir" target="_blank" style="background: #8449f2; color: white; padding: 16px 32px; border-radius: 6px; text-decoration: none; font-weight: 700; font-size: 1.1rem; display: inline-block;">Book via WhatsApp</a>
                 </div>
             </div>
         </div>
@@ -998,127 +1018,112 @@
         <aside style="position: sticky; top: 120px; height: fit-content;">
             <div style="background: white; border: 2px solid #f0f0f0; border-radius: 15px; padding: 30px; box-shadow: 0 5px 30px rgba(0,0,0,0.1);">
                 <div style="text-align: center; margin-bottom: 25px; padding-bottom: 25px; border-bottom: 2px solid #f0f0f0;">
-                    <div style="color: #666; font-size: 14px; margin-bottom: 8px;">From</div>
-                    <div style="font-size: 2.5rem; font-weight: 700; color: #1a4d2e;">€80<span style="font-size: 1rem; color: #999; font-weight: 400;"> /buggy</span></div>
+                    <div style="color: #6B7280; font-size: 14px; margin-bottom: 8px;">From</div>
+                    <div style="font-size: 2.5rem; font-weight: 700; color: #1F2937;">€80<span style="font-size: 1rem; color: #999; font-weight: 400;"> /buggy</span></div>
                     <p style="font-size: 13px; color: #999; margin-top: 8px;">2-seater or 4-seater available</p>
                 </div>
 
                 <!-- Booking Buttons -->
                 <div style="display: flex; flex-direction: column; gap: 12px; margin-bottom: 20px;">
-                    <a href="#booking-link" style="background: linear-gradient(135deg, #FF6B35 0%, #f39c12 100%); color: white; padding: 16px 24px; border-radius: 8px; text-decoration: none; font-weight: 700; font-size: 16px; text-align: center; transition: all 0.3s ease; box-shadow: 0 4px 15px rgba(255, 107, 53, 0.3); display: block;">
-                        📅 Book Now
+                    <a href="#booking-link" style="background: #cdff03; color: #000000; padding: 16px 24px; border-radius: 6px; text-decoration: none; font-weight: 700; font-size: 16px; text-align: center; transition: all 0.3s ease; box-shadow: 0 4px 12px rgba(205, 255, 3, 0.3); display: block;">
+                        Book Now
                     </a>
-                    <a href="https://wa.me/212645792457?text=Hi! I'm interested in the Buggy Adventure tour" target="_blank" style="background: #25D366; color: white; padding: 16px 24px; border-radius: 8px; text-decoration: none; font-weight: 600; font-size: 16px; text-align: center; transition: all 0.3s ease; box-shadow: 0 4px 15px rgba(37, 211, 102, 0.3); display: flex; align-items: center; justify-content: center;">
-                        <svg width="20" height="20" fill="currentColor" viewBox="0 0 24 28" style="margin-right: 8px;">
-                            <path d="M15.391 15.219c0.266 0 2.812 1.328 2.922 1.516 0.031 0.078 0.031 0.172 0.031 0.234 0 0.391-0.125 0.828-0.266 1.188-0.359 0.875-1.813 1.437-2.703 1.437-0.75 0-2.297-0.656-2.969-0.969-2.234-1.016-3.625-2.75-4.969-4.734-0.594-0.875-1.125-1.953-1.109-3.031v-0.125c0.031-1.031 0.406-1.766 1.156-2.469 0.234-0.219 0.484-0.344 0.812-0.344 0.187 0 0.375 0.047 0.578 0.047 0.422 0 0.5 0.125 0.656 0.531 0.109 0.266 0.906 2.391 0.906 2.547 0 0.594-1.078 1.266-1.078 1.625 0 0.078 0.031 0.156 0.078 0.234 0.344 0.734 1 1.578 1.594 2.141 0.719 0.688 1.484 1.141 2.359 1.578 0.109 0.063 0.219 0.109 0.344 0.109 0.469 0 1.25-1.516 1.656-1.516z"></path>
-                        </svg>
+                    <a href="https://wa.me/212645792457?text=Hi! I'm interested in the Buggy Adventure tour" target="_blank" style="background: #8449f2; color: white; padding: 16px 24px; border-radius: 6px; text-decoration: none; font-weight: 700; font-size: 16px; text-align: center; transition: all 0.3s ease; box-shadow: 0 4px 12px rgba(132, 73, 242, 0.3); display: block;">
                         Book via WhatsApp
                     </a>
                     </div>
                     
-                <div style="background: #e8f5e9; padding: 15px; border-radius: 8px; text-align: center; margin-top: 20px; color: #1a4d2e; font-weight: 600; font-size: 14px;">
+                <div style="background: #e8f5e9; padding: 15px; border-radius: 6px; text-align: center; margin-top: 20px; color: #1F2937; font-weight: 600; font-size: 14px;">
                     ✓ Free cancellation up to 24 hours
                     </div>
             </div>
         </aside>
     </section>
-                    <!-- Footer -->
-    <footer class="site-footer">
-        <!-- Main Footer Content -->
-        <div class="footer-main">
-            <div class="footer-content">
-                <!-- Main Office -->
-                <div class="footer-section">
-                    <h3>MAIN OFFICE</h3>
-                    <div class="office-info">
-                        <p><strong>Agadir Tours & Excursions</strong></p>
-                        <p>Agadir Bay, Morocco</p>
-                        <p>Near Marina Agadir</p>
-                        <p>PO Box 80000, Agadir</p>
-                        <p>Morocco</p>
-                    </div>
-                </div>
-
-                <!-- Company -->
-                <div class="footer-section">
-                    <h3>COMPANY</h3>
-                    <ul class="footer-links">
-                        <li><a href="about.html">About Us</a></li>
-                        <li><a href="agadir-tours.html">Agadir Tours</a></li>
-                        <li><a href="gallery.html">Gallery</a></li>
-                        <li><a href="pilots.html">Our Guides</a></li>
-                        <li><a href="safety.html">Safety Standards</a></li>
-                        <li><a href="contact.html">Contact Us</a></li>
+                        <!-- FOOTER -->
+    <footer class="footer">
+        <div class="footer__wrapper">
+            <!-- Footer Top Section -->
+            <div class="footer__top">
+                <div class="footer__column">
+                    <h4 class="footer__title">Popular Tours</h4>
+                    <ul class="footer__links">
+                        <li><a href="tour-paradise-valley-agadir.html" class="footer__link">Paradise Valley</a></li>
+                        <li><a href="tour-quad-biking-agadir.html" class="footer__link">Quad Biking</a></li>
+                        <li><a href="tour-camel-ride-agadir.html" class="footer__link">Camel Ride</a></li>
+                        <li><a href="tour-sandboarding-agadir.html" class="footer__link">Sandboarding</a></li>
+                        <li><a href="tour-horse-riding-agadir.html" class="footer__link">Horse Riding</a></li>
+                        <li><a href="agadir-tours.html" class="footer__link">All Tours</a></li>
                     </ul>
                 </div>
 
-                <!-- Quick Links -->
-                <div class="footer-section">
-                    <h3>QUICK LINKS</h3>
-                    <ul class="footer-links">
-                        <li><a href="things-to-do.html">Things to Do</a></li>
-                        <li><a href="day-trips-from-agadir.html">Day Trips</a></li>
-                        <li><a href="blog.html">Travel Blog</a></li>
-                        <li><a href="payment.html">Payment Options</a></li>
-                        <li><a href="contact.html">Get Quote</a></li>
+                <div class="footer__column">
+                    <h4 class="footer__title">Day Trips</h4>
+                    <ul class="footer__links">
+                        <li><a href="day-trip-marrakech-from-agadir.html" class="footer__link">Marrakech Day Trip</a></li>
+                        <li><a href="day-trip-essaouira-from-agadir.html" class="footer__link">Essaouira Day Trip</a></li>
+                        <li><a href="day-trip-taroudant-from-agadir.html" class="footer__link">Taroudant Trip</a></li>
+                        <li><a href="tour-agadir-city-tour.html" class="footer__link">Agadir City Tour</a></li>
+                        <li><a href="crocoparc-agadir-tour.html" class="footer__link">Croco Parc</a></li>
+                        <li><a href="day-trips-from-agadir.html" class="footer__link">All Day Trips</a></li>
                     </ul>
                 </div>
 
-                <!-- Our Partners -->
-                <div class="footer-section">
-                    <h3>OUR PARTNERS</h3>
-                    <div class="partners-logos">
-                        <div class="partner-logo-item">
-                            <img src="img/viator.png" alt="Viator" class="partner-logo-img">
-                        </div>
-                        <div class="partner-logo-item">
-                            <img src="img/tripadvisor.png" alt="TripAdvisor" class="partner-logo-img">
-                        </div>
-                    </div>
+                <div class="footer__column">
+                    <h4 class="footer__title">About Us</h4>
+                    <ul class="footer__links">
+                        <li><a href="index.html" class="footer__link">Home</a></li>
+                        <li><a href="things-to-do-in-agadir.html" class="footer__link">Things to Do</a></li>
+                        <li><a href="#deals" class="footer__link">Special Offers</a></li>
+                        <li><a href="contact.html" class="footer__link">Contact Us</a></li>
+                        <li><a href="tel:+212636372101" class="footer__link">Call Us</a></li>
+                        <li><a href="https://wa.me/212636372101" class="footer__link">WhatsApp</a></li>
+                    </ul>
                 </div>
 
-                <!-- Follow Us -->
-                <div class="footer-section">
-                    <h3>FOLLOW US</h3>
-                    <div class="social-icons">
-                        <a href="https://www.instagram.com/agadirtours" target="_blank" aria-label="Instagram">
-                            <div class="social-icon instagram">📷</div>
-                        </a>
-                        <a href="https://www.facebook.com/agadirtours" target="_blank" aria-label="Facebook">
-                            <div class="social-icon facebook">f</div>
-                        </a>
-                        <a href="https://www.linkedin.com/company/agadirtours" target="_blank" aria-label="LinkedIn">
-                            <div class="social-icon linkedin">in</div>
-                        </a>
-                        <a href="https://www.youtube.com/agadirtours" target="_blank" aria-label="YouTube">
-                            <div class="social-icon youtube">▶</div>
-                        </a>
+                <div class="footer__column">
+                    <h4 class="footer__title">Helpful Info</h4>
+                    <ul class="footer__links">
+                        <li><a href="contact.html" class="footer__link">How to Book</a></li>
+                        <li><a href="contact.html" class="footer__link">Payment Options</a></li>
+                        <li><a href="contact.html" class="footer__link">Cancellation Policy</a></li>
+                        <li><a href="contact.html" class="footer__link">Travel Tips</a></li>
+                        <li><a href="contact.html" class="footer__link">FAQ</a></li>
+                        <li><a href="contact.html" class="footer__link">Customer Reviews</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer__column">
+                    <h4 class="footer__title">Connect With Us</h4>
+                    <div class="footer__newsletter">
+                        <p class="footer__newsletter-text">Get exclusive Agadir tour deals & travel tips</p>
+                        <form class="footer__newsletter-form">
+                            <input type="email" placeholder="Your email address" class="footer__newsletter-input">
+                            <button type="submit" class="footer__newsletter-button">Subscribe</button>
+                        </form>
                     </div>
                 </div>
             </div>
-        </div>
 
-        <!-- Footer Bottom -->
-        <div class="footer-bottom">
-            <div class="footer-bottom-content">
-                <div class="copyright">
-                    <p>© Copyright 2025 Agadir Tours & Excursions - Your trusted partner for Agadir adventures</p>
+            <!-- Footer Bottom Section -->
+            <div class="footer__bottom">
+                <div class="footer__bottom-left">
+                    <p class="footer__copyright">© 2025 The Local Guide Morocco. All rights reserved.</p>
+                    <div class="footer__legal-links">
+                        <a href="contact.html" class="footer__legal-link">Privacy Policy</a>
+                        <span class="footer__separator">|</span>
+                        <a href="contact.html" class="footer__legal-link">Terms & Conditions</a>
+                        <span class="footer__separator">|</span>
+                        <a href="contact.html" class="footer__legal-link">Booking Policy</a>
+                        <span class="footer__separator">|</span>
+                        <a href="tel:+212636372101" class="footer__legal-link">+212 636-372101</a>
+                    </div>
                 </div>
-                <div class="payment-methods">
-                    <span class="payment-logo">💳</span>
-                    <span class="payment-logo">VISA</span>
-                    <span class="payment-logo">Mastercard</span>
-                    <span class="payment-logo">PayPal</span>
-                    <span class="payment-logo">AMEX</span>
+                <div class="footer__bottom-right">
+                    <p class="footer__tagline">Discover Morocco. Experience Agadir.</p>
                 </div>
             </div>
         </div>
     </footer>
-
-    <a href="https://wa.me/212645792457?text=Hi! I want to book buggy adventure in Agadir" class="whatsapp-widget" target="_blank" aria-label="Contact via WhatsApp">
-        <svg style="fill: currentColor;" viewBox="0 0 17 17" width="24" height="24"><path d="M16.5333 8.7668C16.5333 13.0668 13.02 16.5535 8.67999 16.5535C7.29999 16.5535 6.01333 16.2001 4.87999 15.5868L0.533325 16.9668L1.95333 12.7868C1.21185 11.5746 0.81965 10.1811 0.819992 8.76013C0.826659 4.45346 4.34666 0.966797 8.68666 0.966797C13.0133 0.966797 16.5333 4.45346 16.5333 8.7668ZM8.67999 2.20013C5.03999 2.20013 2.07999 5.14013 2.07999 8.75346C2.07999 10.1868 2.54666 11.5135 3.33333 12.5935L2.50666 15.0335L5.03999 14.2335C6.12135 14.9422 7.38707 15.3178 8.67999 15.3135C12.32 15.3135 15.28 12.3801 15.28 8.76013C15.2712 7.01671 14.5715 5.3479 13.3343 4.11948C12.0972 2.89106 10.4234 2.20325 8.67999 2.2068V2.20013ZM12.6467 10.5535C12.5933 10.4735 12.4667 10.4268 12.2733 10.3335C12.0867 10.2401 11.14 9.77346 10.96 9.71346C10.7867 9.6468 10.6533 9.61346 10.5267 9.8068C10.3933 10.0001 10.0267 10.4268 9.91999 10.5535C9.80666 10.6868 9.69333 10.7001 9.49999 10.6068C9.30666 10.5068 8.68666 10.3068 7.95333 9.65346C7.53454 9.26854 7.17509 8.82372 6.88666 8.33346C6.76666 8.14013 6.86666 8.04013 6.96666 7.9468C7.05333 7.86013 7.15999 7.72013 7.25333 7.61346C7.35333 7.50013 7.38666 7.41346 7.44666 7.29346C7.51333 7.16013 7.47999 7.05346 7.43333 6.96013C7.37999 6.86013 6.99999 5.92013 6.83333 5.54013C6.67333 5.15346 6.51333 5.22013 6.40666 5.22013C6.29333 5.22013 6.15999 5.20013 6.03333 5.20013C5.89999 5.20013 5.69999 5.25346 5.51999 5.44013C5.34666 5.63346 4.85333 6.09346 4.85333 7.04013C4.85333 7.97346 5.53999 8.88013 5.63333 9.01346C5.72666 9.14013 6.96666 11.1268 8.91999 11.8935C10.88 12.6601 10.88 12.4068 11.2333 12.3735C11.5867 12.3401 12.3667 11.9068 12.5333 11.4668C12.6933 11.0201 12.6933 10.6335 12.6467 10.5535Z"></path></svg>
-        <span>Book via WhatsApp</span>
-    </a>
 
     <button class="back-to-top" aria-label="Back to top">
         <svg viewBox="0 0 18 28" width="24" height="24" fill="currentColor"><path d="M16.797 18.5c0 0.125-0.063 0.266-0.156 0.359l-0.781 0.781c-0.094 0.094-0.219 0.156-0.359 0.156-0.125 0-0.266-0.063-0.359-0.156l-6.141-6.141-6.141 6.141c-0.094 0.094-0.234 0.156-0.359 0.156s-0.266-0.063-0.359-0.156l-0.781-0.781c-0.094-0.094-0.156-0.234-0.156-0.359s0.063-0.266 0.156-0.359l7.281-7.281c0.094-0.094 0.234-0.156 0.359-0.156s0.266 0.063 0.359 0.156l7.281 7.281c0.094 0.094 0.156 0.234 0.156 0.359z"></path></svg>

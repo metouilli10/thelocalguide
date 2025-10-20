@@ -1,0 +1,261 @@
+/* Updated Design System - The Local Guide */
+
+:root {
+    --primary-color: #8B5CF6;
+    --secondary-color: #F59E0B;
+    --text-dark: #1F2937;
+    --text-light: #6B7280;
+    --bg-white: #FFFFFF;
+    --bg-gray: #F9FAFB;
+    --accent-green: #ccff02;
+    --accent-lime: #cdff03;
+    --whatsapp-purple: #8449f2;
+}
+
+/* ===== TOPBAR STYLES ===== */
+.topbar {
+    background: #ccff02;
+    color: #000000;
+    padding: 8px 0;
+    font-size: 14px;
+}
+
+.topbar__wrapper {
+    max-width: 1360px;
+    margin: 0 auto;
+    padding: 0 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.topbar__left {
+    display: flex;
+    gap: 24px;
+}
+
+.topbar__right {
+    display: flex;
+    gap: 24px;
+}
+
+.topbar__link {
+    color: #000000;
+    text-decoration: none;
+    transition: color 0.3s ease;
+    font-weight: 500;
+}
+
+.topbar__link:hover {
+    color: var(--text-dark);
+    opacity: 0.8;
+}
+
+/* ===== HEADER STYLES ===== */
+.header {
+    background: var(--bg-white);
+    padding: 16px 0;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+}
+
+.header__wrapper {
+    max-width: 1360px;
+    margin: 0 auto;
+    padding: 0 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header__logo {
+    font-size: 18px;
+    font-weight: 700;
+    color: #000000;
+    text-decoration: none;
+}
+
+.header__nav {
+    display: flex;
+    gap: 32px;
+}
+
+.header__nav-link {
+    color: #000000;
+    text-decoration: none;
+    font-weight: 700;
+    text-transform: uppercase;
+    transition: color 0.3s ease;
+}
+
+.header__nav-link:hover {
+    color: var(--primary-color);
+}
+
+.header__actions {
+    display: flex;
+    gap: 16px;
+    align-items: center;
+}
+
+/* ===== BUTTON STYLES ===== */
+.btn {
+    padding: 12px 24px;
+    border: none;
+    border-radius: 6px;
+    font-weight: 700;
+    text-decoration: none;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display: inline-block;
+    text-align: center;
+    color: #000000;
+}
+
+.btn-primary {
+    background: #cdff03;
+    color: #000000;
+}
+
+.btn-primary:hover {
+    background: #b8e600;
+    color: #000000;
+    transform: translateY(-1px);
+}
+
+.btn-secondary {
+    background: #cdff03;
+    color: #000000;
+    border: 2px solid #cdff03;
+}
+
+.btn-secondary:hover {
+    background: #b8e600;
+    color: #000000;
+    border: 2px solid #b8e600;
+}
+
+.btn-whatsapp {
+    background: #8449f2;
+    color: #ffffff;
+    font-weight: 600;
+}
+
+.btn-whatsapp:hover {
+    background: #6d3bd9;
+    color: #ffffff;
+    transform: translateY(-1px);
+}
+
+.btn-outline {
+    background: #cdff03;
+    border: 2px solid #cdff03;
+    color: #000000;
+    padding: 16px 32px;
+    border-radius: 50px;
+    font-size: 16px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-decoration: none;
+    display: inline-block;
+}
+
+.btn-outline:hover {
+    background: #b8e600;
+    color: #000000;
+    border: 2px solid #b8e600;
+}
+
+/* ===== RESPONSIVE DESIGN ===== */
+@media (max-width: 1024px) {
+    .header__nav {
+        display: none;
+    }
+    
+    .topbar {
+        display: none;
+    }
+}
+
+@media (max-width: 768px) {
+    .header__wrapper {
+        padding: 0 20px;
+    }
+    
+    .topbar__wrapper {
+        padding: 0 20px;
+    }
+}
+
+/* ===== LEGACY COMPATIBILITY ===== */
+/* Update existing button classes to match new design */
+.cta-button,
+.primary-button,
+.main-button {
+    background: #cdff03 !important;
+    color: #000000 !important;
+    font-weight: 700 !important;
+    border: none !important;
+    padding: 12px 24px !important;
+    border-radius: 6px !important;
+    text-decoration: none !important;
+    display: inline-block !important;
+    transition: all 0.3s ease !important;
+}
+
+.cta-button:hover,
+.primary-button:hover,
+.main-button:hover {
+    background: #b8e600 !important;
+    color: #000000 !important;
+    transform: translateY(-1px) !important;
+}
+
+/* Update existing header elements */
+.site-header,
+.main-header {
+    background: var(--bg-white) !important;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.08) !important;
+}
+
+.site-logo,
+.main-logo {
+    color: #000000 !important;
+    font-weight: 700 !important;
+}
+
+.main-nav a,
+.site-nav a {
+    color: #000000 !important;
+    font-weight: 700 !important;
+    text-transform: uppercase !important;
+}
+
+.main-nav a:hover,
+.site-nav a:hover {
+    color: var(--primary-color) !important;
+}
+
+/* Update existing topbar elements */
+.site-topbar,
+.main-topbar {
+    background: #ccff02 !important;
+    color: #000000 !important;
+}
+
+.site-topbar a,
+.main-topbar a {
+    color: #000000 !important;
+    font-weight: 500 !important;
+}
+
+.site-topbar a:hover,
+.main-topbar a:hover {
+    color: var(--text-dark) !important;
+    opacity: 0.8 !important;
+}

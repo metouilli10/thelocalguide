@@ -3,641 +3,2484 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Book Paradise Valley tours, Agadir quad biking, camel rides and private day trips with The Local Guide. Local experts, hotel pickup, secure booking and unforgettable Morocco excursions.">
-    <title>Agadir Tours &amp; Day Trips | The Local Guide Morocco</title>
+    <meta name="description" content="Discover Agadir's best tours and excursions with The Local Guide. Paradise Valley, quad biking, camel rides, day trips to Marrakech & Essaouira. Expert local guides, hotel pickup, best prices guaranteed.">
+    <meta name="keywords" content="Agadir tours, Paradise Valley tour, Agadir excursions, quad biking Agadir, camel ride Agadir, Marrakech day trip, Essaouira trip, Morocco tours, Agadir activities">
+    <meta name="author" content="The Local Guide Morocco">
+    <title>Agadir Tours & Excursions | The Local Guide Morocco - Best Day Trips & Activities</title>
     <link rel="canonical" href="https://www.thelocalguide.ma/">
-    <meta property="og:title" content="Agadir Tours &amp; Day Trips | The Local Guide Morocco">
-    <meta property="og:description" content="Discover Paradise Valley, quad biking, camel rides and signature Agadir excursions with trusted local guides. Book your Morocco adventure today.">
+    
+    <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://www.thelocalguide.ma/">
-    <meta property="og:image" content="https://www.thelocalguide.ma/assets/social/agadir-tours-cover.jpg">
-    <meta property="og:locale" content="en_US">
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Agadir Tours &amp; Day Trips | The Local Guide Morocco">
-    <meta name="twitter:description" content="Experience Paradise Valley, desert adventures and Agadir excursions with expert local hosts.">
-    <link rel="stylesheet" href="css/styles.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Tangerine:wght@400;700&amp;family=Lato:wght@300;400;700;900&amp;display=swap" rel="stylesheet">
-    <link rel="icon" href="https://www.miracleair.tz/wp-content/uploads/2025/05/miracle_air-removebg-preview-150x150.png">
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
+    <meta property="og:title" content="Agadir Tours & Excursions | The Local Guide Morocco">
+    <meta property="og:description" content="Experience authentic Agadir with expert local guides. Paradise Valley, desert adventures, cultural tours. Book now with free cancellation.">
+    <meta property="og:image" content="https://www.thelocalguide.ma/img/morocco-collage.jpg">
+    
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://www.thelocalguide.ma/">
+    <meta property="twitter:title" content="Agadir Tours & Excursions | The Local Guide Morocco">
+    <meta property="twitter:description" content="Discover Agadir's best tours with local experts. Paradise Valley, quad biking, day trips & more.">
+    
+    <style>
+        :root {
+            --primary-color: #8B5CF6;
+            --secondary-color: #F59E0B;
+            --text-dark: #1F2937;
+            --text-light: #6B7280;
+            --bg-white: #FFFFFF;
+            --bg-gray: #F9FAFB;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            line-height: 1.6;
+            color: var(--text-dark);
+            background: var(--bg-white);
+        }
+
+        /* ===== TOPBAR ===== */
+        .topbar {
+            background: #ccff02;
+            color: #000000;
+            padding: 8px 0;
+            font-size: 14px;
+        }
+
+        .topbar__wrapper {
+            max-width: 1360px;
+            margin: 0 auto;
+            padding: 0 40px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .topbar__left {
+            display: flex;
+            gap: 24px;
+        }
+
+        .topbar__right {
+            display: flex;
+            gap: 24px;
+        }
+
+        .topbar__link {
+            color: #000000;
+            text-decoration: none;
+            transition: color 0.3s ease;
+            font-weight: 500;
+        }
+
+        .topbar__link:hover {
+            color: var(--text-dark);
+            opacity: 0.8;
+        }
+
+        /* ===== HEADER ===== */
+        .header {
+            background: var(--bg-white);
+            padding: 16px 0;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+        }
+
+        .header__wrapper {
+            max-width: 1360px;
+            margin: 0 auto;
+            padding: 0 40px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .header__logo {
+            font-size: 18px;
+            font-weight: 700;
+            color: #000000;
+            text-decoration: none;
+        }
+
+        .header__nav {
+            display: flex;
+            gap: 32px;
+        }
+
+        .header__nav-link {
+            color: #000000;
+            text-decoration: none;
+            font-weight: 700;
+            text-transform: uppercase;
+            transition: color 0.3s ease;
+        }
+
+        .header__nav-link:hover {
+            color: var(--primary-color);
+        }
+
+        .header__actions {
+            display: flex;
+            gap: 16px;
+            align-items: center;
+        }
+
+        .header__search {
+            width: 200px;
+            padding: 8px 12px;
+            border: 1px solid #E5E7EB;
+            border-radius: 6px;
+            font-size: 14px;
+        }
+
+        .btn {
+            padding: 12px 24px;
+            border: none;
+            border-radius: 6px;
+            font-weight: 700;
+            text-decoration: none;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            display: inline-block;
+            text-align: center;
+            color: #000000;
+        }
+
+        .btn-primary {
+            background: #cdff03;
+            color: #000000;
+        }
+
+        .btn-primary:hover {
+            background: #b8e600;
+            color: #000000;
+            transform: translateY(-1px);
+        }
+
+        .btn-secondary {
+            background: #cdff03;
+            color: #000000;
+            border: 2px solid #cdff03;
+        }
+
+        .btn-secondary:hover {
+            background: #b8e600;
+            color: #000000;
+            border: 2px solid #b8e600;
+        }
+
+        /* ===== HERO SECTION ===== */
+        .hero {
+            height: 600px;
+            background: url('img/ouarzazate.jpg') center/cover no-repeat;
+            position: relative;
+            overflow: hidden;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(to bottom, rgba(0,0,0,0.4) 0%, rgba(0,0,0,0.6) 100%);
+            z-index: 1;
+        }
+
+        .hero__content {
+            text-align: center;
+            color: var(--bg-white);
+            z-index: 2;
+            position: relative;
+            max-width: 900px;
+            padding: 0 20px;
+        }
+
+        .hero__title {
+            font-size: 64px;
+            font-weight: 900;
+            margin-bottom: 16px;
+            line-height: 0.9;
+            color: #ccff02;
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            letter-spacing: -0.02em;
+            text-transform: uppercase;
+            font-stretch: condensed;
+        }
+
+        .hero__subtitle {
+            font-size: 24px;
+            margin-bottom: 32px;
+            opacity: 0.9;
+        }
+
+        .hero__cta {
+            display: flex;
+            gap: 16px;
+            justify-content: center;
+        }
+
+        .btn-white {
+            background: #cdff03;
+            color: #000000;
+        }
+
+        .btn-white:hover {
+            background: #b8e600;
+            color: #000000;
+            transform: translateY(-1px);
+        }
+
+        .btn-yellow {
+            background: #cdff03;
+            color: #000000;
+            font-weight: 700;
+        }
+
+        .btn-yellow:hover {
+            background: #b8e600;
+            color: #000000;
+            transform: translateY(-1px);
+        }
+
+        /* ===== PROMOTIONAL BANNER SECTION ===== */
+        .promo-banner {
+            background: var(--bg-white);
+            padding: 80px 40px 80px;
+        }
+
+        .promo-banner__wrapper {
+            max-width: 1360px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            border-radius: 16px;
+            overflow: hidden;
+            box-shadow: 0 8px 32px rgba(0,0,0,0.12);
+        }
+
+        .promo-banner__left {
+            background: linear-gradient(135deg, var(--primary-color) 0%, #7C3AED 100%);
+            padding: 60px 40px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .promo-banner__left::before {
+            content: 'book early and save more on agadir tours';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            font-size: 14px;
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            color: rgba(255, 255, 255, 0.08);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            line-height: 1.3;
+            padding: 20px;
+            word-spacing: 3px;
+            letter-spacing: 1px;
+            transform: rotate(-5deg);
+            z-index: 1;
+        }
+
+        .promo-banner__offer {
+            position: relative;
+            z-index: 2;
+            margin-bottom: 20px;
+        }
+
+        .promo-banner__discount {
+            font-size: 120px;
+            font-weight: 900;
+            color: #cdff03;
+            line-height: 0.8;
+            display: block;
+            text-shadow: 0 4px 12px rgba(205, 255, 3, 0.3);
+        }
+
+        .promo-banner__off {
+            font-size: 48px;
+            font-weight: 900;
+            color: #cdff03;
+            position: absolute;
+            top: 20px;
+            right: -120px;
+            text-shadow: 0 4px 12px rgba(205, 255, 3, 0.3);
+        }
+
+        .promo-banner__adventures {
+            font-size: 22px;
+            font-weight: 700;
+            color: var(--bg-white);
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            position: relative;
+            z-index: 2;
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+        }
+
+        .promo-banner__right {
+            background: var(--bg-white);
+            padding: 60px 40px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            border-left: 4px solid var(--primary-color);
+        }
+
+        .promo-banner__title {
+            font-size: 36px;
+            font-weight: 900;
+            color: var(--text-dark);
+            margin-bottom: 24px;
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+        }
+
+        .promo-banner__content {
+            margin-bottom: 32px;
+        }
+
+        .promo-banner__content p {
+            font-size: 16px;
+            line-height: 1.6;
+            color: var(--text-light);
+            margin-bottom: 16px;
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+        }
+
+        .promo-banner__content p:last-child {
+            margin-bottom: 0;
+        }
+
+        .promo-banner__content strong {
+            color: var(--primary-color);
+            font-weight: 700;
+        }
+
+        .promo-banner__button {
+            background: var(--primary-color);
+            color: var(--bg-white);
+            border: none;
+            padding: 14px 32px;
+            border-radius: 6px;
+            font-size: 14px;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            align-self: flex-start;
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+        }
+
+        .promo-banner__button:hover {
+            background: #7C3AED;
+            transform: translateY(-1px);
+            box-shadow: 0 4px 12px rgba(139, 92, 246, 0.3);
+        }
+
+        .promo-banner__button svg {
+            width: 16px;
+            height: 16px;
+            transition: transform 0.3s ease;
+        }
+
+        .promo-banner__button:hover svg {
+            transform: translateX(4px);
+        }
+
+        /* ===== TRIP CARDS SECTION ===== */
+        .trip-cards-section {
+            background: var(--bg-white);
+            padding: 80px 40px;
+        }
+
+        .trip-cards-section__wrapper {
+            max-width: 1360px;
+            margin: 0 auto;
+        }
+
+        .trip-cards-section__header {
+            margin-bottom: 48px;
+            text-align: center;
+        }
+
+        .trip-cards-section__title {
+            font-size: 48px;
+            font-weight: 900;
+            color: var(--text-dark);
+            margin-bottom: 16px;
+        }
+
+        .trip-cards-section__subtitle {
+            font-size: 20px;
+            color: var(--text-light);
+        }
+
+        .trip-cards-carousel {
+            position: relative;
+            overflow: visible;
+            margin-bottom: 40px;
+        }
+
+        .trip-cards-carousel__wrapper {
+            overflow: hidden;
+            padding: 0 0 24px 0;
+        }
+
+        .trip-cards-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 24px;
+            margin-bottom: 60px;
+        }
+
+        .trip-card {
+            background: var(--bg-white);
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 2px 12px rgba(0,0,0,0.08);
+            transition: all 0.3s ease;
+            text-decoration: none;
+            color: inherit;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .trip-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 8px 24px rgba(0,0,0,0.15);
+        }
+
+        .trip-card__image-wrapper {
+            position: relative;
+            overflow: hidden;
+        }
+
+        .trip-card__image {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            transition: transform 0.3s ease;
+        }
+
+        .trip-card:hover .trip-card__image {
+            transform: scale(1.05);
+        }
+
+        .trip-card__tag {
+            position: absolute;
+            top: 12px;
+            left: 12px;
+            background: #EF4444;
+            color: var(--bg-white);
+            padding: 4px 8px;
+            border-radius: 4px;
+            font-size: 12px;
+            font-weight: 600;
+            text-transform: uppercase;
+        }
+
+        .trip-card__quick-view {
+            position: absolute;
+            top: 12px;
+            right: 12px;
+            background: rgba(0,0,0,0.7);
+            color: var(--bg-white);
+            padding: 8px 12px;
+            border-radius: 4px;
+            font-size: 12px;
+            font-weight: 600;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+            display: flex;
+            align-items: center;
+            gap: 4px;
+        }
+
+        .trip-card:hover .trip-card__quick-view {
+            opacity: 1;
+        }
+
+        .trip-card__content {
+            padding: 20px;
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .trip-card__rating {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            margin-bottom: 12px;
+        }
+
+        .trip-card__stars {
+            display: flex;
+            gap: 2px;
+        }
+
+        .star {
+            color: #FBBF24;
+            font-size: 14px;
+        }
+
+        .trip-card__rating-number {
+            font-size: 14px;
+            font-weight: 600;
+            color: var(--text-dark);
+        }
+
+        .trip-card__title {
+            font-size: 20px;
+            font-weight: 700;
+            color: var(--text-dark);
+            margin-bottom: 12px;
+            line-height: 1.3;
+        }
+
+        .trip-card__info {
+            display: flex;
+            gap: 16px;
+            margin-bottom: 12px;
+        }
+
+        .trip-card__info-item {
+            display: flex;
+            align-items: center;
+            gap: 4px;
+            font-size: 14px;
+            color: var(--text-light);
+        }
+
+        .trip-card__info-item svg {
+            width: 16px;
+            height: 16px;
+            stroke: var(--text-light);
+        }
+
+        .trip-card__description {
+            font-size: 14px;
+            color: var(--text-light);
+            line-height: 1.5;
+            margin-bottom: 20px;
+            flex: 1;
+        }
+
+        .trip-card__footer {
+            margin-top: 24px;
+            padding-top: 20px;
+            border-top: 1px solid #e8e8e8;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .trip-card__price-wrapper {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .trip-card__old-price {
+            font-size: 12px;
+            color: #999;
+            margin-bottom: 4px;
+        }
+
+        .trip-card__old-price-amount {
+            text-decoration: line-through;
+            margin-left: 4px;
+        }
+
+        .trip-card__price-label {
+            font-size: 11px;
+            color: #666;
+            margin-bottom: 4px;
+            text-transform: uppercase;
+        }
+
+        .trip-card__price {
+            font-size: 32px;
+            font-weight: 900;
+            color: var(--text-dark);
+            line-height: 1;
+        }
+
+        .trip-card__cta {
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+        }
+
+        .trip-card__btn {
+            padding: 12px 24px;
+            font-size: 12px;
+            white-space: nowrap;
+        }
+
+        .trip-card__btn-secondary {
+            background: transparent;
+            color: var(--text-dark);
+            border: 2px solid var(--text-dark);
+            padding: 10px 24px;
+        }
+
+        .trip-card__btn-secondary:hover {
+            background: var(--text-dark);
+            color: var(--text-light);
+        }
+
+        .trip-cards-section__button {
+            text-align: center;
+        }
+
+        /* ===== BLOG SECTION ===== */
+        .blog-section {
+            background: var(--bg-white);
+            padding: 80px 40px;
+        }
+
+        .blog-section__wrapper {
+            max-width: 1360px;
+            margin: 0 auto;
+        }
+
+        .blog-section__header {
+            text-align: center;
+            margin-bottom: 60px;
+        }
+
+        .blog-section__title {
+            font-size: 48px;
+            font-weight: 900;
+            color: var(--text-dark);
+            margin-bottom: 16px;
+            line-height: 1.1;
+        }
+
+        .blog-section__subtitle {
+            font-size: 20px;
+            color: var(--text-light);
+        }
+
+        .blog-grid {
+            display: flex;
+            gap: 32px;
+            margin-bottom: 60px;
+            overflow-x: auto;
+            scroll-behavior: smooth;
+            -webkit-overflow-scrolling: touch;
+            scrollbar-width: thin;
+            scrollbar-color: var(--primary-color) #f0f0f0;
+        }
+
+        .blog-grid::-webkit-scrollbar {
+            height: 8px;
+        }
+
+        .blog-grid::-webkit-scrollbar-track {
+            background: #f0f0f0;
+            border-radius: 4px;
+        }
+
+        .blog-grid::-webkit-scrollbar-thumb {
+            background: var(--primary-color);
+            border-radius: 4px;
+        }
+
+        .blog-grid::-webkit-scrollbar-thumb:hover {
+            background: #7C3AED;
+        }
+
+        .blog-card {
+            background: var(--bg-white);
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 2px 12px rgba(0,0,0,0.08);
+            transition: all 0.3s ease;
+            text-decoration: none;
+            color: inherit;
+            display: flex;
+            flex-direction: column;
+            flex: 1;
+            min-width: 280px;
+            max-width: calc(25% - 24px);
+        }
+
+        .blog-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 12px 32px rgba(0,0,0,0.15);
+        }
+
+        .blog-card__image-wrapper {
+            position: relative;
+            overflow: hidden;
+            height: 250px;
+        }
+
+        .blog-card__image {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.3s ease;
+        }
+
+        .blog-card:hover .blog-card__image {
+            transform: scale(1.05);
+        }
+
+        .blog-card__category {
+            position: absolute;
+            top: 16px;
+            left: 16px;
+            background: var(--primary-color);
+            color: var(--bg-white);
+            padding: 6px 12px;
+            border-radius: 20px;
+            font-size: 12px;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .blog-card__content {
+            padding: 24px;
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .blog-card__meta {
+            display: flex;
+            gap: 16px;
+            margin-bottom: 12px;
+            font-size: 13px;
+            color: var(--text-light);
+        }
+
+        .blog-card__date,
+        .blog-card__read-time {
+            display: flex;
+            align-items: center;
+        }
+
+        .blog-card__title {
+                font-size: 20px;
+            font-weight: 700;
+            color: var(--text-dark);
+            margin-bottom: 12px;
+            line-height: 1.4;
+            display: -webkit-box;
+            -webkit-line-clamp: 2;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+        }
+
+        .blog-card__excerpt {
+            font-size: 15px;
+            color: var(--text-light);
+            line-height: 1.6;
+            margin-bottom: 20px;
+            flex: 1;
+            display: -webkit-box;
+            -webkit-line-clamp: 3;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+        }
+
+        .blog-card__link {
+            color: var(--primary-color);
+            font-weight: 600;
+            font-size: 14px;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            display: inline-flex;
+            align-items: center;
+        }
+
+        .blog-card__link:hover {
+            color: #7C3AED;
+            transform: translateX(4px);
+        }
+
+        .blog-section__button {
+            text-align: center;
+        }
+
+        /* ===== FEATURES SECTION ===== */
+        .features-section {
+            background: #fef7e0;
+            padding: 80px 40px;
+        }
+
+        .features-section__wrapper {
+            max-width: 1360px;
+            margin: 0 auto;
+        }
+
+        .features-section__title {
+            font-size: 48px;
+            font-weight: 700;
+            color: var(--text-dark);
+            text-align: center;
+            margin-bottom: 60px;
+            line-height: 1.1;
+        }
+
+        .features-section__grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 40px;
+            margin-bottom: 60px;
+        }
+
+        .feature-item {
+            display: flex;
+            align-items: center;
+            gap: 16px;
+        }
+
+        .feature-item__icon {
+            width: 40px;
+            height: 40px;
+            background: var(--text-dark);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+        }
+
+        .feature-item__icon svg {
+            width: 20px;
+            height: 20px;
+            stroke: #fff;
+        }
+
+        .feature-item__text {
+            font-size: 16px;
+            font-weight: 500;
+            line-height: 1.4;
+            color: var(--text-dark);
+            margin: 0;
+        }
+
+        .features-section__button {
+            text-align: center;
+        }
+
+        .btn-outline {
+            background: #cdff03;
+            border: 2px solid #cdff03;
+            color: #000000;
+            padding: 16px 32px;
+            border-radius: 50px;
+            font-size: 16px;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-decoration: none;
+            display: inline-block;
+        }
+
+        .btn-whatsapp {
+            background: #8449f2;
+            color: #ffffff;
+            font-weight: 600;
+        }
+
+        .btn-whatsapp:hover {
+            background: #6d3bd9;
+            color: #ffffff;
+            transform: translateY(-1px);
+        }
+
+        /* ===== RESPONSIVE ===== */
+        @media (max-width: 1024px) {
+            .header__nav {
+                display: none;
+            }
+
+            .hero__content {
+                bottom: 150px;
+            }
+
+            .hero__title {
+                font-size: 48px;
+            }
+
+            .hero__subtitle {
+                font-size: 20px;
+            }
+
+            .trip-card {
+                flex: 0 0 calc(50% - 12px);
+                min-width: 300px;
+            }
+
+            .trip-cards-section__title {
+                font-size: 36px;
+            }
+
+            .features-section__grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .blog-card {
+                flex: 1;
+                min-width: 280px;
+                max-width: calc(50% - 16px);
+            }
+        }
+
+        @media (max-width: 768px) {
+            .blog-card {
+                flex: 1;
+                min-width: 250px;
+                max-width: 100%;
+            }
+
+            .blog-section {
+                padding: 60px 20px;
+            }
+
+            .blog-section__title {
+                font-size: 36px;
+            }
+            .topbar {
+                display: none;
+            }
+
+            .hero {
+                height: 500px;
+            }
+
+            .hero__title {
+                font-size: 36px;
+            }
+
+            .hero__subtitle {
+                font-size: 18px;
+            }
+
+            .hero__cta {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .trip-cards-section {
+                padding: 60px 20px;
+            }
+
+            .trip-cards-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .trip-card__footer {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 16px;
+            }
+
+            .trip-card__cta {
+                width: 100%;
+            }
+
+            .trip-card__btn {
+                width: 100%;
+            }
+
+            .features-section__grid {
+                grid-template-columns: 1fr;
+                gap: 32px;
+            }
+
+            .features-section {
+                padding: 60px 20px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .trip-cards-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+        /* ===== TESTIMONIALS SECTION ===== */
+        .testimonials-section {
+            background: #F8F8F8;
+            padding: 80px 40px;
+        }
+
+        .testimonials-section__wrapper {
+            max-width: 1360px;
+            margin: 0 auto;
+        }
+
+        .testimonials-section__header {
+            text-align: center;
+            margin-bottom: 60px;
+        }
+
+        .testimonials-tag {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: #E8F4FD;
+            border: 1px solid #D1E7F5;
+            border-radius: 20px;
+            padding: 8px 16px;
+            margin-bottom: 24px;
+        }
+
+        .testimonials-tag__icon {
+            width: 16px;
+            height: 16px;
+        }
+
+        .testimonials-tag__text {
+            font-size: 14px;
+            font-weight: 500;
+            color: #4A90E2;
+        }
+
+        .testimonials-section__title {
+            font-size: 48px;
+            font-weight: 900;
+            color: #333333;
+            margin-bottom: 16px;
+            line-height: 1.1;
+        }
+
+        .testimonials-section__subtitle {
+            font-size: 20px;
+            color: #888888;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .testimonials-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 32px;
+        }
+
+        .testimonial-card {
+            background: white;
+            border-radius: 12px;
+            padding: 32px;
+            box-shadow: 0 2px 12px rgba(0,0,0,0.08);
+            transition: all 0.3s ease;
+        }
+
+        .testimonial-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 8px 24px rgba(0,0,0,0.12);
+        }
+
+        .testimonial-card__text {
+            font-size: 16px;
+            line-height: 1.6;
+            color: #555555;
+            margin-bottom: 24px;
+        }
+
+        .testimonial-card__user {
+            display: flex;
+            align-items: center;
+            gap: 16px;
+        }
+
+        .testimonial-card__avatar {
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            object-fit: cover;
+        }
+
+        .testimonial-card__user-info {
+            flex: 1;
+        }
+
+        .testimonial-card__name {
+            font-size: 16px;
+            font-weight: 700;
+            color: #333333;
+            margin-bottom: 4px;
+        }
+
+        .testimonial-card__role {
+            font-size: 14px;
+            color: #888888;
+            margin: 0;
+        }
+
+        .testimonial-card__rating {
+            display: flex;
+            gap: 2px;
+        }
+
+        .star {
+            color: #FFD700;
+            font-size: 18px;
+        }
+
+        @media (max-width: 1024px) {
+            .testimonials-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (max-width: 768px) {
+            .testimonials-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .testimonials-section {
+                padding: 60px 20px;
+            }
+
+            .testimonials-section__title {
+                font-size: 36px;
+            }
+
+            .testimonial-card {
+                padding: 24px;
+            }
+        }
+
+        /* ===== RESPONSIVE PROMOTIONAL BANNER ===== */
+        @media (max-width: 1024px) {
+            .promo-banner__wrapper {
+                grid-template-columns: 1fr;
+            }
+
+            .promo-banner__left {
+                padding: 40px 30px;
+            }
+
+            .promo-banner__right {
+                padding: 40px 30px;
+            }
+
+            .promo-banner__discount {
+                font-size: 100px;
+            }
+
+            .promo-banner__off {
+                font-size: 40px;
+                right: -90px;
+            }
+
+            .promo-banner__adventures {
+                font-size: 20px;
+            }
+
+            .promo-banner__title {
+                font-size: 32px;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .promo-banner {
+                padding: 60px 20px 60px;
+            }
+
+            .promo-banner__left {
+                padding: 30px 20px;
+            }
+
+            .promo-banner__right {
+                padding: 30px 20px;
+            }
+
+            .promo-banner__discount {
+                font-size: 80px;
+            }
+
+            .promo-banner__off {
+                font-size: 32px;
+                right: -70px;
+            }
+
+            .promo-banner__adventures {
+                font-size: 18px;
+            }
+
+            .promo-banner__title {
+                font-size: 28px;
+            }
+
+            .promo-banner__content p {
+                font-size: 15px;
+            }
+
+            .promo-banner__button {
+                padding: 14px 28px;
+                font-size: 14px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .promo-banner__discount {
+                font-size: 60px;
+            }
+
+            .promo-banner__off {
+                font-size: 24px;
+                right: -50px;
+            }
+
+            .promo-banner__adventures {
+                font-size: 16px;
+            }
+
+            .promo-banner__title {
+                font-size: 24px;
+            }
+
+            .promo-banner__content p {
+                font-size: 14px;
+            }
+        }
+
+        /* ===== FOOTER STYLES ===== */
+        .footer {
+            background: var(--bg-white);
+            color: var(--text-dark);
+            padding: 80px 40px 40px;
+            border-top: 1px solid #E5E7EB;
+        }
+
+        .footer__wrapper {
+            max-width: 1360px;
+            margin: 0 auto;
+        }
+
+        .footer__top {
+            display: grid;
+            grid-template-columns: repeat(5, 1fr);
+            gap: 60px;
+            padding-bottom: 60px;
+            border-bottom: 1px solid #E5E7EB;
+            margin-bottom: 40px;
+        }
+
+        .footer__column {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .footer__title {
+            font-size: 18px;
+            font-weight: 700;
+            color: var(--text-dark);
+            margin-bottom: 24px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .footer__links {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .footer__links li {
+            margin-bottom: 12px;
+        }
+
+        .footer__link {
+            color: var(--text-light);
+            text-decoration: none;
+            font-size: 15px;
+            transition: color 0.3s ease;
+            display: inline-block;
+        }
+
+        .footer__link:hover {
+            color: var(--primary-color);
+        }
+
+        .footer__social {
+            display: flex;
+            gap: 16px;
+            margin-bottom: 32px;
+        }
+
+        .footer__social-link {
+            width: 40px;
+            height: 40px;
+            background: #F3F4F6;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--text-dark);
+            transition: all 0.3s ease;
+        }
+
+        .footer__social-link:hover {
+            background: var(--primary-color);
+            color: var(--bg-white);
+            transform: translateY(-3px);
+        }
+
+        .footer__social-link svg {
+            width: 20px;
+            height: 20px;
+        }
+
+        .footer__newsletter {
+            margin-top: 24px;
+        }
+
+        .footer__newsletter-text {
+            font-size: 14px;
+            color: var(--text-light);
+            margin-bottom: 12px;
+        }
+
+        .footer__newsletter-form {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+        }
+
+        .footer__newsletter-input {
+            padding: 12px 16px;
+            background: var(--bg-white);
+            border: 1px solid #D1D5DB;
+            border-radius: 4px;
+            color: var(--text-dark);
+            font-size: 14px;
+            transition: all 0.3s ease;
+        }
+
+        .footer__newsletter-input::placeholder {
+            color: #9CA3AF;
+        }
+
+        .footer__newsletter-input:focus {
+            outline: none;
+            border-color: var(--primary-color);
+            box-shadow: 0 0 0 3px rgba(139, 92, 246, 0.1);
+        }
+
+        .footer__newsletter-button {
+            padding: 12px 24px;
+            background: var(--primary-color);
+            color: var(--bg-white);
+            border: none;
+            border-radius: 4px;
+            font-weight: 600;
+            font-size: 14px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .footer__newsletter-button:hover {
+            background: #7C3AED;
+            transform: translateY(-2px);
+        }
+
+        .footer__bottom {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 24px;
+        }
+
+        .footer__bottom-left {
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+        }
+
+        .footer__copyright {
+            font-size: 14px;
+            color: #6B7280;
+        }
+
+        .footer__legal-links {
+            display: flex;
+            gap: 12px;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+
+        .footer__legal-link {
+            font-size: 13px;
+            color: #6B7280;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        .footer__legal-link:hover {
+            color: var(--primary-color);
+        }
+
+        .footer__separator {
+            color: #D1D5DB;
+        }
+
+        .footer__bottom-right {
+            text-align: right;
+        }
+
+        .footer__tagline {
+            font-size: 16px;
+            font-weight: 600;
+            color: var(--primary-color);
+            font-style: italic;
+        }
+
+        /* ===== RESPONSIVE FOOTER ===== */
+        @media (max-width: 1024px) {
+            .footer__top {
+                grid-template-columns: repeat(3, 1fr);
+                gap: 40px;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .footer {
+                padding: 60px 20px 30px;
+            }
+
+            .footer__top {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 32px;
+            }
+
+            .footer__bottom {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+
+            .footer__bottom-right {
+                text-align: left;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .footer__top {
+                grid-template-columns: 1fr;
+                gap: 32px;
+            }
+
+            .footer__legal-links {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 8px;
+            }
+
+            .footer__separator {
+                display: none;
+            }
+        }
+    </style>
 </head>
 <body>
-    <div class="top-contact-bar">
-        Need help planning your Agadir adventure? WhatsApp us on <a href="https://wa.me/212636372101">+212 636-372101</a> or call +212 636-372101
+    <!-- TOPBAR -->
+    <div class="topbar">
+        <div class="topbar__wrapper">
+            <div class="topbar__left">
+                <a href="agadir-tours.html" class="topbar__link">Agadir Tours</a>
+                <a href="day-trips-from-agadir.html" class="topbar__link">Day Trips</a>
+                <a href="#deals" class="topbar__link">Special Offers</a>
+            </div>
+            <div class="topbar__right">
+                <a href="tel:+212636372101" class="topbar__link">+212 636-372101</a>
+                <a href="contact.html" class="topbar__link">Contact</a>
+            </div>
+        </div>
     </div>
 
-    <header class="site-header" role="banner">
-        <div class="container header-content">
-            <a class="logo" href="index.html">
-                <img class="logo-img" src="img/rr.png" alt="The Local Guide Morocco logo">
-                <div class="logo-text">THE LOCAL GUIDE</div>
-            </a>
-            <nav class="main-nav" aria-label="Primary navigation">
-                <a href="index.html" class="active">Home</a>
-                <a href="agadir-tours.html">Agadir Tours</a>
-                <a href="day-trips-from-agadir.html">Day Trips</a>
-                <a href="things-to-do-in-agadir.html">Things to Do</a>
-                <a href="contact.html">Contact</a>
+    <!-- HEADER -->
+    <header class="header">
+        <div class="header__wrapper">
+            <a href="index.html" class="header__logo">The Local Guide</a>
+            <nav class="header__nav">
+                <a href="index.html" class="header__nav-link">Home</a>
+                <a href="agadir-tours.html" class="header__nav-link">Agadir Tours</a>
+                <a href="day-trips-from-agadir.html" class="header__nav-link">Day Trips</a>
+                <a href="things-to-do-in-agadir.html" class="header__nav-link">Things to Do</a>
+                <a href="contact.html" class="header__nav-link">Contact</a>
             </nav>
-            <div class="header-actions">
-                <a class="contact-btn" href="contact.html">Plan a Trip</a>
-                <button class="hamburger" aria-label="Open menu">
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                </button>
+            <div class="header__actions">
+                <a href="https://wa.me/212636372101" class="btn btn-whatsapp">WhatsApp Us</a>
+                <a href="contact.html" class="btn btn-primary">Book Now</a>
             </div>
         </div>
     </header>
 
-    <div id="mobileMenu" class="mobile-menu" aria-hidden="true">
-        <button class="close-menu" aria-label="Close menu">×</button>
-        <div class="menu-content">
-            <nav class="menu-nav" aria-label="Mobile navigation">
-                <a href="index.html">Home</a>
-                <a href="agadir-tours.html">Agadir Tours</a>
-                <a href="day-trips-from-agadir.html">Day Trips</a>
-                <a href="things-to-do-in-agadir.html">Things to Do</a>
-                <a href="contact.html">Contact</a>
-            </nav>
-            <div class="menu-social">
-                <p>Follow us</p>
-                <div class="social-icons">
-                    <a href="https://www.instagram.com/www.miracleair.tz" target="_blank" aria-label="Instagram">
-                        <svg width="24" height="24" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
-                            <path d="M12 2.163c3.204 0 3.584.012 4.85.07 1.17.054 1.97.24 2.427.403a4.92 4.92 0 0 1 1.78 1.153 4.92 4.92 0 0 1 1.153 1.78c.163.457.349 1.257.403 2.427.058 1.266.07 1.646.07 4.85s-.012 3.584-.07 4.85c-.054 1.17-.24 1.97-.403 2.427a4.92 4.92 0 0 1-1.153 1.78 4.92 4.92 0 0 1-1.78 1.153c-.457.163-1.257.349-2.427.403-1.266.058-1.646.07-4.85.07s-3.584-.012-4.85-.07c-1.17-.054-1.97-.24-2.427-.403a4.92 4.92 0 0 1-1.78-1.153 4.92 4.92 0 0 1-1.153-1.78c-.163-.457-.349-1.257-.403-2.427C2.175 15.584 2.163 15.204 2.163 12s.012-3.584.07-4.85c.054-1.17.24-1.97.403-2.427a4.92 4.92 0 0 1 1.153-1.78 4.92 4.92 0 0 1 1.78-1.153c.457-.163 1.257-.349 2.427-.403C8.416 2.175 8.796 2.163 12 2.163Zm0 1.62c-3.17 0-3.548.012-4.795.07-.999.046-1.54.21-1.897.349-.478.186-.82.407-1.18.767-.36.36-.581.702-.767 1.18-.139.357-.303.898-.349 1.897-.058 1.247-.07 1.625-.07 4.795s.012 3.548.07 4.795c.046.999.21 1.54.349 1.897.186.478.407.82.767 1.18.36.36.702.581 1.18.767.357.139.898.303 1.897.349 1.247.058 1.625.07 4.795.07s3.548-.012 4.795-.07c.999-.046 1.54-.21 1.897-.349.478-.186.82-.407 1.18-.767.36-.36.581-.702.767-1.18.139-.357.303-.898.349-1.897.058-1.247.07-1.625.07-4.795s-.012-3.548-.07-4.795c-.046-.999-.21-1.54-.349-1.897-.186-.478-.407-.82-.767-1.18-.36-.36-.702-.581-1.18-.767-.357-.139-.898-.303-1.897-.349-1.247-.058-1.625-.07-4.795-.07Zm0 3.901a4.316 4.316 0 1 1 0 8.632 4.316 4.316 0 0 1 0-8.632Zm0 1.62a2.696 2.696 0 1 0 0 5.392 2.696 2.696 0 0 0 0-5.392Zm5.523-1.755a1.008 1.008 0 1 1 0 2.016 1.008 1.008 0 0 1 0-2.016Z"></path>
-                        </svg>
-                    </a>
-                    <a href="https://www.facebook.com/profile.php?id=61570405113832" target="_blank" aria-label="Facebook">
-                        <svg width="24" height="24" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
-                            <path d="M13.5 22v-8.5H16l.375-3h-2.875V8.25c0-.863.238-1.45 1.475-1.45H16.5V4.05c-.256-.034-1.134-.1-2.156-.1-2.131 0-3.594 1.302-3.594 3.69V10.5H8v3h2.75V22h2.75Z"></path>
-                        </svg>
-                    </a>
+    <!-- HERO SECTION -->
+    <section class="hero">
+                <div class="hero__content">
+            <h1 class="hero__title">Discover Authentic Agadir</h1>
+            <p class="hero__subtitle">Experience Morocco's hidden gems with expert local guides. From Paradise Valley to desert adventures, create unforgettable memories.</p>
+            <div class="hero__cta">
+                <a href="#popular-tours" class="btn btn-yellow">Explore Tours</a>
                 </div>
             </div>
+    </section>
+
+    <!-- PROMOTIONAL BANNER SECTION -->
+    <section class="promo-banner" id="deals">
+        <div class="promo-banner__wrapper">
+            <!-- Left Section - Offer -->
+            <div class="promo-banner__left">
+                <div class="promo-banner__offer">
+                    <span class="promo-banner__discount">15%</span>
+                    <span class="promo-banner__off">OFF</span>
         </div>
+                <div class="promo-banner__adventures">EARLY BOOKING OFFER</div>
     </div>
 
-    <main>
-        <section class="hero" id="top">
-            <div class="container hero-inner">
-                <div class="hero-copy">
-                    <p class="hero-label">Boutique Adventures in Agadir</p>
-                    <h1 class="hero-title">Design your dream Morocco escape with local experts</h1>
-                    <p class="hero-tagline">From Paradise Valley swims to Marrakech medina strolls, we craft immersive days that feel personal, polished and stress-free. Every experience is tailor-made with handpicked hosts, premium transport and on-call support.</p>
-                    <div class="hero-cta">
-                        <a class="cta-button primary" href="#popular-tours">Explore tours</a>
-                        <a class="cta-button ghost" href="contact.html">Plan with a designer</a>
+            <!-- Right Section - Details -->
+            <div class="promo-banner__right">
+                <h2 class="promo-banner__title">Book Early & Save More!</h2>
+                <div class="promo-banner__content">
+                    <p>Planning ahead? We're rewarding early bookers with exclusive savings on all Agadir tours and excursions. Experience Paradise Valley, quad biking, camel rides, and day trips at the best prices.</p>
+                    <p>Book 7+ days in advance and get <strong>15% OFF</strong> your entire booking. Plus enjoy free cancellation up to 24 hours before your tour. Limited time offer!</p>
                     </div>
-                    <div class="hero-stats">
-                        <div class="stat-card">
-                            <span class="stat-value">12k+</span>
-                            <span class="stat-label">Travellers hosted</span>
+                <button class="promo-banner__button" onclick="window.location.href='contact.html'">
+                    BOOK NOW & SAVE
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M13.025 1l-2.847 2.828 6.176 6.176h-16.354v3.992h16.354l-6.176 6.176 2.847 2.828 10.975-11z"/>
+                    </svg>
+                </button>
                         </div>
-                        <div class="stat-card">
-                            <span class="stat-value">4.9/5</span>
-                            <span class="stat-label">Average review score</span>
                         </div>
-                        <div class="stat-card">
-                            <span class="stat-value">24/7</span>
-                            <span class="stat-label">WhatsApp concierge</span>
+    </section>
+
+    <!-- POPULAR TOURS SECTION -->
+    <section class="trip-cards-section" id="popular-tours">
+        <div class="trip-cards-section__wrapper">
+            <div class="trip-cards-section__header">
+                <h2 class="trip-cards-section__title">Popular Agadir Tours & Excursions</h2>
+                <p class="trip-cards-section__subtitle">Discover our most loved adventures in Agadir and Morocco</p>
                         </div>
-                        <div class="stat-card">
-                            <span class="stat-value">100%</span>
-                            <span class="stat-label">Licensed local guides</span>
+
+            <!-- Carousel Navigation -->
+            <div class="trip-carousel-nav">
+                <button class="trip-carousel-arrow" id="prevTrip">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48">
+                        <path d="M4.77,26,20.53,41.31a2.73,2.73,0,0,0,3.79,0,2.56,2.56,0,0,0,0-3.68L13.08,26.69H41.31a2.69,2.69,0,0,0,0-5.38H13.08L24.32,10.37a2.56,2.56,0,0,0,0-3.68,2.73,2.73,0,0,0-3.79,0L4.77,22A2.59,2.59,0,0,0,4,24,2.59,2.59,0,0,0,4.77,26Z"/>
+                    </svg>
+                </button>
+                <div class="trip-carousel-dots">
+                    <span class="trip-carousel-dot active"></span>
+                    <span class="trip-carousel-dot"></span>
                         </div>
+                <button class="trip-carousel-arrow" id="nextTrip">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48">
+                        <path d="M43.23,22,27.47,6.69a2.73,2.73,0,0,0-3.79,0,2.56,2.56,0,0,0,0,3.68L34.92,21.31H6.69a2.69,2.69,0,0,0,0,5.38H34.92L23.68,37.63a2.56,2.56,0,0,0,0,3.68,2.73,2.73,0,0,0,3.79,0L43.23,26A2.59,2.59,0,0,0,44,24,2.59,2.59,0,0,0,43.23,22Z"/>
+                    </svg>
+                </button>
                     </div>
+
+            <!-- Tour Cards Grid -->
+            <div class="trip-cards-grid">
+                    <!-- Trip Card 1: Paradise Valley -->
+                    <a href="tour-paradise-valley-agadir.html" class="trip-card">
+                        <div class="trip-card__image-wrapper">
+                            <img src="img/paradise-valley.jpg" 
+                                 alt="Paradise Valley Agadir Tour" 
+                                 class="trip-card__image">
+                            <span class="trip-card__tag">BEST SELLER</span>
+                            <div class="trip-card__quick-view">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/>
+                                    <circle cx="12" cy="12" r="3"/>
+                    </svg>
+                                QUICK VIEW
                 </div>
-                <div class="hero-media">
-                    <div class="hero-image">
-                        <img src="img/morocco-horizon-4.jpg" alt="Sunset adventure over the dunes near Agadir">
                     </div>
-                    <div class="hero-floating-card">
-                        <div class="floating-icon" aria-hidden="true">
-                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" xmlns="http://www.w3.org/2000/svg">
-                                <circle cx="12" cy="12" r="10"></circle>
-                                <path d="M7.75 12.5l2.5 2.5 6-6"></path>
+                        <div class="trip-card__content">
+                            <div class="trip-card__rating">
+                                <div class="trip-card__stars">
+                                    <span class="star">★</span>
+                                    <span class="star">★</span>
+                                    <span class="star">★</span>
+                                    <span class="star">★</span>
+                                    <span class="star">★</span>
+                                </div>
+                                <span class="trip-card__rating-number">4.9</span>
+                            </div>
+                            <h3 class="trip-card__title">Paradise Valley Adventure</h3>
+                            <div class="trip-card__info">
+                                <div class="trip-card__info-item">
+                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                                        <circle cx="12" cy="12" r="10"/>
+                                        <polyline points="12 6 12 12 16 14"/>
                             </svg>
+                                    5 Hours
                         </div>
-                        <p class="floating-title">Guest-favourite for Paradise Valley</p>
-                        <p class="floating-text">Rated 5.0 ★ on TripAdvisor &amp; GetYourGuide</p>
+                                <div class="trip-card__info-item">
+                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                                        <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/>
+                                        <circle cx="12" cy="10" r="3"/>
+                                    </svg>
+                                    Nature
                     </div>
+                                <div class="trip-card__info-item">
+                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                                        <circle cx="12" cy="12" r="10"/>
+                                    </svg>
+                                    Easy
+                </div>
+            </div>
+                            <p class="trip-card__description">Discover natural pools and stunning landscapes in the Atlas Mountains. Perfect for swimming and nature lovers.</p>
+                            <div class="trip-card__footer">
+                                <div class="trip-card__price-wrapper">
+                                    <p class="trip-card__price-label">From</p>
+                                    <p class="trip-card__price">€20</p>
+                                </div>
+                                <div class="trip-card__cta">
+                                    <button class="btn btn-primary trip-card__btn">VIEW TOUR</button>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+
+                    <!-- Trip Card 2: Marrakech Day Trip -->
+                    <a href="day-trip-marrakech-from-agadir.html" class="trip-card">
+                        <div class="trip-card__image-wrapper">
+                            <img src="img/morocco-market.jpg" 
+                                 alt="Marrakech Day Trip from Agadir" 
+                                 class="trip-card__image">
+                            <div class="trip-card__quick-view">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/>
+                                    <circle cx="12" cy="12" r="3"/>
+                        </svg>
+                                QUICK VIEW
+                    </div>
+                    </div>
+                        <div class="trip-card__content">
+                            <div class="trip-card__rating">
+                                <div class="trip-card__stars">
+                                    <span class="star">★</span>
+                                    <span class="star">★</span>
+                                    <span class="star">★</span>
+                                    <span class="star">★</span>
+                                    <span class="star">★</span>
+                </div>
+                                <span class="trip-card__rating-number">4.8</span>
+                            </div>
+                            <h3 class="trip-card__title">Marrakech Day Trip</h3>
+                            <div class="trip-card__info">
+                                <div class="trip-card__info-item">
+                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                                        <circle cx="12" cy="12" r="10"/>
+                                        <polyline points="12 6 12 12 16 14"/>
+                        </svg>
+                                    13 Hours
+                    </div>
+                                <div class="trip-card__info-item">
+                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                                        <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/>
+                                        <circle cx="12" cy="10" r="3"/>
+                                    </svg>
+                                    Cultural
+                    </div>
+                                <div class="trip-card__info-item">
+                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                                        <circle cx="12" cy="12" r="10"/>
+                        </svg>
+                                    Easy
+                    </div>
+                    </div>
+                            <p class="trip-card__description">Explore the Red City's medina, souks, and Jemaa el-Fna square. Discover the heart of Morocco in one day.</p>
+                            <div class="trip-card__footer">
+                                <div class="trip-card__price-wrapper">
+                                    <p class="trip-card__price-label">From</p>
+                                    <p class="trip-card__price">€40</p>
+                </div>
+                                <div class="trip-card__cta">
+                                    <button class="btn btn-primary trip-card__btn">VIEW TOUR</button>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+
+                    <!-- Trip Card 3: Quad Biking -->
+                    <a href="tour-quad-biking-agadir.html" class="trip-card">
+                        <div class="trip-card__image-wrapper">
+                            <img src="img/quad-biking.jpg" 
+                                 alt="Quad Biking Safari Agadir" 
+                                 class="trip-card__image">
+                            <span class="trip-card__tag">POPULAR</span>
+                            <div class="trip-card__quick-view">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/>
+                                    <circle cx="12" cy="12" r="3"/>
+                        </svg>
+                                QUICK VIEW
+                    </div>
+                    </div>
+                        <div class="trip-card__content">
+                            <div class="trip-card__rating">
+                                <div class="trip-card__stars">
+                                    <span class="star">★</span>
+                                    <span class="star">★</span>
+                                    <span class="star">★</span>
+                                    <span class="star">★</span>
+                                    <span class="star">★</span>
+                </div>
+                                <span class="trip-card__rating-number">4.8</span>
+            </div>
+                            <h3 class="trip-card__title">Quad Biking Safari</h3>
+                            <div class="trip-card__info">
+                                <div class="trip-card__info-item">
+                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                                        <circle cx="12" cy="12" r="10"/>
+                                        <polyline points="12 6 12 12 16 14"/>
+                </svg>
+                                    3 Hours
+                </div>
+                                <div class="trip-card__info-item">
+                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                                        <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/>
+                                        <circle cx="12" cy="10" r="3"/>
+                                    </svg>
+                                    Adventure
+                        </div>
+                                <div class="trip-card__info-item">
+                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                                        <circle cx="12" cy="12" r="10"/>
+                                    </svg>
+                                    Moderate
+                            </div>
+                            </div>
+                            <p class="trip-card__description">Experience thrilling quad biking through Sahara dunes and Berber villages. Pure adrenaline and fun!</p>
+                            <div class="trip-card__footer">
+                                <div class="trip-card__price-wrapper">
+                                    <p class="trip-card__price-label">From</p>
+                                    <p class="trip-card__price">€25</p>
+                                </div>
+                                <div class="trip-card__cta">
+                                    <button class="btn btn-primary trip-card__btn">VIEW TOUR</button>
+                            </div>
+                        </div>
+                        </div>
+                    </a>
+
+                    <!-- Trip Card 4: Camel Ride -->
+                    <a href="tour-camel-ride-agadir.html" class="trip-card">
+                        <div class="trip-card__image-wrapper">
+                            <img src="img/camel-ride-sunset.jpg" 
+                                 alt="Sunset Camel Ride Agadir" 
+                                 class="trip-card__image">
+                            <span class="trip-card__tag">ROMANTIC</span>
+                            <div class="trip-card__quick-view">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/>
+                                    <circle cx="12" cy="12" r="3"/>
+                </svg>
+                                QUICK VIEW
+                        </div>
+                            </div>
+                        <div class="trip-card__content">
+                            <div class="trip-card__rating">
+                                <div class="trip-card__stars">
+                                    <span class="star">★</span>
+                                    <span class="star">★</span>
+                                    <span class="star">★</span>
+                                    <span class="star">★</span>
+                                    <span class="star">★</span>
+                            </div>
+                                <span class="trip-card__rating-number">4.7</span>
+                                </div>
+                            <h3 class="trip-card__title">Sunset Camel Ride</h3>
+                            <div class="trip-card__info">
+                                <div class="trip-card__info-item">
+                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                                        <circle cx="12" cy="12" r="10"/>
+                                        <polyline points="12 6 12 12 16 14"/>
+                </svg>
+                                    2 Hours
+                            </div>
+                                <div class="trip-card__info-item">
+                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                                        <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/>
+                                        <circle cx="12" cy="10" r="3"/>
+                                    </svg>
+                                    Beach
+                        </div>
+                                <div class="trip-card__info-item">
+                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                                        <circle cx="12" cy="12" r="10"/>
+                                    </svg>
+                                    Easy
+                        </div>
+                            </div>
+                            <p class="trip-card__description">Ride camels along Agadir beach at sunset with Moroccan mint tea. A magical authentic experience.</p>
+                            <div class="trip-card__footer">
+                                <div class="trip-card__price-wrapper">
+                                    <p class="trip-card__price-label">From</p>
+                                    <p class="trip-card__price">€25</p>
+                            </div>
+                                <div class="trip-card__cta">
+                                    <button class="btn btn-primary trip-card__btn">VIEW TOUR</button>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+
+                    <!-- Trip Card 5: Essaouira Day Trip -->
+                    <a href="day-trip-essaouira-from-agadir.html" class="trip-card">
+                        <div class="trip-card__image-wrapper">
+                            <img src="img/morocco-coastal-2.jpg" 
+                                 alt="Essaouira Day Trip from Agadir" 
+                                 class="trip-card__image">
+                            <span class="trip-card__tag">COASTAL</span>
+                            <div class="trip-card__quick-view">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/>
+                                    <circle cx="12" cy="12" r="3"/>
+                                </svg>
+                                QUICK VIEW
+                        </div>
+                            </div>
+                        <div class="trip-card__content">
+                            <div class="trip-card__rating">
+                                <div class="trip-card__stars">
+                                    <span class="star">★</span>
+                                    <span class="star">★</span>
+                                    <span class="star">★</span>
+                                    <span class="star">★</span>
+                                    <span class="star">★</span>
+                            </div>
+                                <span class="trip-card__rating-number">4.6</span>
+                                </div>
+                            <h3 class="trip-card__title">Essaouira Day Trip</h3>
+                            <div class="trip-card__info">
+                                <div class="trip-card__info-item">
+                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                                        <circle cx="12" cy="12" r="10"/>
+                                        <polyline points="12 6 12 12 16 14"/>
+                                    </svg>
+                                    11 Hours
+                            </div>
+                                <div class="trip-card__info-item">
+                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                                        <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/>
+                                        <circle cx="12" cy="10" r="3"/>
+                                    </svg>
+                                    Cultural
+                        </div>
+                                <div class="trip-card__info-item">
+                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                                        <circle cx="12" cy="12" r="10"/>
+                                    </svg>
+                                    Easy
+                        </div>
+                            </div>
+                            <p class="trip-card__description">Visit the charming blue and white coastal town. Explore medina, ramparts, and authentic artisan workshops.</p>
+                            <div class="trip-card__footer">
+                                <div class="trip-card__price-wrapper">
+                                    <p class="trip-card__price-label">From</p>
+                                    <p class="trip-card__price">€30</p>
+                            </div>
+                                <div class="trip-card__cta">
+                                    <button class="btn btn-primary trip-card__btn">VIEW TOUR</button>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+
+                    <!-- Trip Card 6: Sandboarding -->
+                    <a href="tour-sandboarding-agadir.html" class="trip-card">
+                        <div class="trip-card__image-wrapper">
+                            <img src="img/morocco-horizon-4.jpg" 
+                                 alt="Sandboarding Agadir Desert" 
+                                 class="trip-card__image">
+                            <span class="trip-card__tag">ADVENTURE</span>
+                            <div class="trip-card__quick-view">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/>
+                                    <circle cx="12" cy="12" r="3"/>
+                                </svg>
+                                QUICK VIEW
+                        </div>
+                            </div>
+                        <div class="trip-card__content">
+                            <div class="trip-card__rating">
+                                <div class="trip-card__stars">
+                                    <span class="star">★</span>
+                                    <span class="star">★</span>
+                                    <span class="star">★</span>
+                                    <span class="star">★</span>
+                                    <span class="star">★</span>
+                            </div>
+                                <span class="trip-card__rating-number">4.7</span>
+                                </div>
+                            <h3 class="trip-card__title">Sandboarding & Dunes</h3>
+                            <div class="trip-card__info">
+                                <div class="trip-card__info-item">
+                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                                        <circle cx="12" cy="12" r="10"/>
+                                        <polyline points="12 6 12 12 16 14"/>
+                                    </svg>
+                                    5 Hours
+                            </div>
+                                <div class="trip-card__info-item">
+                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                                        <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/>
+                                        <circle cx="12" cy="10" r="3"/>
+                                    </svg>
+                                    Desert
+                        </div>
+                                <div class="trip-card__info-item">
+                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                                        <circle cx="12" cy="12" r="10"/>
+                                    </svg>
+                                    Easy
+                </div>
+                </div>
+                            <p class="trip-card__description">Surf the golden Sahara dunes with sandboarding. Includes Berber village visit and mint tea.</p>
+                            <div class="trip-card__footer">
+                                <div class="trip-card__price-wrapper">
+                                    <p class="trip-card__price-label">From</p>
+                                    <p class="trip-card__price">€30</p>
+            </div>
+                                <div class="trip-card__cta">
+                                    <button class="btn btn-primary trip-card__btn">VIEW TOUR</button>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+
+                    <!-- Trip Card 7: Horse Riding -->
+                    <a href="tour-horse-riding-agadir.html" class="trip-card">
+                        <div class="trip-card__image-wrapper">
+                            <img src="img/horse-2.jpg" 
+                                 alt="Horse Riding Agadir Beach" 
+                                 class="trip-card__image">
+                            <span class="trip-card__tag">SCENIC</span>
+                            <div class="trip-card__quick-view">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/>
+                                    <circle cx="12" cy="12" r="3"/>
+                                </svg>
+                                QUICK VIEW
+                </div>
+                        </div>
+                        <div class="trip-card__content">
+                            <div class="trip-card__rating">
+                                <div class="trip-card__stars">
+                                    <span class="star">★</span>
+                                    <span class="star">★</span>
+                                    <span class="star">★</span>
+                                    <span class="star">★</span>
+                                    <span class="star">★</span>
+                                </div>
+                                <span class="trip-card__rating-number">4.8</span>
+                            </div>
+                            <h3 class="trip-card__title">Horse Riding Beach Tour</h3>
+                            <div class="trip-card__info">
+                                <div class="trip-card__info-item">
+                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                                        <circle cx="12" cy="12" r="10"/>
+                                        <polyline points="12 6 12 12 16 14"/>
+                                </svg>
+                                    2 Hours
+                            </div>
+                                <div class="trip-card__info-item">
+                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                                        <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/>
+                                        <circle cx="12" cy="10" r="3"/>
+                                    </svg>
+                                    Beach
+                            </div>
+                                <div class="trip-card__info-item">
+                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                                        <circle cx="12" cy="12" r="10"/>
+                                </svg>
+                                    Moderate
+                            </div>
+                            </div>
+                            <p class="trip-card__description">Ride horses along Agadir's stunning beach and eucalyptus forests. Suitable for all levels.</p>
+                            <div class="trip-card__footer">
+                                <div class="trip-card__price-wrapper">
+                                    <p class="trip-card__price-label">From</p>
+                                    <p class="trip-card__price">€25</p>
+                                </div>
+                                <div class="trip-card__cta">
+                                    <button class="btn btn-primary trip-card__btn">VIEW TOUR</button>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+
+                    <!-- Trip Card 8: Agadir City Tour -->
+                    <a href="tour-agadir-city-tour.html" class="trip-card">
+                        <div class="trip-card__image-wrapper">
+                            <img src="img/morocco-heritage-1.jpg" 
+                                 alt="Agadir City Tour" 
+                                 class="trip-card__image">
+                            <span class="trip-card__tag">CULTURAL</span>
+                            <div class="trip-card__quick-view">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/>
+                                    <circle cx="12" cy="12" r="3"/>
+                                </svg>
+                                QUICK VIEW
+                            </div>
+                            </div>
+                        <div class="trip-card__content">
+                            <div class="trip-card__rating">
+                                <div class="trip-card__stars">
+                                    <span class="star">★</span>
+                                    <span class="star">★</span>
+                                    <span class="star">★</span>
+                                    <span class="star">★</span>
+                                    <span class="star">★</span>
+                                </div>
+                                <span class="trip-card__rating-number">4.5</span>
+                            </div>
+                            <h3 class="trip-card__title">Agadir City Highlights</h3>
+                            <div class="trip-card__info">
+                                <div class="trip-card__info-item">
+                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                                        <circle cx="12" cy="12" r="10"/>
+                                        <polyline points="12 6 12 12 16 14"/>
+                                </svg>
+                                    3 Hours
+                            </div>
+                                <div class="trip-card__info-item">
+                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                                        <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/>
+                                        <circle cx="12" cy="10" r="3"/>
+                                    </svg>
+                                    City
+                            </div>
+                                <div class="trip-card__info-item">
+                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                                        <circle cx="12" cy="12" r="10"/>
+                                    </svg>
+                                    Easy
+                                </div>
+                            </div>
+                            <p class="trip-card__description">Explore Agadir Kasbah, souk, marina and beach promenade. Perfect introduction to the city.</p>
+                            <div class="trip-card__footer">
+                                <div class="trip-card__price-wrapper">
+                                    <p class="trip-card__price-label">From</p>
+                                    <p class="trip-card__price">€20</p>
+                                </div>
+                                <div class="trip-card__cta">
+                                    <button class="btn btn-primary trip-card__btn">VIEW TOUR</button>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
                 </div>
             </div>
         </section>
 
-        <section class="trust-strip" aria-label="Service highlights">
-            <div class="container trust-grid">
-                <div class="trust-card">
-                    <div class="trust-icon" aria-hidden="true">
-                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M12 3l8 4v5c0 5-3.5 9.5-8 10-4.5-.5-8-5-8-10V7l8-4Z"></path>
-                            <path d="M9 12l2 2 4-4"></path>
+    <!-- FEATURES SECTION -->
+    <section class="features-section">
+        <div class="features-section__wrapper">
+            <h2 class="features-section__title">Why Choose The Local Guide</h2>
+            <div class="features-section__grid">
+                <div class="feature-item">
+                    <div class="feature-item__icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+                            <circle cx="12" cy="7" r="4"></circle>
                         </svg>
-                    </div>
-                    <div>
-                        <p class="trust-title">Licensed local pros</p>
-                        <p class="trust-text">Handpicked guides fluent in English, French &amp; Arabic.</p>
-                    </div>
                 </div>
-                <div class="trust-card">
-                    <div class="trust-icon" aria-hidden="true">
-                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M4 6h16"></path>
-                            <path d="M4 12h16"></path>
-                            <path d="M4 18h16"></path>
-                            <path d="M8 6v12"></path>
+                    <p class="feature-item__text">Expert local guides with deep knowledge</p>
+                    </div>
+
+                <div class="feature-item">
+                    <div class="feature-item__icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M5 12h14"></path>
+                            <path d="M12 5l7 7-7 7"></path>
                         </svg>
                     </div>
-                    <div>
-                        <p class="trust-title">Tailor-made itineraries</p>
-                        <p class="trust-text">Flexible pacing, private upgrades and VIP add-ons.</p>
+                    <p class="feature-item__text">Free hotel pickup and drop-off included</p>
                     </div>
+
+                <div class="feature-item">
+                    <div class="feature-item__icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M9 12l2 2 4-4"/>
+                            <path d="M21 12c0 4.97-4.03 9-9 9s-9-4.03-9-9 4.03-9 9-9 9 4.03 9 9z"/>
+                        </svg>
+                    </div>
+                    <p class="feature-item__text">Free cancellation up to 24h before tour</p>
                 </div>
-                <div class="trust-card">
-                    <div class="trust-icon" aria-hidden="true">
-                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M12 1v5"></path>
-                            <path d="M12 13v10"></path>
-                            <path d="m4.22 4.22 3.54 3.54"></path>
-                            <path d="m16.24 16.24 3.54 3.54"></path>
-                            <path d="M1 12h5"></path>
-                            <path d="M18 12h5"></path>
-                            <path d="m4.22 19.78 3.54-3.54"></path>
-                            <path d="m16.24 7.76 3.54-3.54"></path>
+
+                <div class="feature-item">
+                    <div class="feature-item__icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M12 2v20M2 12h20"></path>
                         </svg>
                     </div>
-                    <div>
-                        <p class="trust-title">Golden hour moments</p>
-                        <p class="trust-text">Sunset camel rides, surf sessions &amp; Atlas picnics.</p>
-                    </div>
+                    <p class="feature-item__text">Pay online or cash at pickup - flexible options</p>
                 </div>
-                <div class="trust-card">
-                    <div class="trust-icon" aria-hidden="true">
-                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" xmlns="http://www.w3.org/2000/svg">
-                            <rect x="3" y="4" width="18" height="14" rx="2"></rect>
-                            <path d="M7 9h5"></path>
-                            <path d="M7 13h3"></path>
-                            <path d="M16 17v3"></path>
-                            <path d="M8 17v3"></path>
-                        </svg>
-                    </div>
-                    <div>
-                        <p class="trust-title">Easy, secure booking</p>
-                        <p class="trust-text">Pay online or in cash with instant confirmation.</p>
-                    </div>
                 </div>
             </div>
         </section>
 
-        <section id="popular-tours" class="section popular-trips-section">
-            <div class="container">
-                <div class="section-header">
-                    <p class="section-kicker">Popular this week</p>
-                    <h2>Agadir tours travellers can’t stop talking about</h2>
-                    <p>Curated experiences blending culture, adventure and comfort. Every tour includes hotel pickup, expert hosts and flexible pacing.</p>
+    <!-- BLOG SECTION -->
+    <section class="blog-section">
+        <div class="blog-section__wrapper">
+            <div class="blog-section__header">
+                <h2 class="blog-section__title">Discover Agadir & Morocco</h2>
+                <p class="blog-section__subtitle">Travel tips, local insights and hidden gems from our expert guides</p>
                 </div>
-                <div class="trip-grid">
-                    <article class="trip-card">
-                        <div class="trip-image">
-                            <img src="img/morocco-market.jpg" alt="Guided day trip to Marrakech from Agadir">
-                            <span class="trip-chip">Full day</span>
-                        </div>
-                        <div class="trip-content">
-                            <div class="trip-rating">
-                                <div class="stars">★★★★★</div>
-                                <span class="rating-score">4.7 (689)</span>
-                            </div>
-                            <h3 class="trip-title">Marrakech Day Trip from Agadir</h3>
-                            <p class="trip-description">Private driver, medina insider tour and plenty of time for rooftop lunches, souk shopping and Bahia Palace storytelling.</p>
-                            <div class="trip-details">
-                                <span class="detail-item">Guided medina</span>
-                                <span class="detail-item">Hotel pickup</span>
-                                <span class="detail-item">Flexible pacing</span>
-                            </div>
-                            <div class="trip-footer">
-                                <span class="trip-price">From €55 pp</span>
-                                <div class="trip-buttons">
-                                    <a class="view-btn" href="day-trip-marrakech-from-agadir.html">View trip</a>
-                                    <a class="info-btn" href="contact.html">Plan my day</a>
-                                </div>
-                            </div>
-                        </div>
-                    </article>
 
-                    <article class="trip-card">
-                        <div class="trip-image">
-                            <img src="img/quad-biking.jpg" alt="Quad biking over Tamraght dunes">
-                            <span class="trip-chip highlight">Best seller</span>
+            <!-- Blog Grid -->
+            <div class="blog-grid">
+                <!-- Blog Post 1 -->
+                <article class="blog-card">
+                    <div class="blog-card__image-wrapper">
+                        <img src="img/paradise-valley.jpg" 
+                             alt="Paradise Valley Guide" 
+                             class="blog-card__image">
+                        <span class="blog-card__category">Destination Guide</span>
+                                    </div>
+                    <div class="blog-card__content">
+                        <div class="blog-card__meta">
+                            <span class="blog-card__date">November 2024</span>
+                            <span class="blog-card__read-time">6 min read</span>
                         </div>
-                        <div class="trip-content">
-                            <div class="trip-rating">
-                                <div class="stars">★★★★★</div>
-                                <span class="rating-score">4.9 (526)</span>
-                            </div>
-                            <h3 class="trip-title">Quad Biking Agadir Adventure</h3>
-                            <p class="trip-description">Powerful quads, pro safety briefing and off-road tracks through Banana Village with a mint tea break in Berber countryside.</p>
-                            <div class="trip-details">
-                                <span class="detail-item">2–3 hours</span>
-                                <span class="detail-item">All gear included</span>
-                                <span class="detail-item">Tea stop</span>
-                            </div>
-                            <div class="trip-footer">
-                                <span class="trip-price">From €50 pp</span>
-                                <div class="trip-buttons">
-                                    <a class="view-btn" href="tour-quad-biking-agadir.html">View trip</a>
-                                    <a class="info-btn" href="contact.html">Check availability</a>
+                        <h3 class="blog-card__title">Paradise Valley: Your Complete Guide to Agadir's Natural Wonder</h3>
+                        <p class="blog-card__excerpt">Discover natural swimming pools, hiking trails, and the best time to visit this hidden gem in the Atlas Mountains.</p>
+                        <a href="tour-paradise-valley-agadir.html" class="blog-card__link">Read More →</a>
                                 </div>
-                            </div>
-                        </div>
-                    </article>
+                            </article>
 
-                    <article class="trip-card">
-                        <div class="trip-image">
-                            <img src="img/paradise-valley.jpg" alt="Paradise Valley natural pools near Agadir">
-                            <span class="trip-chip">Half day</span>
+                <!-- Blog Post 2 -->
+                <article class="blog-card">
+                    <div class="blog-card__image-wrapper">
+                        <img src="img/morocco-market.jpg" 
+                             alt="Marrakech Day Trip" 
+                             class="blog-card__image">
+                        <span class="blog-card__category">Day Trips</span>
                         </div>
-                        <div class="trip-content">
-                            <div class="trip-rating">
-                                <div class="stars">★★★★★</div>
-                                <span class="rating-score">4.9 (342)</span>
-                            </div>
-                            <h3 class="trip-title">Paradise Valley Escape</h3>
-                            <p class="trip-description">Swim turquoise pools, trek palm groves and indulge in an argan brunch while your guide captures the day’s best photo moments.</p>
-                            <div class="trip-details">
-                                <span class="detail-item">Hotel transfers</span>
-                                <span class="detail-item">Argan cooperative</span>
-                                <span class="detail-item">Small groups</span>
-                            </div>
-                            <div class="trip-footer">
-                                <span class="trip-price">From €35 pp</span>
-                                <div class="trip-buttons">
-                                    <a class="view-btn" href="tour-paradise-valley-agadir.html">View trip</a>
-                                    <a class="info-btn" href="contact.html">Reserve spot</a>
+                    <div class="blog-card__content">
+                        <div class="blog-card__meta">
+                            <span class="blog-card__date">November 2024</span>
+                            <span class="blog-card__read-time">8 min read</span>
+                                    </div>
+                        <h3 class="blog-card__title">Marrakech in a Day: Essential Sites & Local Tips</h3>
+                        <p class="blog-card__excerpt">From Jemaa el-Fna to the souks, explore Marrakech's highlights with insider advice from local guides.</p>
+                        <a href="day-trip-marrakech-from-agadir.html" class="blog-card__link">Read More →</a>
                                 </div>
-                            </div>
-                        </div>
-                    </article>
+                            </article>
 
-                    <article class="trip-card">
-                        <div class="trip-image">
-                            <img src="img/camel-ride-sunset.jpg" alt="Sunset camel ride on Agadir beach">
-                            <span class="trip-chip">Sunset special</span>
+                <!-- Blog Post 3 -->
+                <article class="blog-card">
+                    <div class="blog-card__image-wrapper">
+                        <img src="img/berber-village.jpg" 
+                             alt="Moroccan Food & Culture" 
+                             class="blog-card__image">
+                        <span class="blog-card__category">Food & Culture</span>
                         </div>
-                        <div class="trip-content">
-                            <div class="trip-rating">
-                                <div class="stars">★★★★★</div>
-                                <span class="rating-score">4.8 (284)</span>
-                            </div>
-                            <h3 class="trip-title">Sunset Camel Ride &amp; Berber Dinner</h3>
-                            <p class="trip-description">Golden hour camel trek along Agadir dunes followed by live music, mint tea and a home-style Berber feast.</p>
-                            <div class="trip-details">
-                                <span class="detail-item">Family friendly</span>
-                                <span class="detail-item">Photo stop</span>
-                                <span class="detail-item">Dinner included</span>
-                            </div>
-                            <div class="trip-footer">
-                                <span class="trip-price">From €30 pp</span>
-                                <div class="trip-buttons">
-                                    <a class="view-btn" href="tour-camel-ride-agadir.html">View trip</a>
-                                    <a class="info-btn" href="contact.html">Hold my spot</a>
+                    <div class="blog-card__content">
+                        <div class="blog-card__meta">
+                            <span class="blog-card__date">October 2024</span>
+                            <span class="blog-card__read-time">5 min read</span>
+                                    </div>
+                        <h3 class="blog-card__title">Traditional Moroccan Cuisine: Must-Try Dishes in Agadir</h3>
+                        <p class="blog-card__excerpt">From tagine to fresh seafood, discover the flavors of Morocco and the best local restaurants in Agadir.</p>
+                        <a href="things-to-do-in-agadir.html" class="blog-card__link">Read More →</a>
                                 </div>
-                            </div>
-                        </div>
-                    </article>
+                            </article>
 
-                    <article class="trip-card">
-                        <div class="trip-image">
-                            <img src="img/morocco-heritage-1.jpg" alt="Agadir city tour overlooking the bay">
-                            <span class="trip-chip">City highlights</span>
+                <!-- Blog Post 4 -->
+                <article class="blog-card">
+                    <div class="blog-card__image-wrapper">
+                        <img src="img/quad-biking.jpg" 
+                             alt="Adventure Activities" 
+                             class="blog-card__image">
+                        <span class="blog-card__category">Adventure</span>
                         </div>
-                        <div class="trip-content">
-                            <div class="trip-rating">
-                                <div class="stars">★★★★★</div>
-                                <span class="rating-score">4.8 (312)</span>
-                            </div>
-                            <h3 class="trip-title">Agadir Heritage City Tour</h3>
-                            <p class="trip-description">Kasbah Oufella vistas, Souk El Had discovery and marina strolls with stories that bring post-earthquake Agadir to life.</p>
-                            <div class="trip-details">
-                                <span class="detail-item">Half day</span>
-                                <span class="detail-item">Cultural storyteller</span>
-                                <span class="detail-item">Tasting stop</span>
-                            </div>
-                            <div class="trip-footer">
-                                <span class="trip-price">From €30 pp</span>
-                                <div class="trip-buttons">
-                                    <a class="view-btn" href="tour-agadir-city-tour.html">View trip</a>
-                                    <a class="info-btn" href="contact.html">Request itinerary</a>
-                                </div>
-                            </div>
-                        </div>
-                    </article>
+                    <div class="blog-card__content">
+                        <div class="blog-card__meta">
+                            <span class="blog-card__date">October 2024</span>
+                            <span class="blog-card__read-time">7 min read</span>
+                    </div>
+                        <h3 class="blog-card__title">Top 10 Adventure Activities in Agadir You Can't Miss</h3>
+                        <p class="blog-card__excerpt">Quad biking, sandboarding, camel rides and more - your ultimate guide to adventure in Agadir.</p>
+                        <a href="agadir-tours.html" class="blog-card__link">Read More →</a>
+                    </div>
+                </article>
+            </div>
 
-                    <article class="trip-card">
-                        <div class="trip-image">
-                            <img src="img/morocco-coastal-2.jpg" alt="Essaouira day trip coastal ramparts">
-                            <span class="trip-chip">Coastal gem</span>
-                        </div>
-                        <div class="trip-content">
-                            <div class="trip-rating">
-                                <div class="stars">★★★★★</div>
-                                <span class="rating-score">4.8 (523)</span>
-                            </div>
-                            <h3 class="trip-title">Essaouira Day Trip</h3>
-                            <p class="trip-description">Atlantic viewpoints, rampart walks and seafood tips in a UNESCO-listed medina known for art and laid-back charm.</p>
-                            <div class="trip-details">
-                                <span class="detail-item">Full day</span>
-                                <span class="detail-item">UNESCO medina</span>
-                                <span class="detail-item">Artisan visits</span>
-                            </div>
-                            <div class="trip-footer">
-                                <span class="trip-price">From €45 pp</span>
-                                <div class="trip-buttons">
-                                    <a class="view-btn" href="day-trip-essaouira-from-agadir.html">View trip</a>
-                                    <a class="info-btn" href="contact.html">See itinerary</a>
-                                </div>
-                            </div>
-                        </div>
-                    </article>
-                </div>
-                <div class="section-cta">
-                    <a class="link-arrow" href="agadir-tours.html">Browse the full collection of Agadir tours</a>
+            <div class="blog-section__button">
+                <button class="btn btn-primary">VIEW ALL ARTICLES</button>
                 </div>
             </div>
         </section>
 
-        <section class="section signature-section">
-            <div class="container signature-inner">
-                <div class="signature-media">
-                    <img src="img/berber-village.jpg" alt="Local guide welcoming guests in a Berber village">
+    <!-- TESTIMONIALS SECTION -->
+    <section class="testimonials-section">
+        <div class="testimonials-section__wrapper">
+            <div class="testimonials-section__header">
+                <div class="testimonials-tag">
+                    <svg class="testimonials-tag__icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z" fill="#4A90E2"/>
+                    </svg>
+                    <span class="testimonials-tag__text">Testimonials</span>
                 </div>
-                <div class="signature-content">
-                    <p class="section-kicker">Why travel with us</p>
-                    <h2>Local knowledge, elevated service</h2>
-                    <p class="signature-intro">We are Agadir locals who design each day like it’s for family. Expect honest advice, reliable logistics and storytellers who unlock places guidebooks miss.</p>
-                    <ul class="feature-list">
-                        <li>
-                            <div class="feature-icon" aria-hidden="true">
-                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M12 3l7 4v5c0 4.418-3.134 8.87-7 9-3.866-.13-7-4.582-7-9V7l7-4Z"></path>
-                                    <path d="M9.5 12.5l2 2 3.5-3.5"></path>
-                                </svg>
-                            </div>
-                            <div>
-                                <h3>Licensed, multilingual guides</h3>
-                                <p>Our team is certified by Moroccan tourism authorities and fluent in English, French, German and Arabic.</p>
-                            </div>
-                        </li>
-                        <li>
-                            <div class="feature-icon" aria-hidden="true">
-                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M4 7h16"></path>
-                                    <path d="M4 12h16"></path>
-                                    <path d="M4 17h16"></path>
-                                    <path d="M9 21V7"></path>
-                                </svg>
-                            </div>
-                            <div>
-                                <h3>Custom pacing &amp; experiences</h3>
-                                <p>Swap one-size-fits-all tours for private upgrades, foodie add-ons, surf coaches or wellness stops tailored to you.</p>
-                            </div>
-                        </li>
-                        <li>
-                            <div class="feature-icon" aria-hidden="true">
-                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" xmlns="http://www.w3.org/2000/svg">
-                                    <circle cx="7.5" cy="18.5" r="2.5"></circle>
-                                    <circle cx="16.5" cy="18.5" r="2.5"></circle>
-                                    <path d="M5 5h14l-1.5 9h-11Z"></path>
-                                    <path d="M7 13h10"></path>
-                                </svg>
-                            </div>
-                            <div>
-                                <h3>Premium transport fleet</h3>
-                                <p>Ride in insured, air-conditioned vehicles with professional chauffeurs and child seats on request.</p>
-                            </div>
-                        </li>
-                        <li>
-                            <div class="feature-icon" aria-hidden="true">
-                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M5 3h14"></path>
-                                    <path d="M5 21h14"></path>
-                                    <path d="M5 3v9a7 7 0 1 0 14 0V3"></path>
-                                </svg>
-                            </div>
-                            <div>
-                                <h3>Sustainable partnerships</h3>
-                                <p>We invest in Berber cooperatives, surf communities and small family farms that share our values.</p>
-                            </div>
-                        </li>
+                <h2 class="testimonials-section__title">What Our Travelers Say</h2>
+                <p class="testimonials-section__subtitle">Real experiences from travelers who discovered Agadir with The Local Guide</p>
+            </div>
+
+            <!-- Testimonials Grid -->
+            <div class="testimonials-grid">
+                <!-- Testimonial 1 -->
+                <div class="testimonial-card">
+                    <p class="testimonial-card__text">Paradise Valley exceeded all expectations! The natural pools were stunning and our guide Mohamed was incredibly knowledgeable. The Local Guide made everything so easy with perfect pickup timing and comfortable transport.</p>
+                    <div class="testimonial-card__user">
+                        <img src="https://images.unsplash.com/photo-1494790108755-2616b612b786?w=60&h=60&fit=crop&q=80" alt="Emma Thompson" class="testimonial-card__avatar">
+                        <div class="testimonial-card__user-info">
+                            <h4 class="testimonial-card__name">Emma Thompson</h4>
+                            <p class="testimonial-card__role">Paradise Valley Tour</p>
+                        </div>
+                        <div class="testimonial-card__rating">
+                            <span class="star">★</span>
+                            <span class="star">★</span>
+                            <span class="star">★</span>
+                            <span class="star">★</span>
+                            <span class="star">★</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Testimonial 2 -->
+                <div class="testimonial-card">
+                    <p class="testimonial-card__text">The Marrakech day trip was amazing! Our guide gave us great local insights and took us to authentic places tourists usually miss. The souks were incredible and we had plenty of time to explore. Highly recommend!</p>
+                    <div class="testimonial-card__user">
+                        <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=60&h=60&fit=crop&q=80" alt="James Wilson" class="testimonial-card__avatar">
+                        <div class="testimonial-card__user-info">
+                            <h4 class="testimonial-card__name">James Wilson</h4>
+                            <p class="testimonial-card__role">Marrakech Day Trip</p>
+                        </div>
+                        <div class="testimonial-card__rating">
+                            <span class="star">★</span>
+                            <span class="star">★</span>
+                            <span class="star">★</span>
+                            <span class="star">★</span>
+                            <span class="star">★</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Testimonial 3 -->
+                <div class="testimonial-card">
+                    <p class="testimonial-card__text">Quad biking through the dunes was the highlight of our Agadir vacation! Pure adrenaline and so much fun. The equipment was top quality and the guide ensured everyone felt safe. Will definitely book more tours!</p>
+                    <div class="testimonial-card__user">
+                        <img src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=60&h=60&fit=crop&q=80" alt="Laura Smith" class="testimonial-card__avatar">
+                        <div class="testimonial-card__user-info">
+                            <h4 class="testimonial-card__name">Laura Smith</h4>
+                            <p class="testimonial-card__role">Quad Biking Safari</p>
+                        </div>
+                        <div class="testimonial-card__rating">
+                            <span class="star">★</span>
+                            <span class="star">★</span>
+                            <span class="star">★</span>
+                            <span class="star">★</span>
+                            <span class="star">★</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Testimonial 4 -->
+                <div class="testimonial-card">
+                    <p class="testimonial-card__text">The sunset camel ride was magical! Riding along the beach as the sun set was unforgettable. The camels were well-cared for and the whole experience felt authentic. Mint tea at the end was the perfect touch!</p>
+                    <div class="testimonial-card__user">
+                        <img src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=60&h=60&fit=crop&q=80" alt="Sarah Anderson" class="testimonial-card__avatar">
+                        <div class="testimonial-card__user-info">
+                            <h4 class="testimonial-card__name">Sarah Anderson</h4>
+                            <p class="testimonial-card__role">Camel Ride Experience</p>
+                        </div>
+                        <div class="testimonial-card__rating">
+                            <span class="star">★</span>
+                            <span class="star">★</span>
+                            <span class="star">★</span>
+                            <span class="star">★</span>
+                            <span class="star">★</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Testimonial 5 -->
+                <div class="testimonial-card">
+                    <p class="testimonial-card__text">Essaouira is beautiful! The old medina is charming and the seafood lunch was incredible. Our driver was professional and the timing was perfect. The Local Guide made exploring Morocco so easy and stress-free.</p>
+                    <div class="testimonial-card__user">
+                        <img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=60&h=60&fit=crop&q=80" alt="Michael Roberts" class="testimonial-card__avatar">
+                        <div class="testimonial-card__user-info">
+                            <h4 class="testimonial-card__name">Michael Roberts</h4>
+                            <p class="testimonial-card__role">Essaouira Day Trip</p>
+                        </div>
+                        <div class="testimonial-card__rating">
+                            <span class="star">★</span>
+                            <span class="star">★</span>
+                            <span class="star">★</span>
+                            <span class="star">★</span>
+                            <span class="star">★</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Testimonial 6 -->
+                <div class="testimonial-card">
+                    <p class="testimonial-card__text">Sandboarding was incredible! The dunes are stunning and surfing down them was such a unique experience. Our guide was friendly and took great photos for us. Best value tour in Agadir!</p>
+                    <div class="testimonial-card__user">
+                        <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=60&h=60&fit=crop&q=80" alt="David Martinez" class="testimonial-card__avatar">
+                        <div class="testimonial-card__user-info">
+                            <h4 class="testimonial-card__name">David Martinez</h4>
+                            <p class="testimonial-card__role">Sandboarding Adventure</p>
+                        </div>
+                        <div class="testimonial-card__rating">
+                            <span class="star">★</span>
+                            <span class="star">★</span>
+                            <span class="star">★</span>
+                            <span class="star">★</span>
+                            <span class="star">★</span>
+                        </div>
+                    </div>
+                </div>
+                </div>
+            </div>
+        </section>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="footer__wrapper">
+            <!-- Footer Top Section -->
+            <div class="footer__top">
+                <div class="footer__column">
+                    <h4 class="footer__title">Popular Tours</h4>
+                    <ul class="footer__links">
+                        <li><a href="tour-paradise-valley-agadir.html" class="footer__link">Paradise Valley</a></li>
+                        <li><a href="tour-quad-biking-agadir.html" class="footer__link">Quad Biking</a></li>
+                        <li><a href="tour-camel-ride-agadir.html" class="footer__link">Camel Ride</a></li>
+                        <li><a href="tour-sandboarding-agadir.html" class="footer__link">Sandboarding</a></li>
+                        <li><a href="tour-horse-riding-agadir.html" class="footer__link">Horse Riding</a></li>
+                        <li><a href="agadir-tours.html" class="footer__link">All Tours</a></li>
                     </ul>
                 </div>
-            </div>
-        </section>
 
-        <section class="section steps-section">
-            <div class="container">
-                <div class="section-header">
-                    <p class="section-kicker">How it works</p>
-                    <h2>Planning your Agadir story is effortless</h2>
-                    <p>Tell us about your dream day. We’ll refine it, book everything and stay in touch right until you’re safely back at your hotel.</p>
-                </div>
-                <div class="steps-grid">
-                    <div class="step-card">
-                        <span class="step-number">1</span>
-                        <h3>Share your wish-list</h3>
-                        <p>Send us your travel dates, group vibe and must-see ideas via WhatsApp or our trip planning form.</p>
-                    </div>
-                    <div class="step-card">
-                        <span class="step-number">2</span>
-                        <h3>Co-create the itinerary</h3>
-                        <p>We recommend the perfect mix of tours, dining and hidden gems, then fine-tune pacing until it feels right.</p>
-                    </div>
-                    <div class="step-card">
-                        <span class="step-number">3</span>
-                        <h3>Arrive &amp; enjoy</h3>
-                        <p>Relax with seamless transfers, responsive support and guides who treat you like a friend visiting home.</p>
-                    </div>
-                </div>
+                <div class="footer__column">
+                    <h4 class="footer__title">Day Trips</h4>
+                    <ul class="footer__links">
+                        <li><a href="day-trip-marrakech-from-agadir.html" class="footer__link">Marrakech Day Trip</a></li>
+                        <li><a href="day-trip-essaouira-from-agadir.html" class="footer__link">Essaouira Day Trip</a></li>
+                        <li><a href="day-trip-taroudant-from-agadir.html" class="footer__link">Taroudant Trip</a></li>
+                        <li><a href="tour-agadir-city-tour.html" class="footer__link">Agadir City Tour</a></li>
+                        <li><a href="crocoparc-agadir-tour.html" class="footer__link">Croco Parc</a></li>
+                        <li><a href="day-trips-from-agadir.html" class="footer__link">All Day Trips</a></li>
+                    </ul>
             </div>
-        </section>
 
-        <section class="section testimonials-section" aria-label="Guest testimonials">
-            <div class="container">
-                <div class="section-header">
-                    <p class="section-kicker">Traveller love</p>
-                    <h2>The reviews that keep us inspired</h2>
-                    <p>Every story starts with a message. We make sure it ends with “that was the best day of our trip”.</p>
-                </div>
-                <div class="testimonial-slider swiper mySwiper">
-                    <div class="swiper-wrapper">
-                        <div class="swiper-slide">
-                            <article class="testimonial-card">
-                                <div class="testimonial-rating">★★★★★</div>
-                                <p class="testimonial-quote">“We booked the Marrakech day trip — Bahia Palace, souks and Jemaa el-Fnaa all covered without stress. Worth every dirham!”</p>
-                                <div class="testimonial-author">
-                                    <img src="https://pagedone.io/asset/uploads/1696229994.png" alt="Portrait of John D.">
-                                    <div>
-                                        <p class="author-name">John D.</p>
-                                        <p class="author-meta">Travel Blogger • United States</p>
-                                    </div>
-                                </div>
-                            </article>
-                        </div>
-                        <div class="swiper-slide">
-                            <article class="testimonial-card">
-                                <div class="testimonial-rating">★★★★★</div>
-                                <p class="testimonial-quote">“The quad biking crew provided premium gear and epic dunes. The mint tea break in Banana Village was an authentic local touch.”</p>
-                                <div class="testimonial-author">
-                                    <img src="https://pagedone.io/asset/uploads/1696230027.png" alt="Portrait of Emma L.">
-                                    <div>
-                                        <p class="author-name">Emma L.</p>
-                                        <p class="author-meta">Adventure Seeker • United Kingdom</p>
-                                    </div>
-                                </div>
-                            </article>
-                        </div>
-                        <div class="swiper-slide">
-                            <article class="testimonial-card">
-                                <div class="testimonial-rating">★★★★★</div>
-                                <p class="testimonial-quote">“Paradise Valley was unreal. Our guide knew the quiet swimming holes and even arranged a surprise argan oil workshop.”</p>
-                                <div class="testimonial-author">
-                                    <img src="https://pagedone.io/asset/uploads/1696230061.png" alt="Portrait of Sofia M.">
-                                    <div>
-                                        <p class="author-name">Sofia M.</p>
-                                        <p class="author-meta">Photographer • Spain</p>
-                                    </div>
-                                </div>
-                            </article>
-                        </div>
-                    </div>
-                    <div class="swiper-controls">
-                        <div class="swiper-button-prev" aria-label="Previous testimonial"></div>
-                        <div class="swiper-button-next" aria-label="Next testimonial"></div>
-                    </div>
-                    <div class="swiper-pagination"></div>
-                </div>
-            </div>
-        </section>
-
-        <section class="cta-banner" aria-label="Trip planning call to action">
-            <div class="container cta-banner-inner">
-                <div class="cta-banner-copy">
-                    <h2>Ready to start planning your Agadir adventure?</h2>
-                    <p>Drop us a message and let's design days filled with Atlas mountain vistas, coastal breezes and authentic Moroccan hospitality.</p>
-                </div>
-                <div class="cta-banner-actions">
-                    <a class="cta-button primary" href="contact.html">Start a trip plan</a>
-                    <a class="cta-button ghost" href="things-to-do-in-agadir.html">Browse inspiration</a>
-                </div>
-            </div>
-        </section>
-    </main>
-
-    <footer class="site-footer" role="contentinfo">
-        <div class="container footer-main">
-            <div class="footer-column footer-brand">
-                <a class="footer-logo" href="index.html">
-                    <img src="img/rr.png" alt="The Local Guide Morocco logo">
-                    <span>The Local Guide Morocco</span>
-                </a>
-                <p>Curating boutique adventures around Agadir, Paradise Valley, Marrakech and the Atlantic coast with heart and precision.</p>
-                <div class="footer-contact">
-                    <a href="mailto:hello@thelocalguide.ma">hello@thelocalguide.ma</a>
-                    <a href="tel:+212636372101">+212 636-372101</a>
-                </div>
-            </div>
-            <div class="footer-column">
-                <h3>Popular tours</h3>
-                <ul>
-                    <li><a href="tour-paradise-valley-agadir.html">Paradise Valley Escape</a></li>
-                    <li><a href="tour-quad-biking-agadir.html">Quad Biking Adventure</a></li>
-                    <li><a href="tour-camel-ride-agadir.html">Sunset Camel Ride</a></li>
-                    <li><a href="day-trip-essaouira-from-agadir.html">Essaouira Day Trip</a></li>
+                <div class="footer__column">
+                    <h4 class="footer__title">About Us</h4>
+                    <ul class="footer__links">
+                        <li><a href="index.html" class="footer__link">Home</a></li>
+                        <li><a href="things-to-do-in-agadir.html" class="footer__link">Things to Do</a></li>
+                        <li><a href="#deals" class="footer__link">Special Offers</a></li>
+                        <li><a href="contact.html" class="footer__link">Contact Us</a></li>
+                        <li><a href="tel:+212636372101" class="footer__link">Call Us</a></li>
+                        <li><a href="https://wa.me/212636372101" class="footer__link">WhatsApp</a></li>
                 </ul>
             </div>
-            <div class="footer-column">
-                <h3>Plan your trip</h3>
-                <ul>
-                    <li><a href="agadir-tours.html">Agadir Tours</a></li>
-                    <li><a href="day-trips-from-agadir.html">Day Trips</a></li>
-                    <li><a href="things-to-do-in-agadir.html">Things to Do</a></li>
-                    <li><a href="contact.html">Request a custom itinerary</a></li>
+
+                <div class="footer__column">
+                    <h4 class="footer__title">Helpful Info</h4>
+                    <ul class="footer__links">
+                        <li><a href="contact.html" class="footer__link">How to Book</a></li>
+                        <li><a href="contact.html" class="footer__link">Payment Options</a></li>
+                        <li><a href="contact.html" class="footer__link">Cancellation Policy</a></li>
+                        <li><a href="contact.html" class="footer__link">Travel Tips</a></li>
+                        <li><a href="contact.html" class="footer__link">FAQ</a></li>
+                        <li><a href="contact.html" class="footer__link">Customer Reviews</a></li>
                 </ul>
             </div>
-            <div class="footer-column">
-                <h3>Stay connected</h3>
-                <p>Follow our adventures and behind-the-scenes stories from Morocco.</p>
-                <div class="footer-social">
-                    <a href="https://www.instagram.com/www.miracleair.tz" target="_blank" aria-label="Instagram">
-                        <svg width="22" height="22" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
-                            <path d="M12 2.163c3.204 0 3.584.012 4.85.07 1.17.054 1.97.24 2.427.403a4.92 4.92 0 0 1 1.78 1.153 4.92 4.92 0 0 1 1.153 1.78c.163.457.349 1.257.403 2.427.058 1.266.07 1.646.07 4.85s-.012 3.584-.07 4.85c-.054 1.17-.24 1.97-.403 2.427a4.92 4.92 0 0 1-1.153 1.78 4.92 4.92 0 0 1-1.78 1.153c-.457.163-1.257.349-2.427.403-1.266.058-1.646.07-4.85.07s-3.584-.012-4.85-.07c-1.17-.054-1.97-.24-2.427-.403a4.92 4.92 0 0 1-1.78-1.153 4.92 4.92 0 0 1-1.153-1.78c-.163-.457-.349-1.257-.403-2.427C2.175 15.584 2.163 15.204 2.163 12s.012-3.584.07-4.85c.054-1.17.24-1.97.403-2.427a4.92 4.92 0 0 1 1.153-1.78 4.92 4.92 0 0 1 1.78-1.153c.457-.163 1.257-.349 2.427-.403C8.416 2.175 8.796 2.163 12 2.163Zm0 1.62c-3.17 0-3.548.012-4.795.07-.999.046-1.54.21-1.897.349-.478.186-.82.407-1.18.767-.36.36-.581.702-.767 1.18-.139.357-.303.898-.349 1.897-.058 1.247-.07 1.625-.07 4.795s.012 3.548.07 4.795c.046.999.21 1.54.349 1.897.186.478.407.82.767 1.18.36.36.702.581 1.18.767.357.139.898.303 1.897.349 1.247.058 1.625.07 4.795.07s3.548-.012 4.795-.07c.999-.046 1.54-.21 1.897-.349.478-.186.82-.407 1.18-.767.36-.36.581-.702.767-1.18.139-.357.303-.898.349-1.897.058-1.247.07-1.625.07-4.795s-.012-3.548-.07-4.795c-.046-.999-.21-1.54-.349-1.897-.186-.478-.407-.82-.767-1.18-.36-.36-.702-.581-1.18-.767-.357-.139-.898-.303-1.897-.349-1.247-.058-1.625-.07-4.795-.07Zm0 3.901a4.316 4.316 0 1 1 0 8.632 4.316 4.316 0 0 1 0-8.632Zm0 1.62a2.696 2.696 0 1 0 0 5.392 2.696 2.696 0 0 0 0-5.392Zm5.523-1.755a1.008 1.008 0 1 1 0 2.016 1.008 1.008 0 0 1 0-2.016Z"></path>
-                        </svg>
-                    </a>
-                    <a href="https://www.facebook.com/profile.php?id=61570405113832" target="_blank" aria-label="Facebook">
-                        <svg width="22" height="22" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
-                            <path d="M13.5 22v-8.5H16l.375-3h-2.875V8.25c0-.863.238-1.45 1.475-1.45H16.5V4.05c-.256-.034-1.134-.1-2.156-.1-2.131 0-3.594 1.302-3.594 3.69V10.5H8v3h2.75V22h2.75Z"></path>
-                        </svg>
-                    </a>
+
+                <div class="footer__column">
+                    <h4 class="footer__title">Connect With Us</h4>
+                    <div class="footer__newsletter">
+                        <p class="footer__newsletter-text">Get exclusive Agadir tour deals & travel tips</p>
+                        <form class="footer__newsletter-form">
+                            <input type="email" placeholder="Your email address" class="footer__newsletter-input">
+                            <button type="submit" class="footer__newsletter-button">Subscribe</button>
+                        </form>
                 </div>
             </div>
         </div>
-        <div class="container footer-bottom">
-            <p>© <span id="currentYear"></span> The Local Guide Morocco. All rights reserved.</p>
-            <div class="footer-inline-links">
-                <a href="contact.html">Work with us</a>
-                <a href="contact.html">Privacy</a>
-                <a href="contact.html">Terms</a>
+
+            <!-- Footer Bottom Section -->
+            <div class="footer__bottom">
+                <div class="footer__bottom-left">
+                    <p class="footer__copyright">© 2025 The Local Guide Morocco. All rights reserved.</p>
+                    <div class="footer__legal-links">
+                        <a href="contact.html" class="footer__legal-link">Privacy Policy</a>
+                        <span class="footer__separator">|</span>
+                        <a href="contact.html" class="footer__legal-link">Terms & Conditions</a>
+                        <span class="footer__separator">|</span>
+                        <a href="contact.html" class="footer__legal-link">Booking Policy</a>
+                        <span class="footer__separator">|</span>
+                        <a href="tel:+212636372101" class="footer__legal-link">+212 636-372101</a>
+                    </div>
+                </div>
+                <div class="footer__bottom-right">
+                    <p class="footer__tagline">Discover Morocco. Experience Agadir.</p>
+                </div>
             </div>
         </div>
     </footer>
 
-    <button class="back-to-top" aria-label="Back to top">
-        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" xmlns="http://www.w3.org/2000/svg">
-            <path d="M12 19V5"></path>
-            <path d="m5 12 7-7 7 7"></path>
-        </svg>
-    </button>
-
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script>
-        document.getElementById('currentYear').textContent = new Date().getFullYear();
-        var swiper = new Swiper('.mySwiper', {
-            slidesPerView: 3,
-            spaceBetween: 28,
-            centeredSlides: true,
-            loop: true,
-            pagination: {
-                el: '.swiper-pagination',
-                clickable: true,
-            },
-            navigation: {
-                nextEl: '.swiper-button-next',
-                prevEl: '.swiper-button-prev',
-            },
-            breakpoints: {
-                0: {
-                    slidesPerView: 1,
-                    spaceBetween: 20,
-                    centeredSlides: false,
-                },
-                768: {
-                    slidesPerView: 2,
-                    spaceBetween: 24,
-                    centeredSlides: true,
-                },
-                1024: {
-                    slidesPerView: 3,
-                    spaceBetween: 32,
-                },
-            },
-        });
+        // ===== MOBILE MENU TOGGLE =====
+        const menuToggle = document.getElementById('menuToggle');
+        const navList = document.getElementById('navList');
+
+        if (menuToggle) {
+            menuToggle.addEventListener('click', () => {
+                navList.classList.toggle('active');
+            });
+        }
     </script>
-    <script src="js/main.js"></script>
 </body>
 </html>

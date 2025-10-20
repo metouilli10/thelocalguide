@@ -830,7 +830,49 @@
             .footer-section h3 {
                 font-size: 12px;
             }
-        }</style>
+        }
+        
+        /* Service Buttons */
+        .service-btn {
+            transition: all 0.3s ease;
+            border: 2px solid #e5e5e5;
+            background: white;
+            color: #1F2937;
+            padding: 12px 24px;
+            border-radius: 6px;
+            font-weight: 600;
+            cursor: pointer;
+        }
+        
+        .service-btn:hover {
+            border-color: #cdff03;
+            background: #cdff03;
+            color: #000000;
+        }
+        
+        .service-btn.active {
+            background: #cdff03;
+            color: #000000;
+            border-color: #cdff03;
+        }
+        
+        /* Activity Card Hover Effect */
+        .activity-card {
+            transition: all 0.3s ease;
+        }
+        
+        .activity-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 8px 24px rgba(0,0,0,0.12) !important;
+        }
+        
+        .service-buttons {
+            display: flex;
+            gap: 15px;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+    </style>
 </head>
 <body>
     <!-- TOPBAR -->
@@ -889,54 +931,25 @@
     </section>
 
     <!-- Main Content -->
-    <div class="guide-content-wrapper">
-        <!-- Breadcrumb -->
-        <div class="breadcrumb">
-            <a href="index.html">Home</a> / <span>Things to Do in Agadir</span>
-        </div>
-
-
-        <!-- Quick Navigation -->
-        <div class="quick-nav">
-            <h3>🗺️ Jump to Category</h3>
-            <div class="quick-nav-grid">
-                <div class="quick-nav-item" onclick="document.getElementById('beach-activities').scrollIntoView({behavior: 'smooth'})">
-                    <span>🏖️</span>
-                    <p>Beach & Water</p>
-                </div>
-                <div class="quick-nav-item" onclick="document.getElementById('desert-adventures').scrollIntoView({behavior: 'smooth'})">
-                    <span>🏜️</span>
-                    <p>Desert Adventures</p>
-                </div>
-                <div class="quick-nav-item" onclick="document.getElementById('cultural-tours').scrollIntoView({behavior: 'smooth'})">
-                    <span>🏛️</span>
-                    <p>Cultural Tours</p>
-                </div>
-                <div class="quick-nav-item" onclick="document.getElementById('nature-excursions').scrollIntoView({behavior: 'smooth'})">
-                    <span>🌿</span>
-                    <p>Nature Excursions</p>
-                </div>
-                <div class="quick-nav-item" onclick="document.getElementById('family-fun').scrollIntoView({behavior: 'smooth'})">
-                    <span>👨‍👩‍👧‍👦</span>
-                    <p>Family Activities</p>
-                </div>
-                <div class="quick-nav-item" onclick="document.getElementById('day-trips').scrollIntoView({behavior: 'smooth'})">
-                    <span>🚗</span>
-                    <p>Day Trips</p>
-                </div>
+    <section class="page-content">
+        <div class="content-wrapper">
+            <!-- Filter/Category Section -->
+            <div style="text-align: center; margin-bottom: 60px;">
+                <h3 class="section-subtitle" style="font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; font-size: 36px; font-weight: 800; color: #1F2937; margin-bottom: 10px;">Browse by Category</h3>
+                <div class="service-buttons" style="margin-top: 30px;">
+                    <button class="service-btn active" data-category="all">All Activities</button>
+                    <button class="service-btn" data-category="beach">Beach & Water</button>
+                    <button class="service-btn" data-category="desert">Desert Adventures</button>
+                    <button class="service-btn" data-category="cultural">Cultural</button>
+                    <button class="service-btn" data-category="nature">Nature</button>
+                    <button class="service-btn" data-category="family">Family Fun</button>
             </div>
         </div>
 
-        <!-- CATEGORY 1: Beach & Water Activities -->
-        <section id="beach-activities" class="category-section">
-            <div class="category-header">
-                <span class="category-icon">🏖️</span>
-                <h2>Beach & Water Activities</h2>
-            </div>
-            
-            <div class="activities-grid">
+            <!-- Activities Grid -->
+            <div class="activities-grid" style="display: grid; grid-template-columns: repeat(auto-fill, minmax(350px, 1fr)); gap: 30px; margin-bottom: 80px;">
                 <!-- Camel Ride on Beach -->
-                <div class="activity-card">
+                <div class="activity-card" data-category="beach">
                     <div class="activity-image">
                         <img src="img/camel-ride-sunset.jpg" alt="Sunset camel ride on Agadir beach">
                         <span class="activity-badge">Most Romantic</span>
@@ -956,7 +969,7 @@
                 </div>
 
                 <!-- Horse Riding on Beach -->
-                <div class="activity-card">
+                <div class="activity-card" data-category="beach">
                     <div class="activity-image">
                         <img src="img/horse-2.jpg" alt="Horse riding along Agadir coastline">
                         <span class="activity-badge">Scenic</span>
@@ -976,7 +989,7 @@
                 </div>
 
                 <!-- Surfing -->
-                <div class="activity-card">
+                <div class="activity-card" data-category="beach">
                     <div class="activity-image">
                         <img src="img/morocco-coastal-2.jpg" alt="Surfing in Agadir Taghazout">
                         <span class="activity-badge">Adventure</span>
@@ -996,7 +1009,7 @@
                 </div>
 
                 <!-- Beach Day -->
-                <div class="activity-card">
+                <div class="activity-card" data-category="beach">
                     <div class="activity-image">
                         <img src="img/morocco-horizon-4.jpg" alt="Agadir beach relaxation">
                         <span class="activity-badge">Free</span>
@@ -1014,19 +1027,9 @@
                         <a href="agadir-tours.html" class="activity-link">Explore More</a>
                     </div>
                 </div>
-            </div>
-        </section>
 
-        <!-- CATEGORY 2: Desert & Adventure Activities -->
-        <section id="desert-adventures" class="category-section">
-            <div class="category-header">
-                <span class="category-icon">🏜️</span>
-                <h2>Desert & Adventure Activities</h2>
-            </div>
-            
-            <div class="activities-grid">
                 <!-- Quad Biking -->
-                <div class="activity-card">
+                <div class="activity-card" data-category="desert">
                     <div class="activity-image">
                         <img src="img/quad-biking.jpg" alt="Quad biking in Agadir desert">
                         <span class="activity-badge">Best Seller</span>
@@ -1046,7 +1049,7 @@
                 </div>
 
                 <!-- Sandboarding -->
-                <div class="activity-card">
+                <div class="activity-card" data-category="desert">
                     <div class="activity-image">
                         <img src="img/morocco-week-3.jpg" alt="Sandboarding in Agadir desert dunes">
                         <span class="activity-badge">Unique</span>
@@ -1066,7 +1069,7 @@
                 </div>
 
                 <!-- ATV Quad Safari -->
-                <div class="activity-card">
+                <div class="activity-card" data-category="desert">
                     <div class="activity-image">
                         <img src="img/quad-biking.webp" alt="ATV quad safari adventure">
                         <span class="activity-badge">Adventure</span>
@@ -1086,7 +1089,7 @@
                 </div>
 
                 <!-- Dune Buggy -->
-                <div class="activity-card">
+                <div class="activity-card" data-category="desert">
                     <div class="activity-image">
                         <img src="img/quad-biking.jpg" alt="Dune buggy adventure">
                         <span class="activity-badge">Premium</span>
@@ -1104,19 +1107,9 @@
                         <a href="contact.html" class="activity-link">Get Information</a>
                     </div>
                 </div>
-            </div>
-        </section>
 
-        <!-- CATEGORY 3: Cultural & City Experiences -->
-        <section id="cultural-tours" class="category-section">
-            <div class="category-header">
-                <span class="category-icon">🏛️</span>
-                <h2>Cultural & City Experiences</h2>
-            </div>
-            
-            <div class="activities-grid">
                 <!-- City Tour -->
-                <div class="activity-card">
+                <div class="activity-card" data-category="cultural">
                     <div class="activity-image">
                         <img src="img/morocco-heritage-1.jpg" alt="Agadir city tour and Kasbah">
                         <span class="activity-badge">Essential</span>
@@ -1136,7 +1129,7 @@
                 </div>
 
                 <!-- Souk El Had -->
-                <div class="activity-card">
+                <div class="activity-card" data-category="cultural">
                     <div class="activity-image">
                         <img src="img/morocco-market.jpg" alt="Souk El Had market Agadir">
                         <span class="activity-badge">Authentic</span>
@@ -1156,7 +1149,7 @@
                 </div>
 
                 <!-- Cooking Class -->
-                <div class="activity-card">
+                <div class="activity-card" data-category="cultural">
                     <div class="activity-image">
                         <img src="img/morocco-collage.jpg" alt="Moroccan cooking class">
                         <span class="activity-badge">Cultural</span>
@@ -1176,7 +1169,7 @@
                 </div>
 
                 <!-- Traditional Hammam -->
-                <div class="activity-card">
+                <div class="activity-card" data-category="cultural">
                     <div class="activity-image">
                         <img src="img/morocco-horizon-4.jpg" alt="Traditional Moroccan hammam spa">
                         <span class="activity-badge">Relaxation</span>
@@ -1194,19 +1187,9 @@
                         <a href="contact.html" class="activity-link">Get Information</a>
                     </div>
                 </div>
-            </div>
-        </section>
 
-        <!-- CATEGORY 4: Nature & Scenic Excursions -->
-        <section id="nature-excursions" class="category-section">
-            <div class="category-header">
-                <span class="category-icon">🌿</span>
-                <h2>Nature & Scenic Excursions</h2>
-            </div>
-            
-            <div class="activities-grid">
                 <!-- Paradise Valley -->
-                <div class="activity-card">
+                <div class="activity-card" data-category="nature">
                     <div class="activity-image">
                         <img src="img/paradise-valley.jpg" alt="Paradise Valley natural pools">
                         <span class="activity-badge">Top Rated</span>
@@ -1226,7 +1209,7 @@
                 </div>
 
                 <!-- Souss Massa National Park -->
-                <div class="activity-card">
+                <div class="activity-card" data-category="nature">
                     <div class="activity-image">
                         <img src="img/morocco-coastal-2.jpg" alt="Souss Massa National Park birds">
                         <span class="activity-badge">Wildlife</span>
@@ -1246,7 +1229,7 @@
                 </div>
 
                 <!-- Atlas Mountains -->
-                <div class="activity-card">
+                <div class="activity-card" data-category="nature">
                     <div class="activity-image">
                         <img src="img/berber-village.jpg" alt="Atlas Mountains Berber village">
                         <span class="activity-badge">Scenic</span>
@@ -1266,7 +1249,7 @@
                 </div>
 
                 <!-- Ranch Tamri -->
-                <div class="activity-card">
+                <div class="activity-card" data-category="nature">
                     <div class="activity-image">
                         <img src="img/ranch-tamri.jpg" alt="Ranch Tamri activities">
                         <span class="activity-badge">Popular</span>
@@ -1284,19 +1267,9 @@
                         <a href="contact.html" class="activity-link">Get Information</a>
                     </div>
                 </div>
-            </div>
-        </section>
 
-        <!-- CATEGORY 5: Family-Friendly Activities -->
-        <section id="family-fun" class="category-section">
-            <div class="category-header">
-                <span class="category-icon">👨‍👩‍👧‍👦</span>
-                <h2>Family-Friendly Activities</h2>
-            </div>
-            
-            <div class="activities-grid">
                 <!-- Crocoparc -->
-                <div class="activity-card">
+                <div class="activity-card" data-category="family">
                     <div class="activity-image">
                         <img src="img/morocco-week-3.jpg" alt="Crocoparc Agadir crocodiles">
                         <span class="activity-badge">Family Favorite</span>
@@ -1316,7 +1289,7 @@
                 </div>
 
                 <!-- Agadir Birds Valley -->
-                <div class="activity-card">
+                <div class="activity-card" data-category="family">
                     <div class="activity-image">
                         <img src="img/morocco-horizon-4.jpg" alt="Birds Valley park Agadir">
                         <span class="activity-badge">Educational</span>
@@ -1336,7 +1309,7 @@
                 </div>
 
                 <!-- Marina Walk -->
-                <div class="activity-card">
+                <div class="activity-card" data-category="family">
                     <div class="activity-image">
                         <img src="img/morocco-heritage-1.jpg" alt="Agadir marina and yachts">
                         <span class="activity-badge">Scenic</span>
@@ -1356,7 +1329,7 @@
                 </div>
 
                 <!-- Mini Golf & Entertainment -->
-                <div class="activity-card">
+                <div class="activity-card" data-category="family">
                     <div class="activity-image">
                         <img src="img/morocco-collage.jpg" alt="Family entertainment Agadir">
                         <span class="activity-badge">Fun</span>
@@ -1374,19 +1347,9 @@
                         <a href="contact.html" class="activity-link">Get Information</a>
                     </div>
                 </div>
-            </div>
-        </section>
 
-        <!-- CATEGORY 6: Day Trips from Agadir -->
-        <section id="day-trips" class="category-section">
-            <div class="category-header">
-                <span class="category-icon">🚗</span>
-                <h2>Day Trips from Agadir</h2>
-            </div>
-            
-            <div class="activities-grid">
                 <!-- Essaouira -->
-                <div class="activity-card">
+                <div class="activity-card" data-category="nature">
                     <div class="activity-image">
                         <img src="img/morocco-coastal-2.jpg" alt="Essaouira blue and white medina">
                         <span class="activity-badge">UNESCO Site</span>
@@ -1406,7 +1369,7 @@
                 </div>
 
                 <!-- Marrakech -->
-                <div class="activity-card">
+                <div class="activity-card" data-category="cultural">
                     <div class="activity-image">
                         <img src="img/morocco-market.jpg" alt="Marrakech Jemaa el-Fnaa square">
                         <span class="activity-badge">Imperial City</span>
@@ -1426,7 +1389,7 @@
                 </div>
 
                 <!-- Taroudant -->
-                <div class="activity-card">
+                <div class="activity-card" data-category="cultural">
                     <div class="activity-image">
                         <img src="img/berber-village.jpg" alt="Taroudant ancient ramparts">
                         <span class="activity-badge">Hidden Gem</span>
@@ -1446,7 +1409,7 @@
                 </div>
 
                 <!-- Legzira Beach -->
-                <div class="activity-card">
+                <div class="activity-card" data-category="nature">
                     <div class="activity-image">
                         <img src="img/morocco-horizon-4.jpg" alt="Legzira beach red cliffs">
                         <span class="activity-badge">Instagram Spot</span>
@@ -1464,8 +1427,39 @@
                         <a href="contact.html" class="activity-link">Get Information</a>
                     </div>
                 </div>
+
+
             </div>
-        </section>
+
+            <!-- Why Book With Us Section -->
+            <div style="background: #f9f9f9; padding: 80px 40px; border-radius: 15px; margin-bottom: 80px;">
+                <div style="text-align: center; margin-bottom: 60px;">
+                    <h3 class="section-subtitle" style="font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; font-size: 20px; font-weight: 600; color: #6B7280; margin-bottom: 10px; text-transform: uppercase; letter-spacing: 1px;">Why Book With</h3>
+                    <h2 class="section-title" style="font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; font-size: 42px; font-weight: 800; color: #1F2937; margin: 0; line-height: 1.2;">THE LOCAL GUIDE</h2>
+                </div>
+                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 40px;">
+                    <div style="text-align: center;">
+                        <div style="font-size: 3rem; margin-bottom: 15px;">✓</div>
+                        <h4 style="font-size: 1.2rem; font-weight: 700; color: #1F2937; margin-bottom: 10px;">Best Price Guarantee</h4>
+                        <p style="color: #6B7280; line-height: 1.6;">Competitive prices with no hidden fees. Pay the lowest rate available.</p>
+                    </div>
+                    <div style="text-align: center;">
+                        <div style="font-size: 3rem; margin-bottom: 15px;">🌟</div>
+                        <h4 style="font-size: 1.2rem; font-weight: 700; color: #1F2937; margin-bottom: 10px;">Local Expert Guides</h4>
+                        <p style="color: #6B7280; line-height: 1.6;">Professional, knowledgeable guides who know every corner of Agadir.</p>
+                    </div>
+                    <div style="text-align: center;">
+                        <div style="font-size: 3rem; margin-bottom: 15px;">🚗</div>
+                        <h4 style="font-size: 1.2rem; font-weight: 700; color: #1F2937; margin-bottom: 10px;">Free Hotel Pickup</h4>
+                        <p style="color: #6B7280; line-height: 1.6;">Complimentary pickup and drop-off from your hotel in Agadir.</p>
+                    </div>
+                    <div style="text-align: center;">
+                        <div style="font-size: 3rem; margin-bottom: 15px;">❌</div>
+                        <h4 style="font-size: 1.2rem; font-weight: 700; color: #1F2937; margin-bottom: 10px;">Free Cancellation</h4>
+                        <p style="color: #6B7280; line-height: 1.6;">Cancel up to 24 hours before for a full refund. Book with confidence.</p>
+                    </div>
+                </div>
+            </div>
 
         <!-- Budget & Planning Information -->
         <section class="info-boxes">
@@ -1964,35 +1958,22 @@
             </div>
         </section>
 
-        <!-- Introduction -->
-        <section class="intro-section">
-            <h2>Welcome to Agadir - Morocco's Adventure Playground</h2>
-            <p>
-                Looking for the <strong>best things to do in Agadir</strong>? You've come to the right place! As Morocco's premier beach resort city, Agadir offers an incredible mix of sun-soaked beaches, thrilling desert adventures, authentic Berber culture, and modern amenities that make it the perfect destination for every type of traveler.
-            </p>
-            <p>
-                With over <strong>300 days of sunshine per year</strong>, 10 kilometers of golden sandy beach, and the stunning Atlas Mountains as a backdrop, Agadir provides the ideal setting for unforgettable experiences. Whether you're seeking adrenaline-pumping adventures like quad biking and sandboarding, peaceful nature escapes to Paradise Valley, cultural immersion in traditional souks, or simply relaxing by the Atlantic Ocean – this vibrant Moroccan city has it all.
-            </p>
-            <p>
-                Rebuilt after the devastating 1960 earthquake, modern Agadir combines contemporary comforts with authentic Moroccan charm. The city serves as the perfect base for exploring the Souss-Massa region, with countless day trips to nearby wonders like Essaouira's blue medina, Marrakech's bustling souks, and the peaceful Berber villages nestled in the Atlas foothills.
-            </p>
-            <p>
-                In this comprehensive guide, we've curated the <strong>20+ best activities in Agadir</strong> based on years of local expertise, thousands of traveler reviews, and insider knowledge. From budget-friendly free activities to luxury experiences, family-friendly attractions to romantic sunset tours – discover everything you need to plan the perfect Agadir adventure.
-            </p>
-        </section>
-
         <!-- CTA Section -->
-        <section class="cta-section">
-            <h2>Ready to Experience Agadir?</h2>
-            <p>Book your adventures with local experts who know every corner of this beautiful region</p>
-            <div class="cta-buttons">
-                <a href="agadir-tours.html" class="cta-button cta-button-primary">Browse All Tours</a>
-                <a href="https://wa.me/212645792457?text=Hi!%20I'm%20interested%20in%20booking%20activities%20in%20Agadir" class="cta-button cta-button-secondary" target="_blank">Chat on WhatsApp</a>
-                <a href="contact.html" class="cta-button cta-button-secondary">Contact Us</a>
+            <div style="text-align: center; padding: 60px 40px; background: linear-gradient(135deg, #8B5CF6 0%, #7C3AED 100%); border-radius: 16px; color: white; box-shadow: 0 8px 32px rgba(0,0,0,0.12); margin-top: 80px;">
+                <h2 style="font-size: 2.5rem; font-weight: 700; margin-bottom: 20px; color: white;">Ready for Your Agadir Adventure?</h2>
+                <p style="font-size: 1.2rem; margin-bottom: 30px; opacity: 0.9; color: white;">Contact us today to book your perfect activity or create a custom experience</p>
+                <div style="display: flex; gap: 20px; justify-content: center; flex-wrap: wrap;">
+                    <a href="contact.html" style="background: #cdff03; color: #000000; padding: 16px 32px; border-radius: 6px; font-weight: 700; font-size: 16px; text-decoration: none; transition: all 0.3s; text-transform: uppercase;">Book Now</a>
+                    <a href="https://wa.me/212636372101" target="_blank" style="background: #8449f2; color: white; padding: 16px 32px; border-radius: 6px; font-weight: 700; font-size: 16px; text-decoration: none; transition: all 0.3s; display: flex; align-items: center; gap: 10px;">
+                        <svg width="24" height="24" fill="currentColor" viewBox="0 0 24 28">
+                            <path d="M15.391 15.219c0.266 0 2.812 1.328 2.922 1.516 0.031 0.078 0.031 0.172 0.031 0.234 0 0.391-0.125 0.828-0.266 1.188-0.359 0.875-1.813 1.437-2.703 1.437-0.75 0-2.297-0.656-2.969-0.969-2.234-1.016-3.625-2.75-4.969-4.734-0.594-0.875-1.125-1.953-1.109-3.031v-0.125c0.031-1.031 0.406-1.766 1.156-2.469 0.234-0.219 0.484-0.344 0.812-0.344 0.187 0 0.375 0.047 0.578 0.047 0.422 0 0.5 0.125 0.656 0.531 0.109 0.266 0.906 2.391 0.906 2.547 0 0.594-1.078 1.266-1.078 1.625 0 0.078 0.031 0.156 0.078 0.234 0.344 0.734 1 1.578 1.594 2.141 0.719 0.688 1.484 1.141 2.359 1.578 0.109 0.063 0.219 0.109 0.344 0.109 0.469 0 1.25-1.516 1.656-1.516zM12.219 23.5c5.406 0 9.812-4.406 9.812-9.812s-4.406-9.812-9.812-9.812-9.812 4.406-9.812 9.812c0 2.063 0.656 4.078 1.875 5.75l-1.234 3.641 3.781-1.203c1.594 1.047 3.484 1.625 5.391 1.625zM12.219 1.906c6.5 0 11.781 5.281 11.781 11.781s-5.281 11.781-11.781 11.781c-1.984 0-3.953-0.5-5.703-1.469l-6.516 2.094 2.125-6.328c-1.109-1.828-1.687-3.938-1.687-6.078 0-6.5 5.281-11.781 11.781-11.781z"></path>
+                        </svg>
+                        WhatsApp Us
+                    </a>
+                </div>
+            </div>
             </div>
         </section>
-
-    </div>
 
     <!-- FOOTER -->
     <footer class="footer">
@@ -2104,20 +2085,36 @@
             });
         });
 
-        // Smooth scroll for quick nav
-        document.querySelectorAll('.quick-nav-item').forEach(item => {
-            item.addEventListener('click', function() {
-                const targetId = this.getAttribute('onclick').match(/'([^']+)'/)[1];
-                document.getElementById(targetId).scrollIntoView({ behavior: 'smooth' });
+        // Category Filter Functionality
+        document.querySelectorAll('.service-btn').forEach(btn => {
+            btn.addEventListener('click', function() {
+                // Remove active class from all buttons
+                document.querySelectorAll('.service-btn').forEach(b => b.classList.remove('active'));
+                // Add active class to clicked button
+                this.classList.add('active');
+                
+                const category = this.getAttribute('data-category');
+                const activityCards = document.querySelectorAll('.activity-card');
+                
+                activityCards.forEach(card => {
+                    if (category === 'all') {
+                        card.style.display = 'block';
+                    } else {
+                        const cardCategories = card.getAttribute('data-category');
+                        if (cardCategories && cardCategories.includes(category)) {
+                            card.style.display = 'block';
+                        } else {
+                            card.style.display = 'none';
+                        }
+                    }
+                });
             });
         });
 
-        // Mobile menu functionality handled by existing main.js
-
-        // Animate stats on scroll
+        // Animate cards on scroll
         const observerOptions = {
-            threshold: 0.5,
-            rootMargin: '0px 0px -100px 0px'
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
         };
 
         const observer = new IntersectionObserver((entries) => {

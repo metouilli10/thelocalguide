@@ -83,6 +83,20 @@
             color: var(--text-dark);
             opacity: 0.8;
         }
+        
+        /* Marquee Animation */
+        @keyframes scroll-left {
+            0% {
+                transform: translateX(0);
+            }
+            100% {
+                transform: translateX(-33.33%);
+            }
+        }
+        
+        .marquee-wrapper:hover {
+            animation-play-state: paused;
+        }
 
         /* ===== HEADER ===== */
         .header {
@@ -1513,16 +1527,16 @@
 </head>
 <body>
     <!-- TOPBAR -->
-    <div class="topbar">
-        <div class="topbar__wrapper">
-            <div class="topbar__left">
-                <a href="agadir-tours.html" class="topbar__link">Agadir Tours</a>
-                <a href="day-trips-from-agadir.html" class="topbar__link">Day Trips</a>
-                <a href="#deals" class="topbar__link">Special Offers</a>
+    <div class="topbar" style="overflow: hidden; position: relative;">
+        <div class="marquee-wrapper" style="display: flex; animation: scroll-left 20s linear infinite;">
+            <div class="marquee-content" style="display: flex; white-space: nowrap; padding-right: 50px;">
+                <span style="font-weight: 700; font-size: 14px;">🎉 Book Early & Save More! 15% OFF your entire booking. Limited Time Offer! 📞 +212 636-372101</span>
             </div>
-            <div class="topbar__right">
-                <a href="tel:+212636372101" class="topbar__link">+212 636-372101</a>
-                <a href="contact.html" class="topbar__link">Contact</a>
+            <div class="marquee-content" style="display: flex; white-space: nowrap; padding-right: 50px;">
+                <span style="font-weight: 700; font-size: 14px;">🎉 Book Early & Save More! 15% OFF your entire booking. Limited Time Offer! 📞 +212 636-372101</span>
+            </div>
+            <div class="marquee-content" style="display: flex; white-space: nowrap; padding-right: 50px;">
+                <span style="font-weight: 700; font-size: 14px;">🎉 Book Early & Save More! 15% OFF your entire booking. Limited Time Offer! 📞 +212 636-372101</span>
             </div>
         </div>
     </div>

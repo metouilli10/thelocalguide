@@ -669,6 +669,21 @@
     </style>
 </head>
 <body>
+    <!-- Mobile Menu -->
+    <div id="mobileMenu" class="mobile-menu">
+        <button class="close-menu" aria-label="Close menu">×</button>
+        <div class="menu-content">
+            <nav class="menu-nav">
+                <a href="index.html" style="font-weight: bold;">Home</a>
+                <a href="agadir-tours.html" style="font-weight: bold;">Agadir Tours</a>
+                <a href="day-trips-from-agadir.html" style="font-weight: bold;">Day Trips</a>
+                <a href="blog.html" style="font-weight: bold;">Blog</a>
+                <a href="contact.html" style="font-weight: bold;">Contact</a>
+                <a href="https://wa.me/212601820422" style="font-weight: bold;">WhatsApp Us</a>
+                <a href="contact.html" style="font-weight: bold;">Book Now</a>
+            </nav>
+        </div>
+    </div>
     <!-- TOPBAR -->
     <div class="topbar" style="overflow: hidden; position: relative;">
         <div class="marquee-wrapper" style="display: flex; animation: scroll-left 20s linear infinite;">
@@ -701,6 +716,11 @@
                 <a href="https://wa.me/212601820422" class="btn btn-whatsapp">WhatsApp Us</a>
                 <a href="contact.html" class="btn btn-primary">Book Now</a>
             </div>
+                    <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
         </div>
     </header>
 
@@ -1167,6 +1187,14 @@
             </div>
         </div>
     </footer>
+<script>
+const hamburger=document.getElementById("hamburger");
+const mobileMenu=document.getElementById("mobileMenu");
+const closeMenu=mobileMenu?mobileMenu.querySelector(".close-menu"):null;
+if(hamburger&&mobileMenu){hamburger.addEventListener("click",()=>{mobileMenu.classList.add("active");hamburger.classList.add("active")});}
+if(closeMenu){closeMenu.addEventListener("click",()=>{mobileMenu.classList.remove("active");hamburger&&hamburger.classList.remove("active")});}
+if(mobileMenu){mobileMenu.querySelectorAll("a").forEach(a=>a.addEventListener("click",()=>{mobileMenu.classList.remove("active");hamburger&&hamburger.classList.remove("active")}));}
+</script>
 </body>
 </html>
 

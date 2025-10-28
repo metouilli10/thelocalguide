@@ -144,6 +144,32 @@
                 padding-bottom: 180px;
             }
         }
+
+        /* Extra-small phones tweaks */
+        @media (max-width: 480px) {
+            .simple-slider { height: 240px; }
+            .tour-title { font-size: 1.6rem; }
+            .tour-subtitle { font-size: 0.95rem; }
+            .breadcrumb { padding: 20px 12px 0; }
+            .tour-content-wrapper { padding: 20px 12px; }
+            .badge { font-size: 12px; padding: 6px 10px; }
+            .price-table { padding: 18px; }
+            .price-table h3 { font-size: 1.4rem; }
+            .price-option { padding: 14px; }
+            .price-option-price { font-size: 1.4rem; }
+            .tour-highlights { padding: 18px; margin: 24px 0; }
+            .highlight-text { font-size: 14px; }
+            .tour-main-content h2 { font-size: 1.5rem !important; }
+            .tour-main-content p { font-size: 14px; }
+            /* Soften large inline paddings/margins inside content cards */
+            .tour-main-content [style*="padding: 25px"] { padding: 16px !important; }
+            .tour-main-content [style*="padding: 30px"] { padding: 18px !important; }
+            .tour-main-content [style*="padding: 40px"] { padding: 20px !important; }
+            .tour-main-content [style*="margin: 40px 0"] { margin: 24px 0 !important; }
+            .tour-main-content [style*="margin: 60px 0"] { margin: 32px 0 !important; }
+            .tour-main-content [style*="margin-bottom: 30px"] { margin-bottom: 16px !important; }
+            .tour-main-content [style*="font-size: 1.8rem"] { font-size: 1.5rem !important; }
+        }
         /* Footer Styles - Miracle Air Inspired */
         .site-footer {
             background: linear-gradient(135deg, #1a4d1a 0%, #2d5a2d 100%);
@@ -451,18 +477,14 @@
             <a href="index.html" class="header__logo">
                 <img src="img/logo.png" alt="The Local Guide" class="header__logo-img">
             </a>
-            <nav class="header__nav">
+            <nav class="header__nav" style="margin-left: auto;">
                 <a href="index.html" class="header__nav-link">Home</a>
                 <a href="agadir-tours.html" class="header__nav-link">Agadir Tours</a>
                 <a href="day-trips-from-agadir.html" class="header__nav-link">Day Trips</a>
                 <a href="blog.html" class="header__nav-link">Blog</a>
                 <a href="contact.html" class="header__nav-link">Contact</a>
             </nav>
-            <div class="header__actions">
-                <a href="https://wa.me/212601820422" class="btn btn-whatsapp">WhatsApp Us</a>
-                <a href="contact.html" class="btn btn-primary">Book Now</a>
-            </div>
-                    <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+            <button class="hamburger" id="hamburger" aria-label="Toggle menu">
                 <span></span>
                 <span></span>
                 <span></span>
@@ -979,11 +1001,11 @@
                     <a href="https://wa.me/212645792457?text=Hi! I'm interested in the Quad Biking tour" target="_blank" style="background: #8449f2; color: white; padding: 16px 24px; border-radius: 6px; text-decoration: none; font-weight: 600; font-size: 16px; text-align: center; transition: all 0.3s ease; box-shadow: 0 4px 15px rgba(37, 211, 102, 0.3); display: flex; align-items: center; justify-content: center;">
                         Book via WhatsApp
                     </a>
-                    </div>
-                    
-                <div style="background: #e8f5e9; padding: 15px; border-radius: 6px; text-align: center; margin-top: 20px; color: #1F2937; font-weight: 600; font-size: 14px;">
+                </div>
+                
+                <div style="background: #e8f5e9; padding: 15px; border-radius: 6px; text-align: center; color: #1F2937; font-weight: 600; font-size: 14px;">
                     ✓ Free cancellation up to 24 hours
-                    </div>
+                </div>
             </div>
         </aside>
     </section>

@@ -2144,6 +2144,16 @@ a {
     fill: var(--light-text);
 }
 
+@media (max-width: 1024px) {
+    .header__actions {
+        display: none;
+    }
+    
+    .hamburger {
+        display: flex;
+    }
+}
+
 @media (max-width: 1200px) {
     .hero-inner {
         grid-template-columns: 1fr;
@@ -2272,6 +2282,10 @@ a {
 
     .hamburger {
         display: flex;
+    }
+
+    .header__actions {
+        display: none;
     }
 
     .logo-text {

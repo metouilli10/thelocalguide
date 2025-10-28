@@ -455,11 +455,21 @@
                 margin: 15px auto;
                 display: block;
             }
-            .tour-title { font-size: 1.8rem; }
+            .tour-title { font-size: 1.4rem; }
+            .tour-subtitle { font-size: 0.95rem; }
+            .tour-header { margin-bottom: 20px; }
+            .tour-content-wrapper { padding: 20px 15px; gap: 0; }
+            .tour-main-content { padding-right: 0; }
             .tour-detail-hero { height: auto; margin-top: 72px; }
             .price-options { grid-template-columns: 1fr; }
+            .price-table { padding: 20px 15px; }
+            .price-table h3 { font-size: 1.3rem; }
+            .price-option { padding: 15px; }
+            .price-option-price { font-size: 1.4rem; }
+            .tour-highlights { padding: 20px 15px; }
+            .tour-highlights h2 { font-size: 1.3rem; }
             
-            /* Sticky booking buttons on mobile */
+            /* Fix duplicate aside definition */
             aside {
                 position: fixed !important;
                 bottom: 0;
@@ -485,6 +495,26 @@
             body {
                 padding-bottom: 180px;
             }
+            
+            /* Mobile font size fixes for inline styles */
+            h2 { font-size: 1.3rem !important; }
+            h3 { font-size: 1.1rem !important; }
+            h4 { font-size: 1rem !important; }
+            p { font-size: 14px !important; line-height: 1.6 !important; }
+            
+            /* Mobile responsive tables */
+            table { font-size: 12px !important; }
+            th, td { padding: 10px 8px !important; font-size: 11px !important; }
+            
+            /* Mobile responsive padding */
+            div[style*="margin"] { margin: 20px 0 !important; }
+            div[style*="padding"] { padding: 15px !important; }
+            
+            /* Mobile responsive grid layouts */
+            div[style*="grid"] { grid-template-columns: 1fr !important; gap: 15px !important; }
+            
+            /* Overflow fixes */
+            * { max-width: 100%; box-sizing: border-box; }
         }
         /* Footer Styles - Miracle Air Inspired */
         .site-footer {
@@ -793,18 +823,14 @@
             <a href="index.html" class="header__logo">
                 <img src="img/logo.png" alt="The Local Guide" class="header__logo-img">
             </a>
-            <nav class="header__nav">
+            <nav class="header__nav" style="margin-left: auto;">
                 <a href="index.html" class="header__nav-link">Home</a>
                 <a href="agadir-tours.html" class="header__nav-link">Agadir Tours</a>
                 <a href="day-trips-from-agadir.html" class="header__nav-link">Day Trips</a>
                 <a href="blog.html" class="header__nav-link">Blog</a>
                 <a href="contact.html" class="header__nav-link">Contact</a>
             </nav>
-            <div class="header__actions">
-                <a href="https://wa.me/212601820422" class="btn btn-whatsapp">WhatsApp Us</a>
-                <a href="contact.html" class="btn btn-primary">Book Now</a>
-            </div>
-                    <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+            <button class="hamburger" id="hamburger" aria-label="Toggle menu">
                 <span></span>
                 <span></span>
                 <span></span>

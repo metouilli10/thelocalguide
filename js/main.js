@@ -145,11 +145,19 @@ document.addEventListener('DOMContentLoaded', function() {
         styleEl.textContent = `
             @media (max-width: 768px) {
                 body.has-sticky-booking { padding-bottom: 110px !important; }
-                .booking-sidebar { transition: transform 0.25s ease; }
-                .booking-sidebar .booking-card { padding: 12px 12px 14px; position: relative; }
+                .booking-sidebar {
+                    position: fixed !important;
+                    left: 0; right: 0; bottom: 0 !important;
+                    z-index: 999 !important;
+                    transition: none !important;
+                    transform: none !important;
+                    background: #ffffff;
+                    box-shadow: 0 -4px 20px rgba(0,0,0,0.15);
+                }
+                .booking-sidebar .booking-card { padding: 12px 12px 14px; position: relative; border: none; border-radius: 0; }
                 .booking-sidebar .price-section { display: none !important; }
                 .booking-sidebar .free-cancellation { display: none !important; }
-                .booking-sidebar .booking-buttons { flex-direction: row !important; gap: 8px !important; }
+                .booking-sidebar .booking-buttons { flex-direction: row !important; gap: 8px !important; margin: 0 !important; }
                 .booking-sidebar .booking-buttons > a, .booking-sidebar .booking-buttons > button {
                     flex: 1 1 0; padding: 12px 10px !important; font-size: 14px !important;
                 }

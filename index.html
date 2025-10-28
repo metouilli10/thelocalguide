@@ -1640,18 +1640,18 @@
             right: -100%;
             width: 400px;
             height: 100vh;
-            background: #0e2419;
+            background: #ffffff; /* white menu background */
             z-index: 9999;
             transition: right 0.4s ease;
             overflow-y: auto;
-            color: #ffffff;
+            color: var(--text-color);
             padding: 40px;
         }
         .mobile-menu.active { right: 0; }
         .close-menu {
             background: none;
             border: none;
-            color: #ffffff;
+            color: var(--text-color);
             font-size: 40px;
             cursor: pointer;
             position: absolute;
@@ -1687,11 +1687,13 @@
         .menu-nav a {
             display: block;
             padding: 12px 0;
-            color: var(--light-text);
+            color: var(--text-color);
             font-size: 16px;
             transition: all 0.3s;
-            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+            border-bottom: 1px solid rgba(0, 0, 0, 0.06);
         }
+
+        .menu-nav a:hover { color: var(--accent-color); }
 
         .menu-nav a:last-child,
         .menu-nav a:nth-last-child(2) {

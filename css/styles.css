@@ -250,11 +250,11 @@ a {
     right: -100%;
     width: 400px;
     height: 100vh;
-    background: var(--dark-bg);
+    background: #ffffff;
     z-index: 999;
     transition: right 0.4s ease;
     overflow-y: auto;
-    color: var(--light-text);
+    color: var(--text-color);
     padding: 40px;
 }
 
@@ -289,18 +289,18 @@ a {
 .menu-nav a {
     display: block;
     padding: 14px 0;
-    color: rgba(255, 255, 255, 0.92);
+    color: var(--text-color);
     font-size: 15px;
     font-weight: 700;
     text-transform: uppercase;
     letter-spacing: 0.08em;
     font-family: 'Lato', sans-serif;
     transition: all 0.25s ease;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.06);
 }
 
 .menu-nav a:hover {
-    color: #cdff03;
+    color: var(--accent-color);
     transform: translateX(6px);
 }
 
@@ -330,7 +330,7 @@ a {
 }
 
 .menu-social p {
-    color: rgba(255, 255, 255, 0.7);
+    color: rgba(0, 0, 0, 0.6);
     margin-bottom: 12px;
     font-size: 14px;
     letter-spacing: 0.12em;
@@ -338,12 +338,12 @@ a {
 }
 
 .social-icons a {
-    color: #ffffff;
+    color: var(--accent-color);
     transition: color 0.25s ease;
 }
 
 .social-icons a:hover {
-    color: #cdff03;
+    color: var(--primary-color);
 }
 
 .close-menu {

@@ -8,9 +8,9 @@
     <title>Surf Lessons Agadir | Learn to Surf Morocco (2025)</title>
     
     <!-- CSS Styles -->
-    <link rel="stylesheet" href="css/styles.css">
-    <link rel="stylesheet" href="css/pages.css">
-    <link rel="stylesheet" href="css/updated-styles.css">
+    <link rel="stylesheet" href="css/styles.css?v=20241218-26">
+    <link rel="stylesheet" href="css/pages.css?v=20241218-26">
+    <link rel="stylesheet" href="css/updated-styles.css?v=20241218-26">
     
     <!-- Open Graph Meta Tags -->
     <meta property="og:title" content="Surf Lessons Agadir | Learn to Surf on Atlantic Beaches">
@@ -25,7 +25,7 @@
       "@type": "SportsActivityLocation",
       "name": "Surf Lessons Agadir",
       "description": "Professional surf lessons for all levels on Agadir's beautiful Atlantic beaches. Learn to surf with experienced instructors, all equipment provided.",
-      "image": "https://yourdomain.com/img/surf-2.jpg",
+      "image": "https://yourdomain.com/img/excursions/Surf/surf 1.jpg",
       "address": {
         "@type": "PostalAddress",
         "addressLocality": "Agadir",
@@ -57,9 +57,6 @@
     }
     </script>
     
-    <link rel="stylesheet" href="css/styles.css">
-    <link rel="stylesheet" href="css/pages.css">
-    <link rel="stylesheet" href="css/updated-styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -75,34 +72,200 @@
         
         .tour-detail-hero {
             position: relative;
-            height: 500px;
+            height: auto;
             overflow: hidden;
             margin-top: 95px;
         }
         
-        .tour-gallery {
-            display: grid;
-            grid-template-columns: 2fr 1fr 1fr;
-            grid-template-rows: 250px 250px;
-            gap: 10px;
-            height: 500px;
+        /* Civitatis-style 5-photo gallery */
+        .tg-preview {
+            height: clamp(260px, 50vw, 520px);
         }
         
-        .tour-gallery img {
+        .tg-grid {
+            height: 100%;
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 12px;
+            align-items: stretch;
+        }
+        
+        @media (min-width: 768px) {
+            .tg-grid {
+                grid-template-columns: 2fr 1fr;
+                grid-template-rows: 1fr;
+            }
+            .tg-hero {
+                grid-row: 1;
+                grid-column: 1;
+            }
+            .tg-right {
+                grid-row: 1;
+                grid-column: 2;
+                height: 100%;
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+                grid-template-rows: 1fr 1fr;
+                gap: 12px;
+                align-items: stretch;
+            }
+        }
+        
+        .tg-item {
+            position: relative;
+            display: block;
+            overflow: hidden;
+            border-radius: 16px;
+            border: 0;
+            padding: 0;
+            cursor: pointer;
+            background: transparent;
+        }
+        
+        .tg-hero, .tg-hero img {
+            height: 100%;
+        }
+        
+        .tg-hero img {
+            width: 100%;
+            object-fit: cover;
+            display: block;
+        }
+        
+        .tg-right .tg-item {
+            height: 100%;
+            display: flex;
+        }
+        
+        .tg-right .tg-item img {
             width: 100%;
             height: 100%;
             object-fit: cover;
-            cursor: pointer;
-            transition: all 0.3s ease;
+            display: block;
+            flex: 1;
         }
         
-        .tour-gallery img:hover {
-            opacity: 0.9;
+        .tg-item img {
+            transition: transform 0.3s ease;
+        }
+        
+        .tg-item:hover img {
             transform: scale(1.02);
         }
         
-        .tour-gallery .main-image {
-            grid-row: 1 / 3;
+        .tg-see-more {
+            position: absolute;
+            right: 16px;
+            bottom: 16px;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 12px 16px;
+            border-radius: 999px;
+            border: 0;
+            cursor: pointer;
+            background: #fff;
+            color: #111;
+            font-weight: 600;
+            box-shadow: 0 6px 20px rgba(0,0,0,.18);
+        }
+        
+        .tg-see-more .tg-arrow {
+            font-size: 20px;
+            line-height: 1;
+        }
+        
+        /* Lightbox styles */
+        .tg-lightbox {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.9);
+            z-index: 10000;
+            display: none;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .tg-lightbox.active {
+            display: flex;
+        }
+        
+        .tg-lightbox-content {
+            position: relative;
+            width: 90%;
+            height: 90%;
+            max-width: 1200px;
+            max-height: 800px;
+        }
+        
+        .tg-close {
+            position: absolute;
+            top: -40px;
+            right: 0;
+            background: none;
+            border: none;
+            color: white;
+            font-size: 30px;
+            cursor: pointer;
+            z-index: 10001;
+        }
+        
+        .tg-main {
+            position: relative;
+            height: calc(100% - 120px);
+            margin-bottom: 20px;
+        }
+        
+        .tg-main .swiper-slide {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            display: none;
+        }
+        
+        .tg-main .swiper-slide.active {
+            display: block;
+        }
+        
+        .tg-main .swiper-slide img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+        }
+        
+        .tg-thumbs {
+            height: 100px;
+            overflow: hidden;
+        }
+        
+        .tg-thumbs .swiper-wrapper {
+            display: flex;
+            gap: 10px;
+        }
+        
+        .tg-thumbs .swiper-slide {
+            width: 100px;
+            height: 100px;
+            flex-shrink: 0;
+            cursor: pointer;
+            opacity: 0.6;
+            transition: opacity 0.3s;
+        }
+        
+        .tg-thumbs .swiper-slide.active {
+            opacity: 1;
+        }
+        
+        .tg-thumbs .swiper-slide img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 8px;
         }
         
         .view-all-photos {
@@ -1096,7 +1259,7 @@
                 <a href="#deals" class="topbar__link">Special Offers</a>
             </div>
             <div class="topbar__right">
-                <a href="tel:+212636372101" class="topbar__link">+212 636-372101</a>
+                <a href="tel:+212601820422" class="topbar__link">+212 601-820422</a>
                 <a href="contact.html" class="topbar__link">Contact</a>
             </div>
         </div>
@@ -1112,11 +1275,11 @@
                 <a href="index.html" class="header__nav-link">Home</a>
                 <a href="agadir-tours.html" class="header__nav-link">Agadir Tours</a>
                 <a href="day-trips-from-agadir.html" class="header__nav-link">Day Trips</a>
-                <a href="things-to-do-in-agadir.html" class="header__nav-link">Things to Do</a>
+                <a href="blog.html" class="header__nav-link">Blog</a>
                 <a href="contact.html" class="header__nav-link">Contact</a>
             </nav>
             <div class="header__actions">
-                <a href="https://wa.me/212636372101" class="btn btn-whatsapp">WhatsApp Us</a>
+                <a href="https://wa.me/212601820422" class="btn btn-whatsapp">WhatsApp Us</a>
                 <a href="contact.html" class="btn btn-primary">Book Now</a>
             </div>
         </div>
@@ -1134,15 +1297,90 @@
 
     <!-- Tour Hero Gallery -->
     <section class="tour-detail-hero">
-        <div class="tour-gallery">
-            <!-- Placeholder images - user will upload actual photos -->
-            <img src="img/surf-2.jpg" alt="Surf lessons Agadir on Atlantic beach" class="main-image" data-fancybox="gallery">
-            <img src="img/morocco-coastal-2.jpg" alt="Learning to surf in Agadir Morocco" data-fancybox="gallery">
-            <img src="img/morocco-horizon-4.jpg" alt="Beginner surf lesson Agadir" data-fancybox="gallery">
-            <img src="img/morocco-week-3.jpg" alt="Surf instructor teaching in Agadir" data-fancybox="gallery">
-            <img src="img/ranch-tamri.jpg" alt="Surf school Agadir beach" data-fancybox="gallery">
+        <div class="tour-gallery" data-count="6">
+            <div class="tg-preview">
+                <div class="tg-grid">
+                    <!-- Big image (left) -->
+                    <button class="tg-item tg-hero" data-index="0" aria-label="Open gallery at photo 1">
+                        <img src="img/excursions/Surf/surf 1.jpg" alt="Surf lessons Agadir on Atlantic beach">
+                    </button>
+
+                    <!-- Right side: 2×2 -->
+                    <div class="tg-right">
+                        <button class="tg-item" data-index="1" aria-label="Open gallery at photo 2">
+                            <img src="img/excursions/Surf/surf 2.jpg" alt="Learning to surf in Agadir Morocco">
+                        </button>
+                        <button class="tg-item" data-index="2" aria-label="Open gallery at photo 3">
+                            <img src="img/excursions/Surf/surf 3.jpg" alt="Beginner surf lesson Agadir">
+                        </button>
+                        <button class="tg-item" data-index="3" aria-label="Open gallery at photo 4">
+                            <img src="img/excursions/Surf/surf 4.jpg" alt="Surf instructor teaching in Agadir">
+                        </button>
+                        <button class="tg-item" data-index="4" aria-label="Open gallery at photo 5">
+                            <img src="img/excursions/Surf/surf 5.jpg" alt="Surf school Agadir beach">
+                        </button>
+                        <!-- Civitatis-style overlay button -->
+                        <button class="tg-see-more" data-index="0" aria-label="Open gallery and view all photos">
+                            <span>See more photos (6)</span><span class="tg-arrow">›</span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Lightbox -->
+            <div class="tg-lightbox">
+                <div class="tg-lightbox-content">
+                    <button class="tg-close" aria-label="Close gallery">×</button>
+                    <div class="tg-main">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide">
+                                <img src="img/excursions/Surf/surf 1.jpg" alt="Surf lessons Agadir on Atlantic beach">
+                            </div>
+                            <div class="swiper-slide">
+                                <img src="img/excursions/Surf/surf 2.jpg" alt="Learning to surf in Agadir Morocco">
+                            </div>
+                            <div class="swiper-slide">
+                                <img src="img/excursions/Surf/surf 3.jpg" alt="Beginner surf lesson Agadir">
+                            </div>
+                            <div class="swiper-slide">
+                                <img src="img/excursions/Surf/surf 4.jpg" alt="Surf instructor teaching in Agadir">
+                            </div>
+                            <div class="swiper-slide">
+                                <img src="img/excursions/Surf/surf 5.jpg" alt="Surf school Agadir beach">
+                            </div>
+                            <div class="swiper-slide">
+                                <img src="img/excursions/Surf/surf 6.jpg" alt="Surfing Agadir Atlantic waves">
+                            </div>
+                        </div>
+                        <!-- If we need navigation buttons -->
+                        <div class="swiper-button-prev"></div>
+                        <div class="swiper-button-next"></div>
+                    </div>
+                    <div class="tg-thumbs">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide">
+                                <img src="img/excursions/Surf/surf 1.jpg" alt="Surf lessons Agadir on Atlantic beach">
+                            </div>
+                            <div class="swiper-slide">
+                                <img src="img/excursions/Surf/surf 2.jpg" alt="Learning to surf in Agadir Morocco">
+                            </div>
+                            <div class="swiper-slide">
+                                <img src="img/excursions/Surf/surf 3.jpg" alt="Beginner surf lesson Agadir">
+                            </div>
+                            <div class="swiper-slide">
+                                <img src="img/excursions/Surf/surf 4.jpg" alt="Surf instructor teaching in Agadir">
+                            </div>
+                            <div class="swiper-slide">
+                                <img src="img/excursions/Surf/surf 5.jpg" alt="Surf school Agadir beach">
+                            </div>
+                            <div class="swiper-slide">
+                                <img src="img/excursions/Surf/surf 6.jpg" alt="Surfing Agadir Atlantic waves">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
-        <button class="view-all-photos">📷 View All Photos (20)</button>
     </section>
 
     <!-- Tour Content -->
@@ -1717,11 +1955,11 @@
                     <h4 class="footer__title">About Us</h4>
                     <ul class="footer__links">
                         <li><a href="index.html" class="footer__link">Home</a></li>
-                        <li><a href="things-to-do-in-agadir.html" class="footer__link">Things to Do</a></li>
+                        <li><a href="blog.html" class="footer__link">Blog</a></li>
                         <li><a href="#deals" class="footer__link">Special Offers</a></li>
                         <li><a href="contact.html" class="footer__link">Contact Us</a></li>
-                        <li><a href="tel:+212636372101" class="footer__link">Call Us</a></li>
-                        <li><a href="https://wa.me/212636372101" class="footer__link">WhatsApp</a></li>
+                        <li><a href="tel:+212601820422" class="footer__link">Call Us</a></li>
+                        <li><a href="https://wa.me/212601820422" class="footer__link">WhatsApp</a></li>
                     </ul>
                 </div>
 
@@ -1760,7 +1998,7 @@
                         <span class="footer__separator">|</span>
                         <a href="contact.html" class="footer__legal-link">Booking Policy</a>
                         <span class="footer__separator">|</span>
-                        <a href="tel:+212636372101" class="footer__legal-link">+212 636-372101</a>
+                        <a href="tel:+212601820422" class="footer__legal-link">+212 601-820422</a>
                     </div>
                 </div>
                 <div class="footer__bottom-right">
@@ -1783,39 +2021,117 @@
     <script src="js/main.js"></script>
     
     <script>
-        // Initialize Fancybox for gallery
-        $('[data-fancybox="gallery"]').fancybox({
-            buttons: [
-                "zoom",
-                "slideShow",
-                "thumbs",
-                "close"
-            ],
-            loop: true,
-            protect: true
-        });
-
-        // View all photos button
-        $('.view-all-photos').on('click', function() {
-            $('.tour-gallery img').first().trigger('click');
-        });
-
-        // FAQ Accordion
-        $('.faq-question').on('click', function() {
-            const faqItem = $(this).parent();
-            const wasActive = faqItem.hasClass('active');
+        document.addEventListener('DOMContentLoaded', function() {
+            const images = [
+                'img/excursions/Surf/surf 1.jpg',
+                'img/excursions/Surf/surf 2.jpg',
+                'img/excursions/Surf/surf 3.jpg',
+                'img/excursions/Surf/surf 4.jpg',
+                'img/excursions/Surf/surf 5.jpg',
+                'img/excursions/Surf/surf 6.jpg'
+            ];
             
-            // Close all FAQ items
-            $('.faq-item').removeClass('active');
+            let currentIndex = 0;
+            const lightbox = document.querySelector('.tg-lightbox');
+            const mainSlides = document.querySelectorAll('.tg-main .swiper-slide');
+            const thumbSlides = document.querySelectorAll('.tg-thumbs .swiper-slide');
+            const closeBtn = document.querySelector('.tg-close');
+            const seeMoreBtn = document.querySelector('.tg-see-more');
             
-            // Open clicked item if it wasn't already open
-            if (!wasActive) {
-                faqItem.addClass('active');
+            // Open lightbox
+            function openLightbox(index) {
+                currentIndex = index;
+                lightbox.classList.add('active');
+                updateSlides();
+                document.body.style.overflow = 'hidden';
             }
-        });
+            
+            // Close lightbox
+            function closeLightbox() {
+                lightbox.classList.remove('active');
+                document.body.style.overflow = '';
+            }
+            
+            // Update slides
+            function updateSlides() {
+                mainSlides.forEach((slide, i) => {
+                    slide.classList.toggle('active', i === currentIndex);
+                });
+                thumbSlides.forEach((slide, i) => {
+                    slide.classList.toggle('active', i === currentIndex);
+                });
+            }
+            
+            // Event listeners
+            document.querySelectorAll('.tg-item').forEach((item, index) => {
+                item.addEventListener('click', (e) => {
+                    e.preventDefault();
+                    openLightbox(index);
+                });
+            });
+            
+            if (seeMoreBtn) {
+                seeMoreBtn.addEventListener('click', (e) => {
+                    e.preventDefault();
+                    openLightbox(0);
+                });
+            }
+            
+            if (closeBtn) {
+                closeBtn.addEventListener('click', closeLightbox);
+            }
+            
+            // Thumbnail clicks
+            thumbSlides.forEach((slide, index) => {
+                slide.addEventListener('click', () => {
+                    currentIndex = index;
+                    updateSlides();
+                });
+            });
+            
+            // Keyboard navigation
+            document.addEventListener('keydown', (e) => {
+                if (!lightbox.classList.contains('active')) return;
+                
+                switch(e.key) {
+                    case 'Escape':
+                        closeLightbox();
+                        break;
+                    case 'ArrowLeft':
+                        currentIndex = currentIndex > 0 ? currentIndex - 1 : images.length - 1;
+                        updateSlides();
+                        break;
+                    case 'ArrowRight':
+                        currentIndex = currentIndex < images.length - 1 ? currentIndex + 1 : 0;
+                        updateSlides();
+                        break;
+                }
+            });
+            
+            // Close on background click
+            lightbox.addEventListener('click', (e) => {
+                if (e.target === lightbox) {
+                    closeLightbox();
+                }
+            });
 
-        // Set minimum date to today
-        document.getElementById('tour-date').min = new Date().toISOString().split('T')[0];
+            // FAQ Accordion
+            $('.faq-question').on('click', function() {
+                const faqItem = $(this).parent();
+                const wasActive = faqItem.hasClass('active');
+                
+                // Close all FAQ items
+                $('.faq-item').removeClass('active');
+                
+                // Open clicked item if it wasn't already open
+                if (!wasActive) {
+                    faqItem.addClass('active');
+                }
+            });
+
+            // Set minimum date to today
+            document.getElementById('tour-date').min = new Date().toISOString().split('T')[0];
+        });
     </script>
 </body>
 </html>

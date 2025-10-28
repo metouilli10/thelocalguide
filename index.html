@@ -125,6 +125,13 @@
             text-decoration: none;
         }
 
+        .header__logo-img {
+            width: 100px;
+            height: auto;
+            object-fit: contain;
+            max-height: 50px;
+        }
+
         .header__nav {
             display: flex;
             gap: 32px;
@@ -704,33 +711,58 @@
             color: var(--text-light);
         }
 
+        .blog-slider {
+            position: relative;
+            margin-bottom: 60px;
+        }
+
         .blog-grid {
             display: flex;
             gap: 32px;
-            margin-bottom: 60px;
             overflow-x: auto;
             scroll-behavior: smooth;
             -webkit-overflow-scrolling: touch;
-            scrollbar-width: thin;
-            scrollbar-color: var(--primary-color) #f0f0f0;
+            scrollbar-width: none;
+            -ms-overflow-style: none;
+            padding-bottom: 20px;
         }
 
         .blog-grid::-webkit-scrollbar {
-            height: 8px;
+            display: none;
         }
 
-        .blog-grid::-webkit-scrollbar-track {
-            background: #f0f0f0;
-            border-radius: 4px;
+        .blog-navigation {
+            display: flex;
+            justify-content: center;
+            gap: 12px;
+            margin-top: 32px;
         }
 
-        .blog-grid::-webkit-scrollbar-thumb {
+        .blog-nav-button {
             background: var(--primary-color);
-            border-radius: 4px;
+            color: var(--bg-white);
+            border: none;
+            width: 48px;
+            height: 48px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            font-size: 20px;
+            font-weight: 700;
         }
 
-        .blog-grid::-webkit-scrollbar-thumb:hover {
+        .blog-nav-button:hover {
             background: #7C3AED;
+            transform: scale(1.1);
+        }
+
+        .blog-nav-button:disabled {
+            background: #D1D5DB;
+            cursor: not-allowed;
+            transform: none;
         }
 
         .blog-card {
@@ -848,6 +880,56 @@
             text-align: center;
         }
 
+        /* ===== BLOG SECTION RESPONSIVE ===== */
+        @media (max-width: 1024px) {
+            .blog-card {
+                min-width: 300px;
+                max-width: calc(33.33% - 22px);
+            }
+        }
+
+        @media (max-width: 768px) {
+            .blog-section {
+                padding: 60px 20px;
+            }
+
+            .blog-section__title {
+                font-size: 36px;
+            }
+
+            .blog-card {
+                min-width: 280px;
+                max-width: calc(50% - 16px);
+            }
+
+            .blog-navigation {
+                margin-top: 24px;
+            }
+
+            .blog-nav-button {
+                width: 40px;
+                height: 40px;
+                font-size: 18px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .blog-card {
+                min-width: 100%;
+                max-width: 100%;
+            }
+
+            .blog-section__title {
+                font-size: 28px;
+            }
+
+            .blog-nav-button {
+                width: 36px;
+                height: 36px;
+                font-size: 16px;
+            }
+        }
+
         /* ===== FEATURES SECTION ===== */
         .features-section {
             background: #fef7e0;
@@ -942,6 +1024,11 @@
         @media (max-width: 1024px) {
             .header__nav {
                 display: none;
+            }
+
+            .header__logo-img {
+                width: 85px;
+                max-height: 38px;
             }
 
             .hero__content {
@@ -1509,6 +1596,11 @@
         }
 
         @media (max-width: 480px) {
+            .header__logo-img {
+                width: 70px;
+                max-height: 32px;
+            }
+
             .footer__top {
                 grid-template-columns: 1fr;
                 gap: 32px;
@@ -1531,13 +1623,13 @@
     <div class="topbar" style="overflow: hidden; position: relative;">
         <div class="marquee-wrapper" style="display: flex; animation: scroll-left 20s linear infinite;">
             <div class="marquee-content" style="display: flex; white-space: nowrap; padding-right: 50px;">
-                <span style="font-weight: 700; font-size: 14px;">🎉 Book Early & Save More! 15% OFF your entire booking. Limited Time Offer! 📞 +212 636-372101</span>
+                <span style="font-weight: 700; font-size: 14px;">🎉 Book Early & Save More! 15% OFF your entire booking. Limited Time Offer! 📞 +212 601-820422</span>
             </div>
             <div class="marquee-content" style="display: flex; white-space: nowrap; padding-right: 50px;">
-                <span style="font-weight: 700; font-size: 14px;">🎉 Book Early & Save More! 15% OFF your entire booking. Limited Time Offer! 📞 +212 636-372101</span>
+                <span style="font-weight: 700; font-size: 14px;">🎉 Book Early & Save More! 15% OFF your entire booking. Limited Time Offer! 📞 +212 601-820422</span>
             </div>
             <div class="marquee-content" style="display: flex; white-space: nowrap; padding-right: 50px;">
-                <span style="font-weight: 700; font-size: 14px;">🎉 Book Early & Save More! 15% OFF your entire booking. Limited Time Offer! 📞 +212 636-372101</span>
+                <span style="font-weight: 700; font-size: 14px;">🎉 Book Early & Save More! 15% OFF your entire booking. Limited Time Offer! 📞 +212 601-820422</span>
             </div>
         </div>
     </div>
@@ -1552,11 +1644,11 @@
                 <a href="index.html" class="header__nav-link">Home</a>
                 <a href="agadir-tours.html" class="header__nav-link">Agadir Tours</a>
                 <a href="day-trips-from-agadir.html" class="header__nav-link">Day Trips</a>
-                <a href="things-to-do-in-agadir.html" class="header__nav-link">Things to Do</a>
+                <a href="blog.html" class="header__nav-link">Blog</a>
                 <a href="contact.html" class="header__nav-link">Contact</a>
             </nav>
             <div class="header__actions">
-                <a href="https://wa.me/212636372101" class="btn btn-whatsapp">WhatsApp Us</a>
+                <a href="https://wa.me/212601820422" class="btn btn-whatsapp">WhatsApp Us</a>
                 <a href="contact.html" class="btn btn-primary">Book Now</a>
             </div>
         </div>
@@ -1633,8 +1725,8 @@
                     <!-- Trip Card 1: Paradise Valley -->
                     <a href="tour-paradise-valley-agadir.html" class="trip-card">
                         <div class="trip-card__image-wrapper">
-                            <img src="img/paradise-valley.jpg" 
-                                 alt="Paradise Valley Agadir Tour" 
+                            <img src="img/excursions/Paradise Valley/paradise 1.jpeg" 
+                                 alt="Paradise Valley Agadir Tour - Natural pools and Atlas Mountains" 
                                  class="trip-card__image">
                             <span class="trip-card__tag">BEST SELLER</span>
                             <div class="trip-card__quick-view">
@@ -1656,7 +1748,7 @@
                                 </div>
                                 <span class="trip-card__rating-number">4.9</span>
                             </div>
-                            <h3 class="trip-card__title">Paradise Valley Adventure</h3>
+                            <h3 class="trip-card__title">Paradise Valley & Natural Pools Tour</h3>
                             <div class="trip-card__info">
                                 <div class="trip-card__info-item">
                                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
@@ -1695,8 +1787,8 @@
                     <!-- Trip Card 2: Marrakech Day Trip -->
                     <a href="day-trip-marrakech-from-agadir.html" class="trip-card">
                         <div class="trip-card__image-wrapper">
-                            <img src="img/morocco-market.jpg" 
-                                 alt="Marrakech Day Trip from Agadir" 
+                            <img src="img/excursions/Marrakech Day Trip/marrakech 1.jpg" 
+                                 alt="Marrakech Day Trip from Agadir - Red City Souks and Jemaa el-Fna" 
                                  class="trip-card__image">
                             <div class="trip-card__quick-view">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
@@ -1717,7 +1809,7 @@
                 </div>
                                 <span class="trip-card__rating-number">4.8</span>
                             </div>
-                            <h3 class="trip-card__title">Marrakech Day Trip</h3>
+                            <h3 class="trip-card__title">Marrakech Day Trip - Red City Tour</h3>
                             <div class="trip-card__info">
                                 <div class="trip-card__info-item">
                                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
@@ -1756,8 +1848,8 @@
                     <!-- Trip Card 3: Quad Biking -->
                     <a href="tour-quad-biking-agadir.html" class="trip-card">
                         <div class="trip-card__image-wrapper">
-                            <img src="img/quad-biking.jpg" 
-                                 alt="Quad Biking Safari Agadir" 
+                            <img src="img/excursions/Quad Biking/quad 1.jpg" 
+                                 alt="Quad Biking Safari Agadir - Desert Dunes Adventure" 
                                  class="trip-card__image">
                             <span class="trip-card__tag">POPULAR</span>
                             <div class="trip-card__quick-view">
@@ -1779,7 +1871,7 @@
                 </div>
                                 <span class="trip-card__rating-number">4.8</span>
             </div>
-                            <h3 class="trip-card__title">Quad Biking Safari</h3>
+                            <h3 class="trip-card__title">Quad Biking Desert Safari</h3>
                             <div class="trip-card__info">
                                 <div class="trip-card__info-item">
                                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
@@ -1818,8 +1910,8 @@
                     <!-- Trip Card 4: Camel Ride -->
                     <a href="tour-camel-ride-agadir.html" class="trip-card">
                         <div class="trip-card__image-wrapper">
-                            <img src="img/camel-ride-sunset.jpg" 
-                                 alt="Sunset Camel Ride Agadir" 
+                            <img src="img/excursions/Camel Ride/camel ride 1.jpg" 
+                                 alt="Sunset Camel Ride Agadir Beach" 
                                  class="trip-card__image">
                             <span class="trip-card__tag">ROMANTIC</span>
                             <div class="trip-card__quick-view">
@@ -1841,7 +1933,7 @@
                             </div>
                                 <span class="trip-card__rating-number">4.7</span>
                                 </div>
-                            <h3 class="trip-card__title">Sunset Camel Ride</h3>
+                            <h3 class="trip-card__title">Sunset Camel Ride Experience</h3>
                             <div class="trip-card__info">
                                 <div class="trip-card__info-item">
                                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
@@ -1880,8 +1972,8 @@
                     <!-- Trip Card 5: Essaouira Day Trip -->
                     <a href="day-trip-essaouira-from-agadir.html" class="trip-card">
                         <div class="trip-card__image-wrapper">
-                            <img src="img/morocco-coastal-2.jpg" 
-                                 alt="Essaouira Day Trip from Agadir" 
+                            <img src="img/excursions/Essaouira Day Trip/essaouira 2.jpg" 
+                                 alt="Essaouira Day Trip from Agadir - Blue & White Coastal Town" 
                                  class="trip-card__image">
                             <span class="trip-card__tag">COASTAL</span>
                             <div class="trip-card__quick-view">
@@ -1903,7 +1995,7 @@
                             </div>
                                 <span class="trip-card__rating-number">4.6</span>
                                 </div>
-                            <h3 class="trip-card__title">Essaouira Day Trip</h3>
+                            <h3 class="trip-card__title">Essaouira Coastal Day Trip</h3>
                             <div class="trip-card__info">
                                 <div class="trip-card__info-item">
                                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
@@ -1942,8 +2034,8 @@
                     <!-- Trip Card 6: Sandboarding -->
                     <a href="tour-sandboarding-agadir.html" class="trip-card">
                         <div class="trip-card__image-wrapper">
-                            <img src="img/morocco-horizon-4.jpg" 
-                                 alt="Sandboarding Agadir Desert" 
+                            <img src="img/excursions/Sandboarding/sandboarding 1.webp" 
+                                 alt="Sandboarding Agadir Desert - Dune Surfing Adventure" 
                                  class="trip-card__image">
                             <span class="trip-card__tag">ADVENTURE</span>
                             <div class="trip-card__quick-view">
@@ -1965,7 +2057,7 @@
                             </div>
                                 <span class="trip-card__rating-number">4.7</span>
                                 </div>
-                            <h3 class="trip-card__title">Sandboarding & Dunes</h3>
+                            <h3 class="trip-card__title">Sandboarding Sahara Dunes</h3>
                             <div class="trip-card__info">
                                 <div class="trip-card__info-item">
                                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
@@ -2004,8 +2096,8 @@
                     <!-- Trip Card 7: Horse Riding -->
                     <a href="tour-horse-riding-agadir.html" class="trip-card">
                         <div class="trip-card__image-wrapper">
-                            <img src="img/horse-2.jpg" 
-                                 alt="Horse Riding Agadir Beach" 
+                            <img src="img/excursions/Horse Riding/horse riding 1.jpg" 
+                                 alt="Horse Riding Agadir Beach - Sunset Riding Experience" 
                                  class="trip-card__image">
                             <span class="trip-card__tag">SCENIC</span>
                             <div class="trip-card__quick-view">
@@ -2027,7 +2119,7 @@
                                 </div>
                                 <span class="trip-card__rating-number">4.8</span>
                             </div>
-                            <h3 class="trip-card__title">Horse Riding Beach Tour</h3>
+                            <h3 class="trip-card__title">Beach Horse Riding Experience</h3>
                             <div class="trip-card__info">
                                 <div class="trip-card__info-item">
                                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
@@ -2066,8 +2158,8 @@
                     <!-- Trip Card 8: Agadir City Tour -->
                     <a href="tour-agadir-city-tour.html" class="trip-card">
                         <div class="trip-card__image-wrapper">
-                            <img src="img/morocco-heritage-1.jpg" 
-                                 alt="Agadir City Tour" 
+                            <img src="img/excursions/Agadir City Tour/agadir 1.jpg" 
+                                 alt="Agadir City Tour - Kasbah, Souk and Marina" 
                                  class="trip-card__image">
                             <span class="trip-card__tag">CULTURAL</span>
                             <div class="trip-card__quick-view">
@@ -2089,7 +2181,7 @@
                                 </div>
                                 <span class="trip-card__rating-number">4.5</span>
                             </div>
-                            <h3 class="trip-card__title">Agadir City Highlights</h3>
+                            <h3 class="trip-card__title">Agadir City Tour - Kasbah & Souk</h3>
                             <div class="trip-card__info">
                                 <div class="trip-card__info-item">
                                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
@@ -2147,8 +2239,8 @@
                 <div class="feature-item">
                     <div class="feature-item__icon">
                         <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                            <path d="M5 12h14"></path>
-                            <path d="M12 5l7 7-7 7"></path>
+                            <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                            <circle cx="12" cy="10" r="3"></circle>
                         </svg>
                     </div>
                     <p class="feature-item__text">Free hotel pickup and drop-off included</p>
@@ -2157,8 +2249,8 @@
                 <div class="feature-item">
                     <div class="feature-item__icon">
                         <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                            <path d="M9 12l2 2 4-4"/>
-                            <path d="M21 12c0 4.97-4.03 9-9 9s-9-4.03-9-9 4.03-9 9-9 9 4.03 9 9z"/>
+                            <circle cx="12" cy="12" r="10"></circle>
+                            <path d="M12 6v6l4 2"></path>
                         </svg>
                     </div>
                     <p class="feature-item__text">Free cancellation up to 24h before tour</p>
@@ -2167,7 +2259,8 @@
                 <div class="feature-item">
                     <div class="feature-item__icon">
                         <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                            <path d="M12 2v20M2 12h20"></path>
+                            <rect x="1" y="4" width="22" height="16" rx="2" ry="2"></rect>
+                            <line x1="1" y1="10" x2="23" y2="10"></line>
                         </svg>
                     </div>
                     <p class="feature-item__text">Pay online or cash at pickup - flexible options</p>
@@ -2184,87 +2277,133 @@
                 <p class="blog-section__subtitle">Travel tips, local insights and hidden gems from our expert guides</p>
                 </div>
 
-            <!-- Blog Grid -->
-            <div class="blog-grid">
-                <!-- Blog Post 1 -->
-                <article class="blog-card">
-                    <div class="blog-card__image-wrapper">
-                        <img src="img/paradise-valley.jpg" 
-                             alt="Paradise Valley Guide" 
-                             class="blog-card__image">
-                        <span class="blog-card__category">Destination Guide</span>
-                                    </div>
-                    <div class="blog-card__content">
-                        <div class="blog-card__meta">
-                            <span class="blog-card__date">November 2024</span>
-                            <span class="blog-card__read-time">6 min read</span>
+            <!-- Blog Slider -->
+            <div class="blog-slider">
+                <div class="blog-grid" id="blogSlider">
+                    <!-- Blog Post 1: Top 10 Adventure Activities -->
+                    <article class="blog-card">
+                        <div class="blog-card__image-wrapper">
+                            <img src="img/excursions/Marrakech Day Trip/marrakech 2.jpg" 
+                                 alt="Top 10 adventure activities in Agadir - quad biking, sandboarding, camel rides" 
+                                 class="blog-card__image">
+                            <span class="blog-card__category">Adventure Activities</span>
                         </div>
-                        <h3 class="blog-card__title">Paradise Valley: Your Complete Guide to Agadir's Natural Wonder</h3>
-                        <p class="blog-card__excerpt">Discover natural swimming pools, hiking trails, and the best time to visit this hidden gem in the Atlas Mountains.</p>
-                        <a href="tour-paradise-valley-agadir.html" class="blog-card__link">Read More →</a>
-                                </div>
-                            </article>
+                        <div class="blog-card__content">
+                            <div class="blog-card__meta">
+                                <span class="blog-card__date">January 2025</span>
+                                <span class="blog-card__read-time">15 min read</span>
+                            </div>
+                            <h3 class="blog-card__title">Top 10 Things to Do in Agadir for Adventure Lovers</h3>
+                            <p class="blog-card__excerpt">From quad biking through desert dunes to sandboarding, camel rides with BBQ, and unforgettable day trips. Complete guide to Agadir's best adventure activities.</p>
+                            <a href="things-to-do-in-agadir-adventure.html" class="blog-card__link">Read More →</a>
+                        </div>
+                    </article>
 
-                <!-- Blog Post 2 -->
-                <article class="blog-card">
-                    <div class="blog-card__image-wrapper">
-                        <img src="img/morocco-market.jpg" 
-                             alt="Marrakech Day Trip" 
-                             class="blog-card__image">
-                        <span class="blog-card__category">Day Trips</span>
+                    <!-- Blog Post 2: Quad Biking Guide -->
+                    <article class="blog-card">
+                        <div class="blog-card__image-wrapper">
+                            <img src="img/excursions/Quad Biking/quad 1.jpg" 
+                                 alt="Quad biking Agadir desert dunes adventure guide - prices routes and best tours" 
+                                 class="blog-card__image">
+                            <span class="blog-card__category">Adventure Guide</span>
                         </div>
-                    <div class="blog-card__content">
-                        <div class="blog-card__meta">
-                            <span class="blog-card__date">November 2024</span>
-                            <span class="blog-card__read-time">8 min read</span>
-                                    </div>
-                        <h3 class="blog-card__title">Marrakech in a Day: Essential Sites & Local Tips</h3>
-                        <p class="blog-card__excerpt">From Jemaa el-Fna to the souks, explore Marrakech's highlights with insider advice from local guides.</p>
-                        <a href="day-trip-marrakech-from-agadir.html" class="blog-card__link">Read More →</a>
-                                </div>
-                            </article>
+                        <div class="blog-card__content">
+                            <div class="blog-card__meta">
+                                <span class="blog-card__date">January 2025</span>
+                                <span class="blog-card__read-time">12 min read</span>
+                            </div>
+                            <h3 class="blog-card__title">Quad Biking Agadir — Prices, Routes & Best Tours</h3>
+                            <p class="blog-card__excerpt">Ready for desert adventure? Complete guide to quad biking in Agadir—compare prices (€50-75), explore routes (Tamri, Taghazout), safety tips, and quad vs buggy comparison.</p>
+                            <a href="quad-biking-agadir-guide.html" class="blog-card__link">Read More →</a>
+                        </div>
+                    </article>
 
-                <!-- Blog Post 3 -->
-                <article class="blog-card">
-                    <div class="blog-card__image-wrapper">
-                        <img src="img/berber-village.jpg" 
-                             alt="Moroccan Food & Culture" 
-                             class="blog-card__image">
-                        <span class="blog-card__category">Food & Culture</span>
+                    <!-- Blog Post 3: Paradise Valley Guide -->
+                    <article class="blog-card">
+                        <div class="blog-card__image-wrapper">
+                            <img src="img/excursions/Paradise Valley/paradise 1.jpeg" 
+                                 alt="Paradise Valley Agadir natural pools and palm trees - Complete travel guide" 
+                                 class="blog-card__image">
+                            <span class="blog-card__category">Travel Guide</span>
                         </div>
-                    <div class="blog-card__content">
-                        <div class="blog-card__meta">
-                            <span class="blog-card__date">October 2024</span>
-                            <span class="blog-card__read-time">5 min read</span>
-                                    </div>
-                        <h3 class="blog-card__title">Traditional Moroccan Cuisine: Must-Try Dishes in Agadir</h3>
-                        <p class="blog-card__excerpt">From tagine to fresh seafood, discover the flavors of Morocco and the best local restaurants in Agadir.</p>
-                        <a href="things-to-do-in-agadir.html" class="blog-card__link">Read More →</a>
-                                </div>
-                            </article>
+                        <div class="blog-card__content">
+                            <div class="blog-card__meta">
+                                <span class="blog-card__date">January 2025</span>
+                                <span class="blog-card__read-time">10 min read</span>
+                            </div>
+                            <h3 class="blog-card__title">Paradise Valley Agadir — Complete Travel Guide 2025</h3>
+                            <p class="blog-card__excerpt">Hidden in the foothills of the Atlas Mountains lies Paradise Valley—a stunning natural oasis with crystal-clear pools, dramatic cliffs, and lush palm groves. Complete guide with tips.</p>
+                            <a href="paradise-valley-agadir-guide.html" class="blog-card__link">Read More →</a>
+                        </div>
+                    </article>
 
-                <!-- Blog Post 4 -->
-                <article class="blog-card">
-                    <div class="blog-card__image-wrapper">
-                        <img src="img/quad-biking.jpg" 
-                             alt="Adventure Activities" 
-                             class="blog-card__image">
-                        <span class="blog-card__category">Adventure</span>
+                    <!-- Blog Post 4: Rainbow Village -->
+                    <article class="blog-card">
+                        <div class="blog-card__image-wrapper">
+                            <img src="img/aghroud_1.jpg" 
+                                 alt="Aghroud Rainbow Village colorful houses Agadir - Panoramic view of colorful coastal fishing village Morocco" 
+                                 class="blog-card__image">
+                            <span class="blog-card__category">Hidden Gems</span>
                         </div>
-                    <div class="blog-card__content">
-                        <div class="blog-card__meta">
-                            <span class="blog-card__date">October 2024</span>
-                            <span class="blog-card__read-time">7 min read</span>
-                    </div>
-                        <h3 class="blog-card__title">Top 10 Adventure Activities in Agadir You Can't Miss</h3>
-                        <p class="blog-card__excerpt">Quad biking, sandboarding, camel rides and more - your ultimate guide to adventure in Agadir.</p>
-                        <a href="agadir-tours.html" class="blog-card__link">Read More →</a>
-                    </div>
-                </article>
+                        <div class="blog-card__content">
+                            <div class="blog-card__meta">
+                                <span class="blog-card__date">December 2024</span>
+                                <span class="blog-card__read-time">8 min read</span>
+                            </div>
+                            <h3 class="blog-card__title">Behind the Colours: Discovering Agadir's Secret Rainbow Village</h3>
+                            <p class="blog-card__excerpt">Beyond Agadir's beaches lies a vibrant secret—a neighborhood where every wall tells a story in color. Discover the hidden Rainbow Village and the authentic local life.</p>
+                            <a href="rainbow-village-agadir.html" class="blog-card__link">Read More →</a>
+                        </div>
+                    </article>
+
+                    <!-- Blog Post 5: Local's Morning -->
+                    <article class="blog-card">
+                        <div class="blog-card__image-wrapper">
+                            <img src="img/souk_al_had.jpg" 
+                                 alt="Souk El Had Agadir market experience - colorful spice vendors and traditional Moroccan markets" 
+                                 class="blog-card__image">
+                            <span class="blog-card__category">Local Life</span>
+                        </div>
+                        <div class="blog-card__content">
+                            <div class="blog-card__meta">
+                                <span class="blog-card__date">December 2024</span>
+                                <span class="blog-card__read-time">10 min read</span>
+                            </div>
+                            <h3 class="blog-card__title">A Local's Morning in Agadir: Markets, Spices & Argan Oil</h3>
+                            <p class="blog-card__excerpt">Walk through Agadir like a local! Explore Souk El Had's colorful markets, smell Moroccan spices, and learn how Argan oil is made in family cooperatives.</p>
+                            <a href="local-morning-agadir.html" class="blog-card__link">Read More →</a>
+                        </div>
+                    </article>
+
+                    <!-- Blog Post 6: Berber Villages -->
+                    <article class="blog-card">
+                        <div class="blog-card__image-wrapper">
+                            <img src="img/taghazout.jpg" 
+                                 alt="Berber villages around Agadir - Tamri and Taghazout cultural tours Morocco" 
+                                 class="blog-card__image">
+                            <span class="blog-card__category">Cultural Experiences</span>
+                        </div>
+                        <div class="blog-card__content">
+                            <div class="blog-card__meta">
+                                <span class="blog-card__date">December 2024</span>
+                                <span class="blog-card__read-time">12 min read</span>
+                            </div>
+                            <h3 class="blog-card__title">Beyond the Beach: Uncovering the Berber Villages Around Agadir</h3>
+                            <p class="blog-card__excerpt">Travel beyond Agadir's beaches to meet Berber families in Tamri and Taghazout. Discover centuries-old traditions, local foods & stories with authentic cultural tours.</p>
+                            <a href="berber-villages-agadir.html" class="blog-card__link">Read More →</a>
+                        </div>
+                    </article>
+                </div>
+
+                <!-- Navigation Buttons -->
+                <div class="blog-navigation">
+                    <button class="blog-nav-button" id="blogPrevBtn" onclick="scrollBlog(-1)">‹</button>
+                    <button class="blog-nav-button" id="blogNextBtn" onclick="scrollBlog(1)">›</button>
+                </div>
             </div>
 
             <div class="blog-section__button">
-                <button class="btn btn-primary">VIEW ALL ARTICLES</button>
+                <a href="blog.html" class="btn btn-primary">VIEW ALL ARTICLES</a>
                 </div>
             </div>
         </section>
@@ -2289,7 +2428,6 @@
                 <div class="testimonial-card">
                     <p class="testimonial-card__text">Paradise Valley exceeded all expectations! The natural pools were stunning and our guide Mohamed was incredibly knowledgeable. The Local Guide made everything so easy with perfect pickup timing and comfortable transport.</p>
                     <div class="testimonial-card__user">
-                        <img src="https://images.unsplash.com/photo-1494790108755-2616b612b786?w=60&h=60&fit=crop&q=80" alt="Emma Thompson" class="testimonial-card__avatar">
                         <div class="testimonial-card__user-info">
                             <h4 class="testimonial-card__name">Emma Thompson</h4>
                             <p class="testimonial-card__role">Paradise Valley Tour</p>
@@ -2308,7 +2446,6 @@
                 <div class="testimonial-card">
                     <p class="testimonial-card__text">The Marrakech day trip was amazing! Our guide gave us great local insights and took us to authentic places tourists usually miss. The souks were incredible and we had plenty of time to explore. Highly recommend!</p>
                     <div class="testimonial-card__user">
-                        <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=60&h=60&fit=crop&q=80" alt="James Wilson" class="testimonial-card__avatar">
                         <div class="testimonial-card__user-info">
                             <h4 class="testimonial-card__name">James Wilson</h4>
                             <p class="testimonial-card__role">Marrakech Day Trip</p>
@@ -2327,7 +2464,6 @@
                 <div class="testimonial-card">
                     <p class="testimonial-card__text">Quad biking through the dunes was the highlight of our Agadir vacation! Pure adrenaline and so much fun. The equipment was top quality and the guide ensured everyone felt safe. Will definitely book more tours!</p>
                     <div class="testimonial-card__user">
-                        <img src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=60&h=60&fit=crop&q=80" alt="Laura Smith" class="testimonial-card__avatar">
                         <div class="testimonial-card__user-info">
                             <h4 class="testimonial-card__name">Laura Smith</h4>
                             <p class="testimonial-card__role">Quad Biking Safari</p>
@@ -2346,7 +2482,6 @@
                 <div class="testimonial-card">
                     <p class="testimonial-card__text">The sunset camel ride was magical! Riding along the beach as the sun set was unforgettable. The camels were well-cared for and the whole experience felt authentic. Mint tea at the end was the perfect touch!</p>
                     <div class="testimonial-card__user">
-                        <img src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=60&h=60&fit=crop&q=80" alt="Sarah Anderson" class="testimonial-card__avatar">
                         <div class="testimonial-card__user-info">
                             <h4 class="testimonial-card__name">Sarah Anderson</h4>
                             <p class="testimonial-card__role">Camel Ride Experience</p>
@@ -2365,7 +2500,6 @@
                 <div class="testimonial-card">
                     <p class="testimonial-card__text">Essaouira is beautiful! The old medina is charming and the seafood lunch was incredible. Our driver was professional and the timing was perfect. The Local Guide made exploring Morocco so easy and stress-free.</p>
                     <div class="testimonial-card__user">
-                        <img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=60&h=60&fit=crop&q=80" alt="Michael Roberts" class="testimonial-card__avatar">
                         <div class="testimonial-card__user-info">
                             <h4 class="testimonial-card__name">Michael Roberts</h4>
                             <p class="testimonial-card__role">Essaouira Day Trip</p>
@@ -2384,7 +2518,6 @@
                 <div class="testimonial-card">
                     <p class="testimonial-card__text">Sandboarding was incredible! The dunes are stunning and surfing down them was such a unique experience. Our guide was friendly and took great photos for us. Best value tour in Agadir!</p>
                     <div class="testimonial-card__user">
-                        <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=60&h=60&fit=crop&q=80" alt="David Martinez" class="testimonial-card__avatar">
                         <div class="testimonial-card__user-info">
                             <h4 class="testimonial-card__name">David Martinez</h4>
                             <p class="testimonial-card__role">Sandboarding Adventure</p>
@@ -2435,11 +2568,11 @@
                     <h4 class="footer__title">About Us</h4>
                     <ul class="footer__links">
                         <li><a href="index.html" class="footer__link">Home</a></li>
-                        <li><a href="things-to-do-in-agadir.html" class="footer__link">Things to Do</a></li>
+                        <li><a href="blog.html" class="footer__link">Blog</a></li>
                         <li><a href="#deals" class="footer__link">Special Offers</a></li>
                         <li><a href="contact.html" class="footer__link">Contact Us</a></li>
-                        <li><a href="tel:+212636372101" class="footer__link">Call Us</a></li>
-                        <li><a href="https://wa.me/212636372101" class="footer__link">WhatsApp</a></li>
+                        <li><a href="tel:+212601820422" class="footer__link">Call Us</a></li>
+                        <li><a href="https://wa.me/212601820422" class="footer__link">WhatsApp</a></li>
                 </ul>
             </div>
 
@@ -2478,7 +2611,7 @@
                         <span class="footer__separator">|</span>
                         <a href="contact.html" class="footer__legal-link">Booking Policy</a>
                         <span class="footer__separator">|</span>
-                        <a href="tel:+212636372101" class="footer__legal-link">+212 636-372101</a>
+                        <a href="tel:+212601820422" class="footer__legal-link">+212 601-820422</a>
                     </div>
                 </div>
                 <div class="footer__bottom-right">
@@ -2498,6 +2631,43 @@
                 navList.classList.toggle('active');
             });
         }
+
+        // ===== BLOG CAROUSEL =====
+        const blogSlider = document.getElementById('blogSlider');
+        const blogPrevBtn = document.getElementById('blogPrevBtn');
+        const blogNextBtn = document.getElementById('blogNextBtn');
+
+        function scrollBlog(direction) {
+            if (!blogSlider) return;
+            
+            const scrollAmount = 400; // Width to scroll
+            const currentScroll = blogSlider.scrollLeft;
+            const newScroll = currentScroll + (direction * scrollAmount);
+            
+            blogSlider.scrollTo({
+                left: newScroll,
+                behavior: 'smooth'
+            });
+        }
+
+        // Update button states based on scroll position
+        function updateBlogButtons() {
+            if (!blogSlider || !blogPrevBtn || !blogNextBtn) return;
+            
+            blogPrevBtn.disabled = blogSlider.scrollLeft <= 0;
+            
+            const maxScroll = blogSlider.scrollWidth - blogSlider.clientWidth;
+            blogNextBtn.disabled = blogSlider.scrollLeft >= maxScroll - 10;
+        }
+
+        // Initial button state
+        if (blogSlider) {
+            blogSlider.addEventListener('scroll', updateBlogButtons);
+            updateBlogButtons();
+        }
+
+        // Update on window resize
+        window.addEventListener('resize', updateBlogButtons);
     </script>
 </body>
 </html>

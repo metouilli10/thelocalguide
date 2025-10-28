@@ -8,8 +8,8 @@
     <title>Marrakech Day Trip from Agadir | Red City Tour with Lunch (2025)</title>
     
     <!-- CSS Styles -->
-    <link rel="stylesheet" href="css/styles.css">
-    <link rel="stylesheet" href="css/pages.css">
+    <link rel="stylesheet" href="css/styles.css?v=20241218-6">
+    <link rel="stylesheet" href="css/pages.css?v=20241218-6">
     <link rel="stylesheet" href="css/updated-styles.css">
     
     <!-- Open Graph Meta Tags -->
@@ -25,7 +25,7 @@
       "@type": "TouristAttraction",
       "name": "Marrakech Day Trip from Agadir",
       "description": "Full-day excursion to Marrakech, Morocco's legendary Red City. Visit Koutoubia Mosque, Bahia Palace, bustling souks, and Jemaa el-Fnaa square. Scenic Atlas Mountains drive with lunch included.",
-      "image": "https://yourdomain.com/img/morocco-market.jpg",
+      "image": "https://yourdomain.com/img/excursions/Marrakech Day Trip/marrakech 2.jpg",
       "address": {
         "@type": "PostalAddress",
         "addressLocality": "Marrakech",
@@ -57,8 +57,8 @@
     }
     </script>
     
-    <link rel="stylesheet" href="css/styles.css">
-    <link rel="stylesheet" href="css/pages.css">
+    <link rel="stylesheet" href="css/styles.css?v=20241218-6">
+    <link rel="stylesheet" href="css/pages.css?v=20241218-6">
     <link rel="stylesheet" href="css/updated-styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.css">
@@ -80,44 +80,265 @@
             margin-top: 95px;
         }
         
+        /* Civitatis 5-Photo Layout - Fixed Height Solution */
         .tour-gallery {
+          --gap: 12px; 
+          --radius: 16px; 
+          --black: #000; 
+          --white: #fff; 
+          position: relative;
+        }
+
+        /* --- Sizing: make the whole preview block a known height --- */
+        .tg-preview {
+          /* pick a height that scales: min 260px, grows with viewport, capped for huge screens */
+          height: clamp(260px, 50vw, 520px);
+        }
+
+        /* Grid layout */
+        .tg-grid { 
+          height: 100%; 
             display: grid;
-            grid-template-columns: 2fr 1fr 1fr;
-            grid-template-rows: 250px 250px;
-            gap: 10px;
-            height: 500px;
+          grid-template-columns: 1fr; 
+          gap: 12px; 
+          align-items: stretch;             /* NEW: ensure full height */
         }
         
-        .tour-gallery img {
+        @media (min-width: 768px) {
+          .tg-grid { 
+            grid-template-columns: 2fr 1fr; 
+            grid-template-rows: 1fr;        /* NEW: single row to fill height */
+          }
+          .tg-hero { 
+            grid-row: 1; 
+            grid-column: 1;                 /* NEW: explicit positioning */
+          }
+          .tg-right {
+            grid-row: 1;
+            grid-column: 2;                 /* NEW: explicit positioning */
+          }
+        }
+
+        /* Left big image fills height */
+        .tg-item { 
+          position: relative; 
+          display: block; 
+          overflow: hidden; 
+          border-radius: 16px; 
+          border: 0; 
+          padding: 0; 
+          cursor: pointer; 
+        }
+        
+        .tg-hero, .tg-hero img { 
+          height: 100%; 
+        }
+        
+        .tg-hero img { 
+          width: 100%; 
+          object-fit: cover; 
+          display: block; 
+        }
+
+        /* Right column is a 2×2 grid that ALSO fills the same height */
+        .tg-right {
+          position: relative;
+          height: 100%;                      /* << key */
+          display: grid;
+          grid-template-columns: 1fr 1fr;
+          grid-template-rows: 1fr 1fr;      /* equal halves vertically */
+          gap: 12px;
+          align-items: stretch;             /* NEW: stretch to fill height */
+        }
+        
+        .tg-right .tg-item { 
+          height: 100%; 
+          display: flex;                    /* NEW: flex container */
+        }
+        
+        .tg-right .tg-item img {
             width: 100%;
             height: 100%;
             object-fit: cover;
+          display: block;
+          flex: 1;                          /* NEW: fill flex container */
+        }
+
+        /* Hover polish */
+        .tg-item img { 
+          transition: transform .3s ease; 
+        }
+        
+        .tg-item:hover img { 
+          transform: scale(1.02); 
+        }
+
+        /* See-more pill */
+        .tg-see-more {
+          position: absolute; 
+          right: 16px; 
+          bottom: 16px;
+          display: flex; 
+          align-items: center; 
+          gap: .5rem;
+          padding: 12px 16px; 
+          border-radius: 999px; 
+          border: 0; 
             cursor: pointer;
+          background: #fff; 
+          color: #111; 
+          font-weight: 600;
+          box-shadow: 0 6px 20px rgba(0,0,0,.18);
+          z-index: 10;
+        }
+        
+        .tg-see-more .tg-arrow { 
+          font-size: 20px; 
+          line-height: 1; 
+        }
+
+        /* Actions */
+        .tg-actions { 
+          margin-top: 15px; 
+          display: flex; 
+          justify-content: center; 
+        }
+        
+        .tg-view-all {
+          background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+          color: var(--white);
+          padding: 12px 24px; 
+          border: 0; 
+          border-radius: 25px; 
+          cursor: pointer;
+          font-weight: 600;
+          font-size: 14px;
+          box-shadow: 0 4px 15px rgba(102, 126, 234, 0.4);
             transition: all 0.3s ease;
         }
         
-        .tour-gallery img:hover {
-            opacity: 0.9;
-            transform: scale(1.02);
+        .tg-view-all:hover {
+          transform: translateY(-2px);
+          box-shadow: 0 6px 20px rgba(102, 126, 234, 0.6);
         }
-        
-        .tour-gallery .main-image {
-            grid-row: 1 / 3;
+
+        /* Mobile responsive */
+        @media (max-width: 767px) {
+          .tg-preview {
+            height: clamp(200px, 40vw, 400px);
+          }
+          
+          .tg-grid {
+            grid-template-columns: 1fr;
+            grid-template-rows: 2fr 1fr;
+          }
+          
+          .tg-hero {
+            grid-row: 1;
+            grid-column: 1;
+          }
+          
+          .tg-right {
+            grid-row: 2;
+            grid-column: 1;
+            grid-template-columns: 1fr 1fr;
+            grid-template-rows: 1fr 1fr;
+          }
+          
+          .tg-see-more {
+            right: 12px;
+            bottom: 12px;
+            padding: 10px 14px;
+            font-size: 13px;
+          }
         }
-        
-        .view-all-photos {
+
+        /* ===== Lightbox ===== */
+        .tg-lightbox {
+          position: fixed; inset: 0; z-index: 9999;
+          background: rgba(0,0,0,.92);
+          display: none; flex-direction: column;
+        }
+        .tg-lightbox.open { 
+          display: flex !important; 
+        }
+        .tg-lightbox-header {
+          color: #fff; display: flex; justify-content: space-between; align-items: center;
+          padding: 12px 16px;
+          z-index: 10000;
+        }
+        .tg-hint { font-size: 12px; opacity: .75; }
+        .tg-close {
+          background: rgba(255,255,255,.12); color: #fff; border: 0; border-radius: 10px;
+          padding: 8px 12px; cursor: pointer;
+        }
+
+        /* Swiper areas */
+        .tg-main { 
+          flex: 1 1 auto; 
+          min-height: 0; 
+          position: relative;
+          background: rgba(255,255,255,0.1);
+          overflow: hidden;
+        }
+        .tg-main .swiper-wrapper {
+          position: relative;
+          width: 100%;
+          height: 100%;
+        }
+        .tg-main .swiper-slide { 
             position: absolute;
-            bottom: 20px;
-            right: 20px;
-            background: white;
-            padding: 12px 25px;
-            border-radius: 6px;
-            font-weight: 600;
-            color: #1F2937;
-            cursor: pointer;
-            z-index: 10;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          display: flex; 
+          align-items: center; 
+          justify-content: center; 
+          min-height: 60vh;
+          opacity: 0;
+          transition: opacity 0.3s ease;
         }
+        .tg-main .swiper-slide[style*="flex"] {
+          opacity: 1;
+        }
+        .tg-main img { 
+          max-width: 100%; 
+          max-height: 82vh; 
+          object-fit: contain; 
+          border-radius: 12px; 
+            background: white;
+          display: block;
+        }
+
+        .tg-thumbs { 
+          padding: 10px 12px 16px; 
+          background: rgba(0,0,0,0.5);
+          overflow-x: auto;
+          white-space: nowrap;
+        }
+        .tg-thumbs .swiper-wrapper {
+          display: flex;
+          gap: 8px;
+        }
+        .tg-thumbs .swiper-slide { 
+          opacity: .6; 
+            cursor: pointer;
+          flex-shrink: 0;
+          width: 80px;
+          height: 70px;
+        }
+        .tg-thumbs .swiper-slide-thumb-active { 
+          opacity: 1; 
+          border: 2px solid white;
+        }
+        .tg-thumbs img { 
+          width: 100%; 
+          height: 100%; 
+          object-fit: cover; 
+          border-radius: 8px; 
+        }
+
         
         .tour-content-wrapper {
             max-width: 1400px;
@@ -661,41 +882,26 @@
             }
             
             .tour-gallery {
-                display: flex;
-                overflow-x: scroll;
-                overflow-y: hidden;
-                scroll-snap-type: x mandatory;
-                -webkit-overflow-scrolling: touch;
-                scroll-behavior: smooth;
-                scrollbar-width: none;
-                height: 300px;
-                gap: 0;
-                grid-template-columns: none !important;
-                grid-template-rows: none !important;
-                width: 100%;
-                position: relative;
+                /* Mobile styles handled by CSS variables and responsive design */
             }
             
-            .tour-gallery::-webkit-scrollbar {
-                display: none;
-            }
-            
-            .tour-gallery img {
-                flex: 0 0 100%;
-                min-width: 100%;
-                width: 100%;
-                height: 300px;
-                object-fit: cover;
-                scroll-snap-align: center;
-                scroll-snap-stop: always;
-                pointer-events: auto;
-                user-select: none;
-                -webkit-user-drag: none;
-            }
-            
-            .tour-gallery .main-image {
-                grid-row: auto;
-                order: 0;
+            /* Mobile: 5 images in single column */
+            @media (max-width: 767px) {
+              .tg-grid {
+                grid-template-columns: 1fr;
+                grid-template-rows: repeat(5, 1fr);
+                gap: 8px;
+              }
+              .tg-hero {
+                grid-row: 1;
+                grid-column: 1;
+              }
+              .tg-stack {
+                grid-column: 1;
+              }
+              .tg-stack img {
+                aspect-ratio: 16/10;
+              }
             }
             
             /* Swipe indicator */
@@ -1096,7 +1302,7 @@
                 <a href="#deals" class="topbar__link">Special Offers</a>
             </div>
             <div class="topbar__right">
-                <a href="tel:+212636372101" class="topbar__link">+212 636-372101</a>
+                <a href="tel:+212601820422" class="topbar__link">+212 601-820422</a>
                 <a href="contact.html" class="topbar__link">Contact</a>
             </div>
         </div>
@@ -1112,11 +1318,11 @@
                 <a href="index.html" class="header__nav-link">Home</a>
                 <a href="agadir-tours.html" class="header__nav-link">Agadir Tours</a>
                 <a href="day-trips-from-agadir.html" class="header__nav-link">Day Trips</a>
-                <a href="things-to-do-in-agadir.html" class="header__nav-link">Things to Do</a>
+                <a href="blog.html" class="header__nav-link">Blog</a>
                 <a href="contact.html" class="header__nav-link">Contact</a>
             </nav>
             <div class="header__actions">
-                <a href="https://wa.me/212636372101" class="btn btn-whatsapp">WhatsApp Us</a>
+                <a href="https://wa.me/212601820422" class="btn btn-whatsapp">WhatsApp Us</a>
                 <a href="contact.html" class="btn btn-primary">Book Now</a>
             </div>
         </div>
@@ -1133,15 +1339,92 @@
 
     <!-- Tour Hero Gallery -->
     <section class="tour-detail-hero">
-        <div class="tour-gallery">
-            <!-- Placeholder images - user will upload actual Marrakech photos -->
-            <img src="img/morocco-market.jpg" alt="Marrakech Jemaa el-Fnaa square and souks" class="main-image" data-fancybox="gallery">
-            <img src="img/morocco-heritage-1.jpg" alt="Marrakech Bahia Palace architecture" data-fancybox="gallery">
-            <img src="img/morocco-collage.jpg" alt="Koutoubia Mosque Marrakech landmark" data-fancybox="gallery">
-            <img src="img/berber-village.jpg" alt="Atlas Mountains drive to Marrakech" data-fancybox="gallery">
-            <img src="img/morocco-week-3.jpg" alt="Marrakech medina and souks from Agadir" data-fancybox="gallery">
+        <!-- ✅ TOUR GALLERY -->
+        <div class="tour-gallery" data-count="10">
+          <!-- Preview grid -->
+          <div class="tg-preview">
+            <div class="tg-grid">
+              <!-- Big image (left) -->
+              <button class="tg-item tg-hero" data-index="0" aria-label="Open gallery at photo 1">
+                <img src="img/excursions/Marrakech Day Trip/marrakech 1.jpg" alt="Marrakech Jemaa el-Fnaa square and souks">
+              </button>
+
+              <!-- Right side: 2×2 -->
+              <div class="tg-right">
+                <button class="tg-item" data-index="1" aria-label="Open gallery at photo 2">
+                  <img src="img/excursions/Marrakech Day Trip/marrakech 2.jpg" alt="Marrakech Bahia Palace architecture">
+                </button>
+                <button class="tg-item" data-index="2" aria-label="Open gallery at photo 3">
+                  <img src="img/excursions/Marrakech Day Trip/marrakech 3.jpg" alt="Koutoubia Mosque Marrakech landmark">
+                </button>
+                <button class="tg-item" data-index="3" aria-label="Open gallery at photo 4">
+                  <img src="img/excursions/Marrakech Day Trip/marrakech 4.jpg" alt="Atlas Mountains drive to Marrakech">
+                </button>
+                <button class="tg-item" data-index="4" aria-label="Open gallery at photo 5">
+                  <img src="img/excursions/Marrakech Day Trip/marrakech 5.jpg" alt="Marrakech medina and souks from Agadir">
+                </button>
+
+                <!-- Civitatis-style overlay button -->
+                <button class="tg-see-more" data-index="0" aria-label="Open gallery and view all photos">
+                  <span>See more photos (10)</span><span class="tg-arrow">›</span>
+                </button>
         </div>
-        <button class="view-all-photos">📷 View All Photos (20+)</button>
+            </div>
+          </div>
+
+          <!-- View all button (mobile / general) -->
+          <div class="tg-actions">
+            <button class="tg-view-all" data-index="0" aria-label="Open gallery and view all photos">
+              View all photos
+            </button>
+          </div>
+
+          <!-- 🔎 LIGHTBOX -->
+          <div class="tg-lightbox" aria-hidden="true" role="dialog" aria-label="Tour photos lightbox">
+            <div class="tg-lightbox-header">
+              <span class="tg-hint">Use arrows or swipe • Press ESC to close</span>
+              <button class="tg-close" aria-label="Close gallery">Close ✕</button>
+            </div>
+
+            <!-- Main slider -->
+            <div class="swiper tg-main">
+              <div class="swiper-wrapper">
+                <!-- All Marrakech photos -->
+                <div class="swiper-slide"><img src="img/excursions/Marrakech Day Trip/marrakech 1.jpg" alt="Marrakech Jemaa el-Fnaa square and souks"></div>
+                <div class="swiper-slide"><img src="img/excursions/Marrakech Day Trip/marrakech 2.jpg" alt="Marrakech Bahia Palace architecture"></div>
+                <div class="swiper-slide"><img src="img/excursions/Marrakech Day Trip/marrakech 3.jpg" alt="Koutoubia Mosque Marrakech landmark"></div>
+                <div class="swiper-slide"><img src="img/excursions/Marrakech Day Trip/marrakech 4.jpg" alt="Atlas Mountains drive to Marrakech"></div>
+                <div class="swiper-slide"><img src="img/excursions/Marrakech Day Trip/marrakech 5.jpg" alt="Marrakech medina and souks from Agadir"></div>
+                <div class="swiper-slide"><img src="img/excursions/Marrakech Day Trip/marrakech 6.jpg" alt="Traditional Moroccan lunch Marrakech"></div>
+                <div class="swiper-slide"><img src="img/excursions/Marrakech Day Trip/marrakech 7.jpg" alt="Marrakech city views"></div>
+                <div class="swiper-slide"><img src="img/excursions/Marrakech Day Trip/marrakech 8.jpg" alt="Marrakech souks shopping"></div>
+                <div class="swiper-slide"><img src="img/excursions/Marrakech Day Trip/marrakech 1.jpg" alt="Marrakech cultural sites"></div>
+                <div class="swiper-slide"><img src="img/excursions/Marrakech Day Trip/marrakech 2.jpg" alt="Marrakech Atlas Mountains journey"></div>
+              </div>
+              <!-- arrows -->
+              <div class="swiper-button-prev"></div>
+              <div class="swiper-button-next"></div>
+            </div>
+
+            <!-- Thumbnails -->
+            <div class="swiper tg-thumbs">
+              <div class="swiper-wrapper">
+                <!-- same order as main slider -->
+                <div class="swiper-slide"><img src="img/excursions/Marrakech Day Trip/marrakech 1.jpg" alt=""></div>
+                <div class="swiper-slide"><img src="img/excursions/Marrakech Day Trip/marrakech 2.jpg" alt=""></div>
+                <div class="swiper-slide"><img src="img/excursions/Marrakech Day Trip/marrakech 3.jpg" alt=""></div>
+                <div class="swiper-slide"><img src="img/excursions/Marrakech Day Trip/marrakech 4.jpg" alt=""></div>
+                <div class="swiper-slide"><img src="img/excursions/Marrakech Day Trip/marrakech 5.jpg" alt=""></div>
+                <div class="swiper-slide"><img src="img/excursions/Marrakech Day Trip/marrakech 6.jpg" alt=""></div>
+                <div class="swiper-slide"><img src="img/excursions/Marrakech Day Trip/marrakech 7.jpg" alt=""></div>
+                <div class="swiper-slide"><img src="img/excursions/Marrakech Day Trip/marrakech 8.jpg" alt=""></div>
+                <div class="swiper-slide"><img src="img/excursions/Marrakech Day Trip/marrakech 1.jpg" alt=""></div>
+                <div class="swiper-slide"><img src="img/excursions/Marrakech Day Trip/marrakech 2.jpg" alt=""></div>
+              </div>
+            </div>
+          </div>
+        </div>
+
     </section>
 
     <!-- Tour Content -->
@@ -1735,11 +2018,11 @@
                     <h4 class="footer__title">About Us</h4>
                     <ul class="footer__links">
                         <li><a href="index.html" class="footer__link">Home</a></li>
-                        <li><a href="things-to-do-in-agadir.html" class="footer__link">Things to Do</a></li>
+                        <li><a href="blog.html" class="footer__link">Blog</a></li>
                         <li><a href="#deals" class="footer__link">Special Offers</a></li>
                         <li><a href="contact.html" class="footer__link">Contact Us</a></li>
-                        <li><a href="tel:+212636372101" class="footer__link">Call Us</a></li>
-                        <li><a href="https://wa.me/212636372101" class="footer__link">WhatsApp</a></li>
+                        <li><a href="tel:+212601820422" class="footer__link">Call Us</a></li>
+                        <li><a href="https://wa.me/212601820422" class="footer__link">WhatsApp</a></li>
                     </ul>
                 </div>
 
@@ -1778,7 +2061,7 @@
                         <span class="footer__separator">|</span>
                         <a href="contact.html" class="footer__legal-link">Booking Policy</a>
                         <span class="footer__separator">|</span>
-                        <a href="tel:+212636372101" class="footer__legal-link">+212 636-372101</a>
+                        <a href="tel:+212601820422" class="footer__legal-link">+212 601-820422</a>
                     </div>
                 </div>
                 <div class="footer__bottom-right">
@@ -1800,21 +2083,164 @@
     <script src="js/main.js"></script>
     
     <script>
-        // Initialize Fancybox for gallery
-        $('[data-fancybox="gallery"]').fancybox({
-            buttons: [
-                "zoom",
-                "slideShow",
-                "thumbs",
-                "close"
-            ],
-            loop: true,
-            protect: true
-        });
+        // Simple Gallery without Swiper - Reliable Version
+        document.addEventListener('DOMContentLoaded', function() {
+          const root = document.querySelector('.tour-gallery');
+          if (!root) return;
+          
+          const lightbox = root.querySelector('.tg-lightbox');
+          const btnClose = lightbox.querySelector('.tg-close');
+          const btnsOpen = root.querySelectorAll('[data-index]');
+          const btnViewAll = root.querySelector('.tg-view-all');
 
-        // View all photos button
-        $('.view-all-photos').on('click', function() {
-            $('.tour-gallery img').first().trigger('click');
+          let currentIndex = 0;
+          const images = [
+            'img/excursions/Marrakech Day Trip/marrakech 1.jpg',
+            'img/excursions/Marrakech Day Trip/marrakech 2.jpg',
+            'img/excursions/Marrakech Day Trip/marrakech 3.jpg',
+            'img/excursions/Marrakech Day Trip/marrakech 4.jpg',
+            'img/excursions/Marrakech Day Trip/marrakech 5.jpg',
+            'img/excursions/Marrakech Day Trip/marrakech 6.jpg',
+            'img/excursions/Marrakech Day Trip/marrakech 7.jpg',
+            'img/excursions/Marrakech Day Trip/marrakech 8.jpg',
+            'img/excursions/Marrakech Day Trip/marrakech 1.jpg',
+            'img/excursions/Marrakech Day Trip/marrakech 2.jpg'
+          ];
+
+          // Get containers
+          const mainContainer = lightbox.querySelector('.tg-main .swiper-wrapper');
+          const thumbsContainer = lightbox.querySelector('.tg-thumbs .swiper-wrapper');
+          const prevBtn = lightbox.querySelector('.swiper-button-prev');
+          const nextBtn = lightbox.querySelector('.swiper-button-next');
+
+          // Initialize gallery
+          function initGallery() {
+            // Show first image
+            updateGallery();
+            
+            // Add navigation
+            if (prevBtn) {
+              prevBtn.addEventListener('click', () => {
+                currentIndex = currentIndex > 0 ? currentIndex - 1 : images.length - 1;
+                updateGallery();
+              });
+            }
+            
+            if (nextBtn) {
+              nextBtn.addEventListener('click', () => {
+                currentIndex = currentIndex < images.length - 1 ? currentIndex + 1 : 0;
+                updateGallery();
+              });
+            }
+
+            // Add thumbnail clicks
+            if (thumbsContainer) {
+              const thumbSlides = thumbsContainer.querySelectorAll('.swiper-slide');
+              thumbSlides.forEach((slide, index) => {
+                slide.addEventListener('click', () => {
+                  currentIndex = index;
+                  updateGallery();
+                });
+              });
+            }
+          }
+
+          function updateGallery() {
+            // Update main slides
+            if (mainContainer) {
+              const slides = mainContainer.querySelectorAll('.swiper-slide');
+              slides.forEach((slide, index) => {
+                if (index === currentIndex) {
+                  slide.style.display = 'flex';
+                  slide.style.opacity = '1';
+                  slide.style.zIndex = '10';
+                } else {
+                  slide.style.display = 'none';
+                  slide.style.opacity = '0';
+                  slide.style.zIndex = '1';
+                }
+                // Reset any problematic styles
+                slide.style.width = '100%';
+                slide.style.height = '100%';
+                slide.style.marginRight = '0';
+                slide.style.marginLeft = '0';
+                slide.style.position = 'absolute';
+                slide.style.top = '0';
+                slide.style.left = '0';
+              });
+            }
+            
+            // Update thumbnails
+            if (thumbsContainer) {
+              const thumbSlides = thumbsContainer.querySelectorAll('.swiper-slide');
+              thumbSlides.forEach((slide, index) => {
+                slide.classList.toggle('swiper-slide-thumb-active', index === currentIndex);
+              });
+            }
+          }
+
+          function openAt(index) {
+            console.log('Opening gallery at index:', index);
+            currentIndex = index;
+            lightbox.classList.add('open');
+            document.documentElement.style.overflow = 'hidden';
+            updateGallery();
+          }
+
+          function close() {
+            console.log('Closing gallery');
+            lightbox.classList.remove('open');
+            document.documentElement.style.overflow = '';
+          }
+
+          // Event listeners
+          btnsOpen.forEach(btn => {
+            btn.addEventListener('click', (e) => {
+              e.preventDefault();
+              const index = parseInt(btn.dataset.index, 10) || 0;
+              openAt(index);
+            });
+          });
+          
+          if (btnViewAll) {
+            btnViewAll.addEventListener('click', (e) => {
+              e.preventDefault();
+              openAt(0);
+            });
+          }
+          
+          if (btnClose) {
+            btnClose.addEventListener('click', (e) => {
+              e.preventDefault();
+              close();
+            });
+          }
+          
+          document.addEventListener('keydown', (e) => { 
+            if (e.key === 'Escape') close(); 
+            if (e.key === 'ArrowLeft' && lightbox.classList.contains('open')) {
+              currentIndex = currentIndex > 0 ? currentIndex - 1 : images.length - 1;
+              updateGallery();
+            }
+            if (e.key === 'ArrowRight' && lightbox.classList.contains('open')) {
+              currentIndex = currentIndex < images.length - 1 ? currentIndex + 1 : 0;
+              updateGallery();
+            }
+          });
+
+          // Close on background click
+          lightbox.addEventListener('click', (e) => {
+            if (e.target === lightbox) {
+              close();
+            }
+          });
+
+          // Initialize
+          initGallery();
+          
+          // Hook for "See more photos" button
+          document.querySelector('.tg-see-more')
+            ?.addEventListener('click', () => openAt(0)); // uses your existing openAt()
         });
 
         // FAQ Accordion

@@ -44,7 +44,7 @@ header_template='    <!-- TOPBAR -->
                 <a href="#deals" class="topbar__link">Special Offers</a>
             </div>
             <div class="topbar__right">
-                <a href="tel:+212636372101" class="topbar__link">+212 636-372101</a>
+                <a href="tel:+212601820422" class="topbar__link">+212 601-820422</a>
                 <a href="contact.html" class="topbar__link">Contact</a>
             </div>
         </div>
@@ -62,7 +62,7 @@ header_template='    <!-- TOPBAR -->
                 <a href="contact.html" class="header__nav-link">Contact</a>
             </nav>
             <div class="header__actions">
-                <a href="https://wa.me/212636372101" class="btn btn-whatsapp">WhatsApp Us</a>
+                <a href="https://wa.me/212601820422" class="btn btn-whatsapp">WhatsApp Us</a>
                 <a href="contact.html" class="btn btn-primary">Book Now</a>
             </div>
         </div>

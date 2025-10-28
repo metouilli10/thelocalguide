@@ -8,9 +8,9 @@
     <title>Essaouira Day Trip from Agadir | UNESCO Coastal City Tour (2025)</title>
     
     <!-- CSS Styles -->
-    <link rel="stylesheet" href="css/styles.css">
-    <link rel="stylesheet" href="css/pages.css">
-    <link rel="stylesheet" href="css/updated-styles.css">
+    <link rel="stylesheet" href="css/styles.css?v=20241218-8">
+    <link rel="stylesheet" href="css/pages.css?v=20241218-8">
+    <link rel="stylesheet" href="css/updated-styles.css?v=20241218-8">
     
     <!-- Open Graph Meta Tags -->
     <meta property="og:title" content="Essaouira Day Trip from Agadir | UNESCO Coastal City Tour">
@@ -25,7 +25,7 @@
       "@type": "TouristAttraction",
       "name": "Essaouira Day Trip from Agadir",
       "description": "Full-day excursion to Essaouira, Morocco's charming coastal UNESCO city. Explore Portuguese ramparts, vibrant fishing port, blue & white medina, and Atlantic beaches. Scenic coastal drive with argan cooperative visit.",
-      "image": "https://yourdomain.com/img/morocco-coastal-2.jpg",
+      "image": "https://yourdomain.com/img/excursions/Essaouira Day Trip/essaouira 1.jpg",
       "address": {
         "@type": "PostalAddress",
         "addressLocality": "Essaouira",
@@ -57,9 +57,7 @@
     }
     </script>
     
-    <link rel="stylesheet" href="css/styles.css">
-    <link rel="stylesheet" href="css/pages.css">
-    <link rel="stylesheet" href="css/updated-styles.css">
+    
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -80,43 +78,256 @@
             margin-top: 95px;
         }
         
+        /* Civitatis 5-Photo Layout - Fixed Height Solution */
         .tour-gallery {
+          --gap: 12px; 
+          --radius: 16px; 
+          --black: #000; 
+          --white: #fff; 
+          position: relative;
+        }
+
+        /* --- Sizing: make the whole preview block a known height --- */
+        .tg-preview {
+          /* pick a height that scales: min 260px, grows with viewport, capped for huge screens */
+          height: clamp(260px, 50vw, 520px);
+        }
+
+        /* Grid layout */
+        .tg-grid { 
+          height: 100%; 
             display: grid;
-            grid-template-columns: 2fr 1fr 1fr;
-            grid-template-rows: 250px 250px;
-            gap: 10px;
-            height: 500px;
+          grid-template-columns: 1fr; 
+          gap: 12px; 
+          align-items: stretch;             /* NEW: ensure full height */
         }
         
-        .tour-gallery img {
+        @media (min-width: 768px) {
+          .tg-grid { 
+            grid-template-columns: 2fr 1fr; 
+            grid-template-rows: 1fr;        /* NEW: single row to fill height */
+          }
+          .tg-hero { 
+            grid-row: 1; 
+            grid-column: 1;                 /* NEW: explicit positioning */
+          }
+          .tg-right {
+            grid-row: 1;
+            grid-column: 2;                 /* NEW: explicit positioning */
+          }
+        }
+
+        /* Left big image fills height */
+        .tg-item { 
+          position: relative; 
+          display: block; 
+          overflow: hidden; 
+          border-radius: 16px; 
+          border: 0; 
+          padding: 0; 
+          cursor: pointer; 
+        }
+        
+        .tg-hero, .tg-hero img { 
+          height: 100%; 
+        }
+        
+        .tg-hero img { 
+          width: 100%; 
+          object-fit: cover; 
+          display: block; 
+        }
+
+        /* Right column is a 2×2 grid that ALSO fills the same height */
+        .tg-right {
+          position: relative;
+          height: 100%;                      /* << key */
+          display: grid;
+          grid-template-columns: 1fr 1fr;
+          grid-template-rows: 1fr 1fr;      /* equal halves vertically */
+          gap: 12px;
+          align-items: stretch;             /* NEW: stretch to fill height */
+        }
+        
+        .tg-right .tg-item { 
+          height: 100%; 
+          display: flex;                    /* NEW: flex container */
+        }
+        
+        .tg-right .tg-item img {
             width: 100%;
             height: 100%;
             object-fit: cover;
-            cursor: pointer;
-            transition: all 0.3s ease;
+          display: block;
+          flex: 1;                          /* NEW: fill flex container */
+        }
+
+        /* Hover polish */
+        .tg-item img { 
+          transition: transform .3s ease; 
         }
         
-        .tour-gallery img:hover {
-            opacity: 0.9;
-            transform: scale(1.02);
+        .tg-item:hover img { 
+          transform: scale(1.02); 
         }
-        
-        .tour-gallery .main-image {
-            grid-row: 1 / 3;
-        }
-        
-        .view-all-photos {
+
+        /* See-more pill */
+        .tg-see-more {
             position: absolute;
-            bottom: 20px;
-            right: 20px;
-            background: white;
-            padding: 12px 25px;
-            border-radius: 25px;
-            font-weight: 600;
-            color: #1F2937;
+          right: 16px; 
+          bottom: 16px;
+          display: flex; 
+          align-items: center; 
+          gap: .5rem;
+          padding: 12px 16px; 
+          border-radius: 999px; 
+          border: 0; 
             cursor: pointer;
+          background: #fff; 
+          color: #111; 
+          font-weight: 600;
+          box-shadow: 0 6px 20px rgba(0,0,0,.18);
             z-index: 10;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+        }
+        
+        .tg-see-more .tg-arrow { 
+          font-size: 20px; 
+          line-height: 1; 
+        }
+
+        /* Actions */
+        .tg-actions { 
+          margin-top: 15px; 
+          display: flex; 
+          justify-content: center; 
+        }
+        
+        .tg-view-all {
+          background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+          color: var(--white);
+          padding: 12px 24px; 
+          border: 0; 
+          border-radius: 25px; 
+          cursor: pointer;
+          font-weight: 600;
+          font-size: 14px;
+          box-shadow: 0 4px 15px rgba(102, 126, 234, 0.4);
+          transition: all 0.3s ease;
+        }
+        
+        .tg-view-all:hover {
+          transform: translateY(-2px);
+          box-shadow: 0 6px 20px rgba(102, 126, 234, 0.6);
+        }
+
+        /* Mobile responsive */
+        @media (max-width: 767px) {
+          .tg-preview {
+            height: clamp(200px, 40vw, 400px);
+          }
+          
+          .tg-grid {
+            grid-template-columns: 1fr;
+            grid-template-rows: 2fr 1fr;
+          }
+          
+          .tg-hero {
+            grid-row: 1;
+            grid-column: 1;
+          }
+          
+          .tg-right {
+            grid-row: 2;
+            grid-column: 1;
+            grid-template-columns: 1fr 1fr;
+            grid-template-rows: 1fr 1fr;
+          }
+          
+          .tg-see-more {
+            right: 12px;
+            bottom: 12px;
+            padding: 10px 14px;
+            font-size: 13px;
+          }
+        }
+
+        /* ===== Lightbox ===== */
+        .tg-lightbox {
+          position: fixed; inset: 0; z-index: 9999;
+          background: rgba(0,0,0,.92);
+          display: none; flex-direction: column;
+          color: var(--white);
+        }
+        
+        .tg-lightbox.open { display: flex !important; }
+        
+        .tg-lightbox-header {
+          display: flex; justify-content: space-between; align-items: center;
+          padding: 20px; z-index: 10000;
+        }
+        
+        .tg-hint { font-size: 14px; opacity: 0.8; }
+        
+        .tg-close {
+          background: rgba(255,255,255,0.2); border: 0; color: var(--white);
+          padding: 10px 20px; border-radius: 6px; cursor: pointer;
+          font-size: 16px; font-weight: 600;
+        }
+        
+        .tg-main {
+          flex: 1; position: relative; overflow: hidden;
+          background: rgba(255,255,255,0.1);
+        }
+        
+        .tg-main .swiper-wrapper {
+          position: relative; width: 100%; height: 100%;
+        }
+        
+        .tg-main .swiper-slide {
+          position: absolute; top: 0; left: 0; width: 100%; height: 100%;
+          display: flex; align-items: center; justify-content: center; min-height: 60vh;
+          opacity: 0; transition: opacity 0.3s ease;
+        }
+        
+        .tg-main .swiper-slide[style*="flex"] { opacity: 1; }
+        
+        .tg-main img {
+          max-width: 90%; max-height: 90%; object-fit: contain;
+          display: block;
+        }
+        
+        .tg-prev, .tg-next {
+          position: absolute; top: 50%; transform: translateY(-50%);
+          background: rgba(255,255,255,0.2); border: 0; color: var(--white);
+          width: 50px; height: 50px; border-radius: 50%; cursor: pointer;
+          font-size: 24px; font-weight: bold; z-index: 10;
+        }
+        
+        .tg-prev { left: 20px; }
+        .tg-next { right: 20px; }
+        
+        .tg-thumbs {
+          height: 100px; overflow-x: auto; white-space: nowrap;
+          background: rgba(0,0,0,0.5);
+        }
+        
+        .tg-thumbs .swiper-wrapper {
+          display: flex; gap: 8px; padding: 10px;
+        }
+        
+        .tg-thumbs .swiper-slide {
+          flex-shrink: 0; width: 80px; height: 70px;
+          border-radius: 8px; overflow: hidden; cursor: pointer;
+          border: 2px solid transparent; transition: border-color 0.3s;
+        }
+        
+        .tg-thumbs .swiper-slide-thumb-active {
+          border: 2px solid white;
+        }
+        
+        .tg-thumbs img {
+          height: 100%; width: 100%; object-fit: cover;
+          border-radius: 6px;
         }
         
         .tour-content-wrapper {
@@ -1097,7 +1308,7 @@
                 <a href="#deals" class="topbar__link">Special Offers</a>
             </div>
             <div class="topbar__right">
-                <a href="tel:+212636372101" class="topbar__link">+212 636-372101</a>
+                <a href="tel:+212601820422" class="topbar__link">+212 601-820422</a>
                 <a href="contact.html" class="topbar__link">Contact</a>
             </div>
         </div>
@@ -1113,11 +1324,11 @@
                 <a href="index.html" class="header__nav-link">Home</a>
                 <a href="agadir-tours.html" class="header__nav-link">Agadir Tours</a>
                 <a href="day-trips-from-agadir.html" class="header__nav-link">Day Trips</a>
-                <a href="things-to-do-in-agadir.html" class="header__nav-link">Things to Do</a>
+                <a href="blog.html" class="header__nav-link">Blog</a>
                 <a href="contact.html" class="header__nav-link">Contact</a>
             </nav>
             <div class="header__actions">
-                <a href="https://wa.me/212636372101" class="btn btn-whatsapp">WhatsApp Us</a>
+                <a href="https://wa.me/212601820422" class="btn btn-whatsapp">WhatsApp Us</a>
                 <a href="contact.html" class="btn btn-primary">Book Now</a>
             </div>
         </div>
@@ -1134,15 +1345,106 @@
 
     <!-- Tour Hero Gallery -->
     <section class="tour-detail-hero">
-        <div class="tour-gallery">
-            <!-- Placeholder images - user will upload actual Essaouira photos -->
-            <img src="img/morocco-market.jpg" alt="Essaouira Jemaa el-Fnaa square and souks" class="main-image" data-fancybox="gallery">
-            <img src="img/morocco-heritage-1.jpg" alt="Essaouira Bahia Palace architecture" data-fancybox="gallery">
-            <img src="img/morocco-collage.jpg" alt="Koutoubia Mosque Essaouira landmark" data-fancybox="gallery">
-            <img src="img/berber-village.jpg" alt="Atlas Mountains drive to Essaouira" data-fancybox="gallery">
-            <img src="img/morocco-week-3.jpg" alt="Essaouira medina and souks from Agadir" data-fancybox="gallery">
+        <!-- ✅ TOUR GALLERY -->
+        <div class="tour-gallery" data-count="7">
+          <!-- Preview grid -->
+          <div class="tg-preview">
+            <div class="tg-grid">
+              <!-- Big image (left) -->
+              <button class="tg-item tg-hero" data-index="0" aria-label="Open gallery at photo 1">
+                <img src="img/excursions/Essaouira Day Trip/essaouira 1.jpg" alt="Essaouira Portuguese ramparts and Atlantic Ocean">
+              </button>
+
+              <!-- Right side: 2×2 -->
+              <div class="tg-right">
+                <button class="tg-item" data-index="1" aria-label="Open gallery at photo 2">
+                  <img src="img/excursions/Essaouira Day Trip/essaouira 2.jpg" alt="Essaouira blue and white medina streets">
+                </button>
+                <button class="tg-item" data-index="2" aria-label="Open gallery at photo 3">
+                  <img src="img/excursions/Essaouira Day Trip/essaouira 3.jpeg" alt="Essaouira fishing port with colorful boats">
+                </button>
+                <button class="tg-item" data-index="3" aria-label="Open gallery at photo 4">
+                  <img src="img/excursions/Essaouira Day Trip/essaouira 4.jpeg" alt="Essaouira artisan workshops and souks">
+                </button>
+                <button class="tg-item" data-index="4" aria-label="Open gallery at photo 5">
+                  <img src="img/excursions/Essaouira Day Trip/essaouira 5.jpeg" alt="Essaouira Atlantic coast and beaches">
+                </button>
+
+                <!-- Civitatis-style overlay button -->
+                <button class="tg-see-more" data-index="0" aria-label="Open gallery and view all photos">
+                  <span>See more photos (7)</span><span class="tg-arrow">›</span>
+                </button>
         </div>
-        <button class="view-all-photos">📷 View All Photos (20+)</button>
+            </div>
+          </div>
+
+          <!-- View all button (mobile / general) -->
+          <div class="tg-actions">
+            <button class="tg-view-all" data-index="0" aria-label="Open gallery and view all photos">
+              View all photos
+            </button>
+          </div>
+
+          <!-- Lightbox -->
+          <div class="tg-lightbox" aria-hidden="true" role="dialog" aria-label="Tour photos lightbox">
+            <div class="tg-lightbox-header">
+              <span class="tg-hint">Use arrows or swipe • Press ESC to close</span>
+              <button class="tg-close" aria-label="Close gallery">Close ✕</button>
+            </div>
+            <div class="tg-main">
+              <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                  <img src="img/excursions/Essaouira Day Trip/essaouira 1.jpg" alt="Essaouira Portuguese ramparts and Atlantic Ocean">
+                </div>
+                <div class="swiper-slide">
+                  <img src="img/excursions/Essaouira Day Trip/essaouira 2.jpg" alt="Essaouira blue and white medina streets">
+                </div>
+                <div class="swiper-slide">
+                  <img src="img/excursions/Essaouira Day Trip/essaouira 3.jpeg" alt="Essaouira fishing port with colorful boats">
+                </div>
+                <div class="swiper-slide">
+                  <img src="img/excursions/Essaouira Day Trip/essaouira 4.jpeg" alt="Essaouira artisan workshops and souks">
+                </div>
+                <div class="swiper-slide">
+                  <img src="img/excursions/Essaouira Day Trip/essaouira 5.jpeg" alt="Essaouira Atlantic coast and beaches">
+                </div>
+                <div class="swiper-slide">
+                  <img src="img/excursions/Essaouira Day Trip/essaouira 57.jpeg" alt="Essaouira UNESCO medina architecture">
+                </div>
+                <div class="swiper-slide">
+                  <img src="img/excursions/Essaouira Day Trip/essaouira 6.jpeg" alt="Essaouira coastal views and fortifications">
+                </div>
+              </div>
+              <button class="tg-prev" aria-label="Previous photo">‹</button>
+              <button class="tg-next" aria-label="Next photo">›</button>
+            </div>
+            <div class="tg-thumbs">
+              <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                  <img src="img/excursions/Essaouira Day Trip/essaouira 1.jpg" alt="Essaouira Portuguese ramparts and Atlantic Ocean">
+                </div>
+                <div class="swiper-slide">
+                  <img src="img/excursions/Essaouira Day Trip/essaouira 2.jpg" alt="Essaouira blue and white medina streets">
+                </div>
+                <div class="swiper-slide">
+                  <img src="img/excursions/Essaouira Day Trip/essaouira 3.jpeg" alt="Essaouira fishing port with colorful boats">
+                </div>
+                <div class="swiper-slide">
+                  <img src="img/excursions/Essaouira Day Trip/essaouira 4.jpeg" alt="Essaouira artisan workshops and souks">
+                </div>
+                <div class="swiper-slide">
+                  <img src="img/excursions/Essaouira Day Trip/essaouira 5.jpeg" alt="Essaouira Atlantic coast and beaches">
+                </div>
+                <div class="swiper-slide">
+                  <img src="img/excursions/Essaouira Day Trip/essaouira 57.jpeg" alt="Essaouira UNESCO medina architecture">
+                </div>
+                <div class="swiper-slide">
+                  <img src="img/excursions/Essaouira Day Trip/essaouira 6.jpeg" alt="Essaouira coastal views and fortifications">
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
     </section>
 
     <!-- Tour Content -->
@@ -1678,7 +1980,7 @@
                 <p style="font-size: 1.1rem; margin-bottom: 25px; opacity: 0.95;">Book your Essaouira day trip from Agadir today - tick this bucket-list city off your Morocco itinerary!</p>
                 <div style="display: flex; gap: 15px; justify-content: center; flex-wrap: wrap;">
                     <a href="contact.html" style="background: #cdff03; color: #000000; padding: 16px 32px; border-radius: 6px; text-decoration: none; font-weight: 700; font-size: 1.1rem; display: inline-block;">Book Now</a>
-                    <a href="https://wa.me/212636372101?text=Hi! I'm interested in the Essaouira day trip from Agadir" target="_blank" style="background: #8449f2; color: white; padding: 16px 32px; border-radius: 6px; text-decoration: none; font-weight: 700; font-size: 1.1rem; display: inline-block;">Book via WhatsApp</a>
+                    <a href="https://wa.me/212601820422?text=Hi! I'm interested in the Essaouira day trip from Agadir" target="_blank" style="background: #8449f2; color: white; padding: 16px 32px; border-radius: 6px; text-decoration: none; font-weight: 700; font-size: 1.1rem; display: inline-block;">Book via WhatsApp</a>
                 </div>
             </div>
         </div>
@@ -1742,11 +2044,11 @@
                     <h4 class="footer__title">About Us</h4>
                     <ul class="footer__links">
                         <li><a href="index.html" class="footer__link">Home</a></li>
-                        <li><a href="things-to-do-in-agadir.html" class="footer__link">Things to Do</a></li>
+                        <li><a href="blog.html" class="footer__link">Blog</a></li>
                         <li><a href="#deals" class="footer__link">Special Offers</a></li>
                         <li><a href="contact.html" class="footer__link">Contact Us</a></li>
-                        <li><a href="tel:+212636372101" class="footer__link">Call Us</a></li>
-                        <li><a href="https://wa.me/212636372101" class="footer__link">WhatsApp</a></li>
+                        <li><a href="tel:+212601820422" class="footer__link">Call Us</a></li>
+                        <li><a href="https://wa.me/212601820422" class="footer__link">WhatsApp</a></li>
                     </ul>
                 </div>
 
@@ -1785,7 +2087,7 @@
                         <span class="footer__separator">|</span>
                         <a href="contact.html" class="footer__legal-link">Booking Policy</a>
                         <span class="footer__separator">|</span>
-                        <a href="tel:+212636372101" class="footer__legal-link">+212 636-372101</a>
+                        <a href="tel:+212601820422" class="footer__legal-link">+212 601-820422</a>
                     </div>
                 </div>
                 <div class="footer__bottom-right">
@@ -1822,6 +2124,124 @@
         // View all photos button
         $('.view-all-photos').on('click', function() {
             $('.tour-gallery img').first().trigger('click');
+        });
+
+        // Custom Gallery System
+        document.addEventListener('DOMContentLoaded', function() {
+          const root = document.querySelector('.tour-gallery');
+          if (!root) return;
+
+          const lightbox = root.querySelector('.tg-lightbox');
+          const mainContainer = lightbox?.querySelector('.tg-main .swiper-wrapper');
+          const thumbsContainer = lightbox?.querySelector('.tg-thumbs .swiper-wrapper');
+          const buttons = root.querySelectorAll('.tg-item, .tg-view-all, .tg-see-more');
+          const prevBtn = lightbox?.querySelector('.tg-prev');
+          const nextBtn = lightbox?.querySelector('.tg-next');
+          const closeBtn = lightbox?.querySelector('.tg-close');
+
+          let currentIndex = 0;
+          const images = [
+            'img/excursions/Essaouira Day Trip/essaouira 1.jpg',
+            'img/excursions/Essaouira Day Trip/essaouira 2.jpg',
+            'img/excursions/Essaouira Day Trip/essaouira 3.jpeg',
+            'img/excursions/Essaouira Day Trip/essaouira 4.jpeg',
+            'img/excursions/Essaouira Day Trip/essaouira 5.jpeg',
+            'img/excursions/Essaouira Day Trip/essaouira 57.jpeg',
+            'img/excursions/Essaouira Day Trip/essaouira 6.jpeg'
+          ];
+
+          function updateGallery() {
+            if (mainContainer) {
+              const slides = mainContainer.querySelectorAll('.swiper-slide');
+              slides.forEach((slide, index) => {
+                if (index === currentIndex) {
+                  slide.style.display = 'flex';
+                  slide.style.opacity = '1';
+                  slide.style.zIndex = '10';
+                } else {
+                  slide.style.display = 'none';
+                  slide.style.opacity = '0';
+                  slide.style.zIndex = '1';
+                }
+                // Reset any problematic styles
+                slide.style.width = '100%';
+                slide.style.height = '100%';
+                slide.style.marginRight = '0';
+                slide.style.marginLeft = '0';
+                slide.style.position = 'absolute';
+                slide.style.top = '0';
+                slide.style.left = '0';
+              });
+            }
+
+            if (thumbsContainer) {
+              const thumbSlides = thumbsContainer.querySelectorAll('.swiper-slide');
+              thumbSlides.forEach((slide, index) => {
+                slide.classList.toggle('swiper-slide-thumb-active', index === currentIndex);
+              });
+            }
+          }
+
+          function openAt(index) {
+            currentIndex = index;
+            updateGallery();
+            if (lightbox) {
+              lightbox.classList.add('open');
+              document.body.style.overflow = 'hidden';
+            }
+          }
+
+          function close() {
+            if (lightbox) {
+              lightbox.classList.remove('open');
+              document.body.style.overflow = '';
+            }
+          }
+
+          function next() {
+            currentIndex = (currentIndex + 1) % images.length;
+            updateGallery();
+          }
+
+          function prev() {
+            currentIndex = (currentIndex - 1 + images.length) % images.length;
+            updateGallery();
+          }
+
+          // Event listeners
+          buttons.forEach((btn, index) => {
+            btn.addEventListener('click', (e) => {
+              e.preventDefault();
+              const targetIndex = parseInt(btn.dataset.index) || index;
+              openAt(targetIndex);
+            });
+          });
+
+          prevBtn?.addEventListener('click', prev);
+          nextBtn?.addEventListener('click', next);
+          closeBtn?.addEventListener('click', close);
+
+          // Keyboard navigation
+          document.addEventListener('keydown', (e) => {
+            if (!lightbox?.classList.contains('open')) return;
+            if (e.key === 'Escape') close();
+            if (e.key === 'ArrowLeft') prev();
+            if (e.key === 'ArrowRight') next();
+          });
+
+          // Close on backdrop click
+          lightbox?.addEventListener('click', (e) => {
+            if (e.target === lightbox) {
+              close();
+            }
+          });
+
+          // Initialize
+          updateGallery();
+          
+          // Hook for "See more photos" button
+          document.querySelector('.tg-see-more')
+            ?.addEventListener('click', () => openAt(0)); // uses your existing openAt()
         });
 
         // FAQ Accordion

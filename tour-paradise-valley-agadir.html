@@ -8,14 +8,9 @@
     <title>Paradise Valley Agadir Tour | Half-Day Trip from Agadir (2025)</title>
     
     <!-- CSS Styles -->
-    <link rel="stylesheet" href="css/styles.css">
-    <link rel="stylesheet" href="css/pages.css">
-    <link rel="stylesheet" href="css/updated-styles.css">
-    
-    <!-- CSS Styles -->
-    <link rel="stylesheet" href="css/styles.css">
-    <link rel="stylesheet" href="css/pages.css">
-    <link rel="stylesheet" href="css/updated-styles.css">
+    <link rel="stylesheet" href="css/styles.css?v=20241218-22">
+    <link rel="stylesheet" href="css/pages.css?v=20241218-22">
+    <link rel="stylesheet" href="css/updated-styles.css?v=20241218-22">
     
     <!-- Open Graph Meta Tags -->
     <meta property="og:title" content="Paradise Valley Agadir Tour | Half-Day Trip from Agadir">
@@ -30,7 +25,7 @@
       "@type": "TouristAttraction",
       "name": "Paradise Valley Agadir Tour",
       "description": "Discover Paradise Valley on this half-day tour from Agadir. Swim in natural pools, explore palm groves, and enjoy the stunning Atlas Mountains.",
-      "image": "https://yourdomain.com/img/paradise-valley.jpg",
+      "image": "https://yourdomain.com/img/excursions/Paradise Valley/paradise 1.jpeg",
       "address": {
         "@type": "PostalAddress",
         "addressLocality": "Agadir",
@@ -62,9 +57,6 @@
     }
     </script>
     
-    <link rel="stylesheet" href="css/styles.css">
-    <link rel="stylesheet" href="css/pages.css">
-    <link rel="stylesheet" href="css/updated-styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -78,50 +70,229 @@
             font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Lato', 'Helvetica Neue', Arial, sans-serif;
         }
         
-        .tour-detail-hero {
-            position: relative;
-            height: 500px;
-            overflow: hidden;
-            margin-top: 95px;
-        }
+        .tour-detail-hero { position: relative; height: auto; overflow: hidden; margin-top: 95px; }
         
+        /* Civitatis 5-Photo Layout CSS */
         .tour-gallery {
-            display: grid;
-            grid-template-columns: 2fr 1fr 1fr;
-            grid-template-rows: 250px 250px;
-            gap: 10px;
-            height: 500px;
+            --gap: 12px;
+            --radius: 16px;
+            --black: #000;
+            --white: #fff;
         }
         
-        .tour-gallery img {
+        .tg-preview {
+            height: clamp(260px, 50vw, 520px);
+        }
+        
+        .tg-grid {
+            height: 100%;
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 12px;
+        }
+        
+        @media (min-width: 768px) {
+            .tg-grid {
+                grid-template-columns: 2fr 1fr;
+            }
+            .tg-hero {
+                grid-row: 1 / span 2;
+            }
+        }
+        
+        .tg-item {
+            position: relative;
+            display: block;
+            overflow: hidden;
+            border-radius: var(--radius);
+            border: 0;
+            padding: 0;
+            cursor: pointer;
+        }
+        
+        .tg-item img {
             width: 100%;
             height: 100%;
             object-fit: cover;
-            cursor: pointer;
-            transition: all 0.3s ease;
+            display: block;
+            transition: transform 0.3s;
         }
         
-        .tour-gallery img:hover {
-            opacity: 0.9;
+        .tg-item:hover img {
             transform: scale(1.02);
         }
         
-        .tour-gallery .main-image {
-            grid-row: 1 / 3;
+        .tg-hero, .tg-hero img {
+            height: 100%;
         }
         
-        .view-all-photos {
+        .tg-right {
+            position: relative;
+            height: 100%;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            grid-template-rows: 1fr 1fr;
+            gap: 12px;
+        }
+        
+        .tg-right .tg-item {
+            height: 100%;
+        }
+        
+        .tg-right .tg-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+        }
+        
+        .tg-see-more {
             position: absolute;
-            bottom: 20px;
-            right: 20px;
-            background: white;
-            padding: 12px 25px;
-            border-radius: 6px;
+            right: 16px;
+            bottom: 16px;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 12px 16px;
+            border-radius: 999px;
+            border: 0;
+            cursor: pointer;
+            background: #fff;
+            color: #111;
             font-weight: 600;
-            color: #1F2937;
+            box-shadow: 0 6px 20px rgba(0,0,0,0.18);
+        }
+        
+        .tg-see-more .tg-arrow {
+            font-size: 20px;
+            line-height: 1;
+        }
+        
+        /* Lightbox Styles */
+        .tg-lightbox {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 9999;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .tg-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.9);
+        }
+        
+        .tg-container {
+            position: relative;
+            width: 90%;
+            height: 90%;
+            max-width: 1200px;
+            max-height: 800px;
+            background: white;
+            border-radius: 12px;
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+        }
+        
+        .tg-close {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            background: rgba(0, 0, 0, 0.5);
+            color: white;
+            border: none;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            font-size: 24px;
             cursor: pointer;
             z-index: 10;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .tg-main {
+            flex: 1;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .tg-main .swiper-slide {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .tg-main .swiper-slide img {
+            max-width: 100%;
+            max-height: 100%;
+            object-fit: contain;
+        }
+        
+        .tg-thumbs {
+            height: 120px;
+            background: #f5f5f5;
+            border-top: 1px solid #e0e0e0;
+        }
+        
+        .tg-thumbs .swiper-slide {
+            width: 120px;
+            height: 100%;
+            cursor: pointer;
+            opacity: 0.6;
+            transition: opacity 0.3s;
+        }
+        
+        .tg-thumbs .swiper-slide.active {
+            opacity: 1;
+        }
+        
+        .tg-thumbs .swiper-slide img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        
+        .swiper-button-prev,
+        .swiper-button-next {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 50px;
+            height: 50px;
+            background: rgba(0, 0, 0, 0.5);
+            color: white;
+            border: none;
+            border-radius: 50%;
+            cursor: pointer;
+            z-index: 10;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 20px;
+        }
+        
+        .swiper-button-prev {
+            left: 20px;
+        }
+        
+        .swiper-button-next {
+            right: 20px;
         }
         
         .tour-content-wrapper {
@@ -1099,7 +1270,7 @@
                 <a href="#deals" class="topbar__link">Special Offers</a>
             </div>
             <div class="topbar__right">
-                <a href="tel:+212636372101" class="topbar__link">+212 636-372101</a>
+                <a href="tel:+212601820422" class="topbar__link">+212 601-820422</a>
                 <a href="contact.html" class="topbar__link">Contact</a>
             </div>
         </div>
@@ -1115,11 +1286,11 @@
                 <a href="index.html" class="header__nav-link">Home</a>
                 <a href="agadir-tours.html" class="header__nav-link">Agadir Tours</a>
                 <a href="day-trips-from-agadir.html" class="header__nav-link">Day Trips</a>
-                <a href="things-to-do-in-agadir.html" class="header__nav-link">Things to Do</a>
+                <a href="blog.html" class="header__nav-link">Blog</a>
                 <a href="contact.html" class="header__nav-link">Contact</a>
             </nav>
             <div class="header__actions">
-                <a href="https://wa.me/212636372101" class="btn btn-whatsapp">WhatsApp Us</a>
+                <a href="https://wa.me/212601820422" class="btn btn-whatsapp">WhatsApp Us</a>
                 <a href="contact.html" class="btn btn-primary">Book Now</a>
             </div>
         </div>
@@ -1137,15 +1308,235 @@
 
     <!-- Tour Hero Gallery -->
     <section class="tour-detail-hero">
-        <div class="tour-gallery">
-            <!-- Placeholder images - user will upload actual photos -->
-            <img src="img/paradise-valley.jpg" alt="Paradise Valley Agadir natural pools and palm trees" class="main-image" data-fancybox="gallery">
-            <img src="img/morocco-heritage-1.jpg" alt="Swimming in Paradise Valley natural pools" data-fancybox="gallery">
-            <img src="img/morocco-horizon-4.jpg" alt="Paradise Valley Morocco hiking trails" data-fancybox="gallery">
-            <img src="img/morocco-coastal-2.jpg" alt="Paradise Valley Atlas Mountains view" data-fancybox="gallery">
-            <img src="img/morocco-week-3.jpg" alt="Paradise Valley Agadir excursion experience" data-fancybox="gallery">
+        <div class="tour-gallery" data-count="30">
+            <div class="tg-preview">
+                <div class="tg-grid">
+                    <!-- Big image (left) -->
+                    <button class="tg-item tg-hero" data-index="0" aria-label="Open gallery at photo 1">
+                        <img src="img/excursions/Paradise Valley/paradise 1.jpeg" alt="Paradise Valley Agadir natural pools and palm trees">
+                    </button>
+
+                    <!-- Right side: 2×2 -->
+                    <div class="tg-right">
+                        <button class="tg-item" data-index="1" aria-label="Open gallery at photo 2">
+                            <img src="img/excursions/Paradise Valley/paradise 2.jpeg" alt="Swimming in Paradise Valley natural pools">
+                        </button>
+                        <button class="tg-item" data-index="2" aria-label="Open gallery at photo 3">
+                            <img src="img/excursions/Paradise Valley/paradise 3.jpeg" alt="Paradise Valley Morocco hiking trails">
+                        </button>
+                        <button class="tg-item" data-index="3" aria-label="Open gallery at photo 4">
+                            <img src="img/excursions/Paradise Valley/paradise 4.jpeg" alt="Paradise Valley Atlas Mountains view">
+                        </button>
+                        <button class="tg-item" data-index="4" aria-label="Open gallery at photo 5">
+                            <img src="img/excursions/Paradise Valley/paradise 5.jpeg" alt="Paradise Valley Agadir excursion experience">
+                        </button>
+                        <!-- Civitatis-style overlay button -->
+                        <button class="tg-see-more" data-index="0" aria-label="Open gallery and view all photos">
+                            <span>See more photos (30)</span><span class="tg-arrow">›</span>
+                        </button>
         </div>
-        <button class="view-all-photos">📷 View All Photos (12)</button>
+                </div>
+            </div>
+
+            <!-- Lightbox -->
+            <div class="tg-lightbox" style="display: none;">
+                <div class="tg-overlay"></div>
+                <div class="tg-container">
+                    <button class="tg-close" aria-label="Close gallery">×</button>
+                    <div class="tg-main">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide">
+                                <img src="img/excursions/Paradise Valley/paradise 1.jpeg" alt="Paradise Valley Agadir natural pools and palm trees">
+                            </div>
+                            <div class="swiper-slide">
+                                <img src="img/excursions/Paradise Valley/paradise 2.jpeg" alt="Swimming in Paradise Valley natural pools">
+                            </div>
+                            <div class="swiper-slide">
+                                <img src="img/excursions/Paradise Valley/paradise 3.jpeg" alt="Paradise Valley Morocco hiking trails">
+                            </div>
+                            <div class="swiper-slide">
+                                <img src="img/excursions/Paradise Valley/paradise 4.jpeg" alt="Paradise Valley Atlas Mountains view">
+                            </div>
+                            <div class="swiper-slide">
+                                <img src="img/excursions/Paradise Valley/paradise 5.jpeg" alt="Paradise Valley Agadir excursion experience">
+                            </div>
+                            <div class="swiper-slide">
+                                <img src="img/excursions/Paradise Valley/paradise 6.jpeg" alt="Crystal clear natural pools Paradise Valley">
+                            </div>
+                            <div class="swiper-slide">
+                                <img src="img/excursions/Paradise Valley/paradise 7.jpeg" alt="Paradise Valley Morocco natural swimming pools">
+                            </div>
+                            <div class="swiper-slide">
+                                <img src="img/excursions/Paradise Valley/paradise 8.jpeg" alt="Paradise Valley Agadir palm groves and waterfalls">
+                            </div>
+                            <div class="swiper-slide">
+                                <img src="img/excursions/Paradise Valley/paradise 9.jpeg" alt="Paradise Valley Morocco rock formations">
+                            </div>
+                            <div class="swiper-slide">
+                                <img src="img/excursions/Paradise Valley/paradise 10.jpeg" alt="Paradise Valley Agadir mountain springs">
+                            </div>
+                            <div class="swiper-slide">
+                                <img src="img/excursions/Paradise Valley/paradise 11.jpeg" alt="Paradise Valley Morocco turquoise pools">
+                            </div>
+                            <div class="swiper-slide">
+                                <img src="img/excursions/Paradise Valley/paradise 12.jpeg" alt="Paradise Valley Agadir natural oasis">
+                            </div>
+                            <div class="swiper-slide">
+                                <img src="img/excursions/Paradise Valley/paradise 13.jpeg" alt="Paradise Valley Morocco hiking adventure">
+                            </div>
+                            <div class="swiper-slide">
+                                <img src="img/excursions/Paradise Valley/paradise 14.jpeg" alt="Paradise Valley Agadir scenic views">
+                            </div>
+                            <div class="swiper-slide">
+                                <img src="img/excursions/Paradise Valley/paradise 15.jpeg" alt="Paradise Valley Morocco natural beauty">
+                            </div>
+                            <div class="swiper-slide">
+                                <img src="img/excursions/Paradise Valley/paradise 16.jpeg" alt="Paradise Valley Agadir crystal clear water">
+                            </div>
+                            <div class="swiper-slide">
+                                <img src="img/excursions/Paradise Valley/paradise 17.jpeg" alt="Paradise Valley Morocco palm trees">
+                            </div>
+                            <div class="swiper-slide">
+                                <img src="img/excursions/Paradise Valley/paradise 18.jpeg" alt="Paradise Valley Agadir mountain landscape">
+                            </div>
+                            <div class="swiper-slide">
+                                <img src="img/excursions/Paradise Valley/paradise 19.jpeg" alt="Paradise Valley Morocco natural pools">
+                            </div>
+                            <div class="swiper-slide">
+                                <img src="img/excursions/Paradise Valley/paradise 20.jpeg" alt="Paradise Valley Agadir hiking trails">
+                            </div>
+                            <div class="swiper-slide">
+                                <img src="img/excursions/Paradise Valley/paradise 21.jpeg" alt="Paradise Valley Morocco scenic beauty">
+                            </div>
+                            <div class="swiper-slide">
+                                <img src="img/excursions/Paradise Valley/paradise 22.jpeg" alt="Paradise Valley Agadir natural wonder">
+                            </div>
+                            <div class="swiper-slide">
+                                <img src="img/excursions/Paradise Valley/paradise 23.jpeg" alt="Paradise Valley Morocco mountain oasis">
+                            </div>
+                            <div class="swiper-slide">
+                                <img src="img/excursions/Paradise Valley/paradise 24.jpeg" alt="Paradise Valley Agadir natural paradise">
+                            </div>
+                            <div class="swiper-slide">
+                                <img src="img/excursions/Paradise Valley/paradise 25.jpeg" alt="Paradise Valley Morocco hiking experience">
+                            </div>
+                            <div class="swiper-slide">
+                                <img src="img/excursions/Paradise Valley/paradise 26.jpeg" alt="Paradise Valley Agadir natural pools">
+                            </div>
+                            <div class="swiper-slide">
+                                <img src="img/excursions/Paradise Valley/paradise 27.jpeg" alt="Paradise Valley Morocco scenic views">
+                            </div>
+                            <div class="swiper-slide">
+                                <img src="img/excursions/Paradise Valley/paradise 28.jpeg" alt="Paradise Valley Agadir mountain springs">
+                            </div>
+                            <div class="swiper-slide">
+                                <img src="img/excursions/Paradise Valley/paradise 29.jpeg" alt="Paradise Valley Morocco natural beauty">
+                            </div>
+                            <div class="swiper-slide">
+                                <img src="img/excursions/Paradise Valley/paradise 30.jpeg" alt="Paradise Valley Agadir natural oasis">
+                            </div>
+                        </div>
+                        <!-- If we need navigation buttons -->
+                        <div class="swiper-button-prev"></div>
+                        <div class="swiper-button-next"></div>
+                    </div>
+                    <div class="tg-thumbs">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide">
+                                <img src="img/excursions/Paradise Valley/paradise 1.jpeg" alt="Paradise Valley Agadir natural pools and palm trees">
+                            </div>
+                            <div class="swiper-slide">
+                                <img src="img/excursions/Paradise Valley/paradise 2.jpeg" alt="Swimming in Paradise Valley natural pools">
+                            </div>
+                            <div class="swiper-slide">
+                                <img src="img/excursions/Paradise Valley/paradise 3.jpeg" alt="Paradise Valley Morocco hiking trails">
+                            </div>
+                            <div class="swiper-slide">
+                                <img src="img/excursions/Paradise Valley/paradise 4.jpeg" alt="Paradise Valley Atlas Mountains view">
+                            </div>
+                            <div class="swiper-slide">
+                                <img src="img/excursions/Paradise Valley/paradise 5.jpeg" alt="Paradise Valley Agadir excursion experience">
+                            </div>
+                            <div class="swiper-slide">
+                                <img src="img/excursions/Paradise Valley/paradise 6.jpeg" alt="Crystal clear natural pools Paradise Valley">
+                            </div>
+                            <div class="swiper-slide">
+                                <img src="img/excursions/Paradise Valley/paradise 7.jpeg" alt="Paradise Valley Morocco natural swimming pools">
+                            </div>
+                            <div class="swiper-slide">
+                                <img src="img/excursions/Paradise Valley/paradise 8.jpeg" alt="Paradise Valley Agadir palm groves and waterfalls">
+                            </div>
+                            <div class="swiper-slide">
+                                <img src="img/excursions/Paradise Valley/paradise 9.jpeg" alt="Paradise Valley Morocco rock formations">
+                            </div>
+                            <div class="swiper-slide">
+                                <img src="img/excursions/Paradise Valley/paradise 10.jpeg" alt="Paradise Valley Agadir mountain springs">
+                            </div>
+                            <div class="swiper-slide">
+                                <img src="img/excursions/Paradise Valley/paradise 11.jpeg" alt="Paradise Valley Morocco turquoise pools">
+                            </div>
+                            <div class="swiper-slide">
+                                <img src="img/excursions/Paradise Valley/paradise 12.jpeg" alt="Paradise Valley Agadir natural oasis">
+                            </div>
+                            <div class="swiper-slide">
+                                <img src="img/excursions/Paradise Valley/paradise 13.jpeg" alt="Paradise Valley Morocco hiking adventure">
+                            </div>
+                            <div class="swiper-slide">
+                                <img src="img/excursions/Paradise Valley/paradise 14.jpeg" alt="Paradise Valley Agadir scenic views">
+                            </div>
+                            <div class="swiper-slide">
+                                <img src="img/excursions/Paradise Valley/paradise 15.jpeg" alt="Paradise Valley Morocco natural beauty">
+                            </div>
+                            <div class="swiper-slide">
+                                <img src="img/excursions/Paradise Valley/paradise 16.jpeg" alt="Paradise Valley Agadir crystal clear water">
+                            </div>
+                            <div class="swiper-slide">
+                                <img src="img/excursions/Paradise Valley/paradise 17.jpeg" alt="Paradise Valley Morocco palm trees">
+                            </div>
+                            <div class="swiper-slide">
+                                <img src="img/excursions/Paradise Valley/paradise 18.jpeg" alt="Paradise Valley Agadir mountain landscape">
+                            </div>
+                            <div class="swiper-slide">
+                                <img src="img/excursions/Paradise Valley/paradise 19.jpeg" alt="Paradise Valley Morocco natural pools">
+                            </div>
+                            <div class="swiper-slide">
+                                <img src="img/excursions/Paradise Valley/paradise 20.jpeg" alt="Paradise Valley Agadir hiking trails">
+                            </div>
+                            <div class="swiper-slide">
+                                <img src="img/excursions/Paradise Valley/paradise 21.jpeg" alt="Paradise Valley Morocco scenic beauty">
+                            </div>
+                            <div class="swiper-slide">
+                                <img src="img/excursions/Paradise Valley/paradise 22.jpeg" alt="Paradise Valley Agadir natural wonder">
+                            </div>
+                            <div class="swiper-slide">
+                                <img src="img/excursions/Paradise Valley/paradise 23.jpeg" alt="Paradise Valley Morocco mountain oasis">
+                            </div>
+                            <div class="swiper-slide">
+                                <img src="img/excursions/Paradise Valley/paradise 24.jpeg" alt="Paradise Valley Agadir natural paradise">
+                            </div>
+                            <div class="swiper-slide">
+                                <img src="img/excursions/Paradise Valley/paradise 25.jpeg" alt="Paradise Valley Morocco hiking experience">
+                            </div>
+                            <div class="swiper-slide">
+                                <img src="img/excursions/Paradise Valley/paradise 26.jpeg" alt="Paradise Valley Agadir natural pools">
+                            </div>
+                            <div class="swiper-slide">
+                                <img src="img/excursions/Paradise Valley/paradise 27.jpeg" alt="Paradise Valley Morocco scenic views">
+                            </div>
+                            <div class="swiper-slide">
+                                <img src="img/excursions/Paradise Valley/paradise 28.jpeg" alt="Paradise Valley Agadir mountain springs">
+                            </div>
+                            <div class="swiper-slide">
+                                <img src="img/excursions/Paradise Valley/paradise 29.jpeg" alt="Paradise Valley Morocco natural beauty">
+                            </div>
+                            <div class="swiper-slide">
+                                <img src="img/excursions/Paradise Valley/paradise 30.jpeg" alt="Paradise Valley Agadir natural oasis">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
     </section>
 
     <!-- Tour Content -->
@@ -1712,11 +2103,11 @@
                     <h4 class="footer__title">About Us</h4>
                     <ul class="footer__links">
                         <li><a href="index.html" class="footer__link">Home</a></li>
-                        <li><a href="things-to-do-in-agadir.html" class="footer__link">Things to Do</a></li>
+                        <li><a href="blog.html" class="footer__link">Blog</a></li>
                         <li><a href="#deals" class="footer__link">Special Offers</a></li>
                         <li><a href="contact.html" class="footer__link">Contact Us</a></li>
-                        <li><a href="tel:+212636372101" class="footer__link">Call Us</a></li>
-                        <li><a href="https://wa.me/212636372101" class="footer__link">WhatsApp</a></li>
+                        <li><a href="tel:+212601820422" class="footer__link">Call Us</a></li>
+                        <li><a href="https://wa.me/212601820422" class="footer__link">WhatsApp</a></li>
                     </ul>
                 </div>
 
@@ -1755,7 +2146,7 @@
                         <span class="footer__separator">|</span>
                         <a href="contact.html" class="footer__legal-link">Booking Policy</a>
                         <span class="footer__separator">|</span>
-                        <a href="tel:+212636372101" class="footer__legal-link">+212 636-372101</a>
+                        <a href="tel:+212601820422" class="footer__legal-link">+212 601-820422</a>
                     </div>
                 </div>
                 <div class="footer__bottom-right">
@@ -1778,39 +2169,143 @@
     <script src="js/main.js"></script>
     
     <script>
-        // Initialize Fancybox for gallery
-        $('[data-fancybox="gallery"]').fancybox({
-            buttons: [
-                "zoom",
-                "slideShow",
-                "thumbs",
-                "close"
-            ],
-            loop: true,
-            protect: true
-        });
-
-        // View all photos button
-        $('.view-all-photos').on('click', function() {
-            $('.tour-gallery img').first().trigger('click');
-        });
-
-        // FAQ Accordion
-        $('.faq-question').on('click', function() {
-            const faqItem = $(this).parent();
-            const wasActive = faqItem.hasClass('active');
+        document.addEventListener('DOMContentLoaded', function() {
+            const images = [
+                'img/excursions/Paradise Valley/paradise 1.jpeg',
+                'img/excursions/Paradise Valley/paradise 2.jpeg',
+                'img/excursions/Paradise Valley/paradise 3.jpeg',
+                'img/excursions/Paradise Valley/paradise 4.jpeg',
+                'img/excursions/Paradise Valley/paradise 5.jpeg',
+                'img/excursions/Paradise Valley/paradise 6.jpeg',
+                'img/excursions/Paradise Valley/paradise 7.jpeg',
+                'img/excursions/Paradise Valley/paradise 8.jpeg',
+                'img/excursions/Paradise Valley/paradise 9.jpeg',
+                'img/excursions/Paradise Valley/paradise 10.jpeg',
+                'img/excursions/Paradise Valley/paradise 11.jpeg',
+                'img/excursions/Paradise Valley/paradise 12.jpeg',
+                'img/excursions/Paradise Valley/paradise 13.jpeg',
+                'img/excursions/Paradise Valley/paradise 14.jpeg',
+                'img/excursions/Paradise Valley/paradise 15.jpeg',
+                'img/excursions/Paradise Valley/paradise 16.jpeg',
+                'img/excursions/Paradise Valley/paradise 17.jpeg',
+                'img/excursions/Paradise Valley/paradise 18.jpeg',
+                'img/excursions/Paradise Valley/paradise 19.jpeg',
+                'img/excursions/Paradise Valley/paradise 20.jpeg',
+                'img/excursions/Paradise Valley/paradise 21.jpeg',
+                'img/excursions/Paradise Valley/paradise 22.jpeg',
+                'img/excursions/Paradise Valley/paradise 23.jpeg',
+                'img/excursions/Paradise Valley/paradise 24.jpeg',
+                'img/excursions/Paradise Valley/paradise 25.jpeg',
+                'img/excursions/Paradise Valley/paradise 26.jpeg',
+                'img/excursions/Paradise Valley/paradise 27.jpeg',
+                'img/excursions/Paradise Valley/paradise 28.jpeg',
+                'img/excursions/Paradise Valley/paradise 29.jpeg',
+                'img/excursions/Paradise Valley/paradise 30.jpeg'
+            ];
             
-            // Close all FAQ items
-            $('.faq-item').removeClass('active');
+            let currentIndex = 0;
+            const lightbox = document.querySelector('.tg-lightbox');
+            const mainSlides = document.querySelectorAll('.tg-main .swiper-slide');
+            const thumbSlides = document.querySelectorAll('.tg-thumbs .swiper-slide');
+            const prevBtn = document.querySelector('.swiper-button-prev');
+            const nextBtn = document.querySelector('.swiper-button-next');
+            const closeBtn = document.querySelector('.tg-close');
+            const overlay = document.querySelector('.tg-overlay');
             
-            // Open clicked item if it wasn't already open
-            if (!wasActive) {
-                faqItem.addClass('active');
+            // Open gallery
+            function openGallery(index = 0) {
+                currentIndex = index;
+                lightbox.style.display = 'flex';
+                document.body.style.overflow = 'hidden';
+                showSlide(currentIndex);
             }
+            
+            // Close gallery
+            function closeGallery() {
+                lightbox.style.display = 'none';
+                document.body.style.overflow = '';
+            }
+            
+            // Show specific slide
+            function showSlide(index) {
+                // Hide all slides
+                mainSlides.forEach(slide => {
+                    slide.style.display = 'none';
+                    slide.style.opacity = '0';
+                    slide.style.zIndex = '1';
+                });
+                
+                // Show current slide
+                if (mainSlides[index]) {
+                    mainSlides[index].style.display = 'flex';
+                    mainSlides[index].style.opacity = '1';
+                    mainSlides[index].style.zIndex = '2';
+                }
+                
+                // Update thumbnails
+                thumbSlides.forEach((thumb, i) => {
+                    thumb.classList.toggle('active', i === index);
+                });
+            }
+            
+            // Previous slide
+            function prevSlide() {
+                currentIndex = currentIndex > 0 ? currentIndex - 1 : images.length - 1;
+                showSlide(currentIndex);
+            }
+            
+            // Next slide
+            function nextSlide() {
+                currentIndex = currentIndex < images.length - 1 ? currentIndex + 1 : 0;
+                showSlide(currentIndex);
+            }
+            
+            // Event listeners
+            document.querySelectorAll('.tg-item').forEach((item, index) => {
+                item.addEventListener('click', (e) => {
+                    e.preventDefault();
+                    openGallery(index);
+                });
+            });
+            
+            document.querySelector('.tg-see-more').addEventListener('click', (e) => {
+                e.preventDefault();
+                openGallery(0);
+            });
+            
+            if (prevBtn) prevBtn.addEventListener('click', prevSlide);
+            if (nextBtn) nextBtn.addEventListener('click', nextSlide);
+            if (closeBtn) closeBtn.addEventListener('click', closeGallery);
+            if (overlay) overlay.addEventListener('click', closeGallery);
+            
+            // Thumbnail clicks
+            thumbSlides.forEach((thumb, index) => {
+                thumb.addEventListener('click', () => {
+                    currentIndex = index;
+                    showSlide(currentIndex);
+                });
+            });
+            
+            // Keyboard navigation
+            document.addEventListener('keydown', (e) => {
+                if (lightbox.style.display === 'flex') {
+                    switch(e.key) {
+                        case 'ArrowLeft':
+                            e.preventDefault();
+                            prevSlide();
+                            break;
+                        case 'ArrowRight':
+                            e.preventDefault();
+                            nextSlide();
+                            break;
+                        case 'Escape':
+                            e.preventDefault();
+                            closeGallery();
+                            break;
+                    }
+                }
+            });
         });
-
-        // Set minimum date to today
-        document.getElementById('tour-date').min = new Date().toISOString().split('T')[0];
     </script>
 </body>
 </html>

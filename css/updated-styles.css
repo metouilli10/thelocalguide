@@ -77,23 +77,35 @@
 }
 
 .header__logo-img {
-    width: 120px;
-    height: 40px;
+    width: 100px;
+    height: auto;
     object-fit: contain;
+    max-height: 50px;
+}
+
+/* Tablet responsive logo */
+@media (max-width: 1024px) {
+    .header__logo-img {
+        width: 85px;
+        height: auto;
+        max-height: 38px;
+    }
 }
 
 /* Mobile responsive logo */
 @media (max-width: 768px) {
     .header__logo-img {
-        width: 100px;
-        height: 32px;
+        width: 75px;
+        height: auto;
+        max-height: 35px;
     }
 }
 
 @media (max-width: 480px) {
     .header__logo-img {
-        width: 80px;
-        height: 28px;
+        width: 70px;
+        height: auto;
+        max-height: 32px;
     }
 }
 

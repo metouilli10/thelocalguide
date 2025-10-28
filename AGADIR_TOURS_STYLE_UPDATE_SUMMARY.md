@@ -60,7 +60,7 @@
   - Background: `#21D366` → `#8449f2`
   - Padding: `15px 40px` → `16px 32px`
   - Border radius: `30px` → `6px`
-  - Phone number: Updated to `+212636372101`
+  - Phone number: Updated to `+212601820422`
 
 ### 4. **Typography Updates**
 

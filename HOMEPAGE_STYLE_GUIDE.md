@@ -747,7 +747,7 @@ box-shadow: 0 4px 16px rgba(0,0,0,0.08) → 0 8px 24px rgba(0,0,0,0.12)
 <a href="contact.html" class="btn btn-primary">Book Now</a>
 
 <!-- WhatsApp Button -->
-<a href="https://wa.me/212636372101" class="btn btn-whatsapp">WhatsApp Us</a>
+<a href="https://wa.me/212601820422" class="btn btn-whatsapp">WhatsApp Us</a>
 
 <!-- Outline Button -->
 <a href="tours.html" class="btn btn-outline">View All Tours</a>

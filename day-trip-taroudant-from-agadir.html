@@ -1392,107 +1392,40 @@
     </div>
 
     <!-- Tour Hero Gallery -->
+    <style>
+        .simple-slider { position: relative; height: clamp(260px, 50vw, 520px); border-radius: 16px; overflow: hidden; }
+        .simple-slider .slides { position: relative; height: 100%; }
+        .simple-slider .slide { position: absolute; inset: 0; opacity: 0; transition: opacity 0.35s ease; }
+        .simple-slider .slide.active { opacity: 1; }
+        .simple-slider img { width: 100%; height: 100%; object-fit: cover; display: block; }
+        .ss-prev, .ss-next { position: absolute; top: 50%; transform: translateY(-50%); background: rgba(0,0,0,0.5); color: #fff; border: 0; width: 46px; height: 46px; border-radius: 50%; font-size: 22px; cursor: pointer; z-index: 5; display: flex; align-items: center; justify-content: center; }
+        .ss-prev { left: 16px; }
+        .ss-next { right: 16px; }
+        .ss-dots { position: absolute; bottom: 14px; left: 50%; transform: translateX(-50%); display: flex; gap: 8px; z-index: 5; }
+        .ss-dot { width: 8px; height: 8px; border-radius: 50%; background: rgba(255,255,255,0.6); border: 0; padding: 0; cursor: pointer; }
+        .ss-dot.active { background: #fff; }
+        .ss-thumbs { display: flex; align-items: center; justify-content: flex-start; gap: 10px; margin-top: 12px; overflow-x: auto; padding-bottom: 6px; }
+        .ss-thumbs::-webkit-scrollbar { height: 6px; }
+        .ss-thumb { width: 72px; height: 56px; border-radius: 8px; overflow: hidden; border: 2px solid transparent; opacity: 0.7; cursor: pointer; flex: 0 0 auto; }
+        .ss-thumb.active { opacity: 1; border-color: #8B5CF6; }
+        .ss-thumb img { width: 100%; height: 100%; object-fit: cover; display: block; }
+    </style>
     <section class="tour-detail-hero">
-        <!-- ✅ TOUR GALLERY -->
-        <div class="tour-gallery" data-count="7">
-          <!-- Preview grid -->
-          <div class="tg-preview">
-            <div class="tg-grid">
-              <!-- Big image (left) -->
-              <button class="tg-item tg-hero" data-index="0" aria-label="Open gallery at photo 1">
-                <img src="img/excursions/Taroudant & Tiout/taroudant 1.jpg" alt="Taroudant ancient ramparts and medina">
-              </button>
-
-              <!-- Right side: 2×2 -->
-              <div class="tg-right">
-                <button class="tg-item" data-index="1" aria-label="Open gallery at photo 2">
-                  <img src="img/excursions/Taroudant & Tiout/taroudant 2.jpg" alt="Taroudant traditional souks and markets">
-                </button>
-                <button class="tg-item" data-index="2" aria-label="Open gallery at photo 3">
-                  <img src="img/excursions/Taroudant & Tiout/taroudant 3.jpg" alt="Taroudant Berber architecture and culture">
-                </button>
-                <button class="tg-item" data-index="3" aria-label="Open gallery at photo 4">
-                  <img src="img/excursions/Taroudant & Tiout/taroudant 4.jpg" alt="Taroudant Atlas Mountains views">
-                </button>
-                <button class="tg-item" data-index="4" aria-label="Open gallery at photo 5">
-                  <img src="img/excursions/Taroudant & Tiout/taroudant 5.jpg" alt="Taroudant medina streets and local life">
-                </button>
-
-                <!-- Civitatis-style overlay button -->
-                <button class="tg-see-more" data-index="0" aria-label="Open gallery and view all photos">
-                  <span>See more photos (7)</span><span class="tg-arrow">›</span>
-                </button>
+        <div class="simple-slider" data-count="7">
+            <div class="slides">
+                <div class="slide active"><img src="img/excursions/Taroudant & Tiout/taroudant 1.jpg" alt="Taroudant ancient ramparts and medina"></div>
+                <div class="slide"><img src="img/excursions/Taroudant & Tiout/taroudant 2.jpg" alt="Taroudant traditional souks and markets"></div>
+                <div class="slide"><img src="img/excursions/Taroudant & Tiout/taroudant 3.jpg" alt="Taroudant Berber architecture and culture"></div>
+                <div class="slide"><img src="img/excursions/Taroudant & Tiout/taroudant 4.jpg" alt="Taroudant Atlas Mountains views"></div>
+                <div class="slide"><img src="img/excursions/Taroudant & Tiout/taroudant 5.jpg" alt="Taroudant medina streets and local life"></div>
+                <div class="slide"><img src="img/excursions/Taroudant & Tiout/taroudant 6.jpg" alt="Taroudant local crafts and artisans"></div>
+                <div class="slide"><img src="img/excursions/Taroudant & Tiout/taroudant 7.jpeg" alt="Taroudant scenic landscapes and culture"></div>
+            </div>
+            <button class="ss-prev" aria-label="Previous photo">‹</button>
+            <button class="ss-next" aria-label="Next photo">›</button>
+            <div class="ss-dots" aria-label="Slide navigation"></div>
         </div>
-            </div>
-          </div>
-
-          <!-- View all button (mobile / general) -->
-          <div class="tg-actions">
-            <button class="tg-view-all" data-index="0" aria-label="Open gallery and view all photos">
-              View all photos
-            </button>
-          </div>
-
-          <!-- Lightbox -->
-          <div class="tg-lightbox" aria-hidden="true" role="dialog" aria-label="Tour photos lightbox">
-            <div class="tg-lightbox-header">
-              <span class="tg-hint">Use arrows or swipe • Press ESC to close</span>
-              <button class="tg-close" aria-label="Close gallery">Close ✕</button>
-            </div>
-            <div class="tg-main">
-              <div class="swiper-wrapper">
-                <div class="swiper-slide">
-                  <img src="img/excursions/Taroudant & Tiout/taroudant 1.jpg" alt="Taroudant ancient ramparts and medina">
-                </div>
-                <div class="swiper-slide">
-                  <img src="img/excursions/Taroudant & Tiout/taroudant 2.jpg" alt="Taroudant traditional souks and markets">
-                </div>
-                <div class="swiper-slide">
-                  <img src="img/excursions/Taroudant & Tiout/taroudant 3.jpg" alt="Taroudant Berber architecture and culture">
-                </div>
-                <div class="swiper-slide">
-                  <img src="img/excursions/Taroudant & Tiout/taroudant 4.jpg" alt="Taroudant Atlas Mountains views">
-                </div>
-                <div class="swiper-slide">
-                  <img src="img/excursions/Taroudant & Tiout/taroudant 5.jpg" alt="Taroudant medina streets and local life">
-                </div>
-                <div class="swiper-slide">
-                  <img src="img/excursions/Taroudant & Tiout/taroudant 6.jpg" alt="Taroudant local crafts and artisans">
-                </div>
-                <div class="swiper-slide">
-                  <img src="img/excursions/Taroudant & Tiout/taroudant 7.jpeg" alt="Taroudant scenic landscapes and culture">
-                </div>
-              </div>
-              <button class="tg-prev" aria-label="Previous photo">‹</button>
-              <button class="tg-next" aria-label="Next photo">›</button>
-            </div>
-            <div class="tg-thumbs">
-              <div class="swiper-wrapper">
-                <div class="swiper-slide">
-                  <img src="img/excursions/Taroudant & Tiout/taroudant 1.jpg" alt="Taroudant ancient ramparts and medina">
-                </div>
-                <div class="swiper-slide">
-                  <img src="img/excursions/Taroudant & Tiout/taroudant 2.jpg" alt="Taroudant traditional souks and markets">
-                </div>
-                <div class="swiper-slide">
-                  <img src="img/excursions/Taroudant & Tiout/taroudant 3.jpg" alt="Taroudant Berber architecture and culture">
-                </div>
-                <div class="swiper-slide">
-                  <img src="img/excursions/Taroudant & Tiout/taroudant 4.jpg" alt="Taroudant Atlas Mountains views">
-                </div>
-                <div class="swiper-slide">
-                  <img src="img/excursions/Taroudant & Tiout/taroudant 5.jpg" alt="Taroudant medina streets and local life">
-                </div>
-                <div class="swiper-slide">
-                  <img src="img/excursions/Taroudant & Tiout/taroudant 6.jpg" alt="Taroudant local crafts and artisans">
-                </div>
-                <div class="swiper-slide">
-                  <img src="img/excursions/Taroudant & Tiout/taroudant 7.jpeg" alt="Taroudant scenic landscapes and culture">
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
+        <div class="ss-thumbs" aria-label="Slide thumbnails"></div>
     </section>
 
     <!-- Tour Content -->
@@ -2157,122 +2090,74 @@
     <script src="js/main.js"></script>
     
     <script>
-        // Gallery functionality
         document.addEventListener('DOMContentLoaded', function() {
-            const root = document.querySelector('.tour-gallery');
-            if (!root) return;
+            const slider = document.querySelector('.simple-slider');
+            if (slider) {
+                const slides = Array.from(slider.querySelectorAll('.slide'));
+                const prevBtn = slider.querySelector('.ss-prev');
+                const nextBtn = slider.querySelector('.ss-next');
+                const dotsContainer = slider.querySelector('.ss-dots');
+                const thumbsContainer = document.querySelector('.ss-thumbs');
+                let currentIndex = 0;
 
-            const lightbox = root.querySelector('.tg-lightbox');
-            const mainContainer = lightbox?.querySelector('.tg-main .swiper-wrapper');
-            const thumbsContainer = lightbox?.querySelector('.tg-thumbs .swiper-wrapper');
-            const buttons = root.querySelectorAll('.tg-item, .tg-view-all, .tg-see-more');
-            const prevBtn = lightbox?.querySelector('.tg-prev');
-            const nextBtn = lightbox?.querySelector('.tg-next');
-            const closeBtn = lightbox?.querySelector('.tg-close');
+                function goTo(index) {
+                    slides[currentIndex].classList.remove('active');
+                    currentIndex = (index + slides.length) % slides.length;
+                    slides[currentIndex].classList.add('active');
+                    updateDots();
+                    updateThumbs();
+                }
 
-            let currentIndex = 0;
-            const images = [
-                'img/excursions/Taroudant & Tiout/taroudant 1.jpg',
-                'img/excursions/Taroudant & Tiout/taroudant 2.jpg',
-                'img/excursions/Taroudant & Tiout/taroudant 3.jpg',
-                'img/excursions/Taroudant & Tiout/taroudant 4.jpg',
-                'img/excursions/Taroudant & Tiout/taroudant 5.jpg',
-                'img/excursions/Taroudant & Tiout/taroudant 6.jpg',
-                'img/excursions/Taroudant & Tiout/taroudant 7.jpeg'
-            ];
+                function updateDots() {
+                    const dots = dotsContainer.querySelectorAll('.ss-dot');
+                    dots.forEach((d, i) => d.classList.toggle('active', i === currentIndex));
+                }
 
-            function updateGallery() {
-                if (mainContainer) {
-                    const slides = mainContainer.querySelectorAll('.swiper-slide');
-                    slides.forEach((slide, index) => {
-                        if (index === currentIndex) {
-                            slide.style.display = 'flex';
-                            slide.style.opacity = '1';
-                            slide.style.zIndex = '10';
-                        } else {
-                            slide.style.display = 'none';
-                            slide.style.opacity = '0';
-                            slide.style.zIndex = '1';
-                        }
-                        // Reset any problematic styles
-                        slide.style.width = '100%';
-                        slide.style.height = '100%';
-                        slide.style.marginRight = '0';
-                        slide.style.marginLeft = '0';
-                        slide.style.position = 'absolute';
-                        slide.style.top = '0';
-                        slide.style.left = '0';
+                function renderDots() {
+                    dotsContainer.innerHTML = '';
+                    slides.forEach((_, i) => {
+                        const btn = document.createElement('button');
+                        btn.className = 'ss-dot' + (i === currentIndex ? ' active' : '');
+                        btn.setAttribute('aria-label', 'Go to slide ' + (i + 1));
+                        btn.addEventListener('click', () => goTo(i));
+                        dotsContainer.appendChild(btn);
                     });
                 }
 
-                if (thumbsContainer) {
-                    const thumbSlides = thumbsContainer.querySelectorAll('.swiper-slide');
-                    thumbSlides.forEach((slide, index) => {
-                        slide.classList.toggle('swiper-slide-thumb-active', index === currentIndex);
+                function updateThumbs() {
+                    if (!thumbsContainer) return;
+                    const all = thumbsContainer.querySelectorAll('.ss-thumb');
+                    all.forEach((t, i) => t.classList.toggle('active', i === currentIndex));
+                }
+
+                function renderThumbs() {
+                    if (!thumbsContainer) return;
+                    thumbsContainer.innerHTML = '';
+                    slides.forEach((slide, i) => {
+                        const img = slide.querySelector('img');
+                        const wrap = document.createElement('button');
+                        wrap.className = 'ss-thumb' + (i === currentIndex ? ' active' : '');
+                        wrap.setAttribute('aria-label', 'Select slide ' + (i + 1));
+                        const thumbImg = document.createElement('img');
+                        thumbImg.src = img.src;
+                        thumbImg.alt = img.alt;
+                        wrap.appendChild(thumbImg);
+                        wrap.addEventListener('click', () => goTo(i));
+                        thumbsContainer.appendChild(wrap);
                     });
                 }
-            }
 
-            function openAt(index) {
-                currentIndex = index;
-                updateGallery();
-                if (lightbox) {
-                    lightbox.classList.add('open');
-                    document.body.style.overflow = 'hidden';
-                }
-            }
+                prevBtn.addEventListener('click', () => goTo(currentIndex - 1));
+                nextBtn.addEventListener('click', () => goTo(currentIndex + 1));
 
-            function close() {
-                if (lightbox) {
-                    lightbox.classList.remove('open');
-                    document.body.style.overflow = '';
-                }
-            }
-
-            function next() {
-                currentIndex = (currentIndex + 1) % images.length;
-                updateGallery();
-            }
-
-            function prev() {
-                currentIndex = (currentIndex - 1 + images.length) % images.length;
-                updateGallery();
-            }
-
-            // Event listeners
-            buttons.forEach((btn, index) => {
-                btn.addEventListener('click', (e) => {
-                    e.preventDefault();
-                    const targetIndex = parseInt(btn.dataset.index) || index;
-                    openAt(targetIndex);
+                document.addEventListener('keydown', (e) => {
+                    if (e.key === 'ArrowLeft') goTo(currentIndex - 1);
+                    if (e.key === 'ArrowRight') goTo(currentIndex + 1);
                 });
-            });
 
-            prevBtn?.addEventListener('click', prev);
-            nextBtn?.addEventListener('click', next);
-            closeBtn?.addEventListener('click', close);
-
-            // Keyboard navigation
-            document.addEventListener('keydown', (e) => {
-                if (!lightbox?.classList.contains('open')) return;
-                if (e.key === 'Escape') close();
-                if (e.key === 'ArrowLeft') prev();
-                if (e.key === 'ArrowRight') next();
-            });
-
-            // Close on backdrop click
-            lightbox?.addEventListener('click', (e) => {
-                if (e.target === lightbox) {
-                    close();
-                }
-            });
-
-            // Initialize
-            updateGallery();
-
-            // Hook for "See more photos" button
-            document.querySelector('.tg-see-more')
-                ?.addEventListener('click', () => openAt(0)); // uses your existing openAt()
+                renderDots();
+                renderThumbs();
+            }
         });
 
         // FAQ Accordion

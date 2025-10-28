@@ -819,105 +819,39 @@
     </div>
 
     <section class="tour-detail-hero">
-        <div class="tour-gallery" data-count="7">
-            <!-- Preview grid -->
-            <div class="tg-preview">
-                <div class="tg-grid">
-                    <!-- Big image (left) -->
-                    <button class="tg-item tg-hero" data-index="0" aria-label="Open gallery at photo 1">
-                        <img src="img/excursions/Buggy Adventures/buggy 1.jpg" alt="Buggy adventure Agadir desert dunes">
-                    </button>
-
-                    <!-- Right side: 2×2 -->
-                    <div class="tg-right">
-                        <button class="tg-item" data-index="1" aria-label="Open gallery at photo 2">
-                            <img src="img/excursions/Buggy Adventures/buggy 2.jpg" alt="Dune buggy Agadir beach tour">
-                        </button>
-                        <button class="tg-item" data-index="2" aria-label="Open gallery at photo 3">
-                            <img src="img/excursions/Buggy Adventures/buggy 3.jpg" alt="Buggy tour Agadir off-road adventure">
-                        </button>
-                        <button class="tg-item" data-index="3" aria-label="Open gallery at photo 4">
-                            <img src="img/excursions/Buggy Adventures/buggy 4.jpg" alt="Agadir buggy adventure desert experience">
-                        </button>
-                        <button class="tg-item" data-index="4" aria-label="Open gallery at photo 5">
-                            <img src="img/excursions/Buggy Adventures/buggy 5.jpg" alt="Buggy adventure Agadir Berber village">
-                        </button>
-
-                        <!-- Civitatis-style overlay button -->
-                        <button class="tg-see-more" data-index="0" aria-label="Open gallery and view all photos">
-                            <span>See more photos (7)</span><span class="tg-arrow">›</span>
-                        </button>
+        <style>
+            .simple-slider { position: relative; height: clamp(260px, 50vw, 520px); border-radius: 16px; overflow: hidden; }
+            .simple-slider .slides { position: relative; height: 100%; }
+            .simple-slider .slide { position: absolute; inset: 0; opacity: 0; transition: opacity 0.35s ease; }
+            .simple-slider .slide.active { opacity: 1; }
+            .simple-slider img { width: 100%; height: 100%; object-fit: cover; display: block; }
+            .ss-prev, .ss-next { position: absolute; top: 50%; transform: translateY(-50%); background: rgba(0,0,0,0.5); color: #fff; border: 0; width: 46px; height: 46px; border-radius: 50%; font-size: 22px; cursor: pointer; z-index: 5; display: flex; align-items: center; justify-content: center; }
+            .ss-prev { left: 16px; }
+            .ss-next { right: 16px; }
+            .ss-dots { position: absolute; bottom: 14px; left: 50%; transform: translateX(-50%); display: flex; gap: 8px; z-index: 5; }
+            .ss-dot { width: 8px; height: 8px; border-radius: 50%; background: rgba(255,255,255,0.6); border: 0; padding: 0; cursor: pointer; }
+            .ss-dot.active { background: #fff; }
+            .ss-thumbs { display: flex; align-items: center; justify-content: flex-start; gap: 10px; margin-top: 12px; overflow-x: auto; padding-bottom: 6px; }
+            .ss-thumbs::-webkit-scrollbar { height: 6px; }
+            .ss-thumb { width: 72px; height: 56px; border-radius: 8px; overflow: hidden; border: 2px solid transparent; opacity: 0.7; cursor: pointer; flex: 0 0 auto; }
+            .ss-thumb.active { opacity: 1; border-color: #8B5CF6; }
+            .ss-thumb img { width: 100%; height: 100%; object-fit: cover; display: block; }
+        </style>
+        <div class="simple-slider" data-count="7">
+            <div class="slides">
+                <div class="slide active"><img src="img/excursions/Buggy Adventures/buggy 1.jpg" alt="Buggy adventure Agadir desert dunes"></div>
+                <div class="slide"><img src="img/excursions/Buggy Adventures/buggy 2.jpg" alt="Dune buggy Agadir beach tour"></div>
+                <div class="slide"><img src="img/excursions/Buggy Adventures/buggy 3.jpg" alt="Buggy tour Agadir off-road adventure"></div>
+                <div class="slide"><img src="img/excursions/Buggy Adventures/buggy 4.jpg" alt="Agadir buggy adventure desert experience"></div>
+                <div class="slide"><img src="img/excursions/Buggy Adventures/buggy 5.jpg" alt="Buggy adventure Agadir Berber village"></div>
+                <div class="slide"><img src="img/excursions/Buggy Adventures/buggy 6.jpeg" alt="Buggy adventure Agadir sunset tour"></div>
+                <div class="slide"><img src="img/excursions/Buggy Adventures/buggy 7.jpeg" alt="Buggy tour Agadir group adventure"></div>
+            </div>
+            <button class="ss-prev" aria-label="Previous photo">‹</button>
+            <button class="ss-next" aria-label="Next photo">›</button>
+            <div class="ss-dots" aria-label="Slide navigation"></div>
         </div>
-                </div>
-            </div>
-
-            <!-- View all button (mobile / general) -->
-            <div class="tg-actions">
-                <button class="tg-view-all" data-index="0" aria-label="Open gallery and view all photos">
-                    View all photos
-                </button>
-            </div>
-
-            <!-- Lightbox -->
-            <div class="tg-lightbox" aria-hidden="true" role="dialog" aria-label="Tour photos lightbox">
-                <div class="tg-lightbox-header">
-                    <span class="tg-hint">Use arrows or swipe • Press ESC to close</span>
-                    <button class="tg-close" aria-label="Close gallery">Close ✕</button>
-                </div>
-                <div class="tg-main">
-                    <div class="swiper-wrapper">
-                        <div class="swiper-slide">
-                            <img src="img/excursions/Buggy Adventures/buggy 1.jpg" alt="Buggy adventure Agadir desert dunes">
-                        </div>
-                        <div class="swiper-slide">
-                            <img src="img/excursions/Buggy Adventures/buggy 2.jpg" alt="Dune buggy Agadir beach tour">
-                        </div>
-                        <div class="swiper-slide">
-                            <img src="img/excursions/Buggy Adventures/buggy 3.jpg" alt="Buggy tour Agadir off-road adventure">
-                        </div>
-                        <div class="swiper-slide">
-                            <img src="img/excursions/Buggy Adventures/buggy 4.jpg" alt="Agadir buggy adventure desert experience">
-                        </div>
-                        <div class="swiper-slide">
-                            <img src="img/excursions/Buggy Adventures/buggy 5.jpg" alt="Buggy adventure Agadir Berber village">
-                        </div>
-                        <div class="swiper-slide">
-                            <img src="img/excursions/Buggy Adventures/buggy 6.jpeg" alt="Buggy adventure Agadir sunset tour">
-                        </div>
-                        <div class="swiper-slide">
-                            <img src="img/excursions/Buggy Adventures/buggy 7.jpeg" alt="Buggy tour Agadir group adventure">
-                        </div>
-                    </div>
-                    <button class="tg-prev" aria-label="Previous photo">‹</button>
-                    <button class="tg-next" aria-label="Next photo">›</button>
-                </div>
-                <div class="tg-thumbs">
-                    <div class="swiper-wrapper">
-                        <div class="swiper-slide">
-                            <img src="img/excursions/Buggy Adventures/buggy 1.jpg" alt="Buggy adventure Agadir desert dunes">
-                        </div>
-                        <div class="swiper-slide">
-                            <img src="img/excursions/Buggy Adventures/buggy 2.jpg" alt="Dune buggy Agadir beach tour">
-                        </div>
-                        <div class="swiper-slide">
-                            <img src="img/excursions/Buggy Adventures/buggy 3.jpg" alt="Buggy tour Agadir off-road adventure">
-                        </div>
-                        <div class="swiper-slide">
-                            <img src="img/excursions/Buggy Adventures/buggy 4.jpg" alt="Agadir buggy adventure desert experience">
-                        </div>
-                        <div class="swiper-slide">
-                            <img src="img/excursions/Buggy Adventures/buggy 5.jpg" alt="Buggy adventure Agadir Berber village">
-                        </div>
-                        <div class="swiper-slide">
-                            <img src="img/excursions/Buggy Adventures/buggy 6.jpeg" alt="Buggy adventure Agadir sunset tour">
-                        </div>
-                        <div class="swiper-slide">
-                            <img src="img/excursions/Buggy Adventures/buggy 7.jpeg" alt="Buggy tour Agadir group adventure">
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
+        <div class="ss-thumbs" aria-label="Slide thumbnails"></div>
     </section>
 
     <section class="tour-content-wrapper">

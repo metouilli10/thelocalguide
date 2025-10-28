@@ -1651,8 +1651,29 @@
                 <a href="https://wa.me/212601820422" class="btn btn-whatsapp">WhatsApp Us</a>
                 <a href="contact.html" class="btn btn-primary">Book Now</a>
             </div>
+            <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
         </div>
     </header>
+
+    <!-- Mobile Menu -->
+    <div id="mobileMenu" class="mobile-menu">
+        <button class="close-menu" aria-label="Close menu">×</button>
+        <div class="menu-content">
+            <nav class="menu-nav">
+                <a href="index.html" style="font-weight: bold;">Home</a>
+                <a href="agadir-tours.html" style="font-weight: bold;">Agadir Tours</a>
+                <a href="day-trips-from-agadir.html" style="font-weight: bold;">Day Trips</a>
+                <a href="blog.html" style="font-weight: bold;">Blog</a>
+                <a href="contact.html" style="font-weight: bold;">Contact</a>
+                <a href="https://wa.me/212601820422" style="font-weight: bold;">WhatsApp Us</a>
+                <a href="contact.html" style="font-weight: bold;">Book Now</a>
+            </nav>
+        </div>
+    </div>
 
     <!-- HERO SECTION -->
     <section class="hero">
@@ -2668,6 +2689,35 @@
 
         // Update on window resize
         window.addEventListener('resize', updateBlogButtons);
+
+        // Mobile Menu Toggle
+        const hamburger = document.getElementById('hamburger');
+        const mobileMenu = document.getElementById('mobileMenu');
+        const closeMenu = mobileMenu?.querySelector('.close-menu');
+
+        if (hamburger && mobileMenu) {
+            hamburger.addEventListener('click', function() {
+                mobileMenu.classList.add('active');
+                hamburger.classList.add('active');
+            });
+        }
+
+        if (closeMenu) {
+            closeMenu.addEventListener('click', function() {
+                mobileMenu.classList.remove('active');
+                hamburger.classList.remove('active');
+            });
+        }
+
+        // Close menu when clicking on a link
+        if (mobileMenu) {
+            mobileMenu.querySelectorAll('a').forEach(link => {
+                link.addEventListener('click', function() {
+                    mobileMenu.classList.remove('active');
+                    hamburger?.classList.remove('active');
+                });
+            });
+        }
     </script>
 </body>
 </html>

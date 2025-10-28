@@ -132,6 +132,31 @@
     align-items: center;
 }
 
+/* Hamburger menu button */
+.hamburger {
+    background: none;
+    border: none;
+    cursor: pointer;
+    display: none;
+    flex-direction: column;
+    gap: 5px;
+    padding: 10px;
+    z-index: 1001;
+    transition: all 0.3s ease;
+}
+
+.hamburger span {
+    width: 30px;
+    height: 3px;
+    background: #000000;
+    display: block;
+    transition: all 0.3s ease;
+}
+
+.hamburger:hover span {
+    background: var(--primary-color);
+}
+
 /* ===== BUTTON STYLES ===== */
 .btn {
     padding: 12px 24px;
@@ -209,6 +234,14 @@
         display: none;
     }
     
+    .header__actions {
+        display: none;
+    }
+    
+    .hamburger {
+        display: flex;
+    }
+    
     .topbar {
         display: none;
     }
@@ -221,6 +254,18 @@
     
     .topbar__wrapper {
         padding: 0 20px;
+    }
+    
+    .header__nav {
+        display: none;
+    }
+    
+    .header__actions {
+        display: none;
+    }
+    
+    .hamburger {
+        display: flex;
     }
 }
 

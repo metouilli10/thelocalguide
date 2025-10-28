@@ -306,27 +306,27 @@ a {
 
 .menu-nav a:last-child,
 .menu-nav a:nth-last-child(2) {
-    display: inline-flex;
+    display: block;
     align-items: center;
-    justify-content: center;
-    padding: 14px 18px;
-    border-radius: 10px;
-    margin-top: 8px;
-    text-align: center;
+    justify-content: flex-start;
+    padding: 14px 0;
+    border-radius: 0;
+    margin-top: 0;
+    text-align: left;
     border: none;
-    letter-spacing: 0.12em;
+    letter-spacing: 0.08em;
 }
 
 .menu-nav a:nth-last-child(2) {
-    /* WhatsApp CTA */
-    background: #8449f2;
-    color: #ffffff;
+    /* Keep as regular link */
+    background: transparent;
+    color: var(--text-color);
 }
 
 .menu-nav a:last-child {
-    /* Book Now CTA */
-    background: #cdff03;
-    color: #000000;
+    /* Keep as regular link */
+    background: transparent;
+    color: var(--text-color);
 }
 
 .menu-social p {

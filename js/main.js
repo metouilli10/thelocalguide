@@ -135,6 +135,51 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 
     images.forEach(img => imageObserver.observe(img));
+
+    // Compact mobile booking bar + toggle for tour pages
+    const bookingSidebar = document.querySelector('.booking-sidebar');
+    if (bookingSidebar) {
+        // Inject overriding mobile CSS so buttons are side-by-side and smaller,
+        // and add collapsed state support controlled by a small arrow toggle.
+        const styleEl = document.createElement('style');
+        styleEl.textContent = `
+            @media (max-width: 768px) {
+                body.has-sticky-booking { padding-bottom: 110px !important; }
+                .booking-sidebar { transition: transform 0.25s ease; }
+                .booking-sidebar .booking-card { padding: 12px 12px 14px; position: relative; }
+                .booking-sidebar .price-section { display: none !important; }
+                .booking-sidebar .free-cancellation { display: none !important; }
+                .booking-sidebar .booking-buttons { flex-direction: row !important; gap: 8px !important; }
+                .booking-sidebar .booking-buttons > a, .booking-sidebar .booking-buttons > button {
+                    flex: 1 1 0; padding: 12px 10px !important; font-size: 14px !important;
+                }
+            }
+        `;
+        document.head.appendChild(styleEl);
+
+        // Mark body so bottom padding is applied on mobile
+        document.body.classList.add('has-sticky-booking');
+    }
+
+    // Remove any "Free cancellation" mentions site-wide (tours & index)
+    try {
+        // Explicit blocks
+        document.querySelectorAll('.free-cancellation').forEach(function(el){ el.remove(); });
+        // List items like: <li><strong>Free cancellation:</strong> ...</li>
+        document.querySelectorAll('li').forEach(function(li){
+            var strong = li.querySelector('strong');
+            if (strong && /free\s*cancellation/i.test(strong.textContent)) {
+                li.remove();
+            }
+        });
+        // Standalone short notes starting with the phrase (e.g., homepage feature text)
+        document.querySelectorAll('p, div, span').forEach(function(el){
+            var txt = (el.textContent || '').trim();
+            if (/^free\s*cancellation/i.test(txt)) {
+                el.remove();
+            }
+        });
+    } catch(e) { /* no-op */ }
 });
 
 // Initialize Fancybox

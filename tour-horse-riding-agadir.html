@@ -73,51 +73,25 @@ in the meu<!DOCTYPE html>
             font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Lato', 'Helvetica Neue', Arial, sans-serif;
         }
         
-        .tour-detail-hero {
-            position: relative;
-            height: 500px;
-            overflow: hidden;
-            margin-top: 95px;
-        }
-        
-        .tour-gallery {
-            display: grid;
-            grid-template-columns: 2fr 1fr 1fr;
-            grid-template-rows: 250px 250px;
-            gap: 10px;
-            height: 500px;
-        }
-        
-        .tour-gallery img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            cursor: pointer;
-            transition: all 0.3s ease;
-        }
-        
-        .tour-gallery img:hover {
-            opacity: 0.9;
-            transform: scale(1.02);
-        }
-        
-        .tour-gallery .main-image {
-            grid-row: 1 / 3;
-        }
-        
-        .view-all-photos {
-            position: absolute;
-            bottom: 20px;
-            right: 20px;
-            background: white;
-            padding: 12px 25px;
-            border-radius: 6px;
-            font-weight: 600;
-            color: #1F2937;
-            cursor: pointer;
-            z-index: 10;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.2);
-        }
+        .tour-detail-hero { position: relative; height: auto; overflow: hidden; margin-top: 95px; }
+        /* Simple one-image-at-a-time slider */
+        .simple-slider { position: relative; height: clamp(260px, 50vw, 520px); border-radius: 16px; overflow: hidden; }
+        .simple-slider .slides { position: relative; height: 100%; }
+        .simple-slider .slide { position: absolute; inset: 0; opacity: 0; transition: opacity 0.35s ease; }
+        .simple-slider .slide.active { opacity: 1; }
+        .simple-slider img { width: 100%; height: 100%; object-fit: cover; display: block; }
+        .ss-prev, .ss-next { position: absolute; top: 50%; transform: translateY(-50%); background: rgba(0,0,0,0.5); color: #fff; border: 0; width: 46px; height: 46px; border-radius: 50%; font-size: 22px; cursor: pointer; z-index: 5; display: flex; align-items: center; justify-content: center; }
+        .ss-prev { left: 16px; }
+        .ss-next { right: 16px; }
+        .ss-dots { position: absolute; bottom: 14px; left: 50%; transform: translateX(-50%); display: flex; gap: 8px; z-index: 5; }
+        .ss-dot { width: 8px; height: 8px; border-radius: 50%; background: rgba(255,255,255,0.6); border: 0; padding: 0; cursor: pointer; }
+        .ss-dot.active { background: #fff; }
+        /* Thumbnails under main image */
+        .ss-thumbs { display: flex; align-items: center; justify-content: flex-start; gap: 10px; margin-top: 12px; overflow-x: auto; padding-bottom: 6px; }
+        .ss-thumbs::-webkit-scrollbar { height: 6px; }
+        .ss-thumb { width: 72px; height: 56px; border-radius: 8px; overflow: hidden; border: 2px solid transparent; opacity: 0.7; cursor: pointer; flex: 0 0 auto; }
+        .ss-thumb.active { opacity: 1; border-color: #8B5CF6; }
+        .ss-thumb img { width: 100%; height: 100%; object-fit: cover; display: block; }
         
         .tour-content-wrapper {
             max-width: 1400px;
@@ -1138,16 +1112,20 @@ in the meu<!DOCTYPE html>
 
     <!-- Tour Hero Gallery -->
     <section class="tour-detail-hero">
-        <div class="tour-gallery">
-            <!-- Professional horse riding photos from excursions -->
-            <img src="img/excursions/Horse Riding/horse riding 1.jpg" alt="Beach horse riding Agadir at sunset" class="main-image" data-fancybox="horse-gallery">
-            <img src="img/excursions/Horse Riding/horse riding 2.jpg" alt="Horse riding along Agadir coastline" data-fancybox="horse-gallery">
-            <img src="img/excursions/Horse Riding/horse riding 3.jpg" alt="Sunset horse ride Agadir experience" data-fancybox="horse-gallery">
-            <img src="img/excursions/Horse Riding/horse riding 4.jpg" alt="Agadir horseback riding adventure" data-fancybox="horse-gallery">
-            <img src="img/excursions/Horse Riding/horse riding 5.jpg" alt="Horse riding tour Agadir through countryside" data-fancybox="horse-gallery">
-            <img src="img/excursions/Horse Riding/horse riding 6.jpg" alt="Professional horse riding guide Agadir" data-fancybox="horse-gallery">
+        <div class="simple-slider" data-count="6">
+            <div class="slides">
+                <div class="slide active"><img src="img/excursions/Horse Riding/horse riding 1.jpg" alt="Beach horse riding Agadir at sunset"></div>
+                <div class="slide"><img src="img/excursions/Horse Riding/horse riding 2.jpg" alt="Horse riding along Agadir coastline"></div>
+                <div class="slide"><img src="img/excursions/Horse Riding/horse riding 3.jpg" alt="Sunset horse ride Agadir experience"></div>
+                <div class="slide"><img src="img/excursions/Horse Riding/horse riding 4.jpg" alt="Agadir horseback riding adventure"></div>
+                <div class="slide"><img src="img/excursions/Horse Riding/horse riding 5.jpg" alt="Horse riding tour Agadir through countryside"></div>
+                <div class="slide"><img src="img/excursions/Horse Riding/horse riding 6.jpg" alt="Professional horse riding guide Agadir"></div>
         </div>
-        <button class="view-all-photos">📷 View All Photos (6)</button>
+            <button class="ss-prev" aria-label="Previous photo">‹</button>
+            <button class="ss-next" aria-label="Next photo">›</button>
+            <div class="ss-dots" aria-label="Slide navigation"></div>
+        </div>
+        <div class="ss-thumbs" aria-label="Slide thumbnails"></div>
     </section>
 
     <!-- Tour Content -->
@@ -1778,44 +1756,6 @@ in the meu<!DOCTYPE html>
     <script src="js/main.js"></script>
     
     <script>
-        // Initialize Fancybox for gallery
-        $('[data-fancybox="horse-gallery"]').fancybox({
-            buttons: [
-                "zoom",
-                "slideShow",
-                "thumbs",
-                "close"
-            ],
-            loop: true,
-            protect: true,
-            backFocus: false,
-            autoFocus: false,
-            trapFocus: false,
-            touch: {
-                vertical: true,
-                momentum: true
-            },
-            animationEffect: "fade",
-            transitionEffect: "slide",
-            preventCaptionOverlap: false,
-            idleTime: 3,
-            baseTpl: '<div class="fancybox-container" role="dialog" tabindex="-1">' +
-                '<div class="fancybox-bg"></div>' +
-                '<div class="fancybox-inner">' +
-                '<div class="fancybox-infobar"><span data-fancybox-index></span>&nbsp;/&nbsp;<span data-fancybox-count></span></div>' +
-                '<div class="fancybox-toolbar">{{buttons}}</div>' +
-                '<div class="fancybox-navigation">{{arrows}}</div>' +
-                '<div class="fancybox-stage"></div>' +
-                '<div class="fancybox-caption"></div>' +
-                '</div>' +
-                '</div>'
-        });
-
-        // View all photos button
-        $('.view-all-photos').on('click', function() {
-            $('[data-fancybox="horse-gallery"]').first().trigger('click');
-        });
-
         // FAQ Accordion
         $('.faq-question').on('click', function() {
             const faqItem = $(this).parent();
@@ -1830,8 +1770,82 @@ in the meu<!DOCTYPE html>
             }
         });
 
-        // Set minimum date to today
-        document.getElementById('tour-date').min = new Date().toISOString().split('T')[0];
+        // Set minimum date to today (guarded)
+        (function(){
+            const dateEl = document.getElementById('tour-date');
+            if (dateEl) { dateEl.min = new Date().toISOString().split('T')[0]; }
+        })();
+    </script>
+    <script>
+    document.addEventListener('DOMContentLoaded', function() {
+        const slider = document.querySelector('.simple-slider');
+        if (slider) {
+            const slides = Array.from(slider.querySelectorAll('.slide'));
+            const prevBtn = slider.querySelector('.ss-prev');
+            const nextBtn = slider.querySelector('.ss-next');
+            const dotsContainer = slider.querySelector('.ss-dots');
+            const thumbsContainer = document.querySelector('.ss-thumbs');
+            let currentIndex = 0;
+
+            function goTo(index) {
+                slides[currentIndex].classList.remove('active');
+                currentIndex = (index + slides.length) % slides.length;
+                slides[currentIndex].classList.add('active');
+                updateDots();
+                updateThumbs();
+            }
+
+            function updateDots() {
+                const dots = dotsContainer.querySelectorAll('.ss-dot');
+                dots.forEach((d, i) => d.classList.toggle('active', i === currentIndex));
+            }
+
+            function renderDots() {
+                dotsContainer.innerHTML = '';
+                slides.forEach((_, i) => {
+                    const btn = document.createElement('button');
+                    btn.className = 'ss-dot' + (i === currentIndex ? ' active' : '');
+                    btn.setAttribute('aria-label', 'Go to slide ' + (i + 1));
+                    btn.addEventListener('click', () => goTo(i));
+                    dotsContainer.appendChild(btn);
+                });
+            }
+
+            function updateThumbs() {
+                if (!thumbsContainer) return;
+                const all = thumbsContainer.querySelectorAll('.ss-thumb');
+                all.forEach((t, i) => t.classList.toggle('active', i === currentIndex));
+            }
+
+            function renderThumbs() {
+                if (!thumbsContainer) return;
+                thumbsContainer.innerHTML = '';
+                slides.forEach((slide, i) => {
+                    const img = slide.querySelector('img');
+                    const wrap = document.createElement('button');
+                    wrap.className = 'ss-thumb' + (i === currentIndex ? ' active' : '');
+                    wrap.setAttribute('aria-label', 'Select slide ' + (i + 1));
+                    const thumbImg = document.createElement('img');
+                    thumbImg.src = img.src;
+                    thumbImg.alt = img.alt;
+                    wrap.appendChild(thumbImg);
+                    wrap.addEventListener('click', () => goTo(i));
+                    thumbsContainer.appendChild(wrap);
+                });
+            }
+
+            prevBtn.addEventListener('click', () => goTo(currentIndex - 1));
+            nextBtn.addEventListener('click', () => goTo(currentIndex + 1));
+
+            document.addEventListener('keydown', (e) => {
+                if (e.key === 'ArrowLeft') goTo(currentIndex - 1);
+                if (e.key === 'ArrowRight') goTo(currentIndex + 1);
+            });
+
+            renderDots();
+            renderThumbs();
+        }
+    });
     </script>
 <script>
 const hamburger=document.getElementById("hamburger");

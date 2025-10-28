@@ -76,6 +76,24 @@
             overflow: hidden;
             margin-top: 95px;
         }
+        /* Simple one-image-at-a-time slider */
+        .simple-slider { position: relative; height: clamp(260px, 50vw, 520px); border-radius: 16px; overflow: hidden; }
+        .simple-slider .slides { position: relative; height: 100%; }
+        .simple-slider .slide { position: absolute; inset: 0; opacity: 0; transition: opacity 0.35s ease; }
+        .simple-slider .slide.active { opacity: 1; }
+        .simple-slider img { width: 100%; height: 100%; object-fit: cover; display: block; }
+        .ss-prev, .ss-next { position: absolute; top: 50%; transform: translateY(-50%); background: rgba(0,0,0,0.5); color: #fff; border: 0; width: 46px; height: 46px; border-radius: 50%; font-size: 22px; cursor: pointer; z-index: 5; display: flex; align-items: center; justify-content: center; }
+        .ss-prev { left: 16px; }
+        .ss-next { right: 16px; }
+        .ss-dots { position: absolute; bottom: 14px; left: 50%; transform: translateX(-50%); display: flex; gap: 8px; z-index: 5; }
+        .ss-dot { width: 8px; height: 8px; border-radius: 50%; background: rgba(255,255,255,0.6); border: 0; padding: 0; cursor: pointer; }
+        .ss-dot.active { background: #fff; }
+        /* Thumbnails under main image */
+        .ss-thumbs { display: flex; align-items: center; justify-content: flex-start; gap: 10px; margin-top: 12px; overflow-x: auto; padding-bottom: 6px; }
+        .ss-thumbs::-webkit-scrollbar { height: 6px; }
+        .ss-thumb { width: 72px; height: 56px; border-radius: 8px; overflow: hidden; border: 2px solid transparent; opacity: 0.7; cursor: pointer; flex: 0 0 auto; }
+        .ss-thumb.active { opacity: 1; border-color: #8B5CF6; }
+        .ss-thumb img { width: 100%; height: 100%; object-fit: cover; display: block; }
         
         /* Civitatis-style 5-photo gallery */
         .tg-preview {
@@ -1302,90 +1320,20 @@
 
     <!-- Tour Hero Gallery -->
     <section class="tour-detail-hero">
-        <div class="tour-gallery" data-count="6">
-            <div class="tg-preview">
-                <div class="tg-grid">
-                    <!-- Big image (left) -->
-                    <button class="tg-item tg-hero" data-index="0" aria-label="Open gallery at photo 1">
-                        <img src="img/excursions/Sandboarding/sandboarding 1.webp" alt="Sandboarding in Agadir desert dunes">
-                    </button>
-
-                    <!-- Right side: 2×2 -->
-                    <div class="tg-right">
-                        <button class="tg-item" data-index="1" aria-label="Open gallery at photo 2">
-                            <img src="img/excursions/Sandboarding/sandboarding 2.jpeg" alt="Agadir sand surfing adventure">
-                        </button>
-                        <button class="tg-item" data-index="2" aria-label="Open gallery at photo 3">
-                            <img src="img/excursions/Sandboarding/sandboarding 3.jpg" alt="Sandboarding Morocco experience">
-                        </button>
-                        <button class="tg-item" data-index="3" aria-label="Open gallery at photo 4">
-                            <img src="img/excursions/Sandboarding/sandboarding 4.jpg" alt="Agadir desert sandboarding with ocean views">
-                        </button>
-                        <button class="tg-item" data-index="4" aria-label="Open gallery at photo 5">
-                            <img src="img/excursions/Sandboarding/sandboarding 5.jpg" alt="Sandboarding and BBQ Agadir desert camp">
-                        </button>
-                        <!-- Civitatis-style overlay button -->
-                        <button class="tg-see-more" data-index="0" aria-label="Open gallery and view all photos">
-                            <span>See more photos (6)</span><span class="tg-arrow">›</span>
-                        </button>
-        </div>
-                </div>
+        <div class="simple-slider" data-count="6">
+            <div class="slides">
+                <div class="slide active"><img src="img/excursions/Sandboarding/sandboarding 1.webp" alt="Sandboarding in Agadir desert dunes"></div>
+                <div class="slide"><img src="img/excursions/Sandboarding/sandboarding 2.jpeg" alt="Agadir sand surfing adventure"></div>
+                <div class="slide"><img src="img/excursions/Sandboarding/sandboarding 3.jpg" alt="Sandboarding Morocco experience"></div>
+                <div class="slide"><img src="img/excursions/Sandboarding/sandboarding 4.jpg" alt="Agadir desert sandboarding with ocean views"></div>
+                <div class="slide"><img src="img/excursions/Sandboarding/sandboarding 5.jpg" alt="Sandboarding and BBQ Agadir desert camp"></div>
+                <div class="slide"><img src="img/excursions/Sandboarding/sandboarding 6.webp" alt="Sandboarding Agadir desert adventure"></div>
             </div>
-
-            <!-- Lightbox -->
-            <div class="tg-lightbox">
-                <div class="tg-lightbox-content">
-                    <button class="tg-close" aria-label="Close gallery">×</button>
-                    <div class="tg-main">
-                        <div class="swiper-wrapper">
-                            <div class="swiper-slide">
-                                <img src="img/excursions/Sandboarding/sandboarding 1.webp" alt="Sandboarding in Agadir desert dunes">
-                            </div>
-                            <div class="swiper-slide">
-                                <img src="img/excursions/Sandboarding/sandboarding 2.jpeg" alt="Agadir sand surfing adventure">
-                            </div>
-                            <div class="swiper-slide">
-                                <img src="img/excursions/Sandboarding/sandboarding 3.jpg" alt="Sandboarding Morocco experience">
-                            </div>
-                            <div class="swiper-slide">
-                                <img src="img/excursions/Sandboarding/sandboarding 4.jpg" alt="Agadir desert sandboarding with ocean views">
-                            </div>
-                            <div class="swiper-slide">
-                                <img src="img/excursions/Sandboarding/sandboarding 5.jpg" alt="Sandboarding and BBQ Agadir desert camp">
-                            </div>
-                            <div class="swiper-slide">
-                                <img src="img/excursions/Sandboarding/sandboarding 6.webp" alt="Sandboarding Agadir desert adventure">
-                            </div>
-                        </div>
-                        <!-- If we need navigation buttons -->
-                        <div class="swiper-button-prev"></div>
-                        <div class="swiper-button-next"></div>
-                    </div>
-                    <div class="tg-thumbs">
-                        <div class="swiper-wrapper">
-                            <div class="swiper-slide">
-                                <img src="img/excursions/Sandboarding/sandboarding 1.webp" alt="Sandboarding in Agadir desert dunes">
-                            </div>
-                            <div class="swiper-slide">
-                                <img src="img/excursions/Sandboarding/sandboarding 2.jpeg" alt="Agadir sand surfing adventure">
-                            </div>
-                            <div class="swiper-slide">
-                                <img src="img/excursions/Sandboarding/sandboarding 3.jpg" alt="Sandboarding Morocco experience">
-                            </div>
-                            <div class="swiper-slide">
-                                <img src="img/excursions/Sandboarding/sandboarding 4.jpg" alt="Agadir desert sandboarding with ocean views">
-                            </div>
-                            <div class="swiper-slide">
-                                <img src="img/excursions/Sandboarding/sandboarding 5.jpg" alt="Sandboarding and BBQ Agadir desert camp">
-                            </div>
-                            <div class="swiper-slide">
-                                <img src="img/excursions/Sandboarding/sandboarding 6.webp" alt="Sandboarding Agadir desert adventure">
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
+            <button class="ss-prev" aria-label="Previous photo">‹</button>
+            <button class="ss-next" aria-label="Next photo">›</button>
+            <div class="ss-dots" aria-label="Slide navigation"></div>
         </div>
+        <div class="ss-thumbs" aria-label="Slide thumbnails"></div>
     </section>
 
     <!-- Tour Content -->
@@ -1914,9 +1862,7 @@
                     </a>
                 </div>
 
-                <div class="free-cancellation">
-                    ✓ Free cancellation up to 24 hours before
-                </div>
+                
             </div>
         </aside>
     </section>
@@ -2021,183 +1967,80 @@
     
     <script>
         document.addEventListener('DOMContentLoaded', function() {
-            const images = [
-                'img/excursions/Sandboarding/sandboarding 1.webp',
-                'img/excursions/Sandboarding/sandboarding 2.jpeg',
-                'img/excursions/Sandboarding/sandboarding 3.jpg',
-                'img/excursions/Sandboarding/sandboarding 4.jpg',
-                'img/excursions/Sandboarding/sandboarding 5.jpg',
-                'img/excursions/Sandboarding/sandboarding 6.webp'
-            ];
-            
-            let currentIndex = 0;
-            const lightbox = document.querySelector('.tg-lightbox');
-            const mainSlides = document.querySelectorAll('.tg-main .swiper-slide');
-            const thumbSlides = document.querySelectorAll('.tg-thumbs .swiper-slide');
-            const closeBtn = document.querySelector('.tg-close');
-            const seeMoreBtn = document.querySelector('.tg-see-more');
-            
-            // Open lightbox
-            function openLightbox(index) {
-                currentIndex = index;
-                lightbox.classList.add('active');
-                updateSlides();
-                document.body.style.overflow = 'hidden';
-            }
-            
-            // Close lightbox
-            function closeLightbox() {
-                lightbox.classList.remove('active');
-                document.body.style.overflow = '';
-            }
-            
-            // Update slides
-            function updateSlides() {
-                mainSlides.forEach((slide, i) => {
-                    slide.classList.toggle('active', i === currentIndex);
-                });
-                thumbSlides.forEach((slide, i) => {
-                    slide.classList.toggle('active', i === currentIndex);
-                });
-            }
-            
-            // Event listeners
-            document.querySelectorAll('.tg-item').forEach((item, index) => {
-                item.addEventListener('click', (e) => {
-                    e.preventDefault();
-                    openLightbox(index);
-                });
-            });
-            
-            if (seeMoreBtn) {
-                seeMoreBtn.addEventListener('click', (e) => {
-                    e.preventDefault();
-                    openLightbox(0);
-                });
-            }
-            
-            if (closeBtn) {
-                closeBtn.addEventListener('click', closeLightbox);
-            }
-            
-            // Thumbnail clicks
-            thumbSlides.forEach((slide, index) => {
-                slide.addEventListener('click', () => {
-                    currentIndex = index;
-                    updateSlides();
-                });
-            });
-            
-            // Keyboard navigation
-            document.addEventListener('keydown', (e) => {
-                if (!lightbox.classList.contains('active')) return;
-                
-                switch(e.key) {
-                    case 'Escape':
-                        closeLightbox();
-                        break;
-                    case 'ArrowLeft':
-                        currentIndex = currentIndex > 0 ? currentIndex - 1 : images.length - 1;
-                        updateSlides();
-                        break;
-                    case 'ArrowRight':
-                        currentIndex = currentIndex < images.length - 1 ? currentIndex + 1 : 0;
-                        updateSlides();
-                        break;
+            const slider = document.querySelector('.simple-slider');
+            if (slider) {
+                const slides = Array.from(slider.querySelectorAll('.slide'));
+                const prevBtn = slider.querySelector('.ss-prev');
+                const nextBtn = slider.querySelector('.ss-next');
+                const dotsContainer = slider.querySelector('.ss-dots');
+                const thumbsContainer = document.querySelector('.ss-thumbs');
+                let currentIndex = 0;
+
+                function goTo(index) {
+                    slides[currentIndex].classList.remove('active');
+                    currentIndex = (index + slides.length) % slides.length;
+                    slides[currentIndex].classList.add('active');
+                    updateDots();
+                    updateThumbs();
                 }
-            });
-            
-            // Close on background click
-            lightbox.addEventListener('click', (e) => {
-                if (e.target === lightbox) {
-                    closeLightbox();
+
+                function updateDots() {
+                    const dots = dotsContainer.querySelectorAll('.ss-dot');
+                    dots.forEach((d, i) => d.classList.toggle('active', i === currentIndex));
                 }
-            });
 
-            // Set minimum date to today
-            document.getElementById('tour-date').min = new Date().toISOString().split('T')[0];
-        });
-            buttons: [
-                "zoom",
-                "slideShow",
-                "thumbs",
-                "close"
-            ],
-            loop: true,
-            protect: true,
-            backFocus: false,
-            autoFocus: false,
-            trapFocus: false,
-            touch: {
-                vertical: true,
-                momentum: true
-            },
-            animationEffect: "fade",
-            transitionEffect: "slide",
-            preventCaptionOverlap: false,
-            idleTime: 3,
-            baseTpl: '<div class="fancybox-container" role="dialog" tabindex="-1">' +
-                '<div class="fancybox-bg"></div>' +
-                '<div class="fancybox-inner">' +
-                '<div class="fancybox-infobar"><span data-fancybox-index></span>&nbsp;/&nbsp;<span data-fancybox-count></span></div>' +
-                '<div class="fancybox-toolbar">{{buttons}}</div>' +
-                '<div class="fancybox-navigation">{{arrows}}</div>' +
-                '<div class="fancybox-stage"></div>' +
-                '<div class="fancybox-caption"></div>' +
-                '</div>' +
-                '</div>'
-        });
+                function renderDots() {
+                    dotsContainer.innerHTML = '';
+                    slides.forEach((_, i) => {
+                        const btn = document.createElement('button');
+                        btn.className = 'ss-dot' + (i === currentIndex ? ' active' : '');
+                        btn.setAttribute('aria-label', 'Go to slide ' + (i + 1));
+                        btn.addEventListener('click', () => goTo(i));
+                        dotsContainer.appendChild(btn);
+                    });
+                }
 
-        // View all photos button
-        $('.view-all-photos').on('click', function() {
-            $('[data-fancybox="sandboarding-gallery"]').first().trigger('click');
-        });
+                function updateThumbs() {
+                    if (!thumbsContainer) return;
+                    const all = thumbsContainer.querySelectorAll('.ss-thumb');
+                    all.forEach((t, i) => t.classList.toggle('active', i === currentIndex));
+                }
 
-        // FAQ Accordion
-        $('.faq-question').on('click', function() {
-            const faqItem = $(this).parent();
-            const wasActive = faqItem.hasClass('active');
-            
-            // Close all FAQ items
-            $('.faq-item').removeClass('active');
-            
-            // Open clicked item if it wasn't already open
-            if (!wasActive) {
-                faqItem.addClass('active');
-            }
-        });
+                function renderThumbs() {
+                    if (!thumbsContainer) return;
+                    thumbsContainer.innerHTML = '';
+                    slides.forEach((slide, i) => {
+                        const img = slide.querySelector('img');
+                        const wrap = document.createElement('button');
+                        wrap.className = 'ss-thumb' + (i === currentIndex ? ' active' : '');
+                        wrap.setAttribute('aria-label', 'Select slide ' + (i + 1));
+                        const thumbImg = document.createElement('img');
+                        thumbImg.src = img.src;
+                        thumbImg.alt = img.alt;
+                        wrap.appendChild(thumbImg);
+                        wrap.addEventListener('click', () => goTo(i));
+                        thumbsContainer.appendChild(wrap);
+                    });
+                }
 
-        // Set minimum date to today
-        document.getElementById('tour-date').min = new Date().toISOString().split('T')[0];
+                prevBtn.addEventListener('click', () => goTo(currentIndex - 1));
+                nextBtn.addEventListener('click', () => goTo(currentIndex + 1));
 
-        // Mobile Menu Toggle
-        const hamburger = document.getElementById('hamburger');
-        const mobileMenu = document.getElementById('mobileMenu');
-        const closeMenu = mobileMenu?.querySelector('.close-menu');
-
-        if (hamburger && mobileMenu) {
-            hamburger.addEventListener('click', function() {
-                mobileMenu.classList.add('active');
-                hamburger.classList.add('active');
-            });
-        }
-
-        if (closeMenu) {
-            closeMenu.addEventListener('click', function() {
-                mobileMenu.classList.remove('active');
-                hamburger.classList.remove('active');
-            });
-        }
-
-        // Close menu when clicking on a link
-        if (mobileMenu) {
-            mobileMenu.querySelectorAll('a').forEach(link => {
-                link.addEventListener('click', function() {
-                    mobileMenu.classList.remove('active');
-                    hamburger?.classList.remove('active');
+                document.addEventListener('keydown', (e) => {
+                    if (e.key === 'ArrowLeft') goTo(currentIndex - 1);
+                    if (e.key === 'ArrowRight') goTo(currentIndex + 1);
                 });
-            });
-        }
+
+                renderDots();
+                renderThumbs();
+            }
+
+            // Set minimum date to today (guarded)
+            (function(){
+                const dateEl = document.getElementById('tour-date');
+                if (dateEl) { dateEl.min = new Date().toISOString().split('T')[0]; }
+            })();
+        });
     </script>
 </body>
 </html>

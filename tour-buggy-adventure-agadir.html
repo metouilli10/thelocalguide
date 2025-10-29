@@ -477,14 +477,17 @@
                 right: 0;
                 z-index: 999;
                 background: white;
-                padding: 15px !important;
-                box-shadow: 0 -4px 20px rgba(0,0,0,0.15);
+                padding: 10px 12px !important;
+                box-shadow: 0 -3px 15px rgba(0,0,0,0.12);
                 top: auto !important;
             }
             
             aside > div {
-                padding: 15px !important;
+                padding: 0 !important;
                 border-radius: 0 !important;
+                background: transparent !important;
+                border: none !important;
+                box-shadow: none !important;
             }
             
             aside .price-section,
@@ -493,7 +496,7 @@
             }
             
             body {
-                padding-bottom: 180px;
+                padding-bottom: 160px;
             }
             
             /* Mobile font size fixes for inline styles */
@@ -515,6 +518,26 @@
             
             /* Overflow fixes */
             * { max-width: 100%; box-sizing: border-box; }
+            
+            /* Mobile booking buttons in horizontal layout */
+            aside > div > div[style*="flex-direction: column"] {
+                flex-direction: row !important;
+                gap: 8px !important;
+                margin-bottom: 0 !important;
+            }
+            
+            aside a[style*="cdff03"],
+            aside a[style*="8449f2"] {
+                flex: 1 !important;
+                padding: 12px 10px !important;
+                font-size: 13px !important;
+                display: flex !important;
+                align-items: center !important;
+                justify-content: center !important;
+                border-radius: 8px !important;
+                box-shadow: none !important;
+                border: none !important;
+            }
         }
         /* Footer Styles - Miracle Air Inspired */
         .site-footer {
@@ -1370,19 +1393,16 @@
                 </div>
 
                 <!-- Booking Buttons -->
-                <div style="display: flex; flex-direction: column; gap: 12px; margin-bottom: 20px;">
-                    <a href="#booking-link" style="background: #cdff03; color: #000000; padding: 16px 24px; border-radius: 6px; text-decoration: none; font-weight: 700; font-size: 16px; text-align: center; transition: all 0.3s ease; box-shadow: 0 4px 12px rgba(205, 255, 3, 0.3); display: block;">
+                <div style="display: flex; flex-direction: column; gap: 10px; margin-bottom: 20px;">
+                    <a href="#booking-link" style="background: #cdff03; color: #000000; padding: 14px 20px; border-radius: 8px; text-decoration: none; font-weight: 700; font-size: 15px; text-align: center; transition: all 0.3s ease; box-shadow: 0 3px 8px rgba(205, 255, 3, 0.3); display: flex; align-items: center; justify-content: center;">
                         Book Now
                     </a>
-                    <a href="https://wa.me/212645792457?text=Hi! I'm interested in the Buggy Adventure tour" target="_blank" style="background: #8449f2; color: white; padding: 16px 24px; border-radius: 6px; text-decoration: none; font-weight: 700; font-size: 16px; text-align: center; transition: all 0.3s ease; box-shadow: 0 4px 12px rgba(132, 73, 242, 0.3); display: block;">
+                    <a href="https://wa.me/212645792457?text=Hi! I'm interested in the Buggy Adventure tour" target="_blank" style="background: #8449f2; color: white; padding: 14px 20px; border-radius: 8px; text-decoration: none; font-weight: 700; font-size: 15px; text-align: center; transition: all 0.3s ease; box-shadow: 0 3px 8px rgba(132, 73, 242, 0.3); display: flex; align-items: center; justify-content: center;">
                         Book via WhatsApp
                     </a>
                     </div>
                     
-                <div style="background: #e8f5e9; padding: 15px; border-radius: 6px; text-align: center; margin-top: 20px; color: #1F2937; font-weight: 600; font-size: 14px;">
-                    ✓ Free cancellation up to 24 hours
-                    </div>
-            </div>
+                </div>
         </aside>
     </section>
                         <!-- FOOTER -->

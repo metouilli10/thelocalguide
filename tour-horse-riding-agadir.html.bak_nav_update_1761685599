@@ -1,31 +1,31 @@
-<!DOCTYPE html>
+in the meu<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Experience thrilling sandboarding in Agadir's desert dunes! Sand surfing adventures for all levels, equipment included, BBQ dinner. Book your Agadir sandboarding tour today!">
-    <meta name="keywords" content="Sandboarding in Agadir, Agadir sand surfing, Sandboarding Morocco, Agadir desert adventure, Sandboarding and BBQ Agadir">
-    <title>Sandboarding in Agadir | Desert Sand Surfing & BBQ Experience (2025)</title>
+    <meta name="description" content="Experience horse riding Agadir along stunning beaches and through authentic Berber villages. Sunset horseback rides, beach horse riding tours, and scenic trails. Book your Agadir horse riding adventure today!">
+    <meta name="keywords" content="Horse riding Agadir, Beach horse riding Agadir, Horse riding tour Agadir, Sunset horse ride Agadir, Agadir horseback riding, horse trekking Morocco">
+    <title>Horse Riding Agadir | Beach Horseback Riding Tours & Sunset Rides (2025)</title>
     
     <!-- CSS Styles -->
-    <link rel="stylesheet" href="css/styles.css?v=20241219-01">
-    <link rel="stylesheet" href="css/pages.css?v=20241219-01">
-    <link rel="stylesheet" href="css/updated-styles.css?v=20241219-01">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/pages.css">
+    <link rel="stylesheet" href="css/updated-styles.css">
     
     <!-- Open Graph Meta Tags -->
-    <meta property="og:title" content="Sandboarding in Agadir | Desert Sand Surfing & BBQ Experience">
-    <meta property="og:description" content="Surf the golden dunes of Agadir! Thrilling sandboarding adventure with equipment, instruction, and desert BBQ included. Book now!">
+    <meta property="og:title" content="Horse Riding Agadir | Beach Horseback Riding Tours & Sunset Rides">
+    <meta property="og:description" content="Gallop along Agadir's pristine beaches at sunset. Professional guides, gentle horses, and unforgettable coastal views. Book now!">
     <meta property="og:type" content="website">
-    <meta property="og:url" content="https://yourdomain.com/tour-sandboarding-agadir">
+    <meta property="og:url" content="https://yourdomain.com/tour-horse-riding-agadir">
     
     <!-- Schema.org Structured Data -->
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
       "@type": "TouristAttraction",
-      "name": "Sandboarding in Agadir - Desert Adventure",
-      "description": "Experience thrilling sandboarding in Agadir's desert dunes. Equipment, instruction, and traditional Moroccan BBQ dinner included.",
-      "image": "https://yourdomain.com/img/excursions/Sandboarding/sandboarding 1.webp",
+      "name": "Horse Riding Agadir - Beach & Sunset Experience",
+      "description": "Experience horseback riding along Agadir's stunning coastline. Guided beach rides at sunset through scenic trails and authentic Berber villages.",
+      "image": "https://yourdomain.com/img/excursions/Horse Riding/horse riding 1.jpg",
       "address": {
         "@type": "PostalAddress",
         "addressLocality": "Agadir",
@@ -39,15 +39,15 @@
       },
       "offers": {
         "@type": "Offer",
-        "price": "50",
+        "price": "45",
         "priceCurrency": "EUR",
         "availability": "https://schema.org/InStock",
         "validFrom": "2025-01-01"
       },
       "aggregateRating": {
         "@type": "AggregateRating",
-        "ratingValue": "4.7",
-        "reviewCount": "198"
+        "ratingValue": "4.9",
+        "reviewCount": "256"
       },
       "provider": {
         "@type": "TouristInformationCenter",
@@ -56,76 +56,24 @@
       }
     }
     </script>
-<script>
-// Desktop-only: build premium carousel from existing slides
-(() => {
-    if (window.matchMedia('(max-width: 1023.98px)').matches) return;
-    const host = document.querySelector('.tour-carousel');
-    const imgs = Array.from(document.querySelectorAll('.tour-detail-hero .simple-slider .slide img'));
-    if (!host || imgs.length === 0) return;
-
-    const stage = document.createElement('div'); stage.className = 'tc-stage';
-    const prev = document.createElement('button'); prev.className = 'tc-nav tc-prev'; prev.setAttribute('aria-label','Previous photo'); prev.textContent = '❮';
-    const next = document.createElement('button'); next.className = 'tc-nav tc-next'; next.setAttribute('aria-label','Next photo'); next.textContent = '❯';
-    const image = document.createElement('img'); image.className = 'tc-image';
-    const cap = document.createElement('div'); cap.className = 'tc-caption';
-    stage.appendChild(prev); stage.appendChild(image); stage.appendChild(cap); stage.appendChild(next);
-    const thumbs = document.createElement('div'); thumbs.className = 'tc-thumbs'; thumbs.setAttribute('role','tablist'); thumbs.setAttribute('aria-label','Photo thumbnails');
-    host.appendChild(stage); host.appendChild(thumbs);
-
-    const data = imgs.map(im => ({ src: im.getAttribute('src') || '', caption: im.getAttribute('alt') || 'Tour photo' }));
-    data.forEach((d, i) => {
-        const b = document.createElement('button'); b.className = 'tc-thumb'; b.setAttribute('role','tab'); b.setAttribute('aria-selected','false'); b.dataset.full = d.src; b.dataset.caption = d.caption;
-        const ti = document.createElement('img'); ti.src = d.src; ti.alt = 'Thumb'; b.appendChild(ti); thumbs.appendChild(b);
-    });
-
-    const thumbButtons = Array.from(thumbs.querySelectorAll('.tc-thumb'));
-    let index = 0;
-    function setActive(i, animate = true){
-        index = (i + thumbButtons.length) % thumbButtons.length;
-        const t = thumbButtons[index];
-        thumbButtons.forEach(btn => { const active = btn === t; btn.classList.toggle('is-active', active); btn.setAttribute('aria-selected', active ? 'true':'false'); });
-        if (animate) image.style.opacity = 0.35;
-        image.src = t.dataset.full || '';
-        image.alt = t.dataset.caption || 'Tour photo';
-        cap.textContent = t.dataset.caption || '';
-        if (animate) requestAnimationFrame(() => (image.style.opacity = 1));
-        t.scrollIntoView({ block: 'nearest', inline: 'center', behavior: 'smooth' });
-    }
-    thumbButtons.forEach((b, i) => b.addEventListener('click', () => setActive(i)));
-    prev.addEventListener('click', () => setActive(index - 1));
-    next.addEventListener('click', () => setActive(index + 1));
-    host.addEventListener('keydown', (e) => { if (e.key === 'ArrowLeft') setActive(index - 1); if (e.key === 'ArrowRight') setActive(index + 1); });
-    setActive(0, false);
-})();
-</script>
     
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/pages.css">
+    <link rel="stylesheet" href="css/updated-styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;900&family=Lato:wght@300;400;700;900&display=swap" rel="stylesheet">
     <link rel="icon" href="img/logo.png">
-    <link rel="canonical" href="https://yourdomain.com/tour-sandboarding-agadir">
+    <link rel="canonical" href="https://yourdomain.com/tour-horse-riding-agadir">
     
     <style>
         body {
             font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Lato', 'Helvetica Neue', Arial, sans-serif;
         }
-        html, body { max-width: 100%; overflow-x: hidden; }
-        img, video { max-width: 100%; height: auto; }
-        /* Prevent text from overflowing the viewport on small screens */
-        .tour-main-content, .tour-main-content p, .tour-main-content li, .tour-main-content span {
-            overflow-wrap: anywhere; word-break: break-word;
-        }
-        .tour-content-wrapper, .breadcrumb, .simple-slider, .tg-grid, .tg-preview { max-width: 100%; }
         
-        .tour-detail-hero {
-            position: relative;
-            height: auto;
-            overflow: hidden;
-            margin-top: 95px;
-        }
+        .tour-detail-hero { position: relative; height: auto; overflow: hidden; margin-top: 95px; }
         /* Simple one-image-at-a-time slider */
         .simple-slider { position: relative; height: clamp(260px, 50vw, 520px); border-radius: 16px; overflow: hidden; }
         .simple-slider .slides { position: relative; height: 100%; }
@@ -144,244 +92,6 @@
         .ss-thumb { width: 72px; height: 56px; border-radius: 8px; overflow: hidden; border: 2px solid transparent; opacity: 0.7; cursor: pointer; flex: 0 0 auto; }
         .ss-thumb.active { opacity: 1; border-color: #8B5CF6; }
         .ss-thumb img { width: 100%; height: 100%; object-fit: cover; display: block; }
-        /* Default: hide new desktop carousel */
-        .tour-carousel { display: none; }
-        
-        /* Civitatis-style 5-photo gallery */
-        .tg-preview {
-            height: clamp(260px, 50vw, 520px);
-        }
-        
-        .tg-grid {
-            height: 100%;
-            display: grid;
-            grid-template-columns: 1fr;
-            gap: 12px;
-            align-items: stretch;
-        }
-        
-        @media (min-width: 768px) {
-            .tg-grid {
-                grid-template-columns: 2fr 1fr;
-                grid-template-rows: 1fr;
-            }
-            .tg-hero {
-                grid-row: 1;
-                grid-column: 1;
-            }
-            .tg-right {
-                grid-row: 1;
-                grid-column: 2;
-                height: 100%;
-                display: grid;
-                grid-template-columns: 1fr 1fr;
-                grid-template-rows: 1fr 1fr;
-                gap: 12px;
-                align-items: stretch;
-            }
-        }
-        
-        .tg-item {
-            position: relative;
-            display: block;
-            overflow: hidden;
-            border-radius: 16px;
-            border: 0;
-            padding: 0;
-            cursor: pointer;
-            background: transparent;
-        }
-        
-        .tg-hero, .tg-hero img {
-            height: 100%;
-        }
-        
-        .tg-hero img {
-            width: 100%;
-            object-fit: cover;
-            display: block;
-        }
-        
-        .tg-right .tg-item {
-            height: 100%;
-            display: flex;
-        }
-        
-        .tg-right .tg-item img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            display: block;
-            flex: 1;
-        }
-        
-        .tg-item img {
-            transition: transform 0.3s ease;
-        }
-        
-        .tg-item:hover img {
-            transform: scale(1.02);
-        }
-        
-        .tg-see-more {
-            position: absolute;
-            right: 16px;
-            bottom: 16px;
-            display: flex;
-            align-items: center;
-            gap: 0.5rem;
-            padding: 12px 16px;
-            border-radius: 999px;
-            border: 0;
-            cursor: pointer;
-            background: #fff;
-            color: #111;
-            font-weight: 600;
-            box-shadow: 0 6px 20px rgba(0,0,0,.18);
-        }
-        
-        .tg-see-more .tg-arrow {
-            font-size: 20px;
-            line-height: 1;
-        }
-        
-        /* Lightbox styles */
-        .tg-lightbox {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: rgba(0, 0, 0, 0.9);
-            z-index: 10000;
-            display: none;
-            align-items: center;
-            justify-content: center;
-        }
-        
-        .tg-lightbox.active {
-            display: flex;
-        }
-        
-        .tg-lightbox-content {
-            position: relative;
-            width: 90%;
-            height: 90%;
-            max-width: 1200px;
-            max-height: 800px;
-        }
-        
-        .tg-close {
-            position: absolute;
-            top: -40px;
-            right: 0;
-            background: none;
-            border: none;
-            color: white;
-            font-size: 30px;
-            cursor: pointer;
-            z-index: 10001;
-        }
-        
-        .tg-main {
-            position: relative;
-            height: calc(100% - 120px);
-            margin-bottom: 20px;
-        }
-        
-        .tg-main .swiper-slide {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            display: none;
-        }
-        
-        .tg-main .swiper-slide.active {
-            display: block;
-        }
-        
-        .tg-main .swiper-slide img {
-            width: 100%;
-            height: 100%;
-            object-fit: contain;
-        }
-        
-        .tg-thumbs {
-            height: 100px;
-            overflow: hidden;
-        }
-        
-        .tg-thumbs .swiper-wrapper {
-            display: flex;
-            gap: 10px;
-        }
-        
-        .tg-thumbs .swiper-slide {
-            width: 100px;
-            height: 100px;
-            flex-shrink: 0;
-            cursor: pointer;
-            opacity: 0.6;
-            transition: opacity 0.3s;
-        }
-        
-        .tg-thumbs .swiper-slide.active {
-            opacity: 1;
-        }
-        
-        .tg-thumbs .swiper-slide img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            border-radius: 8px;
-        }
-        
-        .view-all-photos {
-            position: absolute;
-            bottom: 20px;
-            right: 20px;
-            background: white;
-            padding: 12px 25px;
-            border-radius: 6px;
-            font-weight: 600;
-            color: #1F2937;
-            cursor: pointer;
-            z-index: 10;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.2);
-        }
-        /* ---- Desktop-only premium carousel ---- */
-        @media (min-width: 1024px) {
-            .simple-slider, .ss-thumbs { display: none !important; }
-            .tour-carousel { display: block; }
-
-            .tour-carousel {
-                --radius: 20px;
-                --shadow: 0 20px 40px rgba(0,0,0,.15);
-                --glass: rgba(255,255,255,.2);
-                --glass-border: rgba(255,255,255,.35);
-                --accent: #ffffff;
-                max-width: min(1200px, 92vw);
-                margin: 32px auto 0;
-                font-family: system-ui, -apple-system, Segoe UI, Roboto, 'Helvetica Neue', Arial, sans-serif;
-            }
-            .tour-carousel .tc-stage { position: relative; border-radius: var(--radius); overflow: clip; box-shadow: var(--shadow); background: #000; isolation: isolate; }
-            .tour-carousel .tc-image { width: 100%; height: auto; aspect-ratio: 16/9; object-fit: cover; display: block; transition: opacity .6s ease; }
-            .tour-carousel .tc-nav { position: absolute; top: 50%; translate: 0 -50%; width: 46px; height: 46px; border-radius: 50%; border: 1px solid var(--glass-border); background: var(--glass); backdrop-filter: blur(10px); color: var(--accent); display: grid; place-items: center; cursor: pointer; transition: transform .15s ease, background .15s ease, opacity .15s ease; opacity: .9; z-index: 2; }
-            .tour-carousel .tc-prev { left: 14px; }
-            .tour-carousel .tc-next { right: 14px; }
-            .tour-carousel .tc-nav:hover { transform: scale(1.08); background: rgba(255,255,255,.35); }
-            .tour-carousel .tc-nav:active { transform: scale(0.98); }
-            .tour-carousel .tc-caption { position: absolute; inset: auto 0 0 0; padding: 18px 20px 22px; color: #fff; font-size: 1.05rem; font-weight: 500; background: linear-gradient(to top, rgba(0,0,0,.65), rgba(0,0,0,0)); letter-spacing: .2px; z-index: 1; }
-            .tour-carousel .tc-thumbs { margin-top: 14px; display: grid; grid-auto-flow: column; grid-auto-columns: minmax(120px, 1fr); gap: 12px; overflow-x: auto; padding: 6px 2px; scrollbar-width: none; }
-            .tour-carousel .tc-thumbs::-webkit-scrollbar { display: none; }
-            .tour-carousel .tc-thumb { position: relative; border: none; background: transparent; padding: 0; cursor: pointer; border-radius: 12px; overflow: hidden; outline-offset: 3px; transition: transform .2s ease, box-shadow .2s ease, opacity .2s ease; opacity: .85; }
-            .tour-carousel .tc-thumb:hover { transform: translateY(-2px); opacity: 1; }
-            .tour-carousel .tc-thumb.is-active { opacity: 1; box-shadow: 0 10px 22px rgba(0,0,0,.18); }
-            .tour-carousel .tc-thumb img { width: 100%; height: 84px; object-fit: cover; display: block; }
-            @media (prefers-reduced-motion: reduce) { .tour-carousel .tc-image, .tour-carousel .tc-thumb, .tour-carousel .tc-nav { transition: none; } }
-        }
         
         .tour-content-wrapper {
             max-width: 1400px;
@@ -1307,22 +1017,6 @@
         }
 
         @media (max-width: 480px) {
-            /* Tighten paddings and fonts on very small screens to avoid edge collisions */
-            .tour-detail-hero { margin-top: 72px; }
-            .simple-slider { height: 240px; }
-            .breadcrumb { padding: 20px 12px 0; }
-            .tour-content-wrapper { padding: 20px 12px; }
-            .tour-title { font-size: 1.6rem; }
-            .tour-subtitle { font-size: 0.95rem; }
-            .tour-main-content h2 { font-size: 1.5rem !important; }
-            .tour-main-content p { font-size: 14px; }
-            /* Relax large inline paddings/margins from cards so they fit */
-            .tour-main-content [style*="padding: 25px"] { padding: 16px !important; }
-            .tour-main-content [style*="padding: 30px"] { padding: 18px !important; }
-            .tour-main-content [style*="padding: 40px"] { padding: 20px !important; }
-            .tour-main-content [style*="margin: 40px 0"] { margin: 24px 0 !important; }
-            .tour-main-content [style*="margin: 60px 0"] { margin: 32px 0 !important; }
-            .badge { font-size: 12px; padding: 6px 10px; }
             .partner-logos {
                 gap: 15px;
             }
@@ -1345,14 +1039,29 @@
             <nav class="menu-nav">
                 <a href="index.html" style="font-weight: bold;">Home</a>
                 <a href="agadir-tours.html" style="font-weight: bold;">Agadir Tours</a>
-                <a href="day-trips-from-agadir.html" style="font-weight: bold;">Day Trips</a>
+                <a href="things-to-do.html" style="font-weight: bold;">Things to Do in Agadir</a>
                 <a href="blog.html" style="font-weight: bold;">Blog</a>
                 <a href="contact.html" style="font-weight: bold;">Contact</a>
             </nav>
+            <div class="menu-social">
+                <p>FOLLOW US</p>
+                <div class="social-icons">
+                    <a href="https://www.instagram.com/www.miracleair.tz" target="_blank" aria-label="Instagram">
+                        <svg width="24" height="24" fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M16 14c0-2.203-1.797-4-4-4s-4 1.797-4 4 1.797 4 4 4 4-1.797 4-4zM18.156 14c0 3.406-2.75 6.156-6.156 6.156s-6.156-2.75-6.156-6.156 2.75-6.156 6.156-6.156 6.156 2.75 6.156 6.156zM19.844 7.594c0 0.797-0.641 1.437-1.437 1.437s-1.437-0.641-1.437-1.437 0.641-1.437 1.437-1.437 1.437 0.641 1.437 1.437zM12 4.156c-1.75 0-5.5-0.141-7.078 0.484-0.547 0.219-0.953 0.484-1.375 0.906s-0.688 0.828-0.906 1.375c-0.625 1.578-0.484 5.328-0.484 7.078s-0.141 5.5 0.484 7.078c0.219 0.547 0.484 0.953 0.906 1.375s0.828 0.688 1.375 0.906c1.578 0.625 5.328 0.484 7.078 0.484s5.5 0.141 7.078-0.484c0.547-0.219 0.953-0.484 1.375-0.906s0.688-0.828 0.906-1.375c0.625-1.578 0.484-5.328 0.484-7.078s0.141-5.5-0.484-7.078c-0.219-0.547-0.484-0.953-0.906-1.375s-0.828-0.688-1.375-0.906c-1.578-0.625-5.328-0.484-7.078-0.484zM24 14c0 1.656 0.016 3.297-0.078 4.953-0.094 1.922-0.531 3.625-1.937 5.031s-3.109 1.844-5.031 1.937c-1.656 0.094-3.297 0.078-4.953 0.078s-3.297 0.016-4.953-0.078c-1.922-0.094-3.625-0.531-5.031-1.937s-1.844-3.109-1.937-5.031c-0.094-1.656-0.078-3.297-0.078-4.953s-0.016-3.297 0.078-4.953c0.094-1.922 0.531-3.625 1.937-5.031s3.109-1.844 5.031-1.937c1.656-0.094 3.297-0.078 4.953-0.078s3.297-0.016 4.953 0.078c1.922 0.094 3.625 0.531 5.031 1.937s1.844 3.109 1.937 5.031c0.094 1.656 0.078 3.297 0.078 4.953z"></path>
+                        </svg>
+                    </a>
+                    <a href="https://www.facebook.com/profile.php?id=61570405113832" target="_blank" aria-label="Facebook">
+                        <svg width="24" height="24" fill="currentColor" viewBox="0 0 16 28">
+                            <path d="M14.984 0.187v4.125h-2.453c-1.922 0-2.281 0.922-2.281 2.25v2.953h4.578l-0.609 4.625h-3.969v11.859h-4.781v-11.859h-3.984v-4.625h3.984v-3.406c0-3.953 2.422-6.109 5.953-6.109 1.687 0 3.141 0.125 3.563 0.187z"></path>
+                        </svg>
+                    </a>
+                </div>
+            </div>
         </div>
     </div>
 
-        <!-- TOPBAR -->
+    <!-- TOPBAR -->
     <div class="topbar">
         <div class="topbar__wrapper">
             <div class="topbar__left">
@@ -1373,14 +1082,18 @@
             <a href="index.html" class="header__logo">
                 <img src="img/logo.png" alt="The Local Guide" class="header__logo-img">
             </a>
-            <nav class="header__nav" style="margin-left: auto;">
+            <nav class="header__nav">
                 <a href="index.html" class="header__nav-link">Home</a>
                 <a href="agadir-tours.html" class="header__nav-link">Agadir Tours</a>
                 <a href="day-trips-from-agadir.html" class="header__nav-link">Day Trips</a>
                 <a href="blog.html" class="header__nav-link">Blog</a>
                 <a href="contact.html" class="header__nav-link">Contact</a>
             </nav>
-            <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+            <div class="header__actions">
+                <a href="https://wa.me/212601820422" class="btn btn-whatsapp">WhatsApp Us</a>
+                <a href="contact.html" class="btn btn-primary">Book Now</a>
+            </div>
+                    <button class="hamburger" id="hamburger" aria-label="Toggle menu">
                 <span></span>
                 <span></span>
                 <span></span>
@@ -1388,34 +1101,31 @@
         </div>
     </header>
 
-
     <!-- Breadcrumb -->
     <div class="breadcrumb">
         <a href="index.html">Home</a>
         <span>›</span>
         <a href="agadir-tours.html">Agadir Tours</a>
         <span>›</span>
-        <strong>Sandboarding in Agadir</strong>
+        <strong>Horse Riding Agadir</strong>
     </div>
 
     <!-- Tour Hero Gallery -->
     <section class="tour-detail-hero">
         <div class="simple-slider" data-count="6">
             <div class="slides">
-                <div class="slide active"><img src="img/excursions/Sandboarding/sandboarding 1.webp" alt="Sandboarding in Agadir desert dunes"></div>
-                <div class="slide"><img src="img/excursions/Sandboarding/sandboarding 2.jpeg" alt="Agadir sand surfing adventure"></div>
-                <div class="slide"><img src="img/excursions/Sandboarding/sandboarding 3.jpg" alt="Sandboarding Morocco experience"></div>
-                <div class="slide"><img src="img/excursions/Sandboarding/sandboarding 4.jpg" alt="Agadir desert sandboarding with ocean views"></div>
-                <div class="slide"><img src="img/excursions/Sandboarding/sandboarding 5.jpg" alt="Sandboarding and BBQ Agadir desert camp"></div>
-                <div class="slide"><img src="img/excursions/Sandboarding/sandboarding 6.webp" alt="Sandboarding Agadir desert adventure"></div>
-            </div>
+                <div class="slide active"><img src="img/excursions/Horse Riding/horse riding 1.jpg" alt="Beach horse riding Agadir at sunset"></div>
+                <div class="slide"><img src="img/excursions/Horse Riding/horse riding 2.jpg" alt="Horse riding along Agadir coastline"></div>
+                <div class="slide"><img src="img/excursions/Horse Riding/horse riding 3.jpg" alt="Sunset horse ride Agadir experience"></div>
+                <div class="slide"><img src="img/excursions/Horse Riding/horse riding 4.jpg" alt="Agadir horseback riding adventure"></div>
+                <div class="slide"><img src="img/excursions/Horse Riding/horse riding 5.jpg" alt="Horse riding tour Agadir through countryside"></div>
+                <div class="slide"><img src="img/excursions/Horse Riding/horse riding 6.jpg" alt="Professional horse riding guide Agadir"></div>
+        </div>
             <button class="ss-prev" aria-label="Previous photo">‹</button>
             <button class="ss-next" aria-label="Next photo">›</button>
             <div class="ss-dots" aria-label="Slide navigation"></div>
         </div>
         <div class="ss-thumbs" aria-label="Slide thumbnails"></div>
-        <!-- Desktop-only premium carousel container (built by JS) -->
-        <section class="tour-carousel" aria-label="Tour photo gallery"></section>
     </section>
 
     <!-- Tour Content -->
@@ -1423,111 +1133,111 @@
         <div class="tour-main-content">
             <!-- Tour Header -->
             <div class="tour-header">
-                <h1 class="tour-title">Sandboarding in Agadir: Thrilling Desert Sand Surfing Adventure</h1>
-                <p class="tour-subtitle">Surf golden sand dunes • Equipment & instruction included • Desert BBQ dinner • Perfect for thrill-seekers & beginners</p>
+                <h1 class="tour-title">Horse Riding Agadir: Sunset Beach Horseback Riding Experience</h1>
+                <p class="tour-subtitle">Gallop along pristine beaches at golden hour • Ride through authentic Berber villages • Professional guides & well-trained horses</p>
                 
                 <div class="tour-rating">
-                    <span class="rating-score">4.7 / 5</span>
+                    <span class="rating-score">4.9 / 5</span>
                     <div class="rating-details">
                         <div style="color: #f39c12; font-size: 18px; margin-bottom: 5px;">★★★★★</div>
-                        <span>Excellent rating based on 198 reviews</span>
+                        <span>Excellent rating based on 256 reviews</span>
                     </div>
                 </div>
                 
                 <div class="tour-badges">
                     <span class="badge featured">✓ Free Cancellation</span>
                     <span class="badge">🚗 Hotel Pickup Included</span>
-                    <span class="badge">⏱️ 3-4 Hours</span>
-                    <span class="badge">👥 Small Group (Max 12)</span>
-                    <span class="badge">🏂 All Levels Welcome</span>
-                    <span class="badge">🍖 BBQ Included</span>
+                    <span class="badge">⏱️ 2 Hours</span>
+                    <span class="badge">👥 Small Group (Max 10)</span>
+                    <span class="badge">🐴 All Levels Welcome</span>
+                    <span class="badge">🌅 Sunset Rides Available</span>
                 </div>
             </div>
 
             <!-- Tour Highlights -->
             <div class="tour-highlights">
-                <h2>Why Choose Our Sandboarding in Agadir Desert Experience</h2>
+                <h2>Why Choose Our Beach Horse Riding Agadir Experience</h2>
                 <div class="highlights-list">
                     <div class="highlight-item">
                         <span class="highlight-icon">✓</span>
-                        <span class="highlight-text"><strong>Thrilling Desert Adventure:</strong> Experience the adrenaline rush of surfing down massive golden sand dunes with stunning ocean and mountain views</span>
+                        <span class="highlight-text"><strong>Ride Along Pristine Beaches:</strong> Experience the thrill of horseback riding along Agadir's beautiful Atlantic coastline with stunning ocean views</span>
                     </div>
                     <div class="highlight-item">
                         <span class="highlight-icon">✓</span>
-                        <span class="highlight-text"><strong>Professional Equipment Provided:</strong> Quality sandboards and all safety gear included - suitable for complete beginners and experienced boarders</span>
+                        <span class="highlight-text"><strong>Professional Instruction:</strong> Expert instructors for all experience levels - from complete beginners to advanced riders</span>
                     </div>
                     <div class="highlight-item">
                         <span class="highlight-icon">✓</span>
-                        <span class="highlight-text"><strong>Expert Instruction:</strong> Learn proper sandboarding technique from experienced instructors - most people get it within 10-15 minutes!</span>
+                        <span class="highlight-text"><strong>Magical Sunset Rides:</strong> Book sunset horse rides for romantic, scenic experiences with golden hour photography opportunities</span>
                     </div>
                     <div class="highlight-item">
                         <span class="highlight-icon">✓</span>
-                        <span class="highlight-text"><strong>Stunning Taboga Dunes:</strong> Ride spectacular sand dunes just 20 minutes from Agadir with panoramic views of the Atlantic Ocean</span>
+                        <span class="highlight-text"><strong>Well-Trained Gentle Horses:</strong> Beautiful Arabian & Barb breed horses, regularly vet-checked, healthy, and perfect for all riders</span>
                     </div>
                     <div class="highlight-item">
                         <span class="highlight-icon">✓</span>
-                        <span class="highlight-text"><strong>All Skill Levels:</strong> From gentle slopes for beginners to steep 30-meter dunes for thrill-seekers - you choose your challenge level</span>
+                        <span class="highlight-text"><strong>Authentic Berber Villages:</strong> Ride through traditional countryside and picturesque villages for cultural immersion</span>
                     </div>
                     <div class="highlight-item">
                         <span class="highlight-icon">✓</span>
-                        <span class="highlight-text"><strong>Desert BBQ Feast:</strong> Enjoy authentic Moroccan BBQ dinner in traditional Berber camp setting with mint tea and entertainment</span>
+                        <span class="highlight-text"><strong>Small Group Experience:</strong> Maximum 10 riders per tour for personalized attention and quality instruction</span>
                     </div>
                     <div class="highlight-item">
                         <span class="highlight-icon">✓</span>
-                        <span class="highlight-text"><strong>Sunset Timing Option:</strong> Time your adventure for spectacular golden hour desert scenery and perfect photo opportunities</span>
+                        <span class="highlight-text"><strong>Complete Package:</strong> Hotel pickup, professional equipment, safety helmets, and experienced guide - everything included</span>
                     </div>
                 </div>
             </div>
 
             <!-- Tour Description -->
             <div class="tour-description">
-                <h2>Experience the Thrill of Sandboarding in Agadir's Golden Dunes</h2>
-                <p>Get ready for an adrenaline-pumping <strong>sandboarding in Agadir</strong> adventure! Just 20 minutes south of Agadir, the spectacular Taboga and Timlalin sand dunes offer the perfect terrain for <strong>Agadir sand surfing</strong>. Whether you're a complete beginner or an experienced boarder, this <strong>Agadir desert adventure</strong> delivers thrills, stunning scenery, and authentic Moroccan culture all in one unforgettable experience.</p>
+                <h2>Experience the Freedom of Horse Riding Agadir Along the Atlantic Coast</h2>
+                <p>Discover the exhilarating experience of <strong>horse riding Agadir</strong> style! Gallop along pristine beaches, feel the ocean breeze, and connect with magnificent horses on this unforgettable <strong>beach horse riding Agadir</strong> adventure. Whether you're a complete beginner or an experienced equestrian, our professional <strong>horse riding tour Agadir</strong> offers the perfect blend of natural beauty, expert instruction, and authentic Moroccan countryside.</p>
                 
-                <p>Picture yourself standing atop a massive golden sand dune, board in hand, with panoramic views of the Atlantic Ocean on one side and the Atlas Mountains on the other. Then, you take the plunge - carving down the soft, golden sand with the wind in your hair! This is <strong>sandboarding Morocco</strong> style, and it's easier and more fun than you might think. The soft sand means gentle landings, making it perfect for trying tricks and building confidence.</p>
+                <p>Our <strong>Agadir horseback riding</strong> experience takes place along beautiful stretches of beach and through scenic countryside trails just minutes from Agadir. Ride well-trained Arabian and Barb horses - breeds famous for their gentle temperament, intelligence, and stunning beauty. These magnificent animals are regularly vet-checked, well-cared for, and matched to your riding ability to ensure a safe and enjoyable experience.</p>
                 
-                <p>Our <strong>sandboarding and BBQ Agadir</strong> package offers the complete desert experience. After an exhilarating session surfing the dunes, you'll relax in a traditional Berber camp where a delicious Moroccan BBQ feast awaits. Enjoy grilled meats, fresh salads, traditional bread, and mint tea while watching the sun set over the desert. The combination of adventure, culture, and culinary delights makes this one of Agadir's most unique tours.</p>
+                <p>The <strong>beach horse riding Agadir</strong> adventure allows you to experience the unique sensation of riding along the ocean's edge with waves lapping at your horse's hooves. The soft sand provides a comfortable surface for the horses, while the stunning coastal scenery creates unforgettable memories. Our most popular option is the <strong>sunset horse ride Agadir</strong>, where golden hour light creates magical moments perfect for photography and romance.</p>
 
-                <h3>What Makes This Sandboarding in Agadir Experience Special?</h3>
-                <p>Unlike snowboarding, sandboarding is incredibly beginner-friendly! The soft sand provides forgiving landings, so falls don't hurt - they're actually part of the fun. Our experienced instructors teach you proper technique, and most people are successfully riding down dunes within their first few attempts. We provide all equipment - professional-quality sandboards designed specifically for desert conditions.</p>
+                <h3>What Makes This Horse Riding Tour Agadir Special?</h3>
+                <p>Unlike crowded commercial stables, our small ranch prioritizes quality over quantity with a maximum of 10 riders per tour. This allows our professional instructors to provide personalized attention, ensuring both beginners feel confident and experienced riders enjoy a challenging experience. Our horses are treated like family - they're loved, respected, and work limited hours with plenty of rest and quality care.</p>
                 
-                <p>The Taboga dunes near Agadir offer diverse terrain for all ability levels. Beginners start on gentle 5-10 meter slopes to build confidence, while thrill-seekers can progress to massive 20-30 meter dunes for heart-pounding descents. You control your progression - go at your own pace and choose your challenge level. The dunes are constantly shaped by wind, so every visit offers new formations to explore.</p>
+                <p>Your expert instructor will match you with the perfect horse for your skill level and guide you through proper riding techniques. Beginners receive a comprehensive safety briefing and basic riding lesson before setting off, while experienced riders can enjoy the freedom to trot or canter along appropriate sections of the beach. The ride takes you through diverse terrain - soft sandy beaches, scenic countryside paths, and sometimes through authentic Berber villages where locals wave as you pass.</p>
                 
-                <p>This <strong>Agadir sand surfing</strong> adventure is perfect for adventure-seeking families, friends, couples, and solo travelers aged 8 and above. It's an excellent workout (climbing dunes burns calories!), an adrenaline rush, and a unique experience you can't do everywhere. Plus, the desert landscape and lighting create incredible photo and video opportunities - bring your GoPro!</p>
+                <p>This <strong>horse riding Agadir</strong> experience is perfect for families, romantic couples, solo travelers, and horse enthusiasts. It's suitable for children aged 6 and above, making it an ideal family activity. The combination of professional instruction, beautiful horses, stunning scenery, and the therapeutic nature of horseback riding creates an experience that appeals to all ages and abilities.</p>
             </div>
 
             <!-- Detailed Itinerary -->
             <div class="itinerary-section">
-                <h2 style="font-size: 1.8rem; font-weight: 700; color: #1F2937; margin-bottom: 30px;">Detailed Itinerary: Your Sandboarding Adventure</h2>
+                <h2 style="font-size: 1.8rem; font-weight: 700; color: #1F2937; margin-bottom: 30px;">Detailed Itinerary: Your Beach Horse Riding Adventure</h2>
                 
                 <div class="itinerary-item">
-                    <div class="itinerary-time">Morning Tour: 9:00 AM | Afternoon Tour: 2:00 PM (Recommended for Sunset)</div>
+                    <div class="itinerary-time">Morning Ride: 9:00 AM | Afternoon Ride: 3:00 PM | Sunset Ride: 5:00 PM (varies by season)</div>
                     <h4 class="itinerary-title">Hotel Pickup in Agadir or Taghazout</h4>
-                    <p style="color: #6B7280; line-height: 1.8;">We'll collect you from your hotel or riad in Agadir, Taghazout, or surrounding areas in a comfortable, air-conditioned 4x4 vehicle. Your professional driver and guide will greet you and provide an overview of the exciting sandboarding adventure ahead. The short 20-25 minute drive takes you inland toward the impressive Taboga sand dunes.</p>
+                    <p style="color: #6B7280; line-height: 1.8;">We'll collect you from your hotel or riad in Agadir, Taghazout, or surrounding areas in a comfortable vehicle. Your professional driver will greet you warmly and provide an overview of the horse riding experience ahead. The short 10-15 minute drive takes you to our equestrian ranch located in a beautiful setting near the coast.</p>
                 </div>
                 
                 <div class="itinerary-item">
-                    <div class="itinerary-time">+30 Minutes</div>
-                    <h4 class="itinerary-title">Arrival at Desert Dunes & Equipment Setup</h4>
-                    <p style="color: #6B7280; line-height: 1.8;">Arrive at the spectacular Taboga sand dunes and take in the impressive desert landscape. Your instructor will fit you with quality sandboarding equipment - a sturdy board, safety gear, and optional knee/elbow pads. Receive a comprehensive safety briefing and technique demonstration. Watch as your instructor shows you proper stance, how to steer, how to brake, and how to fall safely (on soft sand!). Get fitted with your board and practice a few movements before heading to the dunes.</p>
+                    <div class="itinerary-time">+15 Minutes</div>
+                    <h4 class="itinerary-title">Arrival at Ranch & Meet Your Horse</h4>
+                    <p style="color: #6B7280; line-height: 1.8;">Arrive at our welcoming ranch facility where you'll meet your professional riding instructor. You'll be introduced to your horse - carefully selected to match your riding ability and temperament. First-time riders will receive a comprehensive safety briefing covering mounting, dismounting, steering, stopping, and basic riding techniques. We provide all safety equipment including certified riding helmets. Take a few minutes to bond with your horse, pet them, and get comfortable before setting off.</p>
                 </div>
                 
                 <div class="itinerary-item">
-                    <div class="itinerary-time">+2 Hours</div>
-                    <h4 class="itinerary-title">Epic Sandboarding Session</h4>
-                    <p style="color: #6B7280; line-height: 1.8;">Time for the main event - <strong>sandboarding in Agadir</strong>! Start with practice runs on smaller dunes (5-10 meters) to get comfortable with the technique. Your instructor will coach you, helping perfect your stance and balance. As confidence builds, progress to bigger dunes - some reaching 20-30 meters high! Enjoy unlimited runs - climb up, board down, repeat! The climbing is a workout but worth it for the thrilling descents. Try different boarding styles: sitting, kneeling, or standing. Attempt tricks and jumps as you improve. Your guide will take photos and videos of your best runs. The soft sand means falls are painless and often hilarious - everyone wipes out, it's part of the fun! Take breaks as needed to catch your breath and hydrate. The afternoon timing means you'll catch stunning sunset lighting over the golden dunes.</p>
+                    <div class="itinerary-time">+90 Minutes</div>
+                    <h4 class="itinerary-title">Scenic Beach & Countryside Horse Ride</h4>
+                    <p style="color: #6B7280; line-height: 1.8;">Begin your unforgettable ride! Start with a gentle pace as you and your horse get acquainted, then head toward the beautiful beach. Feel the exhilaration as your horse's hooves touch the soft sand and you ride along the Atlantic coastline with waves crashing beside you. The route varies based on your skill level - beginners enjoy a steady walk with occasional trots, while experienced riders can trot and canter along safe stretches. Ride through scenic countryside with ocean views, eucalyptus forests, and sometimes authentic Berber villages where locals greet you warmly. Your instructor stays with you throughout, providing guidance, ensuring safety, and pointing out perfect photo spots. Sunset rides are especially magical as the golden light bathes the landscape and creates breathtaking silhouettes of horses against colorful skies.</p>
                 </div>
                 
                 <div class="itinerary-item">
-                    <div class="itinerary-time">+1 Hour</div>
-                    <h4 class="itinerary-title">Traditional Berber Desert BBQ Experience</h4>
-                    <p style="color: #6B7280; line-height: 1.8;">After working up an appetite on the dunes, head to our traditional Berber camp setup in the desert. Enjoy a refreshing mint tea ceremony while your BBQ dinner is freshly prepared. The feast includes succulent grilled meats (chicken, beef, or lamb), traditional Moroccan salads, warm freshly-baked bread, seasonal fruits, and more. Vegetarian options available with advance notice. Dine under the open sky, surrounded by dunes, often with traditional Berber music playing. This authentic cultural experience perfectly complements your adventure. Watch the desert sunset paint the sky in brilliant colors - magical!</p>
+                    <div class="itinerary-time">+15 Minutes</div>
+                    <h4 class="itinerary-title">Return to Ranch & Cool Down</h4>
+                    <p style="color: #6B7280; line-height: 1.8;">Return to the ranch at a relaxed pace, allowing your horse to cool down gradually. Dismount with the assistance of your instructor and say goodbye to your magnificent horse - many riders form a genuine connection! You're welcome to pet and thank your horse, and even give them a treat if available. Take a moment to capture final photos with your new four-legged friend. Refreshing bottled water is provided to rehydrate after your ride.</p>
                 </div>
                 
                 <div class="itinerary-item">
-                    <div class="itinerary-time">+30 Minutes</div>
-                    <h4 class="itinerary-title">Return Transfer to Your Hotel</h4>
-                    <p style="color: #6B7280; line-height: 1.8;">After this thrilling <strong>Agadir desert adventure</strong>, your driver will return you safely to your hotel in Agadir or Taghazout. Relax in the comfortable vehicle as you brush off the sand and reflect on the amazing day. Your guide will be happy to provide recommendations for other Agadir activities. Total experience time: approximately 3.5-4 hours from pickup to drop-off. Expect to be sandy and happy!</p>
+                    <div class="itinerary-time">+15 Minutes</div>
+                    <h4 class="itinerary-title">Transfer Back to Your Hotel</h4>
+                    <p style="color: #6B7280; line-height: 1.8;">After this wonderful <strong>horse riding Agadir</strong> experience, your driver will return you comfortably to your hotel in Agadir or Taghazout. Relax in the vehicle as you reflect on the incredible connection with your horse and the beautiful scenery you just experienced. Your instructor will be happy to answer any questions about horses, riding techniques, or recommendations for other activities in Agadir. Total experience time: approximately 2-2.5 hours from pickup to drop-off.</p>
                 </div>
             </div>
 
@@ -1538,24 +1248,24 @@
                         <h4>✅ What's Included</h4>
                         <ul>
                             <li>✓ Hotel pickup and drop-off (Agadir & Taghazout)</li>
-                            <li>✓ 4x4 transportation to the dunes</li>
-                            <li>✓ Professional sandboarding instructor</li>
-                            <li>✓ Quality sandboard and safety equipment</li>
-                            <li>✓ Unlimited rides during 2-hour session</li>
-                            <li>✓ Traditional Moroccan mint tea ceremony</li>
-                            <li>✓ Authentic BBQ dinner in the desert</li>
-                            <li>✓ Traditional Berber music entertainment</li>
-                            <li>✓ Bottled water throughout</li>
-                            <li>✓ All fees and taxes</li>
+                            <li>✓ Comfortable transportation to/from ranch</li>
+                            <li>✓ Professional riding instructor/guide</li>
+                            <li>✓ Well-trained horse matched to your skill level</li>
+                            <li>✓ Safety helmet and equipment</li>
+                            <li>✓ Riding lesson for beginners</li>
+                            <li>✓ 1.5 hours horseback riding experience</li>
+                            <li>✓ Bottled water</li>
+                            <li>✓ Insurance coverage</li>
+                            <li>✓ Photo opportunities with your horse</li>
                         </ul>
                     </div>
                     <div class="included-list">
                         <h4>❌ What's Not Included</h4>
                         <ul>
-                            <li>✗ Personal expenses and souvenirs</li>
-                            <li>✗ GoPro rental (available for €10)</li>
+                            <li>✗ Riding boots (available to rent at ranch for €5)</li>
+                            <li>✗ Professional photos (instructor can take with your camera)</li>
+                            <li>✗ Personal expenses</li>
                             <li>✗ Gratuities (optional, appreciated)</li>
-                            <li>✗ Professional photos (instructor takes with your camera)</li>
                         </ul>
                     </div>
                 </div>
@@ -1563,208 +1273,204 @@
 
             <!-- Important Information -->
             <div class="tour-description">
-                <h2>Essential Information for Your Sandboarding Adventure</h2>
+                <h2>Essential Information for Your Horse Riding Experience</h2>
                 
                 <div style="background: #fff3cd; padding: 20px; border-radius: 10px; border-left: 4px solid #8B5CF6; margin-bottom: 20px;">
                     <strong>📋 What to Bring:</strong>
                     <ul style="margin-top: 10px; color: #6B7280; line-height: 1.8;">
-                        <li><strong>Athletic clothing:</strong> Comfortable, loose-fitting clothes you don't mind getting sandy</li>
-                        <li><strong>Footwear:</strong> Closed-toe sneakers or sports shoes (sand gets in sandals!)</li>
-                        <li><strong>Sun protection:</strong> Sunscreen (SPF 50+), sunglasses with strap, hat or cap</li>
-                        <li><strong>Bandana or scarf:</strong> To protect face from sand/dust if windy</li>
-                        <li><strong>Camera/GoPro:</strong> For epic action shots (sand-proof case recommended)</li>
-                        <li><strong>Small backpack:</strong> For water and personal items</li>
-                        <li><strong>Plastic bag:</strong> For sandy shoes and equipment after</li>
-                        <li><strong>Change of clothes:</strong> You'll get sandy! Leave in vehicle for after</li>
+                        <li><strong>Comfortable pants:</strong> Long pants only (no shorts) - jeans or athletic pants ideal</li>
+                        <li><strong>Proper footwear:</strong> Closed-toe shoes with small heel (riding boots available to rent for €5)</li>
+                        <li><strong>Sun protection:</strong> Sunscreen (SPF 30+), sunglasses with strap, hat</li>
+                        <li><strong>Light jacket:</strong> For cooler morning or evening rides</li>
+                        <li><strong>Camera/phone:</strong> For photos (can be secured in provided bag during ride)</li>
+                        <li><strong>Water bottle:</strong> Stay hydrated (also provided)</li>
                     </ul>
                 </div>
                 
                 <div style="background: #d1ecf1; padding: 20px; border-radius: 10px; border-left: 4px solid #8B5CF6; margin-bottom: 20px;">
                     <strong>ℹ️ Good to Know:</strong>
                     <ul style="margin-top: 10px; color: #6B7280; line-height: 1.8;">
-                        <li><strong>Difficulty level:</strong> Easy to moderate - all fitness levels welcome! Falling on sand doesn't hurt</li>
-                        <li><strong>Minimum age:</strong> 8 years old (younger with parent supervision)</li>
-                        <li><strong>Learning curve:</strong> Most people get the hang of it within 10-15 minutes</li>
-                        <li><strong>Expect to fall:</strong> Everyone does! Soft sand means painless, fun tumbles</li>
-                        <li><strong>Physical exertion:</strong> Climbing dunes is a workout - good cardio! Take breaks as needed</li>
-                        <li><strong>Sandy clothes:</strong> You WILL get sandy - hair, clothes, shoes, everywhere! It's part of the experience</li>
-                        <li><strong>Best timing:</strong> Afternoon tours (2pm start) catch spectacular sunset lighting</li>
-                        <li><strong>Weather:</strong> Best on calm days; we'll reschedule if too windy for safety</li>
-                        <li><strong>Group size:</strong> Small groups (max 12) for personalized instruction</li>
-                        <li><strong>Free cancellation:</strong> Cancel up to 24 hours before for full refund</li>
+                        <li><strong>Riding experience:</strong> Not required! Perfect for beginners - instructors teach proper techniques</li>
+                        <li><strong>Weight limit:</strong> 90kg (200lbs) maximum for horse welfare and safety</li>
+                        <li><strong>Minimum age:</strong> 6 years old (children 6-12 ride with close supervision, ponies available)</li>
+                        <li><strong>Horse care:</strong> All horses regularly vet-checked, well-fed, and treated with respect</li>
+                        <li><strong>Difficulty level:</strong> Easy - suitable for all fitness levels and ages 6+</li>
+                        <li><strong>Trail options:</strong> Beach, countryside, or village trails - discuss preferences with instructor</li>
+                        <li><strong>Sunset rides:</strong> Most popular! Book early as they fill quickly</li>
+                        <li><strong>Group size:</strong> Small groups (max 10 riders) for personalized attention</li>
+                        <li><strong>Free cancellation:</strong> Cancel up to 24 hours before departure for full refund</li>
+                        <li><strong>Languages:</strong> Instructors speak English and French fluently</li>
                     </ul>
                 </div>
 
                 <div style="background: #e8f5e9; padding: 20px; border-radius: 10px; border-left: 4px solid #8B5CF6;">
                     <strong>💡 Local Insider Tips:</strong>
                     <ul style="margin-top: 10px; color: #6B7280; line-height: 1.8;">
-                        <li>Book afternoon session (2pm) for best conditions and sunset views</li>
-                        <li>Sand is softer and easier to board in late afternoon</li>
-                        <li>Expect a workout - climbing dunes burns serious calories!</li>
-                        <li>Leave valuables at hotel - sand gets into everything</li>
-                        <li>Bring small bills (100-200 Dirham) for optional GoPro rental or souvenirs</li>
-                        <li>Start on smaller dunes to build confidence before tackling the big ones</li>
-                        <li>Sitting position is easier than standing for beginners</li>
-                        <li>Don't wear your best clothes - they'll get dusty and sandy!</li>
-                        <li>Embrace the falls - they're soft, painless, and make for great photos!</li>
+                        <li>Book sunset rides for the most romantic and photogenic experience</li>
+                        <li>Wear long pants even in summer - protects your legs from saddle friction</li>
+                        <li>Shoes with small heel prevent feet slipping through stirrups (riding boots ideal)</li>
+                        <li>Relax your body and move with the horse's rhythm - don't fight it!</li>
+                        <li>Hold reins gently - horses respond to subtle cues, not pulling</li>
+                        <li>Morning rides are cooler and perfect for photography with soft light</li>
+                        <li>Tell your instructor if nervous - they'll give you the calmest horse and extra attention</li>
+                        <li>Experienced riders: ask about trotting/cantering opportunities on safe stretches</li>
                     </ul>
                 </div>
             </div>
 
-            <!-- What Makes Sandboarding Special Section -->
+            <!-- Why Horse Riding is Special Section -->
             <div class="tour-description">
-                <h2>Why Sandboarding in Agadir is an Incredible Adventure</h2>
-                <p><strong>Sandboarding Morocco</strong> offers unique advantages and thrills for adventure-seekers:</p>
+                <h2>Why Beach Horse Riding Agadir is an Unforgettable Experience</h2>
+                <p>Our <strong>horse riding Agadir</strong> tours offer unique advantages and experiences for all types of visitors:</p>
                 
-                <h3 style="font-size: 1.4rem; margin-top: 25px; margin-bottom: 12px; color: #1F2937;">🏂 Easier Than Snowboarding</h3>
-                <p><strong>Agadir sand surfing</strong> is actually easier to learn than snowboarding! The soft sand provides forgiving landings - falls don't hurt like they do on snow or ice. Most beginners successfully ride down dunes within 15 minutes of instruction. You can sit, kneel, or stand on the board depending on your comfort level. Progress at your own pace from gentle slopes to steep dunes as your confidence grows.</p>
+                <h3 style="font-size: 1.4rem; margin-top: 25px; margin-bottom: 12px; color: #1F2937;">🌅 Romantic Sunset Beach Rides</h3>
+                <p>The <strong>sunset horse ride Agadir</strong> is one of the most romantic activities on Morocco's Atlantic coast. Couples love the magical atmosphere of riding side-by-side along the beach as the sun paints the sky in brilliant colors. Popular for anniversaries, honeymoons, and proposals, the gentle rhythm of the horses combined with stunning ocean views creates memories that last forever. Many couples say it's the highlight of their Morocco vacation!</p>
 
-                <h3 style="font-size: 1.4rem; margin-top: 25px; margin-bottom: 12px; color: #1F2937;">⛰️ Stunning Taboga Desert Dunes</h3>
-                <p>The <strong>sandboarding in Agadir</strong> experience takes place at the incredible Taboga dunes - one of Morocco's best sandboarding locations. These massive golden dunes reach up to 30 meters high and offer panoramic views of both the Atlantic Ocean and Atlas Mountains. The location is just 20 minutes from Agadir, making it incredibly accessible while feeling like a remote desert paradise.</p>
+                <h3 style="font-size: 1.4rem; margin-top: 25px; margin-bottom: 12px; color: #1F2937;">👨‍👩‍👧‍👦 Perfect for All Skill Levels</h3>
+                <p>Whether you've never been on a horse or you're an experienced equestrian, our <strong>horse riding tour Agadir</strong> accommodates everyone. Beginners receive comprehensive instruction and are matched with calm, patient horses. We teach mounting, dismounting, steering, stopping, and basic riding posture. Intermediate riders enjoy beach trots and canters, while advanced riders can experience the thrill of galloping along designated safe stretches. Our instructors adapt the experience to your comfort level.</p>
 
-                <h3 style="font-size: 1.4rem; margin-top: 25px; margin-bottom: 12px; color: #1F2937;">💪 Adrenaline Rush & Great Workout</h3>
-                <p>This <strong>Agadir desert adventure</strong> combines thrilling descents with an excellent physical workout. Climbing the dunes provides serious cardio exercise - your legs and core will feel it! But the adrenaline rush of surfing down makes it worth every step. It's adventure and fitness combined. Many guests say it's one of the most fun workouts they've ever had!</p>
+                <h3 style="font-size: 1.4rem; margin-top: 25px; margin-bottom: 12px; color: #1F2937;">🐴 Arabian & Barb Breed Horses</h3>
+                <p>Our <strong>Agadir horseback riding</strong> center features beautiful horses from two prestigious Moroccan breeds. Arabian horses are known for intelligence, endurance, and gentle temperament. Barb horses are native North African breeds famous for their sure-footedness and calm nature. All our horses are healthy, regularly vet-checked, properly fed, and given rest days. We believe in ethical animal tourism - our horses are loved, not overworked.</p>
 
-                <h3 style="font-size: 1.4rem; margin-top: 25px; margin-bottom: 12px; color: #1F2937;">📸 Epic Photo & Video Opportunities</h3>
-                <p><strong>Sandboarding and BBQ Agadir</strong> adventures create amazing content for social media! Capture action shots of you carving down dunes, dramatic jumps, hilarious wipe-outs, and stunning desert panoramas at sunset. The golden sand and blue sky create perfect contrast for photography. Many guests rent GoPros (€10) to capture their rides from board-mounted perspectives.</p>
+                <h3 style="font-size: 1.4rem; margin-top: 25px; margin-bottom: 12px; color: #1F2937;">📸 Instagram-Worthy Photo Opportunities</h3>
+                <p><strong>Beach horse riding Agadir</strong> provides spectacular photo opportunities! Capture stunning shots of horses galloping along the beach, dramatic silhouettes against sunset skies, close-up portraits with your horse, and action shots of you riding. Our instructors know the best photo spots and timing. They're happy to take photos and videos of you riding - perfect for showing friends and family back home!</p>
 
-                <h3 style="font-size: 1.4rem; margin-top: 25px; margin-bottom: 12px; color: #1F2937;">🍖 Complete Desert Experience with BBQ</h3>
-                <p>Unlike basic sandboarding-only options, our <strong>sandboarding in Agadir</strong> package includes a traditional Berber desert BBQ experience. After your thrilling session, relax in an authentic Berber tent, enjoy mint tea, feast on delicious grilled food, and watch the desert sunset. It's adventure combined with cultural immersion and culinary delight!</p>
+                <h3 style="font-size: 1.4rem; margin-top: 25px; margin-bottom: 12px; color: #1F2937;">🏞️ Diverse Scenic Trails</h3>
+                <p>Unlike rides confined to a small arena, our <strong>horse riding Agadir</strong> tours explore diverse terrain. Ride along pristine beaches with ocean views, canter through eucalyptus forests, traverse scenic countryside with mountain backdrops, and sometimes pass through authentic Berber villages. Each ride offers changing scenery and new experiences. Discuss your preferences with your instructor - want more beach time? Prefer countryside? We customize the route!</p>
             </div>
 
-            <!-- Planning Your Sandboarding Section -->
+            <!-- Planning Your Horse Riding Section -->
             <div class="tour-description">
-                <h2>Planning Your Sandboarding in Agadir Adventure</h2>
+                <h2>Planning Your Horse Riding Agadir Adventure</h2>
                 
-                <h3 style="font-size: 1.4rem; margin-top: 25px; margin-bottom: 12px; color: #1F2937;">Best Time for Sandboarding in Agadir</h3>
-                <p><strong>Sandboarding in Agadir</strong> is available year-round, with each season offering ideal conditions:</p>
+                <h3 style="font-size: 1.4rem; margin-top: 25px; margin-bottom: 12px; color: #1F2937;">Best Time for Horse Riding in Agadir</h3>
+                <p><strong>Horse riding Agadir</strong> is available year-round, with each season offering unique advantages:</p>
                 <ul style="margin-left: 25px; color: #6B7280; line-height: 1.8; margin-bottom: 20px;">
-                    <li><strong>Spring (March-May):</strong> Perfect temperatures (20-25°C), calm winds, excellent visibility. Best season for sandboarding!</li>
-                    <li><strong>Summer (June-August):</strong> Hot but exhilarating! Afternoon tours (2pm) are recommended to avoid midday heat. Sunset timing is spectacular.</li>
-                    <li><strong>Fall (September-November):</strong> Ideal conditions with comfortable temperatures, golden sunset light, and fewer tourists. Highly recommended!</li>
-                    <li><strong>Winter (December-February):</strong> Mild weather (15-20°C), cooler desert temps perfect for physical activity. Bring light jacket.</li>
+                    <li><strong>Spring (March-May):</strong> Perfect temperatures (18-25°C), wildflowers blooming, ideal riding conditions. Best season overall!</li>
+                    <li><strong>Summer (June-August):</strong> Warm but ocean breeze keeps rides comfortable. Morning or sunset rides recommended. Longer daylight hours.</li>
+                    <li><strong>Fall (September-November):</strong> Excellent weather, fewer tourists, spectacular sunset colors. Highly recommended!</li>
+                    <li><strong>Winter (December-February):</strong> Mild Agadir winters (15-20°C), fewer crowds, earlier sunsets. Bring light jacket for evening rides.</li>
                 </ul>
-                <p style="color: #6B7280; line-height: 1.8; margin-left: 25px;"><strong>Pro Tip:</strong> Afternoon tours (2pm start) are best for catching sunset over the dunes and cooler sand temperatures!</p>
 
-                <h3 style="font-size: 1.4rem; margin-top: 25px; margin-bottom: 12px; color: #1F2937;">Where are the Agadir Sand Dunes Located?</h3>
-                <p>Our <strong>Agadir sand surfing</strong> adventure takes place at the famous Taboga and Timlalin sand dunes, located approximately 15-20 kilometers (20-25 minutes drive) south of Agadir. These spectacular dunes are part of a unique landscape where desert meets ocean - you can actually see the Atlantic from the tops of dunes! The dunes are constantly shaped by coastal winds, creating ever-changing terrain perfect for sandboarding.</p>
+                <h3 style="font-size: 1.4rem; margin-top: 25px; margin-bottom: 12px; color: #1F2937;">Where is the Horse Riding Ranch Located?</h3>
+                <p>Our <strong>beach horse riding Agadir</strong> ranch is located just 10-15 minutes from Agadir city center, in a beautiful countryside setting near the coast. The facility features well-maintained stables, a practice area for beginners, direct beach access, and scenic countryside trails. The exact location will be confirmed when you book - we provide hotel pickup so you don't need to find us!</p>
 
-                <h3 style="font-size: 1.4rem; margin-top: 25px; margin-bottom: 12px; color: #1F2937;">Why Book a Professional Sandboarding Tour?</h3>
-                <p>While you might try to visit the dunes independently, booking our <strong>sandboarding Morocco</strong> tour offers major advantages:</p>
+                <h3 style="font-size: 1.4rem; margin-top: 25px; margin-bottom: 12px; color: #1F2937;">Why Book with a Professional Ranch vs. Beach Operators?</h3>
+                <p>While you might see individual horse operators on beaches, booking with our professional <strong>Agadir horseback riding</strong> ranch offers significant advantages:</p>
                 <ul style="margin-left: 25px; color: #6B7280; line-height: 1.8;">
-                    <li><strong>Professional equipment:</strong> Quality sandboards designed for desert conditions - not DIY boards</li>
-                    <li><strong>Expert instruction:</strong> Learn proper technique quickly and safely</li>
-                    <li><strong>Safety gear:</strong> Helmets, pads, and all necessary protection equipment</li>
-                    <li><strong>Best dune locations:</strong> We know which dunes are perfect for beginners vs. advanced</li>
-                    <li><strong>Complete package:</strong> Transport + equipment + instruction + BBQ dinner - everything arranged</li>
-                    <li><strong>No navigation needed:</strong> Dunes can be confusing to find - we handle directions</li>
-                    <li><strong>Cultural experience:</strong> Desert BBQ and Berber traditions included</li>
-                    <li><strong>Fixed pricing:</strong> Transparent costs, no hidden fees or surprise charges</li>
-                    <li><strong>Insured activity:</strong> Full insurance coverage for peace of mind</li>
+                    <li><strong>Horse welfare:</strong> Our horses are regularly vet-checked, properly fed, and work limited hours with rest days</li>
+                    <li><strong>Professional instruction:</strong> Qualified instructors teach proper technique and ensure safety</li>
+                    <li><strong>Quality equipment:</strong> Well-maintained saddles, helmets, and gear that fits properly</li>
+                    <li><strong>Insurance coverage:</strong> Full insurance for your peace of mind</li>
+                    <li><strong>Varied routes:</strong> Access to beach, countryside, and village trails - not just busy tourist beaches</li>
+                    <li><strong>Personalized matching:</strong> Horses matched to your ability - calm for beginners, spirited for advanced</li>
+                    <li><strong>Fixed pricing:</strong> Transparent costs with no haggling or surprise charges</li>
+                    <li><strong>Small groups:</strong> Maximum 10 riders ensures personalized attention</li>
+                    <li><strong>Convenient pickup:</strong> Hotel collection and drop-off included</li>
                 </ul>
             </div>
 
             <!-- FAQ Section -->
             <div class="faq-section">
-                <h2>Frequently Asked Questions About Sandboarding in Agadir</h2>
+                <h2>Frequently Asked Questions About Horse Riding Agadir</h2>
                 
                 <div class="faq-item">
                     <button class="faq-question">
-                        Is sandboarding difficult to learn?
+                        Do I need horse riding experience?
                         <span class="faq-icon">+</span>
                     </button>
                     <div class="faq-answer">
-                        <p>Not at all! <strong>Sandboarding in Agadir</strong> is actually easier than snowboarding. Most people get the hang of it within 10-15 minutes with our professional instruction. The soft sand provides forgiving landings, so falls don't hurt. You can sit, kneel, or stand - whatever feels comfortable. Our instructors ensure you progress at your own pace!</p>
+                        <p>No experience necessary! Our <strong>horse riding tour Agadir</strong> is perfect for complete beginners. Our instructors teach you everything: mounting, dismounting, steering, stopping, and basic riding posture. We match horses to your skill level - calm, patient horses for first-timers. Most beginners feel comfortable within 10-15 minutes!</p>
                     </div>
                 </div>
 
                 <div class="faq-item">
                     <button class="faq-question">
-                        Do I need previous boarding experience?
+                        Are the horses safe and well-treated?
                         <span class="faq-icon">+</span>
                     </button>
                     <div class="faq-answer">
-                        <p>Absolutely not! About 80% of our guests are complete first-timers. This <strong>Agadir sand surfing</strong> experience is designed for beginners. Our instructors teach you everything from scratch - proper stance, steering, stopping, and safe falling techniques. If you do have snowboarding or skateboarding experience, you'll pick it up even faster!</p>
+                        <p>Absolutely! Horse welfare is our top priority. All our horses are regularly vet-checked, properly fed with quality nutrition, work limited hours with plenty of rest days, and live in comfortable stables. Our Arabian and Barb horses are gentle, well-trained, and genuinely seem to enjoy their work. We practice ethical animal tourism.</p>
                     </div>
                 </div>
 
                 <div class="faq-item">
                     <button class="faq-question">
-                        Is it safe? Will I get injured?
+                        What should I wear for horse riding?
                         <span class="faq-icon">+</span>
                     </button>
                     <div class="faq-answer">
-                        <p>Very safe! The soft sand provides cushioned landings - minor tumbles are normal, expected, and painless. We provide safety helmets and optional pads. Our instructors teach safe techniques and supervise throughout. Thousands of guests have enjoyed <strong>sandboarding Morocco</strong> style without issues. It's actually much safer than many sports because sand is so forgiving!</p>
+                        <p>For <strong>beach horse riding Agadir</strong>, wear long comfortable pants (jeans or athletic pants work great - no shorts), and closed-toe shoes with a small heel. We provide safety helmets. Riding boots are available to rent (€5) for better grip. Bring sunglasses, sunscreen, and a light jacket for evening rides.</p>
                     </div>
                 </div>
 
                 <div class="faq-item">
                     <button class="faq-question">
-                        What's the difference between sandboarding and sand surfing?
+                        Can children ride horses?
                         <span class="faq-icon">+</span>
                     </button>
                     <div class="faq-answer">
-                        <p>They're the same activity - just different names! "Sandboarding" and "<strong>Agadir sand surfing</strong>" both refer to riding down sand dunes on a board. Some people also call it "dune boarding" or "sand sledding." Whatever you call it, it's thrilling fun!</p>
+                        <p>Yes! Children aged 6 and above can ride with close supervision from our instructors. We have smaller ponies for younger riders and match children with particularly gentle horses. Kids under 10 typically ride at walking pace with an instructor leading. It's a wonderful family experience - many kids say it's their trip highlight!</p>
                     </div>
                 </div>
 
                 <div class="faq-item">
                     <button class="faq-question">
-                        How high are the sand dunes?
+                        Is there a weight limit for horse riding?
                         <span class="faq-icon">+</span>
                     </button>
                     <div class="faq-answer">
-                        <p>The Taboga dunes vary in height. Beginner-friendly slopes range from 5-10 meters (16-33 feet). Intermediate dunes are 10-20 meters. Advanced thrill-seekers can try dunes up to 30 meters (100 feet) high! You choose your comfort level - our instructors help you find the perfect dune for your ability and confidence.</p>
+                        <p>Yes, for the welfare of our horses, the maximum weight is 90kg (200lbs). This ensures the horses remain comfortable and healthy. If you're close to this limit, please contact us - we may have larger, stronger horses available. We appreciate your understanding in prioritizing animal welfare.</p>
                     </div>
                 </div>
 
                 <div class="faq-item">
                     <button class="faq-question">
-                        Will I get very sandy?
+                        How long is the horse riding experience?
                         <span class="faq-icon">+</span>
                     </button>
                     <div class="faq-answer">
-                        <p>Yes, absolutely! Sand gets everywhere - hair, clothes, shoes, pockets. It's part of the adventure and most guests find it hilarious! We recommend wearing clothes you don't mind getting sandy, bringing a change of clothes for after, and leaving valuables at the hotel. A quick shower back at your hotel and you're good as new!</p>
+                        <p>Our standard <strong>horse riding Agadir</strong> tour is 2 hours total (pickup to drop-off), including approximately 1.5 hours of actual riding. We also offer 1-hour introductory rides for those wanting a shorter experience, or extended 3-hour rides for experienced riders. The sunset ride is especially popular!</p>
                     </div>
                 </div>
 
                 <div class="faq-item">
                     <button class="faq-question">
-                        Can children do sandboarding?
+                        When is the best time for sunset horse rides?
                         <span class="faq-icon">+</span>
                     </button>
                     <div class="faq-answer">
-                        <p>Yes! Children aged 8 and above can participate independently with instructor supervision. Younger children (5-7) can ride in sitting position with parent nearby. We have smaller boards and gentler slopes perfect for kids. Most children absolutely love the <strong>Agadir desert adventure</strong> - many say it's the best part of their vacation!</p>
+                        <p>The <strong>sunset horse ride Agadir</strong> timing varies by season. Winter (Dec-Feb): depart around 4:00 PM. Summer (Jun-Aug): depart around 6:00 PM. Spring/Fall: around 5:00 PM. We'll confirm your exact pickup time when booking to ensure you experience the perfect golden hour ride!</p>
                     </div>
                 </div>
 
                 <div class="faq-item">
                     <button class="faq-question">
-                        Is it like snowboarding?
+                        What if I'm scared of horses?
                         <span class="faq-icon">+</span>
                     </button>
                     <div class="faq-answer">
-                        <p>Similar concept but easier and more forgiving! <strong>Sandboarding in Agadir</strong> is slower than snowboarding (sand has more friction) and provides much softer landings. If you can snowboard, you'll find sandboarding easy. If you can't, sandboarding is actually a great way to practice balance and technique without the pain of falling on hard snow!</p>
+                        <p>Many nervous first-timers end up loving it! Our instructors are extremely patient and experienced with apprehensive riders. We'll introduce you slowly to your horse, let you pet and bond with them first, and match you with our calmest, gentlest horse. You control the pace - no pressure to go faster than comfortable. Most nervous riders surprise themselves!</p>
                     </div>
                 </div>
 
                 <div class="faq-item">
                     <button class="faq-question">
-                        What's included in the BBQ dinner?
+                        Can experienced riders gallop or canter?
                         <span class="faq-icon">+</span>
                     </button>
                     <div class="faq-answer">
-                        <p>The <strong>sandboarding and BBQ Agadir</strong> feast includes succulent grilled meats (chicken, beef, or lamb), traditional Moroccan salads, warm freshly-baked bread, seasonal fruits, mint tea, and refreshing beverages. Vegetarian options available with advance notice. Everything is freshly prepared at our desert Berber camp while you enjoy the stunning surroundings!</p>
+                        <p>Yes! Experienced riders can trot and canter along appropriate sections of beach and trails. Your instructor will assess your ability and give permission for faster paces on safe, open stretches. We want advanced riders to enjoy the freedom of beach galloping while ensuring everyone's safety. Just let us know your experience level when booking!</p>
                     </div>
                 </div>
 
                 <div class="faq-item">
                     <button class="faq-question">
-                        Can I bring my own GoPro or camera?
+                        Is the horse riding romantic for couples?
                         <span class="faq-icon">+</span>
                     </button>
                     <div class="faq-answer">
-                        <p>Absolutely! We encourage it! Chest-mounted GoPros work great for first-person perspective. Keep cameras in protective cases as sand can damage electronics. If you don't have a GoPro, we rent them for €10 - totally worth it for epic action footage! Your instructor will also take photos/videos with your device.</p>
+                        <p>Incredibly romantic! The <strong>sunset horse ride Agadir</strong> is one of our most popular choices for couples, honeymooners, and anniversaries. Riding side-by-side along the beach at sunset is magical. The peaceful rhythm, stunning scenery, and shared experience create wonderful bonding moments. We've even had several marriage proposals during sunset rides!</p>
                     </div>
                 </div>
             </div>
@@ -1772,13 +1478,13 @@
             <!-- Reviews Section -->
             <div class="reviews-section">
                 <div class="reviews-header">
-                    <h2 style="font-size: 1.8rem; font-weight: 700; color: #1F2937;">What Our Guests Say About Sandboarding in Agadir</h2>
+                    <h2 style="font-size: 1.8rem; font-weight: 700; color: #1F2937;">What Our Guests Say About Horse Riding Agadir</h2>
                     <div class="reviews-summary">
-                        <span class="review-score-big">4.7</span>
+                        <span class="review-score-big">4.9</span>
                         <div>
                             <div style="color: #f39c12; font-size: 20px; margin-bottom: 5px;">★★★★★</div>
                             <span style="color: #6B7280;">Excellent</span><br>
-                            <span style="color: #999; font-size: 14px;">198 verified reviews</span>
+                            <span style="color: #999; font-size: 14px;">256 verified reviews</span>
                         </div>
                     </div>
                 </div>
@@ -1788,27 +1494,27 @@
                         <div class="reviewer-info">
                             <div class="reviewer-avatar">J</div>
                             <div>
-                                <div class="reviewer-name">Jake Morrison</div>
-                                <div class="reviewer-location">Los Angeles, USA • Visited Sep 2025</div>
+                                <div class="reviewer-name">Jennifer Smith</div>
+                                <div class="reviewer-location">London, UK • Visited Sep 2025</div>
                             </div>
                         </div>
                         <div class="review-rating">5.0</div>
                     </div>
-                    <p class="review-text">"Incredible experience! Sandboarding in Agadir was a highlight of our Morocco trip. The dunes were massive and the instructors were so patient with us beginners. My 10-year-old son mastered it after a few tries and didn't want to stop! The desert BBQ at sunset was magical. Perfect combination of adventure and culture. Highly recommend!"</p>
+                    <p class="review-text">"Absolutely magical beach horse riding Agadir experience! I'm a complete beginner and was nervous, but my instructor was so patient. My horse was gentle and beautiful. Riding along the beach at sunset was like a dream - the photos are stunning! Best activity we did in Agadir. Highly recommend!"</p>
                 </div>
 
                 <div class="review-card">
                     <div class="review-header">
                         <div class="reviewer-info">
-                            <div class="reviewer-avatar">S</div>
+                            <div class="reviewer-avatar">P</div>
                             <div>
-                                <div class="reviewer-name">Sara Bennett</div>
-                                <div class="reviewer-location">Manchester, UK • Visited Oct 2025</div>
+                                <div class="reviewer-name">Peter Schneider</div>
+                                <div class="reviewer-location">Hamburg, Germany • Visited Oct 2025</div>
                             </div>
                         </div>
-                        <div class="review-rating">4.5</div>
+                        <div class="review-rating">5.0</div>
                     </div>
-                    <p class="review-text">"So much fun! This Agadir sand surfing adventure was thrilling and surprisingly easy to learn. I was nervous at first but the instructors made it simple. Fell a few times but the sand is so soft it doesn't hurt at all! The sunset views from the dunes were spectacular. The BBQ dinner was delicious. Great afternoon adventure - book it!"</p>
+                    <p class="review-text">"Fantastic horse riding tour Agadir! As an experienced rider, I was happy they let me canter along the beach. The horses are well-trained and clearly well-cared for. Beautiful Arabian breeds. The sunset timing was perfect and the instructor knew all the best photo spots. Will definitely do this again next visit!"</p>
                 </div>
 
                 <div class="review-card">
@@ -1816,13 +1522,27 @@
                         <div class="reviewer-info">
                             <div class="reviewer-avatar">M</div>
                             <div>
-                                <div class="reviewer-name">Marc Weber</div>
-                                <div class="reviewer-location">Berlin, Germany • Visited Aug 2025</div>
+                                <div class="reviewer-name">Maria Garcia</div>
+                                <div class="reviewer-location">Madrid, Spain • Visited Aug 2025</div>
+                            </div>
+                        </div>
+                        <div class="review-rating">4.8</div>
+                    </div>
+                    <p class="review-text">"Wonderful family experience! Our kids (7 and 10) absolutely loved their first horse riding experience. The instructors were patient and made sure everyone felt safe. The horses were gentle giants. Beautiful coastal scenery and the beach ride was spectacular. Great value for money. One of the best things we did in Morocco!"</p>
+                </div>
+
+                <div class="review-card">
+                    <div class="review-header">
+                        <div class="reviewer-info">
+                            <div class="reviewer-avatar">R</div>
+                            <div>
+                                <div class="reviewer-name">Robert Taylor</div>
+                                <div class="reviewer-location">Dublin, Ireland • Visited Jul 2025</div>
                             </div>
                         </div>
                         <div class="review-rating">5.0</div>
                     </div>
-                    <p class="review-text">"Best adventure tour in Agadir! The sandboarding was exciting and challenging in a good way. Our group loved racing down the dunes. Equipment was professional quality and instructors were knowledgeable. The Berber dinner in the desert was authentic and tasty. Great value for money. Would do it again!"</p>
+                    <p class="review-text">"The sunset horse ride Agadir was incredibly romantic! My partner and I loved every minute. Riding along the beach as the sun set was magical. Our instructor gave us space to enjoy the moment while ensuring we were safe. The horses were beautiful and well-behaved. Perfect romantic activity - I proposed during the ride and she said yes!"</p>
                 </div>
 
                 <div class="review-card">
@@ -1830,66 +1550,52 @@
                         <div class="reviewer-info">
                             <div class="reviewer-avatar">L</div>
                             <div>
-                                <div class="reviewer-name">Laura Peterson</div>
-                                <div class="reviewer-location">Copenhagen, Denmark • Visited Jul 2025</div>
+                                <div class="reviewer-name">Lucie Martin</div>
+                                <div class="reviewer-location">Lyon, France • Visited Sep 2025</div>
                             </div>
                         </div>
-                        <div class="review-rating">4.8</div>
+                        <div class="review-rating">4.9</div>
                     </div>
-                    <p class="review-text">"Fantastic Agadir desert adventure! Never tried sandboarding before but learned quickly thanks to great instruction. The bigger dunes were scary at first but so fun once you commit! My legs were sore from climbing but totally worth it. Desert sunset was beautiful and the food was excellent. Unique experience you can't do everywhere!"</p>
+                    <p class="review-text">"Excellente expérience d'équitation! The horses were magnificent and so gentle. I hadn't ridden in years but felt completely comfortable. The beach setting was beautiful and the instructor was professional and friendly. Hotel pickup was punctual. Highly recommend this Agadir horseback riding tour to anyone - beginner or experienced!"</p>
                 </div>
 
                 <div class="review-card">
                     <div class="review-header">
                         <div class="reviewer-info">
-                            <div class="reviewer-avatar">T</div>
+                            <div class="reviewer-avatar">D</div>
                             <div>
-                                <div class="reviewer-name">Tom Richards</div>
-                                <div class="reviewer-location">Dublin, Ireland • Visited Sep 2025</div>
-                            </div>
-                        </div>
-                        <div class="review-rating">4.6</div>
-                    </div>
-                    <p class="review-text">"Awesome adventure! Sandboarding Morocco is way more fun than I expected. Everyone in our group loved it - even my girlfriend who was skeptical. Getting sandy is part of the fun! The instructors took great videos of us. BBQ in the desert was a perfect ending. One of the most unique things we did in Morocco!"</p>
-                </div>
-
-                <div class="review-card">
-                    <div class="review-header">
-                        <div class="reviewer-info">
-                            <div class="reviewer-avatar">E</div>
-                            <div>
-                                <div class="reviewer-name">Emma Laurent</div>
-                                <div class="reviewer-location">Brussels, Belgium • Visited Oct 2025</div>
+                                <div class="reviewer-name">David Anderson</div>
+                                <div class="reviewer-location">Stockholm, Sweden • Visited Oct 2025</div>
                             </div>
                         </div>
                         <div class="review-rating">5.0</div>
                     </div>
-                    <p class="review-text">"Absolutely thrilling! The sandboarding and BBQ Agadir package was perfect. Loved the adrenaline of riding down huge dunes. The equipment was good quality and instructors were helpful and fun. The desert camp experience with mint tea and BBQ was authentic. Photos came out amazing! Definitely try this if you're in Agadir!"</p>
+                    <p class="review-text">"Best horse riding experience ever! The combination of beach, countryside, and village riding was perfect. Our instructor matched us with perfect horses for our ability. The sunset views were breathtaking. Horses were healthy and clearly loved. Professional operation from start to finish. Worth every euro!"</p>
                 </div>
             </div>
 
             <!-- Why Choose Us Section -->
             <div class="tour-description" style="background: #f9f9f9; padding: 30px; border-radius: 15px;">
-                <h2>Why Book Your Sandboarding Adventure with The Local Guide?</h2>
+                <h2>Why Book Your Horse Riding Agadir Experience with The Local Guide?</h2>
                 <ul style="margin-left: 25px; color: #6B7280; line-height: 2; margin-top: 20px;">
-                    <li><strong>🏆 Adventure Specialists:</strong> Years of experience running sandboarding tours on Agadir's best dunes</li>
-                    <li><strong>🏂 Professional Equipment:</strong> Quality sandboards designed specifically for desert conditions</li>
-                    <li><strong>👥 Small Groups:</strong> Maximum 12 people for personalized instruction and safety</li>
-                    <li><strong>⭐ Highly Rated:</strong> 4.7/5 rating from 198+ adventurous guests</li>
-                    <li><strong>🎓 Expert Instruction:</strong> Patient, experienced instructors who make learning easy and fun</li>
-                    <li><strong>💰 Complete Package:</strong> Equipment + instruction + transport + BBQ dinner - everything included</li>
+                    <li><strong>🏆 Professional Equestrian Center:</strong> Established ranch with qualified instructors and well-maintained facilities</li>
+                    <li><strong>🐴 Happy, Healthy Horses:</strong> Arabian & Barb breeds, regularly vet-checked, well-fed, and given proper rest</li>
+                    <li><strong>👥 Small Groups:</strong> Maximum 10 riders for personalized attention and quality instruction</li>
+                    <li><strong>⭐ Top-Rated:</strong> 4.9/5 rating from 256+ verified guests who loved their experience</li>
+                    <li><strong>🎓 All Levels Welcome:</strong> Perfect for nervous beginners to experienced riders - we adapt to you</li>
+                    <li><strong>🌅 Prime Locations:</strong> Access to pristine beaches, scenic countryside, and village trails</li>
+                    <li><strong>💰 Transparent Pricing:</strong> No hidden fees, no haggling - fixed prices with everything included</li>
                     <li><strong>🚗 Convenient Pickup:</strong> Free hotel pickup from Agadir, Taghazout, and surrounding areas</li>
-                    <li><strong>🎥 Action Video & Photos:</strong> Instructors capture your best runs and epic wipe-outs!</li>
                     <li><strong>📅 Easy Booking:</strong> Instant confirmation via WhatsApp or email</li>
                     <li><strong>🔄 Free Cancellation:</strong> Cancel up to 24 hours before for full refund – book with confidence</li>
-                    <li><strong>🌍 Cultural Experience:</strong> Not just boarding - includes authentic Berber hospitality and cuisine</li>
+                    <li><strong>🌍 Ethical Tourism:</strong> We prioritize animal welfare and practice responsible, sustainable tourism</li>
                 </ul>
             </div>
 
             <!-- Related Tours Section -->
             <div class="tour-description">
                 <h2>Other Popular Agadir Tours & Activities</h2>
-                <p>Maximize your Agadir experience by combining your sandboarding adventure with these popular activities:</p>
+                <p>Maximize your Agadir experience by combining your horse riding adventure with these popular activities:</p>
                 
                 <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 20px; margin-top: 25px;">
                     <div style="background: white; padding: 20px; border-radius: 10px; border: 2px solid #e0e0e0;">
@@ -1916,11 +1622,11 @@
 
             <!-- Bottom CTA -->
             <div style="background: linear-gradient(135deg, #8B5CF6 0%, #7C3AED 100%); padding: 40px; border-radius: 16px; text-align: center; margin: 50px 0; color: white; box-shadow: 0 8px 32px rgba(0,0,0,0.12);">
-                <h2 style="color: white; font-size: 2rem; margin-bottom: 15px; font-family: 'Inter', sans-serif;">Ready to Surf the Desert Dunes?</h2>
-                <p style="font-size: 1.1rem; margin-bottom: 25px; opacity: 0.95;">Book your sandboarding in Agadir adventure today and experience the thrill of desert sand surfing!</p>
+                <h2 style="color: white; font-size: 2rem; margin-bottom: 15px; font-family: 'Inter', sans-serif;">Ready to Saddle Up for Your Beach Riding Adventure?</h2>
+                <p style="font-size: 1.1rem; margin-bottom: 25px; opacity: 0.95;">Book your beach horse riding Agadir experience today and create unforgettable memories along the Atlantic coast!</p>
                 <div style="display: flex; gap: 15px; justify-content: center; flex-wrap: wrap;">
                     <a href="contact.html" style="background: #cdff03; color: #000000; padding: 16px 32px; border-radius: 6px; text-decoration: none; font-weight: 700; font-size: 1.1rem; display: inline-block;">Book Now</a>
-                    <a href="https://wa.me/212645792457?text=Hi! I'm interested in the sandboarding in Agadir desert adventure tour" target="_blank" style="background: #8449f2; color: white; padding: 16px 32px; border-radius: 6px; text-decoration: none; font-weight: 700; font-size: 1.1rem; display: inline-block;">Book via WhatsApp</a>
+                    <a href="https://wa.me/212645792457?text=Hi! I'm interested in the horse riding Agadir beach tour" target="_blank" style="background: #8449f2; color: white; padding: 16px 32px; border-radius: 6px; text-decoration: none; font-weight: 700; font-size: 1.1rem; display: inline-block;">Book via WhatsApp</a>
                 </div>
             </div>
         </div>
@@ -1930,8 +1636,8 @@
             <div class="booking-card">
                 <div class="price-section">
                     <div class="price-label">From</div>
-                    <div class="price">€50<span class="price-unit"> / person</span></div>
-                    <p style="font-size: 13px; color: #999; margin-top: 8px;">All-inclusive package • Equipment + BBQ</p>
+                    <div class="price">€45<span class="price-unit"> / person</span></div>
+                    <p style="font-size: 13px; color: #999; margin-top: 8px;">Best price guaranteed • All equipment included</p>
                 </div>
 
                                 <!-- Booking Buttons -->
@@ -1939,12 +1645,14 @@
                     <a href="#booking-link" class="primary-book-btn">
                         Book Now
                     </a>
-                    <a href="https://wa.me/212645792457?text=Hi! I'm interested in the Sandboarding tour" target="_blank" class="whatsapp-book-btn">
+                    <a href="https://wa.me/212645792457?text=Hi! I'm interested in the Horse Riding tour" target="_blank" class="whatsapp-book-btn">
                         Book via WhatsApp
                     </a>
                 </div>
 
-                
+                <div class="free-cancellation">
+                    ✓ Free cancellation up to 24 hours before
+                </div>
             </div>
         </aside>
     </section>
@@ -2048,82 +1756,105 @@
     <script src="js/main.js"></script>
     
     <script>
-        document.addEventListener('DOMContentLoaded', function() {
-            const slider = document.querySelector('.simple-slider');
-            if (slider) {
-                const slides = Array.from(slider.querySelectorAll('.slide'));
-                const prevBtn = slider.querySelector('.ss-prev');
-                const nextBtn = slider.querySelector('.ss-next');
-                const dotsContainer = slider.querySelector('.ss-dots');
-                const thumbsContainer = document.querySelector('.ss-thumbs');
-                let currentIndex = 0;
+        // FAQ Accordion
+        $('.faq-question').on('click', function() {
+            const faqItem = $(this).parent();
+            const wasActive = faqItem.hasClass('active');
+            
+            // Close all FAQ items
+            $('.faq-item').removeClass('active');
+            
+            // Open clicked item if it wasn't already open
+            if (!wasActive) {
+                faqItem.addClass('active');
+            }
+        });
 
-                function goTo(index) {
-                    slides[currentIndex].classList.remove('active');
-                    currentIndex = (index + slides.length) % slides.length;
-                    slides[currentIndex].classList.add('active');
-                    updateDots();
-                    updateThumbs();
-                }
+        // Set minimum date to today (guarded)
+        (function(){
+            const dateEl = document.getElementById('tour-date');
+            if (dateEl) { dateEl.min = new Date().toISOString().split('T')[0]; }
+        })();
+    </script>
+    <script>
+    document.addEventListener('DOMContentLoaded', function() {
+        const slider = document.querySelector('.simple-slider');
+        if (slider) {
+            const slides = Array.from(slider.querySelectorAll('.slide'));
+            const prevBtn = slider.querySelector('.ss-prev');
+            const nextBtn = slider.querySelector('.ss-next');
+            const dotsContainer = slider.querySelector('.ss-dots');
+            const thumbsContainer = document.querySelector('.ss-thumbs');
+            let currentIndex = 0;
 
-                function updateDots() {
-                    const dots = dotsContainer.querySelectorAll('.ss-dot');
-                    dots.forEach((d, i) => d.classList.toggle('active', i === currentIndex));
-                }
-
-                function renderDots() {
-                    dotsContainer.innerHTML = '';
-                    slides.forEach((_, i) => {
-                        const btn = document.createElement('button');
-                        btn.className = 'ss-dot' + (i === currentIndex ? ' active' : '');
-                        btn.setAttribute('aria-label', 'Go to slide ' + (i + 1));
-                        btn.addEventListener('click', () => goTo(i));
-                        dotsContainer.appendChild(btn);
-                    });
-                }
-
-                function updateThumbs() {
-                    if (!thumbsContainer) return;
-                    const all = thumbsContainer.querySelectorAll('.ss-thumb');
-                    all.forEach((t, i) => t.classList.toggle('active', i === currentIndex));
-                }
-
-                function renderThumbs() {
-                    if (!thumbsContainer) return;
-                    thumbsContainer.innerHTML = '';
-                    slides.forEach((slide, i) => {
-                        const img = slide.querySelector('img');
-                        const wrap = document.createElement('button');
-                        wrap.className = 'ss-thumb' + (i === currentIndex ? ' active' : '');
-                        wrap.setAttribute('aria-label', 'Select slide ' + (i + 1));
-                        const thumbImg = document.createElement('img');
-                        thumbImg.src = img.src;
-                        thumbImg.alt = img.alt;
-                        wrap.appendChild(thumbImg);
-                        wrap.addEventListener('click', () => goTo(i));
-                        thumbsContainer.appendChild(wrap);
-                    });
-                }
-
-                prevBtn.addEventListener('click', () => goTo(currentIndex - 1));
-                nextBtn.addEventListener('click', () => goTo(currentIndex + 1));
-
-                document.addEventListener('keydown', (e) => {
-                    if (e.key === 'ArrowLeft') goTo(currentIndex - 1);
-                    if (e.key === 'ArrowRight') goTo(currentIndex + 1);
-                });
-
-                renderDots();
-                renderThumbs();
+            function goTo(index) {
+                slides[currentIndex].classList.remove('active');
+                currentIndex = (index + slides.length) % slides.length;
+                slides[currentIndex].classList.add('active');
+                updateDots();
+                updateThumbs();
             }
 
-            // Set minimum date to today (guarded)
-            (function(){
-                const dateEl = document.getElementById('tour-date');
-                if (dateEl) { dateEl.min = new Date().toISOString().split('T')[0]; }
-            })();
-        });
+            function updateDots() {
+                const dots = dotsContainer.querySelectorAll('.ss-dot');
+                dots.forEach((d, i) => d.classList.toggle('active', i === currentIndex));
+            }
+
+            function renderDots() {
+                dotsContainer.innerHTML = '';
+                slides.forEach((_, i) => {
+                    const btn = document.createElement('button');
+                    btn.className = 'ss-dot' + (i === currentIndex ? ' active' : '');
+                    btn.setAttribute('aria-label', 'Go to slide ' + (i + 1));
+                    btn.addEventListener('click', () => goTo(i));
+                    dotsContainer.appendChild(btn);
+                });
+            }
+
+            function updateThumbs() {
+                if (!thumbsContainer) return;
+                const all = thumbsContainer.querySelectorAll('.ss-thumb');
+                all.forEach((t, i) => t.classList.toggle('active', i === currentIndex));
+            }
+
+            function renderThumbs() {
+                if (!thumbsContainer) return;
+                thumbsContainer.innerHTML = '';
+                slides.forEach((slide, i) => {
+                    const img = slide.querySelector('img');
+                    const wrap = document.createElement('button');
+                    wrap.className = 'ss-thumb' + (i === currentIndex ? ' active' : '');
+                    wrap.setAttribute('aria-label', 'Select slide ' + (i + 1));
+                    const thumbImg = document.createElement('img');
+                    thumbImg.src = img.src;
+                    thumbImg.alt = img.alt;
+                    wrap.appendChild(thumbImg);
+                    wrap.addEventListener('click', () => goTo(i));
+                    thumbsContainer.appendChild(wrap);
+                });
+            }
+
+            prevBtn.addEventListener('click', () => goTo(currentIndex - 1));
+            nextBtn.addEventListener('click', () => goTo(currentIndex + 1));
+
+            document.addEventListener('keydown', (e) => {
+                if (e.key === 'ArrowLeft') goTo(currentIndex - 1);
+                if (e.key === 'ArrowRight') goTo(currentIndex + 1);
+            });
+
+            renderDots();
+            renderThumbs();
+        }
+    });
     </script>
+<script>
+const hamburger=document.getElementById("hamburger");
+const mobileMenu=document.getElementById("mobileMenu");
+const closeMenu=mobileMenu?mobileMenu.querySelector(".close-menu"):null;
+if(hamburger&&mobileMenu){hamburger.addEventListener("click",()=>{mobileMenu.classList.add("active");hamburger.classList.add("active")});}
+if(closeMenu){closeMenu.addEventListener("click",()=>{mobileMenu.classList.remove("active");hamburger&&hamburger.classList.remove("active")});}
+if(mobileMenu){mobileMenu.querySelectorAll("a").forEach(a=>a.addEventListener("click",()=>{mobileMenu.classList.remove("active");hamburger&&hamburger.classList.remove("active")}));}
+</script>
 </body>
 </html>
 

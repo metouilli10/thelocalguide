@@ -3,29 +3,29 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Learn to surf in Agadir! Professional surf lessons for all levels on Agadir's best beaches. Expert instructors, quality equipment, small groups. From €35. Book your Agadir surf school experience now!">
-    <meta name="keywords" content="surf lessons Agadir, Agadir surf school, learn to surf Morocco, surfing Agadir, Taghazout surf lessons, beginner surf Agadir, surf camp Agadir, surf courses Morocco">
-    <title>Surf Lessons Agadir | Learn to Surf Morocco (2025)</title>
+    <meta name="description" content="Experience an unforgettable camel ride in Agadir along pristine beaches at sunset. Enjoy authentic Moroccan BBQ, traditional tea, and stunning ocean views. Book your Agadir camel riding tour today!">
+    <meta name="keywords" content="Camel ride in Agadir, Sunset camel ride Agadir, Camel ride and BBQ Agadir, Agadir camel riding tour, Camel ride on the beach Agadir, camel trekking Agadir">
+    <title>Camel Ride in Agadir | Sunset Beach Camel Ride & BBQ Experience (2025)</title>
     
     <!-- CSS Styles -->
-    <link rel="stylesheet" href="css/styles.css?v=20241218-26">
-    <link rel="stylesheet" href="css/pages.css?v=20241218-26">
-    <link rel="stylesheet" href="css/updated-styles.css?v=20241218-26">
+    <link rel="stylesheet" href="css/styles.css?v=20241218-24">
+    <link rel="stylesheet" href="css/pages.css?v=20241218-24">
+    <link rel="stylesheet" href="css/updated-styles.css?v=20241218-24">
     
     <!-- Open Graph Meta Tags -->
-    <meta property="og:title" content="Surf Lessons Agadir | Learn to Surf on Atlantic Beaches">
-    <meta property="og:description" content="Professional surf lessons in Agadir for all levels. Expert instructors, quality equipment, small groups. Catch waves on Morocco's Atlantic coast. Book now!">
+    <meta property="og:title" content="Camel Ride in Agadir | Sunset Beach Camel Ride & BBQ Experience">
+    <meta property="og:description" content="Experience a magical sunset camel ride on Agadir beach. Traditional Moroccan BBQ, mint tea, and stunning coastal views. Book now!">
     <meta property="og:type" content="website">
-    <meta property="og:url" content="https://yourdomain.com/tour-surf-lessons-agadir">
+    <meta property="og:url" content="https://yourdomain.com/tour-camel-ride-agadir">
     
     <!-- Schema.org Structured Data -->
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
-      "@type": "SportsActivityLocation",
-      "name": "Surf Lessons Agadir",
-      "description": "Professional surf lessons for all levels on Agadir's beautiful Atlantic beaches. Learn to surf with experienced instructors, all equipment provided.",
-      "image": "https://yourdomain.com/img/excursions/Surf/surf 1.jpg",
+      "@type": "TouristAttraction",
+      "name": "Camel Ride in Agadir - Sunset Beach Experience",
+      "description": "Experience a magical sunset camel ride on Agadir's pristine beach. Traditional Moroccan BBQ dinner, mint tea ceremony, and breathtaking coastal views included.",
+      "image": "https://yourdomain.com/img/excursions/Camel Ride/camel ride 1.jpg",
       "address": {
         "@type": "PostalAddress",
         "addressLocality": "Agadir",
@@ -34,23 +34,23 @@
       },
       "geo": {
         "@type": "GeoCoordinates",
-        "latitude": "30.4195",
-        "longitude": "-9.5981"
+        "latitude": "30.3936",
+        "longitude": "-9.4481"
       },
       "offers": {
         "@type": "Offer",
-        "price": "35",
+        "price": "40",
         "priceCurrency": "EUR",
         "availability": "https://schema.org/InStock",
         "validFrom": "2025-01-01"
       },
       "aggregateRating": {
         "@type": "AggregateRating",
-        "ratingValue": "4.9",
-        "reviewCount": "415"
+        "ratingValue": "4.8",
+        "reviewCount": "289"
       },
       "provider": {
-        "@type": "SportsActivityLocation",
+        "@type": "TouristInformationCenter",
         "name": "The Local Guide",
         "telephone": "+212645792457"
       }
@@ -63,54 +63,54 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;900&family=Lato:wght@300;400;700;900&display=swap" rel="stylesheet">
     <link rel="icon" href="img/logo.png">
-    <link rel="canonical" href="https://yourdomain.com/tour-surf-lessons-agadir">
+    <link rel="canonical" href="https://yourdomain.com/tour-camel-ride-agadir">
     
     <style>
         body {
             font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Lato', 'Helvetica Neue', Arial, sans-serif;
         }
         
-        .tour-detail-hero {
-            position: relative;
-            height: auto;
-            overflow: hidden;
-            margin-top: 95px;
-        }
+        .tour-detail-hero { position: relative; height: auto; overflow: hidden; margin-top: 95px; }
         
-        /* Civitatis-style 5-photo gallery */
+        .tour-gallery {
+            --gap: 12px;
+            --radius: 16px;
+            --black: #000;
+            --white: #fff;
+            position: relative;
+        }
+
+        /* --- Sizing: make the whole preview block a known height --- */
         .tg-preview {
+            /* pick a height that scales: min 260px, grows with viewport, capped for huge screens */
             height: clamp(260px, 50vw, 520px);
         }
-        
+
+        /* Grid layout */
         .tg-grid {
             height: 100%;
             display: grid;
             grid-template-columns: 1fr;
             gap: 12px;
-            align-items: stretch;
+            align-items: stretch;             /* NEW: ensure full height */
         }
-        
+
         @media (min-width: 768px) {
             .tg-grid {
                 grid-template-columns: 2fr 1fr;
-                grid-template-rows: 1fr;
+                grid-template-rows: 1fr;        /* NEW: single row to fill height */
             }
             .tg-hero {
                 grid-row: 1;
-                grid-column: 1;
+                grid-column: 1;                 /* NEW: explicit positioning */
             }
             .tg-right {
                 grid-row: 1;
-                grid-column: 2;
-                height: 100%;
-                display: grid;
-                grid-template-columns: 1fr 1fr;
-                grid-template-rows: 1fr 1fr;
-                gap: 12px;
-                align-items: stretch;
+                grid-column: 2;                 /* NEW: explicit positioning */
             }
         }
-        
+
+        /* Left big image fills height */
         .tg-item {
             position: relative;
             display: block;
@@ -119,47 +119,59 @@
             border: 0;
             padding: 0;
             cursor: pointer;
-            background: transparent;
         }
-        
+
         .tg-hero, .tg-hero img {
             height: 100%;
         }
-        
+
         .tg-hero img {
             width: 100%;
             object-fit: cover;
             display: block;
         }
-        
+
+        /* Right column is a 2×2 grid that ALSO fills the same height */
+        .tg-right {
+            position: relative;
+            height: 100%;                      /* << key */
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            grid-template-rows: 1fr 1fr;      /* equal halves vertically */
+            gap: 12px;
+            align-items: stretch;             /* NEW: stretch to fill height */
+        }
+
         .tg-right .tg-item {
             height: 100%;
-            display: flex;
+            display: flex;                    /* NEW: flex container */
         }
-        
+
         .tg-right .tg-item img {
             width: 100%;
             height: 100%;
             object-fit: cover;
             display: block;
-            flex: 1;
+            flex: 1;                          /* NEW: fill flex container */
         }
-        
+
+        /* Hover polish */
         .tg-item img {
-            transition: transform 0.3s ease;
+            transition: transform .3s ease;
         }
-        
+
         .tg-item:hover img {
             transform: scale(1.02);
         }
-        
+
+        /* See-more pill */
         .tg-see-more {
             position: absolute;
             right: 16px;
             bottom: 16px;
             display: flex;
             align-items: center;
-            gap: 0.5rem;
+            gap: .5rem;
             padding: 12px 16px;
             border-radius: 999px;
             border: 0;
@@ -168,13 +180,39 @@
             color: #111;
             font-weight: 600;
             box-shadow: 0 6px 20px rgba(0,0,0,.18);
+            z-index: 10;
         }
-        
+
         .tg-see-more .tg-arrow {
             font-size: 20px;
             line-height: 1;
         }
+
+        /* Actions */
+        .tg-actions {
+            margin-top: 15px;
+            display: flex;
+            justify-content: center;
+        }
+
+        .tg-view-all {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: var(--white);
+            padding: 12px 24px;
+            border: 0;
+            border-radius: 25px;
+            cursor: pointer;
+            font-weight: 600;
+            font-size: 14px;
+            box-shadow: 0 4px 15px rgba(102, 126, 234, 0.4);
+            transition: all 0.3s ease;
+        }
         
+        .tg-view-all:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(102, 126, 234, 0.6);
+        }
+
         /* Lightbox styles */
         .tg-lightbox {
             position: fixed;
@@ -182,104 +220,153 @@
             left: 0;
             width: 100%;
             height: 100%;
-            background: rgba(0, 0, 0, 0.9);
-            z-index: 10000;
+            background: rgba(0, 0, 0, 0.95);
+            z-index: 9999;
             display: none;
-            align-items: center;
-            justify-content: center;
+            opacity: 0;
+            transition: opacity 0.3s ease;
         }
-        
-        .tg-lightbox.active {
+
+        .tg-lightbox.open {
             display: flex;
+            flex-direction: column;
+            opacity: 1;
         }
-        
-        .tg-lightbox-content {
-            position: relative;
-            width: 90%;
-            height: 90%;
-            max-width: 1200px;
-            max-height: 800px;
+
+        .tg-lightbox-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px;
+            color: white;
         }
-        
+
+        .tg-hint {
+            font-size: 14px;
+            opacity: 0.8;
+        }
+
         .tg-close {
-            position: absolute;
-            top: -40px;
-            right: 0;
             background: none;
             border: none;
             color: white;
-            font-size: 30px;
+            font-size: 24px;
             cursor: pointer;
-            z-index: 10001;
+            padding: 10px;
         }
-        
+
         .tg-main {
+            flex: 1;
             position: relative;
-            height: calc(100% - 120px);
-            margin-bottom: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
         }
-        
+
+        .tg-main .swiper-wrapper {
+            position: relative;
+            width: 100%;
+            height: 100%;
+        }
+
         .tg-main .swiper-slide {
             position: absolute;
             top: 0;
             left: 0;
             width: 100%;
             height: 100%;
-            display: none;
+            display: flex;
+            align-items: center;
+            justify-content: center;
         }
-        
-        .tg-main .swiper-slide.active {
-            display: block;
-        }
-        
+
         .tg-main .swiper-slide img {
-            width: 100%;
-            height: 100%;
+            max-width: 100%;
+            max-height: 100%;
             object-fit: contain;
         }
-        
-        .tg-thumbs {
-            height: 100px;
-            overflow: hidden;
+
+        .tg-prev, .tg-next {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            background: rgba(255, 255, 255, 0.2);
+            border: none;
+            color: white;
+            font-size: 30px;
+            padding: 20px;
+            cursor: pointer;
+            z-index: 10;
         }
-        
+
+        .tg-prev {
+            left: 20px;
+        }
+
+        .tg-next {
+            right: 20px;
+        }
+
+        .tg-thumbs {
+            padding: 20px;
+            background: rgba(0, 0, 0, 0.5);
+        }
+
         .tg-thumbs .swiper-wrapper {
             display: flex;
             gap: 10px;
+            justify-content: center;
         }
-        
+
         .tg-thumbs .swiper-slide {
-            width: 100px;
-            height: 100px;
-            flex-shrink: 0;
+            width: 80px;
+            height: 60px;
+            border-radius: 8px;
+            overflow: hidden;
             cursor: pointer;
             opacity: 0.6;
-            transition: opacity 0.3s;
+            transition: opacity 0.3s ease;
         }
-        
-        .tg-thumbs .swiper-slide.active {
+
+        .tg-thumbs .swiper-slide.swiper-slide-thumb-active {
             opacity: 1;
         }
-        
+
         .tg-thumbs .swiper-slide img {
             width: 100%;
             height: 100%;
             object-fit: cover;
-            border-radius: 8px;
         }
-        
-        .view-all-photos {
-            position: absolute;
-            bottom: 20px;
-            right: 20px;
-            background: white;
-            padding: 12px 25px;
-            border-radius: 6px;
-            font-weight: 600;
-            color: #1F2937;
-            cursor: pointer;
-            z-index: 10;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+
+        /* Mobile responsive */
+        @media (max-width: 767px) {
+            .tg-preview {
+                height: clamp(200px, 40vw, 400px);
+            }
+
+            .tg-grid {
+                grid-template-columns: 1fr;
+                grid-template-rows: 2fr 1fr;
+            }
+
+            .tg-hero {
+                grid-row: 1;
+                grid-column: 1;
+            }
+
+            .tg-right {
+                grid-row: 2;
+                grid-column: 1;
+                grid-template-columns: 1fr 1fr;
+                grid-template-rows: 1fr 1fr;
+            }
+
+            .tg-see-more {
+                right: 12px;
+                bottom: 12px;
+                padding: 10px 14px;
+                font-size: 13px;
+            }
         }
         
         .tour-content-wrapper {
@@ -905,7 +992,6 @@
             .booking-sidebar {
                 position: fixed !important;
                 bottom: 0 !important;
-                
                 top: auto !important;
                 left: 0;
                 right: 0;
@@ -927,7 +1013,7 @@
             }
             
             .booking-buttons {
-                margin-bottom: 0 !important;
+                margin-bottom: 0;
                 gap: 10px;
             }
             
@@ -1228,14 +1314,29 @@
             <nav class="menu-nav">
                 <a href="index.html" style="font-weight: bold;">Home</a>
                 <a href="agadir-tours.html" style="font-weight: bold;">Agadir Tours</a>
-                <a href="day-trips-from-agadir.html" style="font-weight: bold;">Day Trips</a>
+                <a href="things-to-do.html" style="font-weight: bold;">Things to Do in Agadir</a>
                 <a href="blog.html" style="font-weight: bold;">Blog</a>
                 <a href="contact.html" style="font-weight: bold;">Contact</a>
             </nav>
+            <div class="menu-social">
+                <p>FOLLOW US</p>
+                <div class="social-icons">
+                    <a href="https://www.instagram.com/www.miracleair.tz" target="_blank" aria-label="Instagram">
+                        <svg width="24" height="24" fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M16 14c0-2.203-1.797-4-4-4s-4 1.797-4 4 1.797 4 4 4 4-1.797 4-4zM18.156 14c0 3.406-2.75 6.156-6.156 6.156s-6.156-2.75-6.156-6.156 2.75-6.156 6.156-6.156 6.156 2.75 6.156 6.156zM19.844 7.594c0 0.797-0.641 1.437-1.437 1.437s-1.437-0.641-1.437-1.437 0.641-1.437 1.437-1.437 1.437 0.641 1.437 1.437zM12 4.156c-1.75 0-5.5-0.141-7.078 0.484-0.547 0.219-0.953 0.484-1.375 0.906s-0.688 0.828-0.906 1.375c-0.625 1.578-0.484 5.328-0.484 7.078s-0.141 5.5 0.484 7.078c0.219 0.547 0.484 0.953 0.906 1.375s0.828 0.688 1.375 0.906c1.578 0.625 5.328 0.484 7.078 0.484s5.5 0.141 7.078-0.484c0.547-0.219 0.953-0.484 1.375-0.906s0.688-0.828 0.906-1.375c0.625-1.578 0.484-5.328 0.484-7.078s0.141-5.5-0.484-7.078c-0.219-0.547-0.484-0.953-0.906-1.375s-0.828-0.688-1.375-0.906c-1.578-0.625-5.328-0.484-7.078-0.484zM24 14c0 1.656 0.016 3.297-0.078 4.953-0.094 1.922-0.531 3.625-1.937 5.031s-3.109 1.844-5.031 1.937c-1.656 0.094-3.297 0.078-4.953 0.078s-3.297 0.016-4.953-0.078c-1.922-0.094-3.625-0.531-5.031-1.937s-1.844-3.109-1.937-5.031c-0.094-1.656-0.078-3.297-0.078-4.953s-0.016-3.297 0.078-4.953c0.094-1.922 0.531-3.625 1.937-5.031s3.109-1.844 5.031-1.937c1.656-0.094 3.297-0.078 4.953-0.078s3.297-0.016 4.953 0.078c1.922 0.094 3.625 0.531 5.031 1.937s1.844 3.109 1.937 5.031c0.094 1.656 0.078 3.297 0.078 4.953z"></path>
+                        </svg>
+                    </a>
+                    <a href="https://www.facebook.com/profile.php?id=61570405113832" target="_blank" aria-label="Facebook">
+                        <svg width="24" height="24" fill="currentColor" viewBox="0 0 16 28">
+                            <path d="M14.984 0.187v4.125h-2.453c-1.922 0-2.281 0.922-2.281 2.25v2.953h4.578l-0.609 4.625h-3.969v11.859h-4.781v-11.859h-3.984v-4.625h3.984v-3.406c0-3.953 2.422-6.109 5.953-6.109 1.687 0 3.141 0.125 3.563 0.187z"></path>
+                        </svg>
+                    </a>
+                </div>
+            </div>
         </div>
     </div>
 
-        <!-- TOPBAR -->
+    <!-- TOPBAR -->
     <div class="topbar">
         <div class="topbar__wrapper">
             <div class="topbar__left">
@@ -1271,14 +1372,13 @@
         </div>
     </header>
 
-
     <!-- Breadcrumb -->
     <div class="breadcrumb">
         <a href="index.html">Home</a>
         <span>›</span>
         <a href="agadir-tours.html">Agadir Tours</a>
         <span>›</span>
-        <strong>Surf Lessons Agadir</strong>
+        <strong>Camel Ride in Agadir</strong>
     </div>
 
     <!-- Tour Hero Gallery -->
@@ -1300,44 +1400,28 @@
         .ss-thumb.active { opacity: 1; border-color: #8B5CF6; }
         .ss-thumb img { width: 100%; height: 100%; object-fit: cover; display: block; }
     </style>
-    <style>
-    .tour-carousel { display: none; }
-    @media (min-width: 1024px) {
-      .simple-slider, .ss-thumbs { display: none !important; }
-      .tour-carousel { display: block; --radius:20px; --shadow:0 20px 40px rgba(0,0,0,.15); --glass:rgba(255,255,255,.2); --glass-border:rgba(255,255,255,.35); --accent:#fff; max-width:min(1200px,92vw); margin:32px auto 0; }
-      .tour-carousel .tc-stage{position:relative;border-radius:var(--radius);overflow:clip;box-shadow:var(--shadow);background:#000;isolation:isolate}
-      .tour-carousel .tc-image{width:100%;height:auto;aspect-ratio:16/9;object-fit:cover;display:block;transition:opacity .6s ease}
-      .tour-carousel .tc-nav{position:absolute;top:50%;translate:0 -50%;width:46px;height:46px;border-radius:50%;border:1px solid var(--glass-border);background:var(--glass);backdrop-filter:blur(10px);color:var(--accent);display:grid;place-items:center;cursor:pointer;transition:transform .15s ease,background .15s ease,opacity .15s ease;opacity:.9;z-index:2}
-      .tour-carousel .tc-prev{left:14px}
-      .tour-carousel .tc-next{right:14px}
-      .tour-carousel .tc-nav:hover{transform:scale(1.08);background:rgba(255,255,255,.35)}
-      .tour-carousel .tc-nav:active{transform:scale(.98)}
-      .tour-carousel .tc-caption{position:absolute;inset:auto 0 0 0;padding:18px 20px 22px;color:#fff;font-size:1.05rem;font-weight:500;background:linear-gradient(to top,rgba(0,0,0,.65),rgba(0,0,0,0));letter-spacing:.2px;z-index:1}
-      .tour-carousel .tc-thumbs{margin-top:14px;display:grid;grid-auto-flow:column;grid-auto-columns:minmax(120px,1fr);gap:12px;overflow-x:auto;padding:6px 2px;scrollbar-width:none}
-      .tour-carousel .tc-thumbs::-webkit-scrollbar{display:none}
-      .tour-carousel .tc-thumb{position:relative;border:none;background:transparent;padding:0;cursor:pointer;border-radius:12px;overflow:hidden;outline-offset:3px;transition:transform .2s ease,box-shadow .2s ease,opacity .2s ease;opacity:.85}
-      .tour-carousel .tc-thumb:hover{transform:translateY(-2px);opacity:1}
-      .tour-carousel .tc-thumb.is-active{opacity:1;box-shadow:0 10px 22px rgba(0,0,0,.18)}
-      .tour-carousel .tc-thumb img{width:100%;height:84px;object-fit:cover;display:block}
-    }
-    </style>
     <section class="tour-detail-hero">
-        <div class="simple-slider" data-count="6">
+        <div class="simple-slider" data-count="13">
             <div class="slides">
-                <div class="slide active"><img src="img/excursions/Surf/surf 1.jpg" alt="Surf lessons Agadir on Atlantic beach"></div>
-                <div class="slide"><img src="img/excursions/Surf/surf 2.jpg" alt="Learning to surf in Agadir Morocco"></div>
-                <div class="slide"><img src="img/excursions/Surf/surf 3.jpg" alt="Beginner surf lesson Agadir"></div>
-                <div class="slide"><img src="img/excursions/Surf/surf 4.jpg" alt="Surf instructor teaching in Agadir"></div>
-                <div class="slide"><img src="img/excursions/Surf/surf 5.jpg" alt="Surf school Agadir beach"></div>
-                <div class="slide"><img src="img/excursions/Surf/surf 6.jpg" alt="Surfing Agadir Atlantic waves"></div>
-                    </div>
+                <div class="slide active"><img src="img/excursions/Camel Ride/camel ride 1.jpg" alt="Sunset camel ride on Agadir beach"></div>
+                <div class="slide"><img src="img/excursions/Camel Ride/camel ride 2.jpg" alt="Camel ride along Agadir coastline"></div>
+                <div class="slide"><img src="img/excursions/Camel Ride/camel ride 3.jpg" alt="Camel riding tour Agadir at golden hour"></div>
+                <div class="slide"><img src="img/excursions/Camel Ride/camel ride 4.jpg" alt="Traditional Moroccan camel ride experience"></div>
+                <div class="slide"><img src="img/excursions/Camel Ride/camel ride 5.jpg" alt="Camel ride BBQ dinner Agadir"></div>
+                <div class="slide"><img src="img/excursions/Camel Ride/camel ride 6.jpg" alt="Sunset camel trekking Agadir beach"></div>
+                <div class="slide"><img src="img/excursions/Camel Ride/camel ride 7.jpeg" alt="Camel ride and BBQ dinner Agadir"></div>
+                <div class="slide"><img src="img/excursions/Camel Ride/camel ride 8.jpeg" alt="Camel ride Agadir sunset experience"></div>
+                <div class="slide"><img src="img/excursions/Camel Ride/camel ride 9.jpeg" alt="Camel ride Agadir beach adventure"></div>
+                <div class="slide"><img src="img/excursions/Camel Ride/camel ride 10.jpg" alt="Camel ride Agadir traditional experience"></div>
+                <div class="slide"><img src="img/excursions/Camel Ride/camel ride 11.jpg" alt="Camel ride Agadir coastal views"></div>
+                <div class="slide"><img src="img/excursions/Camel Ride/camel ride 12.jpeg" alt="Camel ride Agadir golden hour"></div>
+                <div class="slide"><img src="img/excursions/Camel Ride/camel ride 13.jpeg" alt="Camel ride Agadir sunset magic"></div>
+            </div>
             <button class="ss-prev" aria-label="Previous photo">‹</button>
             <button class="ss-next" aria-label="Next photo">›</button>
             <div class="ss-dots" aria-label="Slide navigation"></div>
-                </div>
+        </div>
         <div class="ss-thumbs" aria-label="Slide thumbnails"></div>
-        <!-- Desktop-only premium carousel container (built by JS) -->
-        <section class="tour-carousel" aria-label="Tour photo gallery"></section>
     </section>
 
     <!-- Tour Content -->
@@ -1345,111 +1429,123 @@
         <div class="tour-main-content">
             <!-- Tour Header -->
             <div class="tour-header">
-                <h1 class="tour-title">Surf Lessons Agadir: Learn to Surf on Morocco's Atlantic Coast</h1>
-                <p class="tour-subtitle">Professional surf instructors • Perfect waves for beginners • All equipment provided • Small group lessons on Agadir's best beaches</p>
+                <h1 class="tour-title">Camel Ride in Agadir: Sunset Beach Experience with Moroccan BBQ Dinner</h1>
+                <p class="tour-subtitle">Ride along pristine beaches at golden hour • Enjoy authentic Moroccan BBQ & mint tea • Watch spectacular ocean sunsets from camelback</p>
                 
                 <div class="tour-rating">
-                    <span class="rating-score">4.9 / 5</span>
+                    <span class="rating-score">4.8 / 5</span>
                     <div class="rating-details">
                         <div style="color: #f39c12; font-size: 18px; margin-bottom: 5px;">★★★★★</div>
-                        <span>Excellent rating based on 415 reviews</span>
+                        <span>Excellent rating based on 289 reviews</span>
                     </div>
                 </div>
                 
                 <div class="tour-badges">
                     <span class="badge featured">✓ Free Cancellation</span>
-                    <span class="badge">🏄 All Equipment Included</span>
-                    <span class="badge">⏱️ 2-Hour Lesson</span>
-                    <span class="badge">👥 Small Groups (Max 6)</span>
-                    <span class="badge">🌊 Beginner Friendly</span>
-                    <span class="badge">🏆 Certified Instructors</span>
+                    <span class="badge">🚗 Hotel Pickup Included</span>
+                    <span class="badge">⏱️ 2-3 Hours</span>
+                    <span class="badge">👥 Small Group (Max 12)</span>
+                    <span class="badge">🍖 BBQ Dinner Included</span>
+                    <span class="badge">🌅 Sunset Experience</span>
                 </div>
             </div>
 
             <!-- Tour Highlights -->
             <div class="tour-highlights">
-                <h2>Why Choose Our Surf Lessons in Agadir</h2>
+                <h2>Why Choose Our Sunset Camel Ride Agadir Experience</h2>
                 <div class="highlights-list">
                     <div class="highlight-item">
                         <span class="highlight-icon">✓</span>
-                        <span class="highlight-text"><strong>Perfect Beginner Waves:</strong> Agadir's gentle, consistent Atlantic waves are ideal for learning to surf - warm water, sandy bottom, and perfect breaks</span>
+                        <span class="highlight-text"><strong>Magical Sunset Beach Ride:</strong> Experience the romance of riding a camel along Agadir's pristine beach during the golden hour with spectacular ocean views</span>
                     </div>
                     <div class="highlight-item">
                         <span class="highlight-icon">✓</span>
-                        <span class="highlight-text"><strong>Certified Surf Instructors:</strong> ISA-certified instructors with years of experience teaching beginners - patient, encouraging, and safety-focused</span>
+                        <span class="highlight-text"><strong>Authentic Moroccan BBQ Dinner:</strong> Enjoy a delicious traditional Moroccan BBQ feast with grilled meats, salads, and freshly baked bread by the beach</span>
                     </div>
                     <div class="highlight-item">
                         <span class="highlight-icon">✓</span>
-                        <span class="highlight-text"><strong>Quality Equipment Provided:</strong> Premium foam surfboards for beginners, wetsuits in all sizes, leashes, and wax - everything you need included</span>
+                        <span class="highlight-text"><strong>Traditional Mint Tea Ceremony:</strong> Experience Moroccan hospitality with a traditional mint tea ceremony in a Berber tent setting</span>
                     </div>
                     <div class="highlight-item">
                         <span class="highlight-icon">✓</span>
-                        <span class="highlight-text"><strong>Small Group Lessons:</strong> Maximum 6 students per instructor ensures personalized attention and faster learning progress</span>
+                        <span class="highlight-text"><strong>Family-Friendly Activity:</strong> Perfect for all ages - even first-time riders! Our gentle, well-trained camels ensure a safe and comfortable experience</span>
                     </div>
                     <div class="highlight-item">
                         <span class="highlight-icon">✓</span>
-                        <span class="highlight-text"><strong>Best Surf Beaches:</strong> Lessons at Agadir Beach or nearby Taghazout - famous worldwide for excellent surf conditions and consistent swells</span>
+                        <span class="highlight-text"><strong>Stunning Photo Opportunities:</strong> Capture unforgettable sunset moments on camelback with the Atlantic Ocean as your backdrop</span>
                     </div>
                     <div class="highlight-item">
                         <span class="highlight-icon">✓</span>
-                        <span class="highlight-text"><strong>All Levels Welcome:</strong> Whether you've never surfed before or want to improve your technique, our instructors adapt to your level</span>
+                        <span class="highlight-text"><strong>Professional Local Guides:</strong> Experienced camel handlers and English/French-speaking guides ensure your safety and share fascinating Berber culture insights</span>
                     </div>
                     <div class="highlight-item">
                         <span class="highlight-icon">✓</span>
-                        <span class="highlight-text"><strong>Complete Package:</strong> Beach transfer, equipment, instruction, wetsuit, and surf theory - everything needed for your first waves!</span>
+                        <span class="highlight-text"><strong>Complete Experience:</strong> Hotel pickup and drop-off, camel ride, BBQ dinner, mint tea, and entertainment - everything included in one perfect evening</span>
                     </div>
                 </div>
             </div>
 
             <!-- Tour Description -->
             <div class="tour-description">
-                <h2>Learn to Surf on Morocco's Beautiful Atlantic Coast</h2>
-                <p>Experience the thrill of <strong>surfing in Agadir</strong> with our professional surf school! Whether you're a complete beginner catching your first wave or looking to improve your technique, our <strong>Agadir surf lessons</strong> offer the perfect introduction to one of the world's most exciting water sports. Agadir's warm waters, gentle waves, and consistent swells create ideal conditions for learning to surf.</p>
+                <h2>Experience the Magic of a Camel Ride in Agadir at Sunset</h2>
+                <p>Embark on an unforgettable <strong>sunset camel ride Agadir</strong> adventure that combines the romance of traditional Moroccan transportation with the spectacular beauty of the Atlantic coastline. This <strong>camel ride on the beach Agadir</strong> experience offers the perfect way to watch the sun dip below the horizon while gently swaying on camelback along pristine golden sands.</p>
                 
-                <p>Our <strong>surf school Agadir</strong> operates on the best beaches for beginners - Agadir Beach and nearby Taghazout, world-famous surf destinations. The gentle, rolling Atlantic waves provide perfect conditions for first-timers, while the sandy bottom ensures safety. With water temperatures averaging 18-22°C year-round and over 300 days of sunshine annually, Agadir offers some of Morocco's best surf conditions.</p>
+                <p>Your <strong>Agadir camel riding tour</strong> begins with convenient hotel pickup, taking you to the beautiful beach area where our gentle, well-trained camels await. As the golden hour approaches, you'll mount your camel and begin a peaceful journey along the shoreline, with the sound of waves and the warm glow of sunset creating an atmosphere of pure magic.</p>
                 
-                <p>The <strong>learn to surf Morocco</strong> experience begins with beach theory - understanding ocean safety, wave selection, paddling techniques, and board control. Then it's time to get in the water! Our certified instructors use proven teaching methods to have you standing on your board within your first lesson. Most students catch their first waves within 30-45 minutes!</p>
+                <p>This isn't just a <strong>camel ride in Agadir</strong> – it's a complete cultural experience! After your scenic beach ride, you'll be welcomed into a traditional Berber tent where authentic Moroccan hospitality awaits. The evening continues with a delicious BBQ dinner featuring grilled meats, fresh salads, traditional bread, and seasonal fruits, all while enjoying traditional Berber music and entertainment.</p>
 
-                <h3>What Makes Our Surf Lessons Agadir Special?</h3>
-                <p>Unlike crowded surf camps, we keep our groups small with a maximum of 6 students per instructor. This ensures personalized attention and faster progress. Our ISA-certified instructors have years of experience teaching beginners and speak English, French, and Arabic fluently. They're passionate about surfing and love sharing their knowledge with enthusiastic students.</p>
+                <h3>What Makes This Camel Ride and BBQ Agadir Experience Special?</h3>
+                <p>Unlike rushed tourist activities, our <strong>sunset camel ride Agadir</strong> experience is designed to give you authentic moments and lasting memories. We keep our groups small (maximum 12 people) to ensure personalized attention from our experienced guides and handlers. Our camels are well-cared for, gentle, and perfect even for first-time riders.</p>
                 
-                <p>Your instructor will assess your swimming ability and fitness level, then guide you through each step of the surfing process. You'll start with beach exercises to practice your pop-up technique, learn proper stance and balance, and understand wave timing. Once in the water, your instructor stays close, helping position you for waves, providing encouragement, and offering real-time technique tips.</p>
+                <p>The timing of our tour is carefully chosen to coincide with the most beautiful light of the day. As you ride along the beach, you'll witness the sky transform into brilliant shades of orange, pink, and purple – creating perfect photo opportunities that will make your Instagram followers jealous! Our guides know exactly where to stop for the best sunset views and are happy to take photos of you and your group.</p>
                 
-                <p>This <strong>surfing Agadir</strong> experience is perfect for families, friends, couples, and solo travelers. It's suitable for anyone aged 8 and above who can swim. The combination of professional instruction, quality equipment, beautiful beaches, and the exhilarating feeling of catching your first wave creates memories that last a lifetime. Many of our students become hooked after just one lesson!</p>
+                <p>Whether you're a couple seeking a romantic experience, a family looking for a unique adventure, or friends wanting to try something authentically Moroccan, this <strong>camel ride on the beach Agadir</strong> is perfect for all ages and fitness levels. No riding experience is necessary – our patient camel handlers will ensure you feel comfortable and safe throughout the entire journey.</p>
             </div>
 
             <!-- Detailed Itinerary -->
             <div class="itinerary-section">
-                <h2 style="font-size: 1.8rem; font-weight: 700; color: #1F2937; margin-bottom: 30px;">Detailed Itinerary: Your Surf Lesson Experience</h2>
+                <h2 style="font-size: 1.8rem; font-weight: 700; color: #1F2937; margin-bottom: 30px;">Detailed Itinerary: Your Sunset Camel Ride & BBQ Experience</h2>
                 
                 <div class="itinerary-item">
-                    <div class="itinerary-time">Morning Session: 9:00 AM | Afternoon Session: 2:00 PM (2 hours total)</div>
-                    <h4 class="itinerary-title">Meeting Point & Equipment Setup (15 minutes)</h4>
-                    <p style="color: #6B7280; line-height: 1.8;">Meet your certified surf instructor at our beach base on Agadir Beach (or Taghazout if specified). Your instructor will welcome you warmly and help you choose the right wetsuit size and foam surfboard. We provide everything you need - high-quality foam surfboards (soft and safe for beginners), full wetsuits, leashes, and surf wax. Get changed in our facilities and prepare for an exciting lesson ahead!</p>
+                    <div class="itinerary-time">5:00 PM - 5:30 PM (Summer) / 4:00 PM - 4:30 PM (Winter)</div>
+                    <h4 class="itinerary-title">Hotel Pickup in Agadir or Taghazout</h4>
+                    <p style="color: #6B7280; line-height: 1.8;">We'll collect you from your hotel or riad in Agadir, Taghazout, or surrounding areas in a comfortable, air-conditioned vehicle. Your professional driver will greet you and provide an overview of the evening ahead. Pickup time varies by season to ensure perfect sunset timing.</p>
                 </div>
                 
                 <div class="itinerary-item">
-                    <div class="itinerary-time">+20 Minutes</div>
-                    <h4 class="itinerary-title">Beach Theory & Safety Briefing</h4>
-                    <p style="color: #6B7280; line-height: 1.8;">Before entering the water, your instructor conducts an essential beach theory session. Learn about ocean safety, how to read waves, understanding currents and rip tides, surf etiquette and right-of-way rules, and beach signals. Then practice the fundamental surfing techniques on the sand: proper paddling motion, the pop-up technique (going from lying to standing), correct stance and foot placement, and balance and body positioning. Your instructor demonstrates each technique, then you practice on your board on the beach until you feel comfortable.</p>
+                    <div class="itinerary-time">5:30 PM - 6:00 PM (Summer) / 4:30 PM - 5:00 PM (Winter)</div>
+                    <h4 class="itinerary-title">Arrival at Beach & Meet Your Camel</h4>
+                    <p style="color: #6B7280; line-height: 1.8;">Arrive at the pristine beach location where our gentle, well-cared-for camels await. Meet your experienced camel handler who will introduce you to your camel and help you mount safely. Don't worry – our camels are calm, friendly, and perfect for beginners! Get comfortable in the saddle and prepare for an unforgettable experience. Your guide will explain basic riding instructions and safety guidelines.</p>
                 </div>
                 
                 <div class="itinerary-item">
-                    <div class="itinerary-time">+75 Minutes</div>
-                    <h4 class="itinerary-title">In-Water Surf Lesson - Catch Your First Waves!</h4>
-                    <p style="color: #6B7280; line-height: 1.8;">Now the real fun begins! Enter the water with your instructor who stays close throughout the lesson. Start in waist-deep water learning to paddle efficiently, control your board, and feel comfortable in the waves. Your instructor helps position you for incoming waves, guides you on timing, and gives you a gentle push for your first rides. Most students stand up and ride waves within 30-45 minutes! Progress at your own pace from riding on your belly, to kneeling, to standing up and riding all the way to shore. Your instructor provides real-time feedback, encouragement, and technique corrections. Small group size (max 6 students) ensures plenty of individual attention and waves!</p>
+                    <div class="itinerary-time">6:00 PM - 7:00 PM (Summer) / 5:00 PM - 6:00 PM (Winter)</div>
+                    <h4 class="itinerary-title">Magical Sunset Camel Ride Along the Beach</h4>
+                    <p style="color: #6B7280; line-height: 1.8;">Begin your enchanting camel ride along Agadir's beautiful coastline. Feel the gentle sway of your camel's gait as you ride along the golden sands with the Atlantic Ocean beside you. Watch as the sun begins its descent, painting the sky in brilliant shades of orange, pink, and purple. Your guide will stop at the perfect spots for photos – capture stunning silhouettes of camels against the sunset! This peaceful one-hour ride allows you to truly connect with this ancient mode of transportation while enjoying one of nature's most beautiful spectacles. Listen to the sound of waves, feel the sea breeze, and create memories that will last a lifetime.</p>
                 </div>
                 
                 <div class="itinerary-item">
-                    <div class="itinerary-time">+10 Minutes</div>
-                    <h4 class="itinerary-title">Cool Down, Debrief & Equipment Return</h4>
-                    <p style="color: #6B7280; line-height: 1.8;">Exit the water feeling exhilarated after catching waves! Your instructor provides a brief debrief - what you did well, areas to improve for next time, and tips for continued progress. Return your equipment, rinse off with fresh water showers, and change out of your wetsuit. Your instructor is happy to answer questions about surfing in Morocco, recommend other surf spots, or help you book additional lessons if you're hooked!</p>
+                    <div class="itinerary-time">7:00 PM - 7:30 PM (Summer) / 6:00 PM - 6:30 PM (Winter)</div>
+                    <h4 class="itinerary-title">Traditional Mint Tea Ceremony</h4>
+                    <p style="color: #6B7280; line-height: 1.8;">After your camel ride, you'll be welcomed into a traditional Berber tent set up on the beach. Experience authentic Moroccan hospitality with a traditional mint tea ceremony. Learn about the cultural significance of mint tea in Moroccan life while enjoying the sweet, refreshing beverage. This is a wonderful opportunity to relax, share stories with fellow travelers, and immerse yourself in Berber culture. Your guide will explain the tea-making tradition and answer any questions about Moroccan customs.</p>
                 </div>
                 
                 <div class="itinerary-item">
-                    <div class="itinerary-time">Total Duration</div>
-                    <h4 class="itinerary-title">2 Hours of Pure Surf Excitement</h4>
-                    <p style="color: #6B7280; line-height: 1.8;">Your complete <strong>surf lesson Agadir</strong> experience lasts approximately 2 hours including equipment setup, beach theory, 75 minutes of water time, and debrief. Most students leave with huge smiles, amazing photos, and the unforgettable feeling of standing up and riding Atlantic waves. Many book multiple lessons to continue improving - surfing is incredibly addictive! If you're staying in Taghazout, this is a perfect activity to combine with exploring the surf village vibe.</p>
+                    <div class="itinerary-time">7:30 PM - 8:30 PM (Summer) / 6:30 PM - 7:30 PM (Winter)</div>
+                    <h4 class="itinerary-title">Authentic Moroccan BBQ Dinner</h4>
+                    <p style="color: #6B7280; line-height: 1.8;">Feast on a delicious traditional Moroccan BBQ dinner prepared fresh on the beach. The menu includes succulent grilled meats (chicken, beef, or lamb), fresh Moroccan salads, warm bread straight from the oven, seasonal fruits, and traditional side dishes. Vegetarian options are available upon request. Enjoy your meal in the Berber tent while being entertained by traditional Berber music. The combination of great food, beautiful setting, and cultural entertainment creates a truly magical evening experience.</p>
+                </div>
+                
+                <div class="itinerary-item">
+                    <div class="itinerary-time">8:30 PM - 9:00 PM (Summer) / 7:30 PM - 8:00 PM (Winter)</div>
+                    <h4 class="itinerary-title">Entertainment & Relaxation</h4>
+                    <p style="color: #6B7280; line-height: 1.8;">After dinner, enjoy traditional Berber music and entertainment around a campfire (weather permitting). This is a perfect time to relax, take final photos under the stars, and soak in the peaceful beach atmosphere. Some evenings may include traditional drumming demonstrations or folk music performances. Simply sit back, enjoy the moment, and savor the end of a perfect Moroccan evening.</p>
+                </div>
+                
+                <div class="itinerary-item">
+                    <div class="itinerary-time">9:00 PM - 9:30 PM (Summer) / 8:00 PM - 8:30 PM (Winter)</div>
+                    <h4 class="itinerary-title">Return Transfer to Your Hotel</h4>
+                    <p style="color: #6B7280; line-height: 1.8;">After this unforgettable evening, your driver will return you safely to your hotel in Agadir or Taghazout. Relax in the comfortable vehicle as you reflect on the magical camel ride and authentic Moroccan experience you just enjoyed. Your guide will be happy to provide recommendations for other activities and attractions in Agadir.</p>
                 </div>
             </div>
 
@@ -1459,27 +1555,26 @@
                     <div class="included-list">
                         <h4>✅ What's Included</h4>
                         <ul>
-                            <li>✓ ISA-certified surf instructor</li>
-                            <li>✓ Premium foam surfboard (soft & beginner-friendly)</li>
-                            <li>✓ Full wetsuit in your size</li>
-                            <li>✓ Surfboard leash & wax</li>
-                            <li>✓ Beach theory & safety briefing</li>
-                            <li>✓ 2-hour lesson (75 min in water)</li>
-                            <li>✓ Small group lesson (max 6 students)</li>
-                            <li>✓ Use of changing facilities & showers</li>
-                            <li>✓ Insurance coverage</li>
-                            <li>✓ Photos/videos by instructor (on your device)</li>
+                            <li>✓ Hotel pickup and drop-off (Agadir & Taghazout)</li>
+                            <li>✓ Air-conditioned transportation</li>
+                            <li>✓ Professional English/French-speaking guide</li>
+                            <li>✓ One-hour sunset camel ride along the beach</li>
+                            <li>✓ Experienced camel handler</li>
+                            <li>✓ Traditional Moroccan mint tea ceremony</li>
+                            <li>✓ Authentic Moroccan BBQ dinner (full meal)</li>
+                            <li>✓ Traditional Berber music entertainment</li>
+                            <li>✓ Berber tent experience</li>
+                            <li>✓ Bottled water</li>
+                            <li>✓ All fees and taxes</li>
                         </ul>
                     </div>
                     <div class="included-list">
                         <h4>❌ What's Not Included</h4>
                         <ul>
-                            <li>✗ Hotel pickup/drop-off (meet at beach)</li>
-                            <li>✗ Towel (bring your own)</li>
-                            <li>✗ Sunscreen (recommended to bring)</li>
-                            <li>✗ Professional photography service</li>
-                            <li>✗ Food & drinks</li>
+                            <li>✗ Personal expenses and souvenirs</li>
+                            <li>✗ Alcoholic beverages</li>
                             <li>✗ Gratuities (optional, appreciated)</li>
+                            <li>✗ Professional photos (guide happy to take photos with your device)</li>
                         </ul>
                     </div>
                 </div>
@@ -1487,212 +1582,203 @@
 
             <!-- Important Information -->
             <div class="tour-description">
-                <h2>Essential Information for Your Surf Lesson</h2>
+                <h2>Essential Information for Your Camel Ride Experience</h2>
                 
                 <div style="background: #fff3cd; padding: 20px; border-radius: 10px; border-left: 4px solid #8B5CF6; margin-bottom: 20px;">
                     <strong>📋 What to Bring:</strong>
                     <ul style="margin-top: 10px; color: #6B7280; line-height: 1.8;">
-                        <li><strong>Swimwear:</strong> Wear under your wetsuit (we provide wetsuits)</li>
-                        <li><strong>Towel:</strong> For drying off after your lesson</li>
-                        <li><strong>Reef-safe sunscreen:</strong> SPF 50+ (apply before putting wetsuit on)</li>
-                        <li><strong>Water bottle:</strong> Stay hydrated (can leave at beach base)</li>
-                        <li><strong>Change of clothes:</strong> Dry clothes for after the lesson</li>
-                        <li><strong>Waterproof phone case:</strong> Optional for photos/videos in water</li>
-                        <li><strong>Positive attitude:</strong> Ready to have fun and embrace the learning process!</li>
+                        <li><strong>Comfortable clothing:</strong> Loose, comfortable pants or long skirt (easier for mounting the camel)</li>
+                        <li><strong>Layers:</strong> Light jacket or shawl for cooler evening temperatures</li>
+                        <li><strong>Footwear:</strong> Closed-toe shoes or sandals with straps (no flip-flops)</li>
+                        <li><strong>Sun protection:</strong> Sunglasses, hat, and sunscreen (SPF 30+)</li>
+                        <li><strong>Camera/Phone:</strong> Fully charged for those stunning sunset photos!</li>
+                        <li><strong>Small bag:</strong> For personal items (keep it light - you'll be on a camel!)</li>
+                        <li><strong>Cash:</strong> Small amount for optional purchases or tips</li>
                     </ul>
                 </div>
                 
                 <div style="background: #d1ecf1; padding: 20px; border-radius: 10px; border-left: 4px solid #8B5CF6; margin-bottom: 20px;">
                     <strong>ℹ️ Good to Know:</strong>
                     <ul style="margin-top: 10px; color: #6B7280; line-height: 1.8;">
-                        <li><strong>Surfing experience:</strong> Not required! Perfect for first-timers - 90% of students stand up on first lesson</li>
-                        <li><strong>Swimming ability:</strong> Must be able to swim comfortably - you'll be in chest-deep water</li>
-                        <li><strong>Minimum age:</strong> 8 years old (children 8-12 need parent supervision)</li>
-                        <li><strong>Fitness level:</strong> Moderate - involves paddling and standing, but suitable for most fitness levels</li>
-                        <li><strong>Water temperature:</strong> 18-22°C year-round (wetsuits keep you warm)</li>
-                        <li><strong>Best season:</strong> Year-round! March-October has warmest water, Nov-Feb has bigger waves</li>
-                        <li><strong>Group size:</strong> Maximum 6 students per instructor for safety and personalized coaching</li>
-                        <li><strong>Free cancellation:</strong> Cancel up to 24 hours before for full refund</li>
-                        <li><strong>Languages:</strong> Instructors speak English, French, and Arabic</li>
-                        <li><strong>Location:</strong> Agadir Beach or Taghazout - you choose during booking</li>
+                        <li><strong>Best season:</strong> Year-round activity; sunset times vary by season (winter 5-6pm, summer 7-8pm)</li>
+                        <li><strong>Difficulty level:</strong> Easy - suitable for all ages and fitness levels</li>
+                        <li><strong>Riding experience:</strong> Not required! Our camels are gentle and our handlers assist everyone</li>
+                        <li><strong>Camel comfort:</strong> Camels are well-cared for, regularly checked by vets, and treated with respect</li>
+                        <li><strong>Accessibility:</strong> Requires ability to mount/dismount camel (handlers assist); not wheelchair accessible</li>
+                        <li><strong>Group size:</strong> Small groups (max 12 people) for personalized experience</li>
+                        <li><strong>Free cancellation:</strong> Cancel up to 24 hours before departure for full refund</li>
+                        <li><strong>Languages:</strong> Tours conducted in English and French</li>
+                        <li><strong>Weather:</strong> Tour runs rain or shine; we'll provide alternatives if unsafe conditions</li>
                     </ul>
                 </div>
 
                 <div style="background: #e8f5e9; padding: 20px; border-radius: 10px; border-left: 4px solid #8B5CF6;">
                     <strong>💡 Local Insider Tips:</strong>
                     <ul style="margin-top: 10px; color: #6B7280; line-height: 1.8;">
-                        <li>Book morning lessons (9 AM) for calmest waves and fewest crowds - ideal for first-timers</li>
-                        <li>Arrive 15 minutes early to get fitted for wetsuit and choose your board</li>
-                        <li>Listen carefully during beach theory - understanding wave timing is 50% of surfing success</li>
-                        <li>Don't stand up too early! Wait for your instructor's "Pop up now!" signal</li>
-                        <li>Look forward when standing, not down at your feet - where you look is where you go!</li>
-                        <li>Fall backwards off your board, not forward - protects you from hitting the board</li>
-                        <li>Expect to swallow some seawater - it happens to everyone, totally normal!</li>
-                        <li>Book multiple lessons if possible - day 2 & 3 you improve exponentially</li>
-                        <li>Taghazout has more surf culture and vibe - perfect for surf enthusiasts</li>
-                        <li>Don't give up after falling - everyone falls! Your instructor will keep encouraging you</li>
+                        <li>Book the sunset timing – it's truly magical and perfect for photos!</li>
+                        <li>Sit back when the camel stands up; lean forward when it sits down</li>
+                        <li>Hold onto the saddle handle – it's a unique swaying motion!</li>
+                        <li>Arrive 10 minutes early to meet your camel and get comfortable</li>
+                        <li>Ask your guide to take photos from different angles – they know the best shots!</li>
+                        <li>The BBQ dinner is generous – come hungry!</li>
+                        <li>Dress modestly to respect local culture (no shorts or sleeveless tops preferred)</li>
+                        <li>Camels sometimes make funny sounds – it's normal, they're just communicating!</li>
                     </ul>
                 </div>
             </div>
 
-            <!-- Why Surf Lessons is Special Section -->
+            <!-- What Makes Camel Riding Special Section -->
             <div class="tour-description">
-                <h2>Why Surf Lessons Agadir is an Unforgettable Experience</h2>
-                <p>Our <strong>Agadir surf school</strong> offers unique advantages and experiences for all types of visitors:</p>
+                <h2>Why a Camel Ride in Agadir is an Unforgettable Experience</h2>
+                <p>This traditional <strong>camel ride in Agadir</strong> offers multiple dimensions of Moroccan culture and natural beauty:</p>
                 
-                <h3 style="font-size: 1.4rem; margin-top: 25px; margin-bottom: 12px; color: #1F2937;">🌊 World-Class Surf Destination</h3>
-                <p>Agadir and nearby Taghazout are internationally recognized surf destinations. The Atlantic coast provides consistent swells year-round, with gentle beach breaks perfect for beginners. Water temperatures stay comfortable (18-22°C), sandy bottoms ensure safety, and the waves are forgiving for first-timers. Professional surfers train here, but the beginner-friendly waves make it ideal for learning. Many famous surfers learned their craft on these very beaches!</p>
+                <h3 style="font-size: 1.4rem; margin-top: 25px; margin-bottom: 12px; color: #1F2937;">🌅 Romantic Sunset Experience</h3>
+                <p>The <strong>sunset camel ride Agadir</strong> is one of the most romantic activities in Morocco. Couples love the intimate atmosphere as they ride side-by-side, watching the sun paint the sky in brilliant colors. It's a popular choice for honeymooners, anniversaries, and marriage proposals. The combination of gentle camel movement, ocean breeze, and stunning sunset creates memories that last a lifetime.</p>
 
-                <h3 style="font-size: 1.4rem; margin-top: 25px; margin-bottom: 12px; color: #1F2937;">👨‍👩‍👧‍👦 Perfect for All Ages & Abilities</h3>
-                <p>Whether you've never touched a surfboard or you're looking to improve technique, our <strong>surf lessons Agadir</strong> accommodate everyone. Kids aged 8+ can learn with specialized instruction and smaller boards. Teenagers love the challenge and social aspect. Adults appreciate patient instructors who build confidence gradually. Families can take lessons together. Seniors who are fit and active enjoy the low-impact exercise. Our instructors adapt teaching methods to each student's learning style and physical ability.</p>
+                <h3 style="font-size: 1.4rem; margin-top: 25px; margin-bottom: 12px; color: #1F2937;">👨‍👩‍👧‍👦 Family-Friendly Adventure</h3>
+                <p>This <strong>camel ride on the beach Agadir</strong> is perfect for families with children. Kids are absolutely fascinated by the gentle giants, and our experienced handlers ensure even the youngest riders feel safe and comfortable. Children typically ride with a parent, while older kids and teens can ride independently. It's an educational experience too – learning about these amazing animals and their importance in Moroccan culture.</p>
 
-                <h3 style="font-size: 1.4rem; margin-top: 25px; margin-bottom: 12px; color: #1F2937;">🏆 ISA-Certified Professional Instructors</h3>
-                <p>Our <strong>Agadir surf school</strong> employs only ISA (International Surfing Association) certified instructors with extensive teaching experience. They're trained in ocean safety, rescue techniques, and proven teaching methodologies. More importantly, they're passionate surfers who love sharing their stoke with students! They know the local waves intimately, speak multiple languages, and have endless patience with nervous beginners. Many of our students say their instructor made all the difference in their success.</p>
+                <h3 style="font-size: 1.4rem; margin-top: 25px; margin-bottom: 12px; color: #1F2937;">📸 Instagram-Worthy Photo Opportunities</h3>
+                <p>The <strong>Agadir camel riding tour</strong> provides some of the most photogenic moments of your Morocco trip. Capture stunning silhouettes against colorful sunsets, dramatic shots of camel caravans along the beach, and close-up portraits with your gentle camel. Our guides know all the best angles and are happy to play photographer so everyone in your group gets perfect shots.</p>
 
-                <h3 style="font-size: 1.4rem; margin-top: 25px; margin-bottom: 12px; color: #1F2937;">📸 Epic Surf Photos & Memories</h3>
-                <p><strong>Learning to surf Agadir</strong> provides incredible photo opportunities! Capture action shots of you standing on your first wave, celebrate with huge smiles after successful rides, take group photos with fellow students, and get sunset silhouettes against golden skies. Our instructors happily take photos and videos on your phone during the lesson. Standing up and riding a wave for the first time is an unforgettable moment - you'll want it documented!</p>
+                <h3 style="font-size: 1.4rem; margin-top: 25px; margin-bottom: 12px; color: #1F2937;">🍖 Authentic Moroccan Culinary Experience</h3>
+                <p>The <strong>camel ride and BBQ Agadir</strong> combination gives you a complete taste of Moroccan hospitality. The BBQ feast features authentic recipes passed down through generations, cooked fresh on-site. You'll taste traditional spices, enjoy freshly baked bread, and experience the communal dining style that's central to Moroccan culture. Vegetarian and dietary restrictions can be accommodated with advance notice.</p>
 
-                <h3 style="font-size: 1.4rem; margin-top: 25px; margin-bottom: 12px; color: #1F2937;">🌅 Perfect Year-Round Conditions</h3>
-                <p>Unlike many surf destinations with seasonal limitations, <strong>surfing in Agadir</strong> works year-round! Spring/Summer (Mar-Oct) offers warmest water and gentle waves - perfect for beginners. Fall/Winter (Nov-Feb) brings bigger swells for more challenge, yet still manageable for improving surfers. 300+ sunny days annually mean reliable conditions. The consistent Atlantic swells ensure waves are almost always available. No matter when you visit Morocco, you can learn to surf!</p>
+                <h3 style="font-size: 1.4rem; margin-top: 25px; margin-bottom: 12px; color: #1F2937;">🎵 Cultural Immersion & Entertainment</h3>
+                <p>Beyond just riding, this experience immerses you in Berber culture. Learn about the historical significance of camels in desert transportation, enjoy traditional music performances, participate in the mint tea ceremony, and hear stories about Berber traditions. It's entertainment and education wrapped into one magical evening.</p>
             </div>
 
-            <!-- Planning Your Surf Lessons Section -->
+            <!-- Planning Your Camel Ride Section -->
             <div class="tour-description">
-                <h2>Planning Your Surf Lessons Agadir Experience</h2>
+                <h2>Planning Your Camel Ride in Agadir</h2>
                 
-                <h3 style="font-size: 1.4rem; margin-top: 25px; margin-bottom: 12px; color: #1F2937;">Best Time for Surf Lessons in Agadir</h3>
-                <p><strong>Surf lessons Agadir</strong> are available year-round, with each season offering unique conditions:</p>
+                <h3 style="font-size: 1.4rem; margin-top: 25px; margin-bottom: 12px; color: #1F2937;">Best Time for a Camel Ride in Agadir</h3>
+                <p>While <strong>camel rides in Agadir</strong> are available year-round, each season offers different advantages:</p>
                 <ul style="margin-left: 25px; color: #6B7280; line-height: 1.8; margin-bottom: 20px;">
-                    <li><strong>Spring (March-May):</strong> Perfect temperatures (20-25°C), warm water, gentle waves ideal for beginners. Best season overall!</li>
-                    <li><strong>Summer (June-August):</strong> Warmest water (20-22°C), smaller waves perfect for learning, sunny weather. Most popular season!</li>
-                    <li><strong>Fall (September-November):</strong> Excellent conditions, bigger waves for progression, fewer crowds. Great for improving surfers!</li>
-                    <li><strong>Winter (December-February):</strong> Biggest waves (still beginner-friendly), cooler water (18-20°C), wetsuits keep you warm. Fewer tourists.</li>
+                    <li><strong>Spring (March-May):</strong> Perfect weather with comfortable temperatures and stunning sunsets. Not too hot, not too cool – ideal conditions!</li>
+                    <li><strong>Summer (June-August):</strong> Later sunsets (around 7-8pm) give you more daytime. Beach evening breeze provides natural cooling. Most popular season.</li>
+                    <li><strong>Fall (September-November):</strong> Excellent weather, fewer crowds, earlier sunsets (around 6-7pm), and golden autumn light for photos</li>
+                    <li><strong>Winter (December-February):</strong> Mild days, earlier sunsets (around 5-6pm), bring a light jacket. Fewer tourists mean more intimate experience</li>
                 </ul>
 
-                <h3 style="font-size: 1.4rem; margin-top: 25px; margin-bottom: 12px; color: #1F2937;">Where Do Surf Lessons Take Place?</h3>
-                <p>Our <strong>Agadir surf school</strong> operates at two prime locations - choose during booking:</p>
-                <ul style="margin-left: 25px; color: #6B7280; line-height: 1.8; margin-bottom: 20px;">
-                    <li><strong>Agadir Beach:</strong> Main city beach, gentle waves, sandy bottom, easy access, perfect for absolute beginners</li>
-                    <li><strong>Taghazout:</strong> Famous surf village 20km north, multiple surf spots, more surf culture, ideal for surfers wanting authentic atmosphere</li>
-                </ul>
-                <p>Both locations offer excellent beginner conditions with professional instructors. Meet directly at the beach - no pickup required (you make your own way there). The beach base has changing facilities, showers, and equipment storage.</p>
+                <h3 style="font-size: 1.4rem; margin-top: 25px; margin-bottom: 12px; color: #1F2937;">Where Does the Camel Ride Take Place?</h3>
+                <p>Our <strong>sunset camel ride Agadir</strong> takes place along a pristine stretch of beach just outside the city. The location is carefully chosen for its natural beauty, soft sand perfect for camels, and spectacular sunset views over the Atlantic Ocean. The beach area is less crowded than the main tourist beaches, giving you a more peaceful and authentic experience. The exact pickup location will be confirmed when you book.</p>
 
-                <h3 style="font-size: 1.4rem; margin-top: 25px; margin-bottom: 12px; color: #1F2937;">Why Book with a Professional Surf School?</h3>
-                <p>While you might see independent instructors on the beach, booking with our certified <strong>surf school Agadir</strong> offers significant advantages:</p>
+                <h3 style="font-size: 1.4rem; margin-top: 25px; margin-bottom: 12px; color: #1F2937;">Why Book a Camel Ride Tour vs. Independent Experience?</h3>
+                <p>While you might see individual camel operators on beaches, booking a professional <strong>Agadir camel riding tour</strong> offers significant advantages:</p>
                 <ul style="margin-left: 25px; color: #6B7280; line-height: 1.8;">
-                    <li><strong>ISA Certification:</strong> All instructors certified by International Surfing Association with proven teaching methods</li>
-                    <li><strong>Safety first:</strong> Trained in ocean rescue, CPR, and emergency procedures - your safety is priority</li>
-                    <li><strong>Quality equipment:</strong> Premium foam surfboards (safe & stable), high-quality wetsuits in all sizes, properly maintained gear</li>
-                    <li><strong>Insurance coverage:</strong> Full liability insurance for your peace of mind</li>
-                    <li><strong>Small groups:</strong> Maximum 6 students per instructor ensures personalized attention and faster learning</li>
-                    <li><strong>Structured lessons:</strong> Proven curriculum from beach theory to water practice - not just "give it a try"</li>
-                    <li><strong>Fixed pricing:</strong> Transparent costs with no haggling or hidden fees</li>
-                    <li><strong>Multi-language:</strong> Instructors speak English, French, and Arabic fluently</li>
-                    <li><strong>Professional facilities:</strong> Clean changing rooms, showers, secure storage for belongings</li>
+                    <li><strong>Convenience:</strong> Hotel pickup and drop-off included – no need to arrange transport or find the location</li>
+                    <li><strong>Complete package:</strong> Camel ride + BBQ dinner + entertainment – everything organized for you</li>
+                    <li><strong>Well-cared-for camels:</strong> Our camels are healthy, regularly vet-checked, and treated ethically</li>
+                    <li><strong>Safety ensured:</strong> Professional handlers and guides with years of experience</li>
+                    <li><strong>Cultural experience:</strong> Learn about Berber traditions, enjoy authentic entertainment and food</li>
+                    <li><strong>Better value:</strong> Complete evening package often costs less than arranging everything separately</li>
+                    <li><strong>No haggling:</strong> Fixed, transparent pricing with no surprise charges or pressure</li>
+                    <li><strong>English/French support:</strong> Guides who can communicate clearly and answer all your questions</li>
                 </ul>
             </div>
 
             <!-- FAQ Section -->
             <div class="faq-section">
-                <h2>Frequently Asked Questions About Surf Lessons Agadir</h2>
+                <h2>Frequently Asked Questions About Camel Rides in Agadir</h2>
                 
                 <div class="faq-item">
                     <button class="faq-question">
-                        Do I need surfing experience?
+                        How long does the sunset camel ride experience last?
                         <span class="faq-icon">+</span>
                     </button>
                     <div class="faq-answer">
-                        <p>No experience necessary! Our <strong>surf lessons Agadir</strong> are perfect for complete beginners. 90% of our first-time students stand up and ride waves within their first lesson. Our instructors teach you everything from scratch: ocean safety, paddling, wave selection, pop-up technique, and balance. All you need is basic swimming ability and enthusiasm!</p>
+                        <p>The complete <strong>sunset camel ride Agadir</strong> experience lasts approximately 4-5 hours total, including hotel pickup and drop-off. The actual camel ride along the beach is about 1 hour during sunset, followed by 1.5-2 hours for the mint tea ceremony, BBQ dinner, and entertainment.</p>
                     </div>
                 </div>
 
                 <div class="faq-item">
                     <button class="faq-question">
-                        Do I need to know how to swim?
+                        Is the camel ride suitable for children and families?
                         <span class="faq-icon">+</span>
                     </button>
                     <div class="faq-answer">
-                        <p>Yes, you must be a confident swimmer. During the lesson, you'll be in chest-deep water and will sometimes fall off your board (it's part of learning!). You don't need to be an Olympic swimmer, but you should be comfortable in the ocean and able to swim back to your board if you fall. Your wetsuit provides flotation, and instructors are always close by.</p>
+                        <p>Absolutely! Our <strong>camel ride in Agadir</strong> is perfect for families. Children as young as 3-4 years old can participate (riding with a parent), while older children can ride independently. Our camels are gentle and well-trained, and our experienced handlers ensure everyone's safety and comfort. It's an adventure kids will remember forever!</p>
                     </div>
                 </div>
 
                 <div class="faq-item">
                     <button class="faq-question">
-                        What should I wear for my surf lesson?
+                        Do I need any riding experience for the camel ride?
                         <span class="faq-icon">+</span>
                     </button>
                     <div class="faq-answer">
-                        <p>Just bring your swimwear! Wear your swimsuit/board shorts under your clothes. We provide full wetsuits that keep you warm and protected. Also bring a towel, reef-safe sunscreen (apply before wetsuit), change of clothes, and water. Leave jewelry and valuables at your hotel - they can get lost in the ocean.</p>
+                        <p>No experience necessary! Our <strong>Agadir camel riding tour</strong> is designed for first-timers. The camel handlers will assist you with mounting and dismounting, explain basic riding techniques, and walk alongside you throughout the ride. Camels have a natural, gentle rhythm that's easy to adjust to. Within minutes, you'll feel comfortable!</p>
                     </div>
                 </div>
 
                 <div class="faq-item">
                     <button class="faq-question">
-                        Can children learn to surf?
+                        What should I wear for the camel ride?
                         <span class="faq-icon">+</span>
                     </button>
                     <div class="faq-answer">
-                        <p>Yes! Children aged 8 and above can take surf lessons. Kids are often naturals at surfing due to their lower center of gravity and fearlessness! We use smaller, lighter boards for children and instructors give extra attention. Children under 12 must be supervised by a parent/guardian on the beach during the lesson. It's an amazing confidence-building activity for kids!</p>
+                        <p>For your <strong>camel ride on the beach Agadir</strong>, wear comfortable, loose-fitting pants or a long skirt (easier for mounting), closed-toe shoes or sandals with straps, and modest clothing that covers shoulders. Bring a light jacket for evening, sunglasses, and a hat. Avoid shorts and sleeveless tops out of respect for local culture.</p>
                     </div>
                 </div>
 
                 <div class="faq-item">
                     <button class="faq-question">
-                        Is surfing physically demanding?
+                        Are the camels well-treated and safe?
                         <span class="faq-icon">+</span>
                     </button>
                     <div class="faq-answer">
-                        <p>Surfing requires moderate fitness - you'll be paddling, standing up repeatedly, and balancing. It's a full-body workout! However, it's suitable for most fitness levels. You don't need to be super fit, just reasonably active. Expect to feel tired (in a good way!) after your lesson. Your core, arms, and legs will definitely feel the workout!</p>
+                        <p>Absolutely! Animal welfare is our top priority. Our camels are well-cared for, healthy, regularly vet-checked, and work limited hours with plenty of rest. They're fed quality diets, have shelter from heat, and are treated with respect. Our camels are calm, well-trained, and comfortable carrying riders. We never overwork our animals.</p>
                     </div>
                 </div>
 
                 <div class="faq-item">
                     <button class="faq-question">
-                        How long until I can stand up on a wave?
+                        What's included in the BBQ dinner?
                         <span class="faq-icon">+</span>
                     </button>
                     <div class="faq-answer">
-                        <p>Most students stand up and ride their first wave within 30-45 minutes! Our proven teaching method - beach practice followed by instructor-assisted waves - has a 90% success rate for first-timers standing up in lesson one. You might not ride all the way to shore immediately, but you'll definitely experience the thrill of standing on a moving wave!</p>
+                        <p>The <strong>camel ride and BBQ Agadir</strong> dinner includes grilled meats (chicken, beef, or lamb), traditional Moroccan salads, fresh bread, seasonal fruits, and refreshing beverages. Vegetarian options are available with advance notice. The meal is freshly prepared on-site and served in a traditional Berber tent atmosphere with live entertainment.</p>
                     </div>
                 </div>
 
                 <div class="faq-item">
                     <button class="faq-question">
-                        What's the best time of day for lessons?
+                        Is the camel ride scary or uncomfortable?
                         <span class="faq-icon">+</span>
                     </button>
                     <div class="faq-answer">
-                        <p>Morning lessons (9 AM) are ideal for beginners - calmer winds, smaller waves, fewer people in the water, and softer light for photos. Afternoon lessons (2 PM) work great too. We don't recommend late afternoon as winds typically pick up. Morning sessions are most popular and book up first, so reserve early!</p>
+                        <p>Not at all! While mounting and dismounting can feel unusual at first (the camel rocks forward and back), it's perfectly safe and our handlers guide you through it. Once you're settled, the ride is smooth and relaxing. The gentle swaying motion is actually quite peaceful. Most first-timers are surprised by how comfortable and enjoyable it is!</p>
                     </div>
                 </div>
 
                 <div class="faq-item">
                     <button class="faq-question">
-                        What if I'm scared of waves?
+                        What time does the camel ride start?
                         <span class="faq-icon">+</span>
                     </button>
                     <div class="faq-answer">
-                        <p>Many nervous first-timers become confident surfers! Our instructors are incredibly patient with nervous students. You'll start in very shallow water, progress gradually, and never be pushed beyond your comfort level. The foam surfboards are super stable and safe. Most people find surfing less scary than they imagined - the waves we use are gentle and fun, not intimidating!</p>
+                        <p>Pickup times vary by season to ensure perfect sunset timing. In summer (June-Aug), pickup is around 5:00-5:30 PM. In winter (Dec-Feb), it's earlier at 4:00-4:30 PM. Spring and fall pickups are around 4:30-5:00 PM. We'll confirm your exact pickup time when you book, ensuring you experience the magical sunset perfectly timed!</p>
                     </div>
                 </div>
 
                 <div class="faq-item">
                     <button class="faq-question">
-                        Can I take private lessons instead of group?
+                        Can I do the camel ride if I'm pregnant or have back problems?
                         <span class="faq-icon">+</span>
                     </button>
                     <div class="faq-answer">
-                        <p>Absolutely! We offer private one-on-one lessons for faster progression and personalized attention. Private lessons cost €60 for 2 hours. They're perfect for nervous beginners wanting extra attention, experienced surfers working on specific techniques, or families wanting to learn together. Contact us to book private lessons!</p>
+                        <p>Pregnant women and people with back or joint problems should consult their doctor before booking. The mounting/dismounting motion and gentle swaying may not be suitable for everyone. If you have concerns, please contact us – we can discuss your specific situation and provide honest advice about whether this tour is right for you.</p>
                     </div>
                 </div>
 
                 <div class="faq-item">
                     <button class="faq-question">
-                        Should I book multiple lessons?
+                        Can I bring my camera/phone on the camel?
                         <span class="faq-icon">+</span>
                     </button>
                     <div class="faq-answer">
-                        <p>We highly recommend it! Most students book 3-5 lessons. Day 1 you learn basics and stand up. Day 2 you ride waves further and improve balance. Day 3 you start turning and controlling direction. Surfing has a steep learning curve - each lesson builds on the last. Many students get addicted and book week-long packages!</p>
+                        <p>Yes! Many guests bring cameras or phones to capture the amazing sunset. We recommend keeping them in a secure bag attached to you while riding. Your guide will stop at perfect photo spots where you can safely take pictures. Our guides are also happy to take photos of you on the camel from various angles – just ask!</p>
                     </div>
                 </div>
             </div>
@@ -1700,43 +1786,15 @@
             <!-- Reviews Section -->
             <div class="reviews-section">
                 <div class="reviews-header">
-                    <h2 style="font-size: 1.8rem; font-weight: 700; color: #1F2937;">What Our Students Say About Surf Lessons Agadir</h2>
+                    <h2 style="font-size: 1.8rem; font-weight: 700; color: #1F2937;">What Our Guests Say About Our Camel Ride Experience</h2>
                     <div class="reviews-summary">
-                        <span class="review-score-big">4.9</span>
+                        <span class="review-score-big">4.8</span>
                         <div>
                             <div style="color: #f39c12; font-size: 20px; margin-bottom: 5px;">★★★★★</div>
                             <span style="color: #6B7280;">Excellent</span><br>
-                            <span style="color: #999; font-size: 14px;">415 verified reviews</span>
+                            <span style="color: #999; font-size: 14px;">289 verified reviews</span>
                         </div>
                     </div>
-                </div>
-
-                <div class="review-card">
-                    <div class="review-header">
-                        <div class="reviewer-info">
-                            <div class="reviewer-avatar">E</div>
-                            <div>
-                                <div class="reviewer-name">Emma Thompson</div>
-                                <div class="reviewer-location">Manchester, UK • Visited Sep 2025</div>
-                            </div>
-                        </div>
-                        <div class="review-rating">5.0</div>
-                    </div>
-                    <p class="review-text">"Absolutely incredible first surf lesson! I was terrified before starting but my instructor was so patient and encouraging. I actually stood up and rode waves on my first try! The equipment was great quality and the beach conditions were perfect for beginners. Already booked 3 more lessons - I'm hooked on surfing now!"</p>
-                </div>
-
-                <div class="review-card">
-                    <div class="review-header">
-                        <div class="reviewer-info">
-                            <div class="reviewer-avatar">M</div>
-                            <div>
-                                <div class="reviewer-name">Marcus Weber</div>
-                                <div class="reviewer-location">Berlin, Germany • Visited Oct 2025</div>
-                            </div>
-                        </div>
-                        <div class="review-rating">5.0</div>
-                    </div>
-                    <p class="review-text">"Best surf school in Agadir! The instructor was ISA-certified and really knew his stuff. Small group of only 5 students meant lots of personal attention. Caught my first green wave after just 2 lessons. The beach theory session was super helpful. Professional setup with good equipment. Highly recommend for anyone wanting to learn surfing!"</p>
                 </div>
 
                 <div class="review-card">
@@ -1744,27 +1802,55 @@
                         <div class="reviewer-info">
                             <div class="reviewer-avatar">S</div>
                             <div>
-                                <div class="reviewer-name">Sophie Martinez</div>
-                                <div class="reviewer-location">Barcelona, Spain • Visited Aug 2025</div>
+                                <div class="reviewer-name">Sophie Anderson</div>
+                                <div class="reviewer-location">London, UK • Visited Sep 2025</div>
                             </div>
                         </div>
-                        <div class="review-rating">4.8</div>
+                        <div class="review-rating">5.0</div>
                     </div>
-                    <p class="review-text">"Perfect family activity! My kids (9 and 12) learned to surf and had the time of their lives. The instructors were amazing with children - patient, fun, and safety-focused. We all stood up on waves by the end of the lesson. Great value for money and such a memorable experience. The kids talk about it constantly!"</p>
+                    <p class="review-text">"Absolutely magical sunset camel ride Agadir experience! My husband and I did this for our anniversary and it was perfect – so romantic riding along the beach at sunset. The camels were gentle and our guide was wonderful. The BBQ dinner was delicious and authentic. The whole evening felt special and memorable. Best thing we did in Morocco!"</p>
                 </div>
 
                 <div class="review-card">
                     <div class="review-header">
                         <div class="reviewer-info">
-                            <div class="reviewer-avatar">J</div>
+                            <div class="reviewer-avatar">M</div>
                             <div>
-                                <div class="reviewer-name">James O'Connor</div>
-                                <div class="reviewer-location">Dublin, Ireland • Visited Jul 2025</div>
+                                <div class="reviewer-name">Marcus Schmidt</div>
+                                <div class="reviewer-location">Munich, Germany • Visited Oct 2025</div>
                             </div>
                         </div>
                         <div class="review-rating">5.0</div>
                     </div>
-                    <p class="review-text">"Took 5 lessons over my week in Agadir and went from never surfing to riding waves confidently! The progression was amazing. Each instructor I had was professional, knowledgeable, and genuinely stoked to teach. The location at Taghazout is perfect - great waves and awesome surf vibe. Can't wait to come back!"</p>
+                    <p class="review-text">"This camel ride in Agadir was a highlight of our family vacation! Our kids (ages 6 and 9) absolutely loved it. The handlers were patient and made sure everyone felt safe. The sunset was spectacular and the BBQ feast was generous. Great value for money – everything included. I'd definitely recommend this tour to anyone visiting Agadir!"</p>
+                </div>
+
+                <div class="review-card">
+                    <div class="review-header">
+                        <div class="reviewer-info">
+                            <div class="reviewer-avatar">I</div>
+                            <div>
+                                <div class="reviewer-name">Isabella Rossi</div>
+                                <div class="reviewer-location">Milan, Italy • Visited Aug 2025</div>
+                            </div>
+                        </div>
+                        <div class="review-rating">4.9</div>
+                    </div>
+                    <p class="review-text">"Wonderful camel ride on the beach Agadir! The organization was perfect from start to finish. Pickup was on time, the camels were well-cared for and gentle, and the sunset timing was perfect. The mint tea ceremony was a lovely cultural touch. The dinner was fantastic – authentic Moroccan flavors. Photos turned out amazing. Highly recommend!"</p>
+                </div>
+
+                <div class="review-card">
+                    <div class="review-header">
+                        <div class="reviewer-info">
+                            <div class="reviewer-avatar">R</div>
+                            <div>
+                                <div class="reviewer-name">Rachel Cohen</div>
+                                <div class="reviewer-location">New York, USA • Visited Jul 2025</div>
+                            </div>
+                        </div>
+                        <div class="review-rating">5.0</div>
+                    </div>
+                    <p class="review-text">"First time on a camel and it was incredible! This Agadir camel riding tour exceeded all expectations. The sunset was breathtaking, the camels were so gentle, and the handlers made us feel completely safe. The BBQ dinner was the cherry on top – so much delicious food! Great experience for couples or families. Don't miss this!"</p>
                 </div>
 
                 <div class="review-card">
@@ -1772,83 +1858,82 @@
                         <div class="reviewer-info">
                             <div class="reviewer-avatar">A</div>
                             <div>
-                                <div class="reviewer-name">Amélie Dubois</div>
+                                <div class="reviewer-name">Antoine Dubois</div>
                                 <div class="reviewer-location">Paris, France • Visited Sep 2025</div>
                             </div>
                         </div>
-                        <div class="review-rating">4.9</div>
+                        <div class="review-rating">4.8</div>
                     </div>
-                    <p class="review-text">"Excellente école de surf! I was nervous about the ocean but the instructor made me feel completely safe. The wetsuit kept me warm, the foam board was stable, and the waves were perfect size for learning. Stood up on my 5th wave! Beautiful beach, professional instructors, great experience. Merci beaucoup!"</p>
+                    <p class="review-text">"Une expérience inoubliable! The camel ride and BBQ Agadir was perfectly organized. Riding along the beach at sunset was magical – très romantique! The mint tea ceremony and traditional dinner were authentic. Our guide spoke excellent French and made sure we got amazing photos. Highly recommend for anyone visiting Agadir!"</p>
                 </div>
 
                 <div class="review-card">
                     <div class="review-header">
                         <div class="reviewer-info">
-                            <div class="reviewer-avatar">T</div>
+                            <div class="reviewer-avatar">D</div>
                             <div>
-                                <div class="reviewer-name">Tom Anderson</div>
-                                <div class="reviewer-location">Stockholm, Sweden • Visited Oct 2025</div>
+                                <div class="reviewer-name">David Thompson</div>
+                                <div class="reviewer-location">Sydney, Australia • Visited Oct 2025</div>
                             </div>
                         </div>
                         <div class="review-rating">5.0</div>
                     </div>
-                    <p class="review-text">"Best surf lessons I've taken (and I've tried surfing in 3 countries!). The small group size, quality equipment, and expert instruction made all the difference. My instructor had great ocean knowledge and teaching skills. Progressed more in 2 hours than previous lessons elsewhere. Worth every euro - book it!"</p>
+                    <p class="review-text">"Best sunset camel ride Agadir experience! The whole evening was flawless – from hotel pickup to drop-off. The camel ride was smooth and comfortable, even for first-timers like us. Sunset views were stunning. The BBQ feast was enormous and delicious. Great value and authentic Moroccan experience. Book this – you won't regret it!"</p>
                 </div>
             </div>
 
             <!-- Why Choose Us Section -->
             <div class="tour-description" style="background: #f9f9f9; padding: 30px; border-radius: 15px;">
-                <h2>Why Book Your Surf Lessons with Our Agadir Surf School?</h2>
+                <h2>Why Book Your Sunset Camel Ride with The Local Guide?</h2>
                 <ul style="margin-left: 25px; color: #6B7280; line-height: 2; margin-top: 20px;">
-                    <li><strong>🏆 ISA-Certified Instructors:</strong> All instructors certified by International Surfing Association with proven teaching methods</li>
-                    <li><strong>🏄 Quality Equipment:</strong> Premium foam surfboards, full wetsuits, leashes - all included in lesson price</li>
-                    <li><strong>👥 Small Groups:</strong> Maximum 6 students per instructor for personalized attention and faster learning</li>
-                    <li><strong>⭐ Top-Rated:</strong> 4.9/5 rating from 415+ verified students who loved learning to surf with us</li>
-                    <li><strong>🎓 Beginner Specialists:</strong> 90% of first-timers stand up in their first lesson - proven teaching system!</li>
-                    <li><strong>🌊 Perfect Waves:</strong> Agadir Beach & Taghazout - ideal beginner-friendly waves with sandy bottoms</li>
-                    <li><strong>💰 Best Price:</strong> €35 for 2-hour group lesson - best value in Agadir with no hidden fees</li>
-                    <li><strong>🌐 Multi-Language:</strong> Instructors speak English, French, and Arabic fluently</li>
-                    <li><strong>📅 Flexible Schedule:</strong> Morning & afternoon lessons daily - easy online booking</li>
+                    <li><strong>🏆 Local Expertise:</strong> Born and raised in Agadir – we know the best sunset spots and authentic experiences</li>
+                    <li><strong>🐫 Well-Cared Camels:</strong> Healthy, gentle camels that are regularly vet-checked and treated with respect</li>
+                    <li><strong>👥 Small Groups:</strong> Maximum 12 people for a personalized, intimate experience</li>
+                    <li><strong>⭐ Top-Rated:</strong> 4.8/5 rating from 289+ verified guests who loved their experience</li>
+                    <li><strong>💰 Complete Package:</strong> Camel ride, BBQ dinner, mint tea, entertainment – everything included in one price</li>
+                    <li><strong>🚗 Convenient Pickup:</strong> Free pickup from Agadir, Taghazout, and surrounding areas</li>
+                    <li><strong>📸 Photo-Perfect:</strong> Expert guides who know the best angles and timing for stunning sunset photos</li>
+                    <li><strong>📅 Easy Booking:</strong> Instant confirmation via WhatsApp or email</li>
                     <li><strong>🔄 Free Cancellation:</strong> Cancel up to 24 hours before for full refund – book with confidence</li>
-                    <li><strong>🏖️ Professional Facilities:</strong> Clean changing rooms, showers, equipment storage at beach base</li>
+                    <li><strong>🌍 Ethical Tourism:</strong> We support local communities and practice responsible animal care</li>
                 </ul>
             </div>
 
             <!-- Related Tours Section -->
             <div class="tour-description">
-                <h2>Other Popular Agadir Water Sports & Activities</h2>
-                <p>Maximize your Agadir beach experience by combining your surf lesson with these popular activities:</p>
+                <h2>Other Popular Agadir Tours & Activities</h2>
+                <p>Maximize your Agadir experience by combining your sunset camel ride with these popular activities:</p>
                 
                 <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 20px; margin-top: 25px;">
                     <div style="background: white; padding: 20px; border-radius: 10px; border: 2px solid #e0e0e0;">
-                        <h4 style="color: #1F2937; font-size: 1.2rem; margin-bottom: 10px;">🛥️ Boat Trip Agadir</h4>
-                        <p style="color: #6B7280; font-size: 14px; line-height: 1.6;">After your surf lesson, enjoy a relaxing boat cruise along Agadir's coastline with swimming and snorkeling.</p>
+                        <h4 style="color: #1F2937; font-size: 1.2rem; margin-bottom: 10px;">🏍️ Quad Biking Adventure</h4>
+                        <p style="color: #6B7280; font-size: 14px; line-height: 1.6;">Combine your morning in Paradise Valley with an afternoon quad biking experience through Agadir's desert and beaches.</p>
                     </div>
                     
                     <div style="background: white; padding: 20px; border-radius: 10px; border: 2px solid #e0e0e0;">
-                        <h4 style="color: #1F2937; font-size: 1.2rem; margin-bottom: 10px;">🚤 Jet Ski Adventure</h4>
-                        <p style="color: #6B7280; font-size: 14px; line-height: 1.6;">For adrenaline seekers! Jet ski on Atlantic waters - perfect complement to surfing for water sports enthusiasts.</p>
+                        <h4 style="color: #1F2937; font-size: 1.2rem; margin-bottom: 10px;">🐫 Sunset Camel Ride</h4>
+                        <p style="color: #6B7280; font-size: 14px; line-height: 1.6;">After Paradise Valley, enjoy a romantic sunset camel ride along Agadir beach. Perfect combo for a full day of adventure.</p>
                     </div>
                     
                     <div style="background: white; padding: 20px; border-radius: 10px; border: 2px solid #e0e0e0;">
-                        <h4 style="color: #1F2937; font-size: 1.2rem; margin-bottom: 10px;">🐴 Horse Riding Beach Tour</h4>
-                        <p style="color: #6B7280; font-size: 14px; line-height: 1.6;">Ride horses along Agadir's beach at sunset - a beautiful way to experience the coastline from a different perspective.</p>
+                        <h4 style="color: #1F2937; font-size: 1.2rem; margin-bottom: 10px;">🏜️ Souss Massa Desert Tour</h4>
+                        <p style="color: #6B7280; font-size: 14px; line-height: 1.6;">Explore the Souss Massa National Park and small Sahara dunes – another stunning natural area near Agadir.</p>
                     </div>
                     
                     <div style="background: white; padding: 20px; border-radius: 10px; border: 2px solid #e0e0e0;">
-                        <h4 style="color: #1F2937; font-size: 1.2rem; margin-bottom: 10px;">🏞️ Paradise Valley Tour</h4>
-                        <p style="color: #6B7280; font-size: 14px; line-height: 1.6;">Cool off after surfing with a trip to Paradise Valley - natural pools and waterfalls in the Atlas foothills.</p>
+                        <h4 style="color: #1F2937; font-size: 1.2rem; margin-bottom: 10px;">🏰 Essaouira Day Trip</h4>
+                        <p style="color: #6B7280; font-size: 14px; line-height: 1.6;">Visit the charming coastal city of Essaouira on a full-day excursion – perfect for your next day in Agadir.</p>
                     </div>
                 </div>
             </div>
 
             <!-- Bottom CTA -->
             <div style="background: linear-gradient(135deg, #8B5CF6 0%, #7C3AED 100%); padding: 40px; border-radius: 16px; text-align: center; margin: 50px 0; color: white; box-shadow: 0 8px 32px rgba(0,0,0,0.12);">
-                <h2 style="color: white; font-size: 2rem; margin-bottom: 15px; font-family: 'Inter', sans-serif;">Ready to Catch Your First Wave?</h2>
-                <p style="font-size: 1.1rem; margin-bottom: 25px; opacity: 0.95;">Book your surf lesson in Agadir today and experience the thrill of riding Atlantic waves with expert instructors!</p>
+                <h2 style="color: white; font-size: 2rem; margin-bottom: 15px; font-family: 'Inter', sans-serif;">Ready for Your Magical Sunset Camel Ride?</h2>
+                <p style="font-size: 1.1rem; margin-bottom: 25px; opacity: 0.95;">Book your sunset camel ride Agadir experience today and create memories that will last a lifetime!</p>
                 <div style="display: flex; gap: 15px; justify-content: center; flex-wrap: wrap;">
                     <a href="contact.html" style="background: #cdff03; color: #000000; padding: 16px 32px; border-radius: 6px; text-decoration: none; font-weight: 700; font-size: 1.1rem; display: inline-block;">Book Now</a>
-                    <a href="https://wa.me/212645792457?text=Hi! I'm interested in surf lessons in Agadir" target="_blank" style="background: #8449f2; color: white; padding: 16px 32px; border-radius: 6px; text-decoration: none; font-weight: 700; font-size: 1.1rem; display: inline-block;">Book via WhatsApp</a>
+                    <a href="https://wa.me/212645792457?text=Hi! I'm interested in the sunset camel ride and BBQ dinner in Agadir" target="_blank" style="background: #8449f2; color: white; padding: 16px 32px; border-radius: 6px; text-decoration: none; font-weight: 700; font-size: 1.1rem; display: inline-block;">Book via WhatsApp</a>
                 </div>
             </div>
         </div>
@@ -1857,9 +1942,9 @@
         <aside class="booking-sidebar">
             <div class="booking-card">
                 <div class="price-section">
-                    <div class="price-label">Group Lesson</div>
-                    <div class="price">€35<span class="price-unit"> / person</span></div>
-                    <p style="font-size: 13px; color: #999; margin-top: 8px;">All equipment included • 2-hour lesson</p>
+                    <div class="price-label">From</div>
+                    <div class="price">€40<span class="price-unit"> / person</span></div>
+                    <p style="font-size: 13px; color: #999; margin-top: 8px;">Best price guaranteed • All-inclusive</p>
                 </div>
 
                                 <!-- Booking Buttons -->
@@ -1867,12 +1952,14 @@
                     <a href="#booking-link" class="primary-book-btn">
                         Book Now
                     </a>
-                    <a href="https://wa.me/212645792457?text=Hi! I'm interested in the Surf Lessons" target="_blank" class="whatsapp-book-btn">
+                    <a href="https://wa.me/212645792457?text=Hi! I'm interested in the Camel Ride tour" target="_blank" class="whatsapp-book-btn">
                         Book via WhatsApp
                     </a>
                 </div>
 
-                
+                <div class="free-cancellation">
+                    ✓ Free cancellation up to 24 hours before
+                </div>
             </div>
         </aside>
     </section>
@@ -1963,7 +2050,6 @@
         </div>
     </footer>
 
-
     <!-- Back to Top Button -->
     <button class="back-to-top" aria-label="Back to top">
         <svg viewBox="0 0 18 28" width="24" height="24" fill="currentColor">
@@ -1984,7 +2070,7 @@
                 const nextBtn = slider.querySelector('.ss-next');
                 const dotsContainer = slider.querySelector('.ss-dots');
                 const thumbsContainer = document.querySelector('.ss-thumbs');
-            let currentIndex = 0;
+                let currentIndex = 0;
 
                 function goTo(index) {
                     slides[currentIndex].classList.remove('active');
@@ -2036,7 +2122,7 @@
                 prevBtn.addEventListener('click', () => goTo(currentIndex - 1));
                 nextBtn.addEventListener('click', () => goTo(currentIndex + 1));
 
-            document.addEventListener('keydown', (e) => {
+                document.addEventListener('keydown', (e) => {
                     if (e.key === 'ArrowLeft') goTo(currentIndex - 1);
                     if (e.key === 'ArrowRight') goTo(currentIndex + 1);
                 });
@@ -2044,20 +2130,6 @@
                 renderDots();
                 renderThumbs();
             }
-
-            // FAQ Accordion
-            $('.faq-question').on('click', function() {
-                const faqItem = $(this).parent();
-                const wasActive = faqItem.hasClass('active');
-                $('.faq-item').removeClass('active');
-                if (!wasActive) { faqItem.addClass('active'); }
-            });
-
-            // Set minimum date to today (guarded)
-            (function(){
-                const dateEl = document.getElementById('tour-date');
-                if (dateEl) { dateEl.min = new Date().toISOString().split('T')[0]; }
-            })();
         });
     </script>
 <script>
@@ -2067,43 +2139,6 @@ const closeMenu=mobileMenu?mobileMenu.querySelector(".close-menu"):null;
 if(hamburger&&mobileMenu){hamburger.addEventListener("click",()=>{mobileMenu.classList.add("active");hamburger.classList.add("active")});}
 if(closeMenu){closeMenu.addEventListener("click",()=>{mobileMenu.classList.remove("active");hamburger&&hamburger.classList.remove("active")});}
 if(mobileMenu){mobileMenu.querySelectorAll("a").forEach(a=>a.addEventListener("click",()=>{mobileMenu.classList.remove("active");hamburger&&hamburger.classList.remove("active")}));}
-</script>
-<script>
-// Desktop-only: build premium carousel from existing slides
-(() => {
-  if (window.matchMedia('(max-width: 1023.98px)').matches) return;
-  const host = document.querySelector('.tour-carousel');
-  const imgs = Array.from(document.querySelectorAll('.tour-detail-hero .simple-slider .slide img'));
-  if (!host || imgs.length === 0) return;
-  const stage = document.createElement('div'); stage.className = 'tc-stage';
-  const prev = document.createElement('button'); prev.className = 'tc-nav tc-prev'; prev.setAttribute('aria-label','Previous photo'); prev.textContent = '❮';
-  const next = document.createElement('button'); next.className = 'tc-nav tc-next'; next.setAttribute('aria-label','Next photo'); next.textContent = '❯';
-  const image = document.createElement('img'); image.className = 'tc-image';
-  const cap = document.createElement('div'); cap.className = 'tc-caption';
-  stage.appendChild(prev); stage.appendChild(image); stage.appendChild(cap); stage.appendChild(next);
-  const thumbs = document.createElement('div'); thumbs.className = 'tc-thumbs'; thumbs.setAttribute('role','tablist'); thumbs.setAttribute('aria-label','Photo thumbnails');
-  host.appendChild(stage); host.appendChild(thumbs);
-  const data = imgs.map(im => ({ src: im.getAttribute('src') || '', caption: im.getAttribute('alt') || 'Tour photo' }));
-  data.forEach((d) => { const b = document.createElement('button'); b.className = 'tc-thumb'; b.setAttribute('role','tab'); b.setAttribute('aria-selected','false'); b.dataset.full = d.src; b.dataset.caption = d.caption; const ti = document.createElement('img'); ti.src = d.src; ti.alt = 'Thumb'; b.appendChild(ti); thumbs.appendChild(b); });
-  const thumbButtons = Array.from(thumbs.querySelectorAll('.tc-thumb'));
-  let index = 0;
-  function setActive(i, animate = true){
-    index = (i + thumbButtons.length) % thumbButtons.length;
-    const t = thumbButtons[index];
-    thumbButtons.forEach(btn => { const active = btn === t; btn.classList.toggle('is-active', active); btn.setAttribute('aria-selected', active ? 'true':'false'); });
-    if (animate) image.style.opacity = 0.35;
-    image.src = t.dataset.full || '';
-    image.alt = t.dataset.caption || 'Tour photo';
-    cap.textContent = t.dataset.caption || '';
-    if (animate) requestAnimationFrame(() => (image.style.opacity = 1));
-    t.scrollIntoView({ block: 'nearest', inline: 'center', behavior: 'smooth' });
-  }
-  thumbButtons.forEach((b, i) => b.addEventListener('click', () => setActive(i)));
-  prev.addEventListener('click', () => setActive(index - 1));
-  next.addEventListener('click', () => setActive(index + 1));
-  host.addEventListener('keydown', (e) => { if (e.key === 'ArrowLeft') setActive(index - 1); if (e.key === 'ArrowRight') setActive(index + 1); });
-  setActive(0, false);
-})();
 </script>
 </body>
 </html>

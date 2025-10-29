@@ -455,21 +455,11 @@
                 margin: 15px auto;
                 display: block;
             }
-            .tour-title { font-size: 1.4rem; }
-            .tour-subtitle { font-size: 0.95rem; }
-            .tour-header { margin-bottom: 20px; }
-            .tour-content-wrapper { padding: 20px 15px; gap: 0; }
-            .tour-main-content { padding-right: 0; }
+            .tour-title { font-size: 1.8rem; }
             .tour-detail-hero { height: auto; margin-top: 72px; }
             .price-options { grid-template-columns: 1fr; }
-            .price-table { padding: 20px 15px; }
-            .price-table h3 { font-size: 1.3rem; }
-            .price-option { padding: 15px; }
-            .price-option-price { font-size: 1.4rem; }
-            .tour-highlights { padding: 20px 15px; }
-            .tour-highlights h2 { font-size: 1.3rem; }
             
-            /* Fix duplicate aside definition */
+            /* Sticky booking buttons on mobile */
             aside {
                 position: fixed !important;
                 bottom: 0;
@@ -477,17 +467,14 @@
                 right: 0;
                 z-index: 999;
                 background: white;
-                padding: 10px 12px !important;
-                box-shadow: 0 -3px 15px rgba(0,0,0,0.12);
+                padding: 15px !important;
+                box-shadow: 0 -4px 20px rgba(0,0,0,0.15);
                 top: auto !important;
             }
             
             aside > div {
-                padding: 0 !important;
+                padding: 15px !important;
                 border-radius: 0 !important;
-                background: transparent !important;
-                border: none !important;
-                box-shadow: none !important;
             }
             
             aside .price-section,
@@ -496,47 +483,7 @@
             }
             
             body {
-                padding-bottom: 160px;
-            }
-            
-            /* Mobile font size fixes for inline styles */
-            h2 { font-size: 1.3rem !important; }
-            h3 { font-size: 1.1rem !important; }
-            h4 { font-size: 1rem !important; }
-            p { font-size: 14px !important; line-height: 1.6 !important; }
-            
-            /* Mobile responsive tables */
-            table { font-size: 12px !important; }
-            th, td { padding: 10px 8px !important; font-size: 11px !important; }
-            
-            /* Mobile responsive padding */
-            div[style*="margin"] { margin: 20px 0 !important; }
-            div[style*="padding"] { padding: 15px !important; }
-            
-            /* Mobile responsive grid layouts */
-            div[style*="grid"] { grid-template-columns: 1fr !important; gap: 15px !important; }
-            
-            /* Overflow fixes */
-            * { max-width: 100%; box-sizing: border-box; }
-            
-            /* Mobile booking buttons in horizontal layout */
-            aside > div > div[style*="flex-direction: column"] {
-                flex-direction: row !important;
-                gap: 8px !important;
-                margin-bottom: 0 !important;
-            }
-            
-            aside a[style*="cdff03"],
-            aside a[style*="8449f2"] {
-                flex: 1 !important;
-                padding: 12px 10px !important;
-                font-size: 13px !important;
-                display: flex !important;
-                align-items: center !important;
-                justify-content: center !important;
-                border-radius: 8px !important;
-                box-shadow: none !important;
-                border: none !important;
+                padding-bottom: 180px;
             }
         }
         /* Footer Styles - Miracle Air Inspired */
@@ -810,27 +757,6 @@
             }
         }
     </style>
-    <style>
-    .tour-carousel { display: none; }
-    @media (min-width: 1024px) {
-      .simple-slider, .ss-thumbs { display: none !important; }
-      .tour-carousel { display: block; --radius:20px; --shadow:0 20px 40px rgba(0,0,0,.15); --glass:rgba(255,255,255,.2); --glass-border:rgba(255,255,255,.35); --accent:#fff; max-width:min(1200px,92vw); margin:32px auto 0; }
-      .tour-carousel .tc-stage{position:relative;border-radius:var(--radius);overflow:clip;box-shadow:var(--shadow);background:#000;isolation:isolate}
-      .tour-carousel .tc-image{width:100%;height:auto;aspect-ratio:16/9;object-fit:cover;display:block;transition:opacity .6s ease}
-      .tour-carousel .tc-nav{position:absolute;top:50%;translate:0 -50%;width:46px;height:46px;border-radius:50%;border:1px solid var(--glass-border);background:var(--glass);backdrop-filter:blur(10px);color:var(--accent);display:grid;place-items:center;cursor:pointer;transition:transform .15s ease,background .15s ease,opacity .15s ease;opacity:.9;z-index:2}
-      .tour-carousel .tc-prev{left:14px}
-      .tour-carousel .tc-next{right:14px}
-      .tour-carousel .tc-nav:hover{transform:scale(1.08);background:rgba(255,255,255,.35)}
-      .tour-carousel .tc-nav:active{transform:scale(.98)}
-      .tour-carousel .tc-caption{position:absolute;inset:auto 0 0 0;padding:18px 20px 22px;color:#fff;font-size:1.05rem;font-weight:500;background:linear-gradient(to top,rgba(0,0,0,.65),rgba(0,0,0,0));letter-spacing:.2px;z-index:1}
-      .tour-carousel .tc-thumbs{margin-top:14px;display:grid;grid-auto-flow:column;grid-auto-columns:minmax(120px,1fr);gap:12px;overflow-x:auto;padding:6px 2px;scrollbar-width:none}
-      .tour-carousel .tc-thumbs::-webkit-scrollbar{display:none}
-      .tour-carousel .tc-thumb{position:relative;border:none;background:transparent;padding:0;cursor:pointer;border-radius:12px;overflow:hidden;outline-offset:3px;transition:transform .2s ease,box-shadow .2s ease,opacity .2s ease;opacity:.85}
-      .tour-carousel .tc-thumb:hover{transform:translateY(-2px);opacity:1}
-      .tour-carousel .tc-thumb.is-active{opacity:1;box-shadow:0 10px 22px rgba(0,0,0,.18)}
-      .tour-carousel .tc-thumb img{width:100%;height:84px;object-fit:cover;display:block}
-    }
-    </style>
 </head>
 <body>
     <div id="mobileMenu" class="mobile-menu">
@@ -839,7 +765,7 @@
             <nav class="menu-nav">
                 <a href="index.html" style="font-weight: bold;">Home</a>
                 <a href="agadir-tours.html" style="font-weight: bold;">Agadir Tours</a>
-                <a href="day-trips-from-agadir.html" style="font-weight: bold;">Day Trips</a>
+                <a href="things-to-do.html" style="font-weight: bold;">Things to Do in Agadir</a>
                 <a href="blog.html" style="font-weight: bold;">Blog</a>
                 <a href="contact.html" style="font-weight: bold;">Contact</a>
             </nav>
@@ -867,14 +793,18 @@
             <a href="index.html" class="header__logo">
                 <img src="img/logo.png" alt="The Local Guide" class="header__logo-img">
             </a>
-            <nav class="header__nav" style="margin-left: auto;">
+            <nav class="header__nav">
                 <a href="index.html" class="header__nav-link">Home</a>
                 <a href="agadir-tours.html" class="header__nav-link">Agadir Tours</a>
                 <a href="day-trips-from-agadir.html" class="header__nav-link">Day Trips</a>
                 <a href="blog.html" class="header__nav-link">Blog</a>
                 <a href="contact.html" class="header__nav-link">Contact</a>
             </nav>
-            <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+            <div class="header__actions">
+                <a href="https://wa.me/212601820422" class="btn btn-whatsapp">WhatsApp Us</a>
+                <a href="contact.html" class="btn btn-primary">Book Now</a>
+            </div>
+                    <button class="hamburger" id="hamburger" aria-label="Toggle menu">
                 <span></span>
                 <span></span>
                 <span></span>
@@ -920,10 +850,8 @@
             <button class="ss-prev" aria-label="Previous photo">‹</button>
             <button class="ss-next" aria-label="Next photo">›</button>
             <div class="ss-dots" aria-label="Slide navigation"></div>
-        </div>
+                </div>
         <div class="ss-thumbs" aria-label="Slide thumbnails"></div>
-        <!-- Desktop-only premium carousel container (built by JS) -->
-        <section class="tour-carousel" aria-label="Tour photo gallery"></section>
     </section>
 
     <section class="tour-content-wrapper">
@@ -1416,16 +1344,19 @@
                 </div>
 
                 <!-- Booking Buttons -->
-                <div style="display: flex; flex-direction: column; gap: 10px; margin-bottom: 20px;">
-                    <a href="#booking-link" style="background: #cdff03; color: #000000; padding: 14px 20px; border-radius: 8px; text-decoration: none; font-weight: 700; font-size: 15px; text-align: center; transition: all 0.3s ease; box-shadow: 0 3px 8px rgba(205, 255, 3, 0.3); display: flex; align-items: center; justify-content: center;">
+                <div style="display: flex; flex-direction: column; gap: 12px; margin-bottom: 20px;">
+                    <a href="#booking-link" style="background: #cdff03; color: #000000; padding: 16px 24px; border-radius: 6px; text-decoration: none; font-weight: 700; font-size: 16px; text-align: center; transition: all 0.3s ease; box-shadow: 0 4px 12px rgba(205, 255, 3, 0.3); display: block;">
                         Book Now
                     </a>
-                    <a href="https://wa.me/212645792457?text=Hi! I'm interested in the Buggy Adventure tour" target="_blank" style="background: #8449f2; color: white; padding: 14px 20px; border-radius: 8px; text-decoration: none; font-weight: 700; font-size: 15px; text-align: center; transition: all 0.3s ease; box-shadow: 0 3px 8px rgba(132, 73, 242, 0.3); display: flex; align-items: center; justify-content: center;">
+                    <a href="https://wa.me/212645792457?text=Hi! I'm interested in the Buggy Adventure tour" target="_blank" style="background: #8449f2; color: white; padding: 16px 24px; border-radius: 6px; text-decoration: none; font-weight: 700; font-size: 16px; text-align: center; transition: all 0.3s ease; box-shadow: 0 4px 12px rgba(132, 73, 242, 0.3); display: block;">
                         Book via WhatsApp
                     </a>
                     </div>
                     
-                </div>
+                <div style="background: #e8f5e9; padding: 15px; border-radius: 6px; text-align: center; margin-top: 20px; color: #1F2937; font-weight: 600; font-size: 14px;">
+                    ✓ Free cancellation up to 24 hours
+                    </div>
+            </div>
         </aside>
     </section>
                         <!-- FOOTER -->
@@ -1602,42 +1533,4 @@ if(closeMenu){closeMenu.addEventListener("click",()=>{mobileMenu.classList.remov
 if(mobileMenu){mobileMenu.querySelectorAll("a").forEach(a=>a.addEventListener("click",()=>{mobileMenu.classList.remove("active");hamburger&&hamburger.classList.remove("active")}));}
 </script>
 </body>
-</html>
-<script>
-// Desktop-only: build premium carousel from existing slides
-(() => {
-  if (window.matchMedia('(max-width: 1023.98px)').matches) return;
-  const host = document.querySelector('.tour-carousel');
-  const imgs = Array.from(document.querySelectorAll('.tour-detail-hero .simple-slider .slide img'));
-  if (!host || imgs.length === 0) return;
-  const stage = document.createElement('div'); stage.className = 'tc-stage';
-  const prev = document.createElement('button'); prev.className = 'tc-nav tc-prev'; prev.setAttribute('aria-label','Previous photo'); prev.textContent = '❮';
-  const next = document.createElement('button'); next.className = 'tc-nav tc-next'; next.setAttribute('aria-label','Next photo'); next.textContent = '❯';
-  const image = document.createElement('img'); image.className = 'tc-image';
-  const cap = document.createElement('div'); cap.className = 'tc-caption';
-  stage.appendChild(prev); stage.appendChild(image); stage.appendChild(cap); stage.appendChild(next);
-  const thumbs = document.createElement('div'); thumbs.className = 'tc-thumbs'; thumbs.setAttribute('role','tablist'); thumbs.setAttribute('aria-label','Photo thumbnails');
-  host.appendChild(stage); host.appendChild(thumbs);
-  const data = imgs.map(im => ({ src: im.getAttribute('src') || '', caption: im.getAttribute('alt') || 'Tour photo' }));
-  data.forEach((d) => { const b = document.createElement('button'); b.className = 'tc-thumb'; b.setAttribute('role','tab'); b.setAttribute('aria-selected','false'); b.dataset.full = d.src; b.dataset.caption = d.caption; const ti = document.createElement('img'); ti.src = d.src; ti.alt = 'Thumb'; b.appendChild(ti); thumbs.appendChild(b); });
-  const thumbButtons = Array.from(thumbs.querySelectorAll('.tc-thumb'));
-  let index = 0;
-  function setActive(i, animate = true){
-    index = (i + thumbButtons.length) % thumbButtons.length;
-    const t = thumbButtons[index];
-    thumbButtons.forEach(btn => { const active = btn === t; btn.classList.toggle('is-active', active); btn.setAttribute('aria-selected', active ? 'true':'false'); });
-    if (animate) image.style.opacity = 0.35;
-    image.src = t.dataset.full || '';
-    image.alt = t.dataset.caption || 'Tour photo';
-    cap.textContent = t.dataset.caption || '';
-    if (animate) requestAnimationFrame(() => (image.style.opacity = 1));
-    t.scrollIntoView({ block: 'nearest', inline: 'center', behavior: 'smooth' });
-  }
-  thumbButtons.forEach((b, i) => b.addEventListener('click', () => setActive(i)));
-  prev.addEventListener('click', () => setActive(index - 1));
-  next.addEventListener('click', () => setActive(index + 1));
-  host.addEventListener('keydown', (e) => { if (e.key === 'ArrowLeft') setActive(index - 1); if (e.key === 'ArrowRight') setActive(index + 1); });
-  setActive(0, false);
-})();
-</script>
 </html>

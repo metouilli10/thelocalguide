@@ -1,0 +1,841 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Discover Agadir and Morocco travel tips, local insights, and hidden gems from The Local Guide. Expert guides share authentic experiences and insider knowledge.">
+    <meta name="keywords" content="Agadir travel blog, Morocco travel tips, Agadir tours guide, travel blog Morocco, local insights Agadir">
+    <meta name="author" content="The Local Guide Morocco">
+    <title>Agadir Travel Blog - Local Insights & Travel Tips | The Local Guide Morocco</title>
+    <link rel="canonical" href="https://www.thelocalguide.ma/blog.html">
+    <link rel="icon" href="img/logo.png">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://www.thelocalguide.ma/blog.html">
+    <meta property="og:title" content="Agadir Travel Blog - Local Insights & Travel Tips">
+    <meta property="og:description" content="Discover authentic Agadir and Morocco through our expert travel guides. Get insider tips and hidden gems.">
+    <meta property="og:image" content="https://www.thelocalguide.ma/img/morocco-collage.jpg">
+    
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://www.thelocalguide.ma/blog.html">
+    <meta property="twitter:title" content="Agadir Travel Blog - Local Insights & Travel Tips">
+    <meta property="twitter:description" content="Discover authentic Agadir through our expert travel guides.">
+    
+    <link rel="stylesheet" href="css/styles.css">
+    <style>
+        :root {
+            --primary-color: #8B5CF6;
+            --secondary-color: #F59E0B;
+            --text-dark: #1F2937;
+            --text-light: #6B7280;
+            --bg-white: #FFFFFF;
+            --bg-gray: #F9FAFB;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            line-height: 1.6;
+            color: var(--text-dark);
+            background: var(--bg-white);
+        }
+
+        /* ===== TOPBAR ===== */
+        .topbar {
+            background: #ccff02;
+            color: #000000;
+            padding: 8px 0;
+            font-size: 14px;
+        }
+
+        .topbar__wrapper {
+            max-width: 1360px;
+            margin: 0 auto;
+            padding: 0 40px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .topbar__left {
+            display: flex;
+            gap: 24px;
+        }
+
+        .topbar__right {
+            display: flex;
+            gap: 24px;
+        }
+
+        .topbar__link {
+            color: #000000;
+            text-decoration: none;
+            transition: color 0.3s ease;
+            font-weight: 500;
+        }
+
+        .topbar__link:hover {
+            color: var(--text-dark);
+            opacity: 0.8;
+        }
+        
+        /* Marquee Animation */
+        @keyframes scroll-left {
+            0% {
+                transform: translateX(0);
+            }
+            100% {
+                transform: translateX(-33.33%);
+            }
+        }
+        
+        .marquee-wrapper:hover {
+            animation-play-state: paused;
+        }
+
+        /* ===== HEADER ===== */
+        .header {
+            background: var(--bg-white);
+            padding: 16px 0;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+        }
+
+        .header__wrapper {
+            max-width: 1360px;
+            margin: 0 auto;
+            padding: 0 40px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .header__logo {
+            font-size: 18px;
+            font-weight: 700;
+            color: #000000;
+            text-decoration: none;
+        }
+
+        .header__nav {
+            display: flex;
+            gap: 32px;
+        }
+
+        .header__nav-link {
+            color: #000000;
+            text-decoration: none;
+            font-weight: 700;
+            text-transform: uppercase;
+            transition: color 0.3s ease;
+        }
+
+        .header__nav-link:hover {
+            color: var(--primary-color);
+        }
+
+        .header__actions {
+            display: flex;
+            gap: 16px;
+            align-items: center;
+        }
+
+        .btn {
+            padding: 12px 24px;
+            border: none;
+            border-radius: 6px;
+            font-weight: 700;
+            text-decoration: none;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            display: inline-block;
+            text-align: center;
+            color: #000000;
+        }
+
+        .btn-primary {
+            background: #cdff03;
+            color: #000000;
+        }
+
+        .btn-primary:hover {
+            background: #b8e600;
+            color: #000000;
+            transform: translateY(-1px);
+        }
+
+        .btn-whatsapp {
+            background: #8449f2;
+            color: #ffffff;
+            font-weight: 600;
+        }
+
+        .btn-whatsapp:hover {
+            background: #6d3bd9;
+            color: #ffffff;
+            transform: translateY(-1px);
+        }
+
+        /* ===== BLOG PAGE STYLES ===== */
+        .blog-hero {
+            background: url('img/ouarzazate.jpg') center/cover no-repeat;
+            height: 400px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .blog-hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(to bottom, rgba(0,0,0,0.4) 0%, rgba(0,0,0,0.6) 100%);
+            z-index: 1;
+        }
+
+        .blog-hero__content {
+            text-align: center;
+            color: var(--bg-white);
+            z-index: 2;
+            position: relative;
+            max-width: 800px;
+            padding: 0 20px;
+        }
+
+        .blog-hero__title {
+            font-size: 56px;
+            font-weight: 900;
+            margin-bottom: 16px;
+            line-height: 0.9;
+            color: #ccff02;
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            letter-spacing: -0.02em;
+            text-transform: uppercase;
+        }
+
+        .blog-hero__subtitle {
+            font-size: 20px;
+            opacity: 0.9;
+        }
+
+        .blog-section {
+            background: var(--bg-white);
+            padding: 80px 40px;
+        }
+
+        .blog-section__wrapper {
+            max-width: 1360px;
+            margin: 0 auto;
+        }
+
+        .blog-section__header {
+            text-align: center;
+            margin-bottom: 60px;
+        }
+
+        .blog-section__title {
+            font-size: 48px;
+            font-weight: 900;
+            color: var(--text-dark);
+            margin-bottom: 16px;
+            line-height: 1.1;
+        }
+
+        .blog-section__subtitle {
+            font-size: 20px;
+            color: var(--text-light);
+        }
+
+        .blog-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 32px;
+            margin-bottom: 60px;
+        }
+
+        .blog-card {
+            background: var(--bg-white);
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 2px 12px rgba(0,0,0,0.08);
+            transition: all 0.3s ease;
+            text-decoration: none;
+            color: inherit;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .blog-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 12px 32px rgba(0,0,0,0.15);
+        }
+
+        .blog-card__image-wrapper {
+            position: relative;
+            overflow: hidden;
+            height: 250px;
+        }
+
+        .blog-card__image {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.3s ease;
+        }
+
+        .blog-card:hover .blog-card__image {
+            transform: scale(1.05);
+        }
+
+        .blog-card__category {
+            position: absolute;
+            top: 16px;
+            left: 16px;
+            background: var(--primary-color);
+            color: var(--bg-white);
+            padding: 6px 12px;
+            border-radius: 20px;
+            font-size: 12px;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .blog-card__content {
+            padding: 24px;
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .blog-card__meta {
+            display: flex;
+            gap: 16px;
+            margin-bottom: 12px;
+            font-size: 13px;
+            color: var(--text-light);
+        }
+
+        .blog-card__date,
+        .blog-card__read-time {
+            display: flex;
+            align-items: center;
+        }
+
+        .blog-card__title {
+            font-size: 20px;
+            font-weight: 700;
+            color: var(--text-dark);
+            margin-bottom: 12px;
+            line-height: 1.4;
+            display: -webkit-box;
+            -webkit-line-clamp: 2;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+        }
+
+        .blog-card__excerpt {
+            font-size: 15px;
+            color: var(--text-light);
+            line-height: 1.6;
+            margin-bottom: 20px;
+            flex: 1;
+            display: -webkit-box;
+            -webkit-line-clamp: 3;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+        }
+
+        .blog-card__link {
+            color: var(--primary-color);
+            font-weight: 600;
+            font-size: 14px;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            display: inline-flex;
+            align-items: center;
+        }
+
+        .blog-card__link:hover {
+            color: #7C3AED;
+            transform: translateX(4px);
+        }
+
+        /* ===== FOOTER STYLES ===== */
+        .footer {
+            background: var(--bg-white);
+            color: var(--text-dark);
+            padding: 80px 40px 40px;
+            border-top: 1px solid #E5E7EB;
+        }
+
+        .footer__wrapper {
+            max-width: 1360px;
+            margin: 0 auto;
+        }
+
+        .footer__top {
+            display: grid;
+            grid-template-columns: repeat(5, 1fr);
+            gap: 60px;
+            padding-bottom: 60px;
+            border-bottom: 1px solid #E5E7EB;
+            margin-bottom: 40px;
+        }
+
+        .footer__column {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .footer__title {
+            font-size: 18px;
+            font-weight: 700;
+            color: var(--text-dark);
+            margin-bottom: 24px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .footer__links {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .footer__links li {
+            margin-bottom: 12px;
+        }
+
+        .footer__link {
+            color: var(--text-light);
+            text-decoration: none;
+            font-size: 15px;
+            transition: color 0.3s ease;
+            display: inline-block;
+        }
+
+        .footer__link:hover {
+            color: var(--primary-color);
+        }
+
+        .footer__bottom {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 24px;
+        }
+
+        .footer__bottom-left {
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+        }
+
+        .footer__copyright {
+            font-size: 14px;
+            color: #6B7280;
+        }
+
+        .footer__legal-links {
+            display: flex;
+            gap: 12px;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+
+        .footer__legal-link {
+            font-size: 13px;
+            color: #6B7280;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        .footer__legal-link:hover {
+            color: var(--primary-color);
+        }
+
+        .footer__separator {
+            color: #D1D5DB;
+        }
+
+        .footer__bottom-right {
+            text-align: right;
+        }
+
+        .footer__tagline {
+            font-size: 16px;
+            font-weight: 600;
+            color: var(--primary-color);
+            font-style: italic;
+        }
+
+        /* ===== RESPONSIVE ===== */
+        @media (max-width: 1024px) {
+            .header__nav {
+                display: none;
+            }
+
+            .blog-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .footer__top {
+                grid-template-columns: repeat(3, 1fr);
+                gap: 40px;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .blog-hero__title {
+                font-size: 36px;
+            }
+
+            .blog-section {
+                padding: 60px 20px;
+            }
+
+            .blog-section__title {
+                font-size: 36px;
+            }
+
+            .blog-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .topbar {
+                display: none;
+            }
+
+            .footer__top {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 32px;
+            }
+
+            .footer__bottom {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+
+            .footer__bottom-right {
+                text-align: left;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .footer__top {
+                grid-template-columns: 1fr;
+                gap: 32px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Mobile Menu -->
+    <div id="mobileMenu" class="mobile-menu">
+        <button class="close-menu" aria-label="Close menu">×</button>
+        <div class="menu-content">
+            <nav class="menu-nav">
+                <a href="index.html" style="font-weight: bold;">Home</a>
+                <a href="agadir-tours.html" style="font-weight: bold;">Agadir Tours</a>
+                <a href="day-trips-from-agadir.html" style="font-weight: bold;">Day Trips</a>
+                <a href="blog.html" style="font-weight: bold;">Blog</a>
+                <a href="contact.html" style="font-weight: bold;">Contact</a>
+                <a href="https://wa.me/212601820422" style="font-weight: bold;">WhatsApp Us</a>
+                <a href="contact.html" style="font-weight: bold;">Book Now</a>
+            </nav>
+        </div>
+    </div>
+    <!-- TOPBAR -->
+    <div class="topbar" style="overflow: hidden; position: relative;">
+        <div class="marquee-wrapper" style="display: flex; animation: scroll-left 20s linear infinite;">
+            <div class="marquee-content" style="display: flex; white-space: nowrap; padding-right: 50px;">
+                <span style="font-weight: 700; font-size: 14px;">🎉 Book Early & Save More! 15% OFF your entire booking. Limited Time Offer! 📞 +212 601-820422</span>
+            </div>
+            <div class="marquee-content" style="display: flex; white-space: nowrap; padding-right: 50px;">
+                <span style="font-weight: 700; font-size: 14px;">🎉 Book Early & Save More! 15% OFF your entire booking. Limited Time Offer! 📞 +212 601-820422</span>
+            </div>
+            <div class="marquee-content" style="display: flex; white-space: nowrap; padding-right: 50px;">
+                <span style="font-weight: 700; font-size: 14px;">🎉 Book Early & Save More! 15% OFF your entire booking. Limited Time Offer! 📞 +212 601-820422</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- HEADER -->
+    <header class="header">
+        <div class="header__wrapper">
+            <a href="index.html" class="header__logo">
+                <img src="img/logo.png" alt="The Local Guide" class="header__logo-img" style="height: 40px;">
+            </a>
+            <nav class="header__nav">
+                <a href="index.html" class="header__nav-link">Home</a>
+                <a href="agadir-tours.html" class="header__nav-link">Agadir Tours</a>
+                <a href="day-trips-from-agadir.html" class="header__nav-link">Day Trips</a>
+                <a href="blog.html" class="header__nav-link" style="color: var(--primary-color);">Blog</a>
+                <a href="contact.html" class="header__nav-link">Contact</a>
+            </nav>
+            <div class="header__actions">
+                <a href="https://wa.me/212601820422" class="btn btn-whatsapp">WhatsApp Us</a>
+                <a href="contact.html" class="btn btn-primary">Book Now</a>
+            </div>
+                    <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </header>
+
+    <!-- BLOG HERO -->
+    <section class="blog-hero">
+        <div class="blog-hero__content">
+            <h1 class="blog-hero__title">Our Travel Blog</h1>
+            <p class="blog-hero__subtitle">Discover Agadir and Morocco through our expert guides and insider tips</p>
+        </div>
+    </section>
+
+    <!-- BLOG CONTENT -->
+    <section class="blog-section">
+        <div class="blog-section__wrapper">
+            <div class="blog-section__header">
+                <h2 class="blog-section__title">Latest Articles</h2>
+                <p class="blog-section__subtitle">Travel tips, local insights and hidden gems from our expert guides</p>
+            </div>
+
+            <!-- Blog Grid -->
+            <div class="blog-grid">
+                <!-- Blog Post 1: Quad Biking Guide -->
+                <article class="blog-card">
+                    <div class="blog-card__image-wrapper">
+                        <img src="img/excursions/Quad Biking/quad 1.jpg" 
+                             alt="Quad biking Agadir desert dunes adventure guide - prices routes and best tours" 
+                             class="blog-card__image">
+                        <span class="blog-card__category">Adventure Guide</span>
+                    </div>
+                    <div class="blog-card__content">
+                        <div class="blog-card__meta">
+                            <span class="blog-card__date">January 2025</span>
+                            <span class="blog-card__read-time">12 min read</span>
+                        </div>
+                        <h3 class="blog-card__title">Quad Biking Agadir — Prices, Routes & Best Tours</h3>
+                        <p class="blog-card__excerpt">Ready for desert adventure? Complete guide to quad biking in Agadir—compare prices (€50-75), explore routes (Tamri, Taghazout), safety tips, and quad vs buggy comparison to help you choose.</p>
+                        <a href="quad-biking-agadir-guide.html" class="blog-card__link">Read More →</a>
+                    </div>
+                </article>
+
+                <!-- Blog Post 2: Paradise Valley Guide -->
+                <article class="blog-card">
+                    <div class="blog-card__image-wrapper">
+                        <img src="img/excursions/Paradise Valley/paradise 1.jpeg" 
+                             alt="Paradise Valley Agadir natural pools and palm trees - Complete travel guide" 
+                             class="blog-card__image">
+                        <span class="blog-card__category">Travel Guide</span>
+                    </div>
+                    <div class="blog-card__content">
+                        <div class="blog-card__meta">
+                            <span class="blog-card__date">January 2025</span>
+                            <span class="blog-card__read-time">10 min read</span>
+                        </div>
+                        <h3 class="blog-card__title">Paradise Valley Agadir — Complete Travel Guide 2025</h3>
+                        <p class="blog-card__excerpt">Hidden in the foothills of the Atlas Mountains lies Paradise Valley—a stunning natural oasis with crystal-clear pools, dramatic cliffs, and lush palm groves. Complete guide with tips, map, and everything you need to know.</p>
+                        <a href="paradise-valley-agadir-guide.html" class="blog-card__link">Read More →</a>
+                    </div>
+                </article>
+
+                <!-- Blog Post 2: Rainbow Village -->
+                <article class="blog-card">
+                    <div class="blog-card__image-wrapper">
+                        <img src="img/aghroud_1.jpg" 
+                             alt="Aghroud Rainbow Village colorful houses Agadir - Panoramic view of colorful coastal fishing village Morocco" 
+                             class="blog-card__image">
+                        <span class="blog-card__category">Hidden Gems</span>
+                    </div>
+                    <div class="blog-card__content">
+                        <div class="blog-card__meta">
+                            <span class="blog-card__date">December 2024</span>
+                            <span class="blog-card__read-time">8 min read</span>
+                        </div>
+                        <h3 class="blog-card__title">Behind the Colours: Discovering Agadir's Secret Rainbow Village</h3>
+                        <p class="blog-card__excerpt">Beyond Agadir's beaches lies a vibrant secret—a neighborhood where every wall tells a story in color. Discover the hidden Rainbow Village and the authentic local life few tourists ever see.</p>
+                        <a href="rainbow-village-agadir.html" class="blog-card__link">Read More →</a>
+                    </div>
+                </article>
+
+                <!-- Blog Post 4: Local's Morning -->
+                <article class="blog-card">
+                    <div class="blog-card__image-wrapper">
+                        <img src="img/souk_al_had.jpg" 
+                             alt="Souk El Had Agadir market experience - colorful spice vendors and traditional Moroccan markets" 
+                             class="blog-card__image">
+                        <span class="blog-card__category">Local Life</span>
+                    </div>
+                    <div class="blog-card__content">
+                        <div class="blog-card__meta">
+                            <span class="blog-card__date">December 2024</span>
+                            <span class="blog-card__read-time">10 min read</span>
+                        </div>
+                        <h3 class="blog-card__title">A Local's Morning in Agadir: Markets, Spices & Argan Oil</h3>
+                        <p class="blog-card__excerpt">Walk through Agadir like a local! Explore Souk El Had's colorful markets, smell Moroccan spices, and learn how Argan oil is made in family cooperatives.</p>
+                        <a href="local-morning-agadir.html" class="blog-card__link">Read More →</a>
+                    </div>
+                </article>
+
+                <!-- Blog Post 5: Top 10 Adventure Activities -->
+                <article class="blog-card">
+                    <div class="blog-card__image-wrapper">
+                        <img src="img/excursions/Marrakech Day Trip/marrakech 2.jpg" 
+                             alt="Top 10 adventure activities in Agadir - quad biking, sandboarding, camel rides" 
+                             class="blog-card__image">
+                        <span class="blog-card__category">Adventure Activities</span>
+                    </div>
+                    <div class="blog-card__content">
+                        <div class="blog-card__meta">
+                            <span class="blog-card__date">January 2025</span>
+                            <span class="blog-card__read-time">15 min read</span>
+                        </div>
+                        <h3 class="blog-card__title">Top 10 Things to Do in Agadir for Adventure Lovers</h3>
+                        <p class="blog-card__excerpt">From quad biking through desert dunes to sandboarding, camel rides with BBQ, and unforgettable day trips to Marrakech and Essaouira. Complete guide to Agadir's best adventure activities.</p>
+                        <a href="things-to-do-in-agadir-adventure.html" class="blog-card__link">Read More →</a>
+                    </div>
+                </article>
+
+                <!-- Blog Post 6: Berber Villages -->
+                <article class="blog-card">
+                    <div class="blog-card__image-wrapper">
+                        <img src="img/taghazout.jpg" 
+                             alt="Berber villages around Agadir - Tamri and Taghazout cultural tours Morocco" 
+                             class="blog-card__image">
+                        <span class="blog-card__category">Cultural Experiences</span>
+                    </div>
+                    <div class="blog-card__content">
+                        <div class="blog-card__meta">
+                            <span class="blog-card__date">December 2024</span>
+                            <span class="blog-card__read-time">12 min read</span>
+                        </div>
+                        <h3 class="blog-card__title">Beyond the Beach: Uncovering the Berber Villages Around Agadir</h3>
+                        <p class="blog-card__excerpt">Travel beyond Agadir's beaches to meet Berber families in Tamri and Taghazout. Discover centuries-old traditions, local foods & stories with authentic cultural tours.</p>
+                        <a href="berber-villages-agadir.html" class="blog-card__link">Read More →</a>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="footer__wrapper">
+            <!-- Footer Top Section -->
+            <div class="footer__top">
+                <div class="footer__column">
+                    <h4 class="footer__title">Popular Tours</h4>
+                    <ul class="footer__links">
+                        <li><a href="tour-paradise-valley-agadir.html" class="footer__link">Paradise Valley</a></li>
+                        <li><a href="tour-quad-biking-agadir.html" class="footer__link">Quad Biking</a></li>
+                        <li><a href="tour-camel-ride-agadir.html" class="footer__link">Camel Ride</a></li>
+                        <li><a href="tour-sandboarding-agadir.html" class="footer__link">Sandboarding</a></li>
+                        <li><a href="tour-horse-riding-agadir.html" class="footer__link">Horse Riding</a></li>
+                        <li><a href="agadir-tours.html" class="footer__link">All Tours</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer__column">
+                    <h4 class="footer__title">Day Trips</h4>
+                    <ul class="footer__links">
+                        <li><a href="day-trip-marrakech-from-agadir.html" class="footer__link">Marrakech Day Trip</a></li>
+                        <li><a href="day-trip-essaouira-from-agadir.html" class="footer__link">Essaouira Day Trip</a></li>
+                        <li><a href="day-trip-taroudant-from-agadir.html" class="footer__link">Taroudant Trip</a></li>
+                        <li><a href="tour-agadir-city-tour.html" class="footer__link">Agadir City Tour</a></li>
+                        <li><a href="crocoparc-agadir-tour.html" class="footer__link">Croco Parc</a></li>
+                        <li><a href="day-trips-from-agadir.html" class="footer__link">All Day Trips</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer__column">
+                    <h4 class="footer__title">About Us</h4>
+                    <ul class="footer__links">
+                        <li><a href="index.html" class="footer__link">Home</a></li>
+                        <li><a href="blog.html" class="footer__link">Blog</a></li>
+                        <li><a href="#deals" class="footer__link">Special Offers</a></li>
+                        <li><a href="contact.html" class="footer__link">Contact Us</a></li>
+                        <li><a href="tel:+212601820422" class="footer__link">Call Us</a></li>
+                        <li><a href="https://wa.me/212601820422" class="footer__link">WhatsApp</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer__column">
+                    <h4 class="footer__title">Helpful Info</h4>
+                    <ul class="footer__links">
+                        <li><a href="contact.html" class="footer__link">How to Book</a></li>
+                        <li><a href="contact.html" class="footer__link">Payment Options</a></li>
+                        <li><a href="contact.html" class="footer__link">Cancellation Policy</a></li>
+                        <li><a href="contact.html" class="footer__link">Travel Tips</a></li>
+                        <li><a href="contact.html" class="footer__link">FAQ</a></li>
+                        <li><a href="blog.html" class="footer__link">Blog</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer__column">
+                    <h4 class="footer__title">Connect With Us</h4>
+                    <p style="font-size: 14px; color: var(--text-light); margin-bottom: 20px;">Get exclusive Agadir tour deals & travel tips</p>
+                    <p style="font-size: 14px; color: var(--text-light); margin-bottom: 20px;">Follow us on social media for the latest updates and travel inspiration from Morocco.</p>
+                </div>
+            </div>
+
+            <!-- Footer Bottom Section -->
+            <div class="footer__bottom">
+                <div class="footer__bottom-left">
+                    <p class="footer__copyright">© 2025 The Local Guide Morocco. All rights reserved.</p>
+                    <div class="footer__legal-links">
+                        <a href="contact.html" class="footer__legal-link">Privacy Policy</a>
+                        <span class="footer__separator">|</span>
+                        <a href="contact.html" class="footer__legal-link">Terms & Conditions</a>
+                        <span class="footer__separator">|</span>
+                        <a href="contact.html" class="footer__legal-link">Booking Policy</a>
+                        <span class="footer__separator">|</span>
+                        <a href="tel:+212601820422" class="footer__legal-link">+212 601-820422</a>
+                    </div>
+                </div>
+                <div class="footer__bottom-right">
+                    <p class="footer__tagline">Discover Morocco. Experience Agadir.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Simple navigation toggle for mobile
+        const menuToggle = document.getElementById('menuToggle');
+        const navList = document.getElementById('navList');
+
+        if (menuToggle) {
+            menuToggle.addEventListener('click', () => {
+                navList.classList.toggle('active');
+            });
+        }
+    </script>
+<script>
+const hamburger=document.getElementById("hamburger");
+const mobileMenu=document.getElementById("mobileMenu");
+const closeMenu=mobileMenu?mobileMenu.querySelector(".close-menu"):null;
+if(hamburger&&mobileMenu){hamburger.addEventListener("click",()=>{mobileMenu.classList.add("active");hamburger.classList.add("active")});}
+if(closeMenu){closeMenu.addEventListener("click",()=>{mobileMenu.classList.remove("active");hamburger&&hamburger.classList.remove("active")});}
+if(mobileMenu){mobileMenu.querySelectorAll("a").forEach(a=>a.addEventListener("click",()=>{mobileMenu.classList.remove("active");hamburger&&hamburger.classList.remove("active")}));}
+</script>
+</body>
+</html>
+

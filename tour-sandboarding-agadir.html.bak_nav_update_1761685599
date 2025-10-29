@@ -3,29 +3,29 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Learn to surf in Agadir! Professional surf lessons for all levels on Agadir's best beaches. Expert instructors, quality equipment, small groups. From €35. Book your Agadir surf school experience now!">
-    <meta name="keywords" content="surf lessons Agadir, Agadir surf school, learn to surf Morocco, surfing Agadir, Taghazout surf lessons, beginner surf Agadir, surf camp Agadir, surf courses Morocco">
-    <title>Surf Lessons Agadir | Learn to Surf Morocco (2025)</title>
+    <meta name="description" content="Experience thrilling sandboarding in Agadir's desert dunes! Sand surfing adventures for all levels, equipment included, BBQ dinner. Book your Agadir sandboarding tour today!">
+    <meta name="keywords" content="Sandboarding in Agadir, Agadir sand surfing, Sandboarding Morocco, Agadir desert adventure, Sandboarding and BBQ Agadir">
+    <title>Sandboarding in Agadir | Desert Sand Surfing & BBQ Experience (2025)</title>
     
     <!-- CSS Styles -->
-    <link rel="stylesheet" href="css/styles.css?v=20241218-26">
-    <link rel="stylesheet" href="css/pages.css?v=20241218-26">
-    <link rel="stylesheet" href="css/updated-styles.css?v=20241218-26">
+    <link rel="stylesheet" href="css/styles.css?v=20241219-01">
+    <link rel="stylesheet" href="css/pages.css?v=20241219-01">
+    <link rel="stylesheet" href="css/updated-styles.css?v=20241219-01">
     
     <!-- Open Graph Meta Tags -->
-    <meta property="og:title" content="Surf Lessons Agadir | Learn to Surf on Atlantic Beaches">
-    <meta property="og:description" content="Professional surf lessons in Agadir for all levels. Expert instructors, quality equipment, small groups. Catch waves on Morocco's Atlantic coast. Book now!">
+    <meta property="og:title" content="Sandboarding in Agadir | Desert Sand Surfing & BBQ Experience">
+    <meta property="og:description" content="Surf the golden dunes of Agadir! Thrilling sandboarding adventure with equipment, instruction, and desert BBQ included. Book now!">
     <meta property="og:type" content="website">
-    <meta property="og:url" content="https://yourdomain.com/tour-surf-lessons-agadir">
+    <meta property="og:url" content="https://yourdomain.com/tour-sandboarding-agadir">
     
     <!-- Schema.org Structured Data -->
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
-      "@type": "SportsActivityLocation",
-      "name": "Surf Lessons Agadir",
-      "description": "Professional surf lessons for all levels on Agadir's beautiful Atlantic beaches. Learn to surf with experienced instructors, all equipment provided.",
-      "image": "https://yourdomain.com/img/excursions/Surf/surf 1.jpg",
+      "@type": "TouristAttraction",
+      "name": "Sandboarding in Agadir - Desert Adventure",
+      "description": "Experience thrilling sandboarding in Agadir's desert dunes. Equipment, instruction, and traditional Moroccan BBQ dinner included.",
+      "image": "https://yourdomain.com/img/excursions/Sandboarding/sandboarding 1.webp",
       "address": {
         "@type": "PostalAddress",
         "addressLocality": "Agadir",
@@ -34,23 +34,23 @@
       },
       "geo": {
         "@type": "GeoCoordinates",
-        "latitude": "30.4195",
-        "longitude": "-9.5981"
+        "latitude": "30.3936",
+        "longitude": "-9.4481"
       },
       "offers": {
         "@type": "Offer",
-        "price": "35",
+        "price": "50",
         "priceCurrency": "EUR",
         "availability": "https://schema.org/InStock",
         "validFrom": "2025-01-01"
       },
       "aggregateRating": {
         "@type": "AggregateRating",
-        "ratingValue": "4.9",
-        "reviewCount": "415"
+        "ratingValue": "4.7",
+        "reviewCount": "198"
       },
       "provider": {
-        "@type": "SportsActivityLocation",
+        "@type": "TouristInformationCenter",
         "name": "The Local Guide",
         "telephone": "+212645792457"
       }
@@ -63,7 +63,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;900&family=Lato:wght@300;400;700;900&display=swap" rel="stylesheet">
     <link rel="icon" href="img/logo.png">
-    <link rel="canonical" href="https://yourdomain.com/tour-surf-lessons-agadir">
+    <link rel="canonical" href="https://yourdomain.com/tour-sandboarding-agadir">
     
     <style>
         body {
@@ -76,6 +76,24 @@
             overflow: hidden;
             margin-top: 95px;
         }
+        /* Simple one-image-at-a-time slider */
+        .simple-slider { position: relative; height: clamp(260px, 50vw, 520px); border-radius: 16px; overflow: hidden; }
+        .simple-slider .slides { position: relative; height: 100%; }
+        .simple-slider .slide { position: absolute; inset: 0; opacity: 0; transition: opacity 0.35s ease; }
+        .simple-slider .slide.active { opacity: 1; }
+        .simple-slider img { width: 100%; height: 100%; object-fit: cover; display: block; }
+        .ss-prev, .ss-next { position: absolute; top: 50%; transform: translateY(-50%); background: rgba(0,0,0,0.5); color: #fff; border: 0; width: 46px; height: 46px; border-radius: 50%; font-size: 22px; cursor: pointer; z-index: 5; display: flex; align-items: center; justify-content: center; }
+        .ss-prev { left: 16px; }
+        .ss-next { right: 16px; }
+        .ss-dots { position: absolute; bottom: 14px; left: 50%; transform: translateX(-50%); display: flex; gap: 8px; z-index: 5; }
+        .ss-dot { width: 8px; height: 8px; border-radius: 50%; background: rgba(255,255,255,0.6); border: 0; padding: 0; cursor: pointer; }
+        .ss-dot.active { background: #fff; }
+        /* Thumbnails under main image */
+        .ss-thumbs { display: flex; align-items: center; justify-content: flex-start; gap: 10px; margin-top: 12px; overflow-x: auto; padding-bottom: 6px; }
+        .ss-thumbs::-webkit-scrollbar { height: 6px; }
+        .ss-thumb { width: 72px; height: 56px; border-radius: 8px; overflow: hidden; border: 2px solid transparent; opacity: 0.7; cursor: pointer; flex: 0 0 auto; }
+        .ss-thumb.active { opacity: 1; border-color: #8B5CF6; }
+        .ss-thumb img { width: 100%; height: 100%; object-fit: cover; display: block; }
         
         /* Civitatis-style 5-photo gallery */
         .tg-preview {
@@ -1228,10 +1246,25 @@
             <nav class="menu-nav">
                 <a href="index.html" style="font-weight: bold;">Home</a>
                 <a href="agadir-tours.html" style="font-weight: bold;">Agadir Tours</a>
-                <a href="day-trips-from-agadir.html" style="font-weight: bold;">Day Trips</a>
+                <a href="things-to-do.html" style="font-weight: bold;">Things to Do in Agadir</a>
                 <a href="blog.html" style="font-weight: bold;">Blog</a>
                 <a href="contact.html" style="font-weight: bold;">Contact</a>
             </nav>
+            <div class="menu-social">
+                <p>FOLLOW US</p>
+                <div class="social-icons">
+                    <a href="https://www.instagram.com/www.miracleair.tz" target="_blank" aria-label="Instagram">
+                        <svg width="24" height="24" fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M16 14c0-2.203-1.797-4-4-4s-4 1.797-4 4 1.797 4 4 4 4-1.797 4-4zM18.156 14c0 3.406-2.75 6.156-6.156 6.156s-6.156-2.75-6.156-6.156 2.75-6.156 6.156-6.156 6.156 2.75 6.156 6.156zM19.844 7.594c0 0.797-0.641 1.437-1.437 1.437s-1.437-0.641-1.437-1.437 0.641-1.437 1.437-1.437 1.437 0.641 1.437 1.437zM12 4.156c-1.75 0-5.5-0.141-7.078 0.484-0.547 0.219-0.953 0.484-1.375 0.906s-0.688 0.828-0.906 1.375c-0.625 1.578-0.484 5.328-0.484 7.078s-0.141 5.5 0.484 7.078c0.219 0.547 0.484 0.953 0.906 1.375s0.828 0.688 1.375 0.906c1.578 0.625 5.328 0.484 7.078 0.484s5.5 0.141 7.078-0.484c0.547-0.219 0.953-0.484 1.375-0.906s0.688-0.828 0.906-1.375c0.625-1.578 0.484-5.328 0.484-7.078s0.141-5.5-0.484-7.078c-0.219-0.547-0.484-0.953-0.906-1.375s-0.828-0.688-1.375-0.906c-1.578-0.625-5.328-0.484-7.078-0.484zM24 14c0 1.656 0.016 3.297-0.078 4.953-0.094 1.922-0.531 3.625-1.937 5.031s-3.109 1.844-5.031 1.937c-1.656 0.094-3.297 0.078-4.953 0.078s-3.297 0.016-4.953-0.078c-1.922-0.094-3.625-0.531-5.031-1.937s-1.844-3.109-1.937-5.031c-0.094-1.656-0.078-3.297-0.078-4.953s-0.016-3.297 0.078-4.953c0.094-1.922 0.531-3.625 1.937-5.031s3.109-1.844 5.031-1.937c1.656-0.094 3.297-0.078 4.953-0.078s3.297-0.016 4.953 0.078c1.922 0.094 3.625 0.531 5.031 1.937s1.844 3.109 1.937 5.031c0.094 1.656 0.078 3.297 0.078 4.953z"></path>
+                        </svg>
+                    </a>
+                    <a href="https://www.facebook.com/profile.php?id=61570405113832" target="_blank" aria-label="Facebook">
+                        <svg width="24" height="24" fill="currentColor" viewBox="0 0 16 28">
+                            <path d="M14.984 0.187v4.125h-2.453c-1.922 0-2.281 0.922-2.281 2.25v2.953h4.578l-0.609 4.625h-3.969v11.859h-4.781v-11.859h-3.984v-4.625h3.984v-3.406c0-3.953 2.422-6.109 5.953-6.109 1.687 0 3.141 0.125 3.563 0.187z"></path>
+                        </svg>
+                    </a>
+                </div>
+            </div>
         </div>
     </div>
 
@@ -1256,13 +1289,17 @@
             <a href="index.html" class="header__logo">
                 <img src="img/logo.png" alt="The Local Guide" class="header__logo-img">
             </a>
-            <nav class="header__nav" style="margin-left: auto;">
+            <nav class="header__nav">
                 <a href="index.html" class="header__nav-link">Home</a>
                 <a href="agadir-tours.html" class="header__nav-link">Agadir Tours</a>
                 <a href="day-trips-from-agadir.html" class="header__nav-link">Day Trips</a>
                 <a href="blog.html" class="header__nav-link">Blog</a>
                 <a href="contact.html" class="header__nav-link">Contact</a>
             </nav>
+            <div class="header__actions">
+                <a href="https://wa.me/212601820422" class="btn btn-whatsapp">WhatsApp Us</a>
+                <a href="contact.html" class="btn btn-primary">Book Now</a>
+            </div>
             <button class="hamburger" id="hamburger" aria-label="Toggle menu">
                 <span></span>
                 <span></span>
@@ -1278,66 +1315,25 @@
         <span>›</span>
         <a href="agadir-tours.html">Agadir Tours</a>
         <span>›</span>
-        <strong>Surf Lessons Agadir</strong>
+        <strong>Sandboarding in Agadir</strong>
     </div>
 
     <!-- Tour Hero Gallery -->
-    <style>
-        .simple-slider { position: relative; height: clamp(260px, 50vw, 520px); border-radius: 16px; overflow: hidden; }
-        .simple-slider .slides { position: relative; height: 100%; }
-        .simple-slider .slide { position: absolute; inset: 0; opacity: 0; transition: opacity 0.35s ease; }
-        .simple-slider .slide.active { opacity: 1; }
-        .simple-slider img { width: 100%; height: 100%; object-fit: cover; display: block; }
-        .ss-prev, .ss-next { position: absolute; top: 50%; transform: translateY(-50%); background: rgba(0,0,0,0.5); color: #fff; border: 0; width: 46px; height: 46px; border-radius: 50%; font-size: 22px; cursor: pointer; z-index: 5; display: flex; align-items: center; justify-content: center; }
-        .ss-prev { left: 16px; }
-        .ss-next { right: 16px; }
-        .ss-dots { position: absolute; bottom: 14px; left: 50%; transform: translateX(-50%); display: flex; gap: 8px; z-index: 5; }
-        .ss-dot { width: 8px; height: 8px; border-radius: 50%; background: rgba(255,255,255,0.6); border: 0; padding: 0; cursor: pointer; }
-        .ss-dot.active { background: #fff; }
-        .ss-thumbs { display: flex; align-items: center; justify-content: flex-start; gap: 10px; margin-top: 12px; overflow-x: auto; padding-bottom: 6px; }
-        .ss-thumbs::-webkit-scrollbar { height: 6px; }
-        .ss-thumb { width: 72px; height: 56px; border-radius: 8px; overflow: hidden; border: 2px solid transparent; opacity: 0.7; cursor: pointer; flex: 0 0 auto; }
-        .ss-thumb.active { opacity: 1; border-color: #8B5CF6; }
-        .ss-thumb img { width: 100%; height: 100%; object-fit: cover; display: block; }
-    </style>
-    <style>
-    .tour-carousel { display: none; }
-    @media (min-width: 1024px) {
-      .simple-slider, .ss-thumbs { display: none !important; }
-      .tour-carousel { display: block; --radius:20px; --shadow:0 20px 40px rgba(0,0,0,.15); --glass:rgba(255,255,255,.2); --glass-border:rgba(255,255,255,.35); --accent:#fff; max-width:min(1200px,92vw); margin:32px auto 0; }
-      .tour-carousel .tc-stage{position:relative;border-radius:var(--radius);overflow:clip;box-shadow:var(--shadow);background:#000;isolation:isolate}
-      .tour-carousel .tc-image{width:100%;height:auto;aspect-ratio:16/9;object-fit:cover;display:block;transition:opacity .6s ease}
-      .tour-carousel .tc-nav{position:absolute;top:50%;translate:0 -50%;width:46px;height:46px;border-radius:50%;border:1px solid var(--glass-border);background:var(--glass);backdrop-filter:blur(10px);color:var(--accent);display:grid;place-items:center;cursor:pointer;transition:transform .15s ease,background .15s ease,opacity .15s ease;opacity:.9;z-index:2}
-      .tour-carousel .tc-prev{left:14px}
-      .tour-carousel .tc-next{right:14px}
-      .tour-carousel .tc-nav:hover{transform:scale(1.08);background:rgba(255,255,255,.35)}
-      .tour-carousel .tc-nav:active{transform:scale(.98)}
-      .tour-carousel .tc-caption{position:absolute;inset:auto 0 0 0;padding:18px 20px 22px;color:#fff;font-size:1.05rem;font-weight:500;background:linear-gradient(to top,rgba(0,0,0,.65),rgba(0,0,0,0));letter-spacing:.2px;z-index:1}
-      .tour-carousel .tc-thumbs{margin-top:14px;display:grid;grid-auto-flow:column;grid-auto-columns:minmax(120px,1fr);gap:12px;overflow-x:auto;padding:6px 2px;scrollbar-width:none}
-      .tour-carousel .tc-thumbs::-webkit-scrollbar{display:none}
-      .tour-carousel .tc-thumb{position:relative;border:none;background:transparent;padding:0;cursor:pointer;border-radius:12px;overflow:hidden;outline-offset:3px;transition:transform .2s ease,box-shadow .2s ease,opacity .2s ease;opacity:.85}
-      .tour-carousel .tc-thumb:hover{transform:translateY(-2px);opacity:1}
-      .tour-carousel .tc-thumb.is-active{opacity:1;box-shadow:0 10px 22px rgba(0,0,0,.18)}
-      .tour-carousel .tc-thumb img{width:100%;height:84px;object-fit:cover;display:block}
-    }
-    </style>
     <section class="tour-detail-hero">
         <div class="simple-slider" data-count="6">
             <div class="slides">
-                <div class="slide active"><img src="img/excursions/Surf/surf 1.jpg" alt="Surf lessons Agadir on Atlantic beach"></div>
-                <div class="slide"><img src="img/excursions/Surf/surf 2.jpg" alt="Learning to surf in Agadir Morocco"></div>
-                <div class="slide"><img src="img/excursions/Surf/surf 3.jpg" alt="Beginner surf lesson Agadir"></div>
-                <div class="slide"><img src="img/excursions/Surf/surf 4.jpg" alt="Surf instructor teaching in Agadir"></div>
-                <div class="slide"><img src="img/excursions/Surf/surf 5.jpg" alt="Surf school Agadir beach"></div>
-                <div class="slide"><img src="img/excursions/Surf/surf 6.jpg" alt="Surfing Agadir Atlantic waves"></div>
-                    </div>
+                <div class="slide active"><img src="img/excursions/Sandboarding/sandboarding 1.webp" alt="Sandboarding in Agadir desert dunes"></div>
+                <div class="slide"><img src="img/excursions/Sandboarding/sandboarding 2.jpeg" alt="Agadir sand surfing adventure"></div>
+                <div class="slide"><img src="img/excursions/Sandboarding/sandboarding 3.jpg" alt="Sandboarding Morocco experience"></div>
+                <div class="slide"><img src="img/excursions/Sandboarding/sandboarding 4.jpg" alt="Agadir desert sandboarding with ocean views"></div>
+                <div class="slide"><img src="img/excursions/Sandboarding/sandboarding 5.jpg" alt="Sandboarding and BBQ Agadir desert camp"></div>
+                <div class="slide"><img src="img/excursions/Sandboarding/sandboarding 6.webp" alt="Sandboarding Agadir desert adventure"></div>
+            </div>
             <button class="ss-prev" aria-label="Previous photo">‹</button>
             <button class="ss-next" aria-label="Next photo">›</button>
             <div class="ss-dots" aria-label="Slide navigation"></div>
-                </div>
+        </div>
         <div class="ss-thumbs" aria-label="Slide thumbnails"></div>
-        <!-- Desktop-only premium carousel container (built by JS) -->
-        <section class="tour-carousel" aria-label="Tour photo gallery"></section>
     </section>
 
     <!-- Tour Content -->
@@ -1345,111 +1341,111 @@
         <div class="tour-main-content">
             <!-- Tour Header -->
             <div class="tour-header">
-                <h1 class="tour-title">Surf Lessons Agadir: Learn to Surf on Morocco's Atlantic Coast</h1>
-                <p class="tour-subtitle">Professional surf instructors • Perfect waves for beginners • All equipment provided • Small group lessons on Agadir's best beaches</p>
+                <h1 class="tour-title">Sandboarding in Agadir: Thrilling Desert Sand Surfing Adventure</h1>
+                <p class="tour-subtitle">Surf golden sand dunes • Equipment & instruction included • Desert BBQ dinner • Perfect for thrill-seekers & beginners</p>
                 
                 <div class="tour-rating">
-                    <span class="rating-score">4.9 / 5</span>
+                    <span class="rating-score">4.7 / 5</span>
                     <div class="rating-details">
                         <div style="color: #f39c12; font-size: 18px; margin-bottom: 5px;">★★★★★</div>
-                        <span>Excellent rating based on 415 reviews</span>
+                        <span>Excellent rating based on 198 reviews</span>
                     </div>
                 </div>
                 
                 <div class="tour-badges">
                     <span class="badge featured">✓ Free Cancellation</span>
-                    <span class="badge">🏄 All Equipment Included</span>
-                    <span class="badge">⏱️ 2-Hour Lesson</span>
-                    <span class="badge">👥 Small Groups (Max 6)</span>
-                    <span class="badge">🌊 Beginner Friendly</span>
-                    <span class="badge">🏆 Certified Instructors</span>
+                    <span class="badge">🚗 Hotel Pickup Included</span>
+                    <span class="badge">⏱️ 3-4 Hours</span>
+                    <span class="badge">👥 Small Group (Max 12)</span>
+                    <span class="badge">🏂 All Levels Welcome</span>
+                    <span class="badge">🍖 BBQ Included</span>
                 </div>
             </div>
 
             <!-- Tour Highlights -->
             <div class="tour-highlights">
-                <h2>Why Choose Our Surf Lessons in Agadir</h2>
+                <h2>Why Choose Our Sandboarding in Agadir Desert Experience</h2>
                 <div class="highlights-list">
                     <div class="highlight-item">
                         <span class="highlight-icon">✓</span>
-                        <span class="highlight-text"><strong>Perfect Beginner Waves:</strong> Agadir's gentle, consistent Atlantic waves are ideal for learning to surf - warm water, sandy bottom, and perfect breaks</span>
+                        <span class="highlight-text"><strong>Thrilling Desert Adventure:</strong> Experience the adrenaline rush of surfing down massive golden sand dunes with stunning ocean and mountain views</span>
                     </div>
                     <div class="highlight-item">
                         <span class="highlight-icon">✓</span>
-                        <span class="highlight-text"><strong>Certified Surf Instructors:</strong> ISA-certified instructors with years of experience teaching beginners - patient, encouraging, and safety-focused</span>
+                        <span class="highlight-text"><strong>Professional Equipment Provided:</strong> Quality sandboards and all safety gear included - suitable for complete beginners and experienced boarders</span>
                     </div>
                     <div class="highlight-item">
                         <span class="highlight-icon">✓</span>
-                        <span class="highlight-text"><strong>Quality Equipment Provided:</strong> Premium foam surfboards for beginners, wetsuits in all sizes, leashes, and wax - everything you need included</span>
+                        <span class="highlight-text"><strong>Expert Instruction:</strong> Learn proper sandboarding technique from experienced instructors - most people get it within 10-15 minutes!</span>
                     </div>
                     <div class="highlight-item">
                         <span class="highlight-icon">✓</span>
-                        <span class="highlight-text"><strong>Small Group Lessons:</strong> Maximum 6 students per instructor ensures personalized attention and faster learning progress</span>
+                        <span class="highlight-text"><strong>Stunning Taboga Dunes:</strong> Ride spectacular sand dunes just 20 minutes from Agadir with panoramic views of the Atlantic Ocean</span>
                     </div>
                     <div class="highlight-item">
                         <span class="highlight-icon">✓</span>
-                        <span class="highlight-text"><strong>Best Surf Beaches:</strong> Lessons at Agadir Beach or nearby Taghazout - famous worldwide for excellent surf conditions and consistent swells</span>
+                        <span class="highlight-text"><strong>All Skill Levels:</strong> From gentle slopes for beginners to steep 30-meter dunes for thrill-seekers - you choose your challenge level</span>
                     </div>
                     <div class="highlight-item">
                         <span class="highlight-icon">✓</span>
-                        <span class="highlight-text"><strong>All Levels Welcome:</strong> Whether you've never surfed before or want to improve your technique, our instructors adapt to your level</span>
+                        <span class="highlight-text"><strong>Desert BBQ Feast:</strong> Enjoy authentic Moroccan BBQ dinner in traditional Berber camp setting with mint tea and entertainment</span>
                     </div>
                     <div class="highlight-item">
                         <span class="highlight-icon">✓</span>
-                        <span class="highlight-text"><strong>Complete Package:</strong> Beach transfer, equipment, instruction, wetsuit, and surf theory - everything needed for your first waves!</span>
+                        <span class="highlight-text"><strong>Sunset Timing Option:</strong> Time your adventure for spectacular golden hour desert scenery and perfect photo opportunities</span>
                     </div>
                 </div>
             </div>
 
             <!-- Tour Description -->
             <div class="tour-description">
-                <h2>Learn to Surf on Morocco's Beautiful Atlantic Coast</h2>
-                <p>Experience the thrill of <strong>surfing in Agadir</strong> with our professional surf school! Whether you're a complete beginner catching your first wave or looking to improve your technique, our <strong>Agadir surf lessons</strong> offer the perfect introduction to one of the world's most exciting water sports. Agadir's warm waters, gentle waves, and consistent swells create ideal conditions for learning to surf.</p>
+                <h2>Experience the Thrill of Sandboarding in Agadir's Golden Dunes</h2>
+                <p>Get ready for an adrenaline-pumping <strong>sandboarding in Agadir</strong> adventure! Just 20 minutes south of Agadir, the spectacular Taboga and Timlalin sand dunes offer the perfect terrain for <strong>Agadir sand surfing</strong>. Whether you're a complete beginner or an experienced boarder, this <strong>Agadir desert adventure</strong> delivers thrills, stunning scenery, and authentic Moroccan culture all in one unforgettable experience.</p>
                 
-                <p>Our <strong>surf school Agadir</strong> operates on the best beaches for beginners - Agadir Beach and nearby Taghazout, world-famous surf destinations. The gentle, rolling Atlantic waves provide perfect conditions for first-timers, while the sandy bottom ensures safety. With water temperatures averaging 18-22°C year-round and over 300 days of sunshine annually, Agadir offers some of Morocco's best surf conditions.</p>
+                <p>Picture yourself standing atop a massive golden sand dune, board in hand, with panoramic views of the Atlantic Ocean on one side and the Atlas Mountains on the other. Then, you take the plunge - carving down the soft, golden sand with the wind in your hair! This is <strong>sandboarding Morocco</strong> style, and it's easier and more fun than you might think. The soft sand means gentle landings, making it perfect for trying tricks and building confidence.</p>
                 
-                <p>The <strong>learn to surf Morocco</strong> experience begins with beach theory - understanding ocean safety, wave selection, paddling techniques, and board control. Then it's time to get in the water! Our certified instructors use proven teaching methods to have you standing on your board within your first lesson. Most students catch their first waves within 30-45 minutes!</p>
+                <p>Our <strong>sandboarding and BBQ Agadir</strong> package offers the complete desert experience. After an exhilarating session surfing the dunes, you'll relax in a traditional Berber camp where a delicious Moroccan BBQ feast awaits. Enjoy grilled meats, fresh salads, traditional bread, and mint tea while watching the sun set over the desert. The combination of adventure, culture, and culinary delights makes this one of Agadir's most unique tours.</p>
 
-                <h3>What Makes Our Surf Lessons Agadir Special?</h3>
-                <p>Unlike crowded surf camps, we keep our groups small with a maximum of 6 students per instructor. This ensures personalized attention and faster progress. Our ISA-certified instructors have years of experience teaching beginners and speak English, French, and Arabic fluently. They're passionate about surfing and love sharing their knowledge with enthusiastic students.</p>
+                <h3>What Makes This Sandboarding in Agadir Experience Special?</h3>
+                <p>Unlike snowboarding, sandboarding is incredibly beginner-friendly! The soft sand provides forgiving landings, so falls don't hurt - they're actually part of the fun. Our experienced instructors teach you proper technique, and most people are successfully riding down dunes within their first few attempts. We provide all equipment - professional-quality sandboards designed specifically for desert conditions.</p>
                 
-                <p>Your instructor will assess your swimming ability and fitness level, then guide you through each step of the surfing process. You'll start with beach exercises to practice your pop-up technique, learn proper stance and balance, and understand wave timing. Once in the water, your instructor stays close, helping position you for waves, providing encouragement, and offering real-time technique tips.</p>
+                <p>The Taboga dunes near Agadir offer diverse terrain for all ability levels. Beginners start on gentle 5-10 meter slopes to build confidence, while thrill-seekers can progress to massive 20-30 meter dunes for heart-pounding descents. You control your progression - go at your own pace and choose your challenge level. The dunes are constantly shaped by wind, so every visit offers new formations to explore.</p>
                 
-                <p>This <strong>surfing Agadir</strong> experience is perfect for families, friends, couples, and solo travelers. It's suitable for anyone aged 8 and above who can swim. The combination of professional instruction, quality equipment, beautiful beaches, and the exhilarating feeling of catching your first wave creates memories that last a lifetime. Many of our students become hooked after just one lesson!</p>
+                <p>This <strong>Agadir sand surfing</strong> adventure is perfect for adventure-seeking families, friends, couples, and solo travelers aged 8 and above. It's an excellent workout (climbing dunes burns calories!), an adrenaline rush, and a unique experience you can't do everywhere. Plus, the desert landscape and lighting create incredible photo and video opportunities - bring your GoPro!</p>
             </div>
 
             <!-- Detailed Itinerary -->
             <div class="itinerary-section">
-                <h2 style="font-size: 1.8rem; font-weight: 700; color: #1F2937; margin-bottom: 30px;">Detailed Itinerary: Your Surf Lesson Experience</h2>
+                <h2 style="font-size: 1.8rem; font-weight: 700; color: #1F2937; margin-bottom: 30px;">Detailed Itinerary: Your Sandboarding Adventure</h2>
                 
                 <div class="itinerary-item">
-                    <div class="itinerary-time">Morning Session: 9:00 AM | Afternoon Session: 2:00 PM (2 hours total)</div>
-                    <h4 class="itinerary-title">Meeting Point & Equipment Setup (15 minutes)</h4>
-                    <p style="color: #6B7280; line-height: 1.8;">Meet your certified surf instructor at our beach base on Agadir Beach (or Taghazout if specified). Your instructor will welcome you warmly and help you choose the right wetsuit size and foam surfboard. We provide everything you need - high-quality foam surfboards (soft and safe for beginners), full wetsuits, leashes, and surf wax. Get changed in our facilities and prepare for an exciting lesson ahead!</p>
+                    <div class="itinerary-time">Morning Tour: 9:00 AM | Afternoon Tour: 2:00 PM (Recommended for Sunset)</div>
+                    <h4 class="itinerary-title">Hotel Pickup in Agadir or Taghazout</h4>
+                    <p style="color: #6B7280; line-height: 1.8;">We'll collect you from your hotel or riad in Agadir, Taghazout, or surrounding areas in a comfortable, air-conditioned 4x4 vehicle. Your professional driver and guide will greet you and provide an overview of the exciting sandboarding adventure ahead. The short 20-25 minute drive takes you inland toward the impressive Taboga sand dunes.</p>
                 </div>
                 
                 <div class="itinerary-item">
-                    <div class="itinerary-time">+20 Minutes</div>
-                    <h4 class="itinerary-title">Beach Theory & Safety Briefing</h4>
-                    <p style="color: #6B7280; line-height: 1.8;">Before entering the water, your instructor conducts an essential beach theory session. Learn about ocean safety, how to read waves, understanding currents and rip tides, surf etiquette and right-of-way rules, and beach signals. Then practice the fundamental surfing techniques on the sand: proper paddling motion, the pop-up technique (going from lying to standing), correct stance and foot placement, and balance and body positioning. Your instructor demonstrates each technique, then you practice on your board on the beach until you feel comfortable.</p>
+                    <div class="itinerary-time">+30 Minutes</div>
+                    <h4 class="itinerary-title">Arrival at Desert Dunes & Equipment Setup</h4>
+                    <p style="color: #6B7280; line-height: 1.8;">Arrive at the spectacular Taboga sand dunes and take in the impressive desert landscape. Your instructor will fit you with quality sandboarding equipment - a sturdy board, safety gear, and optional knee/elbow pads. Receive a comprehensive safety briefing and technique demonstration. Watch as your instructor shows you proper stance, how to steer, how to brake, and how to fall safely (on soft sand!). Get fitted with your board and practice a few movements before heading to the dunes.</p>
                 </div>
                 
                 <div class="itinerary-item">
-                    <div class="itinerary-time">+75 Minutes</div>
-                    <h4 class="itinerary-title">In-Water Surf Lesson - Catch Your First Waves!</h4>
-                    <p style="color: #6B7280; line-height: 1.8;">Now the real fun begins! Enter the water with your instructor who stays close throughout the lesson. Start in waist-deep water learning to paddle efficiently, control your board, and feel comfortable in the waves. Your instructor helps position you for incoming waves, guides you on timing, and gives you a gentle push for your first rides. Most students stand up and ride waves within 30-45 minutes! Progress at your own pace from riding on your belly, to kneeling, to standing up and riding all the way to shore. Your instructor provides real-time feedback, encouragement, and technique corrections. Small group size (max 6 students) ensures plenty of individual attention and waves!</p>
+                    <div class="itinerary-time">+2 Hours</div>
+                    <h4 class="itinerary-title">Epic Sandboarding Session</h4>
+                    <p style="color: #6B7280; line-height: 1.8;">Time for the main event - <strong>sandboarding in Agadir</strong>! Start with practice runs on smaller dunes (5-10 meters) to get comfortable with the technique. Your instructor will coach you, helping perfect your stance and balance. As confidence builds, progress to bigger dunes - some reaching 20-30 meters high! Enjoy unlimited runs - climb up, board down, repeat! The climbing is a workout but worth it for the thrilling descents. Try different boarding styles: sitting, kneeling, or standing. Attempt tricks and jumps as you improve. Your guide will take photos and videos of your best runs. The soft sand means falls are painless and often hilarious - everyone wipes out, it's part of the fun! Take breaks as needed to catch your breath and hydrate. The afternoon timing means you'll catch stunning sunset lighting over the golden dunes.</p>
                 </div>
                 
                 <div class="itinerary-item">
-                    <div class="itinerary-time">+10 Minutes</div>
-                    <h4 class="itinerary-title">Cool Down, Debrief & Equipment Return</h4>
-                    <p style="color: #6B7280; line-height: 1.8;">Exit the water feeling exhilarated after catching waves! Your instructor provides a brief debrief - what you did well, areas to improve for next time, and tips for continued progress. Return your equipment, rinse off with fresh water showers, and change out of your wetsuit. Your instructor is happy to answer questions about surfing in Morocco, recommend other surf spots, or help you book additional lessons if you're hooked!</p>
+                    <div class="itinerary-time">+1 Hour</div>
+                    <h4 class="itinerary-title">Traditional Berber Desert BBQ Experience</h4>
+                    <p style="color: #6B7280; line-height: 1.8;">After working up an appetite on the dunes, head to our traditional Berber camp setup in the desert. Enjoy a refreshing mint tea ceremony while your BBQ dinner is freshly prepared. The feast includes succulent grilled meats (chicken, beef, or lamb), traditional Moroccan salads, warm freshly-baked bread, seasonal fruits, and more. Vegetarian options available with advance notice. Dine under the open sky, surrounded by dunes, often with traditional Berber music playing. This authentic cultural experience perfectly complements your adventure. Watch the desert sunset paint the sky in brilliant colors - magical!</p>
                 </div>
                 
                 <div class="itinerary-item">
-                    <div class="itinerary-time">Total Duration</div>
-                    <h4 class="itinerary-title">2 Hours of Pure Surf Excitement</h4>
-                    <p style="color: #6B7280; line-height: 1.8;">Your complete <strong>surf lesson Agadir</strong> experience lasts approximately 2 hours including equipment setup, beach theory, 75 minutes of water time, and debrief. Most students leave with huge smiles, amazing photos, and the unforgettable feeling of standing up and riding Atlantic waves. Many book multiple lessons to continue improving - surfing is incredibly addictive! If you're staying in Taghazout, this is a perfect activity to combine with exploring the surf village vibe.</p>
+                    <div class="itinerary-time">+30 Minutes</div>
+                    <h4 class="itinerary-title">Return Transfer to Your Hotel</h4>
+                    <p style="color: #6B7280; line-height: 1.8;">After this thrilling <strong>Agadir desert adventure</strong>, your driver will return you safely to your hotel in Agadir or Taghazout. Relax in the comfortable vehicle as you brush off the sand and reflect on the amazing day. Your guide will be happy to provide recommendations for other Agadir activities. Total experience time: approximately 3.5-4 hours from pickup to drop-off. Expect to be sandy and happy!</p>
                 </div>
             </div>
 
@@ -1459,27 +1455,25 @@
                     <div class="included-list">
                         <h4>✅ What's Included</h4>
                         <ul>
-                            <li>✓ ISA-certified surf instructor</li>
-                            <li>✓ Premium foam surfboard (soft & beginner-friendly)</li>
-                            <li>✓ Full wetsuit in your size</li>
-                            <li>✓ Surfboard leash & wax</li>
-                            <li>✓ Beach theory & safety briefing</li>
-                            <li>✓ 2-hour lesson (75 min in water)</li>
-                            <li>✓ Small group lesson (max 6 students)</li>
-                            <li>✓ Use of changing facilities & showers</li>
-                            <li>✓ Insurance coverage</li>
-                            <li>✓ Photos/videos by instructor (on your device)</li>
+                            <li>✓ Hotel pickup and drop-off (Agadir & Taghazout)</li>
+                            <li>✓ 4x4 transportation to the dunes</li>
+                            <li>✓ Professional sandboarding instructor</li>
+                            <li>✓ Quality sandboard and safety equipment</li>
+                            <li>✓ Unlimited rides during 2-hour session</li>
+                            <li>✓ Traditional Moroccan mint tea ceremony</li>
+                            <li>✓ Authentic BBQ dinner in the desert</li>
+                            <li>✓ Traditional Berber music entertainment</li>
+                            <li>✓ Bottled water throughout</li>
+                            <li>✓ All fees and taxes</li>
                         </ul>
                     </div>
                     <div class="included-list">
                         <h4>❌ What's Not Included</h4>
                         <ul>
-                            <li>✗ Hotel pickup/drop-off (meet at beach)</li>
-                            <li>✗ Towel (bring your own)</li>
-                            <li>✗ Sunscreen (recommended to bring)</li>
-                            <li>✗ Professional photography service</li>
-                            <li>✗ Food & drinks</li>
+                            <li>✗ Personal expenses and souvenirs</li>
+                            <li>✗ GoPro rental (available for €10)</li>
                             <li>✗ Gratuities (optional, appreciated)</li>
+                            <li>✗ Professional photos (instructor takes with your camera)</li>
                         </ul>
                     </div>
                 </div>
@@ -1487,212 +1481,208 @@
 
             <!-- Important Information -->
             <div class="tour-description">
-                <h2>Essential Information for Your Surf Lesson</h2>
+                <h2>Essential Information for Your Sandboarding Adventure</h2>
                 
                 <div style="background: #fff3cd; padding: 20px; border-radius: 10px; border-left: 4px solid #8B5CF6; margin-bottom: 20px;">
                     <strong>📋 What to Bring:</strong>
                     <ul style="margin-top: 10px; color: #6B7280; line-height: 1.8;">
-                        <li><strong>Swimwear:</strong> Wear under your wetsuit (we provide wetsuits)</li>
-                        <li><strong>Towel:</strong> For drying off after your lesson</li>
-                        <li><strong>Reef-safe sunscreen:</strong> SPF 50+ (apply before putting wetsuit on)</li>
-                        <li><strong>Water bottle:</strong> Stay hydrated (can leave at beach base)</li>
-                        <li><strong>Change of clothes:</strong> Dry clothes for after the lesson</li>
-                        <li><strong>Waterproof phone case:</strong> Optional for photos/videos in water</li>
-                        <li><strong>Positive attitude:</strong> Ready to have fun and embrace the learning process!</li>
+                        <li><strong>Athletic clothing:</strong> Comfortable, loose-fitting clothes you don't mind getting sandy</li>
+                        <li><strong>Footwear:</strong> Closed-toe sneakers or sports shoes (sand gets in sandals!)</li>
+                        <li><strong>Sun protection:</strong> Sunscreen (SPF 50+), sunglasses with strap, hat or cap</li>
+                        <li><strong>Bandana or scarf:</strong> To protect face from sand/dust if windy</li>
+                        <li><strong>Camera/GoPro:</strong> For epic action shots (sand-proof case recommended)</li>
+                        <li><strong>Small backpack:</strong> For water and personal items</li>
+                        <li><strong>Plastic bag:</strong> For sandy shoes and equipment after</li>
+                        <li><strong>Change of clothes:</strong> You'll get sandy! Leave in vehicle for after</li>
                     </ul>
                 </div>
                 
                 <div style="background: #d1ecf1; padding: 20px; border-radius: 10px; border-left: 4px solid #8B5CF6; margin-bottom: 20px;">
                     <strong>ℹ️ Good to Know:</strong>
                     <ul style="margin-top: 10px; color: #6B7280; line-height: 1.8;">
-                        <li><strong>Surfing experience:</strong> Not required! Perfect for first-timers - 90% of students stand up on first lesson</li>
-                        <li><strong>Swimming ability:</strong> Must be able to swim comfortably - you'll be in chest-deep water</li>
-                        <li><strong>Minimum age:</strong> 8 years old (children 8-12 need parent supervision)</li>
-                        <li><strong>Fitness level:</strong> Moderate - involves paddling and standing, but suitable for most fitness levels</li>
-                        <li><strong>Water temperature:</strong> 18-22°C year-round (wetsuits keep you warm)</li>
-                        <li><strong>Best season:</strong> Year-round! March-October has warmest water, Nov-Feb has bigger waves</li>
-                        <li><strong>Group size:</strong> Maximum 6 students per instructor for safety and personalized coaching</li>
+                        <li><strong>Difficulty level:</strong> Easy to moderate - all fitness levels welcome! Falling on sand doesn't hurt</li>
+                        <li><strong>Minimum age:</strong> 8 years old (younger with parent supervision)</li>
+                        <li><strong>Learning curve:</strong> Most people get the hang of it within 10-15 minutes</li>
+                        <li><strong>Expect to fall:</strong> Everyone does! Soft sand means painless, fun tumbles</li>
+                        <li><strong>Physical exertion:</strong> Climbing dunes is a workout - good cardio! Take breaks as needed</li>
+                        <li><strong>Sandy clothes:</strong> You WILL get sandy - hair, clothes, shoes, everywhere! It's part of the experience</li>
+                        <li><strong>Best timing:</strong> Afternoon tours (2pm start) catch spectacular sunset lighting</li>
+                        <li><strong>Weather:</strong> Best on calm days; we'll reschedule if too windy for safety</li>
+                        <li><strong>Group size:</strong> Small groups (max 12) for personalized instruction</li>
                         <li><strong>Free cancellation:</strong> Cancel up to 24 hours before for full refund</li>
-                        <li><strong>Languages:</strong> Instructors speak English, French, and Arabic</li>
-                        <li><strong>Location:</strong> Agadir Beach or Taghazout - you choose during booking</li>
                     </ul>
                 </div>
 
                 <div style="background: #e8f5e9; padding: 20px; border-radius: 10px; border-left: 4px solid #8B5CF6;">
                     <strong>💡 Local Insider Tips:</strong>
                     <ul style="margin-top: 10px; color: #6B7280; line-height: 1.8;">
-                        <li>Book morning lessons (9 AM) for calmest waves and fewest crowds - ideal for first-timers</li>
-                        <li>Arrive 15 minutes early to get fitted for wetsuit and choose your board</li>
-                        <li>Listen carefully during beach theory - understanding wave timing is 50% of surfing success</li>
-                        <li>Don't stand up too early! Wait for your instructor's "Pop up now!" signal</li>
-                        <li>Look forward when standing, not down at your feet - where you look is where you go!</li>
-                        <li>Fall backwards off your board, not forward - protects you from hitting the board</li>
-                        <li>Expect to swallow some seawater - it happens to everyone, totally normal!</li>
-                        <li>Book multiple lessons if possible - day 2 & 3 you improve exponentially</li>
-                        <li>Taghazout has more surf culture and vibe - perfect for surf enthusiasts</li>
-                        <li>Don't give up after falling - everyone falls! Your instructor will keep encouraging you</li>
+                        <li>Book afternoon session (2pm) for best conditions and sunset views</li>
+                        <li>Sand is softer and easier to board in late afternoon</li>
+                        <li>Expect a workout - climbing dunes burns serious calories!</li>
+                        <li>Leave valuables at hotel - sand gets into everything</li>
+                        <li>Bring small bills (100-200 Dirham) for optional GoPro rental or souvenirs</li>
+                        <li>Start on smaller dunes to build confidence before tackling the big ones</li>
+                        <li>Sitting position is easier than standing for beginners</li>
+                        <li>Don't wear your best clothes - they'll get dusty and sandy!</li>
+                        <li>Embrace the falls - they're soft, painless, and make for great photos!</li>
                     </ul>
                 </div>
             </div>
 
-            <!-- Why Surf Lessons is Special Section -->
+            <!-- What Makes Sandboarding Special Section -->
             <div class="tour-description">
-                <h2>Why Surf Lessons Agadir is an Unforgettable Experience</h2>
-                <p>Our <strong>Agadir surf school</strong> offers unique advantages and experiences for all types of visitors:</p>
+                <h2>Why Sandboarding in Agadir is an Incredible Adventure</h2>
+                <p><strong>Sandboarding Morocco</strong> offers unique advantages and thrills for adventure-seekers:</p>
                 
-                <h3 style="font-size: 1.4rem; margin-top: 25px; margin-bottom: 12px; color: #1F2937;">🌊 World-Class Surf Destination</h3>
-                <p>Agadir and nearby Taghazout are internationally recognized surf destinations. The Atlantic coast provides consistent swells year-round, with gentle beach breaks perfect for beginners. Water temperatures stay comfortable (18-22°C), sandy bottoms ensure safety, and the waves are forgiving for first-timers. Professional surfers train here, but the beginner-friendly waves make it ideal for learning. Many famous surfers learned their craft on these very beaches!</p>
+                <h3 style="font-size: 1.4rem; margin-top: 25px; margin-bottom: 12px; color: #1F2937;">🏂 Easier Than Snowboarding</h3>
+                <p><strong>Agadir sand surfing</strong> is actually easier to learn than snowboarding! The soft sand provides forgiving landings - falls don't hurt like they do on snow or ice. Most beginners successfully ride down dunes within 15 minutes of instruction. You can sit, kneel, or stand on the board depending on your comfort level. Progress at your own pace from gentle slopes to steep dunes as your confidence grows.</p>
 
-                <h3 style="font-size: 1.4rem; margin-top: 25px; margin-bottom: 12px; color: #1F2937;">👨‍👩‍👧‍👦 Perfect for All Ages & Abilities</h3>
-                <p>Whether you've never touched a surfboard or you're looking to improve technique, our <strong>surf lessons Agadir</strong> accommodate everyone. Kids aged 8+ can learn with specialized instruction and smaller boards. Teenagers love the challenge and social aspect. Adults appreciate patient instructors who build confidence gradually. Families can take lessons together. Seniors who are fit and active enjoy the low-impact exercise. Our instructors adapt teaching methods to each student's learning style and physical ability.</p>
+                <h3 style="font-size: 1.4rem; margin-top: 25px; margin-bottom: 12px; color: #1F2937;">⛰️ Stunning Taboga Desert Dunes</h3>
+                <p>The <strong>sandboarding in Agadir</strong> experience takes place at the incredible Taboga dunes - one of Morocco's best sandboarding locations. These massive golden dunes reach up to 30 meters high and offer panoramic views of both the Atlantic Ocean and Atlas Mountains. The location is just 20 minutes from Agadir, making it incredibly accessible while feeling like a remote desert paradise.</p>
 
-                <h3 style="font-size: 1.4rem; margin-top: 25px; margin-bottom: 12px; color: #1F2937;">🏆 ISA-Certified Professional Instructors</h3>
-                <p>Our <strong>Agadir surf school</strong> employs only ISA (International Surfing Association) certified instructors with extensive teaching experience. They're trained in ocean safety, rescue techniques, and proven teaching methodologies. More importantly, they're passionate surfers who love sharing their stoke with students! They know the local waves intimately, speak multiple languages, and have endless patience with nervous beginners. Many of our students say their instructor made all the difference in their success.</p>
+                <h3 style="font-size: 1.4rem; margin-top: 25px; margin-bottom: 12px; color: #1F2937;">💪 Adrenaline Rush & Great Workout</h3>
+                <p>This <strong>Agadir desert adventure</strong> combines thrilling descents with an excellent physical workout. Climbing the dunes provides serious cardio exercise - your legs and core will feel it! But the adrenaline rush of surfing down makes it worth every step. It's adventure and fitness combined. Many guests say it's one of the most fun workouts they've ever had!</p>
 
-                <h3 style="font-size: 1.4rem; margin-top: 25px; margin-bottom: 12px; color: #1F2937;">📸 Epic Surf Photos & Memories</h3>
-                <p><strong>Learning to surf Agadir</strong> provides incredible photo opportunities! Capture action shots of you standing on your first wave, celebrate with huge smiles after successful rides, take group photos with fellow students, and get sunset silhouettes against golden skies. Our instructors happily take photos and videos on your phone during the lesson. Standing up and riding a wave for the first time is an unforgettable moment - you'll want it documented!</p>
+                <h3 style="font-size: 1.4rem; margin-top: 25px; margin-bottom: 12px; color: #1F2937;">📸 Epic Photo & Video Opportunities</h3>
+                <p><strong>Sandboarding and BBQ Agadir</strong> adventures create amazing content for social media! Capture action shots of you carving down dunes, dramatic jumps, hilarious wipe-outs, and stunning desert panoramas at sunset. The golden sand and blue sky create perfect contrast for photography. Many guests rent GoPros (€10) to capture their rides from board-mounted perspectives.</p>
 
-                <h3 style="font-size: 1.4rem; margin-top: 25px; margin-bottom: 12px; color: #1F2937;">🌅 Perfect Year-Round Conditions</h3>
-                <p>Unlike many surf destinations with seasonal limitations, <strong>surfing in Agadir</strong> works year-round! Spring/Summer (Mar-Oct) offers warmest water and gentle waves - perfect for beginners. Fall/Winter (Nov-Feb) brings bigger swells for more challenge, yet still manageable for improving surfers. 300+ sunny days annually mean reliable conditions. The consistent Atlantic swells ensure waves are almost always available. No matter when you visit Morocco, you can learn to surf!</p>
+                <h3 style="font-size: 1.4rem; margin-top: 25px; margin-bottom: 12px; color: #1F2937;">🍖 Complete Desert Experience with BBQ</h3>
+                <p>Unlike basic sandboarding-only options, our <strong>sandboarding in Agadir</strong> package includes a traditional Berber desert BBQ experience. After your thrilling session, relax in an authentic Berber tent, enjoy mint tea, feast on delicious grilled food, and watch the desert sunset. It's adventure combined with cultural immersion and culinary delight!</p>
             </div>
 
-            <!-- Planning Your Surf Lessons Section -->
+            <!-- Planning Your Sandboarding Section -->
             <div class="tour-description">
-                <h2>Planning Your Surf Lessons Agadir Experience</h2>
+                <h2>Planning Your Sandboarding in Agadir Adventure</h2>
                 
-                <h3 style="font-size: 1.4rem; margin-top: 25px; margin-bottom: 12px; color: #1F2937;">Best Time for Surf Lessons in Agadir</h3>
-                <p><strong>Surf lessons Agadir</strong> are available year-round, with each season offering unique conditions:</p>
+                <h3 style="font-size: 1.4rem; margin-top: 25px; margin-bottom: 12px; color: #1F2937;">Best Time for Sandboarding in Agadir</h3>
+                <p><strong>Sandboarding in Agadir</strong> is available year-round, with each season offering ideal conditions:</p>
                 <ul style="margin-left: 25px; color: #6B7280; line-height: 1.8; margin-bottom: 20px;">
-                    <li><strong>Spring (March-May):</strong> Perfect temperatures (20-25°C), warm water, gentle waves ideal for beginners. Best season overall!</li>
-                    <li><strong>Summer (June-August):</strong> Warmest water (20-22°C), smaller waves perfect for learning, sunny weather. Most popular season!</li>
-                    <li><strong>Fall (September-November):</strong> Excellent conditions, bigger waves for progression, fewer crowds. Great for improving surfers!</li>
-                    <li><strong>Winter (December-February):</strong> Biggest waves (still beginner-friendly), cooler water (18-20°C), wetsuits keep you warm. Fewer tourists.</li>
+                    <li><strong>Spring (March-May):</strong> Perfect temperatures (20-25°C), calm winds, excellent visibility. Best season for sandboarding!</li>
+                    <li><strong>Summer (June-August):</strong> Hot but exhilarating! Afternoon tours (2pm) are recommended to avoid midday heat. Sunset timing is spectacular.</li>
+                    <li><strong>Fall (September-November):</strong> Ideal conditions with comfortable temperatures, golden sunset light, and fewer tourists. Highly recommended!</li>
+                    <li><strong>Winter (December-February):</strong> Mild weather (15-20°C), cooler desert temps perfect for physical activity. Bring light jacket.</li>
                 </ul>
+                <p style="color: #6B7280; line-height: 1.8; margin-left: 25px;"><strong>Pro Tip:</strong> Afternoon tours (2pm start) are best for catching sunset over the dunes and cooler sand temperatures!</p>
 
-                <h3 style="font-size: 1.4rem; margin-top: 25px; margin-bottom: 12px; color: #1F2937;">Where Do Surf Lessons Take Place?</h3>
-                <p>Our <strong>Agadir surf school</strong> operates at two prime locations - choose during booking:</p>
-                <ul style="margin-left: 25px; color: #6B7280; line-height: 1.8; margin-bottom: 20px;">
-                    <li><strong>Agadir Beach:</strong> Main city beach, gentle waves, sandy bottom, easy access, perfect for absolute beginners</li>
-                    <li><strong>Taghazout:</strong> Famous surf village 20km north, multiple surf spots, more surf culture, ideal for surfers wanting authentic atmosphere</li>
-                </ul>
-                <p>Both locations offer excellent beginner conditions with professional instructors. Meet directly at the beach - no pickup required (you make your own way there). The beach base has changing facilities, showers, and equipment storage.</p>
+                <h3 style="font-size: 1.4rem; margin-top: 25px; margin-bottom: 12px; color: #1F2937;">Where are the Agadir Sand Dunes Located?</h3>
+                <p>Our <strong>Agadir sand surfing</strong> adventure takes place at the famous Taboga and Timlalin sand dunes, located approximately 15-20 kilometers (20-25 minutes drive) south of Agadir. These spectacular dunes are part of a unique landscape where desert meets ocean - you can actually see the Atlantic from the tops of dunes! The dunes are constantly shaped by coastal winds, creating ever-changing terrain perfect for sandboarding.</p>
 
-                <h3 style="font-size: 1.4rem; margin-top: 25px; margin-bottom: 12px; color: #1F2937;">Why Book with a Professional Surf School?</h3>
-                <p>While you might see independent instructors on the beach, booking with our certified <strong>surf school Agadir</strong> offers significant advantages:</p>
+                <h3 style="font-size: 1.4rem; margin-top: 25px; margin-bottom: 12px; color: #1F2937;">Why Book a Professional Sandboarding Tour?</h3>
+                <p>While you might try to visit the dunes independently, booking our <strong>sandboarding Morocco</strong> tour offers major advantages:</p>
                 <ul style="margin-left: 25px; color: #6B7280; line-height: 1.8;">
-                    <li><strong>ISA Certification:</strong> All instructors certified by International Surfing Association with proven teaching methods</li>
-                    <li><strong>Safety first:</strong> Trained in ocean rescue, CPR, and emergency procedures - your safety is priority</li>
-                    <li><strong>Quality equipment:</strong> Premium foam surfboards (safe & stable), high-quality wetsuits in all sizes, properly maintained gear</li>
-                    <li><strong>Insurance coverage:</strong> Full liability insurance for your peace of mind</li>
-                    <li><strong>Small groups:</strong> Maximum 6 students per instructor ensures personalized attention and faster learning</li>
-                    <li><strong>Structured lessons:</strong> Proven curriculum from beach theory to water practice - not just "give it a try"</li>
-                    <li><strong>Fixed pricing:</strong> Transparent costs with no haggling or hidden fees</li>
-                    <li><strong>Multi-language:</strong> Instructors speak English, French, and Arabic fluently</li>
-                    <li><strong>Professional facilities:</strong> Clean changing rooms, showers, secure storage for belongings</li>
+                    <li><strong>Professional equipment:</strong> Quality sandboards designed for desert conditions - not DIY boards</li>
+                    <li><strong>Expert instruction:</strong> Learn proper technique quickly and safely</li>
+                    <li><strong>Safety gear:</strong> Helmets, pads, and all necessary protection equipment</li>
+                    <li><strong>Best dune locations:</strong> We know which dunes are perfect for beginners vs. advanced</li>
+                    <li><strong>Complete package:</strong> Transport + equipment + instruction + BBQ dinner - everything arranged</li>
+                    <li><strong>No navigation needed:</strong> Dunes can be confusing to find - we handle directions</li>
+                    <li><strong>Cultural experience:</strong> Desert BBQ and Berber traditions included</li>
+                    <li><strong>Fixed pricing:</strong> Transparent costs, no hidden fees or surprise charges</li>
+                    <li><strong>Insured activity:</strong> Full insurance coverage for peace of mind</li>
                 </ul>
             </div>
 
             <!-- FAQ Section -->
             <div class="faq-section">
-                <h2>Frequently Asked Questions About Surf Lessons Agadir</h2>
+                <h2>Frequently Asked Questions About Sandboarding in Agadir</h2>
                 
                 <div class="faq-item">
                     <button class="faq-question">
-                        Do I need surfing experience?
+                        Is sandboarding difficult to learn?
                         <span class="faq-icon">+</span>
                     </button>
                     <div class="faq-answer">
-                        <p>No experience necessary! Our <strong>surf lessons Agadir</strong> are perfect for complete beginners. 90% of our first-time students stand up and ride waves within their first lesson. Our instructors teach you everything from scratch: ocean safety, paddling, wave selection, pop-up technique, and balance. All you need is basic swimming ability and enthusiasm!</p>
+                        <p>Not at all! <strong>Sandboarding in Agadir</strong> is actually easier than snowboarding. Most people get the hang of it within 10-15 minutes with our professional instruction. The soft sand provides forgiving landings, so falls don't hurt. You can sit, kneel, or stand - whatever feels comfortable. Our instructors ensure you progress at your own pace!</p>
                     </div>
                 </div>
 
                 <div class="faq-item">
                     <button class="faq-question">
-                        Do I need to know how to swim?
+                        Do I need previous boarding experience?
                         <span class="faq-icon">+</span>
                     </button>
                     <div class="faq-answer">
-                        <p>Yes, you must be a confident swimmer. During the lesson, you'll be in chest-deep water and will sometimes fall off your board (it's part of learning!). You don't need to be an Olympic swimmer, but you should be comfortable in the ocean and able to swim back to your board if you fall. Your wetsuit provides flotation, and instructors are always close by.</p>
+                        <p>Absolutely not! About 80% of our guests are complete first-timers. This <strong>Agadir sand surfing</strong> experience is designed for beginners. Our instructors teach you everything from scratch - proper stance, steering, stopping, and safe falling techniques. If you do have snowboarding or skateboarding experience, you'll pick it up even faster!</p>
                     </div>
                 </div>
 
                 <div class="faq-item">
                     <button class="faq-question">
-                        What should I wear for my surf lesson?
+                        Is it safe? Will I get injured?
                         <span class="faq-icon">+</span>
                     </button>
                     <div class="faq-answer">
-                        <p>Just bring your swimwear! Wear your swimsuit/board shorts under your clothes. We provide full wetsuits that keep you warm and protected. Also bring a towel, reef-safe sunscreen (apply before wetsuit), change of clothes, and water. Leave jewelry and valuables at your hotel - they can get lost in the ocean.</p>
+                        <p>Very safe! The soft sand provides cushioned landings - minor tumbles are normal, expected, and painless. We provide safety helmets and optional pads. Our instructors teach safe techniques and supervise throughout. Thousands of guests have enjoyed <strong>sandboarding Morocco</strong> style without issues. It's actually much safer than many sports because sand is so forgiving!</p>
                     </div>
                 </div>
 
                 <div class="faq-item">
                     <button class="faq-question">
-                        Can children learn to surf?
+                        What's the difference between sandboarding and sand surfing?
                         <span class="faq-icon">+</span>
                     </button>
                     <div class="faq-answer">
-                        <p>Yes! Children aged 8 and above can take surf lessons. Kids are often naturals at surfing due to their lower center of gravity and fearlessness! We use smaller, lighter boards for children and instructors give extra attention. Children under 12 must be supervised by a parent/guardian on the beach during the lesson. It's an amazing confidence-building activity for kids!</p>
+                        <p>They're the same activity - just different names! "Sandboarding" and "<strong>Agadir sand surfing</strong>" both refer to riding down sand dunes on a board. Some people also call it "dune boarding" or "sand sledding." Whatever you call it, it's thrilling fun!</p>
                     </div>
                 </div>
 
                 <div class="faq-item">
                     <button class="faq-question">
-                        Is surfing physically demanding?
+                        How high are the sand dunes?
                         <span class="faq-icon">+</span>
                     </button>
                     <div class="faq-answer">
-                        <p>Surfing requires moderate fitness - you'll be paddling, standing up repeatedly, and balancing. It's a full-body workout! However, it's suitable for most fitness levels. You don't need to be super fit, just reasonably active. Expect to feel tired (in a good way!) after your lesson. Your core, arms, and legs will definitely feel the workout!</p>
+                        <p>The Taboga dunes vary in height. Beginner-friendly slopes range from 5-10 meters (16-33 feet). Intermediate dunes are 10-20 meters. Advanced thrill-seekers can try dunes up to 30 meters (100 feet) high! You choose your comfort level - our instructors help you find the perfect dune for your ability and confidence.</p>
                     </div>
                 </div>
 
                 <div class="faq-item">
                     <button class="faq-question">
-                        How long until I can stand up on a wave?
+                        Will I get very sandy?
                         <span class="faq-icon">+</span>
                     </button>
                     <div class="faq-answer">
-                        <p>Most students stand up and ride their first wave within 30-45 minutes! Our proven teaching method - beach practice followed by instructor-assisted waves - has a 90% success rate for first-timers standing up in lesson one. You might not ride all the way to shore immediately, but you'll definitely experience the thrill of standing on a moving wave!</p>
+                        <p>Yes, absolutely! Sand gets everywhere - hair, clothes, shoes, pockets. It's part of the adventure and most guests find it hilarious! We recommend wearing clothes you don't mind getting sandy, bringing a change of clothes for after, and leaving valuables at the hotel. A quick shower back at your hotel and you're good as new!</p>
                     </div>
                 </div>
 
                 <div class="faq-item">
                     <button class="faq-question">
-                        What's the best time of day for lessons?
+                        Can children do sandboarding?
                         <span class="faq-icon">+</span>
                     </button>
                     <div class="faq-answer">
-                        <p>Morning lessons (9 AM) are ideal for beginners - calmer winds, smaller waves, fewer people in the water, and softer light for photos. Afternoon lessons (2 PM) work great too. We don't recommend late afternoon as winds typically pick up. Morning sessions are most popular and book up first, so reserve early!</p>
+                        <p>Yes! Children aged 8 and above can participate independently with instructor supervision. Younger children (5-7) can ride in sitting position with parent nearby. We have smaller boards and gentler slopes perfect for kids. Most children absolutely love the <strong>Agadir desert adventure</strong> - many say it's the best part of their vacation!</p>
                     </div>
                 </div>
 
                 <div class="faq-item">
                     <button class="faq-question">
-                        What if I'm scared of waves?
+                        Is it like snowboarding?
                         <span class="faq-icon">+</span>
                     </button>
                     <div class="faq-answer">
-                        <p>Many nervous first-timers become confident surfers! Our instructors are incredibly patient with nervous students. You'll start in very shallow water, progress gradually, and never be pushed beyond your comfort level. The foam surfboards are super stable and safe. Most people find surfing less scary than they imagined - the waves we use are gentle and fun, not intimidating!</p>
+                        <p>Similar concept but easier and more forgiving! <strong>Sandboarding in Agadir</strong> is slower than snowboarding (sand has more friction) and provides much softer landings. If you can snowboard, you'll find sandboarding easy. If you can't, sandboarding is actually a great way to practice balance and technique without the pain of falling on hard snow!</p>
                     </div>
                 </div>
 
                 <div class="faq-item">
                     <button class="faq-question">
-                        Can I take private lessons instead of group?
+                        What's included in the BBQ dinner?
                         <span class="faq-icon">+</span>
                     </button>
                     <div class="faq-answer">
-                        <p>Absolutely! We offer private one-on-one lessons for faster progression and personalized attention. Private lessons cost €60 for 2 hours. They're perfect for nervous beginners wanting extra attention, experienced surfers working on specific techniques, or families wanting to learn together. Contact us to book private lessons!</p>
+                        <p>The <strong>sandboarding and BBQ Agadir</strong> feast includes succulent grilled meats (chicken, beef, or lamb), traditional Moroccan salads, warm freshly-baked bread, seasonal fruits, mint tea, and refreshing beverages. Vegetarian options available with advance notice. Everything is freshly prepared at our desert Berber camp while you enjoy the stunning surroundings!</p>
                     </div>
                 </div>
 
                 <div class="faq-item">
                     <button class="faq-question">
-                        Should I book multiple lessons?
+                        Can I bring my own GoPro or camera?
                         <span class="faq-icon">+</span>
                     </button>
                     <div class="faq-answer">
-                        <p>We highly recommend it! Most students book 3-5 lessons. Day 1 you learn basics and stand up. Day 2 you ride waves further and improve balance. Day 3 you start turning and controlling direction. Surfing has a steep learning curve - each lesson builds on the last. Many students get addicted and book week-long packages!</p>
+                        <p>Absolutely! We encourage it! Chest-mounted GoPros work great for first-person perspective. Keep cameras in protective cases as sand can damage electronics. If you don't have a GoPro, we rent them for €10 - totally worth it for epic action footage! Your instructor will also take photos/videos with your device.</p>
                     </div>
                 </div>
             </div>
@@ -1700,57 +1690,15 @@
             <!-- Reviews Section -->
             <div class="reviews-section">
                 <div class="reviews-header">
-                    <h2 style="font-size: 1.8rem; font-weight: 700; color: #1F2937;">What Our Students Say About Surf Lessons Agadir</h2>
+                    <h2 style="font-size: 1.8rem; font-weight: 700; color: #1F2937;">What Our Guests Say About Sandboarding in Agadir</h2>
                     <div class="reviews-summary">
-                        <span class="review-score-big">4.9</span>
+                        <span class="review-score-big">4.7</span>
                         <div>
                             <div style="color: #f39c12; font-size: 20px; margin-bottom: 5px;">★★★★★</div>
                             <span style="color: #6B7280;">Excellent</span><br>
-                            <span style="color: #999; font-size: 14px;">415 verified reviews</span>
+                            <span style="color: #999; font-size: 14px;">198 verified reviews</span>
                         </div>
                     </div>
-                </div>
-
-                <div class="review-card">
-                    <div class="review-header">
-                        <div class="reviewer-info">
-                            <div class="reviewer-avatar">E</div>
-                            <div>
-                                <div class="reviewer-name">Emma Thompson</div>
-                                <div class="reviewer-location">Manchester, UK • Visited Sep 2025</div>
-                            </div>
-                        </div>
-                        <div class="review-rating">5.0</div>
-                    </div>
-                    <p class="review-text">"Absolutely incredible first surf lesson! I was terrified before starting but my instructor was so patient and encouraging. I actually stood up and rode waves on my first try! The equipment was great quality and the beach conditions were perfect for beginners. Already booked 3 more lessons - I'm hooked on surfing now!"</p>
-                </div>
-
-                <div class="review-card">
-                    <div class="review-header">
-                        <div class="reviewer-info">
-                            <div class="reviewer-avatar">M</div>
-                            <div>
-                                <div class="reviewer-name">Marcus Weber</div>
-                                <div class="reviewer-location">Berlin, Germany • Visited Oct 2025</div>
-                            </div>
-                        </div>
-                        <div class="review-rating">5.0</div>
-                    </div>
-                    <p class="review-text">"Best surf school in Agadir! The instructor was ISA-certified and really knew his stuff. Small group of only 5 students meant lots of personal attention. Caught my first green wave after just 2 lessons. The beach theory session was super helpful. Professional setup with good equipment. Highly recommend for anyone wanting to learn surfing!"</p>
-                </div>
-
-                <div class="review-card">
-                    <div class="review-header">
-                        <div class="reviewer-info">
-                            <div class="reviewer-avatar">S</div>
-                            <div>
-                                <div class="reviewer-name">Sophie Martinez</div>
-                                <div class="reviewer-location">Barcelona, Spain • Visited Aug 2025</div>
-                            </div>
-                        </div>
-                        <div class="review-rating">4.8</div>
-                    </div>
-                    <p class="review-text">"Perfect family activity! My kids (9 and 12) learned to surf and had the time of their lives. The instructors were amazing with children - patient, fun, and safety-focused. We all stood up on waves by the end of the lesson. Great value for money and such a memorable experience. The kids talk about it constantly!"</p>
                 </div>
 
                 <div class="review-card">
@@ -1758,27 +1706,55 @@
                         <div class="reviewer-info">
                             <div class="reviewer-avatar">J</div>
                             <div>
-                                <div class="reviewer-name">James O'Connor</div>
-                                <div class="reviewer-location">Dublin, Ireland • Visited Jul 2025</div>
+                                <div class="reviewer-name">Jake Morrison</div>
+                                <div class="reviewer-location">Los Angeles, USA • Visited Sep 2025</div>
                             </div>
                         </div>
                         <div class="review-rating">5.0</div>
                     </div>
-                    <p class="review-text">"Took 5 lessons over my week in Agadir and went from never surfing to riding waves confidently! The progression was amazing. Each instructor I had was professional, knowledgeable, and genuinely stoked to teach. The location at Taghazout is perfect - great waves and awesome surf vibe. Can't wait to come back!"</p>
+                    <p class="review-text">"Incredible experience! Sandboarding in Agadir was a highlight of our Morocco trip. The dunes were massive and the instructors were so patient with us beginners. My 10-year-old son mastered it after a few tries and didn't want to stop! The desert BBQ at sunset was magical. Perfect combination of adventure and culture. Highly recommend!"</p>
                 </div>
 
                 <div class="review-card">
                     <div class="review-header">
                         <div class="reviewer-info">
-                            <div class="reviewer-avatar">A</div>
+                            <div class="reviewer-avatar">S</div>
                             <div>
-                                <div class="reviewer-name">Amélie Dubois</div>
-                                <div class="reviewer-location">Paris, France • Visited Sep 2025</div>
+                                <div class="reviewer-name">Sara Bennett</div>
+                                <div class="reviewer-location">Manchester, UK • Visited Oct 2025</div>
                             </div>
                         </div>
-                        <div class="review-rating">4.9</div>
+                        <div class="review-rating">4.5</div>
                     </div>
-                    <p class="review-text">"Excellente école de surf! I was nervous about the ocean but the instructor made me feel completely safe. The wetsuit kept me warm, the foam board was stable, and the waves were perfect size for learning. Stood up on my 5th wave! Beautiful beach, professional instructors, great experience. Merci beaucoup!"</p>
+                    <p class="review-text">"So much fun! This Agadir sand surfing adventure was thrilling and surprisingly easy to learn. I was nervous at first but the instructors made it simple. Fell a few times but the sand is so soft it doesn't hurt at all! The sunset views from the dunes were spectacular. The BBQ dinner was delicious. Great afternoon adventure - book it!"</p>
+                </div>
+
+                <div class="review-card">
+                    <div class="review-header">
+                        <div class="reviewer-info">
+                            <div class="reviewer-avatar">M</div>
+                            <div>
+                                <div class="reviewer-name">Marc Weber</div>
+                                <div class="reviewer-location">Berlin, Germany • Visited Aug 2025</div>
+                            </div>
+                        </div>
+                        <div class="review-rating">5.0</div>
+                    </div>
+                    <p class="review-text">"Best adventure tour in Agadir! The sandboarding was exciting and challenging in a good way. Our group loved racing down the dunes. Equipment was professional quality and instructors were knowledgeable. The Berber dinner in the desert was authentic and tasty. Great value for money. Would do it again!"</p>
+                </div>
+
+                <div class="review-card">
+                    <div class="review-header">
+                        <div class="reviewer-info">
+                            <div class="reviewer-avatar">L</div>
+                            <div>
+                                <div class="reviewer-name">Laura Peterson</div>
+                                <div class="reviewer-location">Copenhagen, Denmark • Visited Jul 2025</div>
+                            </div>
+                        </div>
+                        <div class="review-rating">4.8</div>
+                    </div>
+                    <p class="review-text">"Fantastic Agadir desert adventure! Never tried sandboarding before but learned quickly thanks to great instruction. The bigger dunes were scary at first but so fun once you commit! My legs were sore from climbing but totally worth it. Desert sunset was beautiful and the food was excellent. Unique experience you can't do everywhere!"</p>
                 </div>
 
                 <div class="review-card">
@@ -1786,69 +1762,83 @@
                         <div class="reviewer-info">
                             <div class="reviewer-avatar">T</div>
                             <div>
-                                <div class="reviewer-name">Tom Anderson</div>
-                                <div class="reviewer-location">Stockholm, Sweden • Visited Oct 2025</div>
+                                <div class="reviewer-name">Tom Richards</div>
+                                <div class="reviewer-location">Dublin, Ireland • Visited Sep 2025</div>
+                            </div>
+                        </div>
+                        <div class="review-rating">4.6</div>
+                    </div>
+                    <p class="review-text">"Awesome adventure! Sandboarding Morocco is way more fun than I expected. Everyone in our group loved it - even my girlfriend who was skeptical. Getting sandy is part of the fun! The instructors took great videos of us. BBQ in the desert was a perfect ending. One of the most unique things we did in Morocco!"</p>
+                </div>
+
+                <div class="review-card">
+                    <div class="review-header">
+                        <div class="reviewer-info">
+                            <div class="reviewer-avatar">E</div>
+                            <div>
+                                <div class="reviewer-name">Emma Laurent</div>
+                                <div class="reviewer-location">Brussels, Belgium • Visited Oct 2025</div>
                             </div>
                         </div>
                         <div class="review-rating">5.0</div>
                     </div>
-                    <p class="review-text">"Best surf lessons I've taken (and I've tried surfing in 3 countries!). The small group size, quality equipment, and expert instruction made all the difference. My instructor had great ocean knowledge and teaching skills. Progressed more in 2 hours than previous lessons elsewhere. Worth every euro - book it!"</p>
+                    <p class="review-text">"Absolutely thrilling! The sandboarding and BBQ Agadir package was perfect. Loved the adrenaline of riding down huge dunes. The equipment was good quality and instructors were helpful and fun. The desert camp experience with mint tea and BBQ was authentic. Photos came out amazing! Definitely try this if you're in Agadir!"</p>
                 </div>
             </div>
 
             <!-- Why Choose Us Section -->
             <div class="tour-description" style="background: #f9f9f9; padding: 30px; border-radius: 15px;">
-                <h2>Why Book Your Surf Lessons with Our Agadir Surf School?</h2>
+                <h2>Why Book Your Sandboarding Adventure with The Local Guide?</h2>
                 <ul style="margin-left: 25px; color: #6B7280; line-height: 2; margin-top: 20px;">
-                    <li><strong>🏆 ISA-Certified Instructors:</strong> All instructors certified by International Surfing Association with proven teaching methods</li>
-                    <li><strong>🏄 Quality Equipment:</strong> Premium foam surfboards, full wetsuits, leashes - all included in lesson price</li>
-                    <li><strong>👥 Small Groups:</strong> Maximum 6 students per instructor for personalized attention and faster learning</li>
-                    <li><strong>⭐ Top-Rated:</strong> 4.9/5 rating from 415+ verified students who loved learning to surf with us</li>
-                    <li><strong>🎓 Beginner Specialists:</strong> 90% of first-timers stand up in their first lesson - proven teaching system!</li>
-                    <li><strong>🌊 Perfect Waves:</strong> Agadir Beach & Taghazout - ideal beginner-friendly waves with sandy bottoms</li>
-                    <li><strong>💰 Best Price:</strong> €35 for 2-hour group lesson - best value in Agadir with no hidden fees</li>
-                    <li><strong>🌐 Multi-Language:</strong> Instructors speak English, French, and Arabic fluently</li>
-                    <li><strong>📅 Flexible Schedule:</strong> Morning & afternoon lessons daily - easy online booking</li>
+                    <li><strong>🏆 Adventure Specialists:</strong> Years of experience running sandboarding tours on Agadir's best dunes</li>
+                    <li><strong>🏂 Professional Equipment:</strong> Quality sandboards designed specifically for desert conditions</li>
+                    <li><strong>👥 Small Groups:</strong> Maximum 12 people for personalized instruction and safety</li>
+                    <li><strong>⭐ Highly Rated:</strong> 4.7/5 rating from 198+ adventurous guests</li>
+                    <li><strong>🎓 Expert Instruction:</strong> Patient, experienced instructors who make learning easy and fun</li>
+                    <li><strong>💰 Complete Package:</strong> Equipment + instruction + transport + BBQ dinner - everything included</li>
+                    <li><strong>🚗 Convenient Pickup:</strong> Free hotel pickup from Agadir, Taghazout, and surrounding areas</li>
+                    <li><strong>🎥 Action Video & Photos:</strong> Instructors capture your best runs and epic wipe-outs!</li>
+                    <li><strong>📅 Easy Booking:</strong> Instant confirmation via WhatsApp or email</li>
                     <li><strong>🔄 Free Cancellation:</strong> Cancel up to 24 hours before for full refund – book with confidence</li>
-                    <li><strong>🏖️ Professional Facilities:</strong> Clean changing rooms, showers, equipment storage at beach base</li>
+                    <li><strong>🌍 Cultural Experience:</strong> Not just boarding - includes authentic Berber hospitality and cuisine</li>
                 </ul>
             </div>
 
             <!-- Related Tours Section -->
             <div class="tour-description">
-                <h2>Other Popular Agadir Water Sports & Activities</h2>
-                <p>Maximize your Agadir beach experience by combining your surf lesson with these popular activities:</p>
+                <h2>Other Popular Agadir Tours & Activities</h2>
+                <p>Maximize your Agadir experience by combining your sandboarding adventure with these popular activities:</p>
                 
                 <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 20px; margin-top: 25px;">
                     <div style="background: white; padding: 20px; border-radius: 10px; border: 2px solid #e0e0e0;">
-                        <h4 style="color: #1F2937; font-size: 1.2rem; margin-bottom: 10px;">🛥️ Boat Trip Agadir</h4>
-                        <p style="color: #6B7280; font-size: 14px; line-height: 1.6;">After your surf lesson, enjoy a relaxing boat cruise along Agadir's coastline with swimming and snorkeling.</p>
+                        <h4 style="color: #1F2937; font-size: 1.2rem; margin-bottom: 10px;">🏍️ Quad Biking Adventure</h4>
+                        <p style="color: #6B7280; font-size: 14px; line-height: 1.6;">Combine your morning in Paradise Valley with an afternoon quad biking experience through Agadir's desert and beaches.</p>
                     </div>
                     
                     <div style="background: white; padding: 20px; border-radius: 10px; border: 2px solid #e0e0e0;">
-                        <h4 style="color: #1F2937; font-size: 1.2rem; margin-bottom: 10px;">🚤 Jet Ski Adventure</h4>
-                        <p style="color: #6B7280; font-size: 14px; line-height: 1.6;">For adrenaline seekers! Jet ski on Atlantic waters - perfect complement to surfing for water sports enthusiasts.</p>
+                        <h4 style="color: #1F2937; font-size: 1.2rem; margin-bottom: 10px;">🐫 Sunset Camel Ride</h4>
+                        <p style="color: #6B7280; font-size: 14px; line-height: 1.6;">After Paradise Valley, enjoy a romantic sunset camel ride along Agadir beach. Perfect combo for a full day of adventure.</p>
                     </div>
                     
                     <div style="background: white; padding: 20px; border-radius: 10px; border: 2px solid #e0e0e0;">
-                        <h4 style="color: #1F2937; font-size: 1.2rem; margin-bottom: 10px;">🐴 Horse Riding Beach Tour</h4>
-                        <p style="color: #6B7280; font-size: 14px; line-height: 1.6;">Ride horses along Agadir's beach at sunset - a beautiful way to experience the coastline from a different perspective.</p>
+                        <h4 style="color: #1F2937; font-size: 1.2rem; margin-bottom: 10px;">🏜️ Souss Massa Desert Tour</h4>
+                        <p style="color: #6B7280; font-size: 14px; line-height: 1.6;">Explore the Souss Massa National Park and small Sahara dunes – another stunning natural area near Agadir.</p>
                     </div>
                     
                     <div style="background: white; padding: 20px; border-radius: 10px; border: 2px solid #e0e0e0;">
-                        <h4 style="color: #1F2937; font-size: 1.2rem; margin-bottom: 10px;">🏞️ Paradise Valley Tour</h4>
-                        <p style="color: #6B7280; font-size: 14px; line-height: 1.6;">Cool off after surfing with a trip to Paradise Valley - natural pools and waterfalls in the Atlas foothills.</p>
+                        <h4 style="color: #1F2937; font-size: 1.2rem; margin-bottom: 10px;">🏰 Essaouira Day Trip</h4>
+                        <p style="color: #6B7280; font-size: 14px; line-height: 1.6;">Visit the charming coastal city of Essaouira on a full-day excursion – perfect for your next day in Agadir.</p>
                     </div>
                 </div>
             </div>
 
             <!-- Bottom CTA -->
             <div style="background: linear-gradient(135deg, #8B5CF6 0%, #7C3AED 100%); padding: 40px; border-radius: 16px; text-align: center; margin: 50px 0; color: white; box-shadow: 0 8px 32px rgba(0,0,0,0.12);">
-                <h2 style="color: white; font-size: 2rem; margin-bottom: 15px; font-family: 'Inter', sans-serif;">Ready to Catch Your First Wave?</h2>
-                <p style="font-size: 1.1rem; margin-bottom: 25px; opacity: 0.95;">Book your surf lesson in Agadir today and experience the thrill of riding Atlantic waves with expert instructors!</p>
+                <h2 style="color: white; font-size: 2rem; margin-bottom: 15px; font-family: 'Inter', sans-serif;">Ready to Surf the Desert Dunes?</h2>
+                <p style="font-size: 1.1rem; margin-bottom: 25px; opacity: 0.95;">Book your sandboarding in Agadir adventure today and experience the thrill of desert sand surfing!</p>
                 <div style="display: flex; gap: 15px; justify-content: center; flex-wrap: wrap;">
                     <a href="contact.html" style="background: #cdff03; color: #000000; padding: 16px 32px; border-radius: 6px; text-decoration: none; font-weight: 700; font-size: 1.1rem; display: inline-block;">Book Now</a>
-                    <a href="https://wa.me/212645792457?text=Hi! I'm interested in surf lessons in Agadir" target="_blank" style="background: #8449f2; color: white; padding: 16px 32px; border-radius: 6px; text-decoration: none; font-weight: 700; font-size: 1.1rem; display: inline-block;">Book via WhatsApp</a>
+                    <a href="https://wa.me/212645792457?text=Hi! I'm interested in the sandboarding in Agadir desert adventure tour" target="_blank" style="background: #8449f2; color: white; padding: 16px 32px; border-radius: 6px; text-decoration: none; font-weight: 700; font-size: 1.1rem; display: inline-block;">Book via WhatsApp</a>
                 </div>
             </div>
         </div>
@@ -1857,9 +1847,9 @@
         <aside class="booking-sidebar">
             <div class="booking-card">
                 <div class="price-section">
-                    <div class="price-label">Group Lesson</div>
-                    <div class="price">€35<span class="price-unit"> / person</span></div>
-                    <p style="font-size: 13px; color: #999; margin-top: 8px;">All equipment included • 2-hour lesson</p>
+                    <div class="price-label">From</div>
+                    <div class="price">€50<span class="price-unit"> / person</span></div>
+                    <p style="font-size: 13px; color: #999; margin-top: 8px;">All-inclusive package • Equipment + BBQ</p>
                 </div>
 
                                 <!-- Booking Buttons -->
@@ -1867,7 +1857,7 @@
                     <a href="#booking-link" class="primary-book-btn">
                         Book Now
                     </a>
-                    <a href="https://wa.me/212645792457?text=Hi! I'm interested in the Surf Lessons" target="_blank" class="whatsapp-book-btn">
+                    <a href="https://wa.me/212645792457?text=Hi! I'm interested in the Sandboarding tour" target="_blank" class="whatsapp-book-btn">
                         Book via WhatsApp
                     </a>
                 </div>
@@ -1984,7 +1974,7 @@
                 const nextBtn = slider.querySelector('.ss-next');
                 const dotsContainer = slider.querySelector('.ss-dots');
                 const thumbsContainer = document.querySelector('.ss-thumbs');
-            let currentIndex = 0;
+                let currentIndex = 0;
 
                 function goTo(index) {
                     slides[currentIndex].classList.remove('active');
@@ -2036,7 +2026,7 @@
                 prevBtn.addEventListener('click', () => goTo(currentIndex - 1));
                 nextBtn.addEventListener('click', () => goTo(currentIndex + 1));
 
-            document.addEventListener('keydown', (e) => {
+                document.addEventListener('keydown', (e) => {
                     if (e.key === 'ArrowLeft') goTo(currentIndex - 1);
                     if (e.key === 'ArrowRight') goTo(currentIndex + 1);
                 });
@@ -2045,14 +2035,6 @@
                 renderThumbs();
             }
 
-            // FAQ Accordion
-            $('.faq-question').on('click', function() {
-                const faqItem = $(this).parent();
-                const wasActive = faqItem.hasClass('active');
-                $('.faq-item').removeClass('active');
-                if (!wasActive) { faqItem.addClass('active'); }
-            });
-
             // Set minimum date to today (guarded)
             (function(){
                 const dateEl = document.getElementById('tour-date');
@@ -2060,51 +2042,6 @@
             })();
         });
     </script>
-<script>
-const hamburger=document.getElementById("hamburger");
-const mobileMenu=document.getElementById("mobileMenu");
-const closeMenu=mobileMenu?mobileMenu.querySelector(".close-menu"):null;
-if(hamburger&&mobileMenu){hamburger.addEventListener("click",()=>{mobileMenu.classList.add("active");hamburger.classList.add("active")});}
-if(closeMenu){closeMenu.addEventListener("click",()=>{mobileMenu.classList.remove("active");hamburger&&hamburger.classList.remove("active")});}
-if(mobileMenu){mobileMenu.querySelectorAll("a").forEach(a=>a.addEventListener("click",()=>{mobileMenu.classList.remove("active");hamburger&&hamburger.classList.remove("active")}));}
-</script>
-<script>
-// Desktop-only: build premium carousel from existing slides
-(() => {
-  if (window.matchMedia('(max-width: 1023.98px)').matches) return;
-  const host = document.querySelector('.tour-carousel');
-  const imgs = Array.from(document.querySelectorAll('.tour-detail-hero .simple-slider .slide img'));
-  if (!host || imgs.length === 0) return;
-  const stage = document.createElement('div'); stage.className = 'tc-stage';
-  const prev = document.createElement('button'); prev.className = 'tc-nav tc-prev'; prev.setAttribute('aria-label','Previous photo'); prev.textContent = '❮';
-  const next = document.createElement('button'); next.className = 'tc-nav tc-next'; next.setAttribute('aria-label','Next photo'); next.textContent = '❯';
-  const image = document.createElement('img'); image.className = 'tc-image';
-  const cap = document.createElement('div'); cap.className = 'tc-caption';
-  stage.appendChild(prev); stage.appendChild(image); stage.appendChild(cap); stage.appendChild(next);
-  const thumbs = document.createElement('div'); thumbs.className = 'tc-thumbs'; thumbs.setAttribute('role','tablist'); thumbs.setAttribute('aria-label','Photo thumbnails');
-  host.appendChild(stage); host.appendChild(thumbs);
-  const data = imgs.map(im => ({ src: im.getAttribute('src') || '', caption: im.getAttribute('alt') || 'Tour photo' }));
-  data.forEach((d) => { const b = document.createElement('button'); b.className = 'tc-thumb'; b.setAttribute('role','tab'); b.setAttribute('aria-selected','false'); b.dataset.full = d.src; b.dataset.caption = d.caption; const ti = document.createElement('img'); ti.src = d.src; ti.alt = 'Thumb'; b.appendChild(ti); thumbs.appendChild(b); });
-  const thumbButtons = Array.from(thumbs.querySelectorAll('.tc-thumb'));
-  let index = 0;
-  function setActive(i, animate = true){
-    index = (i + thumbButtons.length) % thumbButtons.length;
-    const t = thumbButtons[index];
-    thumbButtons.forEach(btn => { const active = btn === t; btn.classList.toggle('is-active', active); btn.setAttribute('aria-selected', active ? 'true':'false'); });
-    if (animate) image.style.opacity = 0.35;
-    image.src = t.dataset.full || '';
-    image.alt = t.dataset.caption || 'Tour photo';
-    cap.textContent = t.dataset.caption || '';
-    if (animate) requestAnimationFrame(() => (image.style.opacity = 1));
-    t.scrollIntoView({ block: 'nearest', inline: 'center', behavior: 'smooth' });
-  }
-  thumbButtons.forEach((b, i) => b.addEventListener('click', () => setActive(i)));
-  prev.addEventListener('click', () => setActive(index - 1));
-  next.addEventListener('click', () => setActive(index + 1));
-  host.addEventListener('keydown', (e) => { if (e.key === 'ArrowLeft') setActive(index - 1); if (e.key === 'ArrowRight') setActive(index + 1); });
-  setActive(0, false);
-})();
-</script>
 </body>
 </html>
 

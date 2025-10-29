@@ -460,11 +460,125 @@
             padding: 0;
             margin-top: 60px;
         }
+        /* Default: keep new desktop carousel hidden on mobile/tablet */
+        .tour-carousel { display: none; }
 
         .footer-partners {
             background: rgba(0, 0, 0, 0.2);
             padding: 30px 0;
             border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        /* ---- Desktop-only carousel overrides ---- */
+        @media (min-width: 1024px) {
+            /* Hide legacy slider on desktop; show new premium carousel */
+            .simple-slider, .ss-thumbs { display: none !important; }
+            .tour-carousel { display: block; }
+
+            .tour-carousel {
+                --radius: 20px;
+                --shadow: 0 20px 40px rgba(0,0,0,.15);
+                --glass: rgba(255,255,255,.2);
+                --glass-border: rgba(255,255,255,.35);
+                --accent: #ffffff;
+                max-width: min(1200px, 92vw);
+                margin: 32px auto 0;
+                font-family: system-ui, -apple-system, Segoe UI, Roboto, 'Helvetica Neue', Arial, sans-serif;
+            }
+
+            .tour-carousel .tc-stage {
+                position: relative;
+                border-radius: var(--radius);
+                overflow: clip;
+                box-shadow: var(--shadow);
+                background: #000;
+                isolation: isolate;
+            }
+
+            .tour-carousel .tc-image {
+                width: 100%;
+                height: auto;
+                aspect-ratio: 16/9;
+                object-fit: cover;
+                display: block;
+                transition: opacity .6s ease;
+            }
+
+            .tour-carousel .tc-nav {
+                position: absolute;
+                top: 50%;
+                translate: 0 -50%;
+                width: 46px;
+                height: 46px;
+                border-radius: 50%;
+                border: 1px solid var(--glass-border);
+                background: var(--glass);
+                backdrop-filter: blur(10px);
+                color: var(--accent);
+                display: grid;
+                place-items: center;
+                cursor: pointer;
+                transition: transform .15s ease, background .15s ease, opacity .15s ease;
+                opacity: .9;
+                z-index: 2;
+            }
+            .tour-carousel .tc-prev { left: 14px; }
+            .tour-carousel .tc-next { right: 14px; }
+            .tour-carousel .tc-nav:hover { transform: scale(1.08); background: rgba(255,255,255,.35); }
+            .tour-carousel .tc-nav:active { transform: scale(0.98); }
+
+            .tour-carousel .tc-caption {
+                position: absolute;
+                inset: auto 0 0 0;
+                padding: 18px 20px 22px;
+                color: #fff;
+                font-size: 1.05rem;
+                font-weight: 500;
+                background: linear-gradient(to top, rgba(0,0,0,.65), rgba(0,0,0,0));
+                letter-spacing: .2px;
+                z-index: 1;
+            }
+
+            .tour-carousel .tc-thumbs {
+                margin-top: 14px;
+                display: grid;
+                grid-auto-flow: column;
+                grid-auto-columns: minmax(120px, 1fr);
+                gap: 12px;
+                overflow-x: auto;
+                padding: 6px 2px;
+                scrollbar-width: none;
+            }
+            .tour-carousel .tc-thumbs::-webkit-scrollbar { display: none; }
+
+            .tour-carousel .tc-thumb {
+                position: relative;
+                border: none;
+                background: transparent;
+                padding: 0;
+                cursor: pointer;
+                border-radius: 12px;
+                overflow: hidden;
+                outline-offset: 3px;
+                transition: transform .2s ease, box-shadow .2s ease, opacity .2s ease;
+                opacity: .85;
+            }
+            .tour-carousel .tc-thumb:hover { transform: translateY(-2px); opacity: 1; }
+            .tour-carousel .tc-thumb.is-active {
+                opacity: 1;
+                box-shadow: 0 10px 22px rgba(0,0,0,.18);
+            }
+            .tour-carousel .tc-thumb img {
+                width: 100%;
+                height: 84px;
+                object-fit: cover;
+                display: block;
+            }
+
+            @media (prefers-reduced-motion: reduce) {
+                .tour-carousel .tc-image { transition: none; }
+                .tour-carousel .tc-thumb { transition: none; }
+                .tour-carousel .tc-nav { transition: none; }
+            }
         }
 
         .partner-logos {
@@ -797,6 +911,40 @@
             <div class="ss-dots" aria-label="Slide navigation"></div>
         </div>
         <div class="ss-thumbs" aria-label="Slide thumbnails"></div>
+
+        <!-- Desktop-only premium carousel (mobile remains untouched) -->
+        <section class="tour-carousel" aria-label="Tour photo gallery">
+            <div class="tc-stage">
+                <button class="tc-nav tc-prev" aria-label="Previous photo">❮</button>
+                <img class="tc-image" src="img/excursions/Quad Biking/quad 1.jpg" alt="Quad biking Agadir desert adventure">
+                <div class="tc-caption">Desert Dunes — Agadir Quad Adventure</div>
+                <button class="tc-nav tc-next" aria-label="Next photo">❯</button>
+            </div>
+
+            <div class="tc-thumbs" role="tablist" aria-label="Photo thumbnails">
+                <button class="tc-thumb is-active" role="tab" aria-selected="true" data-full="img/excursions/Quad Biking/quad 1.jpg" data-caption="Desert Dunes — Agadir Quad Adventure">
+                    <img src="img/excursions/Quad Biking/quad 1.jpg" alt="Thumb: Desert dunes">
+                </button>
+                <button class="tc-thumb" role="tab" aria-selected="false" data-full="img/excursions/Quad Biking/quad 2.webp" data-caption="Dune Ride — Timlaline Dunes">
+                    <img src="img/excursions/Quad Biking/quad 2.webp" alt="Thumb: Dune ride">
+                </button>
+                <button class="tc-thumb" role="tab" aria-selected="false" data-full="img/excursions/Quad Biking/quad 3.jpg" data-caption="Desert Landscape — Agadir Outskirts">
+                    <img src="img/excursions/Quad Biking/quad 3.jpg" alt="Thumb: Desert landscape">
+                </button>
+                <button class="tc-thumb" role="tab" aria-selected="false" data-full="img/excursions/Quad Biking/quad 4.jpeg" data-caption="Beach Ride — Wild Atlantic Coast">
+                    <img src="img/excursions/Quad Biking/quad 4.jpeg" alt="Thumb: Beach ride">
+                </button>
+                <button class="tc-thumb" role="tab" aria-selected="false" data-full="img/excursions/Quad Biking/quad 5.jpeg" data-caption="Berber Village Stop — Cultural Break">
+                    <img src="img/excursions/Quad Biking/quad 5.jpeg" alt="Thumb: Berber village">
+                </button>
+                <button class="tc-thumb" role="tab" aria-selected="false" data-full="img/excursions/Quad Biking/quad 6.JPG" data-caption="Sand Dunes — Thrilling Climbs">
+                    <img src="img/excursions/Quad Biking/quad 6.JPG" alt="Thumb: Sand dunes">
+                </button>
+                <button class="tc-thumb" role="tab" aria-selected="false" data-full="img/excursions/Quad Biking/quad 7.JPG" data-caption="Adventure Moments — Agadir Desert">
+                    <img src="img/excursions/Quad Biking/quad 7.JPG" alt="Thumb: Adventure moments">
+                </button>
+            </div>
+        </section>
     </section>
 
 
@@ -1495,6 +1643,53 @@
             const dateEl = document.getElementById('tour-date');
             if (dateEl) { dateEl.min = new Date().toISOString().split('T')[0]; }
         })();
+    </script>
+    <script>
+    /* Desktop-only premium carousel controller (mobile untouched) */
+    (() => {
+        const root = document.querySelector('.tour-carousel');
+        if (!root || window.matchMedia('(max-width: 1023.98px)').matches) return;
+
+        const img = root.querySelector('.tc-image');
+        const caption = root.querySelector('.tc-caption');
+        const thumbs = Array.from(root.querySelectorAll('.tc-thumb'));
+        const prev = root.querySelector('.tc-prev');
+        const next = root.querySelector('.tc-next');
+
+        let index = 0;
+
+        function setActive(i, animate = true) {
+            index = (i + thumbs.length) % thumbs.length;
+            const t = thumbs[index];
+            thumbs.forEach(b => {
+                const active = b === t;
+                b.classList.toggle('is-active', active);
+                b.setAttribute('aria-selected', active ? 'true' : 'false');
+            });
+
+            if (animate) img.style.opacity = 0.35;
+            const src = t.dataset.full;
+            const text = t.dataset.caption || '';
+            const doSwap = () => {
+                img.src = src;
+                img.alt = text || 'Tour photo';
+                caption.textContent = text;
+                if (animate) requestAnimationFrame(() => (img.style.opacity = 1));
+            };
+            doSwap();
+            t.scrollIntoView({ block: 'nearest', inline: 'center', behavior: 'smooth' });
+        }
+
+        thumbs.forEach((b, i) => b.addEventListener('click', () => setActive(i)));
+        prev.addEventListener('click', () => setActive(index - 1));
+        next.addEventListener('click', () => setActive(index + 1));
+        root.addEventListener('keydown', (e) => {
+            if (e.key === 'ArrowLeft') setActive(index - 1);
+            if (e.key === 'ArrowRight') setActive(index + 1);
+        });
+
+        setActive(0, false);
+    })();
     </script>
 <script>
 const hamburger=document.getElementById("hamburger");

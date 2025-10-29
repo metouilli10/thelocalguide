@@ -1030,6 +1030,27 @@ in the meu<!DOCTYPE html>
                 font-size: 12px;
             }
         }</style>
+    <style>
+    .tour-carousel { display: none; }
+    @media (min-width: 1024px) {
+      .simple-slider, .ss-thumbs { display: none !important; }
+      .tour-carousel { display: block; --radius:20px; --shadow:0 20px 40px rgba(0,0,0,.15); --glass:rgba(255,255,255,.2); --glass-border:rgba(255,255,255,.35); --accent:#fff; max-width:min(1200px,92vw); margin:32px auto 0; }
+      .tour-carousel .tc-stage{position:relative;border-radius:var(--radius);overflow:clip;box-shadow:var(--shadow);background:#000;isolation:isolate}
+      .tour-carousel .tc-image{width:100%;height:auto;aspect-ratio:16/9;object-fit:cover;display:block;transition:opacity .6s ease}
+      .tour-carousel .tc-nav{position:absolute;top:50%;translate:0 -50%;width:46px;height:46px;border-radius:50%;border:1px solid var(--glass-border);background:var(--glass);backdrop-filter:blur(10px);color:var(--accent);display:grid;place-items:center;cursor:pointer;transition:transform .15s ease,background .15s ease,opacity .15s ease;opacity:.9;z-index:2}
+      .tour-carousel .tc-prev{left:14px}
+      .tour-carousel .tc-next{right:14px}
+      .tour-carousel .tc-nav:hover{transform:scale(1.08);background:rgba(255,255,255,.35)}
+      .tour-carousel .tc-nav:active{transform:scale(.98)}
+      .tour-carousel .tc-caption{position:absolute;inset:auto 0 0 0;padding:18px 20px 22px;color:#fff;font-size:1.05rem;font-weight:500;background:linear-gradient(to top,rgba(0,0,0,.65),rgba(0,0,0,0));letter-spacing:.2px;z-index:1}
+      .tour-carousel .tc-thumbs{margin-top:14px;display:grid;grid-auto-flow:column;grid-auto-columns:minmax(120px,1fr);gap:12px;overflow-x:auto;padding:6px 2px;scrollbar-width:none}
+      .tour-carousel .tc-thumbs::-webkit-scrollbar{display:none}
+      .tour-carousel .tc-thumb{position:relative;border:none;background:transparent;padding:0;cursor:pointer;border-radius:12px;overflow:hidden;outline-offset:3px;transition:transform .2s ease,box-shadow .2s ease,opacity .2s ease;opacity:.85}
+      .tour-carousel .tc-thumb:hover{transform:translateY(-2px);opacity:1}
+      .tour-carousel .tc-thumb.is-active{opacity:1;box-shadow:0 10px 22px rgba(0,0,0,.18)}
+      .tour-carousel .tc-thumb img{width:100%;height:84px;object-fit:cover;display:block}
+    }
+    </style>
 </head>
 <body>
     <!-- Mobile Menu -->
@@ -1107,6 +1128,8 @@ in the meu<!DOCTYPE html>
             <div class="ss-dots" aria-label="Slide navigation"></div>
         </div>
         <div class="ss-thumbs" aria-label="Slide thumbnails"></div>
+        <!-- Desktop-only premium carousel container (built by JS) -->
+        <section class="tour-carousel" aria-label="Tour photo gallery"></section>
     </section>
 
     <!-- Tour Content -->
@@ -1834,5 +1857,43 @@ if(closeMenu){closeMenu.addEventListener("click",()=>{mobileMenu.classList.remov
 if(mobileMenu){mobileMenu.querySelectorAll("a").forEach(a=>a.addEventListener("click",()=>{mobileMenu.classList.remove("active");hamburger&&hamburger.classList.remove("active")}));}
 </script>
 </body>
+</html>
+<script>
+// Desktop-only: build premium carousel from existing slides
+(() => {
+  if (window.matchMedia('(max-width: 1023.98px)').matches) return;
+  const host = document.querySelector('.tour-carousel');
+  const imgs = Array.from(document.querySelectorAll('.tour-detail-hero .simple-slider .slide img'));
+  if (!host || imgs.length === 0) return;
+  const stage = document.createElement('div'); stage.className = 'tc-stage';
+  const prev = document.createElement('button'); prev.className = 'tc-nav tc-prev'; prev.setAttribute('aria-label','Previous photo'); prev.textContent = '❮';
+  const next = document.createElement('button'); next.className = 'tc-nav tc-next'; next.setAttribute('aria-label','Next photo'); next.textContent = '❯';
+  const image = document.createElement('img'); image.className = 'tc-image';
+  const cap = document.createElement('div'); cap.className = 'tc-caption';
+  stage.appendChild(prev); stage.appendChild(image); stage.appendChild(cap); stage.appendChild(next);
+  const thumbs = document.createElement('div'); thumbs.className = 'tc-thumbs'; thumbs.setAttribute('role','tablist'); thumbs.setAttribute('aria-label','Photo thumbnails');
+  host.appendChild(stage); host.appendChild(thumbs);
+  const data = imgs.map(im => ({ src: im.getAttribute('src') || '', caption: im.getAttribute('alt') || 'Tour photo' }));
+  data.forEach((d) => { const b = document.createElement('button'); b.className = 'tc-thumb'; b.setAttribute('role','tab'); b.setAttribute('aria-selected','false'); b.dataset.full = d.src; b.dataset.caption = d.caption; const ti = document.createElement('img'); ti.src = d.src; ti.alt = 'Thumb'; b.appendChild(ti); thumbs.appendChild(b); });
+  const thumbButtons = Array.from(thumbs.querySelectorAll('.tc-thumb'));
+  let index = 0;
+  function setActive(i, animate = true){
+    index = (i + thumbButtons.length) % thumbButtons.length;
+    const t = thumbButtons[index];
+    thumbButtons.forEach(btn => { const active = btn === t; btn.classList.toggle('is-active', active); btn.setAttribute('aria-selected', active ? 'true':'false'); });
+    if (animate) image.style.opacity = 0.35;
+    image.src = t.dataset.full || '';
+    image.alt = t.dataset.caption || 'Tour photo';
+    cap.textContent = t.dataset.caption || '';
+    if (animate) requestAnimationFrame(() => (image.style.opacity = 1));
+    t.scrollIntoView({ block: 'nearest', inline: 'center', behavior: 'smooth' });
+  }
+  thumbButtons.forEach((b, i) => b.addEventListener('click', () => setActive(i)));
+  prev.addEventListener('click', () => setActive(index - 1));
+  next.addEventListener('click', () => setActive(index + 1));
+  host.addEventListener('keydown', (e) => { if (e.key === 'ArrowLeft') setActive(index - 1); if (e.key === 'ArrowRight') setActive(index + 1); });
+  setActive(0, false);
+})();
+</script>
 </html>
 

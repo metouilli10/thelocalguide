@@ -1,5 +1,5 @@
 # robots.txt for The Local Guide Morocco
-# https://www.thelocalguide.ma/
+# https://agadirlocalguide.com/
 
 User-agent: *
 Allow: /
@@ -15,7 +15,7 @@ Allow: /js/
 Allow: /img/
 
 # Sitemap location
-Sitemap: https://www.thelocalguide.ma/sitemap.xml
+Sitemap: https://agadirlocalguide.com/sitemap.xml
 
 # Crawl-delay (optional - adjust based on server capacity)
 Crawl-delay: 1

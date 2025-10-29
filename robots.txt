@@ -1,4 +1,4 @@
-# robots.txt for The Local Guide Morocco
+# robots.txt for Agadir Local Guide
 # https://agadirlocalguide.com/
 
 User-agent: *

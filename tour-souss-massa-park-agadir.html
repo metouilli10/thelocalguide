@@ -67,229 +67,36 @@
     <style>
         body {
             font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Lato', 'Helvetica Neue', Arial, sans-serif;
+            word-wrap: break-word;
+            overflow-wrap: break-word;
+            hyphens: auto;
+        }
+        
+        * {
+            box-sizing: border-box;
         }
         
         .tour-detail-hero { position: relative; height: auto; overflow: hidden; margin-top: 95px; }
         
-        /* Civitatis 5-Photo Layout CSS */
-        .tour-gallery {
-            --gap: 12px;
-            --radius: 16px;
-            --black: #000;
-            --white: #fff;
-        }
+        /* Simple Slider CSS - Match Sandboarding Tour */
+        .simple-slider { position: relative; height: clamp(260px, 50vw, 520px); border-radius: 16px; overflow: hidden; }
+        .simple-slider .slides { position: relative; height: 100%; }
+        .simple-slider .slide { position: absolute; inset: 0; opacity: 0; transition: opacity 0.35s ease; }
+        .simple-slider .slide.active { opacity: 1; }
+        .simple-slider img { width: 100%; height: 100%; object-fit: cover; display: block; }
+        .ss-prev, .ss-next { position: absolute; top: 50%; transform: translateY(-50%); background: rgba(0,0,0,0.5); color: #fff; border: 0; width: 46px; height: 46px; border-radius: 50%; font-size: 22px; cursor: pointer; z-index: 5; display: flex; align-items: center; justify-content: center; }
+        .ss-prev { left: 16px; }
+        .ss-next { right: 16px; }
+        .ss-dots { position: absolute; bottom: 14px; left: 50%; transform: translateX(-50%); display: flex; gap: 8px; z-index: 5; }
+        .ss-dot { width: 8px; height: 8px; border-radius: 50%; background: rgba(255,255,255,0.6); border: 0; padding: 0; cursor: pointer; }
+        .ss-dot.active { background: #fff; }
         
-        .tg-preview {
-            height: clamp(260px, 50vw, 520px);
-        }
-        
-        .tg-grid {
-            height: 100%;
-            display: grid;
-            grid-template-columns: 1fr;
-            gap: 12px;
-            align-items: stretch;
-        }
-        
-        @media (min-width: 768px) {
-            .tg-grid {
-                grid-template-columns: 2fr 1fr;
-                grid-template-rows: 1fr;
-            }
-            .tg-hero {
-                grid-row: 1;
-                grid-column: 1;
-            }
-            .tg-right {
-                grid-row: 1;
-                grid-column: 2;
-                height: 100%;
-                display: grid;
-                grid-template-columns: 1fr 1fr;
-                grid-template-rows: 1fr 1fr;
-                gap: 12px;
-                align-items: stretch;
-            }
-        }
-        
-        .tg-item {
-            position: relative;
-            display: block;
-            overflow: hidden;
-            border-radius: 16px;
-            border: 0;
-            padding: 0;
-            cursor: pointer;
-        }
-        
-        .tg-hero, .tg-hero img {
-            height: 100%;
-        }
-        
-        .tg-hero img {
-            width: 100%;
-            object-fit: cover;
-            display: block;
-        }
-        
-        .tg-right .tg-item {
-            height: 100%;
-            display: flex;
-        }
-        
-        .tg-right .tg-item img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            display: block;
-            flex: 1;
-        }
-        
-        .tg-item img {
-            transition: transform 0.3s ease;
-        }
-        
-        .tg-item:hover img {
-            transform: scale(1.02);
-        }
-        
-        .tg-see-more {
-            position: absolute;
-            right: 16px;
-            bottom: 16px;
-            display: flex;
-            align-items: center;
-            gap: 0.5rem;
-            padding: 12px 16px;
-            border-radius: 999px;
-            border: 0;
-            cursor: pointer;
-            background: #fff;
-            color: #111;
-            font-weight: 600;
-            box-shadow: 0 6px 20px rgba(0,0,0,0.18);
-        }
-        
-        .tg-see-more .tg-arrow {
-            font-size: 20px;
-            line-height: 1;
-        }
-        
-        /* Lightbox styles */
-        .tg-lightbox {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: rgba(0, 0, 0, 0.9);
-            z-index: 1000;
-            display: none;
-            align-items: center;
-            justify-content: center;
-        }
-        
-        .tg-lightbox-content {
-            position: relative;
-            width: 90%;
-            height: 90%;
-            max-width: 1200px;
-            max-height: 800px;
-        }
-        
-        .tg-close {
-            position: absolute;
-            top: -50px;
-            right: 0;
-            background: none;
-            border: none;
-            color: white;
-            font-size: 30px;
-            cursor: pointer;
-            z-index: 1001;
-        }
-        
-        .tg-main {
-            position: relative;
-            height: 80%;
-            margin-bottom: 20px;
-        }
-        
-        .tg-main .swiper-wrapper {
-            height: 100%;
-        }
-        
-        .tg-main .swiper-slide {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        }
-        
-        .tg-main .swiper-slide img {
-            max-width: 100%;
-            max-height: 100%;
-            object-fit: contain;
-        }
-        
-        .tg-thumbs {
-            height: 20%;
-        }
-        
-        .tg-thumbs .swiper-wrapper {
-            height: 100%;
-            display: flex;
-            gap: 10px;
-        }
-        
-        .tg-thumbs .swiper-slide {
-            width: auto;
-            height: 100%;
-        }
-        
-        .tg-thumbs .swiper-slide img {
-            height: 100%;
-            width: auto;
-            object-fit: cover;
-            border-radius: 8px;
-            cursor: pointer;
-            opacity: 0.7;
-            transition: opacity 0.3s;
-        }
-        
-        .tg-thumbs .swiper-slide.active img {
-            opacity: 1;
-        }
-        
-        .swiper-button-prev,
-        .swiper-button-next {
-            position: absolute;
-            top: 50%;
-            transform: translateY(-50%);
-            width: 50px;
-            height: 50px;
-            background: rgba(255, 255, 255, 0.2);
-            border-radius: 50%;
-            color: white;
-            font-size: 20px;
-            cursor: pointer;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            z-index: 1001;
-        }
-        
-        .swiper-button-prev {
-            left: 20px;
-        }
-        
-        .swiper-button-next {
-            right: 20px;
-        }
+        /* Thumbnails under main image */
+        .ss-thumbs { display: flex; align-items: center; justify-content: flex-start; gap: 10px; margin-top: 12px; overflow-x: auto; padding-bottom: 6px; }
+        .ss-thumbs::-webkit-scrollbar { height: 6px; }
+        .ss-thumb { width: 72px; height: 56px; border-radius: 8px; overflow: hidden; border: 2px solid transparent; opacity: 0.7; cursor: pointer; flex: 0 0 auto; }
+        .ss-thumb.active { opacity: 1; border-color: #8B5CF6; }
+        .ss-thumb img { width: 100%; height: 100%; object-fit: cover; display: block; }
         
         .tour-content-wrapper {
             max-width: 1400px;
@@ -298,10 +105,13 @@
             display: grid;
             grid-template-columns: 1fr 400px;
             gap: 40px;
+            word-wrap: break-word;
+            overflow-wrap: break-word;
         }
         
         .tour-main-content {
             padding-right: 40px;
+            min-width: 0; /* Fix for grid item overflow */
         }
         
         .tour-header {
@@ -826,95 +636,309 @@
         }
         
         @media (max-width: 768px) {
-            /* Mobile Photo Slider - Enhanced */
-            .tour-detail-hero {
-                position: relative;
-                overflow: hidden;
+            /* Global mobile adjustments */
+            .tour-content-wrapper {
+                padding: 30px 15px 160px;
             }
             
-            .tour-gallery {
-                display: flex;
-                overflow-x: scroll;
-                overflow-y: hidden;
-                scroll-snap-type: x mandatory;
-                -webkit-overflow-scrolling: touch;
-                scroll-behavior: smooth;
-                scrollbar-width: none;
-                height: 300px;
-                gap: 0;
-                grid-template-columns: none !important;
-                grid-template-rows: none !important;
-                width: 100%;
-                position: relative;
-            }
-            
-            .tour-gallery::-webkit-scrollbar {
-                display: none;
-            }
-            
-            .tour-gallery img {
-                flex: 0 0 100%;
-                min-width: 100%;
-                width: 100%;
-                height: 300px;
-                object-fit: cover;
-                scroll-snap-align: center;
-                scroll-snap-stop: always;
-                pointer-events: auto;
-                user-select: none;
-                -webkit-user-drag: none;
-            }
-            
-            .tour-gallery .main-image {
-                grid-row: auto;
-                order: 0;
-            }
-            
-            /* Swipe indicator */
-            .tour-detail-hero::after {
-                content: '← Swipe →';
-                position: absolute;
-                bottom: 320px;
-                left: 50%;
-                transform: translateX(-50%);
-                background: rgba(0,0,0,0.6);
-                color: white;
-                padding: 8px 20px;
-                border-radius: 20px;
+            .breadcrumb {
+                padding: 20px 15px 0;
                 font-size: 12px;
-                font-weight: 600;
-                z-index: 10;
-                animation: fadeOut 3s forwards;
             }
             
-            @keyframes fadeOut {
-                0%, 50% { opacity: 1; }
-                100% { opacity: 0; }
+            .simple-slider { height: 300px; border-radius: 0; }
+            .ss-prev, .ss-next { width: 40px; height: 40px; font-size: 20px; }
+            .tour-title { font-size: 1.5rem; line-height: 1.3; margin-bottom: 12px; }
+            .tour-subtitle { font-size: 0.95rem; line-height: 1.5; margin-bottom: 15px; }
+            .tour-detail-hero { margin-top: 72px; padding: 0; }
+            .tour-detail-hero > div { padding: 0 !important; }
+            .ss-thumbs { padding: 0 20px 12px; }
+            
+            /* Tour header mobile */
+            .tour-header {
+                margin-bottom: 20px;
             }
             
-            .view-all-photos {
-                position: relative;
-                bottom: auto;
-                right: auto;
-                margin: 15px auto;
+            .tour-rating {
+                flex-wrap: wrap;
+                gap: 10px;
+                margin-bottom: 15px;
+            }
+            
+            .rating-score {
+                font-size: 1rem;
+                padding: 6px 12px;
+            }
+            
+            .tour-badges {
+                gap: 8px;
+            }
+            
+            .badge {
+                font-size: 12px;
+                padding: 6px 12px;
+            }
+            
+            /* Tour description mobile */
+            .tour-description h2,
+            .tour-description h3 {
+                font-size: 1.4rem !important;
+                margin-bottom: 15px;
+            }
+            
+            .tour-description p {
+                font-size: 0.95rem;
+                line-height: 1.7;
+                margin-bottom: 12px;
+                word-wrap: break-word;
+                overflow-wrap: break-word;
+            }
+            
+            .tour-description ul {
+                margin-left: 20px !important;
+                padding-right: 10px;
+            }
+            
+            .tour-description li {
+                font-size: 0.95rem !important;
+                line-height: 1.7 !important;
+                margin-bottom: 8px;
+                word-wrap: break-word;
+                overflow-wrap: break-word;
+            }
+            
+            /* Tour highlights mobile */
+            .tour-highlights {
+                padding: 20px 15px;
+                margin: 30px 0;
+            }
+            
+            .tour-highlights h2 {
+                font-size: 1.4rem !important;
+                margin-bottom: 15px;
+            }
+            
+            .highlight-text {
+                font-size: 0.95rem !important;
+                line-height: 1.7;
+                word-wrap: break-word;
+                overflow-wrap: break-word;
+            }
+            
+            .highlight-item {
+                flex-direction: column;
+                gap: 8px;
+            }
+            
+            .highlight-icon {
+                margin-top: 0;
+            }
+            
+            /* Itinerary mobile */
+            .itinerary-section {
+                margin: 30px 0;
+            }
+            
+            .itinerary-section h2 {
+                font-size: 1.4rem !important;
+                margin-bottom: 20px;
+            }
+            
+            .itinerary-item {
+                padding: 20px 15px;
+                margin-bottom: 15px;
+            }
+            
+            .itinerary-time {
+                font-size: 1rem;
+                margin-bottom: 8px;
+            }
+            
+            .itinerary-title {
+                font-size: 1.1rem;
+                margin-bottom: 8px;
+            }
+            
+            .itinerary-item p {
+                font-size: 0.95rem !important;
+                line-height: 1.7;
+                word-wrap: break-word;
+                overflow-wrap: break-word;
+            }
+            
+            /* Included section mobile */
+            .included-section {
+                padding: 20px 15px;
+                margin: 30px 0;
+            }
+            
+            .included-list h4 {
+                font-size: 1.1rem;
+                margin-bottom: 12px;
+            }
+            
+            .included-list li {
+                font-size: 0.95rem;
+                padding: 6px 0;
+            }
+            
+            /* Info boxes mobile */
+            .tour-description > div[style*="background"] {
+                padding: 15px !important;
+                margin-bottom: 15px;
+            }
+            
+            .tour-description > div[style*="background"] strong {
+                font-size: 0.95rem;
+            }
+            
+            .tour-description > div[style*="background"] ul {
+                margin-top: 10px !important;
+                margin-left: 20px !important;
+            }
+            
+            .tour-description > div[style*="background"] li {
+                font-size: 0.9rem !important;
+                line-height: 1.7 !important;
+                margin-bottom: 6px;
+            }
+            
+            /* Reviews mobile */
+            .reviews-section {
+                margin: 40px 0;
+            }
+            
+            .reviews-section h2 {
+                font-size: 1.4rem !important;
+                margin-bottom: 20px;
+            }
+            
+            .reviews-header {
+                flex-direction: column;
+                gap: 15px;
+                margin-bottom: 20px;
+            }
+            
+            .review-card {
+                padding: 20px 15px;
+                margin-bottom: 15px;
+            }
+            
+            .review-text {
+                font-size: 0.95rem !important;
+                line-height: 1.7;
+                word-wrap: break-word;
+                overflow-wrap: break-word;
+            }
+            
+            .review-header {
+                flex-wrap: wrap;
+                gap: 10px;
+            }
+            
+            .reviewer-name,
+            .reviewer-location {
+                word-wrap: break-word;
+                overflow-wrap: break-word;
+            }
+            
+            /* FAQ mobile */
+            .faq-section {
+                padding: 25px 15px;
+                margin: 40px 0;
+            }
+            
+            .faq-section h2 {
+                font-size: 1.4rem !important;
+                margin-bottom: 20px;
+            }
+            
+            .faq-question {
+                padding: 15px 18px;
+                font-size: 0.95rem;
+            }
+            
+            .faq-answer {
+                padding: 0 18px;
+            }
+            
+            .faq-item.active .faq-answer {
+                padding: 0 18px 15px 18px;
+            }
+            
+            .faq-answer p {
+                font-size: 0.95rem !important;
+                line-height: 1.7;
+                word-wrap: break-word;
+                overflow-wrap: break-word;
+            }
+            
+            /* Why choose us mobile */
+            .tour-description[style*="background"] {
+                padding: 20px 15px !important;
+                margin: 30px 0;
+            }
+            
+            .tour-description[style*="background"] h2 {
+                font-size: 1.3rem !important;
+                margin-bottom: 15px;
+            }
+            
+            .tour-description[style*="background"] li {
+                font-size: 0.95rem !important;
+                line-height: 1.7 !important;
+                margin-bottom: 8px;
+                word-wrap: break-word;
+                overflow-wrap: break-word;
+            }
+            
+            /* Related tours mobile */
+            .tour-description > div[style*="grid-template-columns"] {
+                grid-template-columns: 1fr !important;
+                gap: 15px;
+                margin-top: 20px;
+            }
+            
+            .tour-description > div[style*="grid-template-columns"] h4,
+            .tour-description > div[style*="grid-template-columns"] p {
+                word-wrap: break-word;
+                overflow-wrap: break-word;
+                font-size: 0.9rem;
+            }
+            
+            /* Bottom CTA mobile */
+            .tour-description > div[style*="background: linear-gradient"] {
+                padding: 30px 20px !important;
+                margin: 40px 0;
+            }
+            
+            .tour-description > div[style*="background: linear-gradient"] h2 {
+                font-size: 1.4rem !important;
+                margin-bottom: 12px;
+            }
+            
+            .tour-description > div[style*="background: linear-gradient"] p {
+                font-size: 0.95rem;
+                margin-bottom: 20px;
+            }
+            
+            .tour-description > div[style*="background: linear-gradient"] a {
+                padding: 14px 24px !important;
+                font-size: 0.95rem !important;
+                width: 100%;
                 display: block;
+                text-align: center;
             }
             
-            .tour-title {
-                font-size: 1.8rem;
+            .tour-description > div[style*="display: flex"] {
+                flex-direction: column !important;
+                gap: 10px !important;
             }
-            
-            .tour-detail-hero {
-                height: auto;
-                margin-top: 72px;
-            }
-        
             
             /* Sticky booking buttons on mobile */
             .booking-sidebar {
                 position: fixed !important;
                 bottom: 0 !important;
-                
                 top: auto !important;
                 left: 0;
                 right: 0;
@@ -932,7 +956,7 @@
             }
             
             .price-section {
-                display: none; /* Hide price on mobile sticky to save space */
+                display: none;
             }
             
             .booking-buttons {
@@ -955,6 +979,35 @@
             /* Add padding to body so content doesn't hide behind sticky buttons */
             body {
                 padding-bottom: 160px;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            .tour-content-wrapper {
+                padding: 20px 10px 160px;
+            }
+            
+            .tour-title {
+                font-size: 1.3rem;
+            }
+            
+            .tour-subtitle {
+                font-size: 0.85rem;
+            }
+            
+            .tour-description h2,
+            .tour-description h3 {
+                font-size: 1.2rem !important;
+            }
+            
+            .tour-description p,
+            .tour-description li {
+                font-size: 0.9rem !important;
+            }
+            
+            .badge {
+                font-size: 11px;
+                padding: 5px 10px;
             }
         }
     
@@ -1237,25 +1290,10 @@
             <nav class="menu-nav">
                 <a href="index.html" style="font-weight: bold;">Home</a>
                 <a href="agadir-tours.html" style="font-weight: bold;">Agadir Tours</a>
-                <a href="things-to-do.html" style="font-weight: bold;">Things to Do in Agadir</a>
+                <a href="day-trips-from-agadir.html" style="font-weight: bold;">Day Trips</a>
                 <a href="blog.html" style="font-weight: bold;">Blog</a>
                 <a href="contact.html" style="font-weight: bold;">Contact</a>
             </nav>
-            <div class="menu-social">
-                <p>FOLLOW US</p>
-                <div class="social-icons">
-                    <a href="https://www.instagram.com/www.miracleair.tz" target="_blank" aria-label="Instagram">
-                        <svg width="24" height="24" fill="currentColor" viewBox="0 0 24 24">
-                            <path d="M16 14c0-2.203-1.797-4-4-4s-4 1.797-4 4 1.797 4 4 4 4-1.797 4-4zM18.156 14c0 3.406-2.75 6.156-6.156 6.156s-6.156-2.75-6.156-6.156 2.75-6.156 6.156-6.156 6.156 2.75 6.156 6.156zM19.844 7.594c0 0.797-0.641 1.437-1.437 1.437s-1.437-0.641-1.437-1.437 0.641-1.437 1.437-1.437 1.437 0.641 1.437 1.437zM12 4.156c-1.75 0-5.5-0.141-7.078 0.484-0.547 0.219-0.953 0.484-1.375 0.906s-0.688 0.828-0.906 1.375c-0.625 1.578-0.484 5.328-0.484 7.078s-0.141 5.5 0.484 7.078c0.219 0.547 0.484 0.953 0.906 1.375s0.828 0.688 1.375 0.906c1.578 0.625 5.328 0.484 7.078 0.484s5.5 0.141 7.078-0.484c0.547-0.219 0.953-0.484 1.375-0.906s0.688-0.828 0.906-1.375c0.625-1.578 0.484-5.328 0.484-7.078s0.141-5.5-0.484-7.078c-0.219-0.547-0.484-0.953-0.906-1.375s-0.828-0.688-1.375-0.906c-1.578-0.625-5.328-0.484-7.078-0.484zM24 14c0 1.656 0.016 3.297-0.078 4.953-0.094 1.922-0.531 3.625-1.937 5.031s-3.109 1.844-5.031 1.937c-1.656 0.094-3.297 0.078-4.953 0.078s-3.297 0.016-4.953-0.078c-1.922-0.094-3.625-0.531-5.031-1.937s-1.844-3.109-1.937-5.031c-0.094-1.656-0.078-3.297-0.078-4.953s-0.016-3.297 0.078-4.953c0.094-1.922 0.531-3.625 1.937-5.031s3.109-1.844 5.031-1.937c1.656-0.094 3.297-0.078 4.953-0.078s3.297-0.016 4.953 0.078c1.922 0.094 3.625 0.531 5.031 1.937s1.844 3.109 1.937 5.031c0.094 1.656 0.078 3.297 0.078 4.953z"></path>
-                        </svg>
-                    </a>
-                    <a href="https://www.facebook.com/profile.php?id=61570405113832" target="_blank" aria-label="Facebook">
-                        <svg width="24" height="24" fill="currentColor" viewBox="0 0 16 28">
-                            <path d="M14.984 0.187v4.125h-2.453c-1.922 0-2.281 0.922-2.281 2.25v2.953h4.578l-0.609 4.625h-3.969v11.859h-4.781v-11.859h-3.984v-4.625h3.984v-3.406c0-3.953 2.422-6.109 5.953-6.109 1.687 0 3.141 0.125 3.563 0.187z"></path>
-                        </svg>
-                    </a>
-                </div>
-            </div>
         </div>
     </div>
 
@@ -1306,25 +1344,8 @@
     </div>
 
     <!-- Tour Hero Gallery -->
-    <style>
-        .simple-slider { position: relative; height: clamp(260px, 50vw, 520px); border-radius: 16px; overflow: hidden; }
-        .simple-slider .slides { position: relative; height: 100%; }
-        .simple-slider .slide { position: absolute; inset: 0; opacity: 0; transition: opacity 0.35s ease; }
-        .simple-slider .slide.active { opacity: 1; }
-        .simple-slider img { width: 100%; height: 100%; object-fit: cover; display: block; }
-        .ss-prev, .ss-next { position: absolute; top: 50%; transform: translateY(-50%); background: rgba(0,0,0,0.5); color: #fff; border: 0; width: 46px; height: 46px; border-radius: 50%; font-size: 22px; cursor: pointer; z-index: 5; display: flex; align-items: center; justify-content: center; }
-        .ss-prev { left: 16px; }
-        .ss-next { right: 16px; }
-        .ss-dots { position: absolute; bottom: 14px; left: 50%; transform: translateX(-50%); display: flex; gap: 8px; z-index: 5; }
-        .ss-dot { width: 8px; height: 8px; border-radius: 50%; background: rgba(255,255,255,0.6); border: 0; padding: 0; cursor: pointer; }
-        .ss-dot.active { background: #fff; }
-        .ss-thumbs { display: flex; align-items: center; justify-content: flex-start; gap: 10px; margin-top: 12px; overflow-x: auto; padding-bottom: 6px; }
-        .ss-thumbs::-webkit-scrollbar { height: 6px; }
-        .ss-thumb { width: 72px; height: 56px; border-radius: 8px; overflow: hidden; border: 2px solid transparent; opacity: 0.7; cursor: pointer; flex: 0 0 auto; }
-        .ss-thumb.active { opacity: 1; border-color: #8B5CF6; }
-        .ss-thumb img { width: 100%; height: 100%; object-fit: cover; display: block; }
-    </style>
     <section class="tour-detail-hero">
+        <div style="max-width: 1400px; margin: 0 auto; padding: 0 20px;">
         <div class="simple-slider" data-count="6">
             <div class="slides">
                 <div class="slide active"><img src="img/excursions/Souss Massa Park/massa 1.jpg" alt="Flamingos at Souss Massa National Park Agadir"></div>
@@ -1339,6 +1360,7 @@
             <div class="ss-dots" aria-label="Slide navigation"></div>
         </div>
         <div class="ss-thumbs" aria-label="Slide thumbnails"></div>
+        </div>
     </section>
 
     <!-- Tour Content -->
@@ -1946,97 +1968,73 @@
     
     <script>
         document.addEventListener('DOMContentLoaded', function() {
-            const images = [
-                'img/excursions/Souss Massa Park/massa 1.jpg',
-                'img/excursions/Souss Massa Park/massa 2.jpg',
-                'img/excursions/Souss Massa Park/massa 3.webp',
-                'img/excursions/Souss Massa Park/massa 4.avif',
-                'img/excursions/Souss Massa Park/massa 5.jpg',
-                'img/excursions/Souss Massa Park/massa 6.jpeg'
-            ];
-            
+            const slider = document.querySelector('.simple-slider');
+            if (slider) {
+                const slides = Array.from(slider.querySelectorAll('.slide'));
+                const prevBtn = slider.querySelector('.ss-prev');
+                const nextBtn = slider.querySelector('.ss-next');
+                const dotsContainer = slider.querySelector('.ss-dots');
+                const thumbsContainer = document.querySelector('.ss-thumbs');
             let currentIndex = 0;
-            const lightbox = document.querySelector('.tg-lightbox');
-            const mainSlides = document.querySelectorAll('.tg-main .swiper-slide');
-            const thumbSlides = document.querySelectorAll('.tg-thumbs .swiper-slide');
-            const prevBtn = document.querySelector('.swiper-button-prev');
-            const nextBtn = document.querySelector('.swiper-button-next');
-            const closeBtn = document.querySelector('.tg-close');
-            
-            // Open lightbox
-            function openLightbox(index = 0) {
-                currentIndex = index;
-                lightbox.style.display = 'flex';
-                updateSlides();
-                document.body.style.overflow = 'hidden';
-            }
-            
-            // Close lightbox
-            function closeLightbox() {
-                lightbox.style.display = 'none';
-                document.body.style.overflow = 'auto';
-            }
-            
-            // Update slides
-            function updateSlides() {
-                mainSlides.forEach((slide, index) => {
-                    slide.style.display = index === currentIndex ? 'flex' : 'none';
-                });
-                
-                thumbSlides.forEach((slide, index) => {
-                    slide.classList.toggle('active', index === currentIndex);
-                });
-            }
-            
-            // Navigation
-            function nextSlide() {
-                currentIndex = (currentIndex + 1) % images.length;
-                updateSlides();
-            }
-            
-            function prevSlide() {
-                currentIndex = (currentIndex - 1 + images.length) % images.length;
-                updateSlides();
-            }
-            
-            // Event listeners
-            document.querySelectorAll('.tg-item').forEach((item, index) => {
-                item.addEventListener('click', (e) => {
-                    e.preventDefault();
-                    openLightbox(index);
-                });
-            });
-            
-            document.querySelector('.tg-see-more').addEventListener('click', (e) => {
-                e.preventDefault();
-                openLightbox(0);
-            });
-            
-            closeBtn.addEventListener('click', closeLightbox);
-            prevBtn.addEventListener('click', prevSlide);
-            nextBtn.addEventListener('click', nextSlide);
-            
-            // Thumbnail clicks
-            thumbSlides.forEach((slide, index) => {
-                slide.addEventListener('click', () => {
-                    currentIndex = index;
-                    updateSlides();
-                });
-            });
-            
-            // Keyboard navigation
-            document.addEventListener('keydown', (e) => {
-                if (lightbox.style.display === 'flex') {
-                    if (e.key === 'Escape') closeLightbox();
-                    if (e.key === 'ArrowLeft') prevSlide();
-                    if (e.key === 'ArrowRight') nextSlide();
+
+                function goTo(index) {
+                    slides[currentIndex].classList.remove('active');
+                    currentIndex = (index + slides.length) % slides.length;
+                    slides[currentIndex].classList.add('active');
+                    updateDots();
+                    updateThumbs();
                 }
-            });
-            
-            // Close on backdrop click
-            lightbox.addEventListener('click', (e) => {
-                if (e.target === lightbox) closeLightbox();
-            });
+
+                function updateDots() {
+                    const dots = dotsContainer.querySelectorAll('.ss-dot');
+                    dots.forEach((d, i) => d.classList.toggle('active', i === currentIndex));
+                }
+
+                function renderDots() {
+                    dotsContainer.innerHTML = '';
+                    slides.forEach((_, i) => {
+                        const btn = document.createElement('button');
+                        btn.className = 'ss-dot' + (i === currentIndex ? ' active' : '');
+                        btn.setAttribute('aria-label', 'Go to slide ' + (i + 1));
+                        btn.addEventListener('click', () => goTo(i));
+                        dotsContainer.appendChild(btn);
+                    });
+                }
+
+                function updateThumbs() {
+                    if (!thumbsContainer) return;
+                    const all = thumbsContainer.querySelectorAll('.ss-thumb');
+                    all.forEach((t, i) => t.classList.toggle('active', i === currentIndex));
+                }
+
+                function renderThumbs() {
+                    if (!thumbsContainer) return;
+                    thumbsContainer.innerHTML = '';
+                    slides.forEach((slide, i) => {
+                        const img = slide.querySelector('img');
+                        const wrap = document.createElement('button');
+                        wrap.className = 'ss-thumb' + (i === currentIndex ? ' active' : '');
+                        wrap.setAttribute('aria-label', 'Select slide ' + (i + 1));
+                        const thumbImg = document.createElement('img');
+                        thumbImg.src = img.src;
+                        thumbImg.alt = img.alt;
+                        wrap.appendChild(thumbImg);
+                        wrap.addEventListener('click', () => goTo(i));
+                        thumbsContainer.appendChild(wrap);
+                    });
+                }
+
+                if (prevBtn) prevBtn.addEventListener('click', () => goTo(currentIndex - 1));
+                if (nextBtn) nextBtn.addEventListener('click', () => goTo(currentIndex + 1));
+
+                document.addEventListener('keydown', (e) => {
+                    if (e.key === 'ArrowLeft') goTo(currentIndex - 1);
+                    if (e.key === 'ArrowRight') goTo(currentIndex + 1);
+                });
+
+                renderDots();
+                renderThumbs();
+            }
         });
     </script>
 <script>

@@ -1,0 +1,22 @@
+# robots.txt for The Local Guide Morocco
+# https://www.thelocalguide.ma/
+
+User-agent: *
+Allow: /
+
+# Disallow backup files and templates
+Disallow: /*.bak_*
+Disallow: /templates/
+Disallow: /*.bak$
+
+# Allow important assets
+Allow: /css/
+Allow: /js/
+Allow: /img/
+
+# Sitemap location
+Sitemap: https://www.thelocalguide.ma/sitemap.xml
+
+# Crawl-delay (optional - adjust based on server capacity)
+Crawl-delay: 1
+

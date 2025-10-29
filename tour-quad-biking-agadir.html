@@ -49,14 +49,57 @@
         body {
             font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Lato', 'Helvetica Neue', Arial, sans-serif;
         }
-        html, body { max-width: 100%; overflow-x: hidden; }
-        img, video { max-width: 100%; height: auto; }
-        /* Guardrails against text overflow on small screens */
-        .tour-main-content, .tour-main-content p, .tour-main-content li, .tour-main-content span {
-            overflow-wrap: anywhere; word-break: break-word;
+        html, body { 
+            max-width: 100%; 
+            overflow-x: hidden; 
         }
-        .tour-content-wrapper, .breadcrumb, .simple-slider { max-width: 100%; }
-        html, body { max-width: 100%; overflow-x: hidden; }
+        
+        img, video { max-width: 100%; height: auto; }
+        
+        /* Critical: Allow text to wrap instead of disappearing off-screen */
+        p, h1, h2, h3, h4, h5, h6, span, div {
+            white-space: normal;
+            overflow-wrap: anywhere;
+            word-wrap: break-word;
+        }
+        
+        /* Avoid fixed heights on content blocks */
+        .card, .card-content, .price-option, .price-option-details { 
+            height: auto; 
+            min-width: 0;
+            min-height: 0;
+        }
+        
+        /* If you use flexbox for rows/cards - allow children to shrink */
+        .flex, .row, .card-row, .price-option { 
+            display: flex; 
+            flex-wrap: wrap; 
+        }
+        
+        .flex > *, .row > *, .card-row > *, .price-option > * { 
+            min-width: 0; 
+            min-height: 0; 
+        }
+        
+        /* Guardrails against text overflow on all screens */
+        .tour-main-content, .tour-main-content p, .tour-main-content li, .tour-main-content span,
+        .tour-main-content h1, .tour-main-content h2, .tour-main-content h3, .tour-main-content h4 {
+            overflow-wrap: break-word; 
+            word-wrap: break-word;
+            hyphens: auto;
+            -webkit-hyphens: auto;
+            white-space: normal;
+        }
+        
+        .tour-content-wrapper, .breadcrumb, .simple-slider { 
+            max-width: 100%; 
+            box-sizing: border-box;
+        }
+        
+        /* Ensure all containers have proper box-sizing */
+        *, *::before, *::after {
+            box-sizing: border-box;
+        }
         
         .tour-detail-hero { position: relative; height: auto; overflow: hidden; margin-top: 95px; }
         
@@ -92,10 +135,45 @@
         .price-table { background: #f9f9f9; padding: 30px; border-radius: 10px; margin: 30px 0; }
         .price-table h3 { font-size: 1.8rem; font-weight: 700; color: #1F2937; margin-bottom: 25px; text-align: center; }
         .price-options { display: grid; gap: 15px; }
-        .price-option { background: white; border: 2px solid #e0e0e0; border-radius: 10px; padding: 20px; display: flex; justify-content: space-between; align-items: center; transition: all 0.3s ease; }
+        .price-option { 
+            background: white; 
+            border: 2px solid #e0e0e0; 
+            border-radius: 10px; 
+            padding: 20px; 
+            display: flex; 
+            justify-content: space-between; 
+            align-items: flex-start; 
+            transition: all 0.3s ease;
+            min-width: 0;
+            flex-wrap: nowrap;
+            gap: 20px;
+        }
         .price-option:hover { border-color: #1F2937; box-shadow: 0 5px 15px rgba(26,77,46,0.1); }
-        .price-option-details h4 { font-size: 1.2rem; font-weight: 700; color: #1F2937; margin-bottom: 8px; }
-        .price-option-details p { color: #6B7280; font-size: 14px; line-height: 1.6; }
+        .price-option-details {
+            flex: 1 1 auto;
+            min-width: 0;
+            flex-shrink: 1;
+        }
+        .price-option-price {
+            flex: 0 0 auto;
+            flex-shrink: 0;
+        }
+        .price-option-details h4 { 
+            font-size: 1.2rem; 
+            font-weight: 700; 
+            color: #1F2937; 
+            margin-bottom: 8px; 
+            word-wrap: break-word;
+            overflow-wrap: break-word;
+            word-break: break-word;
+        }
+        .price-option-details p { 
+            color: #6B7280; 
+            font-size: 14px; 
+            line-height: 1.6; 
+            word-wrap: break-word;
+            overflow-wrap: break-word;
+        }
         .price-option-price { font-size: 2rem; font-weight: 700; color: #1F2937; }
         .price-option-price span { font-size: 1rem; color: #999; font-weight: 400; }
         .price-badge { display: inline-block; background: #af9461; color: white; padding: 4px 12px; border-radius: 15px; font-size: 12px; font-weight: 600; margin-top: 8px; }
@@ -110,19 +188,130 @@
         .breadcrumb a:hover { color: #1F2937; }
         .breadcrumb span { color: #999; margin: 0 8px; }
         @media (max-width: 1024px) {
-            .tour-content-wrapper { grid-template-columns: 1fr; }
-            .tour-main-content { padding-right: 0; }
+            .tour-content-wrapper { 
+                grid-template-columns: 1fr; 
+                max-width: 100%;
+                padding-left: 16px;
+                padding-right: 16px;
+            }
+            .tour-main-content { 
+                padding-right: 0; 
+                min-width: 0;
+                max-width: 100%;
+            }
         }
         @media (max-width: 768px) {
             .simple-slider { height: 300px; }
-            .tour-title { font-size: 1.8rem; }
+            .tour-title { font-size: 1.8rem; word-wrap: break-word; overflow-wrap: break-word; }
             .tour-detail-hero { height: auto; margin-top: 72px; }
-            .tour-content-wrapper { padding: 32px 16px; }
-            .price-options { grid-template-columns: 1fr; }
+            .tour-content-wrapper { 
+                padding: 32px 16px; 
+                max-width: 100%;
+                box-sizing: border-box;
+            }
+            .tour-main-content {
+                min-width: 0;
+                max-width: 100%;
+                padding-right: 0 !important;
+            }
+            .price-options { 
+                grid-template-columns: 1fr; 
+                width: 100%;
+            }
             .ss-thumb { width: 60px; height: 44px; }
+            
+            /* Prevent horizontal overflow */
+            * {
+                max-width: 100%;
+                overflow-wrap: break-word;
+                word-wrap: break-word;
+            }
+            
+            /* Text wrapping */
+            .price-option, .price-option-details, .price-option-details h4, 
+            .price-option-details p, .highlight-text, .tour-subtitle,
+            .tour-main-content h1, .tour-main-content h2, .tour-main-content h3,
+            .tour-main-content p, .tour-main-content li, .tour-main-content span,
+            .badge, .price-badge {
+                word-wrap: break-word;
+                overflow-wrap: break-word;
+                hyphens: auto;
+                -webkit-hyphens: auto;
+            }
+            
             /* Prevent table from causing horizontal overflow */
             table { display: block; width: 100%; overflow-x: auto; -webkit-overflow-scrolling: touch; }
-            thead, tbody, th, td, tr { white-space: nowrap; }
+            thead, tbody, th, td, tr { white-space: normal; }
+            td { white-space: normal; word-wrap: break-word; overflow-wrap: anywhere; }
+            
+            /* Ensure price cards don't overflow */
+            .price-option {
+                flex-direction: column;
+                align-items: flex-start;
+                padding: 16px !important;
+                min-width: 0;
+                max-width: 100%;
+            }
+            
+            .price-option-details {
+                width: 100%;
+                margin-bottom: 15px;
+                min-width: 0;
+                max-width: 100%;
+            }
+            
+            .price-option-price {
+                width: 100%;
+                text-align: left;
+                flex-shrink: 0;
+            }
+            
+            /* Force text wrapping */
+            .price-option h4,
+            .price-option p,
+            .price-option span {
+                white-space: normal !important;
+                overflow-wrap: anywhere !important;
+                word-wrap: break-word !important;
+            }
+            
+            /* Fix headers and badges */
+            .price-option-details h4 {
+                font-size: 1.1rem;
+                margin-bottom: 8px;
+                line-height: 1.3;
+                word-wrap: break-word;
+                overflow-wrap: break-word;
+                word-break: break-word;
+                hyphens: manual;
+            }
+            
+            .price-option-details p {
+                font-size: 14px;
+                line-height: 1.5;
+                word-wrap: break-word;
+                overflow-wrap: break-word;
+                word-break: break-word;
+            }
+            
+            .price-badge {
+                font-size: 11px;
+                padding: 4px 10px;
+                display: inline-block;
+                margin-top: 10px;
+            }
+            
+            /* Ensure footer text wraps */
+            .price-table {
+                padding: 20px 15px;
+                margin: 20px 0;
+            }
+            
+            .price-table p {
+                font-size: 13px;
+                line-height: 1.6;
+                word-wrap: break-word;
+            }
             
             /* Sticky booking buttons on mobile */
             aside {
@@ -147,35 +336,122 @@
                 display: none !important;
             }
             
+            aside .booking-card > div {
+                padding: 10px !important;
+            }
+            
+            aside a {
+                font-size: 14px !important;
+                padding: 14px 16px !important;
+            }
+            
             body {
-                padding-bottom: 180px;
+                padding-bottom: 200px;
             }
         }
 
         /* Extra-small phones tweaks */
         @media (max-width: 480px) {
             .simple-slider { height: 240px; }
-            .tour-title { font-size: 1.6rem; }
-            .tour-subtitle { font-size: 0.95rem; }
+            .tour-title { font-size: 1.5rem; line-height: 1.2; word-wrap: break-word; overflow-wrap: break-word; }
+            .tour-subtitle { font-size: 0.9rem; line-height: 1.4; word-wrap: break-word; }
             .breadcrumb { padding: 20px 12px 0; }
-            .tour-content-wrapper { padding: 20px 12px; }
-            .badge { font-size: 12px; padding: 6px 10px; }
-            .price-table { padding: 18px; }
-            .price-table h3 { font-size: 1.4rem; }
-            .price-option { padding: 14px; }
-            .price-option-price { font-size: 1.4rem; }
-            .tour-highlights { padding: 18px; margin: 24px 0; }
-            .highlight-text { font-size: 14px; }
-            .tour-main-content h2 { font-size: 1.5rem !important; }
-            .tour-main-content p { font-size: 14px; }
+            .tour-content-wrapper { 
+                padding: 20px 12px; 
+                max-width: 100%;
+                box-sizing: border-box;
+            }
+            .tour-main-content {
+                min-width: 0;
+                max-width: 100%;
+            }
+            .badge { font-size: 11px; padding: 5px 8px; display: inline-block; word-wrap: break-word; }
+            .price-table { 
+                padding: 15px 12px; 
+                margin: 20px 0;
+                max-width: 100%;
+                box-sizing: border-box;
+            }
+            .price-table h3 { font-size: 1.3rem; line-height: 1.3; word-wrap: break-word; }
+            .price-options {
+                max-width: 100%;
+                width: 100%;
+            }
+            .price-option { 
+                padding: 12px !important; 
+                gap: 12px;
+                max-width: 100%;
+            }
+            .price-option-price { font-size: 1.5rem; }
+            
+            /* Ensure all price details wrap properly */
+            .price-option-details h4 { 
+                font-size: 1rem; 
+                line-height: 1.3;
+                word-wrap: break-word !important;
+                overflow-wrap: break-word !important;
+                word-break: break-word !important;
+                white-space: normal !important;
+                max-width: 100%;
+            }
+            
+            .price-option-details p { 
+                font-size: 13px; 
+                line-height: 1.5;
+                word-wrap: break-word !important;
+                overflow-wrap: break-word !important;
+                word-break: break-word !important;
+                white-space: normal !important;
+                max-width: 100%;
+            }
+            
+            /* Ensure price options themselves don't cause overflow */
+            .price-option {
+                max-width: 100% !important;
+                overflow: visible;
+            }
+            
+            .price-badge {
+                font-size: 10px;
+                padding: 3px 8px;
+                margin-top: 8px;
+            }
+            
+            .tour-highlights { padding: 15px 12px; margin: 20px 0; }
+            .highlight-text { font-size: 14px; line-height: 1.5; word-wrap: break-word; }
+            .tour-main-content h2 { font-size: 1.4rem !important; line-height: 1.3; word-wrap: break-word; }
+            .tour-main-content h3 { font-size: 1.2rem !important; line-height: 1.3; word-wrap: break-word; }
+            .tour-main-content p { font-size: 14px; line-height: 1.6; word-wrap: break-word; }
+            
+            /* Ensure the footer info text wraps */
+            .price-table p {
+                font-size: 12px;
+                line-height: 1.6;
+                word-wrap: break-word;
+            }
+            
             /* Soften large inline paddings/margins inside content cards */
-            .tour-main-content [style*="padding: 25px"] { padding: 16px !important; }
-            .tour-main-content [style*="padding: 30px"] { padding: 18px !important; }
-            .tour-main-content [style*="padding: 40px"] { padding: 20px !important; }
-            .tour-main-content [style*="margin: 40px 0"] { margin: 24px 0 !important; }
-            .tour-main-content [style*="margin: 60px 0"] { margin: 32px 0 !important; }
-            .tour-main-content [style*="margin-bottom: 30px"] { margin-bottom: 16px !important; }
-            .tour-main-content [style*="font-size: 1.8rem"] { font-size: 1.5rem !important; }
+            .tour-main-content [style*="padding: 25px"] { padding: 14px !important; }
+            .tour-main-content [style*="padding: 30px"] { padding: 16px !important; }
+            .tour-main-content [style*="padding: 40px"] { padding: 18px !important; }
+            .tour-main-content [style*="margin: 40px 0"] { margin: 20px 0 !important; }
+            .tour-main-content [style*="margin: 60px 0"] { margin: 28px 0 !important; }
+            .tour-main-content [style*="margin-bottom: 30px"] { margin-bottom: 14px !important; }
+            .tour-main-content [style*="font-size: 1.8rem"] { font-size: 1.4rem !important; }
+            
+            /* Fix sticky sidebar */
+            aside {
+                padding: 12px !important;
+            }
+            
+            aside a {
+                font-size: 13px !important;
+                padding: 12px 14px !important;
+            }
+            
+            body {
+                padding-bottom: 180px;
+            }
         }
         /* Footer Styles - Miracle Air Inspired */
         .site-footer {
@@ -578,7 +854,7 @@
                         <div class="price-option-price">€75<span> /person</span></div>
                     </div>
                 </div>
-                <p style="text-align: center; color: #6B7280; margin-top: 20px; font-size: 14px;">
+                <p style="text-align: center; color: #6B7280; margin-top: 20px; font-size: 14px; word-wrap: break-word; overflow-wrap: break-word;">
                     💰 <strong>Best Price Guarantee</strong> • All prices include equipment, guide, insurance & transfers<br>
                     👨‍👩‍👧‍👦 <strong>Group Discounts:</strong> 4+ people save 10% • 8+ people save 15%
                 </p>

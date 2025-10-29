@@ -69,6 +69,13 @@
         body {
             font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Lato', 'Helvetica Neue', Arial, sans-serif;
         }
+        html, body { max-width: 100%; overflow-x: hidden; }
+        img, video { max-width: 100%; height: auto; }
+        /* Prevent text from overflowing the viewport on small screens */
+        .tour-main-content, .tour-main-content p, .tour-main-content li, .tour-main-content span {
+            overflow-wrap: anywhere; word-break: break-word;
+        }
+        .tour-content-wrapper, .breadcrumb, .simple-slider, .tg-grid, .tg-preview { max-width: 100%; }
         
         .tour-detail-hero {
             position: relative;
@@ -1224,6 +1231,22 @@
         }
 
         @media (max-width: 480px) {
+            /* Tighten paddings and fonts on very small screens to avoid edge collisions */
+            .tour-detail-hero { margin-top: 72px; }
+            .simple-slider { height: 240px; }
+            .breadcrumb { padding: 20px 12px 0; }
+            .tour-content-wrapper { padding: 20px 12px; }
+            .tour-title { font-size: 1.6rem; }
+            .tour-subtitle { font-size: 0.95rem; }
+            .tour-main-content h2 { font-size: 1.5rem !important; }
+            .tour-main-content p { font-size: 14px; }
+            /* Relax large inline paddings/margins from cards so they fit */
+            .tour-main-content [style*="padding: 25px"] { padding: 16px !important; }
+            .tour-main-content [style*="padding: 30px"] { padding: 18px !important; }
+            .tour-main-content [style*="padding: 40px"] { padding: 20px !important; }
+            .tour-main-content [style*="margin: 40px 0"] { margin: 24px 0 !important; }
+            .tour-main-content [style*="margin: 60px 0"] { margin: 32px 0 !important; }
+            .badge { font-size: 12px; padding: 6px 10px; }
             .partner-logos {
                 gap: 15px;
             }
@@ -1289,17 +1312,13 @@
             <a href="index.html" class="header__logo">
                 <img src="img/logo.png" alt="The Local Guide" class="header__logo-img">
             </a>
-            <nav class="header__nav">
+            <nav class="header__nav" style="margin-left: auto;">
                 <a href="index.html" class="header__nav-link">Home</a>
                 <a href="agadir-tours.html" class="header__nav-link">Agadir Tours</a>
                 <a href="day-trips-from-agadir.html" class="header__nav-link">Day Trips</a>
                 <a href="blog.html" class="header__nav-link">Blog</a>
                 <a href="contact.html" class="header__nav-link">Contact</a>
             </nav>
-            <div class="header__actions">
-                <a href="https://wa.me/212601820422" class="btn btn-whatsapp">WhatsApp Us</a>
-                <a href="contact.html" class="btn btn-primary">Book Now</a>
-            </div>
             <button class="hamburger" id="hamburger" aria-label="Toggle menu">
                 <span></span>
                 <span></span>

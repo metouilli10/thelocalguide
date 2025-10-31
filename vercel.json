@@ -7,9 +7,8 @@
       "permanent": true
     },
     {
-      "source": "/:path*",
-      "has": [{ "type": "missing", "value": "html" }],
-      "destination": "/:path*.html",
+      "source": "/:slug((?!.*\\.).+)",
+      "destination": "/:slug.html",
       "permanent": true
     }
   ],

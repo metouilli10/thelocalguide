@@ -1,0 +1,13 @@
+RewriteEngine On
+
+# Force non-www canonical host
+RewriteCond %{HTTP_HOST} ^www\.agadirlocalguide\.com$ [NC]
+RewriteRule ^(.*)$ https://agadirlocalguide.com/$1 [L,R=301]
+
+# Redirect extensionless URLs to their .html equivalents when the file exists
+RewriteCond %{REQUEST_URI} !\.html$ [NC]
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME}.html -f
+RewriteRule ^(.*)$ https://agadirlocalguide.com/$1.html [L,R=301]
+

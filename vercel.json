@@ -1,0 +1,18 @@
+{
+  "redirects": [
+    {
+      "source": "/(.*)",
+      "has": [{ "type": "host", "value": "www.agadirlocalguide.com" }],
+      "destination": "https://agadirlocalguide.com/$1",
+      "permanent": true
+    },
+    {
+      "source": "/:path*",
+      "has": [{ "type": "missing", "value": "html" }],
+      "destination": "/:path*.html",
+      "permanent": true
+    }
+  ],
+  "cleanUrls": false
+}
+

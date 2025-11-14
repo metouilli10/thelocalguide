@@ -7,8 +7,15 @@
     "dev": "npx http-server -p 3000",
     "start": "npx http-server -p 3000"
   },
-  "keywords": ["agadir", "tours", "morocco", "travel"],
+  "keywords": [
+    "agadir",
+    "tours",
+    "morocco",
+    "travel"
+  ],
   "author": "",
-  "license": "MIT"
+  "license": "MIT",
+  "dependencies": {
+    "puppeteer": "^24.30.0"
+  }
 }
-

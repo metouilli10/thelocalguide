@@ -63,6 +63,8 @@
             font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Lato', 'Helvetica Neue', Arial, sans-serif;
         }
         
+        .tour-detail-hero { position: relative; height: auto; overflow: hidden; margin-top: 0; padding-top: 0; }
+        
         .tour-gallery {
             --gap: 12px;
             --radius: 16px;
@@ -386,7 +388,7 @@
         .highlight-item { display: flex; align-items: flex-start; gap: 15px; }
         .highlight-icon { width: 24px; height: 24px; background: #8B5CF6; border-radius: 50%; display: flex; align-items: center; justify-content: center; color: white; font-size: 14px; flex-shrink: 0; margin-top: 2px; }
         .highlight-text { color: #333; line-height: 1.6; font-size: 15px; }
-        .breadcrumb { max-width: 1400px; margin: 0 auto; padding: 30px 20px 0; font-size: 14px; }
+        .breadcrumb { max-width: 1400px; margin: 0 auto; padding: 30px 20px 10px; font-size: 14px; }
         .breadcrumb a { color: #6B7280; text-decoration: none; }
         .breadcrumb a:hover { color: #1F2937; }
         .breadcrumb span { color: #999; margin: 0 8px; }
@@ -473,7 +475,11 @@
             .tour-header { margin-bottom: 20px; }
             .tour-content-wrapper { padding: 20px 15px; gap: 0; }
             .tour-main-content { padding-right: 0; }
-            .tour-detail-hero { height: auto; margin-top: 72px; }
+            .breadcrumb {
+                padding: 20px 20px 8px;
+            }
+            
+            .tour-detail-hero { height: auto; margin-top: 0; }
             .price-options { grid-template-columns: 1fr; }
             .price-table { padding: 20px 15px; }
             .price-table h3 { font-size: 1.3rem; }

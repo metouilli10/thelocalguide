@@ -67,7 +67,7 @@
             font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Lato', 'Helvetica Neue', Arial, sans-serif;
         }
         
-        .tour-detail-hero { position: relative; height: auto; overflow: hidden; margin-top: 95px; }
+        .tour-detail-hero { position: relative; height: auto; overflow: hidden; margin-top: 0; padding-top: 0; }
         /* Simple one-image-at-a-time slider */
         .simple-slider { position: relative; height: clamp(260px, 50vw, 520px); border-radius: 16px; overflow: hidden; }
         .simple-slider .slides { position: relative; height: 100%; }
@@ -873,7 +873,7 @@
         .breadcrumb {
             max-width: 1400px;
             margin: 0 auto;
-            padding: 30px 20px 0;
+            padding: 30px 20px 10px;
             font-size: 14px;
         }
         
@@ -989,9 +989,13 @@
                 font-size: 1.8rem;
             }
             
+            .breadcrumb {
+                padding: 20px 20px 8px;
+            }
+            
             .tour-detail-hero {
                 height: auto;
-                margin-top: 72px;
+                margin-top: 0;
             }
         
             

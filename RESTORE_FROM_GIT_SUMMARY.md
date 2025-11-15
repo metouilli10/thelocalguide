@@ -49,3 +49,5 @@ Your website is now back to its **original state** from the git repository. All 
 **Status:** ✅ All files restored from git  
 **Your website should now work exactly as it did before any WebP conversion attempts**
 
+
+

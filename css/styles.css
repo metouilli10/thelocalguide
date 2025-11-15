@@ -283,6 +283,10 @@ a {
     .hamburger {
         display: none !important;
     }
+    
+    .logo-text {
+        display: none !important;
+    }
 }
 
 /* Style buttons inside mobile menu */

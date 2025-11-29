@@ -677,6 +677,46 @@
                 grid-template-columns: 1fr;
             }
         }
+
+        /* Mobile sticky booking bar */
+        @media (max-width: 768px) {
+            .mobile-bottom-cta {
+                position: fixed;
+                left: 0;
+                right: 0;
+                bottom: 0;
+                z-index: 999;
+                background: #ffffff;
+                box-shadow: 0 -4px 20px rgba(0,0,0,0.15);
+                padding: 10px 16px;
+            }
+            .mobile-bottom-cta__inner {
+                max-width: 640px;
+                margin: 0 auto;
+                display: flex;
+                gap: 8px;
+            }
+            .mobile-bottom-cta a {
+                flex: 1;
+                padding: 12px 14px;
+                border-radius: 999px;
+                font-weight: 700;
+                font-size: 15px;
+                text-align: center;
+                text-decoration: none;
+            }
+            .mobile-bottom-cta .btn-contact {
+                background: #cdff03;
+                color: #000000;
+            }
+            .mobile-bottom-cta .btn-whatsapp {
+                background: #8449f2;
+                color: #ffffff;
+            }
+            body {
+                padding-bottom: 90px;
+            }
+        }
     </style>
 </head>
 <body>
@@ -1223,6 +1263,14 @@
             </div>
         </div>
     </footer>
+
+    <!-- Mobile sticky booking buttons -->
+    <div class="mobile-bottom-cta">
+        <div class="mobile-bottom-cta__inner">
+            <a href="tour-quad-biking-agadir.html" class="btn-contact">Book Now</a>
+            <a href="https://wa.me/212601820422?text=Hi! I'm interested in quad biking in Agadir" class="btn-whatsapp" target="_blank">Book via WhatsApp</a>
+        </div>
+    </div>
 <script>
 const hamburger=document.getElementById("hamburger");
 const mobileMenu=document.getElementById("mobileMenu");
@@ -1233,4 +1281,3 @@ if(mobileMenu){mobileMenu.querySelectorAll("a").forEach(a=>a.addEventListener("c
 </script>
 </body>
 </html>
-

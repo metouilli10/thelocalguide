@@ -1,21 +1,35 @@
 /* Updated Design System - The Local Guide */
 
 :root {
-    --primary-color: #8B5CF6;
-    --secondary-color: #F59E0B;
-    --text-dark: #1F2937;
-    --text-light: #6B7280;
+    /* NEW COLOR SYSTEM - Premium Purple + Yellow Theme */
+    --color-primary: #6D4AFF;
+    --color-primary-dark: #4B2BE9;
+    --color-primary-light: #EEE9FF;
+    --color-accent: #FFD400;
+    --color-gold: #F5C542;
+    --color-sand: #FFF8E9;
+    --color-bg: #FFFFFF;
+    --color-bg-soft: #F8F8F8;
+    --color-border: #EDEDED;
+    --color-text: #222222;
+    --color-text-muted: #555555;
+    
+    /* Legacy aliases for backward compatibility */
+    --primary-color: #6D4AFF;
+    --secondary-color: #FFD400;
+    --text-dark: #222222;
+    --text-light: #555555;
     --bg-white: #FFFFFF;
-    --bg-gray: #F9FAFB;
-    --accent-green: #ccff02;
-    --accent-lime: #cdff03;
-    --whatsapp-purple: #8449f2;
+    --bg-gray: #F8F8F8;
+    --accent-green: #FFD400;
+    --accent-lime: #FFD400;
+    --whatsapp-purple: #6D4AFF;
 }
 
 /* ===== TOPBAR STYLES ===== */
 .topbar {
-    background: #ccff02;
-    color: #000000;
+    background: var(--color-accent);
+    color: var(--color-text);
     padding: 8px 0;
     font-size: 14px;
 }
@@ -123,7 +137,7 @@
 }
 
 .header__nav-link:hover {
-    color: var(--primary-color);
+    color: var(--color-primary);
 }
 
 .header__actions {
@@ -154,7 +168,7 @@
 }
 
 .hamburger:hover span {
-    background: var(--primary-color);
+    background: var(--color-primary);
 }
 
 /* ===== BUTTON STYLES ===== */
@@ -172,44 +186,44 @@
 }
 
 .btn-primary {
-    background: #cdff03;
-    color: #000000;
+    background: var(--color-accent);
+    color: var(--color-text);
 }
 
 .btn-primary:hover {
-    background: #b8e600;
-    color: #000000;
+    background: #E6C000;
+    color: var(--color-text);
     transform: translateY(-1px);
 }
 
 .btn-secondary {
-    background: #cdff03;
-    color: #000000;
-    border: 2px solid #cdff03;
+    background: var(--color-accent);
+    color: var(--color-text);
+    border: 2px solid var(--color-accent);
 }
 
 .btn-secondary:hover {
-    background: #b8e600;
-    color: #000000;
-    border: 2px solid #b8e600;
+    background: #E6C000;
+    color: var(--color-text);
+    border: 2px solid #E6C000;
 }
 
 .btn-whatsapp {
-    background: #8449f2;
+    background: var(--color-primary);
     color: #ffffff;
     font-weight: 600;
 }
 
 .btn-whatsapp:hover {
-    background: #6d3bd9;
+    background: var(--color-primary-dark);
     color: #ffffff;
     transform: translateY(-1px);
 }
 
 .btn-outline {
-    background: #cdff03;
-    border: 2px solid #cdff03;
-    color: #000000;
+    background: var(--color-accent);
+    border: 2px solid var(--color-accent);
+    color: var(--color-text);
     padding: 16px 32px;
     border-radius: 50px;
     font-size: 16px;
@@ -223,9 +237,9 @@
 }
 
 .btn-outline:hover {
-    background: #b8e600;
-    color: #000000;
-    border: 2px solid #b8e600;
+    background: #E6C000;
+    color: var(--color-text);
+    border: 2px solid #E6C000;
 }
 
 /* ===== RESPONSIVE DESIGN ===== */
@@ -274,8 +288,8 @@
 .cta-button,
 .primary-button,
 .main-button {
-    background: #cdff03 !important;
-    color: #000000 !important;
+    background: var(--color-accent) !important;
+    color: var(--color-text) !important;
     font-weight: 700 !important;
     border: none !important;
     padding: 12px 24px !important;
@@ -288,8 +302,8 @@
 .cta-button:hover,
 .primary-button:hover,
 .main-button:hover {
-    background: #b8e600 !important;
-    color: #000000 !important;
+    background: #E6C000 !important;
+    color: var(--color-text) !important;
     transform: translateY(-1px) !important;
 }
 
@@ -315,14 +329,14 @@
 
 .main-nav a:hover,
 .site-nav a:hover {
-    color: var(--primary-color) !important;
+    color: var(--color-primary) !important;
 }
 
 /* Update existing topbar elements */
 .site-topbar,
 .main-topbar {
-    background: #ccff02 !important;
-    color: #000000 !important;
+    background: var(--color-accent) !important;
+    color: var(--color-text) !important;
 }
 
 .site-topbar a,

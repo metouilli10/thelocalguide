@@ -1589,14 +1589,14 @@
 
         .btn-outline {
             background: transparent;
-            color: var(--primary-600);
-            border: 2px solid var(--primary-600);
+            border: 2px solid #6D4AFF;
+            color: #6D4AFF;
             padding: 8px 20px;
             border-radius: 8px;
             font-weight: 600;
             font-size: 14px;
             cursor: pointer;
-            transition: all 0.2s;
+            transition: all 0.3s ease;
             display: inline-flex;
             align-items: center;
             gap: 6px;
@@ -1604,7 +1604,9 @@
         }
 
         .btn-outline:hover {
-            background: var(--primary-50);
+            background: #EEE9FF;
+            border-color: #6D4AFF;
+            color: #6D4AFF;
         }
 
         .btn-outline svg {
@@ -1613,24 +1615,27 @@
         }
 
         .btn-primary-nav {
-            background: var(--primary-600);
-            color: white;
+            background: #FFD400;
+            color: #222222;
+            border: none;
             padding: 10px 24px;
             border-radius: 8px;
             font-weight: 600;
             font-size: 14px;
-            border: none;
             cursor: pointer;
             display: inline-flex;
             align-items: center;
             gap: 6px;
-            transition: all 0.2s;
+            transition: all 0.3s ease;
             text-decoration: none;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
         }
 
         .btn-primary-nav:hover {
-            background: var(--primary-700);
+            background: #e6bf00;
+            color: #222222;
             transform: translateY(-1px);
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
         }
 
         .btn-primary-nav svg {
@@ -1821,22 +1826,28 @@
         }
 
         .mobile-cta-primary {
-            background: var(--primary-600);
-            color: white;
+            background: #FFD400;
+            color: #222222;
+            border: none;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
         }
 
         .mobile-cta-primary:hover {
-            background: var(--primary-700);
+            background: #e6bf00;
+            color: #222222;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
         }
 
         .mobile-cta-secondary {
-            background: var(--gray-100);
-            color: var(--gray-900);
-            border: 2px solid var(--gray-300);
+            background: transparent;
+            border: 2px solid #6D4AFF;
+            color: #6D4AFF;
         }
 
         .mobile-cta-secondary:hover {
-            background: var(--gray-200);
+            background: #EEE9FF;
+            border-color: #6D4AFF;
+            color: #6D4AFF;
         }
 
         .mobile-cta svg {
@@ -1911,15 +1922,13 @@
 <body>
     <!-- HEADER (MODERNIZED) -->
     <header class="site-header">
-        </div>
 
         <!-- Main Navigation -->
         <nav class="main-nav">
             <div class="container">
                 <a href="../index.html" class="logo">
-                    <img src="../../img/logo.png" alt="Agadir Local Guide">
-                    <span class="logo-text">Agadir Local Guide</span>
-                </a>
+                    <img src="../img/logo.png" alt="Agadir Local Guide">
+                    </a>
 
                 <ul class="nav-menu">
                     <li><a href="../index.html">Home</a></li>
@@ -1935,7 +1944,7 @@
                             <li><a href="tour-paradise-valley-agadir.html">Paradise Valley</a></li>
                             <li><a href="tour-quad-biking-agadir.html">Quad Biking</a></li>
                             <li><a href="tour-camel-ride-agadir.html">Camel Riding</a></li>
-                            <li><a href="blog/things-to-do-in-agadir-adventure.html">Adventure Activities</a></li>
+                            <li><a href="../blog/things-to-do-in-agadir-adventure.html">Adventure Activities</a></li>
                         </ul>
                     </li>
                     <li><a href="../blog.html">Travel Guide</a></li>
@@ -1956,11 +1965,11 @@
                         Book Now
                     </a>
                     <button class="mobile-menu-toggle" id="hamburger" aria-label="Menu">
-                        <span></span>
-                        <span></span>
-                        <span></span>
-                    </button>
-                </div>
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
             </div>
         </nav>
     </header>

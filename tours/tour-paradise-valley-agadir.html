@@ -2539,14 +2539,14 @@
 
         .btn-outline {
             background: transparent;
-            color: var(--primary-600);
-            border: 2px solid var(--primary-600);
+            border: 2px solid #6D4AFF;
+            color: #6D4AFF;
             padding: 8px 20px;
             border-radius: 8px;
             font-weight: 600;
             font-size: 14px;
             cursor: pointer;
-            transition: all 0.2s;
+            transition: all 0.3s ease;
             display: inline-flex;
             align-items: center;
             gap: 6px;
@@ -2554,7 +2554,9 @@
         }
 
         .btn-outline:hover {
-            background: var(--primary-50);
+            background: #EEE9FF;
+            border-color: #6D4AFF;
+            color: #6D4AFF;
         }
 
         .btn-outline svg {
@@ -2563,24 +2565,27 @@
         }
 
         .btn-primary-nav {
-            background: var(--primary-600);
-            color: white;
+            background: #FFD400;
+            color: #222222;
+            border: none;
             padding: 10px 24px;
             border-radius: 8px;
             font-weight: 600;
             font-size: 14px;
-            border: none;
             cursor: pointer;
             display: inline-flex;
             align-items: center;
             gap: 6px;
-            transition: all 0.2s;
+            transition: all 0.3s ease;
             text-decoration: none;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
         }
 
         .btn-primary-nav:hover {
-            background: var(--primary-700);
+            background: #e6bf00;
+            color: #222222;
             transform: translateY(-1px);
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
         }
 
         .btn-primary-nav svg {
@@ -2771,22 +2776,28 @@
         }
 
         .mobile-cta-primary {
-            background: var(--primary-600);
-            color: white;
+            background: #FFD400;
+            color: #222222;
+            border: none;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
         }
 
         .mobile-cta-primary:hover {
-            background: var(--primary-700);
+            background: #e6bf00;
+            color: #222222;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
         }
 
         .mobile-cta-secondary {
-            background: var(--gray-100);
-            color: var(--gray-900);
-            border: 2px solid var(--gray-300);
+            background: transparent;
+            border: 2px solid #6D4AFF;
+            color: #6D4AFF;
         }
 
         .mobile-cta-secondary:hover {
-            background: var(--gray-200);
+            background: #EEE9FF;
+            border-color: #6D4AFF;
+            color: #6D4AFF;
         }
 
         .mobile-cta svg {
@@ -2861,15 +2872,13 @@
 <body>
     <!-- HEADER (MODERNIZED) -->
     <header class="site-header">
-        </div>
 
         <!-- Main Navigation -->
         <nav class="main-nav">
             <div class="container">
                 <a href="../index.html" class="logo">
-                    <img src="../../img/logo.png" alt="Agadir Local Guide">
-                    <span class="logo-text">Agadir Local Guide</span>
-                </a>
+                    <img src="../img/logo.png" alt="Agadir Local Guide">
+                    </a>
 
                 <ul class="nav-menu">
                     <li><a href="../index.html">Home</a></li>
@@ -2885,7 +2894,7 @@
                             <li><a href="tour-paradise-valley-agadir.html">Paradise Valley</a></li>
                             <li><a href="tour-quad-biking-agadir.html">Quad Biking</a></li>
                             <li><a href="tour-camel-ride-agadir.html">Camel Riding</a></li>
-                            <li><a href="blog/things-to-do-in-agadir-adventure.html">Adventure Activities</a></li>
+                            <li><a href="../blog/things-to-do-in-agadir-adventure.html">Adventure Activities</a></li>
                         </ul>
                     </li>
                     <li><a href="../blog.html">Travel Guide</a></li>
@@ -2906,11 +2915,11 @@
                         Book Now
                     </a>
                     <button class="mobile-menu-toggle" id="hamburger" aria-label="Menu">
-                        <span></span>
-                        <span></span>
-                        <span></span>
-                    </button>
-                </div>
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
             </div>
         </nav>
     </header>
@@ -2984,51 +2993,7 @@
                 info@agadirlocalguide.com
             </a>
         </div>
-    </div>
-
-    </div>
-            </div>
-        </div>
-
-
-    <!-- Breadcrumb -->
-    <div class="breadcrumb">
-        <a href="../index.html">Home</a>
-        <span>›</span>
-        <a href="../agadir-tours.html">Agadir Tours</a>
-        <span>›</span>
-        <strong>Paradise Valley Agadir Tour</strong>
-    </div>
-
-    <!-- Trust Bar - Following UI/UX Audit Recommendations -->
-    <div class="trust-bar-hero">
-        <div class="trust-bar-content">
-            <div class="trust-badge-item">
-                <svg width="20" height="20" fill="currentColor" viewBox="0 0 20 20">
-                    <path fill-rule="evenodd" d="M6.267 3.455a3.066 3.066 0 001.745-.723 3.066 3.066 0 013.976 0 3.066 3.066 0 001.745.723 3.066 3.066 0 012.812 2.812c.051.643.304 1.254.723 1.745a3.066 3.066 0 010 3.976 3.066 3.066 0 00-.723 1.745 3.066 3.066 0 01-2.812 2.812 3.066 3.066 0 00-1.745.723 3.066 3.066 0 01-3.976 0 3.066 3.066 0 00-1.745-.723 3.066 3.066 0 01-2.812-2.812 3.066 3.066 0 00-.723-1.745 3.066 3.066 0 010-3.976 3.066 3.066 0 00.723-1.745 3.066 3.066 0 012.812-2.812zm7.44 5.252a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
-                </svg>
-                <span><strong>Licensed & Insured</strong> Tour Operator</span>
-            </div>
-            <div class="trust-badge-item">
-                <svg width="20" height="20" fill="currentColor" viewBox="0 0 20 20">
-                    <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/>
-                </svg>
-                <span><strong>4.9/5 Rating</strong> • 1,200+ Reviews</span>
-            </div>
-            <div class="trust-badge-item">
-                <svg width="20" height="20" fill="currentColor" viewBox="0 0 20 20">
-                    <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
-                </svg>
-                <span><strong>Free Cancellation</strong> • 24 Hours Before</span>
-            </div>
-            <div class="trust-badge-item">
-                <svg width="20" height="20" fill="currentColor" viewBox="0 0 20 20">
-                    <path fill-rule="evenodd" d="M10 9a3 3 0 100-6 3 3 0 000 6zm-7 9a7 7 0 1114 0H3z" clip-rule="evenodd"/>
-                </svg>
-                <span><strong>30,000+ Tours</strong> Successfully Completed</span>
-            </div>
-        </div>
-    </div>
+    
 
     <!-- Tour Hero Gallery -->
     <section class="tour-detail-hero">

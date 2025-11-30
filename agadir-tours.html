@@ -377,7 +377,9 @@
         }
 
         .btn-outline:hover {
-            background: var(--primary-50);
+            background: #EEE9FF;
+            border-color: #6D4AFF;
+            color: #6D4AFF;
         }
 
         .btn-outline svg {
@@ -386,24 +388,27 @@
         }
 
         .btn-primary-nav {
-            background: var(--primary-600);
-            color: white;
+            background: #FFD400;
+            color: #222222;
+            border: none;
             padding: 10px 24px;
             border-radius: 8px;
             font-weight: 600;
             font-size: 14px;
-            border: none;
             cursor: pointer;
             display: inline-flex;
             align-items: center;
             gap: 6px;
-            transition: all 0.2s;
+            transition: all 0.3s ease;
             text-decoration: none;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
         }
 
         .btn-primary-nav:hover {
-            background: var(--primary-700);
+            background: #e6bf00;
+            color: #222222;
             transform: translateY(-1px);
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
         }
 
         .btn-primary-nav svg {
@@ -690,8 +695,7 @@
             <div class="container">
                 <a href="index.html" class="logo">
                     <img src="img/logo.png" alt="Agadir Local Guide">
-                    <span class="logo-text">Agadir Local Guide</span>
-                </a>
+                    </a>
 
                 <ul class="nav-menu">
                     <li><a href="index.html">Home</a></li>
@@ -728,11 +732,11 @@
                         Book Now
                     </a>
                     <button class="mobile-menu-toggle" id="hamburger" aria-label="Menu">
-                        <span></span>
-                        <span></span>
-                        <span></span>
-                    </button>
-                </div>
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
             </div>
         </nav>
     </header>

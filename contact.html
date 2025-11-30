@@ -176,7 +176,20 @@
         }
         .topbar-link:hover { color: var(--primary-600); }
         .topbar-link svg { width: 14px; height: 14px; }
-        .main-nav { padding: 16px 0; background: white; }
+        /* Slimmer header when scrolled */
+        .site-header.scrolled .main-nav {
+            padding: 10px 0;
+        }
+
+        .site-header.scrolled .logo img {
+            height: 38px;
+        }
+
+        .main-nav {
+            padding: 13px 0;
+            background: white;
+            transition: padding 0.3s ease;
+        }
         .main-nav .container {
             max-width: 1360px;
             margin: 0 auto;
@@ -185,17 +198,19 @@
             justify-content: space-between;
             align-items: center;
         }
-        .logo { display: flex; align-items: center; gap: 12px; text-decoration: none; }
-        .logo img { height: 45px; width: auto; }
-        .logo-text {
-            font-size: 18px;
-            font-weight: 700;
-            color: var(--gray-900);
-            font-family: var(--font-display);
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            text-decoration: none;
+        }
+        .logo img {
+            height: 45px;
+            width: auto;
         }
         .nav-menu {
             display: flex;
-            gap: 32px;
+            gap: 28px;
             list-style: none;
             align-items: center;
             margin: 0;
@@ -213,7 +228,12 @@
         }
         .nav-menu a:hover { color: var(--primary-600); }
         .has-dropdown { position: relative; }
-        .dropdown-icon { width: 12px; height: 12px; margin-left: 4px; transition: transform 0.2s; }
+        .dropdown-icon {
+            width: 11px;
+            height: 11px;
+            margin-left: 4px;
+            transition: transform 0.2s;
+        }
         .has-dropdown:hover .dropdown-icon { transform: rotate(180deg); }
         .dropdown-menu {
             position: absolute;
@@ -238,41 +258,69 @@
         .dropdown-menu li { width: 100%; }
         .dropdown-menu a { padding: 10px 20px; display: block; font-size: 14px; }
         .dropdown-menu a:hover { background: var(--gray-50); }
-        .nav-actions { display: flex; gap: 12px; align-items: center; }
-        .btn-outline {
-            background: transparent;
-            color: var(--primary-600);
-            border: 2px solid var(--primary-600);
-            padding: 8px 20px;
-            border-radius: 8px;
-            font-weight: 600;
-            font-size: 14px;
-            cursor: pointer;
-            transition: all 0.2s;
-            display: inline-flex;
+        .nav-actions {
+            display: flex;
+            gap: 12px;
             align-items: center;
-            gap: 6px;
-            text-decoration: none;
         }
-        .btn-outline:hover { background: var(--primary-50); }
-        .btn-outline svg { width: 16px; height: 16px; }
-        .btn-primary-nav {
-            background: var(--primary-600);
-            color: white;
+
+        /* Header Navigation Buttons - Unified Design System */
+        /* Call Us button - Secondary (Purple outline) */
+        .nav-actions .btn-outline {
+            background: transparent;
+            border: 2px solid #6D4AFF;
+            color: #6D4AFF;
             padding: 10px 24px;
             border-radius: 8px;
             font-weight: 600;
             font-size: 14px;
-            border: none;
             cursor: pointer;
             display: inline-flex;
             align-items: center;
             gap: 6px;
-            transition: all 0.2s;
+            transition: all 0.3s ease;
             text-decoration: none;
+            line-height: 1;
         }
-        .btn-primary-nav:hover { background: var(--primary-700); transform: translateY(-1px); }
-        .btn-primary-nav svg { width: 16px; height: 16px; }
+
+        .nav-actions .btn-outline:hover {
+            background: #EEE9FF;
+            border-color: #6D4AFF;
+            color: #6D4AFF;
+            transform: translateY(-1px);
+        }
+
+        /* Book Now button - Primary (Yellow) */
+        .nav-actions .btn-primary-nav {
+            background: #FFD400;
+            color: #222222;
+            border: none;
+            padding: 10px 24px;
+            border-radius: 8px;
+            font-weight: 600;
+            font-size: 14px;
+            cursor: pointer;
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            transition: all 0.3s ease;
+            text-decoration: none;
+            line-height: 1;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .nav-actions .btn-primary-nav:hover {
+            background: #e6bf00;
+            color: #222222;
+            transform: translateY(-1px);
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+        }
+
+        .nav-actions .btn-outline svg,
+        .nav-actions .btn-primary-nav svg {
+            width: 14px;
+            height: 14px;
+        }
         .mobile-menu-toggle {
             display: none;
             flex-direction: column;
@@ -399,14 +447,27 @@
             min-height: 48px;
             text-align: center;
         }
-        .mobile-cta-primary { background: var(--primary-600); color: white; }
-        .mobile-cta-primary:hover { background: var(--primary-700); }
-        .mobile-cta-secondary {
-            background: var(--gray-100);
-            color: var(--gray-900);
-            border: 2px solid var(--gray-300);
+        .mobile-cta-primary {
+            background: #FFD400;
+            color: #222222;
+            border: none;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
         }
-        .mobile-cta-secondary:hover { background: var(--gray-200); }
+        .mobile-cta-primary:hover {
+            background: #e6bf00;
+            color: #222222;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+        }
+        .mobile-cta-secondary {
+            background: transparent;
+            border: 2px solid #6D4AFF;
+            color: #6D4AFF;
+        }
+        .mobile-cta-secondary:hover {
+            background: #EEE9FF;
+            border-color: #6D4AFF;
+            color: #6D4AFF;
+        }
         .mobile-cta svg { width: 18px; height: 18px; }
         .mobile-menu-contact {
             margin-top: auto;
@@ -448,15 +509,13 @@
 <body>
     <!-- HEADER (MODERNIZED) -->
     <header class="site-header">
-        </div>
 
         <!-- Main Navigation -->
         <nav class="main-nav">
             <div class="container">
                 <a href="index.html" class="logo">
                     <img src="img/logo.png" alt="Agadir Local Guide">
-                    <span class="logo-text">Agadir Local Guide</span>
-                </a>
+                    </a>
 
                 <ul class="nav-menu">
                     <li><a href="index.html">Home</a></li>
@@ -493,11 +552,11 @@
                         Book Now
                     </a>
                     <button class="mobile-menu-toggle" id="hamburger" aria-label="Menu">
-                        <span></span>
-                        <span></span>
-                        <span></span>
-                    </button>
-                </div>
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
             </div>
         </nav>
     </header>
@@ -893,6 +952,21 @@
                 closeMobileMenu();
             }
         });
+
+        // ===== STICKY HEADER SCROLL EFFECT =====
+        const siteHeader = document.querySelector('.site-header');
+        if (siteHeader) {
+            let lastScroll = 0;
+            window.addEventListener('scroll', function() {
+                const currentScroll = window.pageYOffset;
+                if (currentScroll > 50) {
+                    siteHeader.classList.add('scrolled');
+                } else {
+                    siteHeader.classList.remove('scrolled');
+                }
+                lastScroll = currentScroll;
+            });
+        }
     </script>
 </body>
 </html>

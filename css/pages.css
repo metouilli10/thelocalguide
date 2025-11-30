@@ -2,7 +2,7 @@
 
 /* Page Hero */
 .page-hero {
-    background: linear-gradient(135deg, var(--dark-bg) 0%, #2a2a2a 100%);
+    background: linear-gradient(135deg, var(--color-primary-dark) 0%, var(--color-primary) 100%);
     padding: 150px 20px 100px;
     text-align: center;
     color: var(--light-text);
@@ -16,7 +16,7 @@
 
 .page-hero-title .subtitle {
     font-size: 1.8rem;
-    color: var(--primary-color);
+    color: var(--color-accent);
     display: block;
     margin-bottom: 10px;
 }
@@ -36,7 +36,7 @@
 .large-text {
     font-size: 1.2rem;
     line-height: 2;
-    color: #555;
+    color: var(--color-text-muted);
 }
 
 /* Services Grid */
@@ -69,13 +69,13 @@
 .service-card h1 {
     padding: 30px 20px 10px;
     font-size: 1.5rem;
-    color: var(--dark-bg);
+    color: var(--color-text);
     letter-spacing: 1px;
 }
 
 .service-card p {
     padding: 0 20px 30px;
-    color: #666;
+    color: var(--color-text-muted);
     line-height: 1.6;
 }
 
@@ -106,7 +106,7 @@
 .signature-header p {
     font-size: 1.1rem;
     line-height: 1.8;
-    color: #666;
+    color: var(--color-text-muted);
 }
 
 .experience-features {
@@ -128,14 +128,14 @@
 .feature-item h1 {
     font-size: 1.8rem;
     margin-bottom: 20px;
-    color: var(--dark-bg);
+    color: var(--color-text);
     letter-spacing: 1px;
 }
 
 .feature-item p {
     font-size: 1rem;
     line-height: 1.8;
-    color: #666;
+    color: var(--color-text-muted);
 }
 
 /* Why Choose Detailed */
@@ -155,7 +155,7 @@
 .features-list li {
     font-size: 1.1rem;
     line-height: 2.5;
-    color: #555;
+    color: var(--color-text-muted);
 }
 
 .why-choose-image img {
@@ -167,14 +167,14 @@
 .partners-section {
     text-align: center;
     padding: 60px 0;
-    background: #f9f9f9;
+    background: var(--color-bg-soft);
     margin: 0 -20px;
 }
 
 .partners-section .section-subtitle {
     font-size: 1.2rem;
     margin-bottom: 40px;
-    color: #555;
+    color: var(--color-text-muted);
 }
 
 .partners-logos {
@@ -207,7 +207,7 @@
 }
 
 .contact-info {
-    background: #f9f9f9;
+    background: var(--color-bg-soft);
     padding: 40px;
     border-radius: 5px;
 }
@@ -219,16 +219,16 @@
 .info-item h4 {
     font-size: 1.2rem;
     margin-bottom: 15px;
-    color: var(--primary-color);
+    color: var(--color-primary);
 }
 
 .info-item p {
-    color: #666;
+    color: var(--color-text-muted);
     line-height: 1.8;
 }
 
 .info-item a {
-    color: var(--primary-color);
+    color: var(--color-primary);
     text-decoration: underline;
 }
 
@@ -239,7 +239,7 @@
 }
 
 .instagram-section {
-    background: #f9f9f9;
+    background: var(--color-bg-soft);
     padding: 60px 40px;
     border-radius: 10px;
     text-align: center;
@@ -259,12 +259,12 @@
 
 .stat h1 {
     font-size: 2.5rem;
-    color: var(--primary-color);
+    color: var(--color-primary);
     margin-bottom: 10px;
 }
 
 .stat p {
-    color: #666;
+    color: var(--color-text-muted);
 }
 
 .instagram-gallery {
@@ -325,16 +325,16 @@
 .pilot-info h3 {
     font-size: 1.5rem;
     margin-bottom: 10px;
-    color: var(--dark-bg);
+    color: var(--color-text);
 }
 
 .pilot-info p {
-    color: var(--primary-color);
+    color: var(--color-primary);
     font-size: 1rem;
 }
 
 .pilot-quote {
-    background: var(--primary-color);
+    background: var(--color-primary);
     color: white;
     padding: 60px 40px;
     text-align: center;
@@ -351,7 +351,7 @@
     text-align: center;
     font-size: 1.1rem;
     line-height: 1.8;
-    color: #666;
+    color: var(--color-text-muted);
 }
 
 .pilot-images {
@@ -392,11 +392,11 @@
 .contact-form-section h1 {
     font-size: 2.5rem;
     margin-bottom: 20px;
-    color: var(--dark-bg);
+    color: var(--color-text);
 }
 
 .contact-form-section p {
-    color: #666;
+    color: var(--color-text-muted);
     margin-bottom: 40px;
     line-height: 1.8;
 }

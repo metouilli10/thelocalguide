@@ -101,24 +101,50 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
 
-    // Scroll Animations
+    // Scroll Animations - Elegant fade-in + slide-up
     const observerOptions = {
         threshold: 0.1,
-        rootMargin: '0px 0px -100px 0px'
+        rootMargin: '0px 0px -80px 0px'
     };
 
     const observer = new IntersectionObserver(function(entries) {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
-                entry.target.classList.add('animate__animated', 'animate__fadeInUp');
+                entry.target.classList.add('animate__animated', 'animate__fadeInUp', 'visible');
                 observer.unobserve(entry.target);
             }
         });
     }, observerOptions);
 
-    // Observe sections
-    document.querySelectorAll('.intro-section, .quick-links, .why-choose-section, .experiences-section, .locations-section, .contact-section, .hero-inner, .trust-grid, .popular-trips-section, .signature-section, .steps-section, .testimonials-section, .cta-banner-inner').forEach(section => {
-        observer.observe(section);
+    // Observe all major sections with fade-in animation
+    const sectionsToAnimate = [
+        '.intro-section', 
+        '.quick-links', 
+        '.why-choose-section', 
+        '.experiences-section', 
+        '.locations-section', 
+        '.contact-section', 
+        '.hero-inner', 
+        '.trust-grid', 
+        '.popular-trips-section', 
+        '.signature-section', 
+        '.steps-section', 
+        '.testimonials-section', 
+        '.cta-banner-inner',
+        '.trip-grid',
+        '.trip-card',
+        '.step-card',
+        '.testimonial-card',
+        '.trust-card',
+        '.signature-inner',
+        '.steps-grid'
+    ];
+    
+    sectionsToAnimate.forEach(selector => {
+        document.querySelectorAll(selector).forEach(section => {
+            section.classList.add('fade-in-section');
+            observer.observe(section);
+        });
     });
 
     // Lazy Load Images

@@ -17,7 +17,7 @@
     <meta name="author" content="Agadir Local Guide">
     <title>Agadir Tours & Excursions | Agadir Local Guide - Best Day Trips & Activities</title>
     <link rel="canonical" href="https://agadirlocalguide.com/">
-    <link rel="icon" href="img/logo.png">
+    <link rel="icon" href="img/logoalg.png">
     
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website">
@@ -145,11 +145,6 @@
             box-sizing: border-box;
         }
 
-        html {
-            max-width: 100%;
-            overflow-x: hidden;
-        }
-
         body {
             font-family: var(--font-sans);
             line-height: 1.6;
@@ -157,8 +152,6 @@
             background: var(--bg-white);
             -webkit-font-smoothing: antialiased;
             -moz-osx-font-smoothing: grayscale;
-            max-width: 100%;
-            overflow-x: hidden;
         }
 
         h1, h2, h3, h4, h5, h6 {
@@ -256,23 +249,20 @@
             top: 0;
             left: 0;
             right: 0;
-            width: 100%;
             z-index: 1000;
             background: transparent;
             transition: all 0.3s ease;
-            box-shadow: none;
         }
 
         /* Header in scrolled state - solid background */
         .site-header.scrolled {
             background: #FFFFFF;
-            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.06);
         }
 
         /* Slimmer header when scrolled */
         .site-header.scrolled .main-nav {
             padding: 10px 0;
-            background: transparent; /* Remove white background from main-nav */
         }
 
         .site-header.scrolled .header-topbar {
@@ -322,14 +312,14 @@
             transition: color 0.3s ease;
         }
 
-        /* Initial state: white text with improved readability */
+        /* Initial state: white text */
         .site-header:not(.scrolled) .topbar-item {
-            color: rgba(255, 255, 255, 0.9);
+            color: #FFFFFF;
             font-weight: 600;
         }
 
         .site-header:not(.scrolled) .topbar-item:hover {
-            color: #ffffff;
+            color: rgba(255, 255, 255, 0.95);
         }
 
         /* Scrolled state: dark text */
@@ -355,14 +345,14 @@
             transition: color 0.3s ease;
         }
 
-        /* Initial state: white text with improved readability */
+        /* Initial state: white text */
         .site-header:not(.scrolled) .topbar-link {
-            color: rgba(255, 255, 255, 0.9);
+            color: #FFFFFF;
             font-weight: 600;
         }
 
         .site-header:not(.scrolled) .topbar-link:hover {
-            color: #ffffff;
+            color: rgba(255, 255, 255, 0.95);
         }
 
         /* Scrolled state: dark text */
@@ -383,7 +373,9 @@
             transition: padding 0.3s ease, background 0.3s ease;
         }
 
-        /* Main-nav background is handled by parent .site-header, not here */
+        .site-header.scrolled .main-nav {
+            background: white;
+        }
 
         .main-nav .container {
             max-width: 1360px;
@@ -437,14 +429,14 @@
             display: block;
         }
 
-        /* Initial state: white text with improved readability */
+        /* Initial state: white text */
         .site-header:not(.scrolled) .nav-menu a {
-            color: rgba(255, 255, 255, 0.9);
+            color: #FFFFFF;
             font-weight: 600;
         }
 
         .site-header:not(.scrolled) .nav-menu a:hover {
-            color: #ffffff;
+            color: rgba(255, 255, 255, 0.9);
         }
 
         /* Scrolled state: dark text */
@@ -465,13 +457,9 @@
             fill: currentColor;
         }
 
-        /* Initial state: white dropdown icon with improved readability */
+        /* Initial state: white dropdown icon */
         .site-header:not(.scrolled) .dropdown-icon {
-            fill: rgba(255, 255, 255, 0.9);
-        }
-
-        .site-header:not(.scrolled) .has-dropdown:hover .dropdown-icon {
-            fill: #ffffff;
+            fill: #FFFFFF;
         }
 
         .has-dropdown:hover .dropdown-icon {
@@ -526,8 +514,8 @@
         /* Initial state: transparent with white border */
         .site-header:not(.scrolled) .nav-actions .btn-outline {
             background: transparent;
-            color: rgba(255, 255, 255, 0.9);
-            border: 2px solid rgba(255, 255, 255, 0.7);
+            color: white;
+            border: 2px solid white;
             padding: 10px 24px;
             border-radius: 8px;
             font-weight: 600;
@@ -543,16 +531,15 @@
 
         .site-header:not(.scrolled) .nav-actions .btn-outline:hover {
             background: rgba(255, 255, 255, 0.15);
-            border-color: #ffffff;
-            color: #ffffff;
+            border-color: white;
             transform: translateY(-1px);
         }
 
         /* Initial state: transparent with white border for Book Now */
         .site-header:not(.scrolled) .nav-actions .btn-primary-nav {
             background: transparent;
-            color: rgba(255, 255, 255, 0.9);
-            border: 2px solid rgba(255, 255, 255, 0.7);
+            color: white;
+            border: 2px solid white;
             padding: 10px 24px;
             border-radius: 8px;
             font-weight: 600;
@@ -568,41 +555,15 @@
 
         .site-header:not(.scrolled) .nav-actions .btn-primary-nav:hover {
             background: rgba(255, 255, 255, 0.15);
-            border-color: #ffffff;
-            color: #ffffff;
+            border-color: white;
             transform: translateY(-1px);
         }
 
-        /* Scrolled state: unified button system */
-        /* Call Us button - Secondary (Purple outline) */
-        .site-header.scrolled .nav-actions .btn-outline {
-            background: transparent;
-            border: 2px solid #6D4AFF;
-            color: #6D4AFF;
-            padding: 10px 24px;
-            border-radius: 8px;
-            font-weight: 600;
-            font-size: 14px;
-            cursor: pointer;
-            display: inline-flex;
-            align-items: center;
-            gap: 6px;
-            transition: all 0.3s ease;
-            text-decoration: none;
-            line-height: 1;
-        }
-
-        .site-header.scrolled .nav-actions .btn-outline:hover {
-            background: #EEE9FF;
-            border-color: #6D4AFF;
-            color: #6D4AFF;
-            transform: translateY(-1px);
-        }
-
-        /* Book Now button - Primary (Yellow) */
+        /* Scrolled state: solid brand colors */
+        .site-header.scrolled .nav-actions .btn-outline,
         .site-header.scrolled .nav-actions .btn-primary-nav {
-            background: #FFD400;
-            color: #222222;
+            background: var(--primary-600);
+            color: white;
             border: none;
             padding: 10px 24px;
             border-radius: 8px;
@@ -615,14 +576,12 @@
             transition: all 0.3s ease;
             text-decoration: none;
             line-height: 1;
-            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
         }
 
+        .site-header.scrolled .nav-actions .btn-outline:hover,
         .site-header.scrolled .nav-actions .btn-primary-nav:hover {
-            background: #e6bf00;
-            color: #222222;
+            background: var(--primary-700);
             transform: translateY(-1px);
-            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
         }
 
         .nav-actions .btn-outline svg,
@@ -633,24 +592,10 @@
             fill: none;
         }
 
-        /* Ensure SVG icons are white in initial state with improved readability */
+        /* Ensure SVG icons are white in initial state */
         .site-header:not(.scrolled) .nav-actions .btn-outline svg,
         .site-header:not(.scrolled) .nav-actions .btn-primary-nav svg {
-            stroke: rgba(255, 255, 255, 0.9);
-        }
-
-        .site-header:not(.scrolled) .nav-actions .btn-outline:hover svg,
-        .site-header:not(.scrolled) .nav-actions .btn-primary-nav:hover svg {
-            stroke: #ffffff;
-        }
-
-        /* SVG icons in scrolled state */
-        .site-header.scrolled .nav-actions .btn-outline svg {
-            stroke: #6D4AFF;
-        }
-
-        .site-header.scrolled .nav-actions .btn-primary-nav svg {
-            stroke: #222222;
+            stroke: white;
         }
 
         /* Mobile Menu Toggle */
@@ -672,20 +617,8 @@
             transition: all 0.3s ease;
         }
 
-        /* Hide mobile call button on desktop */
-        .btn-call-mobile {
-            display: none;
-        }
-
-        /* Mobile menu toggle hover - only show background when scrolled */
-        .site-header.scrolled .mobile-menu-toggle:hover {
+        .mobile-menu-toggle:hover {
             background: var(--gray-100);
-            border-radius: 8px;
-        }
-
-        /* Transparent state - no hover background */
-        .site-header:not(.scrolled) .mobile-menu-toggle:hover {
-            background: rgba(255, 255, 255, 0.1);
             border-radius: 8px;
         }
 
@@ -719,11 +652,6 @@
             background: var(--primary-600);
         }
 
-        /* Hamburger is dark when scrolled */
-        .site-header.scrolled .mobile-menu-toggle span {
-            background: var(--gray-800);
-        }
-
         /* Ensure hamburger is dark when scrolled and active */
         .site-header.scrolled .mobile-menu-toggle.active span {
             background: var(--primary-600);
@@ -755,81 +683,34 @@
             color: #000000;
         }
 
-        /* ===== UNIFIED BUTTON DESIGN SYSTEM ===== */
-        
-        /* PRIMARY BUTTON - Yellow CTA */
         .btn-primary {
             background: #FFD400;
             color: #222222;
-            border: none;
-            padding: 12px 24px;
-            border-radius: 8px;
-            font-weight: 600;
-            font-size: 16px;
-            cursor: pointer;
-            transition: all 0.3s ease;
-            text-decoration: none;
-            display: inline-block;
-            text-align: center;
-            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
         }
 
         .btn-primary:hover {
-            background: #e6bf00;
+            background: #E6C000;
             color: #222222;
             transform: translateY(-1px);
-            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
         }
 
-        /* SECONDARY BUTTON - Purple Outline */
         .btn-secondary {
-            background: transparent;
-            border: 2px solid #6D4AFF;
-            color: #6D4AFF;
-            padding: 12px 24px;
-            border-radius: 8px;
-            font-weight: 600;
-            font-size: 16px;
-            cursor: pointer;
-            transition: all 0.3s ease;
-            text-decoration: none;
-            display: inline-block;
-            text-align: center;
+            background: #FFD400;
+            color: #222222;
+            border: 2px solid #FFD400;
         }
 
         .btn-secondary:hover {
-            background: #EEE9FF;
-            border-color: #6D4AFF;
-            color: #6D4AFF;
-            transform: translateY(-1px);
-        }
-
-        /* TERTIARY BUTTON - Neutral (Optional) */
-        .btn-tertiary {
-            background: white;
-            border: 1px solid #EDEDED;
-            color: #444444;
-            padding: 12px 24px;
-            border-radius: 8px;
-            font-weight: 500;
-            font-size: 16px;
-            cursor: pointer;
-            transition: all 0.3s ease;
-            text-decoration: none;
-            display: inline-block;
-            text-align: center;
-        }
-
-        .btn-tertiary:hover {
-            background: #F8F8F8;
-            border-color: #D1D5DB;
+            background: #E6C000;
             color: #222222;
+            border: 2px solid #E6C000;
         }
 
         /* ===== HERO SECTION (MODERNIZED) ===== */
         .hero {
-            height: 88vh;
-            min-height: 88vh;
+            height: 100vh;
+            min-height: 100vh;
+            background: url('img/ouarzazate.jpg') center/cover no-repeat;
             position: relative;
             overflow: hidden;
             display: flex;
@@ -837,48 +718,51 @@
             justify-content: center;
             margin-top: 0;
             padding-top: 0;
-            width: 100%;
-            max-width: 100vw;
         }
 
-        /* Hero image with subtle brightness reduction for premium look */
-        .hero::after {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            width: 100%;
-            background: url('img/ouarzazate.jpg') center/cover no-repeat;
-            filter: brightness(0.94) saturate(1.05);
-            z-index: 0;
-        }
-
-        /* Hero overlay - top-heavy gradient for better text readability at top */
+        /* Dark readability overlay - sits on top of background image, below content */
         .hero::before {
             content: '';
             position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            width: 100%;
-            background: linear-gradient(to bottom, rgba(0, 0, 0, 0.55), rgba(0, 0, 0, 0.25));
+            inset: 0;
+            background: linear-gradient(
+                180deg,
+                rgba(0, 0, 0, 0.55) 0%,
+                rgba(0, 0, 0, 0.35) 40%,
+                rgba(0, 0, 0, 0.15) 75%,
+                rgba(0, 0, 0, 0) 100%
+            );
             z-index: 1;
         }
 
-        /* Bottom fade transition - blends hero into white background */
-        .hero__fade {
+        /* White fade at the bottom of hero */
+        .hero::after {
+            content: '';
             position: absolute;
             left: 0;
             right: 0;
             bottom: 0;
-            width: 100%;
             height: 120px;
-            background: linear-gradient(to bottom, rgba(255, 255, 255, 0) 0%, #ffffff 100%);
+            background: linear-gradient(
+                to bottom,
+                rgba(255, 255, 255, 0) 0%,
+                #ffffff 100%
+            );
             pointer-events: none;
-            z-index: 1;
+            z-index: 2;
+        }
+
+        /* Adjust white fade height on mobile */
+        @media (max-width: 768px) {
+            .hero::after {
+                height: 100px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .hero::after {
+                height: 80px;
+            }
         }
 
         /* Ensure hero starts at the very top */
@@ -889,14 +773,15 @@
         .hero__content {
             text-align: left;
             color: var(--bg-white);
-            z-index: 2;
+            z-index: 20;
             position: relative;
-            max-width: 1000px;
-            padding: 60px 20px 0;
+            max-width: 750px;
+            padding: 60px 0 0;
+            margin-left: -40px;
             width: 100%;
-            margin-top: -10px;
-            margin-left: auto;
-            margin-right: auto;
+            display: flex;
+            flex-direction: column;
+            gap: 24px;
         }
 
         .hero__badge {
@@ -907,23 +792,25 @@
             font-size: 0.9rem;
             font-weight: 500;
             color: #FFFFFF;
-            margin-bottom: 20px;
+            margin-bottom: 18px;
+            margin-top: 0;
             opacity: 0;
             transform: translateY(20px);
             animation: fadeUp 0.6s ease-out 0.1s forwards;
             backdrop-filter: blur(8px);
             box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-            text-shadow: 0 0 14px rgba(0, 0, 0, 0.25), 0 0 6px rgba(0, 0, 0, 0.18);
+            align-self: flex-start;
         }
 
         .hero__title {
-            font-size: clamp(1.8rem, 3.6vw, 2.85rem);
+            font-size: clamp(1.9rem, 3.8vw, 3rem);
             font-weight: 800;
             color: white;
-            line-height: 1.4;
-            margin-bottom: 22px;
+            line-height: 1.3;
+            margin-bottom: 0;
+            margin-top: 0;
             padding-top: 0;
-            text-shadow: 0 0 14px rgba(0, 0, 0, 0.25), 0 0 6px rgba(0, 0, 0, 0.18);
+            text-shadow: 0 2px 20px rgba(0,0,0,0.3);
             letter-spacing: -0.02em;
             opacity: 0;
             transform: translateY(30px);
@@ -942,32 +829,30 @@
             display: block;
             font-weight: 900;
             font-size: 1.08em;
-            text-shadow: none;
         }
 
         .hero__subtitle {
             font-size: clamp(1rem, 2vw, 1.25rem);
-            margin-bottom: 24px;
-            margin-top: -2px;
+            margin-bottom: 28px;
+            margin-top: 14px;
             opacity: 0;
             line-height: 1.6;
-            max-width: 700px;
+            max-width: 100%;
             margin-left: 0;
-            margin-right: auto;
+            margin-right: 0;
             animation: fadeUp 0.8s ease-out 0.3s forwards;
-            text-shadow: 0 0 14px rgba(0, 0, 0, 0.25), 0 0 6px rgba(0, 0, 0, 0.18);
         }
 
         .hero__cta {
             display: flex;
-            gap: 16px;
+            gap: 19px;
             justify-content: flex-start;
             flex-wrap: wrap;
-            margin-bottom: 60px;
+            margin-bottom: 0;
+            margin-top: 24px;
             opacity: 0;
             transform: translateX(-30px);
             animation: slideIn 0.8s ease-out 0.4s forwards;
-            flex-direction: row;
         }
 
         @keyframes slideIn {
@@ -977,86 +862,120 @@
             }
         }
 
-        /* Note: .btn-primary-large is now defined above with .btn-hero-base */
-
-        /* SECONDARY LARGE - Hero WhatsApp & Secondary Actions */
-        .btn-secondary-large {
-            background: transparent;
-            border: 2px solid #6D4AFF;
-            color: #6D4AFF;
+        /* ===== UNIFIED BUTTON SYSTEM ===== */
+        /* PRIMARY BUTTON - Yellow solid style for main CTAs */
+        .btn-primary,
+        .btn-primary-large,
+        .btn.btn-primary {
+            background: #FFC92E;
+            color: #111827;
             padding: 18px 40px;
             font-size: 18px;
-            font-weight: 600;
-            border-radius: 8px;
-            cursor: pointer;
-            transition: all 0.3s ease;
-            text-decoration: none;
-            display: inline-flex;
-            align-items: center;
-            gap: 8px;
-        }
-
-        .btn-secondary-large:hover {
-            background: #EEE9FF;
-            border-color: #6D4AFF;
-            color: #6D4AFF;
-            transform: translateY(-2px);
-        }
-
-        /* ===== HERO BUTTONS - SHARED BASE STYLE ===== */
-        /* Base style shared by both hero buttons for consistent sizing */
-        .btn-hero-base {
-            padding: 16px 32px;
-            font-size: 17px;
-            font-weight: 600;
+            font-weight: 700;
             border-radius: 9999px;
+            border: none;
             cursor: pointer;
-            transition: all 0.3s ease;
+            box-shadow: 0 12px 30px rgba(0, 0, 0, 0.2);
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
             text-decoration: none;
             display: inline-flex;
             align-items: center;
             justify-content: center;
             gap: 8px;
-            line-height: 1;
-            white-space: nowrap;
-            width: auto; /* Desktop: auto width */
+            font-family: 'Lato', sans-serif;
+            letter-spacing: 0.5px;
+            outline: none;
+            min-height: 54px;
         }
 
-        /* PRIMARY LARGE - Hero "View All Tours" */
-        .btn-primary-large {
-            background: #FFD400;
-            color: #222222;
-            border: none;
-            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-        }
-
+        .btn-primary:hover,
         .btn-primary-large:hover {
-            background: #e6bf00;
-            color: #222222;
-            transform: translateY(-2px);
-            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+            background: #F5B900;
+            transform: translateY(-1px) scale(1.02);
+            box-shadow: 0 14px 35px rgba(0, 0, 0, 0.25);
         }
 
-        /* PREMIUM GHOST BUTTON - Hero WhatsApp Only */
-        .btn-ghost-hero {
+        .btn-primary:active,
+        .btn-primary-large:active {
+            transform: translateY(0);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+        }
+
+        .btn-primary:focus-visible,
+        .btn-primary-large:focus-visible {
+            outline: 2px solid #FFC92E;
+            outline-offset: 2px;
+        }
+
+        /* SECONDARY BUTTON - Outline style with purple accent */
+        .btn-secondary,
+        .btn-secondary-large {
             background: transparent;
-            border: 1.5px solid rgba(255, 255, 255, 0.7);
-            color: #ffffff;
+            color: #6D4AFF;
+            padding: 18px 40px;
+            font-size: 18px;
+            font-weight: 700;
+            border-radius: 9999px;
+            border: 2px solid #6D4AFF;
+            cursor: pointer;
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+            font-family: 'Lato', sans-serif;
+            letter-spacing: 0.5px;
+            outline: none;
+            min-height: 54px;
         }
 
-        .btn-ghost-hero svg {
-            width: 20px;
-            height: 20px;
-            fill: #ffffff;
-            stroke: none;
+        /* Special styling for hero secondary button (premium WhatsApp button) */
+        .hero .btn-secondary-large {
+            background: transparent;
+            color: #FFFFFF;
+            border: 1px solid rgba(255, 255, 255, 0.45);
+            border-radius: 8px;
+            padding: 12px 24px;
+            min-height: 54px;
+            font-weight: 500;
+            transition: all 0.25s ease;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
         }
 
-        .btn-ghost-hero:hover {
+        .hero .btn-secondary-large svg {
+            width: 18px;
+            height: 18px;
+            fill: #FFFFFF;
+        }
+
+        .btn-secondary:hover,
+        .btn-secondary-large:hover {
+            background: rgba(109, 74, 255, 0.1);
+            transform: translateY(-1px) scale(1.02);
+            box-shadow: 0 8px 20px rgba(109, 74, 255, 0.15);
+        }
+
+        .hero .btn-secondary-large:hover {
             background: rgba(255, 255, 255, 0.12);
-            border-color: rgba(255, 255, 255, 0.9);
-            color: #ffffff;
-            box-shadow: 0 0 12px rgba(255, 255, 255, 0.15);
+            color: #FFFFFF;
+            border-color: rgba(255, 255, 255, 0.65);
             transform: translateY(-2px);
+        }
+
+        .btn-secondary:active,
+        .btn-secondary-large:active {
+            transform: translateY(0);
+            box-shadow: 0 4px 12px rgba(109, 74, 255, 0.1);
+        }
+
+        .btn-secondary:focus-visible,
+        .btn-secondary-large:focus-visible {
+            outline: 2px solid #6D4AFF;
+            outline-offset: 2px;
         }
 
         .hero__features {
@@ -1066,8 +985,6 @@
             flex-wrap: wrap;
             max-width: 600px;
             margin: 0;
-            margin-top: 20px;
-            margin-bottom: 60px;
             opacity: 0;
             transform: translateY(20px);
             animation: fadeUp 0.8s ease-out 0.5s forwards;
@@ -1086,6 +1003,70 @@
             height: 20px;
             fill: #FFD400;
         }
+
+        /* ===== SCROLL ANIMATIONS ===== */
+        .fade-in-up {
+            opacity: 0;
+            transform: translateY(16px);
+            transition: opacity 0.6s cubic-bezier(0.4, 0, 0.2, 1),
+                        transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        .fade-in-up.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* Apply to section titles */
+        .trip-cards-section__title,
+        .features-section__title,
+        .blog-section__title,
+        .testimonials-section__title {
+            opacity: 0;
+            transform: translateY(18px);
+            transition: opacity 0.6s cubic-bezier(0.4, 0, 0.2, 1),
+                        transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        .trip-cards-section__title.visible,
+        .features-section__title.visible,
+        .blog-section__title.visible,
+        .testimonials-section__title.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* Apply to cards */
+        .trip-card,
+        .blog-card {
+            opacity: 0;
+            transform: translateY(16px);
+            transition: opacity 0.6s cubic-bezier(0.4, 0, 0.2, 1),
+                        transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        .trip-card.visible,
+        .blog-card.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* Stagger animation delays for cards */
+        .trip-card:nth-child(1) { transition-delay: 0.1s; }
+        .trip-card:nth-child(2) { transition-delay: 0.15s; }
+        .trip-card:nth-child(3) { transition-delay: 0.2s; }
+        .trip-card:nth-child(4) { transition-delay: 0.25s; }
+        .trip-card:nth-child(5) { transition-delay: 0.3s; }
+        .trip-card:nth-child(6) { transition-delay: 0.35s; }
+        .trip-card:nth-child(7) { transition-delay: 0.4s; }
+        .trip-card:nth-child(8) { transition-delay: 0.45s; }
+
+        .blog-card:nth-child(1) { transition-delay: 0.1s; }
+        .blog-card:nth-child(2) { transition-delay: 0.15s; }
+        .blog-card:nth-child(3) { transition-delay: 0.2s; }
+        .blog-card:nth-child(4) { transition-delay: 0.25s; }
+        .blog-card:nth-child(5) { transition-delay: 0.3s; }
+        .blog-card:nth-child(6) { transition-delay: 0.35s; }
 
         /* ===== TRUST BADGES SECTION ===== */
         .trust-badges {
@@ -1343,11 +1324,11 @@
         }
 
         .promo-banner__button {
-            background: #FFD400;
-            color: #222222;
+            background: var(--primary-color);
+            color: var(--bg-white);
             border: none;
             padding: 14px 32px;
-            border-radius: 8px;
+            border-radius: 6px;
             font-size: 14px;
             font-weight: 600;
             text-transform: uppercase;
@@ -1359,14 +1340,12 @@
             gap: 8px;
             align-self: flex-start;
             font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
         }
 
         .promo-banner__button:hover {
-            background: #e6bf00;
-            color: #222222;
+            background: #4B2BE9;
             transform: translateY(-1px);
-            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+            box-shadow: 0 4px 12px rgba(109, 74, 255, 0.3);
         }
 
         .promo-banner__button svg {
@@ -1399,7 +1378,7 @@
             font-size: 48px;
             font-weight: 900;
             color: var(--text-dark);
-            margin-bottom: 16px;
+            margin-bottom: 28px;
         }
 
         .trip-cards-section__subtitle {
@@ -1534,7 +1513,7 @@
         }
 
         .trip-card__content {
-            padding: 20px;
+            padding: 32px 20px;
             flex: 1;
             display: flex;
             flex-direction: column;
@@ -1566,11 +1545,17 @@
         .star {
             color: #F59E0B;
             font-size: 14px;
+            line-height: 1;
+            display: inline-block;
+            transform: translateZ(0);
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
         }
 
         .trip-card__review-count {
             font-size: 14px;
             color: #6B7280;
+            line-height: 1.6;
         }
 
         .trip-card__title {
@@ -1598,6 +1583,7 @@
             gap: 4px;
             font-size: 13px;
             color: #6B7280;
+            line-height: 1.6;
         }
 
         .trip-card__info-item svg {
@@ -1610,7 +1596,7 @@
         .trip-card__description {
             font-size: 14px;
             color: #6B7280;
-            line-height: 1.6;
+            line-height: 1.65;
             margin-bottom: 16px;
             flex: 1;
             display: -webkit-box;
@@ -1657,41 +1643,49 @@
         .trip-card__cta {
             display: flex;
             align-items: center;
+            justify-content: center;
         }
 
-        /* TOUR CARD BUTTON - Secondary style (default) */
+        @media (max-width: 640px) {
+            .trip-card__cta {
+                justify-content: center;
+                width: 100%;
+            }
+        }
+
+        /* Tour card buttons - Premium secondary style */
         .trip-card__btn {
-            background: transparent;
-            border: 2px solid #6D4AFF;
+            background: #ffffff;
             color: #6D4AFF;
-            padding: 10px 20px;
-            border-radius: 8px;
-            font-weight: 600;
-            font-size: 13px;
+            padding: 14px 28px;
+            border-radius: 9999px;
+            font-weight: 700;
+            font-size: 15px;
+            border: 1px solid rgba(0, 0, 0, 0.08);
             cursor: pointer;
-            transition: all 0.3s ease;
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
             white-space: nowrap;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+            font-family: 'Lato', sans-serif;
+            letter-spacing: 0.5px;
+            outline: none;
+            min-height: 40px;
         }
 
         .trip-card__btn:hover {
-            background: #EEE9FF;
-            border-color: #6D4AFF;
-            color: #6D4AFF;
-            transform: translateY(-1px);
+            background: #ffffff;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
         }
 
-        /* Override for primary action buttons in trip cards (VIEW TOUR) */
-        .btn-primary.trip-card__btn {
-            background: #FFD400;
-            border: none;
-            color: #222222;
-            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+        .trip-card__btn:active {
+            transform: translateY(0);
+            box-shadow: 0 4px 12px rgba(109, 74, 255, 0.1);
         }
 
-        .btn-primary.trip-card__btn:hover {
-            background: #e6bf00;
-            color: #222222;
-            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+        .trip-card__btn:focus-visible {
+            outline: 2px solid #6D4AFF;
+            outline-offset: 2px;
         }
 
         .trip-cards-section__button {
@@ -1718,7 +1712,7 @@
             font-size: 48px;
             font-weight: 900;
             color: var(--text-dark);
-            margin-bottom: 16px;
+            margin-bottom: 28px;
             line-height: 1.1;
         }
 
@@ -1755,9 +1749,9 @@
         }
 
         .blog-nav-button {
-            background: transparent;
-            border: 2px solid #6D4AFF;
-            color: #6D4AFF;
+            background: var(--primary-color);
+            color: var(--bg-white);
+            border: none;
             width: 48px;
             height: 48px;
             border-radius: 50%;
@@ -1771,10 +1765,8 @@
         }
 
         .blog-nav-button:hover {
-            background: #EEE9FF;
-            border-color: #6D4AFF;
-            color: #6D4AFF;
-            transform: scale(1.05);
+            background: #4B2BE9;
+            transform: scale(1.1);
         }
 
         .blog-nav-button:disabled {
@@ -1835,7 +1827,7 @@
         }
 
         .blog-card__content {
-            padding: 24px;
+            padding: 32px 24px;
             flex: 1;
             display: flex;
             flex-direction: column;
@@ -1847,6 +1839,7 @@
             margin-bottom: 12px;
             font-size: 13px;
             color: var(--text-light);
+            line-height: 1.6;
         }
 
         .blog-card__date,
@@ -1870,7 +1863,7 @@
         .blog-card__excerpt {
             font-size: 15px;
             color: var(--text-light);
-            line-height: 1.6;
+            line-height: 1.65;
             margin-bottom: 20px;
             flex: 1;
             display: -webkit-box;
@@ -1879,19 +1872,38 @@
             overflow: hidden;
         }
 
+        /* Blog card links - Premium secondary style */
         .blog-card__link {
-            color: var(--primary-color);
-            font-weight: 600;
-            font-size: 14px;
+            background: #ffffff;
+            color: #6D4AFF;
+            padding: 12px 24px;
+            border-radius: 9999px;
+            font-weight: 700;
+            font-size: 15px;
+            border: 1px solid rgba(0, 0, 0, 0.08);
             text-decoration: none;
-            transition: all 0.3s ease;
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
             display: inline-flex;
             align-items: center;
+            justify-content: center;
+            gap: 6px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+            font-family: 'Lato', sans-serif;
+            letter-spacing: 0.5px;
+            outline: none;
+            min-height: 40px;
         }
 
         .blog-card__link:hover {
-            color: #4B2BE9;
-            transform: translateX(4px);
+            background: #ffffff;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+            color: #6D4AFF;
+        }
+
+        .blog-card__link:focus-visible {
+            outline: 2px solid #6D4AFF;
+            outline-offset: 2px;
         }
 
         .blog-section__button {
@@ -1950,8 +1962,8 @@
 
         /* ===== FEATURES SECTION ===== */
         .features-section {
-            background: #FFF8E9;
-            padding: 50px 40px;
+            background: #fef7e0;
+            padding: 80px 40px;
         }
 
         .features-section__wrapper {
@@ -1964,15 +1976,15 @@
             font-weight: 700;
             color: var(--text-dark);
             text-align: center;
-            margin-bottom: 48px;
+            margin-bottom: 72px;
             line-height: 1.1;
         }
 
         .features-section__grid {
             display: grid;
             grid-template-columns: repeat(4, 1fr);
-            gap: 28px;
-            margin-bottom: 50px;
+            gap: 40px;
+            margin-bottom: 60px;
         }
 
         .feature-item {
@@ -1980,9 +1992,9 @@
             flex-direction: column;
             align-items: center;
             text-align: center;
-            gap: 8px;
-            padding-bottom: 24px;
-            border-bottom: 1px solid rgba(0, 0, 0, 0.12);
+            gap: 20px;
+            padding-bottom: 30px;
+            border-bottom: 1px solid rgba(0, 0, 0, 0.08);
         }
 
         .feature-item:last-child {
@@ -1990,8 +2002,8 @@
         }
 
         .feature-item__icon {
-            width: 36px;
-            height: 36px;
+            width: 46px;
+            height: 46px;
             background: var(--text-dark);
             border-radius: 16px;
             display: flex;
@@ -2001,13 +2013,13 @@
         }
 
         .feature-item__icon svg {
-            width: 18px;
-            height: 18px;
+            width: 23px;
+            height: 23px;
             stroke: #fff;
         }
 
         .feature-item__text {
-            font-size: 17px;
+            font-size: 16px;
             font-weight: 500;
             line-height: 1.4;
             color: var(--text-dark);
@@ -2019,15 +2031,14 @@
             text-align: center;
         }
 
-        /* FEATURES SECTION BUTTON - Secondary style (Purple Outline) */
         .btn-outline {
-            background: transparent;
-            border: 2px solid #6D4AFF;
-            color: #6D4AFF;
+            background: #cdff03;
+            border: 2px solid #cdff03;
+            color: #000000;
             padding: 16px 32px;
-            border-radius: 8px;
+            border-radius: 50px;
             font-size: 16px;
-            font-weight: 600;
+            font-weight: 700;
             text-transform: uppercase;
             letter-spacing: 0.5px;
             cursor: pointer;
@@ -2036,28 +2047,15 @@
             display: inline-block;
         }
 
-        .btn-outline:hover {
-            background: #EEE9FF;
-            border-color: #6D4AFF;
-            color: #6D4AFF;
-            transform: translateY(-1px);
-        }
-
-        /* WhatsApp button - Secondary style */
         .btn-whatsapp {
-            background: transparent;
-            border: 2px solid #6D4AFF;
-            color: #6D4AFF;
+            background: #8449f2;
+            color: #ffffff;
             font-weight: 600;
-            padding: 16px 32px;
-            border-radius: 8px;
-            transition: all 0.3s ease;
         }
 
         .btn-whatsapp:hover {
-            background: #EEE9FF;
-            border-color: #6D4AFF;
-            color: #6D4AFF;
+            background: #6d3bd9;
+            color: #ffffff;
             transform: translateY(-1px);
         }
 
@@ -2097,29 +2095,40 @@
                 padding: 4px 0;
             }
 
-            /* Tour card buttons should be full-width on mobile */
+            /* Tour card buttons - centered but not full-width on mobile */
             .trip-card__btn {
-                width: 100%;
+                width: auto;
+                min-width: 140px;
+                margin: 0 auto;
+                min-height: 44px;
             }
 
             /* Hero CTAs */
+            /* Mobile button styles - full width and proper spacing */
+            .btn-primary,
             .btn-primary-large,
+            .btn-secondary,
             .btn-secondary-large {
                 padding: 16px 32px;
                 font-size: 16px;
                 width: 100%;
                 justify-content: center;
+                max-width: 100%;
+            }
+
+            .hero__cta {
+                flex-direction: column;
+                width: 100%;
+            }
+
+            .hero__cta .btn-primary-large,
+            .hero__cta .btn-secondary-large {
+                width: 100%;
             }
         }
 
         /* ===== RESPONSIVE ===== */
         @media (max-width: 1024px) {
-            /* Hero height for tablet */
-            .hero {
-                height: 90vh;
-                min-height: 90vh;
-            }
-
             /* Hide desktop navigation on tablet/mobile */
             .nav-menu {
                 display: none;
@@ -2161,27 +2170,50 @@
             .hero__badge {
                 font-size: 0.85rem;
                 padding: 0.2rem 0.55rem;
-                margin-bottom: 18px;
+                margin-bottom: 11px;
             }
 
             .hero__title {
-                font-size: clamp(1.6rem, 3.2vw, 2.7rem);
-                line-height: 1.35;
+                font-size: clamp(1.7rem, 3.4vw, 2.7rem);
+                line-height: 1.25;
                 margin-bottom: 20px;
             }
 
             .hero__subtitle {
-                margin-bottom: 20px;
-                margin-top: -2px;
+                margin-bottom: 30px;
             }
 
             .hero__cta {
                 margin-bottom: 50px;
+                flex-direction: column;
+                width: 100%;
+                gap: 19px;
             }
 
-            .btn-ghost-hero {
-                padding: 14px 28px;
-                font-size: 16px;
+            .hero__cta .btn-primary-large,
+            .hero__cta .btn-secondary-large {
+                min-height: 56px;
+            }
+
+            .hero .btn-secondary-large {
+                padding: 12px 24px;
+            }
+
+            .hero .btn-secondary-large svg {
+                width: 18px;
+                height: 18px;
+            }
+
+            .hero__cta .btn-primary-large,
+            .hero__cta .btn-secondary-large {
+                width: 100%;
+                max-width: 100%;
+            }
+
+            /* Responsive hero content spacing */
+            .hero__content {
+                gap: 18px;
+                max-width: 100%;
             }
 
             .hero__features {
@@ -2203,25 +2235,6 @@
 
             .features-section__grid {
                 grid-template-columns: repeat(2, 1fr);
-                gap: 24px;
-            }
-
-            .feature-item__icon {
-                width: 34px;
-                height: 34px;
-            }
-
-            .feature-item__icon svg {
-                width: 17px;
-                height: 17px;
-            }
-
-            .feature-item__text {
-                font-size: 16px;
-            }
-
-            .features-section__title {
-                margin-bottom: 40px;
             }
 
             .blog-card {
@@ -2232,6 +2245,11 @@
         }
 
         @media (max-width: 768px) {
+            /* Header mobile adjustments */
+            .main-nav .container {
+                padding: 0 20px;
+            }
+
             .logo-text {
                 display: none; /* Hide text on very small screens */
             }
@@ -2244,26 +2262,11 @@
             }
 
             .blog-section {
-                padding: 48px 20px;
+                padding: 60px 20px;
             }
 
             .blog-section__title {
-                font-size: 32px;
-                margin-bottom: 12px;
-            }
-
-            .blog-card {
-                padding: 16px;
-            }
-
-            .blog-card__excerpt {
-                font-size: 13px;
-                line-height: 1.5;
-                -webkit-line-clamp: 2;
-            }
-
-            .blog-card__title {
-                font-size: 16px;
+                font-size: 36px;
             }
             
             /* Promo banner mobile - Hide on mobile */
@@ -2271,458 +2274,124 @@
                 display: none;
             }
 
-            /* ===== MOBILE HEADER - HIDE FULL BAR ===== */
-            /* Hide the entire header bar on mobile */
-            .site-header {
-                display: none !important;
-            }
-
-            /* ===== MOBILE-ONLY LOGO IN HERO ===== */
-            .hero__mobile-logo {
-                display: flex;
-                position: absolute;
-                top: 16px;
-                left: 16px;
-                z-index: 1001;
-                align-items: center;
-                background: rgba(0, 0, 0, 0.25);
-                padding: 6px 10px;
-                border-radius: 9999px;
-                backdrop-filter: blur(8px);
-                transition: all 0.3s ease;
-            }
-
-            .hero__mobile-logo:hover {
-                background: rgba(0, 0, 0, 0.4);
-            }
-
-            .hero__mobile-logo img {
-                height: 32px;
-                width: auto;
-            }
-
-            /* Hide mobile logo on desktop */
-            @media (min-width: 769px) {
-                .hero__mobile-logo {
-                    display: none !important;
-                }
-            }
-
-            /* ===== FLOATING MOBILE HAMBURGER BUTTON ===== */
-            .hero__mobile-menu-toggle {
-                display: flex;
-                position: absolute;
-                top: 16px;
-                right: 16px;
-                z-index: 1001;
-                width: 48px;
-                height: 48px;
-                min-width: 48px;
-                min-height: 48px;
-                background: rgba(0, 0, 0, 0.35);
-                border: none;
-                border-radius: 9999px;
-                padding: 8px;
-                cursor: pointer;
-                align-items: center;
-                justify-content: center;
-                flex-direction: column;
-                gap: 4px;
-                transition: all 0.3s ease;
-                backdrop-filter: blur(8px);
-            }
-
-            .hero__mobile-menu-toggle:hover {
-                background: rgba(0, 0, 0, 0.5);
-                transform: scale(1.05);
-            }
-
-            .hero__mobile-menu-toggle:active {
-                transform: scale(0.95);
-            }
-
-            .hero__mobile-menu-toggle span {
-                display: block;
-                width: 24px;
-                height: 2.5px;
-                background: #FFFFFF;
-                margin: 2px 0;
-                transition: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
-                border-radius: 2px;
-                transform-origin: center;
-            }
-
-            .hero__mobile-menu-toggle.active span:nth-child(1) {
-                transform: rotate(45deg) translate(6px, 6px);
-            }
-
-            .hero__mobile-menu-toggle.active span:nth-child(2) {
-                opacity: 0;
-                transform: scaleX(0);
-            }
-
-            .hero__mobile-menu-toggle.active span:nth-child(3) {
-                transform: rotate(-45deg) translate(6px, -6px);
-            }
-
-            /* Hide floating hamburger on desktop */
-            @media (min-width: 769px) {
-                .hero__mobile-menu-toggle {
-                    display: none;
-                }
-            }
-
-            /* ===== HERO SECTION MOBILE OPTIMIZATION ===== */
             .hero {
-                height: auto;
-                min-height: 85vh;
-                padding-top: 0;
-                padding-bottom: 30px;
-                position: relative;
-                width: 100%;
-                max-width: 100%;
-                margin-left: 0;
-                margin-right: 0;
-            }
-
-            /* Ensure hero background spans full width on mobile */
-            .hero::after,
-            .hero::before {
-                left: 0;
-                right: 0;
-                width: 100%;
-            }
-
-            /* Reduce fade height on mobile and ensure full width */
-            .hero__fade {
-                left: 0;
-                right: 0;
-                width: 100%;
-                height: 60px;
-            }
-
-            /* Slightly lighter image on mobile for better visibility */
-            .hero::after {
-                filter: brightness(0.96) saturate(1.05);
+                height: 70vh;
+                min-height: 500px;
+                padding-top: 120px;
             }
 
             .hero__content {
                 text-align: left;
-                padding: 70px 20px 0; /* Extra top padding to account for floating hamburger and logo */
-                max-width: 100%;
-                width: 100%;
-                box-sizing: border-box;
-                margin-left: 0;
-                margin-right: 0;
+                padding: 20px 20px 0;
+                margin-left: -20px;
             }
 
             .hero__badge {
-                font-size: 0.75rem;
+                font-size: 0.8rem;
                 padding: 0.2rem 0.5rem;
-                margin-bottom: 14px;
+                margin-bottom: 10px;
                 box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
             }
 
             .hero__title {
-                font-size: clamp(1.75rem, 5vw, 2rem);
-                line-height: 1.35;
-                margin-bottom: 12px;
+                font-size: clamp(1.5rem, 4.5vw, 1.9rem);
+                line-height: 1.25;
+                margin-bottom: 17px;
                 padding-top: 0;
             }
 
             .hero__highlight {
-                font-size: clamp(1.9rem, 5.5vw, 2.25rem);
-                line-height: 1.3;
+                font-size: 1.1em;
             }
 
             .hero__subtitle {
-                font-size: 14px;
-                margin-bottom: 14px;
-                margin-top: -2px;
-                line-height: 1.55;
-                max-width: 100%;
+                font-size: clamp(0.95rem, 2.5vw, 1.1rem);
+                margin-bottom: 28px;
+                line-height: 1.5;
             }
 
             .hero__cta {
-                display: flex;
-                flex-direction: column;
                 gap: 12px;
-                margin-bottom: 30px;
-                width: 100%;
+                margin-bottom: 40px;
+                flex-direction: column;
             }
 
-            /* Hero buttons - FULL WIDTH & STACKED on mobile with identical sizing */
-            .btn-hero-base {
-                width: 100%;
-                padding: 12px 24px;
-                font-size: 14px;
-                font-weight: 600;
-                border-radius: 9999px;
-                display: inline-flex;
-                align-items: center;
-                justify-content: center;
-                text-align: center;
-            }
-
-            /* Ensure both buttons have identical height */
             .btn-primary-large,
-            .btn-ghost-hero {
-                min-height: 44px;
-                line-height: 1.2;
+            .btn-secondary-large {
+                padding: 14px 28px;
+                font-size: 16px;
+                width: 100%;
+                max-width: 300px;
+                justify-content: center;
             }
 
             .hero__features {
-                gap: 12px;
-                flex-direction: row;
-                flex-wrap: wrap;
-                margin-top: 12px;
-                margin-bottom: 30px;
+                gap: 16px;
+                flex-direction: column;
             }
 
             .hero__feature {
-                font-size: 11px;
-                gap: 6px;
+                font-size: 12px;
             }
 
-            .hero__feature svg {
-                width: 16px;
-                height: 16px;
-            }
-
-            /* ===== TRIP CARDS SECTION MOBILE OPTIMIZATION ===== */
             .trip-cards-section {
-                padding: 50px 20px;
-            }
-
-            .trip-cards-section__title {
-                font-size: 28px;
-                margin-bottom: 12px;
-            }
-
-            .trip-cards-section__subtitle {
-                font-size: 16px;
+                padding: 60px 20px;
             }
 
             .trip-cards-grid {
-                grid-template-columns: 1fr;
-                gap: 24px;
-            }
-
-            .trip-card__content {
-                padding: 16px;
-            }
-
-            .trip-card__image-wrapper {
-                padding-bottom: 58%;
-            }
-
-            .trip-card__title {
-                font-size: 15px;
-                margin-bottom: 10px;
-            }
-
-            .trip-card__description {
-                font-size: 13px;
-                line-height: 1.5;
-                margin-bottom: 12px;
+                grid-template-columns: repeat(2, 1fr);
             }
 
             .trip-card__footer {
                 flex-direction: column;
                 align-items: flex-start;
-                gap: 12px;
-                padding-top: 12px;
-            }
-
-            .trip-card__footer {
-                align-items: center;
+                gap: 16px;
             }
 
             .trip-card__cta {
                 width: 100%;
-                display: flex;
                 justify-content: center;
             }
 
             .trip-card__btn {
-                width: fit-content;
-                padding: 10px 24px;
-                font-size: 14px;
+                width: auto;
+                min-width: 140px;
+                min-height: 44px;
             }
 
-            /* ===== FEATURES SECTION MOBILE OPTIMIZATION ===== */
+            .blog-card__link {
+                min-height: 44px;
+            }
+
+            .trip-card__content {
+                padding: 28px 18px;
+            }
+
+            .blog-card__content {
+                padding: 28px 20px;
+            }
+
             .features-section__grid {
-                grid-template-columns: repeat(2, 1fr);
-                gap: 20px;
+                grid-template-columns: 1fr;
+                gap: 32px;
             }
 
             .feature-item {
-                gap: 6px;
-                padding-bottom: 14px;
-                border-bottom: 1px solid rgba(0, 0, 0, 0.12);
+                padding-bottom: 24px;
             }
 
             .feature-item:last-child {
                 border-bottom: none;
             }
 
-            .feature-item__icon {
-                width: 28px;
-                height: 28px;
-            }
-
-            .feature-item__icon svg {
-                width: 14px;
-                height: 14px;
-            }
-
-            .feature-item__text {
-                font-size: 14px;
-                line-height: 1.4;
-            }
-
             .features-section {
-                padding: 30px 20px;
-            }
-
-            .features-section__title {
-                font-size: 28px;
-                margin-bottom: 28px;
-            }
-
-            /* ===== TESTIMONIALS SECTION MOBILE OPTIMIZATION ===== */
-            .testimonials-section {
-                padding: 48px 20px;
-            }
-
-            .testimonials-section__header {
-                margin-bottom: 40px;
-            }
-
-            .testimonials-section__title {
-                font-size: 28px;
-                margin-bottom: 12px;
-            }
-
-            .testimonials-section__subtitle {
-                font-size: 15px;
-            }
-
-            .testimonials-grid {
-                grid-template-columns: 1fr;
-                gap: 20px;
-            }
-
-            .testimonial-card {
-                padding: 20px;
-            }
-
-            .testimonial-card__text {
-                font-size: 14px;
-                line-height: 1.5;
-                margin-bottom: 16px;
-                display: -webkit-box;
-                -webkit-line-clamp: 5;
-                -webkit-box-orient: vertical;
-                overflow: hidden;
-            }
-
-            .testimonial-card__user {
-                gap: 12px;
-            }
-
-            .testimonial-card__avatar {
-                width: 50px;
-                height: 50px;
-            }
-
-            .testimonial-card__name {
-                font-size: 15px;
-            }
-
-            .testimonial-card__role {
-                font-size: 13px;
-            }
-
-            /* ===== FOOTER SECTION MOBILE OPTIMIZATION ===== */
-            .footer-main {
-                padding: 48px 20px;
-            }
-
-            .footer-grid {
-                grid-template-columns: 1fr;
-                gap: 32px;
-            }
-
-            .footer-column h4 {
-                font-size: 14px;
-                margin-bottom: 16px;
-            }
-
-            .footer-column a {
-                font-size: 13px;
-            }
-
-            .footer__newsletter-button {
-                padding: 10px 20px;
-                font-size: 13px;
-            }
-
-            .footer__newsletter-input {
-                padding: 10px 14px;
-                font-size: 13px;
-            }
-
-            .footer__social-link {
-                width: 36px;
-                height: 36px;
-            }
-
-            .footer__social-link svg {
-                width: 18px;
-                height: 18px;
-            }
-
-            .footer-bottom {
-                padding: 24px 20px;
-            }
-
-            /* ===== GLOBAL MOBILE OPTIMIZATIONS ===== */
-            /* Ensure no horizontal overflow */
-            body {
-                overflow-x: hidden;
-            }
-
-            /* Compact text blocks slightly */
-            p {
-                margin-bottom: 0.875rem;
+                padding: 60px 20px;
             }
         }
 
         @media (max-width: 480px) {
             .trip-cards-grid {
                 grid-template-columns: 1fr;
-            }
-
-            .hero__title {
-                font-size: clamp(1.5rem, 6vw, 1.75rem);
-            }
-
-            .hero__highlight {
-                font-size: clamp(1.65rem, 6.5vw, 2rem);
-            }
-        }
-
-        /* ===== DESKTOP HEADER - SHOW ON LARGER SCREENS ===== */
-        @media (min-width: 769px) {
-            /* Show header on desktop/tablet */
-            .site-header {
-                display: block !important;
-            }
-
-            /* Hide floating mobile hamburger on desktop */
-            .hero__mobile-menu-toggle {
-                display: none !important;
             }
         }
         /* ===== TESTIMONIALS SECTION ===== */
@@ -2767,7 +2436,7 @@
             font-size: 48px;
             font-weight: 900;
             color: #333333;
-            margin-bottom: 16px;
+            margin-bottom: 28px;
             line-height: 1.1;
         }
 
@@ -2855,7 +2524,23 @@
             }
         }
 
-        /* Testimonial mobile styles are now in the main mobile media query for better organization */
+        @media (max-width: 768px) {
+            .testimonials-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .testimonials-section {
+                padding: 60px 20px;
+            }
+
+            .testimonials-section__title {
+                font-size: 36px;
+            }
+
+            .testimonial-card {
+                padding: 24px;
+            }
+        }
 
         /* ===== RESPONSIVE PROMOTIONAL BANNER ===== */
         @media (max-width: 1024px) {
@@ -3278,13 +2963,12 @@
             right: -100%;
             width: 85%;
             max-width: 400px;
-            min-height: 100vh;
             height: 100vh;
-            background: #ffffff;
+            background: white;
             box-shadow: -4px 0 24px rgba(0, 0, 0, 0.2);
             z-index: 9999;
             transition: right 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-            overflow-y: hidden;
+            overflow-y: auto;
             display: flex;
             flex-direction: column;
         }
@@ -3293,63 +2977,40 @@
             right: 0;
         }
 
-        /* ===== MOBILE MENU HEADER (Logo + Close) ===== */
-        .mobile-menu__header {
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            height: 60px;
-            min-height: 60px;
-            padding: 0 16px;
-            background: #ffffff;
-            border-bottom: 1px solid #F3F4F6;
-            flex-shrink: 0;
-        }
-
-        .mobile-menu__logo {
-            display: flex;
-            align-items: center;
-            text-decoration: none;
-        }
-
-        .mobile-menu__logo img {
-            height: 36px;
-            width: auto;
-        }
-
-        /* Close Button - In Header */
-        .mobile-menu__close {
-            background: transparent;
+        /* Close Button */
+        .close-menu {
+            background: var(--gray-100);
             border: none;
-            color: #374151;
-            font-size: 24px;
+            color: var(--gray-700);
+            font-size: 28px;
             cursor: pointer;
-            width: 40px;
-            height: 40px;
+            position: absolute;
+            top: 16px;
+            right: 16px;
+            width: 44px;
+            height: 44px;
             display: flex;
             align-items: center;
             justify-content: center;
             border-radius: 8px;
             transition: all 0.2s;
-            min-height: 40px;
-            min-width: 40px;
-            line-height: 1;
-            padding: 0;
+            min-height: 44px;
+            min-width: 44px;
         }
 
-        .mobile-menu__close:hover {
-            background: #F3F4F6;
+        .close-menu:hover {
+            background: var(--gray-200);
         }
 
-        /* Menu Content - Scrollable Area */
+        /* Menu Content */
         .menu-content {
-            padding: 0;
+            padding: 80px 24px 24px;
             display: flex;
             flex-direction: column;
+            gap: 24px;
             flex: 1;
-            min-height: 0;
-            overflow-y: auto;
-            -webkit-overflow-scrolling: touch;
+            min-height: 0; /* Allow flex item to shrink */
+            overflow-y: auto; /* Allow scrolling if content is too long */
         }
 
         /* Mobile Menu Header */
@@ -3377,25 +3038,18 @@
             color: var(--gray-900);
         }
 
-        /* ===== MOBILE MENU CTA FOOTER (Sticky Bottom) ===== */
-        .mobile-menu__footer {
-            background: #F8F8FB;
-            padding: 16px 20px;
-            border-top: 1px solid #E5E7EB;
-            flex-shrink: 0;
-            position: sticky;
-            bottom: 0;
-            z-index: 10;
-        }
-
-        .mobile-menu__ctas {
+        /* Mobile Menu Actions (CTA Buttons - Below Navigation) */
+        .mobile-menu-actions {
             display: flex;
             flex-direction: column;
             gap: 12px;
+            padding: 24px;
+            border-top: 1px solid var(--gray-200);
+            border-bottom: 1px solid var(--gray-200);
         }
 
-        .mobile-menu__cta {
-            display: inline-flex;
+        .mobile-cta {
+            display: flex;
             align-items: center;
             justify-content: center;
             gap: 8px;
@@ -3407,87 +3061,77 @@
             transition: all 0.2s;
             min-height: 48px;
             text-align: center;
-            width: 100%;
         }
 
-        .mobile-menu__cta--primary {
-            background: #FFD400;
-            color: #222222;
-            border: none;
-            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+        .mobile-cta-primary {
+            background: var(--primary-600);
+            color: white;
         }
 
-        .mobile-menu__cta--primary:hover {
-            background: #e6bf00;
-            color: #222222;
-            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+        .mobile-cta-primary:hover {
+            background: var(--primary-700);
         }
 
-        .mobile-menu__cta--secondary {
-            background: transparent;
-            border: 2px solid #6D4AFF;
-            color: #6D4AFF;
+        .mobile-cta-secondary {
+            background: var(--gray-100);
+            color: var(--gray-900);
+            border: 2px solid var(--gray-300);
         }
 
-        .mobile-menu__cta--secondary:hover {
-            background: #EEE9FF;
-            border-color: #6D4AFF;
-            color: #6D4AFF;
+        .mobile-cta-secondary:hover {
+            background: var(--gray-200);
         }
 
-        .mobile-menu__cta svg {
+        .mobile-cta svg {
             width: 18px;
             height: 18px;
-            flex-shrink: 0;
         }
 
-        /* Mobile Menu Navigation - Tightened Spacing */
+        /* Mobile Menu Navigation */
         .menu-nav {
             display: flex;
             flex-direction: column;
             gap: 0;
-            padding: 8px 0;
         }
 
         .menu-nav a {
             display: flex;
             align-items: center;
-            padding: 12px 20px;
-            color: #1F2937;
+            padding: 16px 0;
+            color: var(--gray-900);
             font-size: 16px;
             font-weight: 500;
             text-decoration: none;
             transition: all 0.2s;
-            border-bottom: 1px solid #F3F4F6;
-            min-height: 44px;
+            border-bottom: 1px solid var(--gray-100);
+            min-height: 48px;
         }
 
         .menu-nav a:hover {
-            color: #6D4AFF;
-            background: #F9FAFB;
+            color: var(--primary-600);
+            padding-left: 8px;
         }
 
         .menu-nav a svg {
             margin-left: auto;
             width: 20px;
             height: 20px;
-            stroke: #9CA3AF;
-            flex-shrink: 0;
+            stroke: var(--gray-400);
         }
 
-        /* ===== MOBILE MENU CONTACT INFO (Compact) ===== */
+        /* Mobile Menu Contact Info */
         .mobile-menu-contact {
-            padding: 12px 20px;
-            background: #F8F8FB;
-            border-top: 1px solid #E5E7EB;
-            flex-shrink: 0;
+            margin-top: auto;
+            padding: 24px;
+            background: var(--gray-50);
+            border-top: 1px solid var(--gray-200);
         }
 
         .mobile-menu-contact h4 {
-            font-size: 12px;
+            font-size: 14px;
             font-weight: 600;
-            color: #6B7280;
-            margin-bottom: 8px;
+            color: var(--gray-700);
+            margin-bottom: 12px;
             text-transform: uppercase;
             letter-spacing: 0.5px;
         }
@@ -3495,27 +3139,21 @@
         .mobile-contact-item {
             display: flex;
             align-items: center;
-            gap: 10px;
-            padding: 8px 0;
-            color: #6B7280;
+            gap: 12px;
+            padding: 10px 0;
+            color: var(--gray-700);
             text-decoration: none;
-            font-size: 13px;
-            transition: color 0.2s;
+            font-size: 14px;
         }
 
         .mobile-contact-item svg {
-            width: 16px;
-            height: 16px;
-            stroke: #6B7280;
-            flex-shrink: 0;
+            width: 20px;
+            height: 20px;
+            stroke: var(--primary-600);
         }
 
         .mobile-contact-item:hover {
-            color: #6D4AFF;
-        }
-
-        .mobile-contact-item:hover svg {
-            stroke: #6D4AFF;
+            color: var(--primary-600);
         }
 
         /* Mobile Menu - Hide on desktop */
@@ -3727,7 +3365,7 @@
         <nav class="main-nav">
             <div class="container">
                 <a href="index.html" class="logo">
-                    <img src="img/logo.png" alt="Agadir Local Guide">
+                    <img src="img/logoalg.png" alt="Agadir Local Guide">
                     </a>
 
                 <ul class="nav-menu">
@@ -3752,7 +3390,6 @@
                 </ul>
 
                 <div class="nav-actions">
-                    <!-- Desktop CTAs -->
                     <a href="tel:+212601820422" class="btn-outline">
                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                             <path stroke-linecap="round" stroke-linejoin="round" d="M2.25 6.75c0 8.284 6.716 15 15 15h2.25a2.25 2.25 0 002.25-2.25v-1.372c0-.516-.351-.966-.852-1.091l-4.423-1.106c-.44-.11-.902.055-1.173.417l-.97 1.293c-.282.376-.769.542-1.21.38a12.035 12.035 0 01-7.143-7.143c-.162-.441.004-.928.38-1.21l1.293-.97c.363-.271.527-.734.417-1.173L6.963 3.102a1.125 1.125 0 00-1.091-.852H4.5A2.25 2.25 0 002.25 4.5v2.25z" />
@@ -3765,18 +3402,12 @@
                         </svg>
                         Book Now
                     </a>
-                    <!-- Mobile compact call button (hidden on desktop) -->
-                    <a href="tel:+212601820422" class="btn-call-mobile" aria-label="Call Us">
-                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                            <path stroke-linecap="round" stroke-linejoin="round" d="M2.25 6.75c0 8.284 6.716 15 15 15h2.25a2.25 2.25 0 002.25-2.25v-1.372c0-.516-.351-.966-.852-1.091l-4.423-1.106c-.44-.11-.902.055-1.173.417l-.97 1.293c-.282.376-.769.542-1.21.38a12.035 12.035 0 01-7.143-7.143c-.162-.441.004-.928.38-1.21l1.293-.97c.363-.271.527-.734.417-1.173L6.963 3.102a1.125 1.125 0 00-1.091-.852H4.5A2.25 2.25 0 002.25 4.5v2.25z" />
-                        </svg>
-                    </a>
                     <button class="mobile-menu-toggle" id="hamburger" aria-label="Menu">
-                        <span></span>
-                        <span></span>
-                        <span></span>
-                    </button>
-                </div>
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
             </div>
         </nav>
     </header>
@@ -3786,15 +3417,9 @@
 
     <!-- Mobile Menu -->
     <div id="mobileMenu" class="mobile-menu">
-        <!-- Menu Header (Logo + Close) -->
-        <div class="mobile-menu__header">
-            <a href="index.html" class="mobile-menu__logo">
-                <img src="img/logo.png" alt="Agadir Local Guide">
-            </a>
-            <button class="mobile-menu__close" aria-label="Close menu">×</button>
-        </div>
+        <button class="close-menu" aria-label="Close menu">×</button>
         
-        <!-- Navigation (Scrollable) -->
+        <!-- Navigation -->
         <div class="menu-content">
             <nav class="menu-nav">
                 <a href="index.html">
@@ -3824,25 +3449,23 @@
             </nav>
         </div>
 
-        <!-- CTA Footer (Sticky Bottom) -->
-        <div class="mobile-menu__footer">
-            <div class="mobile-menu__ctas">
-                <a href="agadir-tours.html" class="mobile-menu__cta mobile-menu__cta--primary">
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                        <path stroke-linecap="round" stroke-linejoin="round" d="M6.75 3v2.25M17.25 3v2.25M3 18.75V7.5a2.25 2.25 0 012.25-2.25h13.5A2.25 2.25 0 0121 7.5v11.25m-18 0A2.25 2.25 0 005.25 21h13.5A2.25 2.25 0 0021 18.75m-18 0v-7.5A2.25 2.25 0 015.25 9h13.5A2.25 2.25 0 0121 11.25v7.5" />
-                    </svg>
-                    Book a Tour
-                </a>
-                <a href="https://wa.me/212601820422" class="mobile-menu__cta mobile-menu__cta--secondary" target="_blank">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
-                        <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.890-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/>
-                    </svg>
-                    WhatsApp Us
-                </a>
-            </div>
+        <!-- Quick Actions -->
+        <div class="mobile-menu-actions">
+            <a href="agadir-tours.html" class="mobile-cta mobile-cta-primary">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M6.75 3v2.25M17.25 3v2.25M3 18.75V7.5a2.25 2.25 0 012.25-2.25h13.5A2.25 2.25 0 0121 7.5v11.25m-18 0A2.25 2.25 0 005.25 21h13.5A2.25 2.25 0 0021 18.75m-18 0v-7.5A2.25 2.25 0 015.25 9h13.5A2.25 2.25 0 0121 11.25v7.5" />
+                </svg>
+                Book a Tour
+            </a>
+            <a href="https://wa.me/212601820422" class="mobile-cta mobile-cta-secondary" target="_blank">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.890-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/>
+                </svg>
+                WhatsApp Us
+            </a>
         </div>
 
-        <!-- Contact Info (Compact) -->
+        <!-- Contact Info -->
         <div class="mobile-menu-contact">
             <h4>Get in Touch</h4>
             <a href="tel:+212601820422" class="mobile-contact-item">
@@ -3862,19 +3485,7 @@
 
     <!-- HERO SECTION (MODERNIZED) -->
     <section class="hero">
-        <!-- Mobile-Only Logo (Top Left) -->
-        <a href="index.html" class="hero__mobile-logo" aria-label="Agadir Local Guide">
-            <img src="img/logo.png" alt="Agadir Local Guide">
-        </a>
-        <!-- Floating Mobile Menu Toggle (Mobile Only) -->
-        <button class="hero__mobile-menu-toggle" id="heroMobileMenuToggle" aria-label="Menu">
-            <span></span>
-            <span></span>
-            <span></span>
-        </button>
-        <!-- Bottom fade overlay -->
-        <div class="hero__fade"></div>
-        <div class="hero__content">
+                <div class="hero__content">
             <div class="hero__badge">
                 ⭐ <span class="count-rating">4.9</span>/5 Rating • <span class="count-travelers">1,200</span>+ Happy Travelers
             </div>
@@ -3887,9 +3498,9 @@
                 <strong>Free cancellation • Best price guarantee</strong>
             </p>
             <div class="hero__cta">
-                <a href="agadir-tours.html" class="btn-hero-base btn-primary-large">View All Tours</a>
-                <a href="https://wa.me/212601820422" class="btn-hero-base btn-ghost-hero" target="_blank">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                <a href="agadir-tours.html" class="btn-primary-large">View All Tours</a>
+                <a href="https://wa.me/212601820422" class="btn-secondary-large" target="_blank">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
                         <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.890-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/>
                     </svg>
                     WhatsApp Us
@@ -4155,7 +3766,7 @@
                                     <p class="trip-card__price">€25</p>
                                 </div>
                                 <div class="trip-card__cta">
-                                    <button class="trip-card__btn">VIEW TOUR</button>
+                                    <button class="trip-card__btn">View Details</button>
                             </div>
                         </div>
                         </div>
@@ -4655,7 +4266,7 @@
             </div>
 
             <div class="blog-section__button">
-                <a href="blog.html" class="btn-primary">VIEW ALL ARTICLES</a>
+                <a href="blog.html" class="btn btn-primary">VIEW ALL ARTICLES</a>
                 </div>
             </div>
         </section>
@@ -4794,7 +4405,7 @@
                 <div class="footer-grid">
                     <!-- Company Info -->
                     <div class="footer-column">
-                        <img src="img/logo.png" alt="Agadir Local Guide" class="footer-logo">
+                        <img src="img/logoalg.png" alt="Agadir Local Guide" class="footer-logo">
                         <p>Your trusted local guide to authentic Moroccan adventures. Experience the real Agadir with expert guides since 2015.</p>
                         <div class="social-links">
                             <a href="https://www.facebook.com/agadirlocalguide" aria-label="Facebook" target="_blank">
@@ -4944,41 +4555,31 @@
 
         // Mobile Menu Toggle (Enhanced)
         const hamburger = document.getElementById('hamburger');
-        const heroMobileMenuToggle = document.getElementById('heroMobileMenuToggle');
         const mobileMenu = document.getElementById('mobileMenu');
         const mobileMenuOverlay = document.getElementById('mobileMenuOverlay');
-        const closeMenu = mobileMenu?.querySelector('.mobile-menu__close');
+        const closeMenu = mobileMenu?.querySelector('.close-menu');
 
         function openMobileMenu() {
-            if (mobileMenu && mobileMenuOverlay) {
+            if (mobileMenu && mobileMenuOverlay && hamburger) {
                 mobileMenu.classList.add('active');
                 mobileMenuOverlay.classList.add('active');
-                // Update both hamburger buttons if they exist
-                if (hamburger) hamburger.classList.add('active');
-                if (heroMobileMenuToggle) heroMobileMenuToggle.classList.add('active');
+                hamburger.classList.add('active');
                 document.body.style.overflow = 'hidden'; // Prevent body scroll
             }
         }
 
         function closeMobileMenu() {
-            if (mobileMenu && mobileMenuOverlay) {
+            if (mobileMenu && mobileMenuOverlay && hamburger) {
                 mobileMenu.classList.remove('active');
                 mobileMenuOverlay.classList.remove('active');
-                // Update both hamburger buttons if they exist
-                if (hamburger) hamburger.classList.remove('active');
-                if (heroMobileMenuToggle) heroMobileMenuToggle.classList.remove('active');
+                hamburger.classList.remove('active');
                 document.body.style.overflow = ''; // Restore body scroll
             }
         }
 
-        // Open menu on hamburger click (header hamburger)
+        // Open menu on hamburger click
         if (hamburger) {
             hamburger.addEventListener('click', openMobileMenu);
-        }
-
-        // Open menu on floating hero hamburger click
-        if (heroMobileMenuToggle) {
-            heroMobileMenuToggle.addEventListener('click', openMobileMenu);
         }
 
         // Close menu on close button click
@@ -5010,7 +4611,7 @@
         if (siteHeader) {
             // Check initial scroll position on page load
             function handleScroll() {
-                const scrollThreshold = 60; // 60px threshold
+                const scrollThreshold = 70; // 70px threshold
                 const currentScroll = window.pageYOffset || window.scrollY || document.documentElement.scrollTop;
                 
                 if (currentScroll > scrollThreshold) {
@@ -5089,6 +4690,38 @@
             
             observer.observe(trustBadgesSection);
         }
+
+        // ===== SCROLL ANIMATIONS =====
+        // Intersection Observer for scroll-triggered animations
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const scrollObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                    // Unobserve after animation to improve performance
+                    scrollObserver.unobserve(entry.target);
+                }
+            });
+        }, observerOptions);
+
+        // Observe section titles
+        document.querySelectorAll('.trip-cards-section__title, .features-section__title, .blog-section__title, .testimonials-section__title').forEach(title => {
+            scrollObserver.observe(title);
+        });
+
+        // Observe tour cards
+        document.querySelectorAll('.trip-card').forEach(card => {
+            scrollObserver.observe(card);
+        });
+
+        // Observe blog cards
+        document.querySelectorAll('.blog-card').forEach(card => {
+            scrollObserver.observe(card);
+        });
     </script>
 </body>
 </html>

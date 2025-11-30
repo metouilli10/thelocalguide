@@ -2312,54 +2312,73 @@
             .hero {
                 height: 70vh;
                 min-height: 500px;
-                padding-top: 5rem; /* Adjust to look good on real device */
+                padding-top: 0; /* Reset, padding handled in hero__content */
             }
 
+            /* Add top safe space - push hero content down so it doesn't collide with logo & rating */
             .hero__content {
                 text-align: left;
-                padding: 20px 20px 0;
+                padding: 5.5rem 20px 0; /* adjust between 5–6rem for best look */
                 margin-left: -20px;
+                gap: 0; /* Remove gap, use explicit margins instead */
             }
 
-            /* Move rating pill into hero content on mobile - remove absolute/fixed positioning */
+            /* Rating badge polish - reduce height & padding slightly so it doesn't feel oversized */
             .hero__badge {
                 position: static;
                 margin: 0 auto 1rem auto; /* center it above the text */
                 display: inline-flex;
-                font-size: 0.8rem;
-                padding: 0.2rem 0.5rem;
+                padding: 0.35rem 0.75rem;
+                font-size: 0.85rem;
+                border-radius: 20px;
                 margin-bottom: 1rem;
                 box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
                 align-self: center; /* center the badge */
             }
 
+            /* Typography - adjust hero title for mobile readability */
             .hero__title {
-                font-size: clamp(1.5rem, 4.5vw, 1.9rem);
-                line-height: 1.25;
+                font-size: 1.9rem; /* readable but not too big */
+                line-height: 1.2;
                 text-align: left;
                 margin-bottom: 0.75rem;
                 padding-top: 0;
+                letter-spacing: -0.5px;
             }
 
+            /* Hero highlight (yellow text) - display as block with spacing */
             .hero__highlight {
+                display: block;
+                margin-top: 0.25rem;
                 font-size: 1.1em;
             }
 
+            /* Hero subtitle - optimized spacing and readability */
             .hero__subtitle {
-                font-size: clamp(0.95rem, 2.5vw, 1.1rem);
-                margin-bottom: 1rem;
-                line-height: 1.5;
+                font-size: 1rem;
+                line-height: 1.45;
+                margin-bottom: 1.5rem;
+                margin-top: 0; /* Remove desktop margin-top */
             }
 
+            /* CTA button spacing - balanced vertical rhythm */
             .hero__cta {
-                gap: 12px;
+                gap: 0;
                 margin-bottom: 0;
-                margin-top: 0;
+                margin-top: 0; /* Remove desktop margin-top */
                 flex-direction: column;
             }
 
+            /* Primary CTA spacing */
             .hero__cta .btn-primary-large {
-                margin-bottom: 0.75rem;
+                margin-bottom: 1rem;
+            }
+
+            /* Secondary CTA (WhatsApp button) - size fix and spacing */
+            .hero__cta .btn-secondary-large {
+                margin-bottom: 1.5rem;
+                padding: 0.9rem 1.25rem;
+                font-size: 1rem;
             }
 
             .btn-primary-large,

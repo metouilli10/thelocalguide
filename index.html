@@ -831,6 +831,19 @@
             font-size: 1.08em;
         }
 
+        /* Desktop: Single line H1 */
+        @media (min-width: 1200px) {
+            .hero__title {
+                max-width: 100%;
+                white-space: nowrap;
+                font-size: clamp(42px, 4vw, 64px);
+            }
+            
+            .hero__title br {
+                display: none;
+            }
+        }
+
         .hero__subtitle {
             font-size: clamp(1rem, 2vw, 1.25rem);
             margin-bottom: 28px;

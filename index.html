@@ -1173,12 +1173,39 @@
             }
 
             .trust-badges__container {
-                gap: var(--space-4);
+                gap: var(--space-2);
+                flex-wrap: nowrap; /* Keep badges in a single horizontal row */
+                justify-content: space-between; /* Distribute evenly */
             }
 
             .trust-badge {
-                flex: 1 1 calc(50% - var(--space-2));
-                min-width: 140px;
+                flex: 1 1 0; /* Equal width badges that fit in one row */
+                min-width: 0; /* Allow shrinking */
+                padding: var(--space-2) var(--space-2); /* Reduce padding for mobile */
+                gap: var(--space-2); /* Reduce gap between icon and content */
+            }
+
+            /* Make badges more compact on mobile */
+            .trust-badge__icon {
+                width: 28px;
+                height: 28px;
+                font-size: 14px;
+                flex-shrink: 0; /* Prevent icon from shrinking */
+            }
+
+            .trust-badge__icon svg {
+                width: 16px;
+                height: 16px;
+            }
+
+            .trust-badge__title {
+                font-size: 11px;
+                line-height: 1.2;
+            }
+
+            .trust-badge__subtitle {
+                font-size: 9px;
+                line-height: 1.2;
             }
         }
 
@@ -2309,29 +2336,29 @@
                 display: none;
             }
 
+            /* Increase hero height for better readability */
             .hero {
-                height: 70vh;
-                min-height: 500px;
+                height: auto;
+                min-height: 120vh; /* between 110–130vh works best */
                 padding-top: 0; /* Reset, padding handled in hero__content */
             }
 
-            /* Add top safe space - push hero content down so it doesn't collide with logo & rating */
+            /* Add top inner spacing so the headline does not collide with the badge */
             .hero__content {
                 text-align: left;
-                padding: 5.5rem 20px 0; /* adjust between 5–6rem for best look */
+                padding: 6rem 20px 0; /* boosts breathing room */
                 margin-left: -20px;
                 gap: 0; /* Remove gap, use explicit margins instead */
             }
 
-            /* Rating badge polish - reduce height & padding slightly so it doesn't feel oversized */
+            /* Make sure rating-pill stays ABOVE and not pushed down */
             .hero__badge {
                 position: static;
-                margin: 0 auto 1rem auto; /* center it above the text */
+                margin: 0.5rem auto 0.75rem auto; /* margin-top: 0.5rem; margin-bottom: 0.75rem */
                 display: inline-flex;
                 padding: 0.35rem 0.75rem;
                 font-size: 0.85rem;
                 border-radius: 20px;
-                margin-bottom: 1rem;
                 box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
                 align-self: center; /* center the badge */
             }
@@ -2341,7 +2368,7 @@
                 font-size: 1.9rem; /* readable but not too big */
                 line-height: 1.2;
                 text-align: left;
-                margin-bottom: 0.75rem;
+                margin-bottom: 1rem; /* Add spacing between hero blocks */
                 padding-top: 0;
                 letter-spacing: -0.5px;
             }
@@ -2353,11 +2380,11 @@
                 font-size: 1.1em;
             }
 
-            /* Hero subtitle - optimized spacing and readability */
+            /* Slightly scale down the subtitle text */
             .hero__subtitle {
                 font-size: 1rem;
                 line-height: 1.45;
-                margin-bottom: 1.5rem;
+                margin-bottom: 1.75rem; /* Add spacing between hero blocks */
                 margin-top: 0; /* Remove desktop margin-top */
             }
 
@@ -2371,13 +2398,13 @@
 
             /* Primary CTA spacing */
             .hero__cta .btn-primary-large {
-                margin-bottom: 1rem;
+                margin-bottom: 1.25rem; /* Add spacing between hero blocks */
             }
 
-            /* Secondary CTA (WhatsApp button) - size fix and spacing */
+            /* Secondary CTA (WhatsApp button) - reduce padding and add spacing */
             .hero__cta .btn-secondary-large {
-                margin-bottom: 1.5rem;
-                padding: 0.9rem 1.25rem;
+                margin-bottom: 2rem; /* Add spacing between hero blocks */
+                padding: 0.8rem 1.2rem; /* Reduce WhatsApp button padding on mobile */
                 font-size: 1rem;
             }
 
@@ -2391,12 +2418,15 @@
             }
 
             .hero__features {
-                gap: 16px;
-                flex-direction: column;
+                gap: 12px;
+                flex-direction: row; /* Keep features horizontal on mobile */
+                flex-wrap: wrap; /* Allow wrapping if needed */
+                justify-content: flex-start;
             }
 
             .hero__feature {
                 font-size: 12px;
+                flex: 0 0 auto; /* Don't shrink, maintain natural size */
             }
 
             .trip-cards-section {

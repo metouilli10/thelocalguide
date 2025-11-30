@@ -175,3 +175,4 @@ All buttons now have consistent:
 
 All button styles are defined in the `<style>` section of each HTML file. The main definitions are in `index.html` and replicated across all pages for consistency.
 
+

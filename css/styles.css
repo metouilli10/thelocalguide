@@ -7,8 +7,8 @@
 
 :root {
     /* NEW COLOR SYSTEM - Premium Purple + Yellow Theme */
-    --color-primary: #6D4AFF;
-    --color-primary-dark: #4B2BE9;
+    --color-primary: #c1564b;
+    --color-primary-dark: #c1564b;
     --color-primary-light: #EEE9FF;
     --color-accent: #FFD400;
     --color-gold: #F5C542;
@@ -20,10 +20,10 @@
     --color-text-muted: #555555;
     
     /* Legacy aliases for backward compatibility */
-    --primary-color: #6D4AFF;
-    --primary-dark: #4B2BE9;
-    --accent-color: #6D4AFF;
-    --accent-dark: #4B2BE9;
+    --primary-color: #c1564b;
+    --primary-dark: #c1564b;
+    --accent-color: #c1564b;
+    --accent-dark: #c1564b;
     --dark-bg: #1a1a1a;
     --light-text: #ffffff;
     --text-color: #222222;
@@ -45,7 +45,7 @@
     --gray-700: #222222;
     --gray-800: #222222;
     --gray-900: #222222;
-    --primary-600: #6D4AFF;
+    --primary-600: #c1564b;
 }
 
 body {
@@ -256,7 +256,7 @@ section {
 .contact-btn:hover {
     background: var(--color-primary-dark);
     transform: scale(1.02);
-    box-shadow: 0 6px 24px rgba(109, 74, 255, 0.25);
+    box-shadow: 0 6px 24px rgba(193, 86, 75, 0.25);
 }
 
 .hamburger {
@@ -654,7 +654,7 @@ section {
 }
 
 .service-menu {
-    background: rgba(109, 74, 255, 0.9);
+    background: rgba(193, 86, 75, 0.9);
     padding: 15px 30px;
     border-radius: 30px;
     margin-bottom: 50px;
@@ -929,7 +929,7 @@ section {
     background: var(--color-primary-dark);
     border-color: var(--color-primary-dark);
     transform: scale(1.02);
-    box-shadow: 0 6px 24px rgba(109, 74, 255, 0.25);
+    box-shadow: 0 6px 24px rgba(193, 86, 75, 0.25);
 }
 
 .info-btn {
@@ -945,7 +945,7 @@ section {
     background: #ffffff;
     border-color: var(--color-primary);
     transform: scale(1.02);
-    box-shadow: 0 6px 24px rgba(109, 74, 255, 0.15);
+    box-shadow: 0 6px 24px rgba(193, 86, 75, 0.15);
 }
 
 .signature-section {
@@ -1064,7 +1064,7 @@ section {
     content: '';
     position: absolute;
     inset: 0;
-    background: linear-gradient(135deg, rgba(109, 74, 255, 0) 60%, rgba(109, 74, 255, 0.08) 100%);
+    background: linear-gradient(135deg, rgba(193, 86, 75, 0) 60%, rgba(193, 86, 75, 0.08) 100%);
     opacity: 0;
     transition: opacity 0.3s ease;
 }
@@ -1192,7 +1192,7 @@ section {
 }
 
 .swiper-pagination-bullet {
-    background: rgba(109, 74, 255, 0.25) !important;
+    background: rgba(193, 86, 75, 0.25) !important;
 }
 
 .swiper-pagination-bullet-active {
@@ -1213,7 +1213,7 @@ section {
     justify-content: space-between;
     gap: 40px;
     color: #ffffff;
-    box-shadow: 0 40px 80px rgba(109, 74, 255, 0.22);
+    box-shadow: 0 40px 80px rgba(193, 86, 75, 0.22);
 }
 
 .cta-banner-inner h2 {
@@ -1363,7 +1363,7 @@ section {
     background: var(--color-primary) !important;
     border-color: var(--color-primary) !important;
     transform: translateY(-2px);
-    box-shadow: 0 4px 12px rgba(109, 74, 255, 0.3);
+    box-shadow: 0 4px 12px rgba(193, 86, 75, 0.3);
 }
 
 .social-links a:hover svg {
@@ -1396,7 +1396,7 @@ section {
 .newsletter-form input[type="email"]:focus {
     outline: none;
     border-color: var(--color-primary) !important;
-    box-shadow: 0 0 0 3px rgba(109, 74, 255, 0.1);
+    box-shadow: 0 0 0 3px rgba(193, 86, 75, 0.1);
 }
 
 .newsletter-form button {
@@ -1683,7 +1683,7 @@ section {
     background: var(--color-primary-dark);
     border-color: var(--color-primary-dark);
     transform: scale(1.02);
-    box-shadow: 0 6px 24px rgba(109, 74, 255, 0.25);
+    box-shadow: 0 6px 24px rgba(193, 86, 75, 0.25);
 }
 
 .cta-button.ghost {
@@ -1697,7 +1697,7 @@ section {
     background: #ffffff;
     border-color: var(--color-primary);
     transform: scale(1.02);
-    box-shadow: 0 6px 24px rgba(109, 74, 255, 0.15);
+    box-shadow: 0 6px 24px rgba(193, 86, 75, 0.15);
 }
 
 .trust-strip {
@@ -2233,13 +2233,13 @@ section {
     border: 2px solid var(--color-primary);
     cursor: pointer;
     transition: all 0.3s;
-    box-shadow: 0 2px 8px rgba(109, 74, 255, 0.2);
+    box-shadow: 0 2px 8px rgba(193, 86, 75, 0.2);
 }
 
 .submit-button:hover {
     background: var(--color-primary-dark);
     color: var(--light-text);
-    box-shadow: 0 4px 12px rgba(109, 74, 255, 0.3);
+    box-shadow: 0 4px 12px rgba(193, 86, 75, 0.3);
 }
 
 /* Footer */
@@ -2486,7 +2486,7 @@ section {
     justify-content: center;
     z-index: 997;
     transition: all 0.3s;
-    box-shadow: 0 2px 8px rgba(109, 74, 255, 0.2);
+    box-shadow: 0 2px 8px rgba(193, 86, 75, 0.2);
 }
 
 .back-to-top.visible {
@@ -2496,7 +2496,7 @@ section {
 .back-to-top:hover {
     background: var(--color-primary-dark);
     transform: translateY(-5px);
-    box-shadow: 0 4px 12px rgba(109, 74, 255, 0.3);
+    box-shadow: 0 4px 12px rgba(193, 86, 75, 0.3);
 }
 
 .back-to-top svg {

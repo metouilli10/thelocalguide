@@ -1,6 +1,72 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <!-- 
+    ============================================
+    TOUR PAGE TEMPLATE - CUSTOMIZATION GUIDE
+    ============================================
+    
+    To create a new tour page, search and replace the following:
+    
+    1. META TAGS (lines ~15-18):
+       - [TOUR_NAME]: Tour title
+       - [TOUR_DESCRIPTION]: SEO description
+       - [TOUR_KEYWORDS]: SEO keywords
+       - [TOUR_URL]: Canonical URL
+       - [TOUR_SLUG]: URL slug (e.g., "paradise-valley")
+    
+    2. HERO SLIDER IMAGES (lines ~2540-2595):
+       - Replace [HERO_IMAGE_X_URL] with tour-specific image URLs (5 images recommended)
+       - Replace [HERO_IMAGE_X_ALT] with descriptive alt text for each image
+       - Replace [TOUR_HERO_TITLE] with the tour title to display on the hero image
+    
+    3. BREADCRUMBS (line ~1890):
+       - [TOUR_NAME]: Final breadcrumb text
+    
+    4. TOUR TITLE SECTION (lines ~1950-1970):
+       - [TOUR_TITLE]: Main tour title
+       - [TOUR_SUBTITLE]: Tour subtitle
+       - [TOUR_DURATION]: Duration (e.g., "4-5 hours")
+       - [TOUR_RATING]: Rating (e.g., "4.8")
+       - [TOUR_REVIEWS]: Number of reviews (e.g., "1,234")
+    
+    5. OVERVIEW SECTION (lines ~2040-2070):
+       - [TOUR_OVERVIEW]: Overview paragraphs
+       - Feature badges (already templated)
+    
+    6. HIGHLIGHTS (lines ~2080-2120):
+       - [HIGHLIGHT_ITEMS]: List of tour highlights
+    
+    7. ITINERARY (lines ~2218-2280):
+       - [ITINERARY_ITEMS]: Timeline items with images, titles, descriptions, durations
+    
+    8. WHAT'S INCLUDED (lines ~2290-2330):
+       - [INCLUDED_ITEMS]: What's included
+       - [NOT_INCLUDED_ITEMS]: What's not included
+    
+    9. IMPORTANT INFO (lines ~2340-2380):
+       - [WHAT_TO_BRING]: Items to bring
+       - [HEALTH_SAFETY]: Health & safety info
+       - [IMPORTANT_NOTES]: Important notes
+    
+    10. FAQ (lines ~2390-2420):
+        - [FAQ_ITEMS]: FAQ questions and answers
+    
+    11. REVIEWS (lines ~2430-2470):
+        - [REVIEW_SCORE]: Overall rating
+        - [REVIEW_COUNT]: Number of reviews
+        - [REVIEW_ITEMS]: Individual reviews
+    
+    12. BOOKING CARD (lines ~2500-2550):
+        - [TOUR_PRICE]: Price per person
+        - [TOUR_DURATION_SHORT]: Short duration text
+    
+    13. RELATED TOURS (lines ~2470-2500):
+        - [RELATED_TOURS]: Related tour cards
+    
+    ============================================
+    -->
+    
     <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-35EZE671S0"></script>
     <script>
@@ -12,39 +78,33 @@
 
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Experience a refreshing morning camel ride in Agadir along pristine beaches. Enjoy the cool morning breeze, traditional Moroccan mint tea, and stunning coastal views. Book your morning camel riding adventure today!">
-    <meta name="keywords" content="Morning camel ride Agadir, Camel ride Agadir beach, Agadir camel riding tour, Morning beach camel ride, Camel trekking Agadir, Early morning camel experience">
+    <meta name="description" content="Experience a refreshing morning camel ride in Agadir along pristine beaches. Enjoy the cool morning breeze, traditional Moroccan mint tea, and stunning coastal views. Perfect for families and couples. Book your morning camel riding adventure today!">
+    <meta name="keywords" content="morning camel ride Agadir, camel ride Agadir beach, Agadir camel riding tour, morning beach camel ride, camel trekking Agadir, early morning camel experience, Agadir camel tour morning, beach camel ride Agadir">
     <title>Morning Camel Ride in Agadir | Beach Camel Riding Experience (2025)</title>
-    <link rel="canonical" href="https://agadirlocalguide.com/tours/tour-morning-camel-ride-agadir.html">
-    <link rel="icon" href="../img/logoalg.png">
-
-    <!-- Google Fonts: Inter + Poppins -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Poppins:wght@600;700;800;900&display=swap" rel="stylesheet">
-
-    <!-- CSS Styles -->
-    <link rel="stylesheet" href="../css/styles.css?v=20241218-24">
-    <link rel="stylesheet" href="../css/pages.css?v=20241218-24">
-    <link rel="stylesheet" href="../css/updated-styles.css?v=20241218-24">
-    <link rel="stylesheet" href="../css/tour-page.css">
-
+    <link rel="canonical" href="https://agadirlocalguide.com/tours/tour-camel-ride-morning-agadir.html">
+    
     <!-- Open Graph Meta Tags -->
     <meta property="og:title" content="Morning Camel Ride in Agadir | Beach Camel Riding Experience">
-    <meta property="og:description" content="Experience a magical morning camel ride on Agadir beach. Cool morning breeze, mint tea, and stunning coastal views. Book now!">
+    <meta property="og:description" content="Experience a magical morning camel ride on Agadir beach. Cool morning breeze, mint tea ceremony, and stunning coastal views. Book now!">
     <meta property="og:type" content="website">
-    <meta property="og:url" content="https://agadirlocalguide.com/tours/tour-morning-camel-ride-agadir.html">
-
+    <meta property="og:url" content="https://agadirlocalguide.com/tours/tour-camel-ride-morning-agadir.html">
+    <meta property="og:image" content="https://agadirlocalguide.com/img/excursions/Camel Ride/camel ride 1.jpg">
+    
+    <!-- Twitter Card Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Morning Camel Ride in Agadir | Beach Camel Ride">
+    <meta name="twitter:description" content="Experience a magical morning camel ride on Agadir beach with traditional Moroccan mint tea.">
+    
     <!-- Schema.org Structured Data -->
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
-      "@type": "Product",
+      "@type": "TouristTrip",
       "name": "Morning Camel Ride in Agadir - Beach Experience",
       "description": "Experience a refreshing morning camel ride on Agadir's pristine beach. Traditional Moroccan mint tea ceremony and breathtaking coastal views included.",
       "image": "https://agadirlocalguide.com/img/excursions/Camel Ride/camel ride 1.jpg",
-      "brand": {
-        "@type": "Brand",
+      "provider": {
+        "@type": "TouristInformationCenter",
         "name": "Agadir Local Guide"
       },
       "aggregateRating": {
@@ -57,13 +117,46 @@
         "price": "30",
         "priceCurrency": "EUR",
         "availability": "https://schema.org/InStock",
-        "url": "https://agadirlocalguide.com/tours/tour-morning-camel-ride-agadir.html"
+        "url": "https://agadirlocalguide.com/tours/tour-camel-ride-morning-agadir.html"
+      },
+      "itinerary": {
+        "@type": "ItemList",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Hotel Pickup"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Beach Arrival & Camel Preparation"
+          },
+          {
+            "@type": "ListItem",
+            "position": 3,
+            "name": "Morning Camel Ride"
+          },
+          {
+            "@type": "ListItem",
+            "position": 4,
+            "name": "Traditional Moroccan Mint Tea"
+          },
+          {
+            "@type": "ListItem",
+            "position": 5,
+            "name": "Return to Hotel"
+          }
+        ]
       }
     }
     </script>
+    <link rel="icon" href="../img/logoalg.png">
 
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.css">
+    <!-- Google Fonts: Inter + Poppins -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Poppins:wght@600;700;800;900&display=swap" rel="stylesheet">
 
     <style>
         * {
@@ -114,10 +207,11 @@
             --font-sans: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
             --font-display: 'Poppins', -apple-system, BlinkMacSystemFont, sans-serif;
 
-            /* Shadows */
-            --shadow-sm: 0 2px 8px rgba(0,0,0,0.08);
-            --shadow-md: 0 4px 16px rgba(0,0,0,0.12);
-            --shadow-lg: 0 8px 32px rgba(0,0,0,0.16);
+            /* Backgrounds */
+            --bg-white: #FFFFFF;
+            --bg-gray: #F8F8F8;
+            --text-dark: #222222;
+            --text-light: #555555;
         }
 
         body {
@@ -149,7 +243,6 @@
             background: #FFFFFF;
             box-shadow: 0 2px 8px rgba(0,0,0,0.08);
             transition: all 0.3s ease;
-            width: 100%;
         }
 
         .site-header.scrolled {
@@ -157,7 +250,7 @@
         }
 
         .main-nav {
-            padding: 13px 0 8px 0;
+            padding: 13px 0;
             background: white;
         }
 
@@ -475,6 +568,7 @@
             width: 100%;
             height: 100%;
             object-fit: cover;
+            max-width: 100%;
         }
 
         .slider-arrow {
@@ -491,12 +585,25 @@
             align-items: center;
             justify-content: center;
             font-size: 20px;
+            color: var(--gray-800);
+            transition: all 0.3s;
             z-index: 10;
         }
 
-        .slider-arrow.prev { left: 24px; }
-        .slider-arrow.next { right: 24px; }
+        .slider-arrow:hover {
+            background: #FFFFFF;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+        }
 
+        .slider-arrow.prev {
+            left: 24px;
+        }
+
+        .slider-arrow.next {
+            right: 24px;
+        }
+
+        /* Thumbnail Navigation */
         .slider-thumbnails {
             display: flex;
             justify-content: center;
@@ -547,25 +654,50 @@
 
         .thumbnail:hover {
             border-color: var(--primary-color);
+            opacity: 1;
         }
 
         .thumbnail img {
             width: 100%;
             height: 100%;
             object-fit: cover;
+            display: block;
         }
 
-        /* Breadcrumbs */
+        .hero-book-btn {
+            position: absolute;
+            top: 24px;
+            right: 24px;
+            background: var(--cta-yellow);
+            color: var(--gray-900);
+            padding: 12px 28px;
+            border-radius: 8px;
+            border: none;
+            font-weight: 700;
+            font-size: 15px;
+            cursor: pointer;
+            transition: all 0.3s;
+            z-index: 10;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+            text-decoration: none;
+            display: inline-block;
+        }
+
+        .hero-book-btn:hover {
+            background: var(--cta-yellow-dark);
+            transform: translateY(-2px);
+        }
+
+        /* ===== BREADCRUMBS ===== */
         .breadcrumbs {
             max-width: 1360px;
             margin: 0 auto;
             padding: 20px 40px;
-            font-size: 14px;
-            color: var(--gray-500);
             display: flex;
             align-items: center;
             gap: 8px;
-            flex-wrap: wrap;
+            font-size: 14px;
+            color: var(--gray-500);
         }
 
         .breadcrumbs a {
@@ -578,194 +710,544 @@
             color: var(--primary-color);
         }
 
-        .breadcrumbs span:not(:last-child) {
-            color: var(--gray-400);
-        }
-
-        /* Tour Content Wrapper */
-        .tour-content-wrapper {
-            max-width: 1400px;
+        /* ===== TITLE SECTION ===== */
+        .tour-title-section {
+            max-width: 1360px;
             margin: 0 auto;
-            padding: 40px 40px;
-            display: grid;
-            grid-template-columns: 1fr 400px;
-            gap: 40px;
-        }
-
-        .tour-main-content {
-            padding-right: 20px;
+            padding: 48px 40px 32px;
         }
 
         .tour-title {
-            font-size: 2.5rem;
-            font-weight: 700;
-            color: var(--gray-900);
-            margin-bottom: 15px;
+            font-size: 42px;
+            font-weight: 800;
+            margin-bottom: 12px;
         }
 
         .tour-subtitle {
-            font-size: 1.2rem;
+            font-size: 18px;
             color: var(--gray-600);
             margin-bottom: 20px;
         }
 
-        .tour-rating {
+        .tour-meta {
             display: flex;
+            gap: 12px;
+            flex-wrap: wrap;
             align-items: center;
-            gap: 15px;
+            margin-top: 8px;
+        }
+
+        .meta-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 10px 18px;
+            background: linear-gradient(135deg, #ffffff 0%, #f8f9fa 100%);
+            border: 1.5px solid var(--gray-200);
+            border-radius: 12px;
+            font-size: 14px;
+            font-weight: 600;
+            color: var(--gray-700);
+            transition: all 0.3s ease;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.04);
+        }
+
+        .meta-badge:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 8px rgba(0,0,0,0.08);
+            border-color: var(--primary-color);
+        }
+
+        .meta-badge svg {
+            width: 18px;
+            height: 18px;
+            color: var(--primary-color);
+            flex-shrink: 0;
+        }
+
+        .meta-badge.highlight {
+            background: linear-gradient(135deg, var(--cta-yellow) 0%, #FFE066 100%);
+            color: var(--gray-900);
+            font-weight: 700;
+            border-color: var(--cta-yellow-dark);
+            box-shadow: 0 3px 6px rgba(255, 212, 0, 0.25);
+        }
+
+        .meta-badge.highlight:hover {
+            box-shadow: 0 5px 12px rgba(255, 212, 0, 0.35);
+            transform: translateY(-2px);
+        }
+
+        .meta-badge.highlight svg {
+            color: var(--gray-900);
+        }
+
+        .meta-badge.rating {
+            background: linear-gradient(135deg, #fff5e6 0%, #ffe8cc 100%);
+            border-color: #ffd89b;
+        }
+
+        .meta-badge.rating:hover {
+            border-color: var(--star-color);
+        }
+
+        .stars {
+            color: var(--star-color);
+            font-size: 16px;
+            letter-spacing: 2px;
+            margin-right: 4px;
+        }
+
+        .meta-badge .rating-text {
+            font-weight: 600;
+            color: var(--gray-800);
+        }
+
+        .meta-badge .review-count {
+            color: var(--gray-600);
+            font-weight: 500;
+            font-size: 13px;
+        }
+
+        /* ===== STICKY TABS ===== */
+        .sticky-tabs {
+            position: sticky;
+            top: 76px;
+            background: #FFFFFF;
+            border-bottom: 1px solid var(--gray-200);
+            z-index: 100;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+        }
+
+        .tabs-container {
+            max-width: 1360px;
+            margin: 0 auto;
+            padding: 0 40px;
+            display: flex;
+            gap: 32px;
+            overflow-x: auto;
+            overflow-y: hidden;
+            scrollbar-width: none;
+            -webkit-overflow-scrolling: touch;
+            scroll-behavior: smooth;
+            scroll-snap-type: x proximity;
+        }
+
+        .tabs-container::-webkit-scrollbar {
+            display: none;
+        }
+
+        .tab-link {
+            padding: 16px 0;
+            color: var(--gray-600);
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 15px;
+            white-space: nowrap;
+            border-bottom: 3px solid transparent;
+            transition: all 0.3s;
+            scroll-snap-align: start;
+            flex-shrink: 0;
+        }
+
+        .tab-link:hover {
+            color: var(--primary-color);
+        }
+
+        .tab-link.active {
+            color: var(--primary-color);
+            border-bottom-color: var(--primary-color);
+        }
+
+        /* ===== MAIN LAYOUT ===== */
+        .main-content {
+            max-width: 1360px;
+            margin: 0 auto;
+            padding: 48px 40px;
+            display: grid;
+            grid-template-columns: 1fr 420px;
+            gap: 48px;
+            align-items: start;
+            box-sizing: border-box;
+        }
+
+        .content-column {
+            display: flex;
+            flex-direction: column;
+            gap: 48px;
+        }
+
+        .booking-column {
+            position: sticky;
+            top: 160px;
+        }
+
+        .section {
+            scroll-margin-top: 160px;
+        }
+
+        .section-title {
+            font-size: 28px;
+            font-weight: 700;
             margin-bottom: 20px;
         }
 
-        .rating-score {
-            background: var(--primary-color);
-            color: white;
-            padding: 8px 15px;
-            border-radius: 6px;
-            font-weight: 700;
-            font-size: 1.2rem;
-        }
-
-        .tour-badges {
-            display: flex;
-            gap: 10px;
-            flex-wrap: wrap;
-            margin-top: 20px;
-        }
-
-        .badge {
-            background: #f0f0f0;
-            padding: 8px 15px;
-            border-radius: 20px;
-            font-size: 14px;
-            font-weight: 600;
-        }
-
-        .badge.featured {
-            background: var(--success);
-            color: white;
-        }
-
-        /* Tour Highlights */
-        .tour-highlights {
-            background: linear-gradient(135deg, var(--primary-50) 0%, #F0FDFA 100%);
-            padding: 40px;
-            border-radius: 16px;
-            margin: 40px 0;
-            border: 2px solid var(--primary-100);
-        }
-
-        .tour-highlights h2 {
-            font-size: 1.9rem;
-            font-weight: 800;
+        .section-subtitle {
+            font-size: 16px;
+            color: var(--gray-600);
             margin-bottom: 24px;
         }
 
-        .highlights-list {
+        /* Overview */
+        .overview-text {
+            font-size: 16px;
+            line-height: 1.8;
+            color: var(--gray-700);
+            margin-bottom: 24px;
+        }
+
+        .feature-badges {
             display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 16px;
+            margin-top: 32px;
+        }
+
+        .feature-badge {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            padding: 20px;
+            background: var(--gray-50);
+            border-radius: 12px;
+            gap: 8px;
+        }
+
+        .feature-badge svg {
+            width: 32px;
+            height: 32px;
+            color: var(--primary-color);
+        }
+
+        .feature-badge-title {
+            font-weight: 600;
+            font-size: 14px;
+        }
+
+        .feature-badge-text {
+            font-size: 13px;
+            color: var(--gray-600);
+        }
+
+        /* Highlights */
+        .highlights-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
             gap: 16px;
         }
 
         .highlight-item {
             display: flex;
             align-items: flex-start;
-            gap: 16px;
-            background: white;
+            gap: 12px;
             padding: 16px;
-            border-radius: 10px;
+            background: var(--gray-50);
+            border-radius: 12px;
         }
 
         .highlight-icon {
-            width: 28px;
-            height: 28px;
+            width: 24px;
+            height: 24px;
             background: var(--primary-color);
             border-radius: 50%;
             display: flex;
             align-items: center;
             justify-content: center;
-            color: white;
-            font-weight: 700;
             flex-shrink: 0;
         }
 
-        .highlight-text {
-            color: var(--gray-700);
-            line-height: 1.7;
-            font-size: 15px;
+        .highlight-icon svg {
+            width: 14px;
+            height: 14px;
+            color: white;
         }
 
-        /* Itinerary */
-        .itinerary-section {
-            margin: 40px 0;
+        /* Itinerary Timeline */
+        .itinerary-timeline {
+            position: relative;
+            padding-left: 32px;
         }
 
-        .itinerary-item {
+        .itinerary-timeline::before {
+            content: '';
+            position: absolute;
+            left: 15px;
+            top: 0;
+            bottom: 0;
+            width: 2px;
+            background: var(--gray-300);
+        }
+
+        .itinerary-timeline-item {
+            position: relative;
+            margin-bottom: 32px;
+            display: flex;
+            gap: 20px;
+        }
+
+        .itinerary-timeline-item:last-child {
+            margin-bottom: 0;
+        }
+
+        .timeline-marker {
+            position: absolute;
+            left: -32px;
+            top: 0;
+            width: 32px;
+            height: 32px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            z-index: 2;
+        }
+
+        .timeline-number {
+            width: 32px;
+            height: 32px;
+            background: var(--gray-900);
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 16px;
+            font-weight: 700;
+            font-family: var(--font-display);
+            box-shadow: 0 2px 6px rgba(0,0,0,0.12);
+        }
+
+        .timeline-content {
+            flex: 1;
+            display: flex;
+            gap: 20px;
             background: white;
-            border: 2px solid #f0f0f0;
             border-radius: 10px;
-            padding: 25px;
-            margin-bottom: 20px;
+            overflow: hidden;
+            box-shadow: 0 2px 6px rgba(0,0,0,0.06);
+            transition: all 0.3s ease;
         }
 
-        .itinerary-time {
-            font-weight: 700;
-            color: var(--primary-color);
-            font-size: 1.1rem;
-            margin-bottom: 10px;
+        .itinerary-timeline-item:hover .timeline-content {
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+            transform: translateY(-1px);
         }
 
-        .itinerary-title {
-            font-size: 1.3rem;
+        .timeline-image {
+            width: 200px;
+            height: 160px;
+            flex-shrink: 0;
+            overflow: hidden;
+            border-radius: 10px 0 0 10px;
+        }
+
+        .timeline-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.3s ease;
+        }
+
+        .itinerary-timeline-item:hover .timeline-image img {
+            transform: scale(1.05);
+        }
+
+        .timeline-details {
+            flex: 1;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        .timeline-title {
+            font-size: 19px;
             font-weight: 700;
-            margin-bottom: 10px;
+            color: var(--gray-900);
+            margin: 0;
+            font-family: var(--font-display);
+        }
+
+        .timeline-description {
+            font-size: 14px;
+            line-height: 1.6;
+            color: var(--gray-700);
+            margin: 0;
+        }
+
+        .timeline-meta {
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            margin-top: 4px;
+            font-size: 13px;
+            color: var(--gray-600);
+        }
+
+        .timeline-duration {
+            font-weight: 600;
+            color: var(--gray-900);
+        }
+
+        .timeline-separator {
+            color: var(--gray-400);
+        }
+
+        .timeline-included {
+            color: var(--success);
+            font-weight: 500;
         }
 
         /* What's Included */
-        .included-section {
-            background: #f9f9f9;
-            padding: 30px;
-            border-radius: 10px;
-            margin: 40px 0;
-        }
-
         .included-grid {
             display: grid;
             grid-template-columns: 1fr 1fr;
-            gap: 30px;
+            gap: 32px;
         }
 
-        .included-list ul {
+        .included-column h4 {
+            font-size: 18px;
+            font-weight: 700;
+            margin-bottom: 16px;
+        }
+
+        .included-list {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+        }
+
+        .included-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 10px;
+            font-size: 15px;
+        }
+
+        .included-item svg {
+            width: 20px;
+            height: 20px;
+            flex-shrink: 0;
+            margin-top: 2px;
+        }
+
+        .included-item.yes svg {
+            color: var(--success);
+        }
+
+        .included-item.no svg {
+            color: var(--gray-400);
+        }
+
+        /* Important Info */
+        .info-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+        }
+
+        .info-card {
+            padding: 28px;
+            background: white;
+            border: 1.5px solid var(--gray-200);
+            border-radius: 16px;
+            transition: all 0.3s ease;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+        }
+
+        .info-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 8px 24px rgba(0,0,0,0.1);
+            border-color: var(--primary-color);
+        }
+
+        .info-card-header {
+            display: flex;
+            align-items: center;
+            gap: 14px;
+            margin-bottom: 20px;
+        }
+
+        .info-icon {
+            width: 48px;
+            height: 48px;
+            background: var(--primary-color);
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 4px 12px rgba(193, 86, 75, 0.2);
+            flex-shrink: 0;
+        }
+
+        .info-icon svg {
+            width: 24px;
+            height: 24px;
+            color: white;
+            stroke-width: 2.5;
+        }
+
+        .info-card h4 {
+            font-size: 16px;
+            font-weight: 700;
+        }
+
+        .info-card ul {
             list-style: none;
-            padding: 0;
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
         }
 
-        .included-list li {
-            padding: 8px 0;
+        .info-card li {
+            font-size: 15px;
             color: var(--gray-700);
+            padding-left: 24px;
+            position: relative;
+            line-height: 1.6;
+            font-weight: 500;
+        }
+
+        .info-card li:before {
+            content: '✓';
+            position: absolute;
+            left: 0;
+            color: var(--success);
+            font-weight: 700;
+            font-size: 16px;
         }
 
         /* FAQ */
-        .faq-section {
-            background: #f9f9f9;
-            padding: 40px;
-            border-radius: 15px;
-            margin: 60px 0;
+        .faq-list {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
         }
 
         .faq-item {
             background: white;
-            border-radius: 10px;
-            margin-bottom: 15px;
+            border: 1px solid var(--gray-200);
+            border-radius: 12px;
             overflow: hidden;
-            border: 2px solid #e0e0e0;
         }
 
         .faq-question {
             width: 100%;
-            text-align: left;
-            padding: 20px 25px;
+            padding: 20px 24px;
             background: white;
             border: none;
-            font-size: 1.1rem;
+            text-align: left;
+            font-size: 16px;
             font-weight: 600;
             cursor: pointer;
             display: flex;
@@ -773,17 +1255,35 @@
             align-items: center;
         }
 
+        .faq-question:hover {
+            background: var(--gray-50);
+        }
+
+        .faq-question svg {
+            width: 20px;
+            height: 20px;
+            transition: transform 0.3s;
+        }
+
+        .faq-item.active .faq-question svg {
+            transform: rotate(180deg);
+        }
+
         .faq-answer {
-            padding: 0 25px;
             max-height: 0;
             overflow: hidden;
-            transition: all 0.3s ease;
-            color: var(--gray-700);
+            transition: max-height 0.3s;
         }
 
         .faq-item.active .faq-answer {
-            padding: 0 25px 20px 25px;
             max-height: 500px;
+        }
+
+        .faq-answer-content {
+            padding: 0 24px 20px;
+            font-size: 15px;
+            color: var(--gray-600);
+            line-height: 1.7;
         }
 
         /* Reviews */
@@ -858,184 +1358,528 @@
             font-size: 14px;
         }
 
-        /* Booking Sidebar */
-        .booking-sidebar {
-            position: sticky;
-            top: 120px;
-            height: fit-content;
+        /* Tour Cards */
+        .tour-cards-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 24px;
         }
 
-        .booking-card {
+        .tour-card {
             background: white;
-            border: 2px solid var(--gray-200);
             border-radius: 16px;
-            padding: 32px;
-            box-shadow: var(--shadow-lg);
+            overflow: hidden;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+            transition: all 0.3s;
+            text-decoration: none;
+            color: inherit;
         }
 
-        .price-section {
-            text-align: center;
-            margin-bottom: 24px;
-            padding-bottom: 24px;
-            border-bottom: 2px solid var(--gray-100);
-            background: linear-gradient(135deg, var(--primary-50) 0%, #F0FDFA 100%);
-            margin: -32px -32px 24px;
-            padding: 32px 24px;
-            border-radius: 16px 16px 0 0;
+        .tour-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 8px 24px rgba(0,0,0,0.12);
         }
 
-        .price-label {
-            color: var(--gray-600);
-            font-size: 13px;
-            font-weight: 600;
-            text-transform: uppercase;
+        .tour-card-image {
+            position: relative;
+            height: 220px;
+            overflow: hidden;
+        }
+
+        .tour-card-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.3s;
+        }
+
+        .tour-card:hover .tour-card-image img {
+            transform: scale(1.05);
+        }
+
+        .tour-card-badge {
+            position: absolute;
+            top: 12px;
+            left: 12px;
+            background: var(--primary-color);
+            color: white;
+            padding: 6px 12px;
+            border-radius: 20px;
+            font-size: 12px;
+            font-weight: 700;
+        }
+
+        .tour-card-content {
+            padding: 20px;
+        }
+
+        .tour-card-title {
+            font-size: 18px;
+            font-weight: 700;
             margin-bottom: 8px;
         }
 
-        .price {
-            font-size: 3rem;
-            font-weight: 900;
-            color: var(--gray-900);
-            line-height: 1;
-        }
-
-        .price-unit {
-            font-size: 1rem;
-            color: var(--gray-500);
-        }
-
-        .booking-buttons {
-            display: flex;
-            flex-direction: column;
-            gap: 12px;
-            margin-bottom: 20px;
-        }
-
-        .primary-book-btn {
-            background: #cdff03;
-            color: #000000;
-            padding: 16px 24px;
-            border-radius: 6px;
-            text-decoration: none;
-            font-weight: 700;
-            font-size: 16px;
-            text-align: center;
-            transition: all 0.3s ease;
-            box-shadow: 0 4px 15px rgba(205, 255, 3, 0.3);
-        }
-
-        .whatsapp-book-btn {
-            background: #8449f2;
-            color: white;
-            padding: 16px 24px;
-            border-radius: 6px;
-            text-decoration: none;
-            font-weight: 600;
-            text-align: center;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            gap: 8px;
-        }
-
-        .free-cancellation {
-            background: linear-gradient(135deg, #F0FDF4 0%, #DCFCE7 100%);
-            padding: 16px;
-            border-radius: 10px;
-            text-align: center;
-            margin-top: 20px;
-            font-weight: 600;
+        .tour-card-subtitle {
             font-size: 14px;
-            border: 2px solid var(--success);
+            color: var(--gray-600);
+            margin-bottom: 16px;
         }
 
-        .trust-signals {
-            margin-top: 20px;
-            padding-top: 20px;
+        .tour-card-footer {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding-top: 16px;
             border-top: 1px solid var(--gray-200);
         }
 
-        .trust-item {
+        .tour-card-meta {
             display: flex;
             align-items: center;
-            gap: 12px;
+            gap: 8px;
             font-size: 14px;
-            margin-bottom: 12px;
-            color: var(--gray-700);
-        }
-
-        .trust-item::before {
-            content: "✓";
-            background: var(--success);
-            color: white;
-            width: 20px;
-            height: 20px;
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-weight: 700;
-            font-size: 12px;
-        }
-
-        .social-proof {
-            background: var(--gray-50);
-            border: 1px solid var(--gray-200);
-            border-radius: 10px;
-            padding: 12px;
-            margin-top: 16px;
-            font-size: 13px;
             color: var(--gray-600);
+        }
+
+        .tour-card-price {
+            font-size: 24px;
+            font-weight: 800;
+        }
+
+        /* Booking Card */
+        .booking-card {
+            background: white;
+            border: 1px solid var(--gray-200);
+            border-radius: 16px;
+            padding: 28px;
+            box-shadow: 0 4px 16px rgba(0,0,0,0.08);
+        }
+
+        .booking-price {
+            display: flex;
+            align-items: baseline;
+            gap: 8px;
+            margin-bottom: 24px;
+        }
+
+        .price-amount {
+            font-size: 36px;
+            font-weight: 800;
+        }
+
+        .price-unit {
+            font-size: 16px;
+            color: var(--gray-600);
+        }
+
+        .booking-form {
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+            margin-bottom: 20px;
+        }
+
+        .form-group label {
+            display: block;
+            font-size: 14px;
+            font-weight: 600;
+            color: var(--gray-700);
+            margin-bottom: 8px;
+        }
+
+        .form-input {
+            width: 100%;
+            padding: 12px 16px;
+            border: 1px solid var(--gray-300);
+            border-radius: 8px;
+            font-size: 15px;
+            color: var(--gray-900);
+        }
+
+        .form-input:focus {
+            outline: none;
+            border-color: var(--primary-color);
+            box-shadow: 0 0 0 3px rgba(193, 86, 75, 0.1);
+        }
+
+        .booking-btn {
+            width: 100%;
+            padding: 16px;
+            background: var(--cta-yellow);
+            color: var(--gray-900);
+            border: none;
+            border-radius: 8px;
+            font-size: 16px;
+            font-weight: 700;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+
+        .booking-btn:hover {
+            background: var(--cta-yellow-dark);
+            transform: translateY(-2px);
+        }
+
+        .booking-btn.secondary {
+            background: white;
+            color: var(--primary-color);
+            border: 2px solid var(--primary-color);
+            margin-top: 12px;
+        }
+
+        .booking-btn.secondary:hover {
+            background: var(--primary-color);
+            color: white;
+        }
+
+        .booking-note {
+            font-size: 13px;
+            color: var(--gray-500);
+            text-align: center;
+            margin-top: 16px;
+        }
+
+        .key-facts {
+            margin-top: 28px;
+            padding-top: 28px;
+            border-top: 1px solid var(--gray-200);
+        }
+
+        .key-facts h4 {
+            font-size: 16px;
+            font-weight: 700;
+            margin-bottom: 16px;
+        }
+
+        .key-facts-list {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+        }
+
+        .key-fact-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 10px;
+            font-size: 14px;
+        }
+
+        .key-fact-item svg {
+            width: 18px;
+            height: 18px;
+            color: var(--primary-color);
+            flex-shrink: 0;
+        }
+
+        .happy-travelers {
+            margin-top: 24px;
+            padding: 16px;
+            background: var(--gray-50);
+            border-radius: 12px;
             text-align: center;
         }
 
-        /* Responsive */
-        @media (max-width: 1024px) {
-            .tour-content-wrapper {
+        .happy-travelers-title {
+            font-size: 16px;
+            font-weight: 700;
+            margin-bottom: 8px;
+        }
+
+        .why-travelers-love {
+            margin-top: 24px;
+            padding: 20px;
+            background: var(--primary-100);
+            border-radius: 12px;
+        }
+
+        .why-travelers-love h4 {
+            font-size: 16px;
+            font-weight: 700;
+            margin-bottom: 12px;
+        }
+
+        .testimonial-text {
+            font-size: 14px;
+            color: var(--gray-700);
+            font-style: italic;
+            line-height: 1.6;
+            margin-bottom: 12px;
+        }
+
+        /* ===== FOOTER (FROM INDEX.HTML) ===== */
+        .site-footer {
+            background: linear-gradient(to bottom, var(--gray-50) 0%, white 100%);
+            color: var(--gray-700);
+            border-top: 1px solid var(--gray-200);
+        }
+
+        .footer-main {
+            padding: 80px 40px;
+        }
+
+        .footer-main .container {
+            max-width: 1360px;
+            margin: 0 auto;
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: 1.5fr 1fr 1fr 1fr 1.2fr;
+            gap: 48px;
+        }
+
+        .footer-column {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .footer-column h4 {
+            font-size: 16px;
+            font-weight: 700;
+            color: var(--gray-900);
+            margin-bottom: 20px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            font-family: var(--font-display);
+        }
+
+        .footer-column ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        .footer-column a {
+            color: var(--gray-600);
+            text-decoration: none;
+            font-size: 14px;
+            transition: all 0.2s;
+        }
+
+        .footer-column a:hover {
+            color: var(--primary-600);
+            padding-left: 4px;
+        }
+
+        .footer-logo {
+            height: 45px;
+            width: auto;
+            max-width: 200px;
+            margin-bottom: 16px;
+        }
+
+        .footer-column p {
+            font-size: 14px;
+            line-height: 1.6;
+            color: var(--gray-600);
+            margin-bottom: 20px;
+        }
+
+        .social-links {
+            display: flex;
+            gap: 12px;
+            margin-top: 8px;
+        }
+
+        .social-links a {
+            width: 40px;
+            height: 40px;
+            background: white;
+            border: 1px solid var(--gray-200);
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.3s;
+            padding: 0;
+        }
+
+        .social-links a:hover {
+            background: var(--primary-600);
+            border-color: var(--primary-600);
+            transform: translateY(-2px);
+        }
+
+        .social-links a:hover svg {
+            fill: white;
+        }
+
+        .social-links svg {
+            width: 20px;
+            height: 20px;
+            fill: var(--gray-600);
+            transition: fill 0.3s;
+        }
+
+        .footer__newsletter {
+            margin-top: 24px;
+        }
+
+        .footer__newsletter-text {
+            font-size: 14px;
+            color: var(--text-light);
+            margin-bottom: 12px;
+        }
+
+        .footer__newsletter-form {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+        }
+
+        .footer__newsletter-input {
+            padding: 12px 16px;
+            background: var(--bg-white);
+            border: 1px solid #D1D5DB;
+            border-radius: 4px;
+            font-size: 14px;
+        }
+
+        .footer__newsletter-input:focus {
+            outline: none;
+            border-color: var(--primary-color);
+            box-shadow: 0 0 0 3px rgba(193, 86, 75, 0.1);
+        }
+
+        .footer__newsletter-button {
+            padding: 12px 24px;
+            background: var(--primary-color);
+            color: white;
+            border: none;
+            border-radius: 4px;
+            font-weight: 600;
+            font-size: 14px;
+            cursor: pointer;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .footer__newsletter-button:hover {
+            background: var(--primary-700);
+        }
+
+        .footer__bottom {
+            padding: 30px 40px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            max-width: 1360px;
+            margin: 0 auto;
+        }
+
+        .footer__bottom-left {
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+        }
+
+        .footer__copyright {
+            font-size: 14px;
+            color: #6B7280;
+        }
+
+        .footer__legal-links {
+            display: flex;
+            gap: 12px;
+            align-items: center;
+        }
+
+        .footer__legal-link {
+            font-size: 13px;
+            color: #6B7280;
+            text-decoration: none;
+        }
+
+        .footer__legal-link:hover {
+            color: var(--primary-color);
+        }
+
+        .footer__separator {
+            color: #D1D5DB;
+        }
+
+        .footer__tagline {
+            font-size: 16px;
+            font-weight: 600;
+            color: var(--primary-color);
+            font-style: italic;
+        }
+
+        /* ===== RESPONSIVE ===== */
+        @media (max-width: 1200px) {
+            .main-content {
                 grid-template-columns: 1fr;
-                padding: 32px;
+                padding: 40px 32px;
             }
 
-            .booking-sidebar {
-                position: relative;
-                top: 0;
+            .booking-column {
+                position: static;
+                max-width: 600px;
+                margin: 0 auto;
+                order: -1; /* Show booking card first on tablet */
             }
 
-            .included-grid {
-                grid-template-columns: 1fr;
+            .reviews-grid,
+            .tour-cards-grid {
+                grid-template-columns: repeat(2, 1fr);
             }
         }
 
         @media (max-width: 1024px) {
+            .nav-menu,
+            .nav-actions .btn-outline,
+            .nav-actions .btn-primary-nav {
+                display: none;
+            }
+
             .mobile-menu-toggle {
                 display: flex;
             }
 
-            .nav-menu {
-                display: none;
+            .footer-grid {
+                grid-template-columns: repeat(2, 1fr);
             }
 
-            .nav-actions .btn-outline,
-            .nav-actions .btn-primary-nav {
-                display: none;
+            .main-nav .container {
+                padding: 0 32px;
+            }
+
+            .tabs-container {
+                padding: 0 32px;
+                gap: 24px;
+                -webkit-overflow-scrolling: touch;
+                scroll-behavior: smooth;
+            }
+
+            .breadcrumbs,
+            .tour-title-section {
+                padding-left: 32px;
+                padding-right: 32px;
+            }
+
+            .tour-title-section {
+                padding-top: 40px;
+            }
+
+            .tour-title {
+                font-size: 36px;
+            }
+
+            .feature-badges {
+                grid-template-columns: repeat(2, 1fr);
             }
         }
 
         @media (max-width: 768px) {
             body {
-                padding-top: 56px;
-            }
-
-            .site-header {
-                z-index: 1000;
-                display: block !important;
-                visibility: visible !important;
-                opacity: 1 !important;
+                padding-top: 60px;
             }
 
             .main-nav {
-                padding: 8px 0 6px 0;
-                display: flex !important;
+                padding: 10px 0;
             }
 
             .main-nav .container {
@@ -1043,26 +1887,7 @@
             }
 
             .logo img {
-                height: 36px;
-            }
-
-            .mobile-menu-toggle {
-                display: flex !important;
-                width: 40px;
-                height: 40px;
-                padding: 8px;
-            }
-
-            .main-nav .container {
-                display: flex !important;
-            }
-
-            .logo {
-                display: flex !important;
-            }
-
-            .nav-actions {
-                display: flex !important;
+                height: 38px;
             }
 
             .hero-slider {
@@ -1102,7 +1927,7 @@
             }
 
             .breadcrumbs {
-                padding: 10px 16px;
+                padding: 12px 20px;
                 font-size: 13px;
                 overflow-x: auto;
                 white-space: nowrap;
@@ -1112,119 +1937,226 @@
                 display: none;
             }
 
+            .sticky-tabs {
+                top: 60px;
+            }
+
+            .tabs-container {
+                padding: 0 20px;
+                gap: 20px;
+                -webkit-overflow-scrolling: touch;
+                scroll-behavior: smooth;
+                scroll-snap-type: x mandatory;
+                padding-right: 40px;
+            }
+
+            .tab-link {
+                padding: 14px 0;
+                font-size: 14px;
+                white-space: nowrap;
+                scroll-snap-align: start;
+                min-width: fit-content;
+            }
+
+            .tour-title-section {
+                padding: 24px 20px;
+            }
+
             .tour-title {
-                font-size: 1.75rem;
+                font-size: 28px;
                 line-height: 1.3;
-                margin-bottom: 12px;
+                margin-bottom: 10px;
             }
 
             .tour-subtitle {
-                font-size: 1rem;
+                font-size: 16px;
                 margin-bottom: 16px;
             }
 
-            .tour-rating {
-                gap: 12px;
-                margin-bottom: 16px;
-            }
-
-            .tour-badges {
+            .tour-meta {
                 gap: 8px;
-                margin-top: 16px;
+                flex-wrap: wrap;
             }
 
-            .badge {
-                padding: 6px 12px;
+            .meta-badge {
+                font-size: 12px;
+                padding: 8px 14px;
+                gap: 6px;
+            }
+
+            .meta-badge svg {
+                width: 14px;
+                height: 14px;
+            }
+
+            .stars {
                 font-size: 13px;
             }
 
-            .tour-content-wrapper {
-                padding: 20px 16px;
-                gap: 24px;
-            }
-
-            .tour-main-content {
-                padding-right: 0;
-            }
-
-            .booking-sidebar {
-                position: fixed !important;
-                bottom: 0 !important;
-                top: auto !important;
-                left: 0;
-                right: 0;
-                z-index: 999;
-            }
-
-            .booking-card {
-                border-radius: 0;
-                padding: 12px 16px 12px 16px;
-            }
-
-            .price-section {
-                display: none;
-            }
-
-            .booking-buttons {
-                flex-direction: row;
-                gap: 6px;
-                margin-bottom: 0;
-            }
-
-            .primary-book-btn,
-            .whatsapp-book-btn {
-                flex: 1;
-                padding: 10px 12px;
-                font-size: 14px;
-            }
-
-            .free-cancellation {
-                display: none !important;
-            }
-
-            .trust-signals {
-                display: none !important;
-            }
-
-            .social-proof {
-                display: none !important;
-            }
-
-            body {
-                padding-bottom: 80px;
-            }
-
-            .tour-highlights {
+            .main-content {
                 padding: 24px 20px;
-                margin: 24px 0;
+                gap: 32px;
             }
 
-            .itinerary-section {
-                margin: 24px 0;
+            .content-column {
+                gap: 32px;
             }
 
-            .itinerary-item {
-                padding: 20px;
+            .section {
+                scroll-margin-top: 120px;
+            }
+
+            .section-title {
+                font-size: 24px;
                 margin-bottom: 16px;
             }
 
-            .included-section {
-                padding: 24px 20px;
-                margin: 24px 0;
-            }
-
-            .faq-section {
-                padding: 24px 20px;
-                margin: 40px 0;
-            }
-
-            .faq-question {
-                padding: 16px 20px;
+            .section-subtitle {
                 font-size: 15px;
             }
 
-            .faq-answer {
-                padding: 0 20px 16px 20px;
+            .overview-text {
+                font-size: 15px;
+                line-height: 1.7;
+            }
+
+            .booking-card {
+                padding: 20px;
+            }
+
+            .booking-price {
+                margin-bottom: 20px;
+            }
+
+            .price-amount {
+                font-size: 32px;
+            }
+
+            .booking-btn,
+            .booking-btn.secondary {
+                padding: 14px;
+                font-size: 15px;
+            }
+
+            .feature-badges {
+                grid-template-columns: repeat(3, 1fr);
+                gap: 8px;
+            }
+
+            .feature-badge {
+                padding: 10px 8px;
+                flex-direction: row;
+                align-items: center;
+                justify-content: center;
+                gap: 6px;
+            }
+
+            .feature-badge svg {
+                width: 18px;
+                height: 18px;
+                flex-shrink: 0;
+            }
+
+            .feature-badge-title {
+                font-size: 11px;
+                line-height: 1.3;
+                white-space: nowrap;
+            }
+
+            .feature-badge-text {
+                display: none;
+            }
+
+            .highlights-grid {
+                grid-template-columns: 1fr;
+                gap: 12px;
+            }
+
+            .included-grid,
+            .info-grid {
+                grid-template-columns: 1fr;
+                gap: 12px;
+            }
+
+            .info-card {
+                padding: 20px;
+            }
+
+            .info-card-header {
+                gap: 12px;
+                margin-bottom: 12px;
+            }
+
+            .info-icon {
+                width: 40px;
+                height: 40px;
+            }
+
+            .info-icon svg {
+                width: 20px;
+                height: 20px;
+            }
+
+            .itinerary-timeline {
+                padding-left: 28px;
+            }
+
+            .itinerary-timeline::before {
+                left: 13px;
+            }
+
+            .itinerary-timeline-item {
+                margin-bottom: 24px;
+            }
+
+            .timeline-marker {
+                left: -28px;
+            }
+
+            .timeline-number {
+                width: 28px;
+                height: 28px;
+                font-size: 14px;
+            }
+
+            .timeline-content {
+                flex-direction: column;
+                gap: 0;
+            }
+
+            .timeline-image {
+                width: 100%;
+                height: 180px;
+                border-radius: 10px 10px 0 0;
+            }
+
+            .timeline-details {
+                padding: 16px;
+                gap: 8px;
+            }
+
+            .timeline-title {
+                font-size: 18px;
+            }
+
+            .timeline-description {
+                font-size: 13px;
+                line-height: 1.6;
+            }
+
+            .timeline-meta {
+                font-size: 12px;
+                flex-wrap: wrap;
+            }
+
+            .faq-question {
+                padding: 16px 18px;
+                font-size: 15px;
+            }
+
+            .faq-answer-content {
+                padding: 0 18px 16px;
+                font-size: 14px;
             }
 
             .reviews-header {
@@ -1238,7 +2170,8 @@
                 font-size: 40px;
             }
 
-            .reviews-grid {
+            .reviews-grid,
+            .tour-cards-grid {
                 grid-template-columns: 1fr;
                 gap: 16px;
             }
@@ -1247,14 +2180,325 @@
                 padding: 20px;
             }
 
+            .tour-card {
+                max-width: 100%;
+            }
+
+            .tour-card-image {
+                height: 200px;
+            }
+
+            .key-facts {
+                margin-top: 24px;
+                padding-top: 24px;
+            }
+
+            .key-fact-item {
+                font-size: 13px;
+            }
+
+            .happy-travelers {
+                padding: 14px;
+            }
+
+            .why-travelers-love {
+                padding: 18px;
+            }
+
+            .footer-main {
+                padding: 48px 20px;
+            }
+
+            .footer-grid {
+                grid-template-columns: 1fr;
+                gap: 32px;
+            }
+
+            .footer-column:first-child {
+                order: 1;
+            }
+
+            .footer__bottom {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 16px;
+            }
+
+            .footer__legal-links {
+                flex-direction: column;
+                gap: 8px;
+            }
+
+            .footer__separator {
+                display: none;
+            }
+        }
+
+        @media (max-width: 480px) {
+            html {
+                overflow-x: hidden;
+            }
+
+            body {
+                overflow-x: hidden;
+                max-width: 100vw;
+            }
+
+            * {
+                max-width: 100%;
+            }
+
+            .footer-main {
+                padding: 40px 16px;
+            }
+
+            .hero-slider {
+                padding: 0 16px;
+            }
+
+            .slider-main-container {
+                height: 280px;
+                border-radius: 14px;
+            }
+
+            .slider-thumbnails {
+                gap: 6px;
+                padding: 10px;
+                border-radius: 14px;
+                margin-top: 10px;
+            }
+
+            .thumbnail {
+                width: 80px;
+                height: 60px;
+                border-radius: 6px;
+            }
+
             .breadcrumbs {
                 padding: 10px 16px;
+                font-size: 12px;
+            }
+
+            .tour-title-section {
+                padding: 20px 16px;
+            }
+
+            .tour-title {
+                font-size: 24px;
+            }
+
+            .tour-subtitle {
+                font-size: 15px;
+            }
+
+            .tour-meta {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 8px;
+            }
+
+            .meta-badge {
+                font-size: 11px;
+                padding: 7px 12px;
+            }
+
+            .tabs-container {
+                padding: 0 16px;
+                gap: 14px;
+                -webkit-overflow-scrolling: touch;
+                scroll-behavior: smooth;
+                scroll-snap-type: x mandatory;
+                padding-right: 32px;
+            }
+
+            .tab-link {
+                font-size: 13px;
+                padding: 12px 0;
+                scroll-snap-align: start;
+                min-width: fit-content;
+            }
+
+            .section-title {
+                font-size: 22px;
+            }
+
+            .section-subtitle {
+                font-size: 14px;
+            }
+
+            .overview-text {
+                font-size: 14px;
+            }
+
+            .price-amount {
+                font-size: 28px;
+            }
+
+            .main-content {
+                padding: 20px 16px;
+                gap: 28px;
+            }
+
+            .content-column {
+                gap: 28px;
+            }
+
+            .breadcrumbs {
+                padding-left: 16px;
+                padding-right: 16px;
+            }
+
+            .itinerary-timeline {
+                padding-left: 24px;
+            }
+
+            .itinerary-timeline::before {
+                left: 11px;
+            }
+
+            .itinerary-timeline-item {
+                margin-bottom: 20px;
+            }
+
+            .timeline-marker {
+                left: -24px;
+            }
+
+            .timeline-number {
+                width: 24px;
+                height: 24px;
+                font-size: 13px;
+            }
+
+            .timeline-image {
+                height: 160px;
+            }
+
+            .timeline-details {
+                padding: 14px;
+                gap: 6px;
+            }
+
+            .timeline-title {
+                font-size: 17px;
+            }
+
+            .timeline-description {
+                font-size: 13px;
+            }
+
+            .timeline-meta {
+                font-size: 12px;
+                flex-wrap: wrap;
+            }
+
+            .booking-card {
+                padding: 18px;
+            }
+
+            .booking-btn,
+            .booking-btn.secondary {
+                padding: 12px;
+                font-size: 14px;
+            }
+
+            .feature-badges {
+                gap: 6px;
+            }
+
+            .feature-badge {
+                padding: 8px 6px;
+                gap: 5px;
+            }
+
+            .feature-badge svg {
+                width: 16px;
+                height: 16px;
+            }
+
+            .feature-badge-title {
+                font-size: 10px;
+            }
+
+            .feature-badge-text {
+                display: none;
+            }
+
+            .highlight-item {
+                padding: 14px;
+            }
+
+            .info-card {
+                padding: 18px;
+            }
+
+            .info-card h4 {
+                font-size: 15px;
+            }
+
+            .info-card li {
+                font-size: 13px;
+            }
+
+            .faq-question {
+                padding: 14px 16px;
+                font-size: 14px;
+            }
+
+            .faq-answer-content {
+                padding: 0 16px 14px;
+                font-size: 13px;
+            }
+
+            .reviews-header {
+                padding: 16px;
+            }
+
+            .score-number {
+                font-size: 36px;
+            }
+
+            .review-card {
+                padding: 16px;
+            }
+
+            .tour-card-image {
+                height: 180px;
+            }
+
+            .tour-card-content {
+                padding: 16px;
+            }
+
+            .tour-card-title {
+                font-size: 16px;
+            }
+
+            .tour-title-section {
+                padding-top: 24px;
+            }
+
+            .booking-card {
+                padding: 20px;
+            }
+
+            .tour-meta {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 8px;
+            }
+
+            .meta-badge {
+                width: 100%;
+                justify-content: flex-start;
+                padding: 10px 14px;
             }
         }
     </style>
 </head>
 <body>
-    <!-- HEADER -->
+
+    <!-- ===== HEADER ===== -->
     <header class="site-header">
         <nav class="main-nav">
             <div class="container">
@@ -1326,38 +2570,42 @@
     </div>
 
     <!-- BREADCRUMBS -->
+    <!-- TEMPLATE: Replace [TOUR_NAME] with your tour name -->
     <div class="breadcrumbs">
         <a href="../index.html">Home</a>
         <span>›</span>
         <a href="../agadir-tours.html">Tours</a>
         <span>›</span>
-        <span>Morning Camel Ride in Agadir</span>
+        <span>Morning Camel Ride</span>
     </div>
 
     <!-- HERO SLIDER -->
+    <!-- TEMPLATE: Replace image URLs, alt text, and tour title for your tour -->
     <div class="hero-slider">
         <div class="slider-main-container">
             <div class="slider-container">
                 <div class="slide active">
-                    <img src="../img/excursions/Camel Ride/camel ride 1.jpg" alt="Morning camel ride on Agadir beach">
+                    <img src="../img/excursions/Camel Ride/camel ride 1.jpg" alt="Morning camel ride on Agadir beach with beautiful coastal views">
                 </div>
                 <div class="slide">
-                    <img src="../img/excursions/Camel Ride/camel ride 2.jpg" alt="Camel ride along Agadir coastline">
+                    <img src="../img/excursions/Camel Ride/camel ride 2.jpg" alt="Camel riding experience in Agadir during morning hours">
                 </div>
                 <div class="slide">
-                    <img src="../img/excursions/Camel Ride/camel ride 3.jpg" alt="Camel riding tour Agadir morning">
+                    <img src="../img/excursions/Camel Ride/camel ride 3.jpg" alt="Traditional camel ride along Agadir beach in the morning">
                 </div>
                 <div class="slide">
-                    <img src="../img/excursions/Camel Ride/camel ride 4.jpg" alt="Traditional Moroccan camel ride experience">
+                    <img src="../img/excursions/Camel Ride/camel ride 4.jpg" alt="Morning camel trekking experience on Agadir coastline">
                 </div>
                 <div class="slide">
-                    <img src="../img/excursions/Camel Ride/camel ride 5.jpg" alt="Camel ride Agadir beach">
+                    <img src="../img/excursions/Camel Ride/camel ride 5.jpg" alt="Beach camel ride in Agadir with morning sunshine">
                 </div>
+                <!-- TEMPLATE: Add more slides if needed -->
             </div>
 
             <!-- Navigation Arrows -->
             <button class="slider-arrow prev" onclick="changeSlide(-1)" aria-label="Previous slide">‹</button>
             <button class="slider-arrow next" onclick="changeSlide(1)" aria-label="Next slide">›</button>
+
         </div>
 
         <!-- Thumbnail Navigation -->
@@ -1366,277 +2614,538 @@
                 <img src="../img/excursions/Camel Ride/camel ride 1.jpg" alt="Morning camel ride on Agadir beach">
             </div>
             <div class="thumbnail" onclick="goToSlide(1)">
-                <img src="../img/excursions/Camel Ride/camel ride 2.jpg" alt="Camel ride along Agadir coastline">
+                <img src="../img/excursions/Camel Ride/camel ride 2.jpg" alt="Camel riding in Agadir morning">
             </div>
             <div class="thumbnail" onclick="goToSlide(2)">
-                <img src="../img/excursions/Camel Ride/camel ride 3.jpg" alt="Camel riding tour Agadir morning">
+                <img src="../img/excursions/Camel Ride/camel ride 3.jpg" alt="Traditional camel ride Agadir beach">
             </div>
             <div class="thumbnail" onclick="goToSlide(3)">
-                <img src="../img/excursions/Camel Ride/camel ride 4.jpg" alt="Traditional Moroccan camel ride experience">
+                <img src="../img/excursions/Camel Ride/camel ride 4.jpg" alt="Morning camel trekking Agadir">
             </div>
             <div class="thumbnail" onclick="goToSlide(4)">
-                <img src="../img/excursions/Camel Ride/camel ride 5.jpg" alt="Camel ride Agadir beach">
+                <img src="../img/excursions/Camel Ride/camel ride 5.jpg" alt="Beach camel ride Agadir morning">
+            </div>
+            <!-- TEMPLATE: Add more thumbnails if you add more slides -->
+        </div>
+    </div>
+
+    <!-- TITLE SECTION -->
+    <!-- TEMPLATE: Replace all [TOUR_*] placeholders with your tour information -->
+    <div class="tour-title-section">
+        <h1 class="tour-title">Morning Camel Ride in Agadir</h1>
+        <p class="tour-subtitle">Experience the magic of Agadir's pristine beaches on a traditional camel ride during the cool morning hours</p>
+        <div class="tour-meta">
+            <div class="meta-badge">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                    <circle cx="12" cy="12" r="10"/>
+                    <polyline points="12 6 12 12 16 14"/>
+                </svg>
+                <span>2-3 hours</span>
+            </div>
+            <div class="meta-badge">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/>
+                    <circle cx="9" cy="7" r="4"/>
+                    <path d="M23 21v-2a4 4 0 0 0-3-3.87"/>
+                    <path d="M16 3.13a4 4 0 0 1 0 7.75"/>
+                </svg>
+                <span>Small groups (max 8)</span>
+            </div>
+            <div class="meta-badge highlight">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/>
+                    <polyline points="22 4 12 14.01 9 11.01"/>
+                </svg>
+                <span>Free cancellation 24h</span>
+            </div>
+            <div class="meta-badge rating">
+                <span class="stars">★★★★★</span>
+                <span class="rating-text">4.8</span>
+                <span class="review-count">(289 reviews)</span>
             </div>
         </div>
     </div>
 
-    <!-- Tour Content -->
-    <section class="tour-content-wrapper">
-        <div class="tour-main-content">
-            <!-- Tour Header -->
-            <div class="tour-header">
-                <h1 class="tour-title">Morning Camel Ride in Agadir: Fresh Beach Experience with Mint Tea</h1>
-                <p class="tour-subtitle">Start your day with a peaceful ride along pristine beaches • Enjoy cool morning breeze & traditional Moroccan mint tea • Experience the beauty of Agadir's coastline</p>
+    <!-- STICKY TABS -->
+    <div class="sticky-tabs">
+        <div class="tabs-container">
+            <a href="#overview" class="tab-link active">Overview</a>
+            <a href="#highlights" class="tab-link">Highlights</a>
+            <a href="#itinerary" class="tab-link">Itinerary</a>
+            <a href="#included" class="tab-link">What's Included</a>
+            <a href="#info" class="tab-link">Important Info</a>
+            <a href="#faq" class="tab-link">FAQ</a>
+            <a href="#reviews" class="tab-link">Reviews</a>
+            <a href="#related" class="tab-link">You Might Also Like</a>
+        </div>
+    </div>
 
-                <div class="tour-rating">
-                    <span class="rating-score">4.8 / 5</span>
-                    <div class="rating-details">
-                        <div style="color: #f39c12; font-size: 18px; margin-bottom: 5px;">★★★★★</div>
-                        <span>Excellent rating based on 289 reviews</span>
+    <!-- MAIN CONTENT -->
+    <div class="main-content">
+        <!-- LEFT COLUMN: CONTENT -->
+        <div class="content-column">
+
+            <!-- OVERVIEW -->
+            <!-- TEMPLATE: Replace [TOUR_OVERVIEW_PARAGRAPH_1] and [TOUR_OVERVIEW_PARAGRAPH_2] with your tour description -->
+            <section id="overview" class="section">
+                <h2 class="section-title">Overview</h2>
+                <p class="overview-text">
+                    Start your day with an unforgettable adventure on Agadir's stunning coastline. Our morning camel ride offers the perfect opportunity to experience Morocco's traditional mode of transportation while enjoying the cool morning breeze and breathtaking ocean views. This authentic experience takes you along pristine sandy beaches where the Atlantic Ocean meets the golden shores of Agadir.
+                </p>
+                <p class="overview-text">
+                    Our experienced guides will ensure your safety and comfort throughout the journey, sharing fascinating insights about local culture and the history of camel riding in Morocco. After your ride, enjoy a traditional Moroccan mint tea ceremony, a perfect way to complete your morning adventure. This tour is ideal for families, couples, and solo travelers looking for a peaceful and authentic Moroccan experience.
+                </p>
+
+                <div class="feature-badges">
+                    <div class="feature-badge">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M5 17H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v10a2 2 0 0 1-2 2h-1"/>
+                            <path d="M9 17h6"/>
+                            <circle cx="7" cy="17" r="2"/>
+                            <circle cx="17" cy="17" r="2"/>
+                        </svg>
+                        <div class="feature-badge-title">Free Hotel Pick-Up</div>
+                        <div class="feature-badge-text">Door to door service</div>
+                    </div>
+                    <div class="feature-badge">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/>
+                            <circle cx="9" cy="7" r="4"/>
+                            <path d="M23 21v-2a4 4 0 0 0-3-3.87"/>
+                            <path d="M16 3.13a4 4 0 0 1 0 7.75"/>
+                        </svg>
+                        <div class="feature-badge-title">Small Group</div>
+                        <div class="feature-badge-text">Max 8 travelers</div>
+                    </div>
+                    <div class="feature-badge">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/>
+                        </svg>
+                        <div class="feature-badge-title">Instant Confirmation</div>
+                        <div class="feature-badge-text">Book now, confirm instantly</div>
                     </div>
                 </div>
+            </section>
 
-                <div class="tour-badges">
-                    <span class="badge featured">✓ Free Cancellation</span>
-                    <span class="badge">🚗 Hotel Pickup Included</span>
-                    <span class="badge">⏱️ 1.5-2 Hours</span>
-                    <span class="badge">👥 Small Group (Max 12)</span>
-                    <span class="badge">🍵 Mint Tea Included</span>
-                    <span class="badge">🌅 Morning Experience</span>
-                </div>
-            </div>
-
-            <!-- Tour Highlights -->
-            <div class="tour-highlights">
-                <h2>Why Choose Our Morning Camel Ride Agadir Experience</h2>
-                <div class="highlights-list">
+            <!-- HIGHLIGHTS -->
+            <!-- TEMPLATE: Replace highlight items with your tour highlights. Copy/paste the highlight-item div for more highlights -->
+            <section id="highlights" class="section">
+                <h2 class="section-title">Highlights</h2>
+                <p class="section-subtitle">What makes this tour special</p>
+                <div class="highlights-grid">
                     <div class="highlight-item">
-                        <span class="highlight-icon">✓</span>
-                        <span class="highlight-text"><strong>Perfect Morning Start:</strong> Begin your day with a peaceful camel ride along Agadir's pristine beach with cool morning breeze and stunning coastal views</span>
+                        <div class="highlight-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <polyline points="20 6 9 17 4 12"/>
+                            </svg>
+                        </div>
+                        <div class="highlight-text">Ride along pristine Agadir beaches during the cool morning hours</div>
                     </div>
                     <div class="highlight-item">
-                        <span class="highlight-icon">✓</span>
-                        <span class="highlight-text"><strong>Beat the Heat:</strong> Enjoy comfortable temperatures and less crowded beaches during the refreshing morning hours</span>
+                        <div class="highlight-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <polyline points="20 6 9 17 4 12"/>
+                            </svg>
+                        </div>
+                        <div class="highlight-text">Traditional Moroccan mint tea ceremony included</div>
                     </div>
                     <div class="highlight-item">
-                        <span class="highlight-icon">✓</span>
-                        <span class="highlight-text"><strong>Traditional Mint Tea Ceremony:</strong> Experience authentic Moroccan hospitality with a traditional mint tea ceremony in a Berber tent setting</span>
+                        <div class="highlight-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <polyline points="20 6 9 17 4 12"/>
+                            </svg>
+                        </div>
+                        <div class="highlight-text">Perfect for families and all ages - safe and gentle experience</div>
                     </div>
                     <div class="highlight-item">
-                        <span class="highlight-icon">✓</span>
-                        <span class="highlight-text"><strong>Family-Friendly Activity:</strong> Perfect for all ages - even first-time riders! Our gentle, well-trained camels ensure a safe and comfortable experience</span>
+                        <div class="highlight-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <polyline points="20 6 9 17 4 12"/>
+                            </svg>
+                        </div>
+                        <div class="highlight-text">Stunning coastal views and photo opportunities</div>
                     </div>
                     <div class="highlight-item">
-                        <span class="highlight-icon">✓</span>
-                        <span class="highlight-text"><strong>Beautiful Photo Opportunities:</strong> Capture unforgettable morning moments on camelback with the Atlantic Ocean as your backdrop</span>
+                        <div class="highlight-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <polyline points="20 6 9 17 4 12"/>
+                            </svg>
+                        </div>
+                        <div class="highlight-text">Experienced local guides sharing cultural insights</div>
                     </div>
                     <div class="highlight-item">
-                        <span class="highlight-icon">✓</span>
-                        <span class="highlight-text"><strong>Professional Local Guides:</strong> Experienced camel handlers and English/French-speaking guides ensure your safety and share fascinating Berber culture insights</span>
+                        <div class="highlight-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <polyline points="20 6 9 17 4 12"/>
+                            </svg>
+                        </div>
+                        <div class="highlight-text">Free hotel pickup and drop-off included</div>
                     </div>
-                    <div class="highlight-item">
-                        <span class="highlight-icon">✓</span>
-                        <span class="highlight-text"><strong>Flexible Scheduling:</strong> Morning experience leaves your afternoon free for other Agadir adventures or relaxing at the beach</span>
+                    <!-- TEMPLATE: Add more highlight-item divs as needed -->
+                </div>
+            </section>
+
+            <!-- ITINERARY -->
+            <!-- TEMPLATE: Replace itinerary introduction and all timeline items with your tour itinerary -->
+            <section id="itinerary" class="section">
+                <h2 class="section-title">Itinerary</h2>
+                <p class="overview-text" style="margin-bottom: 32px;">
+                    Your morning camel ride adventure begins with a convenient hotel pickup and takes you through a carefully planned itinerary designed to maximize your enjoyment of Agadir's beautiful coastline and Moroccan culture.
+                </p>
+                <div class="itinerary-timeline">
+                    <!-- TEMPLATE: Copy this itinerary-timeline-item block for each step. Update number, image, title, description, duration, and included info -->
+                    <div class="itinerary-timeline-item">
+                        <div class="timeline-marker">
+                            <div class="timeline-number">1</div>
+                        </div>
+                        <div class="timeline-content">
+                            <div class="timeline-image">
+                                <img src="../img/excursions/Camel Ride/camel ride 1.jpg" alt="Hotel pickup for morning camel ride">
+                            </div>
+                            <div class="timeline-details">
+                                <h3 class="timeline-title">Hotel Pickup</h3>
+                                <p class="timeline-description">We'll pick you up from your hotel in Agadir between 8:00 AM and 9:00 AM. Our comfortable air-conditioned vehicle will transport you to the beach where your camel adventure begins. The morning timing ensures you avoid the midday heat and enjoy the cool ocean breeze.</p>
+                                <div class="timeline-meta">
+                                    <span class="timeline-duration">15-30 minutes</span>
+                                    <span class="timeline-separator">•</span>
+                                    <span class="timeline-included">Transportation included</span>
+                                </div>
+                            </div>
+                        </div>
                     </div>
+
+                    <div class="itinerary-timeline-item">
+                        <div class="timeline-marker">
+                            <div class="timeline-number">2</div>
+                        </div>
+                        <div class="timeline-content">
+                            <div class="timeline-image">
+                                <img src="../img/excursions/Camel Ride/camel ride 2.jpg" alt="Camel preparation and safety briefing">
+                            </div>
+                            <div class="timeline-details">
+                                <h3 class="timeline-title">Beach Arrival & Camel Preparation</h3>
+                                <p class="timeline-description">Upon arrival at the beach, you'll meet your friendly camel guides and the gentle camels. You'll receive a brief safety orientation and learn how to mount and ride comfortably. Our experienced handlers will ensure you feel safe and confident before beginning your ride along the beautiful coastline.</p>
+                                <div class="timeline-meta">
+                                    <span class="timeline-duration">15 minutes</span>
+                                    <span class="timeline-separator">•</span>
+                                    <span class="timeline-included">Safety briefing included</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="itinerary-timeline-item">
+                        <div class="timeline-marker">
+                            <div class="timeline-number">3</div>
+                        </div>
+                        <div class="timeline-content">
+                            <div class="timeline-image">
+                                <img src="../img/excursions/Camel Ride/camel ride 3.jpg" alt="Morning camel ride on Agadir beach">
+                            </div>
+                            <div class="timeline-details">
+                                <h3 class="timeline-title">Morning Camel Ride</h3>
+                                <p class="timeline-description">Enjoy a peaceful 45-60 minute camel ride along Agadir's pristine beaches. The gentle swaying motion of the camel, combined with the sound of waves and the cool morning air, creates a truly magical experience. Take in the stunning views of the Atlantic Ocean and capture memorable photos of your adventure.</p>
+                                <div class="timeline-meta">
+                                    <span class="timeline-duration">45-60 minutes</span>
+                                    <span class="timeline-separator">•</span>
+                                    <span class="timeline-included">Photo stops included</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="itinerary-timeline-item">
+                        <div class="timeline-marker">
+                            <div class="timeline-number">4</div>
+                        </div>
+                        <div class="timeline-content">
+                            <div class="timeline-image">
+                                <img src="../img/excursions/Camel Ride/camel ride 4.jpg" alt="Traditional Moroccan mint tea ceremony">
+                            </div>
+                            <div class="timeline-details">
+                                <h3 class="timeline-title">Traditional Moroccan Mint Tea</h3>
+                                <p class="timeline-description">After your camel ride, relax and enjoy a traditional Moroccan mint tea ceremony. This authentic experience allows you to learn about Moroccan tea culture while sipping the refreshing beverage. It's the perfect way to conclude your morning adventure and reflect on your memorable experience.</p>
+                                <div class="timeline-meta">
+                                    <span class="timeline-duration">20-30 minutes</span>
+                                    <span class="timeline-separator">•</span>
+                                    <span class="timeline-included">Mint tea included</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="itinerary-timeline-item">
+                        <div class="timeline-marker">
+                            <div class="timeline-number">5</div>
+                        </div>
+                        <div class="timeline-content">
+                            <div class="timeline-image">
+                                <img src="../img/excursions/Camel Ride/camel ride 5.jpg" alt="Return to hotel after camel ride">
+                            </div>
+                            <div class="timeline-details">
+                                <h3 class="timeline-title">Return to Hotel</h3>
+                                <p class="timeline-description">After the tea ceremony, we'll drive you back to your hotel in Agadir. You'll arrive refreshed and with wonderful memories of your morning camel ride experience. The entire tour typically concludes around 11:00 AM, leaving you with plenty of time to enjoy the rest of your day.</p>
+                                <div class="timeline-meta">
+                                    <span class="timeline-duration">15-30 minutes</span>
+                                    <span class="timeline-separator">•</span>
+                                    <span class="timeline-included">Drop-off included</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- TEMPLATE: Add more itinerary steps as needed. Copy the itinerary-timeline-item block and update the number -->
                 </div>
-            </div>
+            </section>
 
-            <!-- Tour Description -->
-            <div class="tour-description" style="margin-bottom: 40px;">
-                <h2 style="margin-bottom: 24px; font-size: 1.5rem;">Experience the Magic of a Morning Camel Ride in Agadir</h2>
-                <p style="margin-bottom: 20px; line-height: 1.8; font-size: 15px; color: var(--gray-700);">Start your day with a peaceful <strong>morning camel ride in Agadir</strong> along pristine beaches. Enjoy the cool morning breeze and stunning coastal views as you gently sway on camelback across golden sands.</p>
-
-                <p style="margin-bottom: 20px; line-height: 1.8; font-size: 15px; color: var(--gray-700);">Your experience begins with hotel pickup at 9:00 AM. We'll take you to the beach where our gentle, well-trained camels await. Mount your camel and begin a peaceful journey along the shoreline, with the sound of waves and fresh ocean breeze creating a serene atmosphere.</p>
-
-                <p style="margin-bottom: 32px; line-height: 1.8; font-size: 15px; color: var(--gray-700);">After your scenic beach ride, you'll be welcomed into a traditional Berber tent for an authentic Moroccan mint tea ceremony. The experience concludes at 12:00 PM, leaving your afternoon free for other adventures.</p>
-
-                <h3 style="margin-bottom: 20px; margin-top: 40px; font-size: 1.2rem;">What Makes This Experience Special?</h3>
-                <p style="margin-bottom: 20px; line-height: 1.8; font-size: 15px; color: var(--gray-700);">Our morning camel ride is designed for peaceful moments and lasting memories. We keep groups small (maximum 12 people) for personalized attention. Our camels are well-cared for, gentle, and perfect for first-time riders.</p>
-
-                <p style="margin-bottom: 20px; line-height: 1.8; font-size: 15px; color: var(--gray-700);">Morning timing offers comfortable temperatures, less crowded beaches, and perfect natural light for photography. Our guides know the best spots for coastal views and are happy to take photos of your group.</p>
-
-                <p style="margin-bottom: 0; line-height: 1.8; font-size: 15px; color: var(--gray-700);">Perfect for couples, families, or friends seeking an authentic Moroccan experience. Suitable for all ages and fitness levels. No riding experience needed – our patient handlers ensure everyone feels comfortable and safe.</p>
-            </div>
-
-            <!-- Detailed Itinerary -->
-            <div class="itinerary-section">
-                <h2 style="font-size: 1.8rem; font-weight: 700; color: #1F2937; margin-bottom: 30px;">Detailed Itinerary: Your Morning Camel Ride Experience</h2>
-
-                <div class="itinerary-item">
-                    <div class="itinerary-time">9:00 AM - 9:15 AM</div>
-                    <h4 class="itinerary-title">Hotel Pickup in Agadir or Taghazout</h4>
-                    <p style="color: #6B7280; line-height: 1.8;">We'll collect you from your hotel or riad in Agadir, Taghazout, or surrounding areas in a comfortable, air-conditioned vehicle. Your professional driver will greet you and provide an overview of the morning ahead.</p>
-                </div>
-
-                <div class="itinerary-item">
-                    <div class="itinerary-time">9:15 AM - 9:30 AM</div>
-                    <h4 class="itinerary-title">Arrival at Beach & Meet Your Camel</h4>
-                    <p style="color: #6B7280; line-height: 1.8;">Arrive at the pristine beach location where our gentle, well-cared-for camels await. Meet your experienced camel handler who will introduce you to your camel and help you mount safely. Don't worry – our camels are calm, friendly, and perfect for beginners! Get comfortable in the saddle and prepare for an unforgettable experience. Your guide will explain basic riding instructions and safety guidelines.</p>
-                </div>
-
-                <div class="itinerary-item">
-                    <div class="itinerary-time">9:30 AM - 10:30 AM</div>
-                    <h4 class="itinerary-title">Peaceful Morning Camel Ride Along the Beach</h4>
-                    <p style="color: #6B7280; line-height: 1.8;">Begin your enchanting camel ride along Agadir's beautiful coastline. Feel the gentle sway of your camel's gait as you ride along the golden sands with the Atlantic Ocean beside you. Enjoy the cool morning breeze and peaceful atmosphere of the less-crowded beach. Your guide will stop at perfect spots for photos – capture stunning moments of camels against the beautiful coastal landscape! This peaceful one-hour ride allows you to truly connect with this ancient mode of transportation while enjoying the natural beauty of Morocco's coast. Listen to the sound of waves, feel the fresh sea breeze, and create memories that will last a lifetime.</p>
-                </div>
-
-                <div class="itinerary-item">
-                    <div class="itinerary-time">10:30 AM - 11:30 AM</div>
-                    <h4 class="itinerary-title">Traditional Mint Tea Ceremony</h4>
-                    <p style="color: #6B7280; line-height: 1.8;">After your camel ride, you'll be welcomed into a traditional Berber tent set up on the beach. Experience authentic Moroccan hospitality with a traditional mint tea ceremony. Learn about the cultural significance of mint tea in Moroccan life while enjoying the sweet, refreshing beverage. This is a wonderful opportunity to relax, share stories with fellow travelers, and immerse yourself in Berber culture. Your guide will explain the tea-making tradition and answer any questions about Moroccan customs.</p>
-                </div>
-
-                <div class="itinerary-item">
-                    <div class="itinerary-time">11:30 AM - 12:00 PM</div>
-                    <h4 class="itinerary-title">Return Transfer to Your Hotel</h4>
-                    <p style="color: #6B7280; line-height: 1.8;">After this refreshing morning experience, your driver will return you safely to your hotel in Agadir or Taghazout. Relax in the comfortable vehicle as you reflect on the peaceful camel ride and authentic Moroccan experience you just enjoyed. Your guide will be happy to provide recommendations for other activities and attractions in Agadir. You'll have the rest of the day free to continue your adventures!</p>
-                </div>
-            </div>
-
-            <!-- What's Included/Not Included -->
-            <div class="included-section">
+            <!-- WHAT'S INCLUDED -->
+            <!-- TEMPLATE: Replace included and not included items with your tour details -->
+            <section id="included" class="section">
+                <h2 class="section-title">What's Included</h2>
                 <div class="included-grid">
-                    <div class="included-list">
-                        <h4>✅ What's Included</h4>
+                    <div class="included-column">
+                        <h4>✓ Included</h4>
+                        <div class="included-list">
+                            <!-- TEMPLATE: Copy this included-item block for each included item -->
+                            <div class="included-item yes">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <polyline points="20 6 9 17 4 12"/>
+                                </svg>
+                                <span>Hotel pickup and drop-off</span>
+                            </div>
+                            <div class="included-item yes">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <polyline points="20 6 9 17 4 12"/>
+                                </svg>
+                                <span>45-60 minute camel ride</span>
+                            </div>
+                            <div class="included-item yes">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <polyline points="20 6 9 17 4 12"/>
+                                </svg>
+                                <span>Traditional Moroccan mint tea</span>
+                            </div>
+                            <div class="included-item yes">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <polyline points="20 6 9 17 4 12"/>
+                                </svg>
+                                <span>Professional English-speaking guide</span>
+                            </div>
+                            <div class="included-item yes">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <polyline points="20 6 9 17 4 12"/>
+                                </svg>
+                                <span>All safety equipment</span>
+                            </div>
+                            <div class="included-item yes">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <polyline points="20 6 9 17 4 12"/>
+                                </svg>
+                                <span>Photo opportunities</span>
+                            </div>
+                            <!-- TEMPLATE: Add more included items as needed -->
+                        </div>
+                    </div>
+
+                    <div class="included-column">
+                        <h4>✗ Not Included</h4>
+                        <div class="included-list">
+                            <!-- TEMPLATE: Copy this included-item block for each not included item -->
+                            <div class="included-item no">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <line x1="18" y1="6" x2="6" y2="18"/>
+                                    <line x1="6" y1="6" x2="18" y2="18"/>
+                                </svg>
+                                <span>Meals (light refreshments only)</span>
+                            </div>
+                            <div class="included-item no">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <line x1="18" y1="6" x2="6" y2="18"/>
+                                    <line x1="6" y1="6" x2="18" y2="18"/>
+                                </svg>
+                                <span>Gratuities (optional)</span>
+                            </div>
+                            <div class="included-item no">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <line x1="18" y1="6" x2="6" y2="18"/>
+                                    <line x1="6" y1="6" x2="18" y2="18"/>
+                                </svg>
+                                <span>Personal expenses</span>
+                            </div>
+                            <!-- TEMPLATE: Add more not included items as needed -->
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- IMPORTANT INFO -->
+            <!-- TEMPLATE: Replace all list items with your tour-specific information -->
+            <section id="info" class="section">
+                <h2 class="section-title">Important Information</h2>
+                <div class="info-grid">
+                    <div class="info-card">
+                        <div class="info-card-header">
+                            <div class="info-icon">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <path d="M6 2h12a2 2 0 0 1 2 2v16a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2z"/>
+                                    <path d="M8 10h8"/>
+                                    <path d="M8 14h8"/>
+                                    <path d="M8 6h8"/>
+                                    <path d="M10 18h4"/>
+                                </svg>
+                            </div>
+                            <h4>What to Bring</h4>
+                        </div>
                         <ul>
-                            <li>✓ Hotel pickup and drop-off (Agadir & Taghazout)</li>
-                            <li>✓ Air-conditioned transportation</li>
-                            <li>✓ Professional English/French-speaking guide</li>
-                            <li>✓ One-hour morning camel ride along the beach</li>
-                            <li>✓ Experienced camel handler</li>
-                            <li>✓ Traditional Moroccan mint tea ceremony</li>
-                            <li>✓ Berber tent experience</li>
-                            <li>✓ Bottled water</li>
-                            <li>✓ All fees and taxes</li>
+                            <li>Comfortable clothing suitable for riding</li>
+                            <li>Sunscreen and hat for sun protection</li>
+                            <li>Camera or smartphone for photos</li>
+                            <li>Closed-toe shoes (sneakers recommended)</li>
+                            <li>Light jacket or sweater (mornings can be cool)</li>
+                            <li>Water bottle (optional)</li>
                         </ul>
                     </div>
-                    <div class="included-list">
-                        <h4>❌ What's Not Included</h4>
+
+                    <div class="info-card">
+                        <div class="info-card-header">
+                            <div class="info-icon">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+                                    <path d="M9 12l2 2 4-4"/>
+                                </svg>
+                            </div>
+                            <h4>Health & Safety</h4>
+                        </div>
                         <ul>
-                            <li>✗ Personal expenses and souvenirs</li>
-                            <li>✗ Additional food or drinks</li>
-                            <li>✗ Gratuities (optional, appreciated)</li>
-                            <li>✗ Professional photos (guide happy to take photos with your device)</li>
+                            <li>All camels are well-trained and gentle, suitable for all ages</li>
+                            <li>Safety briefing provided before the ride</li>
+                            <li>Experienced handlers accompany the group at all times</li>
+                            <li>Maximum weight limit: 100 kg (220 lbs) per person</li>
+                            <li>Not recommended for pregnant women or those with back problems</li>
+                            <li>Children under 5 can ride with an adult (shared camel)</li>
+                        </ul>
+                    </div>
+
+                    <div class="info-card">
+                        <div class="info-card-header">
+                            <div class="info-icon">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <circle cx="12" cy="12" r="10"/>
+                                    <line x1="12" y1="16" x2="12" y2="12"/>
+                                    <line x1="12" y1="8" x2="12.01" y2="8"/>
+                                </svg>
+                            </div>
+                            <h4>Important Note</h4>
+                        </div>
+                        <ul>
+                            <li>Tour operates daily, weather permitting</li>
+                            <li>Morning departure times vary by season (typically 8:00-9:00 AM)</li>
+                            <li>Please arrive at hotel lobby 10 minutes before pickup time</li>
+                            <li>Tour duration is approximately 2-3 hours including transportation</li>
+                            <li>Small group sizes ensure personalized attention</li>
+                            <li>Free cancellation up to 24 hours before tour start</li>
                         </ul>
                     </div>
                 </div>
-            </div>
+            </section>
 
-            <!-- Important Information -->
-            <div class="tour-description">
-                <h2 style="margin-bottom: 24px;">Essential Information for Your Morning Camel Ride</h2>
-
-                <div style="background: #fff3cd; padding: 20px; border-radius: 10px; border-left: 4px solid #c1564b; margin-bottom: 20px;">
-                    <strong>📋 What to Bring:</strong>
-                    <ul style="margin-top: 10px; color: #6B7280; line-height: 1.8;">
-                        <li><strong>Comfortable clothing:</strong> Loose, comfortable pants or long skirt (easier for mounting the camel)</li>
-                        <li><strong>Light layers:</strong> Light jacket or cardigan for early morning breeze</li>
-                        <li><strong>Footwear:</strong> Closed-toe shoes or sandals with straps (no flip-flops)</li>
-                        <li><strong>Sun protection:</strong> Sunglasses, hat, and sunscreen (SPF 30+)</li>
-                        <li><strong>Camera/Phone:</strong> Fully charged for those beautiful morning photos!</li>
-                        <li><strong>Small bag:</strong> For personal items (keep it light - you'll be on a camel!)</li>
-                        <li><strong>Cash:</strong> Small amount for optional purchases or tips</li>
-                    </ul>
-                </div>
-
-                <div style="background: #d1ecf1; padding: 20px; border-radius: 10px; border-left: 4px solid #c1564b; margin-bottom: 20px;">
-                    <strong>ℹ️ Good to Know:</strong>
-                    <ul style="margin-top: 10px; color: #6B7280; line-height: 1.8;">
-                        <li><strong>Best season:</strong> Year-round activity; morning hours provide comfortable temperatures</li>
-                        <li><strong>Difficulty level:</strong> Easy - suitable for all ages and fitness levels</li>
-                        <li><strong>Riding experience:</strong> Not required! Our camels are gentle and our handlers assist everyone</li>
-                        <li><strong>Camel comfort:</strong> Camels are well-cared for, regularly checked by vets, and treated with respect</li>
-                        <li><strong>Accessibility:</strong> Requires ability to mount/dismount camel (handlers assist); not wheelchair accessible</li>
-                        <li><strong>Group size:</strong> Small groups (max 12 people) for personalized experience</li>
-                        <li><strong>Free cancellation:</strong> Cancel up to 24 hours before departure for full refund</li>
-                        <li><strong>Languages:</strong> Tours conducted in English and French</li>
-                        <li><strong>Weather:</strong> Tour runs rain or shine; we'll provide alternatives if unsafe conditions</li>
-                    </ul>
-                </div>
-
-                <div style="background: #e8f5e9; padding: 20px; border-radius: 10px; border-left: 4px solid #c1564b;">
-                    <strong>💡 Local Insider Tips:</strong>
-                    <ul style="margin-top: 10px; color: #6B7280; line-height: 1.8;">
-                        <li>Morning hours are perfect - cooler temperatures and less crowded beaches!</li>
-                        <li>Sit back when the camel stands up; lean forward when it sits down</li>
-                        <li>Hold onto the saddle handle – it's a unique swaying motion!</li>
-                        <li>Arrive on time to meet your camel and get comfortable</li>
-                        <li>Ask your guide to take photos from different angles – they know the best shots!</li>
-                        <li>The mint tea is incredibly refreshing after your ride!</li>
-                        <li>Dress modestly to respect local culture (no shorts or sleeveless tops preferred)</li>
-                        <li>Camels sometimes make funny sounds – it's normal, they're just communicating!</li>
-                    </ul>
-                </div>
-            </div>
-
-            <!-- FAQ Section -->
-            <div class="faq-section">
-                <h2 style="margin-bottom: 24px;">Frequently Asked Questions About Morning Camel Rides in Agadir</h2>
-
-                <div class="faq-item">
-                    <button class="faq-question">
-                        What time does the morning camel ride start?
-                        <span class="faq-icon">+</span>
-                    </button>
-                    <div class="faq-answer">
-                        <p>Hotel pickup is at 9:00 AM. The actual camel ride begins around 9:30 AM and the entire experience concludes at 12:00 PM, returning you to your hotel, leaving your afternoon free for other activities.</p>
+            <!-- FAQ -->
+            <!-- TEMPLATE: Replace FAQ questions and answers with your tour-specific FAQs -->
+            <section id="faq" class="section">
+                <h2 class="section-title">Frequently Asked Questions</h2>
+                <div class="faq-list">
+                    <!-- TEMPLATE: Copy this faq-item block for each FAQ. Update question and answer -->
+                    <div class="faq-item">
+                        <button class="faq-question" onclick="toggleFaq(this)">
+                            Is the morning camel ride suitable for children?
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <polyline points="6 9 12 15 18 9"/>
+                            </svg>
+                        </button>
+                        <div class="faq-answer">
+                            <div class="faq-answer-content">
+                                Yes, the morning camel ride is perfect for families! Children under 5 can ride with an adult on a shared camel. The camels are gentle and well-trained, and our experienced guides ensure everyone's safety. The morning timing is ideal for families as it's cooler and less crowded.
+                            </div>
+                        </div>
                     </div>
-                </div>
 
-                <div class="faq-item">
-                    <button class="faq-question">
-                        Is the morning camel ride suitable for children and families?
-                        <span class="faq-icon">+</span>
-                    </button>
-                    <div class="faq-answer">
-                        <p>Absolutely! Our <strong>morning camel ride in Agadir</strong> is perfect for families. Children as young as 3-4 years old can participate (riding with a parent), while older children can ride independently. Our camels are gentle and well-trained, and our experienced handlers ensure everyone's safety and comfort.</p>
+                    <div class="faq-item">
+                        <button class="faq-question" onclick="toggleFaq(this)">
+                            What should I wear for the camel ride?
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <polyline points="6 9 12 15 18 9"/>
+                            </svg>
+                        </button>
+                        <div class="faq-answer">
+                            <div class="faq-answer-content">
+                                Wear comfortable, loose-fitting clothing that allows for easy movement. Closed-toe shoes (sneakers) are recommended. Bring a hat and sunscreen as the morning sun can still be strong. A light jacket or sweater is advisable as mornings can be cool, especially near the ocean.
+                            </div>
+                        </div>
                     </div>
-                </div>
 
-                <div class="faq-item">
-                    <button class="faq-question">
-                        Do I need any riding experience for the camel ride?
-                        <span class="faq-icon">+</span>
-                    </button>
-                    <div class="faq-answer">
-                        <p>No experience necessary! Our morning camel ride is designed for first-timers. The camel handlers will assist you with mounting and dismounting, explain basic riding techniques, and walk alongside you throughout the ride. Within minutes, you'll feel comfortable!</p>
+                    <div class="faq-item">
+                        <button class="faq-question" onclick="toggleFaq(this)">
+                            How long is the actual camel ride?
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <polyline points="6 9 12 15 18 9"/>
+                            </svg>
+                        </button>
+                        <div class="faq-answer">
+                            <div class="faq-answer-content">
+                                The actual camel ride along the beach lasts approximately 45-60 minutes. The total tour duration, including hotel pickup, safety briefing, camel ride, mint tea ceremony, and return to hotel, is about 2-3 hours.
+                            </div>
+                        </div>
                     </div>
-                </div>
 
-                <div class="faq-item">
-                    <button class="faq-question">
-                        Why choose a morning camel ride over a sunset ride?
-                        <span class="faq-icon">+</span>
-                    </button>
-                    <div class="faq-answer">
-                        <p>Morning rides offer cooler temperatures, less crowded beaches, and beautiful natural lighting for photos. The morning experience also leaves your afternoon and evening free for other activities. It's perfect for families with young children, those who want to avoid afternoon heat, or travelers who want to maximize their day in Agadir!</p>
+                    <div class="faq-item">
+                        <button class="faq-question" onclick="toggleFaq(this)">
+                            Can I take photos during the ride?
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <polyline points="6 9 12 15 18 9"/>
+                            </svg>
+                        </button>
+                        <div class="faq-answer">
+                            <div class="faq-answer-content">
+                                Absolutely! We encourage you to bring your camera or smartphone. There will be several photo stops during the ride where you can capture the beautiful scenery. Our guides can also take photos of you on the camel. The morning light provides excellent conditions for photography.
+                            </div>
+                        </div>
                     </div>
-                </div>
 
-                <div class="faq-item">
-                    <button class="faq-question">
-                        Are the camels well-treated and safe?
-                        <span class="faq-icon">+</span>
-                    </button>
-                    <div class="faq-answer">
-                        <p>Absolutely! Animal welfare is our top priority. Our camels are well-cared for, healthy, regularly vet-checked, and work limited hours with plenty of rest. They're fed quality diets, have shelter, and are treated with respect. Our camels are calm, well-trained, and comfortable carrying riders.</p>
+                    <div class="faq-item">
+                        <button class="faq-question" onclick="toggleFaq(this)">
+                            What happens if it rains?
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <polyline points="6 9 12 15 18 9"/>
+                            </svg>
+                        </button>
+                        <div class="faq-answer">
+                            <div class="faq-answer-content">
+                                In case of heavy rain or severe weather conditions, the tour may be rescheduled or cancelled. You'll be notified in advance and offered an alternative date or full refund. Light drizzle usually doesn't cancel the tour, but we prioritize your safety and comfort.
+                            </div>
+                        </div>
                     </div>
-                </div>
 
-                <div class="faq-item">
-                    <button class="faq-question">
-                        What's the difference between this and the sunset camel ride?
-                        <span class="faq-icon">+</span>
-                    </button>
-                    <div class="faq-answer">
-                        <p>The morning experience is shorter (1.5-2 hours vs 4-5 hours) and doesn't include the BBQ dinner, making it more affordable at €30 per person. It's perfect for those who want the camel riding experience without the full evening program, or who prefer morning activities. Both include hotel transfers, professional guides, and mint tea ceremony.</p>
+                    <div class="faq-item">
+                        <button class="faq-question" onclick="toggleFaq(this)">
+                            Is there a weight limit for the camel ride?
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <polyline points="6 9 12 15 18 9"/>
+                            </svg>
+                        </button>
+                        <div class="faq-answer">
+                            <div class="faq-answer-content">
+                                Yes, for the safety and comfort of both riders and camels, there is a maximum weight limit of 100 kg (220 lbs) per person. If you're close to this limit, please inform us when booking so we can make appropriate arrangements.
+                            </div>
+                        </div>
                     </div>
+                    <!-- TEMPLATE: Add more FAQ items as needed -->
                 </div>
-            </div>
+            </section>
 
-            <!-- Reviews Section -->
-            <div class="faq-section" style="margin-top: 60px;">
-                <h2 style="font-size: 1.8rem; font-weight: 700; color: #1F2937; margin-bottom: 30px;">Traveler Reviews</h2>
+            <!-- REVIEWS -->
+            <!-- TEMPLATE: Replace review score, count, and individual reviews with your tour reviews -->
+            <section id="reviews" class="section">
+                <h2 class="section-title">Traveler Reviews</h2>
                 <div class="reviews-header">
                     <div class="reviews-score">
                         <div class="score-number">4.8</div>
@@ -1646,6 +3155,7 @@
                 </div>
 
                 <div class="reviews-grid">
+                    <!-- TEMPLATE: Copy this review-card block for each review. Update avatar initials, name, stars, and review text -->
                     <div class="review-card">
                         <div class="review-header">
                             <div class="reviewer-avatar">SM</div>
@@ -1655,7 +3165,7 @@
                             </div>
                         </div>
                         <p style="font-size: 14px; color: var(--gray-600); line-height: 1.7;">
-                            "What a perfect way to start the day! The morning camel ride was peaceful and the beach was beautiful. The mint tea ceremony afterwards was a lovely touch. Our guide was friendly and made sure we felt safe throughout. Highly recommend this experience!"
+                            "What a magical way to start the day! The morning camel ride was peaceful and the beach views were stunning. Our guide was wonderful and the mint tea afterwards was the perfect touch. Highly recommend this experience!"
                         </p>
                     </div>
 
@@ -1668,106 +3178,268 @@
                             </div>
                         </div>
                         <p style="font-size: 14px; color: var(--gray-600); line-height: 1.7;">
-                            "First time on a camel and it was amazing! The morning timing was perfect - not too hot and the beach was quiet. The camels were gentle and well-cared for. The whole experience was well-organized from hotel pickup to drop-off. Great value for money!"
+                            "Perfect for families! Our kids (ages 7 and 9) absolutely loved it. The camels were gentle and the morning timing was ideal - not too hot. The guides were patient and made sure everyone felt safe. Great value for money!"
                         </p>
                     </div>
 
                     <div class="review-card">
                         <div class="review-header">
-                            <div class="reviewer-avatar">EM</div>
+                            <div class="reviewer-avatar">EW</div>
                             <div class="reviewer-info">
-                                <h5>Emma Thompson</h5>
+                                <h5>Emma Wilson</h5>
                                 <div class="reviewer-stars">★★★★★</div>
                             </div>
                         </div>
                         <p style="font-size: 14px; color: var(--gray-600); line-height: 1.7;">
-                            "We did this with our two kids (ages 6 and 9) and they absolutely loved it! The handlers were patient and helped the kids feel comfortable. The mint tea in the Berber tent was a highlight. Perfect family activity that left our afternoon free for other adventures!"
+                            "An authentic Moroccan experience! The camel ride along the beach was serene and the mint tea ceremony was educational. The morning light made for beautiful photos. Excellent service from pickup to drop-off."
                         </p>
+                    </div>
+                    <!-- TEMPLATE: Add more review cards as needed -->
+                </div>
+            </section>
+
+            <!-- YOU MIGHT ALSO LIKE -->
+            <!-- TEMPLATE: Replace related tour cards with your related tours. Update image, title, subtitle, duration, price, and link -->
+            <section id="related" class="section">
+                <h2 class="section-title">You Might Also Like</h2>
+                <div class="tour-cards-grid">
+                    <!-- TEMPLATE: Copy this tour-card block for each related tour -->
+                    <a href="../tours/tour-agadir-sunset-camel-ride.html" class="tour-card">
+                        <div class="tour-card-image">
+                            <img src="../img/camel-ride-sunset.jpg" alt="Sunset camel ride in Agadir">
+                            <span class="tour-card-badge">Popular</span>
+                        </div>
+                        <div class="tour-card-content">
+                            <h3 class="tour-card-title">Sunset Camel Ride</h3>
+                            <p class="tour-card-subtitle">Evening camel ride with BBQ dinner</p>
+                            <div class="tour-card-footer">
+                                <div class="tour-card-meta">
+                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <circle cx="12" cy="12" r="10"/>
+                                        <polyline points="12 6 12 12 16 14"/>
+                                    </svg>
+                                    4-5 hours
+                                </div>
+                                <div class="tour-card-price">€45</div>
+                            </div>
+                        </div>
+                    </a>
+
+                    <a href="../tours/tour-paradise-valley-agadir.html" class="tour-card">
+                        <div class="tour-card-image">
+                            <img src="../img/paradise-valley.jpg" alt="Paradise Valley Agadir tour">
+                            <span class="tour-card-badge">Best Seller</span>
+                        </div>
+                        <div class="tour-card-content">
+                            <h3 class="tour-card-title">Paradise Valley</h3>
+                            <p class="tour-card-subtitle">Natural pools and Berber villages</p>
+                            <div class="tour-card-footer">
+                                <div class="tour-card-meta">
+                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <circle cx="12" cy="12" r="10"/>
+                                        <polyline points="12 6 12 12 16 14"/>
+                                    </svg>
+                                    4-5 hours
+                                </div>
+                                <div class="tour-card-price">€30</div>
+                            </div>
+                        </div>
+                    </a>
+
+                    <a href="../tours/tour-quad-biking-agadir.html" class="tour-card">
+                        <div class="tour-card-image">
+                            <img src="../img/quad-biking.jpg" alt="Quad biking in Agadir">
+                            <span class="tour-card-badge">Adventure</span>
+                        </div>
+                        <div class="tour-card-content">
+                            <h3 class="tour-card-title">Quad Biking Adventure</h3>
+                            <p class="tour-card-subtitle">Desert dunes and beach riding</p>
+                            <div class="tour-card-footer">
+                                <div class="tour-card-meta">
+                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <circle cx="12" cy="12" r="10"/>
+                                        <polyline points="12 6 12 12 16 14"/>
+                                    </svg>
+                                    2-3 hours
+                                </div>
+                                <div class="tour-card-price">€50</div>
+                            </div>
+                        </div>
+                    </a>
+                    <!-- TEMPLATE: Add more related tour cards as needed -->
+                </div>
+            </section>
+
+        </div>
+
+        <!-- RIGHT COLUMN: BOOKING CARD -->
+        <!-- TEMPLATE: Replace price with your tour price -->
+        <div class="booking-column">
+            <div class="booking-card">
+                <div class="booking-price">
+                    <span class="price-amount">€30</span>
+                    <span class="price-unit">per person</span>
+                </div>
+
+                <button class="booking-btn" onclick="window.location.href='../agadir-tours.html'">Book Now</button>
+                <button class="booking-btn secondary" onclick="window.open('https://wa.me/212601820422?text=Hi! I would like to book the Morning Camel Ride tour.', '_blank')">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" style="margin-right: 8px;">
+                        <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+                    </svg>
+                    Book via WhatsApp
+                </button>
+
+                <p class="booking-note">Free cancellation up to 24 hours before</p>
+
+                <div class="key-facts">
+                    <h4>Key Facts</h4>
+                    <div class="key-facts-list">
+                        <div class="key-fact-item">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <circle cx="12" cy="12" r="10"/>
+                                <polyline points="12 6 12 12 16 14"/>
+                            </svg>
+                            <span>Duration: 2-3 hours</span>
+                        </div>
+                        <div class="key-fact-item">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <polyline points="20 6 9 17 4 12"/>
+                            </svg>
+                            <span>Free hotel pickup</span>
+                        </div>
+                        <div class="key-fact-item">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/>
+                                <circle cx="9" cy="7" r="4"/>
+                            </svg>
+                            <span>Max group size: 8</span>
+                        </div>
+                        <div class="key-fact-item">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <circle cx="12" cy="12" r="10"/>
+                                <polyline points="12 6 12 12 16 14"/>
+                            </svg>
+                            <span>Morning departure (8-9 AM)</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="happy-travelers">
+                    <div class="happy-travelers-title">100% Happy travelers</div>
+                    <div style="font-size: 14px; color: var(--gray-600);">based on 289+ verified reviews</div>
+                </div>
+
+                <div class="why-travelers-love">
+                    <h4>Why travelers love this tour</h4>
+                    <p class="testimonial-text">
+                        "The morning camel ride was absolutely magical! The beach was pristine, the camels were gentle, and the mint tea ceremony was a perfect end to the experience. Our guide was knowledgeable and made us feel completely safe. Highly recommend!"
+                    </p>
+                    <button class="booking-btn" onclick="window.location.href='../agadir-tours.html'">Book This Tour - €30</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ===== FOOTER ===== -->
+    <footer class="site-footer">
+        <div class="footer-main">
+            <div class="container">
+                <div class="footer-grid">
+                    <!-- Brand Column -->
+                    <div class="footer-column">
+                        <img src="../img/logoalg.png" alt="Agadir Local Guide" class="footer-logo">
+                        <p>Discover the best of Agadir with local expert guides. Authentic experiences, unforgettable adventures.</p>
+
+                        <!-- Social Links -->
+                        <div class="social-links">
+                            <a href="#" aria-label="Facebook">
+                                <svg viewBox="0 0 24 24">
+                                    <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/>
+                                </svg>
+                            </a>
+                            <a href="#" aria-label="Instagram">
+                                <svg viewBox="0 0 24 24">
+                                    <rect x="2" y="2" width="20" height="20" rx="5" ry="5"/>
+                                    <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/>
+                                    <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/>
+                                </svg>
+                            </a>
+                            <a href="#" aria-label="Twitter">
+                                <svg viewBox="0 0 24 24">
+                                    <path d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z"/>
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Quick Links -->
+                    <div class="footer-column">
+                        <h4>Quick Links</h4>
+                        <ul>
+                            <li><a href="../index.html">Home</a></li>
+                            <li><a href="../agadir-tours.html">Tours</a></li>
+                            <li><a href="../blog.html">Blog</a></li>
+                            <li><a href="../contact.html">Contact</a></li>
+                        </ul>
+                    </div>
+
+                    <!-- Popular Tours -->
+                    <div class="footer-column">
+                        <h4>Popular Tours</h4>
+                        <ul>
+                            <li><a href="../tours/tour-paradise-valley-agadir.html">Paradise Valley</a></li>
+                            <li><a href="../tours/tour-quad-biking-agadir.html">Quad Biking</a></li>
+                            <li><a href="../tours/day-trip-marrakech-from-agadir.html">Marrakech Day Trip</a></li>
+                            <li><a href="../tours/day-trip-essaouira-from-agadir.html">Essaouira Day Trip</a></li>
+                        </ul>
+                    </div>
+
+                    <!-- Support -->
+                    <div class="footer-column">
+                        <h4>Support</h4>
+                        <ul>
+                            <li><a href="#">FAQs</a></li>
+                            <li><a href="#">Booking Terms</a></li>
+                            <li><a href="#">Privacy Policy</a></li>
+                            <li><a href="#">Cancellation Policy</a></li>
+                        </ul>
+                    </div>
+
+                    <!-- Newsletter -->
+                    <div class="footer-column">
+                        <h4>Newsletter</h4>
+                        <div class="footer__newsletter">
+                            <p class="footer__newsletter-text">Subscribe for exclusive deals and updates</p>
+                            <form class="footer__newsletter-form">
+                                <input type="email" placeholder="Your email" class="footer__newsletter-input" required>
+                                <button type="submit" class="footer__newsletter-button">Subscribe</button>
+                            </form>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
 
-        <!-- Booking Sidebar -->
-        <aside class="booking-sidebar">
-            <div class="booking-card">
-                <div class="price-section">
-                    <div class="price-label">From</div>
-                    <div class="price">€30<span class="price-unit"> / person</span></div>
-                    <p style="font-size: 13px; color: var(--gray-600); margin-top: 8px; font-weight: 600;">💰 Best price guaranteed</p>
-                </div>
-
-                <!-- Booking Buttons -->
-                <div class="booking-buttons">
-                    <a href="../contact.html" class="primary-book-btn">
-                        Reserve Your Spot
-                    </a>
-                    <a href="https://wa.me/212645792457?text=Hi! I'm interested in the Morning Camel Ride in Agadir" target="_blank" class="whatsapp-book-btn">
-                        Quick Book via WhatsApp
-                    </a>
-                </div>
-
-                <div class="free-cancellation">
-                    ✅ Free cancellation up to 24 hours before
-                </div>
-
-                <!-- Trust Signals -->
-                <div class="trust-signals">
-                    <div class="trust-item">Instant confirmation</div>
-                    <div class="trust-item">Reserve now, pay later</div>
-                    <div class="trust-item">Small groups (max 12)</div>
-                    <div class="trust-item">Licensed local guides</div>
-                </div>
-
-                <!-- Social Proof -->
-                <div class="social-proof">
-                    👥 289 travelers booked this tour this month
+        <!-- Footer Bottom -->
+        <div class="footer__bottom">
+            <div class="footer__bottom-left">
+                <p class="footer__copyright">© 2024 Agadir Local Guide. All rights reserved.</p>
+                <div class="footer__legal-links">
+                    <a href="#" class="footer__legal-link">Privacy Policy</a>
+                    <span class="footer__separator">•</span>
+                    <a href="#" class="footer__legal-link">Terms of Service</a>
+                    <span class="footer__separator">•</span>
+                    <a href="#" class="footer__legal-link">Cookie Policy</a>
                 </div>
             </div>
-        </aside>
-    </section>
-
-    <!-- FOOTER -->
-    <footer class="site-footer" style="background: linear-gradient(to bottom, #F9FAFB 0%, white 100%); padding: 60px 40px 30px; border-top: 1px solid #E5E7EB;">
-        <div style="max-width: 1360px; margin: 0 auto; display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 40px;">
-            <div>
-                <img src="../img/logoalg.png" alt="Agadir Local Guide" style="height: 45px; margin-bottom: 16px;">
-                <p style="font-size: 14px; color: var(--gray-600);">Your trusted local guide to authentic Moroccan adventures since 2015.</p>
+            <div class="footer__bottom-right">
+                <p class="footer__tagline">Your Adventure Starts Here</p>
             </div>
-            <div>
-                <h4 style="font-size: 16px; font-weight: 700; margin-bottom: 16px;">Popular Tours</h4>
-                <ul style="list-style: none; padding: 0;">
-                    <li><a href="tour-paradise-valley-agadir.html" style="color: var(--gray-600); text-decoration: none; font-size: 14px;">Paradise Valley</a></li>
-                    <li><a href="tour-quad-biking-agadir.html" style="color: var(--gray-600); text-decoration: none; font-size: 14px;">Quad Biking</a></li>
-                    <li><a href="tour-camel-ride-agadir.html" style="color: var(--gray-600); text-decoration: none; font-size: 14px;">Sunset Camel Ride</a></li>
-                    <li><a href="../agadir-tours.html" style="color: var(--gray-600); text-decoration: none; font-size: 14px;">All Tours →</a></li>
-                </ul>
-            </div>
-            <div>
-                <h4 style="font-size: 16px; font-weight: 700; margin-bottom: 16px;">Company</h4>
-                <ul style="list-style: none; padding: 0;">
-                    <li><a href="../index.html" style="color: var(--gray-600); text-decoration: none; font-size: 14px;">Home</a></li>
-                    <li><a href="../blog.html" style="color: var(--gray-600); text-decoration: none; font-size: 14px;">Travel Guide</a></li>
-                    <li><a href="../contact.html" style="color: var(--gray-600); text-decoration: none; font-size: 14px;">Contact Us</a></li>
-                </ul>
-            </div>
-            <div>
-                <h4 style="font-size: 16px; font-weight: 700; margin-bottom: 16px;">Contact</h4>
-                <p style="font-size: 14px; color: var(--gray-600);"><strong>Call Us:</strong><br>+212 601-820422</p>
-                <p style="font-size: 14px; color: var(--gray-600); margin-top: 12px;"><strong>Email:</strong><br>info@agadirlocalguide.com</p>
-            </div>
-        </div>
-        <div style="text-align: center; margin-top: 40px; padding-top: 30px; border-top: 1px solid #E5E7EB;">
-            <p style="font-size: 14px; color: var(--gray-500);">© 2025 Agadir Local Guide. All rights reserved.</p>
         </div>
     </footer>
 
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.js"></script>
-    <script src="../js/main.js"></script>
-
     <script>
-        // Header scroll effect
+        // Header Scroll (if needed)
         window.addEventListener('scroll', function() {
             const header = document.querySelector('.site-header');
             if (window.scrollY > 50) {
@@ -1804,12 +3476,13 @@
             document.body.style.overflow = '';
         });
 
-        // Hero Slider JavaScript
-        const slides = document.querySelectorAll('.hero-slider .slide');
-        const thumbnails = document.querySelectorAll('.hero-slider .thumbnail');
+        // Slider
         let currentSlide = 0;
+        const slides = document.querySelectorAll('.slide');
+        const thumbnails = document.querySelectorAll('.thumbnail');
+        let isUserInteraction = false;
 
-        function showSlide(n) {
+        function showSlide(n, scrollThumbnail = false) {
             slides.forEach(slide => slide.classList.remove('active'));
             thumbnails.forEach(thumbnail => thumbnail.classList.remove('active'));
 
@@ -1818,39 +3491,124 @@
 
             slides[currentSlide].classList.add('active');
             thumbnails[currentSlide].classList.add('active');
+
+            // Only scroll thumbnail into view if explicitly requested (user interaction)
+            if (scrollThumbnail && thumbnails[currentSlide]) {
+                thumbnails[currentSlide].scrollIntoView({
+                    behavior: 'smooth',
+                    block: 'nearest',
+                    inline: 'center'
+                });
+            }
         }
 
-        function changeSlide(direction) {
-            currentSlide += direction;
-            showSlide(currentSlide);
+        function changeSlide(n) {
+            isUserInteraction = true;
+            currentSlide += n;
+            showSlide(currentSlide, true);
+            // Reset flag after a short delay
+            setTimeout(() => { isUserInteraction = false; }, 1000);
         }
 
         function goToSlide(n) {
+            isUserInteraction = true;
             currentSlide = n;
-            showSlide(currentSlide);
+            showSlide(currentSlide, true);
+            // Reset flag after a short delay
+            setTimeout(() => { isUserInteraction = false; }, 1000);
         }
 
-        // Auto advance slides
+        // Auto-advance slider (without scrolling)
         setInterval(() => {
-            currentSlide++;
-            showSlide(currentSlide);
+            // Only auto-advance if user hasn't recently interacted
+            if (!isUserInteraction) {
+                currentSlide++;
+                showSlide(currentSlide, false); // Don't scroll during auto-advance
+            }
         }, 5000);
 
-        // FAQ Accordion
-        document.querySelectorAll('.faq-question').forEach(question => {
-            question.addEventListener('click', function() {
-                const faqItem = this.parentElement;
-                const wasActive = faqItem.classList.contains('active');
+        // Sticky Tabs
+        const tabs = document.querySelectorAll('.tab-link');
+        const sections = document.querySelectorAll('.section');
 
-                document.querySelectorAll('.faq-item').forEach(item => {
-                    item.classList.remove('active');
-                });
+        window.addEventListener('scroll', () => {
+            let current = '';
+            sections.forEach(section => {
+                const sectionTop = section.offsetTop - 180;
+                if (window.pageYOffset >= sectionTop) {
+                    current = section.getAttribute('id');
+                }
+            });
 
-                if (!wasActive) {
-                    faqItem.classList.add('active');
+            tabs.forEach(tab => {
+                tab.classList.remove('active');
+                if (tab.getAttribute('href') === '#' + current) {
+                    tab.classList.add('active');
                 }
             });
         });
+
+        tabs.forEach(tab => {
+            tab.addEventListener('click', (e) => {
+                e.preventDefault();
+                const targetId = tab.getAttribute('href').substring(1);
+                const targetSection = document.getElementById(targetId);
+                const offset = 160;
+                const elementPosition = targetSection.getBoundingClientRect().top;
+                const offsetPosition = elementPosition + window.pageYOffset - offset;
+
+                window.scrollTo({
+                    top: offsetPosition,
+                    behavior: 'smooth'
+                });
+            });
+        });
+
+        // FAQ Toggle
+        function toggleFaq(button) {
+            const faqItem = button.parentElement;
+            const wasActive = faqItem.classList.contains('active');
+
+            document.querySelectorAll('.faq-item').forEach(item => {
+                item.classList.remove('active');
+            });
+
+            if (!wasActive) {
+                faqItem.classList.add('active');
+            }
+        }
+
+        // Toggle Itinerary
+        function toggleItinerary(button) {
+            const itineraryItem = button.parentElement;
+            const wasActive = itineraryItem.classList.contains('active');
+
+            // Optional: Close other items when opening a new one
+            // Uncomment the lines below if you want only one item open at a time
+            // document.querySelectorAll('.itinerary-item').forEach(item => {
+            //     item.classList.remove('active');
+            // });
+
+            if (wasActive) {
+                itineraryItem.classList.remove('active');
+            } else {
+                itineraryItem.classList.add('active');
+            }
+        }
+
+        // Scroll to Booking
+        function scrollToBooking() {
+            const bookingCard = document.querySelector('.booking-card');
+            const offset = 100;
+            const elementPosition = bookingCard.getBoundingClientRect().top;
+            const offsetPosition = elementPosition + window.pageYOffset - offset;
+
+            window.scrollTo({
+                top: offsetPosition,
+                behavior: 'smooth'
+            });
+        }
     </script>
+
 </body>
 </html>

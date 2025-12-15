@@ -1,46 +1,147 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <!-- Google tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-35EZE671S0"></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-      gtag('config', 'G-35EZE671S0');
-    </script>
+    <!-- 
+    ============================================
+    BLOG POST TEMPLATE - CUSTOMIZATION GUIDE
+    ============================================
+    
+    To create a new blog post, search and replace the following placeholders:
+    
+    1. SEO & META TAGS (lines ~8-11):
+       - [BLOG_TITLE]: Main article title
+       - [BLOG_DESCRIPTION]: Meta description (150-160 characters recommended)
+       - [BLOG_KEYWORDS]: SEO keywords (comma-separated)
+       - [BLOG_URL]: Full canonical URL (e.g., "https://yourdomain.com/blog/article-slug.html")
+       - [BLOG_SLUG]: URL slug (e.g., "top-things-to-do-agadir-2026")
+       - [BLOG_IMAGE]: OG/Twitter image URL (1200x630px recommended)
+       - [BLOG_DATE_PUBLISHED]: Publication date in ISO format (e.g., "2026-01-15T08:00:00+00:00")
+       - [BLOG_DATE_MODIFIED]: Last modified date in ISO format
+    
+    2. STRUCTURED DATA (JSON-LD) (lines ~42-69):
+       - [BLOG_TITLE]: Headline (same as meta title)
+       - [BLOG_DESCRIPTION]: Description (same as meta description)
+       - [BLOG_IMAGE]: Image URL
+       - [AUTHOR_NAME]: Author full name
+       - [AUTHOR_URL]: Author profile page URL
+       - [BLOG_DATE_PUBLISHED]: Publication date (ISO format)
+       - [BLOG_DATE_MODIFIED]: Modified date (ISO format)
+       - [BLOG_URL]: Canonical URL
+    
+    3. BREADCRUMBS (lines ~182-209):
+       - [BREADCRUMB_CATEGORY]: Category name (e.g., "Travel Tips")
+       - [BREADCRUMB_CATEGORY_SLUG]: Category URL slug (e.g., "travel-tips")
+       - [BREADCRUMB_TITLE]: Final breadcrumb text (article title)
+    
+    4. ARTICLE HEADER (lines ~220-273):
+       - [BLOG_CATEGORY]: Category pill text (e.g., "Travel Tips", "Beach Guide")
+       - [BLOG_TITLE]: Article title (h1)
+       - [BLOG_EXCERPT]: Article excerpt/lead paragraph (2-3 sentences)
+       - [AUTHOR_NAME]: Author name
+       - [AUTHOR_AVATAR]: Author avatar image path (e.g., "/img/author-avatar.jpg")
+       - [BLOG_DATE]: Display date (e.g., "Jan 15, 2026")
+       - [BLOG_DATE_ISO]: Date in ISO format for datetime attribute (e.g., "2026-01-15")
+       - [READING_TIME]: Estimated reading time (e.g., "8 min read")
+       - [LAST_UPDATED]: Last updated text (e.g., "Updated: Jan 15, 2026")
+       - [FEATURED_IMAGE]: Hero image path
+       - [FEATURED_IMAGE_ALT]: Hero image alt text
+    
+    5. ARTICLE CONTENT (lines ~391-533):
+       - [LEAD_PARAGRAPH]: Opening paragraph (first paragraph after excerpt)
+       - [ARTICLE_CONTENT]: Replace this placeholder with your full article HTML content (headings, paragraphs, lists, images, callouts, etc.)
+         * See example structure in comments below [ARTICLE_CONTENT] placeholder
+         * Use [CONTENT_IMAGE_X], [INTERNAL_LINK_X], and [CALLOUT_X_*] placeholders within your content
+       - [CONTENT_IMAGE_1]: First article image path
+       - [CONTENT_IMAGE_1_ALT]: First image alt text
+       - [CONTENT_IMAGE_1_CAPTION]: First image caption
+       - [CONTENT_IMAGE_2]: Second article image path (repeat as needed with incrementing numbers)
+       - [CONTENT_IMAGE_2_ALT]: Second image alt text
+       - [CONTENT_IMAGE_2_CAPTION]: Second image caption
+       - [INTERNAL_LINK_1]: Link to tour/page (e.g., "/tours/tour-paradise-valley-agadir.html")
+       - [INTERNAL_LINK_1_TEXT]: Link text (display text for the link)
+       - [CALLOUT_1_ICON]: Callout icon (emoji or text, e.g., "💡", "📸", "🍽️")
+       - [CALLOUT_1_TITLE]: Callout title (e.g., "Local Tip", "Photography Tip")
+       - [CALLOUT_1_CONTENT]: Callout content/description
+    
+    6. AUTHOR BOX (lines ~537-551):
+       - [AUTHOR_NAME]: Author name
+       - [AUTHOR_AVATAR]: Author avatar image path
+       - [AUTHOR_BIO]: Author biography (2-3 sentences)
+       - [AUTHOR_WHATSAPP]: WhatsApp contact link (e.g., "https://wa.me/212123456789")
+    
+    7. RELATED POSTS (lines ~554-596):
+       - [RELATED_POST_1_TITLE]: First related post title
+       - [RELATED_POST_1_URL]: First related post URL
+       - [RELATED_POST_1_IMAGE]: First related post image
+       - [RELATED_POST_1_CATEGORY]: First related post category
+       - [RELATED_POST_1_DATE]: First related post date (e.g., "Jan 10, 2026")
+       - [RELATED_POST_1_DATE_ISO]: First related post date ISO (e.g., "2026-01-10")
+       - Repeat for [RELATED_POST_2_*] and [RELATED_POST_3_*]
+    
+    8. SIDEBAR - POPULAR TOURS (lines ~627-674):
+       - [POPULAR_TOUR_1_NAME]: First tour name
+       - [POPULAR_TOUR_1_URL]: First tour URL
+       - [POPULAR_TOUR_1_IMAGE]: First tour thumbnail
+       - [POPULAR_TOUR_1_IMAGE_ALT]: First tour image alt text
+       - [POPULAR_TOUR_1_PRICE]: First tour price (e.g., "From €25")
+       - [POPULAR_TOUR_1_RATING]: First tour rating (e.g., "★★★★★")
+       - [POPULAR_TOUR_1_REVIEWS]: First tour review count (e.g., "(142)")
+       - Repeat for [POPULAR_TOUR_2_*] and [POPULAR_TOUR_3_*]
+    
+    9. SIDEBAR - RELATED ARTICLES (lines ~677-706):
+       - [SIDEBAR_ARTICLE_1_TITLE]: First sidebar article title
+       - [SIDEBAR_ARTICLE_1_URL]: First sidebar article URL
+       - [SIDEBAR_ARTICLE_1_IMAGE]: First sidebar article image
+       - [SIDEBAR_ARTICLE_1_IMAGE_ALT]: First sidebar article image alt
+       - [SIDEBAR_ARTICLE_1_DATE]: First sidebar article date (e.g., "Jan 12, 2026")
+       - [SIDEBAR_ARTICLE_1_DATE_ISO]: First sidebar article date ISO (e.g., "2026-01-12")
+       - Repeat for [SIDEBAR_ARTICLE_2_*] and [SIDEBAR_ARTICLE_3_*]
+    
+    10. SOCIAL SHARING LINKS:
+        - Replace "YOUR_URL" with [BLOG_URL] in social share buttons
+        - Replace "YOUR_TITLE" with [BLOG_TITLE] in social share buttons
+    
+    ============================================
+    NOTES:
+    - Keep all HTML structure and CSS classes intact
+    - Table of Contents is auto-generated by JavaScript
+    - Header and Footer are site-wide components (do not modify)
+    - All placeholders use [UPPERCASE_WITH_UNDERSCORES] format
+    - For multiple items, use numbered placeholders (e.g., [RELATED_POST_1_TITLE])
+    ============================================
+    -->
     
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <!-- SEO Meta Tags -->
-    <title>Top 10 Things to Do in Agadir 2026 - Ultimate Local Guide | Agadir Local Guide</title>
-    <meta name="description" content="Discover the best things to do in Agadir Morocco in 2026! From Paradise Valley to sunset camel rides, quad biking adventures to traditional hammams. Expert local guide tips & insider recommendations.">
-    <meta name="keywords" content="things to do in agadir, agadir activities, best things agadir, agadir tours, agadir attractions, paradise valley agadir, quad biking agadir, camel ride agadir, agadir morocco 2026, what to do in agadir">
+    <title>[BLOG_TITLE] | Agadir Local Guide</title>
+    <meta name="description" content="[BLOG_DESCRIPTION]">
+    <meta name="keywords" content="[BLOG_KEYWORDS]">
     <meta name="author" content="Agadir Local Guide">
 
     <!-- Open Graph Meta Tags -->
     <meta property="og:type" content="article">
-    <meta property="og:title" content="Top 10 Things to Do in Agadir 2026 - Ultimate Local Guide">
-    <meta property="og:description" content="Discover the best things to do in Agadir Morocco! From Paradise Valley to sunset camel rides, quad biking adventures to traditional hammams. Expert local guide tips.">
-    <meta property="og:image" content="https://agadirlocalguide.com/img/morocco-collage.jpg">
-    <meta property="og:url" content="https://agadirlocalguide.com/blog/top-10-things-to-do-agadir-2026.html">
+    <meta property="og:title" content="[BLOG_TITLE]">
+    <meta property="og:description" content="[BLOG_DESCRIPTION]">
+    <meta property="og:image" content="[BLOG_IMAGE]">
+    <meta property="og:url" content="[BLOG_URL]">
     <meta property="og:site_name" content="Agadir Local Guide">
 
     <!-- Twitter Card Meta Tags -->
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Top 10 Things to Do in Agadir 2026 - Ultimate Local Guide">
-    <meta name="twitter:description" content="Discover the best things to do in Agadir Morocco! From Paradise Valley to sunset camel rides, quad biking adventures to traditional hammams. Expert local guide tips.">
-    <meta name="twitter:image" content="https://agadirlocalguide.com/img/morocco-collage.jpg">
+    <meta name="twitter:title" content="[BLOG_TITLE]">
+    <meta name="twitter:description" content="[BLOG_DESCRIPTION]">
+    <meta name="twitter:image" content="[BLOG_IMAGE]">
 
     <!-- Canonical URL -->
-    <link rel="canonical" href="https://agadirlocalguide.com/blog/top-10-things-to-do-agadir-2026.html">
+    <link rel="canonical" href="[BLOG_URL]">
 
     <!-- Favicon -->
-    <link rel="icon" type="image/x-icon" href="../img/logoalg.png">
+    <link rel="icon" type="image/x-icon" href="/favicon.ico">
 
     <!-- Stylesheet -->
-    <link rel="stylesheet" href="../blog.css">
+    <link rel="stylesheet" href="blog.css">
 
     <!-- Google Fonts: Inter + Poppins -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -52,27 +153,27 @@
     {
         "@context": "https://schema.org",
         "@type": "BlogPosting",
-        "headline": "Top 10 Things to Do in Agadir 2026 - Ultimate Local Guide",
-        "description": "Discover the best things to do in Agadir Morocco in 2026! From Paradise Valley to sunset camel rides, quad biking adventures to traditional hammams. Expert local guide tips & insider recommendations.",
-        "image": "https://agadirlocalguide.com/img/morocco-collage.jpg",
-        "datePublished": "2025-12-15T08:00:00+00:00",
-        "dateModified": "2025-12-15T08:00:00+00:00",
+        "headline": "[BLOG_TITLE]",
+        "description": "[BLOG_DESCRIPTION]",
+        "image": "[BLOG_IMAGE]",
+        "datePublished": "[BLOG_DATE_PUBLISHED]",
+        "dateModified": "[BLOG_DATE_MODIFIED]",
         "author": {
             "@type": "Person",
-            "name": "Ahmed",
-            "url": "https://agadirlocalguide.com/contact.html"
+            "name": "[AUTHOR_NAME]",
+            "url": "[AUTHOR_URL]"
         },
         "publisher": {
             "@type": "Organization",
             "name": "Agadir Local Guide",
             "logo": {
                 "@type": "ImageObject",
-                "url": "https://agadirlocalguide.com/img/logoalg.png"
+                "url": "https://yourdomain.com/img/logo.png"
             }
         },
         "mainEntityOfPage": {
             "@type": "WebPage",
-            "@id": "https://agadirlocalguide.com/blog/top-10-things-to-do-agadir-2026.html"
+            "@id": "[BLOG_URL]"
         }
     }
     </script>
@@ -84,29 +185,29 @@
         <!-- Main Navigation -->
         <nav class="main-nav">
             <div class="container">
-                <a href="../index.html" class="logo">
-                    <img src="../img/logoalg.png" alt="Agadir Local Guide">
+                <a href="index.html" class="logo">
+                    <img src="img/logoalg.png" alt="Agadir Local Guide">
                 </a>
 
                 <ul class="nav-menu">
-                    <li><a href="../index.html">Home</a></li>
+                    <li><a href="index.html">Home</a></li>
                     <li class="has-dropdown">
-                        <a href="../agadir-tours.html">
+                        <a href="agadir-tours.html">
                             Tours
                             <svg class="dropdown-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
                                 <path fill-rule="evenodd" d="M12.53 16.28a.75.75 0 01-1.06 0l-7.5-7.5a.75.75 0 011.06-1.06L12 14.69l6.97-6.97a.75.75 0 111.06 1.06l-7.5 7.5z" clip-rule="evenodd" />
                             </svg>
                         </a>
                         <ul class="dropdown-menu">
-                            <li><a href="../agadir-tours.html">All Tours</a></li>
-                            <li><a href="../tours/tour-paradise-valley-agadir-new.html">Paradise Valley</a></li>
-                            <li><a href="../tours/tour-agadir-half-quad-biking-adventure.html">Quad Biking</a></li>
-                            <li><a href="../tours/tour-agadir-sunset-camel-ride.html">Sunset Camel Ride</a></li>
-                            <li><a href="things-to-do-in-agadir-adventure.html">Adventure Activities</a></li>
+                            <li><a href="agadir-tours.html">All Tours</a></li>
+                            <li><a href="tours/tour-paradise-valley-agadir.html">Paradise Valley</a></li>
+                            <li><a href="tours/tour-agadir-half-quad-biking-adventure.html">Quad Biking</a></li>
+                            <li><a href="tours/tour-agadir-sunset-camel-ride.html">Sunset Camel Ride</a></li>
+                            <li><a href="blog/things-to-do-in-agadir-adventure.html">Adventure Activities</a></li>
                         </ul>
                     </li>
-                    <li><a href="../blog.html" class="active">Travel Guide</a></li>
-                    <li><a href="../contact.html">Contact</a></li>
+                    <li><a href="blog.html" class="active">Travel Guide</a></li>
+                    <li><a href="contact.html">Contact</a></li>
                 </ul>
 
                 <div class="nav-actions">
@@ -116,7 +217,7 @@
                         </svg>
                         Call Us
                     </a>
-                    <a href="../agadir-tours.html" class="btn-primary-nav">
+                    <a href="agadir-tours.html" class="btn-primary-nav">
                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                             <path stroke-linecap="round" stroke-linejoin="round" d="M6.75 3v2.25M17.25 3v2.25M3 18.75V7.5a2.25 2.25 0 012.25-2.25h13.5A2.25 2.25 0 0121 7.5v11.25m-18 0A2.25 2.25 0 005.25 21h13.5A2.25 2.25 0 0021 18.75m-18 0v-7.5A2.25 2.25 0 015.25 9h13.5A2.25 2.25 0 0121 11.25v7.5" />
                         </svg>
@@ -142,25 +243,25 @@
         <!-- Navigation -->
         <div class="menu-content">
             <nav class="menu-nav">
-                <a href="../index.html">
+                <a href="index.html">
                     Home
                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none">
                         <path stroke-linecap="round" stroke-linejoin="round" d="M8.25 4.5l7.5 7.5-7.5 7.5" />
                     </svg>
                 </a>
-                <a href="../agadir-tours.html">
+                <a href="agadir-tours.html">
                     Tours & Activities
                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none">
                         <path stroke-linecap="round" stroke-linejoin="round" d="M8.25 4.5l7.5 7.5-7.5 7.5" />
                     </svg>
                 </a>
-                <a href="../blog.html">
+                <a href="blog.html">
                     Travel Guide
                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none">
                         <path stroke-linecap="round" stroke-linejoin="round" d="M8.25 4.5l7.5 7.5-7.5 7.5" />
                     </svg>
                 </a>
-                <a href="../contact.html">
+                <a href="contact.html">
                     Contact Us
                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none">
                         <path stroke-linecap="round" stroke-linejoin="round" d="M8.25 4.5l7.5 7.5-7.5 7.5" />
@@ -171,7 +272,7 @@
 
         <!-- Quick Actions -->
         <div class="mobile-menu-actions">
-            <a href="../agadir-tours.html" class="mobile-cta mobile-cta-primary">
+            <a href="agadir-tours.html" class="mobile-cta mobile-cta-primary">
                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                     <path stroke-linecap="round" stroke-linejoin="round" d="M6.75 3v2.25M17.25 3v2.25M3 18.75V7.5a2.25 2.25 0 012.25-2.25h13.5A2.25 2.25 0 0121 7.5v11.25m-18 0A2.25 2.25 0 005.25 21h13.5A2.25 2.25 0 0021 18.75m-18 0v-7.5A2.25 2.25 0 015.25 9h13.5A2.25 2.25 0 0121 11.25v7.5" />
                 </svg>
@@ -192,25 +293,25 @@
         <div class="container">
             <ol itemscope itemtype="https://schema.org/BreadcrumbList">
                 <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
-                    <a itemprop="item" href="../index.html">
+                    <a itemprop="item" href="/">
                         <span itemprop="name">Home</span>
                     </a>
                     <meta itemprop="position" content="1" />
                 </li>
                 <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
-                    <a itemprop="item" href="../blog.html">
+                    <a itemprop="item" href="/blog">
                         <span itemprop="name">Blog</span>
                     </a>
                     <meta itemprop="position" content="2" />
                 </li>
                 <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
-                    <a itemprop="item" href="things-to-do-in-agadir.html">
-                        <span itemprop="name">Travel Tips</span>
+                    <a itemprop="item" href="/blog/category/[BREADCRUMB_CATEGORY_SLUG]">
+                        <span itemprop="name">[BREADCRUMB_CATEGORY]</span>
                     </a>
                     <meta itemprop="position" content="3" />
                 </li>
                 <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
-                    <span itemprop="name">Top 10 Things to Do in Agadir 2026</span>
+                    <span itemprop="name">[BREADCRUMB_TITLE]</span>
                     <meta itemprop="position" content="4" />
                 </li>
             </ol>
@@ -227,25 +328,25 @@
 
                     <!-- Hero Section -->
                     <header class="article-hero">
-                        <div class="category-pill">Travel Tips</div>
+                        <div class="category-pill">[BLOG_CATEGORY]</div>
 
-                        <h1 class="article-title">Top 10 Things to Do in Agadir 2026 - Ultimate Local Guide</h1>
+                        <h1 class="article-title">[BLOG_TITLE]</h1>
 
                         <p class="article-excerpt">
-                            Planning a trip to Agadir, Morocco? From stunning natural landscapes at Paradise Valley to adrenaline-pumping quad biking adventures, romantic sunset camel rides to relaxing hammam experiences - discover the absolute best activities that make Agadir one of Morocco's most exciting destinations.
+                            [BLOG_EXCERPT]
                         </p>
 
                         <div class="article-meta">
                             <div class="meta-left">
-                                <img src="../img/logoalg.png" alt="Ahmed - Local Guide" class="author-avatar">
+                                <img src="[AUTHOR_AVATAR]" alt="[AUTHOR_NAME]" class="author-avatar">
                                 <div class="meta-info">
-                                    <span class="author-name">Ahmed, Local Guide</span>
+                                    <span class="author-name">[AUTHOR_NAME]</span>
                                     <div class="meta-details">
-                                        <time datetime="2025-12-15">Dec 15, 2025</time>
+                                        <time datetime="[BLOG_DATE_ISO]">[BLOG_DATE]</time>
                                         <span class="meta-separator">•</span>
-                                        <span class="reading-time">12 min read</span>
+                                        <span class="reading-time">[READING_TIME]</span>
                                         <span class="meta-separator">•</span>
-                                        <span class="last-updated">Updated: Dec 15, 2025</span>
+                                        <span class="last-updated">[LAST_UPDATED]</span>
                                     </div>
                                 </div>
                             </div>
@@ -258,17 +359,17 @@
                                         <path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/>
                                     </svg>
                                 </button>
-                                <a href="https://www.facebook.com/sharer/sharer.php?u=https://agadirlocalguide.com/blog/top-10-things-to-do-agadir-2026.html" target="_blank" rel="noopener noreferrer" class="share-btn facebook" aria-label="Share on Facebook" title="Share on Facebook">
+                                <a href="https://www.facebook.com/sharer/sharer.php?u=[BLOG_URL]" target="_blank" rel="noopener noreferrer" class="share-btn facebook" aria-label="Share on Facebook" title="Share on Facebook">
                                     <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
                                         <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
                                     </svg>
                                 </a>
-                                <a href="https://twitter.com/intent/tweet?url=https://agadirlocalguide.com/blog/top-10-things-to-do-agadir-2026.html&text=Top%2010%20Things%20to%20Do%20in%20Agadir%202026" target="_blank" rel="noopener noreferrer" class="share-btn twitter" aria-label="Share on X (Twitter)" title="Share on X">
+                                <a href="https://twitter.com/intent/tweet?url=[BLOG_URL]&text=[BLOG_TITLE]" target="_blank" rel="noopener noreferrer" class="share-btn twitter" aria-label="Share on X (Twitter)" title="Share on X">
                                     <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
                                         <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/>
                                     </svg>
                                 </a>
-                                <a href="https://wa.me/?text=Top%2010%20Things%20to%20Do%20in%20Agadir%202026%20https://agadirlocalguide.com/blog/top-10-things-to-do-agadir-2026.html" target="_blank" rel="noopener noreferrer" class="share-btn whatsapp" aria-label="Share on WhatsApp" title="Share on WhatsApp">
+                                <a href="https://wa.me/?text=[BLOG_TITLE]%20[BLOG_URL]" target="_blank" rel="noopener noreferrer" class="share-btn whatsapp" aria-label="Share on WhatsApp" title="Share on WhatsApp">
                                     <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
                                         <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/>
                                     </svg>
@@ -277,7 +378,7 @@
                         </div>
 
                         <figure class="featured-image">
-                            <img src="../img/406247003.jpg" alt="Beautiful collage of Agadir Morocco attractions including beach, desert, and cultural experiences" width="1200" height="675" loading="eager">
+                            <img src="[FEATURED_IMAGE]" alt="[FEATURED_IMAGE_ALT]" width="1200" height="675" loading="eager">
                         </figure>
                     </header>
 
@@ -293,44 +394,42 @@
                     <div class="article-content prose">
 
                         <p class="lead">
-                            Agadir, Morocco's premier beach resort city, offers an incredible mix of natural beauty, thrilling adventures, rich culture, and relaxing experiences. As a local guide who has spent years showing visitors the best of this stunning coastal region, I've compiled the ultimate list of must-do activities that will make your Agadir vacation truly unforgettable. Whether you're an adventure seeker, culture enthusiast, or simply looking to relax, there's something magical waiting for you here.
+                            [LEAD_PARAGRAPH]
                         </p>
 
-                        <h2 id="paradise-valley">1. Explore the Stunning Paradise Valley</h2>
+                        [ARTICLE_CONTENT]
+
+                        <!-- Example content structure (replace with your actual content):
+
+                        <h2 id="section-1">Your First Section Heading</h2>
 
                         <p>
-                            Hidden in the foothills of the Anti-Atlas Mountains, approximately 30 kilometers from Agadir, lies one of Morocco's most breathtaking natural wonders - <strong>Paradise Valley</strong>. This series of palm-lined gorges, crystal-clear natural swimming pools, and dramatic rock formations is often described as Morocco's own Garden of Eden.
+                            Your paragraph content here. You can include <a href="[INTERNAL_LINK_1]">internal links</a> to tours or other pages.
                         </p>
-
-                        <p>
-                            The journey to Paradise Valley is an adventure in itself, taking you through traditional Berber villages, argan tree forests (where you might spot goats climbing the trees!), and stunning mountain landscapes. Once you arrive, you'll discover turquoise pools perfect for swimming, surrounded by towering cliffs and lush vegetation.
-                        </p>
-
-                        <figure class="article-image">
-                            <img src="../img/paradise-valley.jpg" alt="Crystal clear natural pools at Paradise Valley near Agadir Morocco" width="800" height="533" loading="lazy">
-                            <figcaption>The stunning natural pools of Paradise Valley - a must-visit destination from Agadir</figcaption>
-                        </figure>
 
                         <div class="info-callout">
-                            <div class="callout-icon">💡</div>
+                            <div class="callout-icon">[CALLOUT_1_ICON]</div>
                             <div class="callout-content">
-                                <h3>Local Tip</h3>
-                                <p>Visit Paradise Valley early in the morning (before 10 AM) to avoid crowds and enjoy the pools in peaceful solitude. Bring water shoes for the rocky terrain and don't forget your swimsuit!</p>
+                                <h3>[CALLOUT_1_TITLE]</h3>
+                                <p>[CALLOUT_1_CONTENT]</p>
                             </div>
                         </div>
 
+                        <figure class="article-image">
+                            <img src="[CONTENT_IMAGE_1]" alt="[CONTENT_IMAGE_1_ALT]" width="800" height="533" loading="lazy">
+                            <figcaption>[CONTENT_IMAGE_1_CAPTION]</figcaption>
+                        </figure>
+                        
+                        -->
+
+                        <h2 id="agadir-beach">2. Relax on Agadir Beach</h2>
+
                         <p>
-                            Ready to experience this natural wonder? <a href="../tours/tour-paradise-valley-agadir-new.html" class="internal-link">Book our Paradise Valley tour</a> for a hassle-free adventure with local guides who know the best swimming spots and hidden viewpoints. Learn more in our detailed <a href="paradise-valley-agadir-guide.html" class="internal-link">Paradise Valley complete guide</a>.
+                            Agadir's crown jewel is its 10-kilometer stretch of golden sand beach. With over 300 days of sunshine annually, the beach offers perfect conditions for sunbathing, swimming, and water sports throughout most of the year.
                         </p>
 
-                        <h2 id="agadir-beach">2. Relax on Agadir's Golden Beach</h2>
-
                         <p>
-                            Agadir's crown jewel is its magnificent <strong>10-kilometer stretch of golden sand beach</strong>. With over 300 days of sunshine annually and water temperatures rarely dropping below 17°C, this beach offers perfect conditions for sunbathing, swimming, and water sports throughout most of the year.
-                        </p>
-
-                        <p>
-                            The beautifully renovated promenade (Corniche) stretches along the entire beach, featuring modern cafés, restaurants, and beach clubs. Whether you want to rent a sunbed at a luxurious beach club or spread your towel on the public beach, there's space for everyone.
+                            The promenade has been beautifully renovated in recent years, featuring modern cafés, restaurants, and beach clubs. Whether you want to rent a sunbed at a beach club or spread your towel on the public beach, there's space for everyone.
                         </p>
 
                         <h3>Beach Activities Available:</h3>
@@ -338,60 +437,14 @@
                             <li><strong>Surfing lessons</strong> - Perfect waves for beginners and intermediates</li>
                             <li><strong>Jet skiing</strong> - Rent equipment from various beach vendors</li>
                             <li><strong>Beach volleyball</strong> - Free public courts available</li>
-                            <li><strong>Parasailing</strong> - Get stunning aerial views of the coastline</li>
+                            <li><strong>Camel rides</strong> - Sunset camel rides along the shore</li>
                             <li><strong>Beach yoga</strong> - Morning sessions offered by local instructors</li>
                         </ul>
 
-                        <h2 id="quad-biking">3. Go Quad Biking Through Desert Landscapes</h2>
+                        <h2 id="souk-el-had">3. Shop at Souk El Had</h2>
 
                         <p>
-                            For adventure seekers, <strong>quad biking through the sand dunes and Berber villages</strong> around Agadir is an absolute must. These thrilling excursions take you off the beaten path into the stunning Moroccan countryside, combining adrenaline-pumping action with authentic cultural experiences.
-                        </p>
-
-                        <p>
-                            Most quad biking tours last 2-4 hours and include stops at traditional Berber villages where you can enjoy refreshing mint tea with local families and learn about their centuries-old way of life. The contrast between the powerful quads and the peaceful villages creates one of Agadir's most popular and memorable activities.
-                        </p>
-
-                        <figure class="article-image">
-                            <img src="../img/excursions/Quad Biking/quad 1.jpg" alt="Quad biking through sand dunes near Agadir Morocco" width="800" height="533" loading="lazy">
-                            <figcaption>Experience the thrill of quad biking through Agadir's stunning desert landscapes</figcaption>
-                        </figure>
-
-                        <div class="info-callout">
-                            <div class="callout-icon">🏍️</div>
-                            <div class="callout-content">
-                                <h3>Adventure Tip</h3>
-                                <p>No prior experience needed! Professional guides provide full training before departure. Wear closed-toe shoes, long pants, and bring sunglasses to protect from dust. The sunset quad tours offer spectacular photo opportunities.</p>
-                            </div>
-                        </div>
-
-                        <p>
-                            <a href="../tours/tour-agadir-half-quad-biking-adventure.html" class="internal-link">Book your quad biking adventure</a> for an unforgettable desert experience. For more details, check our <a href="quad-biking-agadir-guide.html" class="internal-link">complete quad biking guide</a>.
-                        </p>
-
-                        <h2 id="camel-ride">4. Experience a Magical Sunset Camel Ride</h2>
-
-                        <p>
-                            There's something truly magical about riding a camel along Agadir's beach as the sun dips into the Atlantic Ocean. A <strong>sunset camel ride</strong> is one of the most romantic and iconic experiences you can have in Morocco, offering unforgettable photo opportunities and lasting memories.
-                        </p>
-
-                        <p>
-                            These gentle giants have been a part of Moroccan culture for centuries, and riding one at sunset connects you to that rich heritage. The experience typically lasts 1-2 hours and includes time to interact with the camels, learn about their care, and capture stunning photos against the golden backdrop.
-                        </p>
-
-                        <figure class="article-image">
-                            <img src="../img/excursions/Camel Ride/camel ride 1.jpg" alt="Sunset camel ride along Agadir beach with golden sky" width="800" height="533" loading="lazy">
-                            <figcaption>A romantic sunset camel ride along Agadir's beautiful beach</figcaption>
-                        </figure>
-
-                        <p>
-                            <a href="../tours/tour-agadir-sunset-camel-ride.html" class="internal-link">Book our sunset camel ride</a> for a truly authentic Moroccan experience. We also offer <a href="../tours/tour-morning-camel-ride-agadir.html" class="internal-link">morning camel rides</a> for those who prefer cooler temperatures.
-                        </p>
-
-                        <h2 id="souk-el-had">5. Shop at Souk El Had</h2>
-
-                        <p>
-                            <strong>Souk El Had</strong> is North Africa's largest market, covering over 13 acres and housing more than 6,000 vendors. Open every day except Monday, this vibrant marketplace is where locals do their shopping, making it an authentic cultural experience unlike anything you'll find in tourist areas.
+                            Souk El Had is North Africa's largest market, covering over 13 acres and housing more than 6,000 vendors. Open every day except Monday, this vibrant marketplace is where locals do their shopping, making it an authentic cultural experience.
                         </p>
 
                         <blockquote>
@@ -399,7 +452,7 @@
                         </blockquote>
 
                         <p>
-                            Here you'll find everything from fresh produce and exotic spices to traditional crafts, leather goods, carpets, and the famous Moroccan argan oil products. Bargaining is expected and part of the fun - don't be afraid to negotiate prices!
+                            Here you'll find everything from fresh produce and spices to traditional crafts, leather goods, carpets, and argan oil products. Bargaining is expected and part of the fun - don't be afraid to negotiate prices!
                         </p>
 
                         <h3>What to Buy:</h3>
@@ -435,14 +488,14 @@
                             </tbody>
                         </table>
 
-                        <h2 id="agadir-kasbah">6. Visit Agadir Kasbah for Panoramic Views</h2>
+                        <h2 id="agadir-kasbah">4. Visit Agadir Kasbah</h2>
 
                         <p>
-                            Perched on a hilltop 236 meters above sea level, the <strong>Agadir Kasbah</strong> (Agadir Oufella) offers breathtaking panoramic views of the city, beach, and harbor. While the devastating 1960 earthquake destroyed most of the original structure, the restored entrance gate with its famous inscription "Fear God and honor the King" still stands as a historic landmark.
+                            Perched on a hilltop 236 meters above sea level, the Agadir Kasbah (Agadir Oufella) offers breathtaking panoramic views of the city, beach, and harbor. While the 1960 earthquake destroyed most of the original structure, the restored entrance gate with its inscription "Fear God and honor the King" still stands as a historic landmark.
                         </p>
 
                         <p>
-                            The sunset views from the Kasbah are legendary. As the sun dips into the Atlantic Ocean, the entire city lights up in golden hues - it's one of the most romantic spots in Agadir and absolutely free to visit.
+                            The sunset views from the Kasbah are legendary. As the sun dips into the Atlantic Ocean, the entire city lights up in golden hues - it's one of the most romantic spots in Agadir.
                         </p>
 
                         <div class="info-callout">
@@ -453,39 +506,55 @@
                             </div>
                         </div>
 
-                        <h2 id="buggy-adventure">7. Try an Exciting Buggy Adventure</h2>
+                        <h2 id="crocoparc">5. Discover Crocoparc</h2>
 
                         <p>
-                            Similar to quad biking but with a different thrill, <strong>buggy adventures</strong> offer an exciting way to explore the countryside around Agadir. These powerful off-road vehicles let you tackle more challenging terrain while enjoying the comfort of a proper seat and roll cage.
+                            Located 15 km from Agadir, Crocoparc is a unique botanical garden and crocodile park that's home to over 300 Nile crocodiles. This beautifully landscaped park combines wildlife observation with stunning tropical gardens, waterfalls, and walking paths.
                         </p>
 
                         <p>
-                            Buggy tours typically cover more ground than quad tours, taking you through eucalyptus forests, rocky trails, and traditional villages. Many tours include stops for mint tea with Berber families and visits to local argan oil cooperatives.
+                            The park's design allows visitors to observe these magnificent reptiles from safe viewing platforms while learning about conservation efforts. It's an excellent half-day excursion, especially for families with children.
+                        </p>
+
+                        <p>
+                            <strong>Best features:</strong>
+                        </p>
+                        <ul>
+                            <li>Educational guided tours available in multiple languages</li>
+                            <li>Feeding demonstrations (check schedule upon arrival)</li>
+                            <li>Lush botanical gardens with exotic plants</li>
+                            <li>On-site café with views over the crocodile habitats</li>
+                            <li>Gift shop with unique souvenirs</li>
+                        </ul>
+
+                        <h2 id="quad-biking">6. Go Quad Biking in the Desert</h2>
+
+                        <p>
+                            For adventure seekers, quad biking through the sand dunes and Berber villages around Agadir is an absolute must. These thrilling excursions take you off the beaten path into the stunning Moroccan countryside.
+                        </p>
+
+                        <p>
+                            Most tours last 2-4 hours and include stops at traditional Berber villages where you can enjoy mint tea and learn about local life. The combination of adrenaline-pumping riding and cultural immersion makes this one of Agadir's most popular activities.
                         </p>
 
                         <figure class="article-image">
-                            <img src="../img/excursions/Buggy Adventures/buggy 1.jpg" alt="Buggy adventure through Moroccan countryside near Agadir" width="800" height="533" loading="lazy">
-                            <figcaption>Feel the rush of a buggy adventure through Agadir's diverse landscapes</figcaption>
+                            <img src="/img/blog/quad-biking-agadir.jpg" alt="Quad biking through sand dunes near Agadir" width="800" height="533" loading="lazy">
+                            <figcaption>Experience the thrill of quad biking through Agadir's stunning desert landscapes</figcaption>
                         </figure>
 
                         <p>
-                            <a href="../tours/tour-buggy-adventure-agadir.html" class="internal-link">Book your buggy adventure</a> for an adrenaline-filled day exploring the Moroccan wilderness.
+                            <a href="/tours/tour-buggy-adventure-agadir.html" class="internal-link">Book a quad biking adventure</a> to experience this thrilling activity with experienced guides and quality equipment.
                         </p>
 
-                        <h2 id="taghazout-surfing">8. Go Surfing in Taghazout</h2>
+                        <h2 id="taghazout">7. Surf in Taghazout</h2>
 
                         <p>
-                            Just 20 km north of Agadir, the laid-back fishing village of <strong>Taghazout</strong> has transformed into Morocco's premier surf destination. With world-class waves, a relaxed atmosphere, and a growing community of surf enthusiasts from around the globe, it's a must-visit for anyone who loves the ocean.
+                            Just 20 km north of Agadir, the laid-back fishing village of Taghazout has transformed into Morocco's premier surf destination. With world-class waves, a relaxed atmosphere, and a growing community of surf enthusiasts, it's a must-visit for anyone who loves the ocean.
                         </p>
 
                         <p>
                             The area boasts numerous surf breaks suitable for all levels, from beginner-friendly beach breaks to challenging point breaks for advanced surfers. Anchor Point, Killer Point, and Hash Point are legendary among the international surf community.
                         </p>
-
-                        <figure class="article-image">
-                            <img src="../img/taghazout.jpg" alt="Taghazout surf village near Agadir with waves and beach" width="800" height="533" loading="lazy">
-                            <figcaption>Taghazout - Morocco's surf paradise just 20 minutes from Agadir</figcaption>
-                        </figure>
 
                         <h3>Why Taghazout is Special:</h3>
                         <ul>
@@ -496,63 +565,65 @@
                             <li>Community of friendly surfers from around the world</li>
                         </ul>
 
+                        <h2 id="moroccan-cuisine">8. Savor Authentic Moroccan Cuisine</h2>
+
                         <p>
-                            <a href="../tours/tour-surf-lessons-agadir.html" class="internal-link">Book surf lessons</a> with our experienced instructors and catch your first Moroccan wave!
+                            No visit to Agadir is complete without indulging in Morocco's incredible culinary traditions. From street food to fine dining, Agadir offers exceptional food experiences that will tantalize your taste buds.
                         </p>
+
+                        <p>
+                            Must-try dishes include tagine (slow-cooked stew), couscous (Friday is traditional couscous day), fresh seafood from the port, and of course, Moroccan mint tea. Don't miss trying a traditional Moroccan breakfast with msemen (Moroccan pancakes), honey, and fresh orange juice.
+                        </p>
+
+                        <div class="info-callout">
+                            <div class="callout-icon">🍽️</div>
+                            <div class="callout-content">
+                                <h3>Local Restaurant Recommendations</h3>
+                                <p><strong>Pure Passion Restaurant</strong> - Best seafood with ocean views | <strong>Restaurant La Scala</strong> - Upscale Moroccan cuisine | <strong>Snack Samir</strong> - Authentic local food at budget prices | <strong>Sunset Beach Club</strong> - Perfect for beachfront dining</p>
+                            </div>
+                        </div>
 
                         <h2 id="essaouira-day-trip">9. Take a Day Trip to Essaouira</h2>
 
                         <p>
-                            The charming coastal city of <strong>Essaouira</strong>, a UNESCO World Heritage site, makes for an excellent day trip from Agadir (approximately 2.5-3 hours drive). This walled city offers a completely different atmosphere with its blue-and-white medina, historic ramparts, and artistic vibe that has attracted musicians and artists for decades.
+                            The charming coastal city of Essaouira, a UNESCO World Heritage site, makes for an excellent day trip from Agadir (approximately 3 hours drive). This walled city offers a completely different atmosphere with its blue-and-white medina, historic ramparts, and artistic vibe.
                         </p>
 
                         <p>
-                            Essaouira is famous for its wind-swept beaches (popular with kitesurfers), fresh seafood, art galleries, and the iconic blue boats in its picturesque harbor. The medina's narrow streets are filled with craft shops, art studios, and cozy cafés - a photographer's dream.
+                            Essaouira is famous for its wind-swept beaches (popular with kitesurfers), fresh seafood, art galleries, and the iconic blue boats in its picturesque harbor. The medina's narrow streets are filled with craft shops, art studios, and cozy cafés.
                         </p>
 
                         <p>
-                            <strong>Highlights include:</strong> The ramparts with Atlantic views, the bustling fish market, woodworking cooperatives producing beautiful thuya wood crafts, and the relaxed beach atmosphere that inspired Jimi Hendrix.
-                        </p>
-
-                        <p>
-                            <a href="../tours/day-trip-essaouira-from-agadir-new.html" class="internal-link">Book our Essaouira day trip</a> for a comfortable, guided excursion to this magical coastal city.
+                            <strong>Highlights include:</strong> The ramparts with Atlantic views, the bustling fish market, woodworking cooperatives producing beautiful thuya wood crafts, and the relaxed beach atmosphere.
                         </p>
 
                         <h2 id="hammam-experience">10. Experience a Traditional Moroccan Hammam</h2>
 
                         <p>
-                            Complete your Agadir experience with a <strong>traditional Moroccan hammam</strong> - a steam bath ritual that's been part of Moroccan culture for centuries. This deeply relaxing and cleansing experience is the perfect way to unwind after days of adventure and exploration.
+                            Complete your Agadir experience with a traditional Moroccan hammam - a steam bath ritual that's been part of Moroccan culture for centuries. This deeply relaxing and cleansing experience is the perfect way to unwind after days of exploration.
                         </p>
 
                         <p>
-                            A traditional hammam session typically includes time in the steam room, a full-body exfoliation with a kessa glove, application of savon noir (black soap made from olives), and often an argan oil massage. You'll emerge feeling refreshed, relaxed, and with incredibly soft skin.
+                            A traditional hammam session typically includes time in the steam room, a full-body exfoliation with a kessa glove, application of savon noir (black soap), and sometimes an argan oil massage. You'll emerge feeling refreshed, relaxed, and with incredibly soft skin.
+                        </p>
+
+                        <p>
+                            You can choose between public hammams (more authentic but basic) or luxury spa hammams (more comfortable with additional services). Both offer the genuine hammam experience, just with different levels of amenity.
                         </p>
 
                         <figure class="article-image">
-                            <img src="../img/excursions/spa/spa 1.jpg" alt="Traditional Moroccan hammam spa experience with decorative tiles" width="800" height="533" loading="lazy">
+                            <img src="/img/blog/moroccan-hammam.jpg" alt="Traditional Moroccan hammam interior with decorative tiles" width="800" height="533" loading="lazy">
                             <figcaption>Relax and rejuvenate with an authentic Moroccan hammam experience</figcaption>
                         </figure>
-
-                        <div class="info-callout">
-                            <div class="callout-icon">🧖</div>
-                            <div class="callout-content">
-                                <h3>Hammam Etiquette</h3>
-                                <p>In traditional public hammams, men and women have separate areas or different time slots. Bring flip-flops, your own toiletries if preferred, and swimwear (though most locals go natural with just a towel). Our spa hammam tours provide everything you need.</p>
-                            </div>
-                        </div>
-
-                        <p>
-                            <a href="../tours/tour-moroccan-hammam-agadir.html" class="internal-link">Book our hammam experience</a> for the ultimate relaxation at a luxury spa with authentic Moroccan treatments.
-                        </p>
 
                         <h2 id="planning-your-visit">Planning Your Agadir Adventure</h2>
 
                         <p>
-                            Agadir is accessible year-round, though the <strong>best time to visit is from March to May and September to November</strong> when temperatures are pleasant (22-28°C) and crowds are smaller. The city has excellent tourism infrastructure with accommodations ranging from budget hostels to luxury resorts.
+                            Agadir is accessible year-round, though the best time to visit is from March to May and September to November when temperatures are pleasant and crowds are smaller. The city has excellent tourism infrastructure with accommodations ranging from budget hostels to luxury resorts.
                         </p>
 
                         <p>
-                            Most of these activities can be easily combined into a week-long itinerary. For the best experience and local insights, I recommend booking with a knowledgeable local guide who can provide authentic experiences, insider access, and ensure your safety on adventure activities.
+                            Most of these activities can be easily booked through local tour operators or your hotel. However, for the best experience and local insights, I recommend booking with a knowledgeable local guide who can provide authentic experiences and insider access.
                         </p>
 
                         <p>
@@ -563,36 +634,26 @@
                             <div class="callout-icon">✈️</div>
                             <div class="callout-content">
                                 <h3>Getting Around Agadir</h3>
-                                <p><strong>Taxis:</strong> Plentiful and affordable (always use the meter or agree on a price first). <strong>Car rentals:</strong> Available at the airport and city center. <strong>Tours:</strong> For day trips, organized transportation is typically included and highly recommended. The city center and beach promenade are generally walkable.</p>
+                                <p>Taxis are plentiful and affordable (always use the meter or agree on a price first). Car rentals are available at the airport and city center. For day trips and tours, organized transportation is typically included. The city is generally walkable, especially along the beach promenade.</p>
                             </div>
                         </div>
-
-                        <h3>More Adventures to Explore:</h3>
-                        <ul>
-                            <li><a href="../tours/tour-agadir-half-day-boat-trip.html">Half-Day Boat Trip</a> - Cruise along the coast with swimming stops</li>
-                            <li><a href="../tours/tour-jet-ski-agadir-new.html">Jet Ski Adventure</a> - High-speed thrills on the water</li>
-                            <li><a href="../tours/tour-sandboarding-agadir.html">Sandboarding</a> - Surf the desert dunes</li>
-                            <li><a href="../tours/tour-horse-riding-agadir.html">Horse Riding</a> - Beach and countryside rides</li>
-                            <li><a href="../tours/tour-cooking-class-agadir.html">Moroccan Cooking Class</a> - Learn to make authentic tagine</li>
-                            <li><a href="../tours/day-trip-marrakech-from-agadir-new.html">Marrakech Day Trip</a> - Explore the Red City</li>
-                        </ul>
 
                     </div>
                     <!-- End Article Content -->
 
                     <!-- Author Box -->
                     <div class="author-box">
-                        <img src="../img/logoalg.png" alt="Ahmed - Local Guide" class="author-box-avatar">
+                        <img src="[AUTHOR_AVATAR]" alt="[AUTHOR_NAME]" class="author-box-avatar">
                         <div class="author-box-content">
-                            <h3 class="author-box-name">About Ahmed</h3>
+                            <h3 class="author-box-name">About [AUTHOR_NAME]</h3>
                             <p class="author-box-bio">
-                                Ahmed is a professional local guide with over 10 years of experience showing visitors the best of Agadir and the Souss-Massa region. Born and raised in Agadir, he combines deep local knowledge with a passion for creating unforgettable experiences. From hidden natural gems to authentic cultural encounters, Ahmed specializes in off-the-beaten-path adventures.
+                                [AUTHOR_BIO]
                             </p>
-                            <a href="https://wa.me/212601820422" class="btn-whatsapp" target="_blank" rel="noopener noreferrer">
+                            <a href="[AUTHOR_WHATSAPP]" class="btn-whatsapp" target="_blank" rel="noopener noreferrer">
                                 <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
                                     <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/>
                                 </svg>
-                                Contact Ahmed on WhatsApp
+                                Contact [AUTHOR_NAME] on WhatsApp
                             </a>
                         </div>
                     </div>
@@ -602,41 +663,41 @@
                         <h2 class="section-title">Related Articles</h2>
                         <div class="related-posts-grid">
                             <article class="related-post-card">
-                                <a href="paradise-valley-agadir-guide.html" class="related-post-image">
-                                    <img src="../img/paradise-valley.jpg" alt="Complete Guide to Paradise Valley Agadir" width="400" height="250" loading="lazy">
+                                <a href="[RELATED_POST_1_URL]" class="related-post-image">
+                                    <img src="[RELATED_POST_1_IMAGE]" alt="[RELATED_POST_1_TITLE]" width="400" height="250" loading="lazy">
                                 </a>
                                 <div class="related-post-content">
-                                    <span class="related-post-category">Nature Guide</span>
+                                    <span class="related-post-category">[RELATED_POST_1_CATEGORY]</span>
                                     <h3 class="related-post-title">
-                                        <a href="paradise-valley-agadir-guide.html">Complete Guide to Paradise Valley: Agadir's Hidden Gem</a>
+                                        <a href="[RELATED_POST_1_URL]">[RELATED_POST_1_TITLE]</a>
                                     </h3>
-                                    <time datetime="2025-11-20" class="related-post-date">Nov 20, 2025</time>
+                                    <time datetime="[RELATED_POST_1_DATE_ISO]" class="related-post-date">[RELATED_POST_1_DATE]</time>
                                 </div>
                             </article>
 
                             <article class="related-post-card">
-                                <a href="quad-biking-agadir-guide.html" class="related-post-image">
-                                    <img src="../img/excursions/Quad Biking/quad 1.jpg" alt="Quad Biking in Agadir Complete Guide" width="400" height="250" loading="lazy">
+                                <a href="[RELATED_POST_2_URL]" class="related-post-image">
+                                    <img src="[RELATED_POST_2_IMAGE]" alt="[RELATED_POST_2_TITLE]" width="400" height="250" loading="lazy">
                                 </a>
                                 <div class="related-post-content">
-                                    <span class="related-post-category">Adventure</span>
+                                    <span class="related-post-category">[RELATED_POST_2_CATEGORY]</span>
                                     <h3 class="related-post-title">
-                                        <a href="quad-biking-agadir-guide.html">Quad Biking in Agadir: Everything You Need to Know</a>
+                                        <a href="[RELATED_POST_2_URL]">[RELATED_POST_2_TITLE]</a>
                                     </h3>
-                                    <time datetime="2025-11-15" class="related-post-date">Nov 15, 2025</time>
+                                    <time datetime="[RELATED_POST_2_DATE_ISO]" class="related-post-date">[RELATED_POST_2_DATE]</time>
                                 </div>
                             </article>
 
                             <article class="related-post-card">
-                                <a href="things-to-do-in-agadir-adventure.html" class="related-post-image">
-                                    <img src="../img/morocco-collage.jpg" alt="Adventure Activities in Agadir" width="400" height="250" loading="lazy">
+                                <a href="[RELATED_POST_3_URL]" class="related-post-image">
+                                    <img src="[RELATED_POST_3_IMAGE]" alt="[RELATED_POST_3_TITLE]" width="400" height="250" loading="lazy">
                                 </a>
                                 <div class="related-post-content">
-                                    <span class="related-post-category">Adventure</span>
+                                    <span class="related-post-category">[RELATED_POST_3_CATEGORY]</span>
                                     <h3 class="related-post-title">
-                                        <a href="things-to-do-in-agadir-adventure.html">Best Adventure Activities in Agadir for Thrill Seekers</a>
+                                        <a href="[RELATED_POST_3_URL]">[RELATED_POST_3_TITLE]</a>
                                     </h3>
-                                    <time datetime="2025-11-10" class="related-post-date">Nov 10, 2025</time>
+                                    <time datetime="[RELATED_POST_3_DATE_ISO]" class="related-post-date">[RELATED_POST_3_DATE]</time>
                                 </div>
                             </article>
                         </div>
@@ -645,9 +706,9 @@
                     <!-- CTA Band -->
                     <section class="article-cta-band">
                         <div class="cta-band-content">
-                            <h2 class="cta-band-title">Ready to Explore Agadir?</h2>
-                            <p class="cta-band-text">Join our expertly curated tours and discover Agadir like a local. All tours include hotel pickup, professional guides, and unforgettable memories.</p>
-                            <a href="../agadir-tours.html" class="btn-primary btn-large">Explore All Tours</a>
+                            <h2 class="cta-band-title">Want a Local Guide Experience?</h2>
+                            <p class="cta-band-text">Join our expertly curated tours and discover Agadir like a local. All tours include pickup, professional guides, and unforgettable memories.</p>
+                            <a href="/tours" class="btn-primary btn-large">Explore All Tours</a>
                         </div>
                     </section>
 
@@ -661,8 +722,8 @@
                     <div class="sidebar-widget cta-widget">
                         <h3 class="widget-title">Planning Your Trip to Agadir?</h3>
                         <p class="widget-text">Discover authentic experiences with our local expert guides. From adventure tours to cultural immersions, we've got you covered.</p>
-                        <a href="../agadir-tours.html" class="btn-primary btn-block">View All Tours</a>
-                        <a href="https://wa.me/212601820422" class="btn-secondary btn-block" target="_blank" rel="noopener noreferrer">
+                        <a href="/tours" class="btn-primary btn-block">View All Tours</a>
+                        <a href="https://wa.me/212123456789" class="btn-secondary btn-block" target="_blank" rel="noopener noreferrer">
                             <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
                                 <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/>
                             </svg>
@@ -675,43 +736,43 @@
                         <h3 class="widget-title">Popular Tours</h3>
                         <div class="popular-tours-list">
 
-                            <a href="../tours/tour-paradise-valley-agadir-new.html" class="popular-tour-item">
-                                <img src="../img/paradise-valley.jpg" alt="Paradise Valley Day Trip from Agadir" class="tour-thumb" width="80" height="80" loading="lazy">
+                            <a href="[POPULAR_TOUR_1_URL]" class="popular-tour-item">
+                                <img src="[POPULAR_TOUR_1_IMAGE]" alt="[POPULAR_TOUR_1_IMAGE_ALT]" class="tour-thumb" width="80" height="80" loading="lazy">
                                 <div class="tour-info">
-                                    <h4 class="tour-name">Paradise Valley Day Trip</h4>
+                                    <h4 class="tour-name">[POPULAR_TOUR_1_NAME]</h4>
                                     <div class="tour-meta">
-                                        <span class="tour-price">From €35</span>
+                                        <span class="tour-price">[POPULAR_TOUR_1_PRICE]</span>
                                         <div class="tour-rating">
-                                            <span class="stars">★★★★★</span>
-                                            <span class="rating-count">(248)</span>
+                                            <span class="stars">[POPULAR_TOUR_1_RATING]</span>
+                                            <span class="rating-count">[POPULAR_TOUR_1_REVIEWS]</span>
                                         </div>
                                     </div>
                                 </div>
                             </a>
 
-                            <a href="../tours/tour-agadir-half-quad-biking-adventure.html" class="popular-tour-item">
-                                <img src="../img/excursions/Quad Biking/quad 1.jpg" alt="Quad Biking Adventure Agadir" class="tour-thumb" width="80" height="80" loading="lazy">
+                            <a href="[POPULAR_TOUR_2_URL]" class="popular-tour-item">
+                                <img src="[POPULAR_TOUR_2_IMAGE]" alt="[POPULAR_TOUR_2_IMAGE_ALT]" class="tour-thumb" width="80" height="80" loading="lazy">
                                 <div class="tour-info">
-                                    <h4 class="tour-name">Quad Biking Adventure</h4>
+                                    <h4 class="tour-name">[POPULAR_TOUR_2_NAME]</h4>
                                     <div class="tour-meta">
-                                        <span class="tour-price">From €45</span>
+                                        <span class="tour-price">[POPULAR_TOUR_2_PRICE]</span>
                                         <div class="tour-rating">
-                                            <span class="stars">★★★★★</span>
-                                            <span class="rating-count">(186)</span>
+                                            <span class="stars">[POPULAR_TOUR_2_RATING]</span>
+                                            <span class="rating-count">[POPULAR_TOUR_2_REVIEWS]</span>
                                         </div>
                                     </div>
                                 </div>
                             </a>
 
-                            <a href="../tours/tour-agadir-sunset-camel-ride.html" class="popular-tour-item">
-                                <img src="../img/excursions/Camel Ride/camel ride 1.jpg" alt="Sunset Camel Ride Agadir Beach" class="tour-thumb" width="80" height="80" loading="lazy">
+                            <a href="[POPULAR_TOUR_3_URL]" class="popular-tour-item">
+                                <img src="[POPULAR_TOUR_3_IMAGE]" alt="[POPULAR_TOUR_3_IMAGE_ALT]" class="tour-thumb" width="80" height="80" loading="lazy">
                                 <div class="tour-info">
-                                    <h4 class="tour-name">Sunset Camel Ride</h4>
+                                    <h4 class="tour-name">[POPULAR_TOUR_3_NAME]</h4>
                                     <div class="tour-meta">
-                                        <span class="tour-price">From €25</span>
+                                        <span class="tour-price">[POPULAR_TOUR_3_PRICE]</span>
                                         <div class="tour-rating">
-                                            <span class="stars">★★★★★</span>
-                                            <span class="rating-count">(312)</span>
+                                            <span class="stars">[POPULAR_TOUR_3_RATING]</span>
+                                            <span class="rating-count">[POPULAR_TOUR_3_REVIEWS]</span>
                                         </div>
                                     </div>
                                 </div>
@@ -725,27 +786,27 @@
                         <h3 class="widget-title">You May Also Like</h3>
                         <div class="sidebar-articles-list">
 
-                            <a href="berber-villages-agadir.html" class="sidebar-article-item">
-                                <img src="../img/berber-village.jpg" alt="Berber Villages near Agadir Guide" class="article-thumb" width="80" height="80" loading="lazy">
+                            <a href="[SIDEBAR_ARTICLE_1_URL]" class="sidebar-article-item">
+                                <img src="[SIDEBAR_ARTICLE_1_IMAGE]" alt="[SIDEBAR_ARTICLE_1_IMAGE_ALT]" class="article-thumb" width="80" height="80" loading="lazy">
                                 <div class="article-info">
-                                    <h4 class="article-name">Discovering Berber Villages Near Agadir</h4>
-                                    <time datetime="2025-11-05" class="article-date">Nov 5, 2025</time>
+                                    <h4 class="article-name">[SIDEBAR_ARTICLE_1_TITLE]</h4>
+                                    <time datetime="[SIDEBAR_ARTICLE_1_DATE_ISO]" class="article-date">[SIDEBAR_ARTICLE_1_DATE]</time>
                                 </div>
                             </a>
 
-                            <a href="rainbow-village-agadir.html" class="sidebar-article-item">
-                                <img src="../img/excursions/Paradise Valley/WhatsApp Image 2025-10-20 at 10.25.56 (11).jpeg" alt="Rainbow Village Agadir" class="article-thumb" width="80" height="80" loading="lazy">
+                            <a href="[SIDEBAR_ARTICLE_2_URL]" class="sidebar-article-item">
+                                <img src="[SIDEBAR_ARTICLE_2_IMAGE]" alt="[SIDEBAR_ARTICLE_2_IMAGE_ALT]" class="article-thumb" width="80" height="80" loading="lazy">
                                 <div class="article-info">
-                                    <h4 class="article-name">The Colorful Rainbow Village of Agadir</h4>
-                                    <time datetime="2025-10-28" class="article-date">Oct 28, 2025</time>
+                                    <h4 class="article-name">[SIDEBAR_ARTICLE_2_TITLE]</h4>
+                                    <time datetime="[SIDEBAR_ARTICLE_2_DATE_ISO]" class="article-date">[SIDEBAR_ARTICLE_2_DATE]</time>
                                 </div>
                             </a>
 
-                            <a href="local-morning-agadir.html" class="sidebar-article-item">
-                                <img src="../img/souk_al_had.jpg" alt="Local Morning Routine in Agadir" class="article-thumb" width="80" height="80" loading="lazy">
+                            <a href="[SIDEBAR_ARTICLE_3_URL]" class="sidebar-article-item">
+                                <img src="[SIDEBAR_ARTICLE_3_IMAGE]" alt="[SIDEBAR_ARTICLE_3_IMAGE_ALT]" class="article-thumb" width="80" height="80" loading="lazy">
                                 <div class="article-info">
-                                    <h4 class="article-name">Experience a Local Morning in Agadir</h4>
-                                    <time datetime="2025-10-20" class="article-date">Oct 20, 2025</time>
+                                    <h4 class="article-name">[SIDEBAR_ARTICLE_3_TITLE]</h4>
+                                    <time datetime="[SIDEBAR_ARTICLE_3_DATE_ISO]" class="article-date">[SIDEBAR_ARTICLE_3_DATE]</time>
                                 </div>
                             </a>
 
@@ -788,7 +849,7 @@
                 <div class="footer-grid">
                     <!-- Company Info -->
                     <div class="footer-column">
-                        <img src="../img/logoalg.png" alt="Agadir Local Guide" class="footer-logo">
+                        <img src="img/logoalg.png" alt="Agadir Local Guide" class="footer-logo">
                         <p>Your trusted local guide to authentic Moroccan adventures. Experience the real Agadir with expert guides since 2015.</p>
                         <div class="social-links">
                             <a href="https://www.facebook.com/agadirlocalguide" aria-label="Facebook" target="_blank">
@@ -818,12 +879,12 @@
                     <div class="footer-column">
                         <h4>Popular Tours</h4>
                         <ul>
-                            <li><a href="../tours/tour-paradise-valley-agadir-new.html">Paradise Valley</a></li>
-                            <li><a href="../tours/tour-agadir-half-quad-biking-adventure.html">Quad Biking</a></li>
-                            <li><a href="../tours/day-trip-marrakech-from-agadir-new.html">Marrakech Day Trip</a></li>
-                            <li><a href="../tours/tour-agadir-sunset-camel-ride.html">Sunset Camel Ride</a></li>
-                            <li><a href="../tours/tour-sandboarding-agadir.html">Sandboarding</a></li>
-                            <li><a href="../agadir-tours.html">All Tours →</a></li>
+                            <li><a href="tours/tour-paradise-valley-agadir.html">Paradise Valley</a></li>
+                            <li><a href="tours/tour-agadir-half-quad-biking-adventure.html">Quad Biking</a></li>
+                            <li><a href="tours/day-trip-marrakech-from-agadir.html">Marrakech Day Trip</a></li>
+                            <li><a href="tours/tour-agadir-sunset-camel-ride.html">Sunset Camel Ride</a></li>
+                            <li><a href="tours/tour-sandboarding-agadir.html">Sandboarding</a></li>
+                            <li><a href="agadir-tours.html">All Tours →</a></li>
                         </ul>
                     </div>
 
@@ -831,10 +892,10 @@
                     <div class="footer-column">
                         <h4>Company</h4>
                         <ul>
-                            <li><a href="../index.html">Home</a></li>
-                            <li><a href="../blog.html">Travel Guide</a></li>
-                            <li><a href="../contact.html">About Us</a></li>
-                            <li><a href="../contact.html">Contact Us</a></li>
+                            <li><a href="index.html">Home</a></li>
+                            <li><a href="blog.html">Travel Guide</a></li>
+                            <li><a href="contact.html">About Us</a></li>
+                            <li><a href="contact.html">Contact Us</a></li>
                             <li><a href="tel:+212601820422">Call Us</a></li>
                         </ul>
                     </div>
@@ -843,11 +904,11 @@
                     <div class="footer-column">
                         <h4>Support</h4>
                         <ul>
-                            <li><a href="../contact.html">FAQs</a></li>
-                            <li><a href="../booking-policy.html">Booking Policy</a></li>
-                            <li><a href="../contact.html">Cancellation</a></li>
-                            <li><a href="../terms-and-conditions.html">Terms & Conditions</a></li>
-                            <li><a href="../privacy-policy.html">Privacy Policy</a></li>
+                            <li><a href="contact.html">FAQs</a></li>
+                            <li><a href="booking-policy.html">Booking Policy</a></li>
+                            <li><a href="contact.html">Cancellation</a></li>
+                            <li><a href="terms-and-conditions.html">Terms & Conditions</a></li>
+                            <li><a href="privacy-policy.html">Privacy Policy</a></li>
                         </ul>
                     </div>
 
@@ -872,11 +933,11 @@
             <div class="container">
                 <p>© 2025 Agadir Local Guide. All rights reserved.</p>
                 <div class="footer-legal-links">
-                    <a href="../privacy-policy.html">Privacy</a>
+                    <a href="privacy-policy.html">Privacy</a>
                     <span>•</span>
-                    <a href="../terms-and-conditions.html">Terms</a>
+                    <a href="terms-and-conditions.html">Terms</a>
                     <span>•</span>
-                    <a href="../booking-policy.html">Booking Policy</a>
+                    <a href="booking-policy.html">Booking Policy</a>
                 </div>
                 <div class="payment-methods">
                     <span>We accept:</span>
@@ -893,8 +954,7 @@
     <div id="toast" class="toast" role="alert" aria-live="polite"></div>
 
     <!-- JavaScript -->
-    <script src="../blog.js"></script>
+    <script src="blog.js"></script>
 
 </body>
 </html>
-

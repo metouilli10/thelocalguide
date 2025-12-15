@@ -101,137 +101,379 @@
     }
     </script>
     
-    <link rel="stylesheet" href="../css/styles.css">
+    <!-- Google Fonts: Inter + Poppins -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Poppins:wght@600;700;800;900&display=swap" rel="stylesheet">
+    
     <style>
-        :root {
-            --primary-color: #c1564b;
-            --secondary-color: #F59E0B;
-            --text-dark: #1F2937;
-            --text-light: #6B7280;
-            --bg-white: #FFFFFF;
-            --bg-gray: #F9FAFB;
-        }
-
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
         }
 
-        body {
-            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-            line-height: 1.7;
-            color: var(--text-dark);
-            background: var(--bg-white);
+        html {
+            scroll-behavior: smooth;
         }
 
-        /* ===== TOPBAR ===== */
-        .topbar {
-            background: #ccff02;
-            color: #000000;
+        :root {
+            /* Primary Colors - Brand Terra Cotta */
+            --primary-color: #c1564b;
+            --primary-600: #c1564b;
+            --primary-700: #c1564b;
+            --primary-100: #EEE9FF;
+            --primary-50: #FAF5FF;
+
+            /* Secondary Colors - CTA Yellow */
+            --secondary-color: #FFD400;
+            --cta-yellow: #FFD400;
+            --cta-yellow-dark: #E6C000;
+
+            /* Accent Colors */
+            --accent-color: #14B8A6;
+
+            /* Grays */
+            --gray-50: #F9FAFB;
+            --gray-100: #F3F4F6;
+            --gray-200: #E5E7EB;
+            --gray-300: #D1D5DB;
+            --gray-400: #9CA3AF;
+            --gray-500: #6B7280;
+            --gray-600: #4B5563;
+            --gray-700: #374151;
+            --gray-800: #1F2937;
+            --gray-900: #111827;
+
+            /* Semantic */
+            --success: #10B981;
+            --warning: #F59E0B;
+            --error: #EF4444;
+            --star-color: #FBBF24;
+
+            /* Typography */
+            --font-sans: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+            --font-display: 'Poppins', -apple-system, BlinkMacSystemFont, sans-serif;
+
+            /* Backgrounds */
+            --bg-white: #FFFFFF;
+            --bg-gray: #F8F8F8;
+            --text-dark: #222222;
+            --text-light: #555555;
+        }
+
+        body {
+            font-family: var(--font-sans);
+            color: var(--gray-900);
+            line-height: 1.6;
+            background: #FFFFFF;
+            padding-top: 76px; /* Account for fixed header */
+            overflow-x: hidden;
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+        }
+
+        h1, h2, h3, h4, h5, h6 {
+            font-family: var(--font-display);
+            line-height: 1.2;
+        }
+
+        /* ===== HEADER (FROM TOUR PAGES) ===== */
+        .site-header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 1000;
+            background: #FFFFFF;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+            transition: all 0.3s ease;
+        }
+
+        .site-header.scrolled {
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        .main-nav {
+            padding: 13px 0;
+            background: white;
+        }
+
+        .main-nav .container {
+            max-width: 1360px;
+            margin: 0 auto;
+            padding: 0 40px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            text-decoration: none;
+        }
+
+        .logo img {
+            height: 45px;
+            width: auto;
+            transition: height 0.3s ease;
+        }
+
+        .nav-menu {
+            display: flex;
+            gap: 28px;
+            list-style: none;
+            align-items: center;
+            margin: 0;
+            padding: 0;
+        }
+
+        .nav-menu li {
+            position: relative;
+        }
+
+        .nav-menu a {
+            color: var(--gray-700);
+            font-weight: 500;
+            font-size: 15px;
+            text-decoration: none;
+            transition: color 0.3s ease;
             padding: 8px 0;
+            display: flex;
+            align-items: center;
+            gap: 4px;
+        }
+
+        .nav-menu a:hover {
+            color: var(--primary-600);
+        }
+
+        .has-dropdown {
+            position: relative;
+        }
+
+        .dropdown-icon {
+            width: 11px;
+            height: 11px;
+            margin-left: 4px;
+            transition: transform 0.2s;
+            fill: currentColor;
+        }
+
+        .has-dropdown:hover .dropdown-icon {
+            transform: rotate(180deg);
+        }
+
+        .dropdown-menu {
+            position: absolute;
+            top: 100%;
+            left: 0;
+            background: white;
+            box-shadow: 0 4px 16px rgba(0,0,0,0.1);
+            border-radius: 8px;
+            padding: 8px 0;
+            min-width: 220px;
+            opacity: 0;
+            visibility: hidden;
+            transform: translateY(-10px);
+            transition: all 0.3s;
+            list-style: none;
+            z-index: 1001;
+        }
+
+        .has-dropdown:hover .dropdown-menu {
+            opacity: 1;
+            visibility: visible;
+            transform: translateY(0);
+        }
+
+        .dropdown-menu li {
+            width: 100%;
+        }
+
+        .dropdown-menu a {
+            padding: 10px 20px;
+            display: block;
             font-size: 14px;
         }
 
-        .topbar__wrapper {
-            max-width: 1360px;
-            margin: 0 auto;
-            padding: 0 40px;
+        .dropdown-menu a:hover {
+            background: var(--gray-50);
+        }
+
+        .nav-actions {
             display: flex;
-            justify-content: space-between;
+            gap: 12px;
             align-items: center;
         }
 
-        .topbar__link {
-            color: #000000;
-            text-decoration: none;
-            transition: color 0.3s ease;
-            font-weight: 500;
-        }
-
-        /* ===== HEADER ===== */
-        .header {
-            background: var(--bg-white);
-            padding: 16px 0;
-            position: sticky;
-            top: 0;
-            z-index: 100;
-            box-shadow: 0 2px 8px rgba(0,0,0,0.08);
-        }
-
-        .header__wrapper {
-            max-width: 1360px;
-            margin: 0 auto;
-            padding: 0 40px;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-
-        .header__logo {
-            font-size: 18px;
-            font-weight: 700;
-            color: #000000;
-            text-decoration: none;
-        }
-
-        .header__nav {
-            display: flex;
-            gap: 32px;
-        }
-
-        .header__nav-link {
-            color: #000000;
-            text-decoration: none;
-            font-weight: 700;
-            text-transform: uppercase;
-            transition: color 0.3s ease;
-        }
-
-        .header__nav-link:hover {
-            color: var(--primary-color);
-        }
-
-        .header__actions {
-            display: flex;
-            gap: 16px;
-            align-items: center;
-        }
-
-        .btn {
-            padding: 12px 24px;
+        .btn-outline,
+        .btn-primary-nav {
+            background: var(--primary-600);
+            color: white;
             border: none;
-            border-radius: 6px;
-            font-weight: 700;
-            text-decoration: none;
-            cursor: pointer;
-            transition: all 0.3s ease;
-            display: inline-block;
-            text-align: center;
-            color: #000000;
-        }
-
-        .btn-primary {
-            background: #cdff03;
-            color: #000000;
-        }
-
-        .btn-primary:hover {
-            background: #b8e600;
-            color: #000000;
-            transform: translateY(-1px);
-        }
-
-        .btn-whatsapp {
-            background: #8449f2;
-            color: #ffffff;
+            padding: 10px 24px;
+            border-radius: 8px;
             font-weight: 600;
+            font-size: 14px;
+            cursor: pointer;
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            transition: all 0.3s ease;
+            text-decoration: none;
         }
 
-        .btn-whatsapp:hover {
-            background: #6d3bd9;
-            color: #ffffff;
+        .btn-outline:hover,
+        .btn-primary-nav:hover {
+            background: var(--primary-700);
             transform: translateY(-1px);
+        }
+
+        .btn-outline svg,
+        .btn-primary-nav svg {
+            width: 14px;
+            height: 14px;
+        }
+
+        .mobile-menu-toggle {
+            display: none;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            background: none;
+            border: none;
+            cursor: pointer;
+            padding: 12px;
+            width: 48px;
+            height: 48px;
+        }
+
+        .mobile-menu-toggle span {
+            display: block;
+            width: 24px;
+            height: 2.5px;
+            background: var(--gray-800);
+            margin: 3px 0;
+            transition: all 0.3s;
+            border-radius: 2px;
+        }
+
+        .mobile-menu-toggle.active span:nth-child(1) {
+            transform: rotate(45deg) translate(6px, 6px);
+        }
+
+        .mobile-menu-toggle.active span:nth-child(2) {
+            opacity: 0;
+        }
+
+        .mobile-menu-toggle.active span:nth-child(3) {
+            transform: rotate(-45deg) translate(6px, -6px);
+        }
+
+        /* Mobile Menu */
+        .mobile-menu-overlay {
+            position: fixed;
+            inset: 0;
+            background: rgba(0, 0, 0, 0.6);
+            opacity: 0;
+            visibility: hidden;
+            transition: all 0.3s;
+            z-index: 9998;
+        }
+
+        .mobile-menu-overlay.active {
+            opacity: 1;
+            visibility: visible;
+        }
+
+        .mobile-menu {
+            position: fixed;
+            top: 0;
+            right: -100%;
+            width: 85%;
+            max-width: 400px;
+            height: 100vh;
+            background: white;
+            box-shadow: -4px 0 24px rgba(0, 0, 0, 0.2);
+            z-index: 9999;
+            transition: right 0.4s;
+            overflow-y: auto;
+        }
+
+        .mobile-menu.active {
+            right: 0;
+        }
+
+        .close-menu {
+            background: var(--gray-100);
+            border: none;
+            color: var(--gray-700);
+            font-size: 28px;
+            cursor: pointer;
+            position: absolute;
+            top: 16px;
+            right: 16px;
+            width: 44px;
+            height: 44px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 8px;
+        }
+
+        .menu-content {
+            padding: 80px 24px 24px;
+        }
+
+        .menu-nav {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .menu-nav a {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 16px 0;
+            color: var(--gray-900);
+            font-size: 16px;
+            font-weight: 500;
+            text-decoration: none;
+            border-bottom: 1px solid var(--gray-100);
+        }
+
+        .mobile-menu-actions {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+            padding: 24px;
+            border-top: 1px solid var(--gray-200);
+        }
+
+        .mobile-cta {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+            padding: 14px 20px;
+            border-radius: 8px;
+            font-weight: 600;
+            text-decoration: none;
+        }
+
+        .mobile-cta-primary {
+            background: var(--primary-600);
+            color: white;
+        }
+
+        .mobile-cta-secondary {
+            background: var(--gray-100);
+            color: var(--gray-900);
         }
 
         /* ===== ARTICLE HERO ===== */
@@ -241,6 +483,7 @@
             position: relative;
             overflow: hidden;
             margin-top: 0;
+            padding-top: 100px; /* Account for fixed header */
         }
 
         .article-hero::before {
@@ -489,74 +732,198 @@
         }
 
         /* ===== FOOTER ===== */
-        .footer {
-            background: var(--bg-white);
-            color: var(--text-dark);
-            padding: 80px 40px 40px;
-            border-top: 1px solid #E5E7EB;
+        .site-footer {
+            background: linear-gradient(to bottom, var(--gray-50) 0%, white 100%);
+            color: var(--gray-700);
+            border-top: 1px solid var(--gray-200);
         }
 
-        .footer__wrapper {
+        .footer-main {
+            padding: 80px 40px;
+        }
+
+        .footer-main .container {
             max-width: 1360px;
             margin: 0 auto;
         }
 
-        .footer__top {
+        .footer-grid {
             display: grid;
-            grid-template-columns: repeat(5, 1fr);
-            gap: 60px;
-            padding-bottom: 60px;
-            border-bottom: 1px solid #E5E7EB;
-            margin-bottom: 40px;
+            grid-template-columns: 1.5fr 1fr 1fr 1fr 1.2fr;
+            gap: 48px;
         }
 
-        .footer__column {
+        .footer-column {
             display: flex;
             flex-direction: column;
         }
 
-        .footer__title {
-            font-size: 18px;
+        .footer-column h4 {
+            font-size: 16px;
             font-weight: 700;
-            color: var(--text-dark);
-            margin-bottom: 24px;
+            color: var(--gray-900);
+            margin-bottom: 20px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            font-family: var(--font-display);
+        }
+
+        .footer-column ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        .footer-column a {
+            color: var(--gray-600);
+            text-decoration: none;
+            font-size: 14px;
+            transition: all 0.2s;
+        }
+
+        .footer-column a:hover {
+            color: var(--primary-600);
+            padding-left: 4px;
+        }
+
+        .footer-logo {
+            height: 45px;
+            width: auto;
+            max-width: 200px;
+            margin-bottom: 16px;
+        }
+
+        .footer-column p {
+            font-size: 14px;
+            line-height: 1.6;
+            color: var(--gray-600);
+            margin-bottom: 20px;
+        }
+
+        .social-links {
+            display: flex;
+            gap: 12px;
+            margin-top: 8px;
+        }
+
+        .social-links a {
+            width: 40px;
+            height: 40px;
+            background: white;
+            border: 1px solid var(--gray-200);
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.3s;
+            padding: 0;
+        }
+
+        .social-links a:hover {
+            background: var(--primary-600);
+            border-color: var(--primary-600);
+            transform: translateY(-2px);
+        }
+
+        .social-links a:hover svg {
+            fill: white;
+        }
+
+        .social-links svg {
+            width: 20px;
+            height: 20px;
+            fill: var(--gray-600);
+            transition: fill 0.3s;
+        }
+
+        .footer__newsletter {
+            margin-top: 24px;
+        }
+
+        .footer__newsletter-text {
+            font-size: 14px;
+            color: var(--text-light);
+            margin-bottom: 12px;
+        }
+
+        .footer__newsletter-form {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+        }
+
+        .footer__newsletter-input {
+            padding: 12px 16px;
+            background: var(--bg-white);
+            border: 1px solid #D1D5DB;
+            border-radius: 4px;
+            font-size: 14px;
+        }
+
+        .footer__newsletter-input:focus {
+            outline: none;
+            border-color: var(--primary-color);
+            box-shadow: 0 0 0 3px rgba(193, 86, 75, 0.1);
+        }
+
+        .footer__newsletter-button {
+            padding: 12px 24px;
+            background: var(--primary-color);
+            color: white;
+            border: none;
+            border-radius: 4px;
+            font-weight: 600;
+            font-size: 14px;
+            cursor: pointer;
             text-transform: uppercase;
             letter-spacing: 0.5px;
         }
 
-        .footer__links {
-            list-style: none;
-            padding: 0;
-            margin: 0;
-        }
-
-        .footer__links li {
-            margin-bottom: 12px;
-        }
-
-        .footer__link {
-            color: var(--text-light);
-            text-decoration: none;
-            font-size: 15px;
-            transition: color 0.3s ease;
-            display: inline-block;
-        }
-
-        .footer__link:hover {
-            color: var(--primary-color);
+        .footer__newsletter-button:hover {
+            background: var(--primary-700);
         }
 
         .footer__bottom {
+            padding: 30px 40px;
             display: flex;
             justify-content: space-between;
             align-items: center;
-            flex-wrap: wrap;
-            gap: 24px;
+            max-width: 1360px;
+            margin: 0 auto;
+        }
+
+        .footer__bottom-left {
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
         }
 
         .footer__copyright {
             font-size: 14px;
             color: #6B7280;
+        }
+
+        .footer__legal-links {
+            display: flex;
+            gap: 12px;
+            align-items: center;
+        }
+
+        .footer__legal-link {
+            font-size: 13px;
+            color: #6B7280;
+            text-decoration: none;
+        }
+
+        .footer__legal-link:hover {
+            color: var(--primary-color);
+        }
+
+        .footer__separator {
+            color: #D1D5DB;
         }
 
         .footer__tagline {
@@ -566,17 +933,37 @@
             font-style: italic;
         }
 
+        /* ===== RESPONSIVE ===== */
+        @media (max-width: 1200px) {
+            .footer-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .main-nav .container {
+                padding: 0 32px;
+            }
+        }
+
         @media (max-width: 768px) {
-            .topbar {
+            body {
+                padding-top: 70px;
+            }
+
+            .mobile-menu-toggle {
+                display: flex;
+            }
+
+            .nav-menu {
                 display: none;
             }
 
-            .header__nav {
+            .nav-actions .btn-outline {
                 display: none;
             }
 
             .article-hero {
                 padding: 40px 20px 40px;
+                margin-top: 0;
             }
 
             .article-hero__title {
@@ -620,56 +1007,45 @@
                 padding: 40px 24px;
             }
 
-            .footer__top {
-                grid-template-columns: repeat(2, 1fr);
+            .footer-main {
+                padding: 48px 20px;
+            }
+
+            .footer-grid {
+                grid-template-columns: 1fr;
                 gap: 32px;
+            }
+
+            .footer-column:first-child {
+                order: 1;
             }
 
             .footer__bottom {
                 flex-direction: column;
                 align-items: flex-start;
+                gap: 16px;
+            }
+
+            .footer__legal-links {
+                flex-direction: column;
+                gap: 8px;
             }
         }
 
         @media (max-width: 480px) {
-            .footer__top {
-                grid-template-columns: 1fr;
+            .main-nav .container {
+                padding: 0 16px;
+            }
+
+            .footer-main {
+                padding: 40px 16px;
             }
         }
     </style>
 </head>
 <body>
-    <!-- Mobile Menu -->
-    <div id="mobileMenu" class="mobile-menu">
-        <button class="close-menu" aria-label="Close menu">×</button>
-        <div class="menu-content">
-            <nav class="menu-nav">
-                <a href="../index.html" style="font-weight: bold;">Home</a>
-                <a href="../agadir-tours.html" style="font-weight: bold;">Agadir Tours</a>
-                <a href="day-trips-from-agadir.html" style="font-weight: bold;">Day Trips</a>
-                <a href="../blog.html" style="font-weight: bold;">Blog</a>
-                <a href="../contact.html" style="font-weight: bold;">Contact</a>
-            </nav>
-        </div>
-    </div>
-    <!-- TOPBAR -->
-    <div class="topbar" style="overflow: hidden; position: relative;">
-        <div class="marquee-wrapper" style="display: flex; animation: scroll-left 20s linear infinite;">
-            <div class="marquee-content" style="display: flex; white-space: nowrap; padding-right: 50px;">
-                <span style="font-weight: 700; font-size: 14px;">🎉 Book Early & Save More! 15% OFF your entire booking. Limited Time Offer! 📞 +212 601-820422</span>
-            </div>
-            <div class="marquee-content" style="display: flex; white-space: nowrap; padding-right: 50px;">
-                <span style="font-weight: 700; font-size: 14px;">🎉 Book Early & Save More! 15% OFF your entire booking. Limited Time Offer! 📞 +212 601-820422</span>
-            </div>
-            <div class="marquee-content" style="display: flex; white-space: nowrap; padding-right: 50px;">
-                <span style="font-weight: 700; font-size: 14px;">🎉 Book Early & Save More! 15% OFF your entire booking. Limited Time Offer! 📞 +212 601-820422</span>
-            </div>
-        </div>
-    </div>
-
-    <!-- HEADER (MODERNIZED) -->
+    <!-- HEADER -->
     <header class="site-header">
-
         <!-- Main Navigation -->
         <nav class="main-nav">
             <div class="container">
@@ -773,24 +1149,7 @@
                 WhatsApp Us
             </a>
         </div>
-
-        <!-- Contact Info -->
-        <div class="mobile-menu-contact">
-            <h4>Get in Touch</h4>
-            <a href="tel:+212601820422" class="mobile-contact-item">
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke-width="2">
-                    <path stroke-linecap="round" stroke-linejoin="round" d="M2.25 6.75c0 8.284 6.716 15 15 15h2.25a2.25 2.25 0 002.25-2.25v-1.372c0-.516-.351-.966-.852-1.091l-4.423-1.106c-.44-.11-.902.055-1.173.417l-.97 1.293c-.282.376-.769.542-1.21.38a12.035 12.035 0 01-7.143-7.143c-.162-.441.004-.928.38-1.21l1.293-.97c.363-.271.527-.734.417-1.173L6.963 3.102a1.125 1.125 0 00-1.091-.852H4.5A2.25 2.25 0 002.25 4.5v2.25z" />
-                </svg>
-                +212 601-820422
-            </a>
-            <a href="mailto:info@agadirlocalguide.com" class="mobile-contact-item">
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke-width="2">
-                    <path stroke-linecap="round" stroke-linejoin="round" d="M21.75 6.75v10.5a2.25 2.25 0 01-2.25 2.25h-15a2.25 2.25 0 01-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0019.5 4.5h-15a2.25 2.25 0 00-2.25 2.25m19.5 0v.243a2.25 2.25 0 01-1.07 1.916l-7.5 4.615a2.25 2.25 0 01-2.36 0L3.32 8.91a2.25 2.25 0 01-1.07-1.916V6.75" />
-                </svg>
-                info@agadirlocalguide.com
-            </a>
         </div>
-    >
 
     <!-- ARTICLE CONTENT -->
     <section class="article-content">
@@ -1131,61 +1490,57 @@
         </div>
     </section>
 
-    <!-- FOOTER -->
+    <!-- ===== FOOTER ===== -->
         <footer class="site-footer">
         <div class="footer-main">
             <div class="container">
                 <div class="footer-grid">
-                    <!-- Company Info -->
+                    <!-- Brand Column -->
                     <div class="footer-column">
-                        <img src="../../img/logoalg.png" alt="Agadir Local Guide" class="footer-logo">
-                        <p>Your trusted local guide to authentic Moroccan adventures. Experience the real Agadir with expert guides since 2015.</p>
+                        <img src="../img/logoalg.png" alt="Agadir Local Guide" class="footer-logo">
+                        <p>Discover the best of Agadir with local expert guides. Authentic experiences, unforgettable adventures.</p>
+
+                        <!-- Social Links -->
                         <div class="social-links">
                             <a href="https://www.facebook.com/agadirlocalguide" aria-label="Facebook" target="_blank">
-                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-                                    <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
+                                <svg viewBox="0 0 24 24">
+                                    <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/>
                                 </svg>
                             </a>
                             <a href="https://www.instagram.com/agadirlocalguide" aria-label="Instagram" target="_blank">
-                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-                                    <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
-                                </svg>
-                            </a>
-                            <a href="https://www.tripadvisor.com" aria-label="TripAdvisor" target="_blank">
-                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-                                    <path d="M12.006 4.295c-2.67 0-5.338.784-7.645 2.353H0l1.963 2.135a5.997 5.997 0 00-.075 4.738 6 6 0 0010.114 4.402 6 6 0 0010.112-4.402 6.003 6.003 0 00-.074-4.738L24 6.648h-4.361c-2.307-1.569-4.975-2.353-7.645-2.353h.012zM5.988 8.295a5.986 5.986 0 015.988 5.988c0 3.305-2.683 5.988-5.988 5.988A5.986 5.986 0 010 14.283a5.986 5.986 0 015.988-5.988zm12 0c3.305 0 5.988 2.683 5.988 5.988 0 3.305-2.683 5.988-5.988 5.988a5.986 5.986 0 01-5.988-5.988c0-3.305 2.683-5.988 5.988-5.988zM5.988 10.5a3.78 3.78 0 00-3.783 3.783 3.78 3.78 0 003.783 3.783 3.78 3.78 0 003.783-3.783 3.78 3.78 0 00-3.783-3.783zm12 0a3.78 3.78 0 00-3.783 3.783 3.78 3.78 0 003.783 3.783 3.78 3.78 0 003.783-3.783 3.78 3.78 0 00-3.783-3.783zm-12 1.185a2.6 2.6 0 012.598 2.598 2.6 2.6 0 01-2.598 2.598 2.6 2.6 0 01-2.598-2.598 2.6 2.6 0 012.598-2.598zm12 0a2.6 2.6 0 012.598 2.598 2.6 2.6 0 01-2.598 2.598 2.6 2.6 0 01-2.598-2.598 2.6 2.6 0 012.598-2.598z"/>
+                                <svg viewBox="0 0 24 24">
+                                    <rect x="2" y="2" width="20" height="20" rx="5" ry="5"/>
+                                    <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/>
+                                    <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/>
                                 </svg>
                             </a>
                             <a href="https://wa.me/212601820422" aria-label="WhatsApp" target="_blank">
-                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                                <svg viewBox="0 0 24 24">
                                     <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.890-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/>
                                 </svg>
                             </a>
                         </div>
                     </div>
 
+                    <!-- Quick Links -->
+                    <div class="footer-column">
+                        <h4>Quick Links</h4>
+                        <ul>
+                            <li><a href="../index.html">Home</a></li>
+                            <li><a href="../agadir-tours.html">Tours</a></li>
+                            <li><a href="../blog.html">Blog</a></li>
+                            <li><a href="../contact.html">Contact</a></li>
+                        </ul>
+                    </div>
+
                     <!-- Popular Tours -->
                     <div class="footer-column">
                         <h4>Popular Tours</h4>
                         <ul>
-                            <li><a href="../tour-paradise-valley-agadir.html">Paradise Valley</a></li>
-                            <li><a href="../tour-quad-biking-agadir.html">Quad Biking</a></li>
-                            <li><a href="../day-trip-marrakech-from-agadir.html">Marrakech Day Trip</a></li>
-                            <li><a href="../tour-camel-ride-agadir.html">Camel Ride</a></li>
-                            <li><a href="../tour-sandboarding-agadir.html">Sandboarding</a></li>
-                            <li><a href="../agadir-tours.html">All Tours →</a></li>
-                        </ul>
-                    </div>
-
-                    <!-- Company -->
-                    <div class="footer-column">
-                        <h4>Company</h4>
-                        <ul>
-                            <li><a href="../index.html">Home</a></li>
-                            <li><a href="../blog.html">Travel Guide</a></li>
-                            <li><a href="../contact.html">About Us</a></li>
-                            <li><a href="../contact.html">Contact Us</a></li>
-                            <li><a href="tel:+212601820422">Call Us</a></li>
+                            <li><a href="../tours/tour-paradise-valley-agadir.html">Paradise Valley</a></li>
+                            <li><a href="../tours/tour-quad-biking-agadir.html">Quad Biking</a></li>
+                            <li><a href="../tours/day-trip-marrakech-from-agadir.html">Marrakech Day Trip</a></li>
+                            <li><a href="../tours/day-trip-essaouira-from-agadir.html">Essaouira Day Trip</a></li>
                         </ul>
                     </div>
 
@@ -1193,57 +1548,102 @@
                     <div class="footer-column">
                         <h4>Support</h4>
                         <ul>
-                            <li><a href="../contact.html">FAQs</a></li>
-                            <li><a href="booking-policy.html">Booking Policy</a></li>
-                            <li><a href="../contact.html">Cancellation</a></li>
-                            <li><a href="terms-and-conditions.html">Terms & Conditions</a></li>
-                            <li><a href="privacy-policy.html">Privacy Policy</a></li>
+                            <li><a href="#">FAQs</a></li>
+                            <li><a href="#">Booking Terms</a></li>
+                            <li><a href="#">Privacy Policy</a></li>
+                            <li><a href="#">Cancellation Policy</a></li>
                         </ul>
                     </div>
 
                     <!-- Newsletter -->
                     <div class="footer-column">
-                        <h4>Stay Updated</h4>
-                        <p>Get exclusive deals & travel tips</p>
-                        <form class="newsletter-form" action="#" method="post">
-                            <input type="email" placeholder="Your email" required>
-                            <button type="submit">Subscribe</button>
+                        <h4>Newsletter</h4>
+                        <div class="footer__newsletter">
+                            <p class="footer__newsletter-text">Subscribe for exclusive deals and updates</p>
+                            <form class="footer__newsletter-form">
+                                <input type="email" placeholder="Your email" class="footer__newsletter-input" required>
+                                <button type="submit" class="footer__newsletter-button">Subscribe</button>
                         </form>
-                        <div class="footer-contact">
-                            <p><strong>Call Us:</strong><br>+212 601-820422</p>
-                            <p><strong>Email:</strong><br>info@agadirlocalguide.com</p>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
 
-        <div class="footer-bottom">
-            <div class="container">
-                <p>© 2025 Agadir Local Guide. All rights reserved.</p>
-                <div class="footer-legal-links">
-                    <a href="privacy-policy.html">Privacy</a>
-                    <span>•</span>
-                    <a href="terms-and-conditions.html">Terms</a>
-                    <span>•</span>
-                    <a href="booking-policy.html">Booking Policy</a>
+        <!-- Footer Bottom -->
+        <div class="footer__bottom">
+            <div class="footer__bottom-left">
+                <p class="footer__copyright">© 2024 Agadir Local Guide. All rights reserved.</p>
+                <div class="footer__legal-links">
+                    <a href="#" class="footer__legal-link">Privacy Policy</a>
+                    <span class="footer__separator">•</span>
+                    <a href="#" class="footer__legal-link">Terms of Service</a>
+                    <span class="footer__separator">•</span>
+                    <a href="#" class="footer__legal-link">Cookie Policy</a>
                 </div>
-                <div class="payment-methods">
-                    <span>We accept:</span>
-                    <div class="payment-icon">💳</div>
-                    <div class="payment-icon">💰</div>
-                    <div class="payment-icon">📱</div>
                 </div>
+            <div class="footer__bottom-right">
+                <p class="footer__tagline">Your Adventure Starts Here</p>
             </div>
         </div>
     </footer>
 <script>
-const hamburger=document.getElementById("hamburger");
-const mobileMenu=document.getElementById("mobileMenu");
-const closeMenu=mobileMenu?mobileMenu.querySelector(".close-menu"):null;
-if(hamburger&&mobileMenu){hamburger.addEventListener("click",()=>{mobileMenu.classList.add("active");hamburger.classList.add("active")});}
-if(closeMenu){closeMenu.addEventListener("click",()=>{mobileMenu.classList.remove("active");hamburger&&hamburger.classList.remove("active")});}
-if(mobileMenu){mobileMenu.querySelectorAll("a").forEach(a=>a.addEventListener("click",()=>{mobileMenu.classList.remove("active");hamburger&&hamburger.classList.remove("active")}));}
+        // Header Scroll
+        window.addEventListener('scroll', function() {
+            const header = document.querySelector('.site-header');
+            if (window.scrollY > 50) {
+                header.classList.add('scrolled');
+            } else {
+                header.classList.remove('scrolled');
+            }
+        });
+
+        // Mobile Menu
+        const menuToggle = document.querySelector('.mobile-menu-toggle');
+        const mobileMenu = document.querySelector('.mobile-menu');
+        const menuOverlay = document.querySelector('.mobile-menu-overlay');
+        const closeMenu = document.querySelector('.close-menu');
+
+        if (menuToggle && mobileMenu) {
+            menuToggle.addEventListener('click', function() {
+                menuToggle.classList.toggle('active');
+                mobileMenu.classList.toggle('active');
+                if (menuOverlay) {
+                    menuOverlay.classList.toggle('active');
+                }
+                document.body.style.overflow = mobileMenu.classList.contains('active') ? 'hidden' : '';
+            });
+        }
+
+        if (closeMenu) {
+            closeMenu.addEventListener('click', function() {
+                if (menuToggle) menuToggle.classList.remove('active');
+                if (mobileMenu) mobileMenu.classList.remove('active');
+                if (menuOverlay) menuOverlay.classList.remove('active');
+                document.body.style.overflow = '';
+            });
+        }
+
+        if (menuOverlay) {
+            menuOverlay.addEventListener('click', function() {
+                if (menuToggle) menuToggle.classList.remove('active');
+                if (mobileMenu) mobileMenu.classList.remove('active');
+                menuOverlay.classList.remove('active');
+                document.body.style.overflow = '';
+            });
+        }
+
+        // Close menu when clicking on links
+        if (mobileMenu) {
+            mobileMenu.querySelectorAll('a').forEach(a => {
+                a.addEventListener('click', function() {
+                    if (menuToggle) menuToggle.classList.remove('active');
+                    mobileMenu.classList.remove('active');
+                    if (menuOverlay) menuOverlay.classList.remove('active');
+                    document.body.style.overflow = '';
+                });
+            });
+        }
 </script>
 </body>
 </html>

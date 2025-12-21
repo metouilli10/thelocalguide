@@ -1,0 +1,15 @@
+# macOS
+.DS_Store
+*.dmg
+*.app
+
+# Node modules
+node_modules/
+
+# Logs
+*.log
+
+# Backup files
+*.bak*
+*.backup
+

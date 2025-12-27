@@ -5,14 +5,8 @@
       "has": [{ "type": "host", "value": "www.agadirlocalguide.com" }],
       "destination": "https://agadirlocalguide.com/$1",
       "permanent": true
-    },
-    {
-      "source": "/:slug((?!.*\\.).+)",
-      "destination": "/:slug.html",
-      "permanent": true
     }
   ],
-  "cleanUrls": false,
   "headers": [
     {
       "source": "/(.*\\.(jpg|jpeg|png|webp|gif|svg|ico|avif))",

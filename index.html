@@ -281,6 +281,13 @@
             --space-20: 5rem;     /* 80px */
             --space-24: 6rem;     /* 96px */
             --space-32: 8rem;     /* 128px */
+            
+            /* Trust Bar Colors */
+            --google-green: #34A853;     /* Google Reviews green */
+            --ink: #121212;
+            --muted: rgba(18,18,18,.68);
+            --line: rgba(18,18,18,.10);
+            --card: #ffffff;
         }
 
         * {
@@ -1175,11 +1182,10 @@
             transform: translateY(0);
         }
 
-        /* Apply to section titles */
+        /* Apply to section titles (excluding testimonials - keep static with trust bar) */
         .trip-cards-section__title,
         .features-section__title,
-        .blog-section__title,
-        .testimonials-section__title {
+        .blog-section__title {
             opacity: 0;
             transform: translateY(18px);
             transition: opacity 0.6s cubic-bezier(0.4, 0, 0.2, 1),
@@ -1188,8 +1194,7 @@
 
         .trip-cards-section__title.visible,
         .features-section__title.visible,
-        .blog-section__title.visible,
-        .testimonials-section__title.visible {
+        .blog-section__title.visible {
             opacity: 1;
             transform: translateY(0);
         }
@@ -2723,12 +2728,34 @@
             border-radius: 12px;
             padding: 32px;
             box-shadow: 0 2px 12px rgba(0,0,0,0.08);
-            transition: all 0.3s ease;
+            /* Scroll animation initial state */
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 0.6s cubic-bezier(0.4, 0, 0.2, 1),
+                        transform 0.6s cubic-bezier(0.4, 0, 0.2, 1),
+                        box-shadow 0.3s ease;
+        }
+
+        /* Stagger animation delays for testimonial cards */
+        .testimonial-card:nth-child(1) { transition-delay: 0.1s; }
+        .testimonial-card:nth-child(2) { transition-delay: 0.15s; }
+        .testimonial-card:nth-child(3) { transition-delay: 0.2s; }
+        .testimonial-card:nth-child(4) { transition-delay: 0.25s; }
+        .testimonial-card:nth-child(5) { transition-delay: 0.3s; }
+        .testimonial-card:nth-child(6) { transition-delay: 0.35s; }
+
+        .testimonial-card.visible {
+            opacity: 1;
+            transform: translateY(0);
+            transition-delay: 0s;
         }
 
         .testimonial-card:hover {
             transform: translateY(-4px);
             box-shadow: 0 8px 24px rgba(0,0,0,0.12);
+            transition: opacity 0.6s cubic-bezier(0.4, 0, 0.2, 1),
+                        transform 0.3s ease,
+                        box-shadow 0.3s ease;
         }
 
         .testimonial-card__text {
@@ -2804,6 +2831,109 @@
 
             .testimonial-card {
                 padding: 24px;
+            }
+        }
+
+        /* ===== TRUST BAR (PREMIUM) ===== */
+        .trustbar.premium {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 22px 32px;
+            border-radius: 18px;
+            border: 1px solid rgba(0,0,0,.08);
+            background: #fff;
+            box-shadow: 0 10px 30px rgba(0,0,0,.06);
+            margin: 0 auto 40px;
+            max-width: 1100px;
+        }
+
+        .trustbar-left h3 {
+            font-size: 22px;
+            font-weight: 700;
+            color: var(--ink);
+            margin: 0;
+            line-height: 1.3;
+        }
+
+        .trustbar-left p {
+            margin-top: 6px;
+            color: #6b6b6b;
+            font-size: 14px;
+            margin-bottom: 0;
+        }
+
+        .trustbar-right {
+            display: flex;
+            gap: 12px;
+            flex-wrap: wrap;
+            justify-content: flex-end;
+        }
+
+        .platform {
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            color: inherit;
+            padding: 10px 14px;
+            border-radius: 8px;
+        }
+
+        .platform img {
+            height: 22px;
+            width: auto;
+            opacity: 0.9;
+        }
+
+        .platform .rating {
+            font-weight: 700;
+            font-size: 15px;
+            color: var(--ink);
+        }
+
+        .platform .rating.accent {
+            color: var(--google-green);
+        }
+
+        .platform .stars {
+            letter-spacing: 1px;
+            font-size: 14px;
+            color: #6b7280;
+            opacity: 0.65;
+        }
+
+        .platform .count {
+            font-size: 13px;
+            color: #777;
+        }
+
+        .accent {
+            color: var(--google-green);
+        }
+
+        @media (max-width: 820px) {
+            .trustbar.premium {
+                flex-direction: column;
+                align-items: flex-start;
+                padding: 20px 20px;
+            }
+
+            .trustbar-left {
+                margin-bottom: 20px;
+            }
+
+            .trustbar-left h3 {
+                font-size: 20px;
+            }
+
+            .trustbar-right {
+                width: 100%;
+                justify-content: flex-start;
+            }
+
+            .platform {
+                flex: 1;
+                min-width: 0;
             }
         }
 
@@ -4382,11 +4512,37 @@
                 <p class="testimonials-section__subtitle">See why thousands of visitors choose <em>The Local Guide</em> for their Agadir experience. "Unforgettable day with incredible views and the best guide ever!" – <em>Emily, UK</em></p>
             </div>
 
+            <!-- Trust Bar (TripAdvisor + Google) -->
+            <div class="trustbar premium" role="region" aria-label="Ratings from external platforms">
+              <div class="trustbar-left">
+                <h3>
+                  Rated <span class="accent">4.9</span>/5 by travelers
+                </h3>
+                <p>Based on verified TripAdvisor & Google reviews</p>
+              </div>
+
+              <div class="trustbar-right">
+                <div class="platform">
+                  <img src="img/tripadvisor-icon.svg" alt="TripAdvisor">
+                  <span class="rating">4.8</span>
+                  <span class="stars">★★★★★</span>
+                  <span class="count">(487)</span>
+                </div>
+
+                <div class="platform">
+                  <img src="img/google-icon.svg" alt="Google Reviews">
+                  <span class="rating accent">4.9</span>
+                  <span class="stars">★★★★★</span>
+                  <span class="count">(390)</span>
+                </div>
+              </div>
+            </div>
+
             <!-- Testimonials Grid -->
             <div class="testimonials-grid">
                 <!-- Testimonial 1 -->
                 <div class="testimonial-card">
-                    <p class="testimonial-card__text">Paradise Valley exceeded all expectations! The natural pools were stunning and our guide Mohamed was incredibly knowledgeable. The Local Guide made everything so easy with perfect pickup timing and comfortable transport.</p>
+                    <p class="testimonial-card__text">Paradise Valley was even better than we expected. The pools were beautiful and not overcrowded. Mohamed was a great guide, very friendly and knew a lot about the area. Pickup was on time and the transport was comfortable. Everything felt well organized and relaxed.</p>
                     <div class="testimonial-card__user">
                         <div class="testimonial-card__user-info">
                             <h4 class="testimonial-card__name">Emma Thompson</h4>
@@ -4404,7 +4560,7 @@
 
                 <!-- Testimonial 2 -->
                 <div class="testimonial-card">
-                    <p class="testimonial-card__text">The Marrakech day trip was amazing! Our guide gave us great local insights and took us to authentic places tourists usually miss. The souks were incredible and we had plenty of time to explore. Highly recommend!</p>
+                    <p class="testimonial-card__text">Long day, but totally worth it. Our guide explained a lot about Marrakech and took us to places we probably wouldn't have found on our own. The souks were busy but fascinating, and we never felt rushed. Really good experience overall.</p>
                     <div class="testimonial-card__user">
                         <div class="testimonial-card__user-info">
                             <h4 class="testimonial-card__name">James Wilson</h4>
@@ -4422,7 +4578,7 @@
 
                 <!-- Testimonial 3 -->
                 <div class="testimonial-card">
-                    <p class="testimonial-card__text">Quad biking through the dunes was the highlight of our Agadir vacation! Pure adrenaline and so much fun. The equipment was top quality and the guide ensured everyone felt safe. Will definitely book more tours!</p>
+                    <p class="testimonial-card__text">The quad biking was honestly the highlight of our trip in Agadir. Riding through the dunes was so much fun and very well supervised. The equipment was in good condition and the guide made sure everyone was comfortable before starting. Would definitely do it again.</p>
                     <div class="testimonial-card__user">
                         <div class="testimonial-card__user-info">
                             <h4 class="testimonial-card__name">Laura Smith</h4>
@@ -4440,7 +4596,7 @@
 
                 <!-- Testimonial 4 -->
                 <div class="testimonial-card">
-                    <p class="testimonial-card__text">The sunset camel ride was magical! Riding along the beach as the sun set was unforgettable. The camels were well-cared for and the whole experience felt authentic. Mint tea at the end was the perfect touch!</p>
+                    <p class="testimonial-card__text">Such a peaceful and unique experience. Riding the camels along the beach at sunset was unforgettable. The animals were well cared for and the whole experience felt very authentic. Ending with mint tea was a nice touch.</p>
                     <div class="testimonial-card__user">
                         <div class="testimonial-card__user-info">
                             <h4 class="testimonial-card__name">Sarah Anderson</h4>
@@ -4458,7 +4614,7 @@
 
                 <!-- Testimonial 5 -->
                 <div class="testimonial-card">
-                    <p class="testimonial-card__text">Essaouira is beautiful! The old medina is charming and the seafood lunch was incredible. Our driver was professional and the timing was perfect. The Local Guide made exploring Morocco so easy and stress-free.</p>
+                    <p class="testimonial-card__text">Essaouira is a beautiful city and this trip made it very easy to explore. The old medina was charming and we had an excellent seafood lunch by the port. Our driver was professional and everything ran smoothly from start to finish.</p>
                     <div class="testimonial-card__user">
                         <div class="testimonial-card__user-info">
                             <h4 class="testimonial-card__name">Michael Roberts</h4>
@@ -4476,7 +4632,7 @@
 
                 <!-- Testimonial 6 -->
                 <div class="testimonial-card">
-                    <p class="testimonial-card__text">Sandboarding was incredible! The dunes are stunning and surfing down them was such a unique experience. Our guide was friendly and took great photos for us. Best value tour in Agadir!</p>
+                    <p class="testimonial-card__text">Sandboarding was way more fun than I expected. The dunes were impressive and sliding down them was a great experience. Our guide was friendly and helped us take some really nice photos. Great value for money in Agadir.</p>
                     <div class="testimonial-card__user">
                         <div class="testimonial-card__user-info">
                             <h4 class="testimonial-card__name">David Martinez</h4>
@@ -4798,8 +4954,8 @@
             });
         }, observerOptions);
 
-        // Observe section titles
-        document.querySelectorAll('.trip-cards-section__title, .features-section__title, .blog-section__title, .testimonials-section__title').forEach(title => {
+        // Observe section titles (excluding testimonials - keep static with trust bar)
+        document.querySelectorAll('.trip-cards-section__title, .features-section__title, .blog-section__title').forEach(title => {
             scrollObserver.observe(title);
         });
 
@@ -4810,6 +4966,11 @@
 
         // Observe blog cards
         document.querySelectorAll('.blog-card').forEach(card => {
+            scrollObserver.observe(card);
+        });
+
+        // Observe testimonial cards (animate cards only, not the trust bar)
+        document.querySelectorAll('.testimonial-card').forEach(card => {
             scrollObserver.observe(card);
         });
     </script>

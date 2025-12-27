@@ -1501,12 +1501,6 @@
     <!-- FILTER SECTION -->
     <section class="tours-filter">
         <div class="tours-filter__container">
-            <div class="tours-filter__header">
-                <h2 class="tours-filter__title">Browse by Category</h2>
-                <div class="tours-filter__count">
-                    Showing <span class="tours-filter__count-number" id="tour-count">19</span> of 19 tours
-                </div>
-            </div>
             <div class="tours-filter__buttons">
                 <button class="filter-btn active" data-category="all">All Tours</button>
                 <button class="filter-btn" data-category="activities">Activities</button>
@@ -2526,8 +2520,10 @@
                     }
                 });
 
-                // Update count
-                tourCountEl.textContent = visibleCount;
+                // Update count (if element exists)
+                if (tourCountEl) {
+                    tourCountEl.textContent = visibleCount;
+                }
             });
         });
 

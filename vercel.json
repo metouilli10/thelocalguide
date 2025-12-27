@@ -1,15 +1,15 @@
 {
   "redirects": [
     {
-      "source": "/(.*)",
+      "source": "/:path*",
       "has": [{ "type": "host", "value": "www.agadirlocalguide.com" }],
-      "destination": "https://agadirlocalguide.com/$1",
+      "destination": "https://agadirlocalguide.com/:path*",
       "permanent": true
     }
   ],
   "headers": [
     {
-      "source": "/(.*\\.(jpg|jpeg|png|webp|gif|svg|ico|avif))",
+      "source": "/img/:path*",
       "headers": [
         {
           "key": "Cache-Control",
@@ -18,7 +18,7 @@
       ]
     },
     {
-      "source": "/(.*\\.(css|js))",
+      "source": "/css/:path*",
       "headers": [
         {
           "key": "Cache-Control",
@@ -27,7 +27,7 @@
       ]
     },
     {
-      "source": "/(.*\\.(woff|woff2|ttf|eot))",
+      "source": "/js/:path*",
       "headers": [
         {
           "key": "Cache-Control",
@@ -46,4 +46,3 @@
     }
   ]
 }
-

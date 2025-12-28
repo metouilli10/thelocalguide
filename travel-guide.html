@@ -1240,9 +1240,14 @@
                 <article class="blog-card" data-category="Travel Guide">
                     <a href="blog/top-10-things-to-do-agadir-2026.html" style="text-decoration: none; color: inherit; display: flex; flex-direction: column; height: 100%;">
                         <div class="blog-card__image-wrapper">
-                            <img src="img/top10.png"
-                                 alt="Top 10 Things to Do in Agadir 2026"
-                                 class="blog-card__image">
+                            <picture>
+                                <source srcset="img/top10.webp" type="image/webp">
+                                <img src="img/top10.png"
+                                     alt="Top 10 Things to Do in Agadir 2026"
+                                     class="blog-card__image"
+                                     loading="lazy"
+                                     decoding="async">
+                            </picture>
                             <span class="blog-card__category">Travel Guide</span>
                         </div>
                         <div class="blog-card__content">

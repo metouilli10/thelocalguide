@@ -197,6 +197,42 @@
         <priority>0.8</priority>
     </url>
     
+    <!-- Blog Posts - New Content -->
+    <url>
+        <loc>https://agadirlocalguide.com/blog/paradise-valley-agadir-guide.html</loc>
+        <lastmod>2025-01-01</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.85</priority>
+    </url>
+    
+    <url>
+        <loc>https://agadirlocalguide.com/blog/quad-biking-agadir-guide.html</loc>
+        <lastmod>2025-01-15</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.85</priority>
+    </url>
+    
+    <url>
+        <loc>https://agadirlocalguide.com/blog/things-to-do-agadir-families.html</loc>
+        <lastmod>2025-01-01</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.85</priority>
+    </url>
+    
+    <url>
+        <loc>https://agadirlocalguide.com/blog/agadir-day-trips.html</loc>
+        <lastmod>2025-01-01</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.9</priority>
+    </url>
+    
+    <url>
+        <loc>https://agadirlocalguide.com/blog/agadir-cruise-excursions.html</loc>
+        <lastmod>2025-01-01</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.85</priority>
+    </url>
+    
     <!-- Special Pages -->
     <url>
         <loc>https://agadirlocalguide.com/berber-villages-agadir.html</loc>

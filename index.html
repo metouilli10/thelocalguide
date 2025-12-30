@@ -1936,22 +1936,57 @@
 
         .blog-slider {
             position: relative;
-            margin-bottom: 60px;
+            margin-bottom: 40px;
+        }
+
+        .blog-slider__container {
+            position: relative;
+            overflow: hidden;
         }
 
         .blog-grid {
             display: flex;
-            gap: 32px;
+            gap: 24px;
             overflow-x: auto;
             scroll-behavior: smooth;
             -webkit-overflow-scrolling: touch;
             scrollbar-width: none;
             -ms-overflow-style: none;
-            padding-bottom: 20px;
+            padding: 10px 5px 20px 5px;
+            scroll-snap-type: x mandatory;
         }
 
         .blog-grid::-webkit-scrollbar {
             display: none;
+        }
+
+        /* Carousel Dots */
+        .blog-slider__dots {
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+            margin-top: 24px;
+        }
+
+        .blog-slider__dot {
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            background: #D1D5DB;
+            border: none;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            padding: 0;
+        }
+
+        .blog-slider__dot:hover {
+            background: #9CA3AF;
+        }
+
+        .blog-slider__dot.active {
+            background: var(--primary-color);
+            width: 28px;
+            border-radius: 5px;
         }
 
         .blog-navigation {
@@ -1998,9 +2033,10 @@
             color: inherit;
             display: flex;
             flex-direction: column;
-            flex: 1;
-            min-width: 280px;
-            max-width: calc(25% - 24px);
+            flex: 0 0 auto;
+            width: calc(33.333% - 16px);
+            min-width: 320px;
+            scroll-snap-align: start;
         }
 
         .blog-card:hover {
@@ -2124,11 +2160,12 @@
         }
 
         /* ===== BLOG SECTION RESPONSIVE ===== */
-        @media (max-width: 1024px) {
+        @media (max-width: 1200px) {
             .blog-card {
+                width: calc(50% - 12px);
                 min-width: 300px;
-                max-width: calc(33.33% - 22px);
             }
+
         }
 
         @media (max-width: 768px) {
@@ -2141,8 +2178,8 @@
             }
 
             .blog-card {
+                width: calc(100% - 40px);
                 min-width: 280px;
-                max-width: calc(50% - 16px);
             }
 
             .blog-navigation {
@@ -2158,8 +2195,8 @@
 
         @media (max-width: 480px) {
             .blog-card {
+                width: 100%;
                 min-width: 100%;
-                max-width: 100%;
             }
 
             .blog-section__title {
@@ -4486,31 +4523,168 @@
 
             <!-- Blog Slider -->
             <div class="blog-slider">
-                <div class="blog-grid" id="blogSlider">
-                    <!-- Featured Blog Post: Top 10 Things to Do in Agadir 2026 -->
-                    <article class="blog-card">
-                        <div class="blog-card__image-wrapper">
-                            <picture>
-                                <source srcset="img/top10.webp" type="image/webp">
-                                <img src="img/top10.png"
-                                     alt="Top 10 Things to Do in Agadir 2026 - Best activities and tours guide"
-                                     class="blog-card__image"
-                                     loading="lazy"
-                                     decoding="async">
-                            </picture>
-                            <span class="blog-card__category">Travel Guide</span>
-                        </div>
-                        <div class="blog-card__content">
-                            <div class="blog-card__meta">
-                                <span class="blog-card__date">January 2026</span>
-                                <span class="blog-card__read-time">15 min read</span>
+                <div class="blog-slider__container">
+                    <div class="blog-grid" id="blogSlider">
+                        <!-- Top 10 Things to Do in Agadir 2026 -->
+                        <article class="blog-card">
+                            <div class="blog-card__image-wrapper">
+                                <picture>
+                                    <source srcset="img/top10.webp" type="image/webp">
+                                    <img src="img/top10.png" alt="Top 10 Things to Do in Agadir 2026" class="blog-card__image" loading="lazy">
+                                </picture>
+                                <span class="blog-card__category">Travel Guide</span>
                             </div>
-                            <h3 class="blog-card__title">Top 10 Things to Do in Agadir 2026 – Ultimate Travel Guide</h3>
-                            <p class="blog-card__excerpt">Discover the best activities, tours, and hidden gems in Agadir! From Paradise Valley's natural pools to quad biking adventures, sunset camel rides, and day trips to Essaouira. Complete 2026 guide with prices, tips, and insider recommendations.</p>
-                            <a href="blog/top-10-things-to-do-agadir-2026.html" class="blog-card__link">Read More →</a>
-                        </div>
-                    </article>
+                            <div class="blog-card__content">
+                                <div class="blog-card__meta">
+                                    <span class="blog-card__date">January 2026</span>
+                                    <span class="blog-card__read-time">15 min read</span>
+                                </div>
+                                <h3 class="blog-card__title">Top 10 Things to Do in Agadir 2026 – Ultimate Travel Guide</h3>
+                                <p class="blog-card__excerpt">Discover the best activities and hidden gems in Agadir! From Paradise Valley to quad biking adventures.</p>
+                                <a href="blog/top-10-things-to-do-agadir-2026.html" class="blog-card__link">Read More →</a>
+                            </div>
+                        </article>
+
+                        <!-- Quad Biking Agadir Guide -->
+                        <article class="blog-card">
+                            <div class="blog-card__image-wrapper">
+                                <img src="img/excursions/Quad Biking/quad 1.jpg" alt="Quad Biking Agadir Complete Guide" class="blog-card__image" loading="lazy">
+                                <span class="blog-card__category">Adventure</span>
+                            </div>
+                            <div class="blog-card__content">
+                                <div class="blog-card__meta">
+                                    <span class="blog-card__date">January 2025</span>
+                                    <span class="blog-card__read-time">12 min read</span>
+                                </div>
+                                <h3 class="blog-card__title">Quad Biking Agadir: Complete 2025 Guide</h3>
+                                <p class="blog-card__excerpt">Discover the best quad biking tours with local guides. Desert dunes, beach trails, hotel pickup included.</p>
+                                <a href="blog/quad-biking-agadir-guide.html" class="blog-card__link">Read More →</a>
+                            </div>
+                        </article>
+
+                        <!-- Paradise Valley Guide -->
+                        <article class="blog-card">
+                            <div class="blog-card__image-wrapper">
+                                <img src="img/excursions/Paradise Valley/paradise 1.jpeg" alt="Paradise Valley Agadir Guide" class="blog-card__image" loading="lazy">
+                                <span class="blog-card__category">Travel Guide</span>
+                            </div>
+                            <div class="blog-card__content">
+                                <div class="blog-card__meta">
+                                    <span class="blog-card__date">January 2025</span>
+                                    <span class="blog-card__read-time">18 min read</span>
+                                </div>
+                                <h3 class="blog-card__title">Paradise Valley Agadir: The Complete 2025 Guide</h3>
+                                <p class="blog-card__excerpt">Discover Morocco's hidden oasis. Natural swimming pools, cliff jumping, and local insider tips.</p>
+                                <a href="blog/paradise-valley-agadir-guide.html" class="blog-card__link">Read More →</a>
+                            </div>
+                        </article>
+
+                        <!-- Agadir Day Trips -->
+                        <article class="blog-card">
+                            <div class="blog-card__image-wrapper">
+                                <img src="img/excursions/Essaouira Day Trip/essaouira 1.jpg" alt="Agadir Day Trips" class="blog-card__image" loading="lazy">
+                                <span class="blog-card__category">Day Trips</span>
+                            </div>
+                            <div class="blog-card__content">
+                                <div class="blog-card__meta">
+                                    <span class="blog-card__date">January 2025</span>
+                                    <span class="blog-card__read-time">25 min read</span>
+                                </div>
+                                <h3 class="blog-card__title">Agadir Day Trips: 15 Epic Destinations for 2025</h3>
+                                <p class="blog-card__excerpt">Complete guide to the best day trips. Essaouira, Marrakech, Taroudant, and hidden gems.</p>
+                                <a href="blog/agadir-day-trips.html" class="blog-card__link">Read More →</a>
+                            </div>
+                        </article>
+
+                        <!-- Things to Do for Families -->
+                        <article class="blog-card">
+                            <div class="blog-card__image-wrapper">
+                                <img src="img/excursions/Camel Ride/camel ride 1.jpg" alt="Things to Do in Agadir for Families" class="blog-card__image" loading="lazy">
+                                <span class="blog-card__category">Family Travel</span>
+                            </div>
+                            <div class="blog-card__content">
+                                <div class="blog-card__meta">
+                                    <span class="blog-card__date">January 2025</span>
+                                    <span class="blog-card__read-time">20 min read</span>
+                                </div>
+                                <h3 class="blog-card__title">Top 10 Things to Do in Agadir for Families 2025</h3>
+                                <p class="blog-card__excerpt">The ultimate family guide! Kid-friendly beaches, camel rides, Crocoparc, and activities for all ages.</p>
+                                <a href="blog/things-to-do-agadir-families.html" class="blog-card__link">Read More →</a>
+                            </div>
+                        </article>
+
+                        <!-- Cruise Excursions -->
+                        <article class="blog-card">
+                            <div class="blog-card__image-wrapper">
+                                <img src="img/excursions/Agadir City Tour/agadir 1.jpg" alt="Agadir Cruise Port Excursions" class="blog-card__image" loading="lazy">
+                                <span class="blog-card__category">Cruise Travel</span>
+                            </div>
+                            <div class="blog-card__content">
+                                <div class="blog-card__meta">
+                                    <span class="blog-card__date">January 2025</span>
+                                    <span class="blog-card__read-time">18 min read</span>
+                                </div>
+                                <h3 class="blog-card__title">Agadir Cruise Port Excursions: Complete 2025 Guide</h3>
+                                <p class="blog-card__excerpt">Shore excursions for cruise passengers. Port logistics and timed tours guaranteed to return on schedule.</p>
+                                <a href="blog/agadir-cruise-excursions.html" class="blog-card__link">Read More →</a>
+                            </div>
+                        </article>
+
+                        <!-- Quad Biking Paradise Valley -->
+                        <article class="blog-card">
+                            <div class="blog-card__image-wrapper">
+                                <img src="img/excursions/Quad Biking/quad 4.jpeg" alt="Quad Biking Near Paradise Valley" class="blog-card__image" loading="lazy">
+                                <span class="blog-card__category">Adventure</span>
+                            </div>
+                            <div class="blog-card__content">
+                                <div class="blog-card__meta">
+                                    <span class="blog-card__date">January 2025</span>
+                                    <span class="blog-card__read-time">10 min read</span>
+                                </div>
+                                <h3 class="blog-card__title">Quad Biking Near Paradise Valley: Mountain Routes</h3>
+                                <p class="blog-card__excerpt">Combine quad biking with Paradise Valley! Atlas Mountain foothills, argan forests & Berber villages.</p>
+                                <a href="blog/quad-biking-paradise-valley.html" class="blog-card__link">Read More →</a>
+                            </div>
+                        </article>
+
+                        <!-- Quad Biking Taghazout -->
+                        <article class="blog-card">
+                            <div class="blog-card__image-wrapper">
+                                <img src="img/excursions/Quad Biking/quad 3.jpg" alt="Quad Biking from Taghazout" class="blog-card__image" loading="lazy">
+                                <span class="blog-card__category">Adventure</span>
+                            </div>
+                            <div class="blog-card__content">
+                                <div class="blog-card__meta">
+                                    <span class="blog-card__date">January 2025</span>
+                                    <span class="blog-card__read-time">11 min read</span>
+                                </div>
+                                <h3 class="blog-card__title">Quad Biking from Taghazout: Surf Village Adventures</h3>
+                                <p class="blog-card__excerpt">Quad biking from Taghazout with surf camp pickup. Coastal cliff trails, beach routes & desert dunes.</p>
+                                <a href="blog/quad-biking-taghazout.html" class="blog-card__link">Read More →</a>
+                            </div>
+                        </article>
+
+                        <!-- Quad Biking Tamri -->
+                        <article class="blog-card">
+                            <div class="blog-card__image-wrapper">
+                                <img src="img/excursions/Quad Biking/quad 5.jpeg" alt="Quad Biking Tamri & Banana Beach" class="blog-card__image" loading="lazy">
+                                <span class="blog-card__category">Adventure</span>
+                            </div>
+                            <div class="blog-card__content">
+                                <div class="blog-card__meta">
+                                    <span class="blog-card__date">January 2025</span>
+                                    <span class="blog-card__read-time">12 min read</span>
+                                </div>
+                                <h3 class="blog-card__title">Quad Biking Tamri & Banana Beach: Wild Coast</h3>
+                                <p class="blog-card__excerpt">Explore Morocco's wild Atlantic coast! Tamri fishing village, goats in argan trees, Banana Beach.</p>
+                                <a href="blog/quad-biking-tamri-banana-beach.html" class="blog-card__link">Read More →</a>
+                            </div>
+                        </article>
+                    </div>
                 </div>
+
+                <!-- Carousel Dots -->
+                <div class="blog-slider__dots" id="blogDots"></div>
             </div>
 
             <div class="blog-section__button">
@@ -4785,40 +4959,84 @@
 
         // ===== BLOG CAROUSEL =====
         const blogSlider = document.getElementById('blogSlider');
-        const blogPrevBtn = document.getElementById('blogPrevBtn');
-        const blogNextBtn = document.getElementById('blogNextBtn');
+        const blogDotsContainer = document.getElementById('blogDots');
+        const blogCards = blogSlider ? blogSlider.querySelectorAll('.blog-card') : [];
 
-        function scrollBlog(direction) {
-            if (!blogSlider) return;
+        // Calculate card width including gap
+        function getCardWidth() {
+            if (!blogCards.length) return 400;
+            const card = blogCards[0];
+            const width = card.offsetWidth;
+            const gap = parseInt(window.getComputedStyle(blogSlider).gap) || 24;
+            return width + gap;
+        }
+
+        // Get visible cards count
+        function getVisibleCards() {
+            if (!blogSlider) return 3;
+            const containerWidth = blogSlider.clientWidth;
+            const cardWidth = getCardWidth();
+            return Math.floor(containerWidth / cardWidth) || 1;
+        }
+
+        // Create dots
+        function createDots() {
+            if (!blogDotsContainer || !blogCards.length) return;
             
-            const scrollAmount = 400; // Width to scroll
-            const currentScroll = blogSlider.scrollLeft;
-            const newScroll = currentScroll + (direction * scrollAmount);
+            const visibleCards = getVisibleCards();
+            const totalDots = Math.ceil(blogCards.length / visibleCards);
+            
+            blogDotsContainer.innerHTML = '';
+            
+            for (let i = 0; i < totalDots; i++) {
+                const dot = document.createElement('button');
+                dot.className = 'blog-slider__dot' + (i === 0 ? ' active' : '');
+                dot.setAttribute('aria-label', `Go to slide ${i + 1}`);
+                dot.addEventListener('click', () => scrollToSlide(i));
+                blogDotsContainer.appendChild(dot);
+            }
+        }
+
+        // Scroll to specific slide
+        function scrollToSlide(index) {
+            if (!blogSlider) return;
+            const cardWidth = getCardWidth();
+            const visibleCards = getVisibleCards();
+            const scrollPosition = index * visibleCards * cardWidth;
             
             blogSlider.scrollTo({
-                left: newScroll,
+                left: scrollPosition,
                 behavior: 'smooth'
             });
         }
 
-        // Update button states based on scroll position
-        function updateBlogButtons() {
-            if (!blogSlider || !blogPrevBtn || !blogNextBtn) return;
+        // Update active dot
+        function updateBlogCarousel() {
+            if (!blogSlider || !blogDotsContainer) return;
             
-            blogPrevBtn.disabled = blogSlider.scrollLeft <= 0;
+            const scrollLeft = blogSlider.scrollLeft;
+            const dots = blogDotsContainer.querySelectorAll('.blog-slider__dot');
+            const cardWidth = getCardWidth();
+            const visibleCards = getVisibleCards();
+            const activeIndex = Math.round(scrollLeft / (cardWidth * visibleCards));
             
-            const maxScroll = blogSlider.scrollWidth - blogSlider.clientWidth;
-            blogNextBtn.disabled = blogSlider.scrollLeft >= maxScroll - 10;
+            dots.forEach((dot, index) => {
+                dot.classList.toggle('active', index === activeIndex);
+            });
         }
 
-        // Initial button state
+        // Initialize carousel
         if (blogSlider) {
-            blogSlider.addEventListener('scroll', updateBlogButtons);
-            updateBlogButtons();
+            createDots();
+            blogSlider.addEventListener('scroll', updateBlogCarousel);
+            updateBlogCarousel();
         }
 
         // Update on window resize
-        window.addEventListener('resize', updateBlogButtons);
+        window.addEventListener('resize', () => {
+            createDots();
+            updateBlogCarousel();
+        });
 
         // Mobile Menu Toggle (Enhanced)
         const hamburger = document.getElementById('hamburger');

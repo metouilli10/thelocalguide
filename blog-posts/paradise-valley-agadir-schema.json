@@ -1,0 +1,103 @@
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Is Paradise Valley worth visiting?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Absolutely! Paradise Valley is one of the most beautiful natural spots in the Agadir region. The combination of turquoise swimming pools, dramatic canyon scenery, and authentic Berber culture makes it a highlight of any Morocco trip. It's consistently rated as the #1 day trip from Agadir."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How long do you need at Paradise Valley?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Plan for 4-6 hours total including transport. You'll want 2-3 hours at the valley itself to swim, hike, and enjoy lunch. Some visitors spend a full day exploring the extended trails and multiple pool areas."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can you swim at Paradise Valley?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes! Swimming is one of the main attractions. The natural rock pools have crystal-clear, turquoise water that's perfect for swimming. The water is cool and refreshing—around 18-22°C depending on the season. Bring swimwear and water shoes for the best experience."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Is Paradise Valley safe?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes, Paradise Valley is generally safe for visitors. The main risks are slippery rocks (wear proper footwear), sun exposure (bring protection), and in winter, flash floods (check conditions before visiting). Always supervise children near water and don't jump into pools without checking depth first."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How much does it cost to visit Paradise Valley?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "There's no official entrance fee to Paradise Valley. If you book a tour, expect to pay €20-35 per person including transport, guide, and lunch. If driving yourself, budget for parking tips (10-20 MAD), local guide (50-100 MAD optional), and lunch (80-120 MAD)."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Is Paradise Valley suitable for non-swimmers?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes! You don't need to swim to enjoy Paradise Valley. The hiking, scenery, and cultural experiences are wonderful even if you never get in the water. Many visitors simply dip their feet in the pools while enjoying the views."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What should I wear to Paradise Valley?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Wear comfortable clothes you don't mind getting wet. Swimwear under shorts/t-shirt works well. Bring water shoes or sandals with good grip for walking on rocks. Don't wear flip-flops—they're slippery and dangerous on wet rocks."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Is there food at Paradise Valley?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes, there are small cafes at the entrance selling drinks and snacks. But the real experience is eating traditional Berber tagine at a family home in the village. Most tours include lunch; if going independently, ask locals to recommend a family who serves lunch."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can you visit Paradise Valley in winter?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes, but with caution. Winter (December-February) brings cooler temperatures and the possibility of rain. The water is cold for swimming, and flash floods can occur after heavy rain. Check weather conditions and local advice before visiting in winter."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Is cliff jumping safe at Paradise Valley?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Some pools have natural cliff jumping spots (2-5 meters), but ALWAYS check depth before jumping and only jump where you see locals doing so. Water levels vary by season, and hidden rocks can be dangerous. Never dive headfirst. If in doubt, don't jump."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How far is Paradise Valley from Agadir?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Paradise Valley is approximately 25km north of Agadir city center. The drive takes about 45 minutes via the scenic mountain road. From Taghazout, it's about 30 minutes."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Do I need a guide for Paradise Valley?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "A guide isn't strictly required, but we highly recommend one. Local guides know the best spots, can share cultural insights, and help you avoid crowds. They also ensure you don't miss the hidden gems. A good guide typically costs 50-100 MAD for a few hours, or is included in organized tours."
+      }
+    }
+  ]
+}
+

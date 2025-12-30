@@ -1,0 +1,103 @@
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Is quad biking in Agadir safe?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes, quad biking in Agadir is safe when you choose a reputable operator. All our guides are licensed by the Moroccan Tourism Board, and we provide full safety equipment and training. We've operated thousands of tours without serious incidents. Safety is always our #1 priority."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Do I need experience to go quad biking?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No experience required! We provide a comprehensive 15-minute safety briefing and training session before every tour. Our guides stay with you throughout and adjust the pace to your comfort level. Most first-timers are comfortable within the first 10 minutes of riding."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What should I wear for quad biking in Agadir?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Wear comfortable closed-toe shoes (sneakers or hiking boots), long pants, and bring layers. Avoid loose clothing, sandals, or flip-flops. We provide helmets, goggles, and gloves. In summer, wear light, breathable fabrics. In winter, bring a warm jacket for morning tours."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How much does quad biking cost in Agadir?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Quad biking tours in Agadir range from €35-80 depending on duration and what's included. A standard 2-3 hour desert tour costs €40-55 and includes hotel pickup, licensed guide, safety equipment, insurance, and a Berber tea break. Beware of operators with hidden fees—reputable companies include everything in the advertised price."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can I book quad biking on the same day?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes! We accept same-day bookings via WhatsApp. Just message us with your hotel name and preferred time, and we'll confirm availability within 30 minutes. During peak season (December-February, July-August), we recommend booking at least 24 hours in advance."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What's included in the quad biking tour?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Our tours include: free hotel pickup and drop-off, licensed English-speaking guide, quad bike rental, safety equipment (helmet, goggles, gloves), insurance coverage, traditional Berber tea break, and photo stops. Everything is included—no hidden fees."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Do you pick up from Taghazout, Tamri, or Paradise Valley?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes! We offer free pickup from Agadir, Taghazout, Tamri, and Paradise Valley. Just provide your hotel name when booking, and we'll confirm your pickup time. If your accommodation isn't listed, WhatsApp us—we can usually arrange pickup from nearby locations."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What's the best time for quad biking in Agadir?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "The best times are morning (8-11 AM) for cooler temperatures or sunset (4-7 PM) for golden hour lighting and desert sunsets. Avoid midday in summer when temperatures exceed 35°C. The best seasons are spring (March-May) and fall (September-November) for perfect weather."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can I bring my camera or phone?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes! We encourage photos. Bring your phone or camera with a protective case or ziplock bag to protect from sand. Our guides will stop at the best photo spots and can take photos of you riding. We have secure storage at our base for valuables you don't want to take on the tour."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What if it rains?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Quad biking tours run in light rain—it can actually be a fun experience! If weather is severe (rare in Agadir), we'll offer to reschedule or provide a full refund. We monitor weather forecasts and will WhatsApp you the day before if conditions look problematic."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Is quad biking suitable for children?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "The minimum age for quad biking is 16 years. Children aged 16-17 can participate with parental consent. For younger children, we recommend our camel riding tours, which are suitable for all ages and provide a gentler introduction to desert adventures."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Do I need a driving license for quad biking?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No driving license is required for quad biking tours in Morocco. Our tours take place on private land and desert trails, not public roads. We provide full training before the tour, so no prior experience is necessary."
+      }
+    }
+  ]
+}
+

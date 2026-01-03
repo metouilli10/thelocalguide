@@ -5,6 +5,26 @@
       "has": [{ "type": "host", "value": "www.agadirlocalguide.com" }],
       "destination": "https://agadirlocalguide.com/:path*",
       "permanent": true
+    },
+    {
+      "source": "/tour-paradise-valley-agadir.html",
+      "destination": "/tours/tour-paradise-valley-agadir-new.html",
+      "permanent": true
+    },
+    {
+      "source": "/tours/tour-paradise-valley-agadir.html",
+      "destination": "/tours/tour-paradise-valley-agadir-new.html",
+      "permanent": true
+    },
+    {
+      "source": "/tours/tour-quad-biking-agadir.html",
+      "destination": "/tours/tour-agadir-half-quad-biking-adventure.html",
+      "permanent": true
+    },
+    {
+      "source": "/tour-quad-biking-agadir.html",
+      "destination": "/tours/tour-agadir-half-quad-biking-adventure.html",
+      "permanent": true
     }
   ],
   "headers": [

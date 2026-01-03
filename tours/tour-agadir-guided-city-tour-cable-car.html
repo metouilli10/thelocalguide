@@ -92,59 +92,76 @@
     
     <!-- Schema.org Structured Data -->
     <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "TouristTrip",
-      "name": "Agadir Guided City Tour with Cable Car",
-      "description": "Experience the best of Agadir on this comprehensive guided city tour featuring a scenic cable car ride. Visit historic Kasbah ruins, explore Souk El Had market, enjoy the marina, and take in panoramic views from the cable car.",
-      "image": "https://agadirlocalguide.com/img/excursions/Agadir%20City%20Tour/agadir%201.jpg",
-      "provider": {
-        "@type": "TouristInformationCenter",
-        "name": "Agadir Local Guide"
+    [
+      {
+        "@context": "https://schema.org",
+        "@type": "TouristTrip",
+        "name": "Agadir Guided City Tour with Cable Car",
+        "description": "Experience the best of Agadir on this comprehensive guided city tour featuring a scenic cable car ride. Visit historic Kasbah ruins, explore Souk El Had market, enjoy the marina, and take in panoramic views from the cable car.",
+        "image": "https://agadirlocalguide.com/img/excursions/Agadir%20City%20Tour/agadir%201.jpg",
+        "provider": {
+          "@type": "TouristInformationCenter",
+          "name": "Agadir Local Guide",
+          "url": "https://agadirlocalguide.com"
+        },
+        "tourBookingPage": "https://agadirlocalguide.com/tours/tour-agadir-guided-city-tour-cable-car.html",
+        "itinerary": {
+          "@type": "ItemList",
+          "itemListElement": [
+            {
+              "@type": "TouristDestination",
+              "name": "Hotel Pickup",
+              "description": "Complimentary pickup from your hotel in Agadir"
+            },
+            {
+              "@type": "TouristDestination",
+              "name": "Kasbah Agadir Oufella",
+              "description": "Historic Kasbah ruins with panoramic views"
+            },
+            {
+              "@type": "TouristDestination",
+              "name": "Cable Car Ride",
+              "description": "Scenic cable car ride with breathtaking views of Agadir Bay"
+            },
+            {
+              "@type": "TouristDestination",
+              "name": "Souk El Had",
+              "description": "Traditional Moroccan market"
+            },
+            {
+              "@type": "TouristDestination",
+              "name": "Agadir Marina",
+              "description": "Modern marina with shops and restaurants"
+            }
+          ]
+        }
       },
-      "aggregateRating": {
-        "@type": "AggregateRating",
-        "ratingValue": "4.9",
-        "reviewCount": "428"
-      },
-      "offers": {
-        "@type": "Offer",
-        "price": "10",
-        "priceCurrency": "EUR",
-        "availability": "https://schema.org/InStock",
-        "url": "https://agadirlocalguide.com/tours/tour-agadir-guided-city-tour-cable-car.html"
-      },
-      "itinerary": {
-        "@type": "ItemList",
-        "itemListElement": [
-          {
-            "@type": "TouristDestination",
-            "name": "Hotel Pickup",
-            "description": "Complimentary pickup from your hotel in Agadir"
-          },
-          {
-            "@type": "TouristDestination",
-            "name": "Kasbah Agadir Oufella",
-            "description": "Historic Kasbah ruins with panoramic views"
-          },
-          {
-            "@type": "TouristDestination",
-            "name": "Cable Car Ride",
-            "description": "Scenic cable car ride with breathtaking views of Agadir Bay"
-          },
-          {
-            "@type": "TouristDestination",
-            "name": "Souk El Had",
-            "description": "Traditional Moroccan market"
-          },
-          {
-            "@type": "TouristDestination",
-            "name": "Agadir Marina",
-            "description": "Modern marina with shops and restaurants"
-          }
-        ]
+      {
+        "@context": "https://schema.org",
+        "@type": "Product",
+        "name": "Agadir Guided City Tour with Cable Car",
+        "description": "Experience the best of Agadir on this comprehensive guided city tour featuring a scenic cable car ride.",
+        "image": "https://agadirlocalguide.com/img/excursions/Agadir%20City%20Tour/agadir%201.jpg",
+        "brand": {
+          "@type": "TouristInformationCenter",
+          "name": "Agadir Local Guide"
+        },
+        "aggregateRating": {
+          "@type": "AggregateRating",
+          "ratingValue": 4.9,
+          "reviewCount": 428,
+          "bestRating": 5,
+          "worstRating": 1
+        },
+        "offers": {
+          "@type": "Offer",
+          "price": "10",
+          "priceCurrency": "EUR",
+          "availability": "https://schema.org/InStock",
+          "url": "https://agadirlocalguide.com/tours/tour-agadir-guided-city-tour-cable-car.html"
+        }
       }
-    }
+    ]
     </script>
     <link rel="icon" href="../img/logoalg.png">
 

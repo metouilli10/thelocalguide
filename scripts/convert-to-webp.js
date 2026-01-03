@@ -11,10 +11,12 @@ const path = require('path');
 const { execSync } = require('child_process');
 
 // Configuration
-const IMG_DIR = path.join(__dirname, 'img');
-const HTML_DIR = __dirname;
-const QUALITY = 85; // WebP quality (0-100)
+const ROOT_DIR = path.join(__dirname, '..'); // Go up one level from scripts/
+const IMG_DIR = path.join(ROOT_DIR, 'img');
+const HTML_DIR = ROOT_DIR;
+const QUALITY = 80; // WebP quality (0-100) - Lower quality for better compression
 const SKIP_EXISTING = true; // Skip if WebP already exists
+const MIN_SIZE_REDUCTION = 0.05; // Only keep WebP if it's at least 5% smaller
 
 // Supported image formats
 const IMAGE_EXTENSIONS = ['.jpg', '.jpeg', '.png', '.JPG', '.JPEG', '.PNG'];
@@ -51,8 +53,16 @@ function convertToWebP(imagePath) {
   
   // Skip if WebP already exists
   if (SKIP_EXISTING && fs.existsSync(webpPath)) {
-    console.log(`⏭️  Skipping (WebP exists): ${path.relative(__dirname, imagePath)}`);
-    return webpPath;
+    // Check if existing WebP is actually smaller
+    const originalSize = fs.statSync(imagePath).size;
+    const webpSize = fs.statSync(webpPath).size;
+    if (webpSize < originalSize * (1 - MIN_SIZE_REDUCTION)) {
+      console.log(`⏭️  Skipping (WebP exists): ${path.relative(ROOT_DIR, imagePath)}`);
+      return webpPath;
+    } else {
+      // Existing WebP is not good enough, remove it and reconvert
+      fs.unlinkSync(webpPath);
+    }
   }
   
   try {
@@ -66,8 +76,16 @@ function convertToWebP(imagePath) {
     const originalSize = fs.statSync(imagePath).size;
     const webpSize = fs.statSync(webpPath).size;
     const savings = ((1 - webpSize / originalSize) * 100).toFixed(1);
+    const sizeReduction = 1 - (webpSize / originalSize);
     
-    console.log(`✅ Converted: ${path.relative(__dirname, imagePath)} (${savings}% smaller)`);
+    // Only keep WebP if it's actually smaller (by at least MIN_SIZE_REDUCTION)
+    if (sizeReduction < MIN_SIZE_REDUCTION) {
+      console.log(`⚠️  WebP larger, removing: ${path.relative(ROOT_DIR, imagePath)} (WebP is ${Math.abs(parseFloat(savings))}% larger)`);
+      fs.unlinkSync(webpPath);
+      return null;
+    }
+    
+    console.log(`✅ Converted: ${path.relative(ROOT_DIR, imagePath)} (${savings}% smaller)`);
     return webpPath;
   } catch (error) {
     console.error(`❌ Error converting ${imagePath}:`, error.message);
@@ -172,7 +190,12 @@ function updateHTMLFile(htmlPath) {
     const height = heightMatch ? heightMatch[1] : '';
     
     // Build WebP relative path (use forward slashes for web)
-    const webpSrc = path.relative(path.dirname(htmlPath), webpPath).replace(/\\/g, '/');
+    // Handle relative paths correctly
+    let webpSrc = path.relative(path.dirname(htmlPath), webpPath).replace(/\\/g, '/');
+    // Ensure path starts with ./ or is relative
+    if (!webpSrc.startsWith('.')) {
+      webpSrc = './' + webpSrc;
+    }
     const originalSrc = m.src.replace(/\\/g, '/');
     
     // Create picture element
@@ -181,13 +204,31 @@ function updateHTMLFile(htmlPath) {
     pictureElement += `\n  <img src="${originalSrc}"${alt ? ` alt="${alt}"` : ''}${classAttr}${width ? ` width="${width}"` : ''}${height ? ` height="${height}"` : ''} loading="lazy" decoding="async">`;
     pictureElement += `\n</picture>`;
     
+    // Preserve other attributes from original img tag
+    const otherAttrs = m.match.replace(/src=["'][^"']*["']/i, '')
+                              .replace(/alt=["'][^"']*["']/i, '')
+                              .replace(/class=["'][^"']*["']/i, '')
+                              .replace(/width=["']?[^"'\s]*["']?/i, '')
+                              .replace(/height=["']?[^"'\s]*["']?/i, '')
+                              .replace(/loading=["'][^"']*["']/i, '')
+                              .replace(/decoding=["'][^"']*["']/i, '')
+                              .trim();
+    
+    // Add other attributes to img tag if they exist
+    if (otherAttrs) {
+      pictureElement = pictureElement.replace(
+        /<img src=([^>]+)>/,
+        `<img src=$1 ${otherAttrs}>`
+      );
+    }
+    
     // Replace in content
     content = content.substring(0, m.index) + pictureElement + content.substring(m.index + m.match.length);
   }
   
   if (modified) {
     fs.writeFileSync(htmlPath, content, 'utf8');
-    console.log(`📝 Updated: ${path.relative(__dirname, htmlPath)}`);
+    console.log(`📝 Updated: ${path.relative(ROOT_DIR, htmlPath)}`);
     return true;
   }
   

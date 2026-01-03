@@ -3,7 +3,7 @@
         xmlns:xhtml="http://www.w3.org/1999/xhtml"
         xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
     
-    <!-- Homepage -->
+    <!-- Homepage - Highest Priority -->
     <url>
         <loc>https://agadirlocalguide.com/</loc>
         <lastmod>2025-01-31</lastmod>
@@ -11,76 +11,70 @@
         <priority>1.0</priority>
     </url>
     
-    <!-- Main Pages -->
+    <!-- Main Navigation Pages - High Priority -->
     <url>
         <loc>https://agadirlocalguide.com/all-tours.html</loc>
         <lastmod>2025-01-31</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.95</priority>
     </url>
-
+    
     <url>
-        <loc>https://agadirlocalguide.com/agadir-tours.html</loc>
+        <loc>https://agadirlocalguide.com/travel-guide.html</loc>
         <lastmod>2025-01-31</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.9</priority>
-    </url>
-
-    <url>
-        <loc>https://agadirlocalguide.com/day-trips-from-agadir.html</loc>
-        <lastmod>2025-01-31</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.9</priority>
-    </url>
-    
-    <url>
-        <loc>https://agadirlocalguide.com/things-to-do-in-agadir.html</loc>
-        <lastmod>2025-01-31</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.8</priority>
-    </url>
-    
-    <url>
-        <loc>https://agadirlocalguide.com/things-to-do-in-agadir-adventure.html</loc>
-        <lastmod>2025-01-31</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.8</priority>
-    </url>
-    
-    <url>
-        <loc>https://agadirlocalguide.com/blog.html</loc>
-        <lastmod>2025-01-31</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.8</priority>
-    </url>
-    
-    <url>
-        <loc>https://agadirlocalguide.com/contact.html</loc>
-        <lastmod>2025-01-31</lastmod>
-        <changefreq>monthly</changefreq>
-        <priority>0.7</priority>
     </url>
     
     <url>
         <loc>https://agadirlocalguide.com/faq.html</loc>
         <lastmod>2025-01-31</lastmod>
         <changefreq>monthly</changefreq>
+        <priority>0.85</priority>
+    </url>
+    
+    <url>
+        <loc>https://agadirlocalguide.com/contact-us.html</loc>
+        <lastmod>2025-01-31</lastmod>
+        <changefreq>monthly</changefreq>
         <priority>0.8</priority>
     </url>
     
-    <!-- Tour Pages - High Priority -->
+    <!-- Legal Pages - Lower Priority -->
+    <url>
+        <loc>https://agadirlocalguide.com/terms-and-conditions.html</loc>
+        <lastmod>2025-01-31</lastmod>
+        <changefreq>yearly</changefreq>
+        <priority>0.5</priority>
+    </url>
+    
+    <url>
+        <loc>https://agadirlocalguide.com/privacy-policy.html</loc>
+        <lastmod>2025-01-31</lastmod>
+        <changefreq>yearly</changefreq>
+        <priority>0.5</priority>
+    </url>
+    
+    <url>
+        <loc>https://agadirlocalguide.com/booking-policy.html</loc>
+        <lastmod>2025-01-31</lastmod>
+        <changefreq>yearly</changefreq>
+        <priority>0.5</priority>
+    </url>
+    
+    <!-- Tour Pages - High Priority (Main Revenue Drivers) -->
     <url>
         <loc>https://agadirlocalguide.com/tours/tour-paradise-valley-agadir-new.html</loc>
         <lastmod>2025-01-31</lastmod>
         <changefreq>weekly</changefreq>
-        <priority>0.9</priority>
+        <priority>0.95</priority>
     </url>
     
     <url>
         <loc>https://agadirlocalguide.com/tours/tour-agadir-half-quad-biking-adventure.html</loc>
         <lastmod>2025-01-31</lastmod>
         <changefreq>weekly</changefreq>
-        <priority>0.9</priority>
+        <priority>0.95</priority>
     </url>
     
     <url>
@@ -143,131 +137,114 @@
         <loc>https://agadirlocalguide.com/tours/tour-cooking-class-agadir.html</loc>
         <lastmod>2025-01-31</lastmod>
         <changefreq>weekly</changefreq>
-        <priority>0.8</priority>
+        <priority>0.85</priority>
     </url>
     
     <url>
         <loc>https://agadirlocalguide.com/tours/tour-moroccan-hammam-agadir.html</loc>
         <lastmod>2025-01-31</lastmod>
         <changefreq>weekly</changefreq>
-        <priority>0.8</priority>
+        <priority>0.85</priority>
     </url>
     
     <url>
         <loc>https://agadirlocalguide.com/tours/tour-souss-massa-park-agadir.html</loc>
         <lastmod>2025-01-31</lastmod>
         <changefreq>weekly</changefreq>
-        <priority>0.8</priority>
+        <priority>0.85</priority>
     </url>
     
     <url>
         <loc>https://agadirlocalguide.com/tours/tour-morning-camel-ride-agadir.html</loc>
         <lastmod>2025-01-31</lastmod>
         <changefreq>weekly</changefreq>
-        <priority>0.8</priority>
+        <priority>0.85</priority>
     </url>
     
-    <!-- Day Trip Pages -->
+    <!-- Day Trip Pages - High Priority -->
     <url>
         <loc>https://agadirlocalguide.com/tours/day-trip-marrakech-from-agadir-new.html</loc>
         <lastmod>2025-01-31</lastmod>
         <changefreq>weekly</changefreq>
-        <priority>0.9</priority>
+        <priority>0.95</priority>
     </url>
     
     <url>
         <loc>https://agadirlocalguide.com/tours/day-trip-essaouira-from-agadir-new.html</loc>
         <lastmod>2025-01-31</lastmod>
         <changefreq>weekly</changefreq>
-        <priority>0.9</priority>
+        <priority>0.95</priority>
     </url>
     
     <url>
         <loc>https://agadirlocalguide.com/tours/day-trip-taroudant-from-agadir-new.html</loc>
         <lastmod>2025-01-31</lastmod>
         <changefreq>weekly</changefreq>
-        <priority>0.8</priority>
+        <priority>0.9</priority>
     </url>
     
-    <!-- Guide Pages -->
+    <!-- Blog Posts - High SEO Value -->
     <url>
-        <loc>https://agadirlocalguide.com/paradise-valley-agadir-guide.html</loc>
+        <loc>https://agadirlocalguide.com/blog/agadir-day-trips.html</loc>
         <lastmod>2025-01-31</lastmod>
         <changefreq>monthly</changefreq>
-        <priority>0.8</priority>
+        <priority>0.9</priority>
     </url>
     
     <url>
-        <loc>https://agadirlocalguide.com/quad-biking-agadir-guide.html</loc>
+        <loc>https://agadirlocalguide.com/blog/top-10-things-to-do-agadir-2026.html</loc>
         <lastmod>2025-01-31</lastmod>
         <changefreq>monthly</changefreq>
-        <priority>0.8</priority>
+        <priority>0.9</priority>
     </url>
     
-    <!-- Blog Posts - New Content -->
     <url>
         <loc>https://agadirlocalguide.com/blog/paradise-valley-agadir-guide.html</loc>
-        <lastmod>2025-01-01</lastmod>
+        <lastmod>2025-01-31</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.85</priority>
     </url>
     
     <url>
-        <loc>https://agadirlocalguide.com/blog/quad-biking-agadir-guide.html</loc>
-        <lastmod>2025-01-15</lastmod>
+        <loc>https://agadirlocalguide.com/blog/agadir-cruise-excursions.html</loc>
+        <lastmod>2025-01-31</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.85</priority>
     </url>
     
     <url>
         <loc>https://agadirlocalguide.com/blog/things-to-do-agadir-families.html</loc>
-        <lastmod>2025-01-01</lastmod>
+        <lastmod>2025-01-31</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.85</priority>
     </url>
     
     <url>
-        <loc>https://agadirlocalguide.com/blog/agadir-day-trips.html</loc>
-        <lastmod>2025-01-01</lastmod>
-        <changefreq>monthly</changefreq>
-        <priority>0.9</priority>
-    </url>
-    
-    <url>
-        <loc>https://agadirlocalguide.com/blog/agadir-cruise-excursions.html</loc>
-        <lastmod>2025-01-01</lastmod>
+        <loc>https://agadirlocalguide.com/blog/quad-biking-agadir-guide.html</loc>
+        <lastmod>2025-01-31</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.85</priority>
     </url>
     
-    <!-- Special Pages -->
     <url>
-        <loc>https://agadirlocalguide.com/berber-villages-agadir.html</loc>
+        <loc>https://agadirlocalguide.com/blog/quad-biking-paradise-valley.html</loc>
         <lastmod>2025-01-31</lastmod>
         <changefreq>monthly</changefreq>
-        <priority>0.7</priority>
+        <priority>0.8</priority>
     </url>
     
     <url>
-        <loc>https://agadirlocalguide.com/local-morning-agadir.html</loc>
+        <loc>https://agadirlocalguide.com/blog/quad-biking-taghazout.html</loc>
         <lastmod>2025-01-31</lastmod>
         <changefreq>monthly</changefreq>
-        <priority>0.7</priority>
+        <priority>0.8</priority>
     </url>
     
     <url>
-        <loc>https://agadirlocalguide.com/rainbow-village-agadir.html</loc>
+        <loc>https://agadirlocalguide.com/blog/quad-biking-tamri-banana-beach.html</loc>
         <lastmod>2025-01-31</lastmod>
         <changefreq>monthly</changefreq>
-        <priority>0.7</priority>
+        <priority>0.8</priority>
     </url>
-    
-    <url>
-        <loc>https://agadirlocalguide.com/crocoparc-agadir-tour.html</loc>
-        <lastmod>2025-01-31</lastmod>
-        <changefreq>monthly</changefreq>
-        <priority>0.7</priority>
-    </url>
-    
-</urlset>
 
+</urlset>

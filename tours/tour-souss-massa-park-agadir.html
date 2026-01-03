@@ -99,51 +99,73 @@
     
     <!-- Schema.org Structured Data -->
     <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "TouristTrip",
-      "name": "Souss Massa National Park Tour",
-      "description": "Half-day birdwatching and wildlife tour to Souss Massa National Park from Agadir, featuring flamingos, endangered bald ibis, and over 250 bird species.",
-      "image": "https://agadirlocalguide.com/img/excursions/Souss Massa Park/massa 1.jpg",
-      "provider": {
-        "@type": "TouristInformationCenter",
-        "name": "Agadir Local Guide",
-        "url": "https://agadirlocalguide.com"
+    [
+      {
+        "@context": "https://schema.org",
+        "@type": "TouristTrip",
+        "name": "Souss Massa National Park Tour",
+        "description": "Half-day birdwatching and wildlife tour to Souss Massa National Park from Agadir, featuring flamingos, endangered bald ibis, and over 250 bird species.",
+        "image": "https://agadirlocalguide.com/img/excursions/Souss Massa Park/massa 1.jpg",
+        "provider": {
+          "@type": "TouristInformationCenter",
+          "name": "Agadir Local Guide",
+          "url": "https://agadirlocalguide.com"
+        },
+        "tourBookingPage": "https://agadirlocalguide.com/tours/tour-souss-massa-national-park-agadir.html",
+        "itinerary": {
+          "@type": "ItemList",
+          "itemListElement": [
+            {
+              "@type": "ListItem",
+              "position": 1,
+              "name": "Hotel Pickup & Journey to the Park"
+            },
+            {
+              "@type": "ListItem",
+              "position": 2,
+              "name": "Bald Ibis Observation & Birdwatching"
+            },
+            {
+              "@type": "ListItem",
+              "position": 3,
+              "name": "Flamingo Lagoon & Coastal Exploration"
+            }
+          ]
+        },
+        "offers": {
+          "@type": "Offer",
+          "price": "40",
+          "priceCurrency": "EUR",
+          "availability": "https://schema.org/InStock",
+          "url": "https://agadirlocalguide.com/tours/tour-souss-massa-national-park-agadir.html"
+        }
       },
-      "tourBookingPage": "https://agadirlocalguide.com/tours/tour-souss-massa-national-park-agadir.html",
-      "itinerary": {
-        "@type": "ItemList",
-        "itemListElement": [
-          {
-            "@type": "ListItem",
-            "position": 1,
-            "name": "Hotel Pickup & Journey to the Park"
-          },
-          {
-            "@type": "ListItem",
-            "position": 2,
-            "name": "Bald Ibis Observation & Birdwatching"
-          },
-          {
-            "@type": "ListItem",
-            "position": 3,
-            "name": "Flamingo Lagoon & Coastal Exploration"
-          }
-        ]
-      },
-      "offers": {
-        "@type": "Offer",
-        "price": "40",
-        "priceCurrency": "EUR",
-        "availability": "https://schema.org/InStock",
-        "url": "https://agadirlocalguide.com/tours/tour-souss-massa-national-park-agadir.html"
-      },
-      "aggregateRating": {
-        "@type": "AggregateRating",
-        "ratingValue": "4.6",
-        "reviewCount": "110"
+      {
+        "@context": "https://schema.org",
+        "@type": "Product",
+        "name": "Souss Massa National Park Tour",
+        "description": "Half-day birdwatching and wildlife tour to Souss Massa National Park from Agadir, featuring flamingos, endangered bald ibis, and over 250 bird species.",
+        "image": "https://agadirlocalguide.com/img/excursions/Souss Massa Park/massa 1.jpg",
+        "brand": {
+          "@type": "Brand",
+          "name": "Agadir Local Guide"
+        },
+        "aggregateRating": {
+          "@type": "AggregateRating",
+          "ratingValue": 4.6,
+          "reviewCount": 110,
+          "bestRating": 5,
+          "worstRating": 1
+        },
+        "offers": {
+          "@type": "Offer",
+          "price": "40",
+          "priceCurrency": "EUR",
+          "availability": "https://schema.org/InStock",
+          "url": "https://agadirlocalguide.com/tours/tour-souss-massa-national-park-agadir.html"
+        }
       }
-    }
+    ]
     </script>
 
     <!-- Google Fonts: Inter + Poppins -->

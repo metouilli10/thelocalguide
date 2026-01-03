@@ -97,28 +97,26 @@
     
     <!-- Schema.org Structured Data -->
     <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "TouristTrip",
-      "name": "Morning Camel Ride in Agadir - Beach Experience",
-      "description": "Experience a refreshing morning camel ride on Agadir's pristine beach. Traditional Moroccan mint tea ceremony and breathtaking coastal views included.",
-      "image": "https://agadirlocalguide.com/img/excursions/Camel Ride/camel ride 1.jpg",
-      "provider": {
-        "@type": "TouristInformationCenter",
-        "name": "Agadir Local Guide"
-      },
-      "aggregateRating": {
-        "@type": "AggregateRating",
-        "ratingValue": "4.8",
-        "reviewCount": "289"
-      },
-      "offers": {
-        "@type": "Offer",
-        "price": "30",
-        "priceCurrency": "EUR",
-        "availability": "https://schema.org/InStock",
-        "url": "https://agadirlocalguide.com/tours/tour-camel-ride-morning-agadir.html"
-      },
+    [
+      {
+        "@context": "https://schema.org",
+        "@type": "TouristTrip",
+        "name": "Morning Camel Ride in Agadir - Beach Experience",
+        "description": "Experience a refreshing morning camel ride on Agadir's pristine beach. Traditional Moroccan mint tea ceremony and breathtaking coastal views included.",
+        "image": "https://agadirlocalguide.com/img/excursions/Camel Ride/camel ride 1.jpg",
+        "provider": {
+          "@type": "TouristInformationCenter",
+          "name": "Agadir Local Guide",
+          "url": "https://agadirlocalguide.com"
+        },
+        "tourBookingPage": "https://agadirlocalguide.com/tours/tour-camel-ride-morning-agadir.html",
+        "offers": {
+          "@type": "Offer",
+          "price": "30",
+          "priceCurrency": "EUR",
+          "availability": "https://schema.org/InStock",
+          "url": "https://agadirlocalguide.com/tours/tour-camel-ride-morning-agadir.html"
+        },
       "itinerary": {
         "@type": "ItemList",
         "itemListElement": [
@@ -148,8 +146,33 @@
             "name": "Return to Hotel"
           }
         ]
+      },
+      {
+        "@context": "https://schema.org",
+        "@type": "Product",
+        "name": "Morning Camel Ride in Agadir - Beach Experience",
+        "description": "Experience a refreshing morning camel ride on Agadir's pristine beach. Traditional Moroccan mint tea ceremony and breathtaking coastal views included.",
+        "image": "https://agadirlocalguide.com/img/excursions/Camel Ride/camel ride 1.jpg",
+        "brand": {
+          "@type": "Brand",
+          "name": "Agadir Local Guide"
+        },
+        "aggregateRating": {
+          "@type": "AggregateRating",
+          "ratingValue": 4.8,
+          "reviewCount": 289,
+          "bestRating": 5,
+          "worstRating": 1
+        },
+        "offers": {
+          "@type": "Offer",
+          "price": "30",
+          "priceCurrency": "EUR",
+          "availability": "https://schema.org/InStock",
+          "url": "https://agadirlocalguide.com/tours/tour-camel-ride-morning-agadir.html"
+        }
       }
-    }
+    ]
     </script>
     <link rel="icon" href="../img/logoalg.png">
 

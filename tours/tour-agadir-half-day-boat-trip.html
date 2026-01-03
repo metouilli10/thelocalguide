@@ -93,57 +93,64 @@
     
     <!-- Schema.org Structured Data -->
     <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "Product",
-      "name": "Agadir Half Day Boat Trip - Atlantic Ocean Cruise",
-      "description": "Experience Agadir from the Atlantic Ocean! Enjoy a relaxing 3-4 hour boat cruise with swimming, snorkeling, and stunning coastal views of Agadir bay. Perfect for families. Departs from Agadir Marina.",
-      "image": "https://agadirlocalguide.com/img/excursions/Boat Trip/boat 1.jpg",
-      "brand": {
-        "@type": "Brand",
-        "name": "Agadir Local Guide"
+    [
+      {
+        "@context": "https://schema.org",
+        "@type": "Product",
+        "name": "Agadir Half Day Boat Trip - Atlantic Ocean Cruise",
+        "description": "Experience Agadir from the Atlantic Ocean! Enjoy a relaxing 3-4 hour boat cruise with swimming, snorkeling, and stunning coastal views of Agadir bay. Perfect for families. Departs from Agadir Marina.",
+        "image": "https://agadirlocalguide.com/img/excursions/Boat Trip/boat 1.jpg",
+        "brand": {
+          "@type": "Brand",
+          "name": "Agadir Local Guide"
+        },
+        "aggregateRating": {
+          "@type": "AggregateRating",
+          "ratingValue": 4.7,
+          "reviewCount": 394,
+          "bestRating": 5,
+          "worstRating": 1
+        },
+        "offers": {
+          "@type": "Offer",
+          "price": "40",
+          "priceCurrency": "EUR",
+          "availability": "https://schema.org/InStock",
+          "url": "https://agadirlocalguide.com/tours/tour-agadir-half-day-boat-trip.html"
+        }
       },
-      "aggregateRating": {
-        "@type": "AggregateRating",
-        "ratingValue": "4.7",
-        "reviewCount": "394"
-      },
-      "offers": {
-        "@type": "Offer",
-        "price": "40",
-        "priceCurrency": "EUR",
-        "availability": "https://schema.org/InStock",
-        "url": "https://agadirlocalguide.com/tours/tour-agadir-half-day-boat-trip.html"
+      {
+        "@context": "https://schema.org",
+        "@type": "TouristTrip",
+        "name": "Agadir Half Day Boat Trip",
+        "description": "3-4 hour Atlantic Ocean cruise with swimming, snorkeling, and stunning coastal views",
+        "tourBookingPage": "https://agadirlocalguide.com/tours/tour-agadir-half-day-boat-trip.html",
+        "provider": {
+          "@type": "TouristInformationCenter",
+          "name": "Agadir Local Guide",
+          "url": "https://agadirlocalguide.com"
+        },
+        "itinerary": {
+          "@type": "ItemList",
+          "itemListElement": [
+            {
+              "@type": "TouristDestination",
+              "name": "Agadir Marina Departure"
+            },
+            {
+              "@type": "TouristDestination",
+              "name": "Coastal Cruise & Scenic Views"
+            },
+            {
+              "@type": "TouristDestination",
+              "name": "Swimming & Snorkeling Stop"
+            }
+          ]
+        },
+        "duration": "PT3H30M",
+        "touristType": "Family, Couples, Solo Travelers"
       }
-    }
-    </script>
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "TouristTrip",
-      "name": "Agadir Half Day Boat Trip",
-      "description": "3-4 hour Atlantic Ocean cruise with swimming, snorkeling, and stunning coastal views",
-      "tourBookingPage": "https://agadirlocalguide.com/tours/tour-agadir-half-day-boat-trip.html",
-      "itinerary": {
-        "@type": "ItemList",
-        "itemListElement": [
-          {
-            "@type": "TouristDestination",
-            "name": "Agadir Marina Departure"
-          },
-          {
-            "@type": "TouristDestination",
-            "name": "Coastal Cruise & Scenic Views"
-          },
-          {
-            "@type": "TouristDestination",
-            "name": "Swimming & Snorkeling Stop"
-          }
-        ]
-      },
-      "duration": "PT3H30M",
-      "touristType": "Family, Couples, Solo Travelers"
-    }
+    ]
     </script>
 
     <!-- Google Fonts: Inter + Poppins -->

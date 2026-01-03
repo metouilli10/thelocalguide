@@ -93,61 +93,83 @@
 
     <!-- Schema.org Structured Data -->
     <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "TouristTrip",
-      "name": "Agadir Cooking Class Experience",
-      "description": "Experience authentic Moroccan cooking in Agadir! Learn to make tagine, couscous & traditional dishes with a local chef. Market visit included. Hands-on cooking class experience.",
-      "image": "https://agadirlocalguide.com/img/excursions/COOKING CLASS/cooking class 1.jpg",
-      "provider": {
-        "@type": "TouristInformationCenter",
-        "name": "Agadir Local Guide",
-        "url": "https://agadirlocalguide.com"
+    [
+      {
+        "@context": "https://schema.org",
+        "@type": "TouristTrip",
+        "name": "Agadir Cooking Class Experience",
+        "description": "Experience authentic Moroccan cooking in Agadir! Learn to make tagine, couscous & traditional dishes with a local chef. Market visit included. Hands-on cooking class experience.",
+        "image": "https://agadirlocalguide.com/img/excursions/COOKING CLASS/cooking class 1.jpg",
+        "provider": {
+          "@type": "TouristInformationCenter",
+          "name": "Agadir Local Guide",
+          "url": "https://agadirlocalguide.com"
+        },
+        "tourBookingPage": "https://agadirlocalguide.com/tours/tour-cooking-class-agadir.html",
+        "itinerary": {
+          "@type": "ItemList",
+          "itemListElement": [
+            {
+              "@type": "ListItem",
+              "position": 1,
+              "name": "Hotel Pickup from Agadir"
+            },
+            {
+              "@type": "ListItem",
+              "position": 2,
+              "name": "Visit Local Market for Ingredients"
+            },
+            {
+              "@type": "ListItem",
+              "position": 3,
+              "name": "Cooking Class with Local Chef"
+            },
+            {
+              "@type": "ListItem",
+              "position": 4,
+              "name": "Learn to Prepare Tagine and Couscous"
+            },
+            {
+              "@type": "ListItem",
+              "position": 5,
+              "name": "Enjoy Your Delicious Creations"
+            }
+          ]
+        },
+        "offers": {
+          "@type": "Offer",
+          "price": "55",
+          "priceCurrency": "EUR",
+          "availability": "https://schema.org/InStock",
+          "url": "https://agadirlocalguide.com/tours/tour-cooking-class-agadir.html"
+        }
       },
-      "tourBookingPage": "https://agadirlocalguide.com/tours/tour-cooking-class-agadir.html",
-      "itinerary": {
-        "@type": "ItemList",
-        "itemListElement": [
-          {
-            "@type": "ListItem",
-            "position": 1,
-            "name": "Hotel Pickup from Agadir"
-          },
-          {
-            "@type": "ListItem",
-            "position": 2,
-            "name": "Visit Local Market for Ingredients"
-          },
-          {
-            "@type": "ListItem",
-            "position": 3,
-            "name": "Cooking Class with Local Chef"
-          },
-          {
-            "@type": "ListItem",
-            "position": 4,
-            "name": "Learn to Prepare Tagine and Couscous"
-          },
-          {
-            "@type": "ListItem",
-            "position": 5,
-            "name": "Enjoy Your Delicious Creations"
-          }
-        ]
-      },
-      "offers": {
-        "@type": "Offer",
-        "price": "55",
-        "priceCurrency": "EUR",
-        "availability": "https://schema.org/InStock",
-        "url": "https://agadirlocalguide.com/tours/tour-cooking-class-agadir.html"
-      },
-      "aggregateRating": {
-        "@type": "AggregateRating",
-        "ratingValue": "4.9",
-        "reviewCount": "185"
+      {
+        "@context": "https://schema.org",
+        "@type": "Product",
+        "name": "Agadir Cooking Class Experience",
+        "description": "Experience authentic Moroccan cooking in Agadir! Learn to make tagine, couscous & traditional dishes with a local chef.",
+        "image": "https://agadirlocalguide.com/img/excursions/COOKING CLASS/cooking class 1.jpg",
+        "brand": {
+          "@type": "Brand",
+          "name": "Agadir Local Guide"
+        },
+        "offers": {
+          "@type": "Offer",
+          "price": "55",
+          "priceCurrency": "EUR",
+          "availability": "https://schema.org/InStock",
+          "url": "https://agadirlocalguide.com/tours/tour-cooking-class-agadir.html"
+        },
+        "aggregateRating": {
+          "@type": "AggregateRating",
+          "ratingValue": 4.9,
+          "reviewCount": 185,
+          "bestRating": 5,
+          "worstRating": 1
+        }
       }
-    }
+    ]
     </script>
 
     <!-- Google Fonts: Inter + Poppins -->

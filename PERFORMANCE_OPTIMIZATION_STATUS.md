@@ -126,3 +126,4 @@
 
 **Next Recommended Step:** Start with image compression of homepage tour card images (highest impact, visible immediately)
 
+

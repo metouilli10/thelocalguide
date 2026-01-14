@@ -195,3 +195,4 @@ If you encounter issues:
 **Last Updated:** January 2025
 **Model:** Nano Banana Pro (Higgsfield AI)
 
+

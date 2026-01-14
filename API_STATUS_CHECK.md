@@ -91,3 +91,4 @@ This script will:
 
 **Note:** The 522 error code indicates the API server is not responding, which is typically a server-side issue rather than a problem with your credentials or code.
 
+

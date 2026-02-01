@@ -1983,12 +1983,9 @@
             display: none;
         }
 
-        /* Carousel Dots */
+        /* Carousel Dots – hidden per design (slider still works via arrows / swipe) */
         .blog-slider__dots {
-            display: flex;
-            justify-content: center;
-            gap: 10px;
-            margin-top: 24px;
+            display: none;
         }
 
         .blog-slider__dot {
@@ -2194,6 +2191,20 @@
         @media (max-width: 768px) {
             .blog-section {
                 padding: 60px 20px;
+                overflow-x: hidden;
+            }
+
+            .blog-section__wrapper {
+                overflow-x: hidden;
+            }
+
+            .blog-slider__container {
+                overflow-x: hidden;
+            }
+
+            .blog-grid {
+                padding-left: 16px;
+                padding-right: 16px;
             }
 
             .blog-section__title {
@@ -2201,8 +2212,10 @@
             }
 
             .blog-card {
-                width: calc(100% - 40px);
-                min-width: 280px;
+                width: calc(100% - 32px);
+                min-width: 260px;
+                flex: 0 0 auto;
+                box-sizing: border-box;
             }
 
             .blog-navigation {
@@ -2217,13 +2230,45 @@
         }
 
         @media (max-width: 480px) {
+            .blog-section {
+                padding: 48px 16px;
+            }
+
+            .blog-grid {
+                padding-left: 12px;
+                padding-right: 12px;
+            }
+
             .blog-card {
-                width: 100%;
-                min-width: 100%;
+                width: calc(100% - 24px);
+                min-width: 240px;
+                flex: 0 0 auto;
+                box-sizing: border-box;
             }
 
             .blog-section__title {
                 font-size: 28px;
+            }
+
+            .blog-section__header {
+                margin-bottom: 40px;
+            }
+
+            .blog-section__subtitle {
+                font-size: 16px;
+            }
+
+            .blog-card__content {
+                padding: 24px 20px;
+            }
+
+            .blog-card__title {
+                font-size: 18px;
+            }
+
+            .blog-card__excerpt {
+                font-size: 14px;
+                -webkit-line-clamp: 2;
             }
 
             .blog-nav-button {

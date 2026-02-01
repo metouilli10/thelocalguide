@@ -17,7 +17,7 @@
     <meta name="author" content="Agadir Local Guide">
     <title>Agadir Tours & Excursions – Best Day Trips | Agadir Local Guide</title>
     <link rel="canonical" href="https://agadirlocalguide.com/">
-    <link rel="icon" href="img/logoalg.png">
+    <link rel="icon" href="img/alg%20logo.png">
     
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website">
@@ -41,7 +41,7 @@
       "alternateName": "The Local Guide Morocco",
       "description": "Professional tour operator offering authentic experiences in Agadir, Morocco. From desert adventures to coastal explorations, we provide unforgettable tours across Morocco's stunning landscapes.",
       "url": "https://agadirlocalguide.com",
-      "logo": "https://agadirlocalguide.com/img/logoalg.png",
+      "logo": "https://agadirlocalguide.com/img/alg%20logo.png",
       "image": "https://agadirlocalguide.com/img/morocco-collage.jpg",
       "telephone": "+212645792457",
       "email": "info@agadirlocalguide.com",
@@ -444,7 +444,7 @@
         }
 
         .site-header.scrolled .logo img {
-            height: 38px;
+            height: 30px;
         }
 
         /* Top Bar */
@@ -568,7 +568,7 @@
         }
 
         .logo img {
-            height: 45px;
+            height: 32px;
             width: auto;
             transition: height 0.3s ease;
         }
@@ -2469,7 +2469,7 @@
             }
 
             .logo img {
-                height: 38px;
+                height: 30px;
             }
 
             .logo-text {
@@ -3302,7 +3302,17 @@
             width: 20px;
             height: 20px;
             fill: var(--gray-600);
-            transition: fill 0.3s;
+            transition: fill 0.3s, stroke 0.3s;
+        }
+
+        .social-links svg.icon-outline {
+            fill: none;
+            stroke: var(--gray-600);
+        }
+
+        .social-links a:hover svg.icon-outline {
+            fill: none;
+            stroke: white;
         }
 
         .footer__newsletter {
@@ -3539,7 +3549,7 @@
         }
 
         .mobile-menu-logo img {
-            height: 40px;
+            height: 32px;
             width: auto;
         }
 
@@ -3872,8 +3882,8 @@
             <div class="container">
                 <a href="index.html" class="logo">
                     <picture>
-  <source srcset="./img/logoalg.webp" type="image/webp">
-  <img src="img/logoalg.png" alt="Agadir Local Guide" loading="lazy" decoding="async">
+  <source srcset="./img/alg%20logo.png" type="image/png">
+  <img src="img/alg%20logo.png" alt="Agadir Local Guide" loading="lazy" decoding="async">
 </picture>
                     </a>
 
@@ -4606,9 +4616,12 @@
 
                 <div class="feature-item">
                     <div class="feature-item__icon">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                            <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
-                            <circle cx="12" cy="10" r="3"></circle>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M5 17H4a1 1 0 0 1-1-1v-4l2-4 2-2 4-1h6l2 1 2 4v4a1 1 0 0 1-1 1h-1"/>
+                            <path d="M5 17v2a1 1 0 0 0 1 1h1a1 1 0 0 0 1-1v-2"/>
+                            <path d="M19 17v2a1 1 0 0 0 1 1h1a1 1 0 0 0 1-1v-2"/>
+                            <circle cx="7.5" cy="17" r="2"/>
+                            <circle cx="16.5" cy="17" r="2"/>
                         </svg>
                     </div>
                     <p class="feature-item__text">Free hotel pickup & flexible cancellation</p>
@@ -5002,8 +5015,8 @@
                     <!-- Brand Column -->
                     <div class="footer-column">
                         <picture>
-  <source srcset="./img/logoalg.webp" type="image/webp">
-  <img src="img/logoalg.png" alt="Agadir Local Guide" class="footer-logo" loading="lazy" decoding="async">
+  <source srcset="./img/alg%20logo.png" type="image/png">
+  <img src="img/alg%20logo.png" alt="Agadir Local Guide" class="footer-logo" loading="lazy" decoding="async">
 </picture>
                         <p>Discover the best of Agadir with local expert guides. Authentic experiences, unforgettable adventures.</p>
 
@@ -5015,7 +5028,7 @@
                                 </svg>
                             </a>
                             <a href="https://www.instagram.com/localguide117/" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
-                                <svg viewBox="0 0 24 24">
+                                <svg class="icon-outline" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                                     <rect x="2" y="2" width="20" height="20" rx="5" ry="5"/>
                                     <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/>
                                     <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/>

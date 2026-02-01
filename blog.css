@@ -211,13 +211,13 @@ a:focus {
 }
 
 .logo img {
-    height: 45px;
+    height: 32px;
     width: auto;
     transition: height 0.3s ease;
 }
 
 .site-header.scrolled .logo img {
-    height: 38px;
+    height: 30px;
 }
 
 .nav-menu {
@@ -1445,8 +1445,9 @@ a:focus {
 }
 
 .footer-logo {
-    height: 45px;
+    height: 36px;
     width: auto;
+    max-width: 160px;
     margin-bottom: var(--space-4);
 }
 

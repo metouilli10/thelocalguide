@@ -2997,6 +2997,65 @@
             }
         }
 
+        /* Trust bar: stack platforms vertically on small mobile to avoid cramped layout */
+        @media (max-width: 540px) {
+            .testimonials-section {
+                padding: 48px 16px;
+            }
+
+            .trustbar.premium {
+                padding: 18px 16px;
+                margin-left: 0;
+                margin-right: 0;
+                margin-bottom: 32px;
+                border-radius: 14px;
+            }
+
+            .trustbar-left {
+                margin-bottom: 16px;
+            }
+
+            .trustbar-left h3 {
+                font-size: 18px;
+                line-height: 1.35;
+            }
+
+            .trustbar-left p {
+                font-size: 13px;
+                margin-top: 4px;
+            }
+
+            .trustbar-right {
+                flex-direction: column;
+                gap: 10px;
+                width: 100%;
+            }
+
+            .platform {
+                flex: none;
+                width: 100%;
+                min-width: 0;
+                padding: 10px 12px;
+                border-radius: 8px;
+            }
+
+            .platform img {
+                height: 20px;
+            }
+
+            .platform .rating {
+                font-size: 14px;
+            }
+
+            .platform .stars {
+                font-size: 13px;
+            }
+
+            .platform .count {
+                font-size: 12px;
+            }
+        }
+
         /* ===== RESPONSIVE PROMOTIONAL BANNER ===== */
         @media (max-width: 1024px) {
             .promo-banner__wrapper {

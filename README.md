@@ -74,8 +74,8 @@ The Local Guide specializes in curated tours and excursions in Agadir and surrou
 ## Contact Information
 
 **The Local Guide Morocco**
-- **Phone:** +212 636-372101
-- **WhatsApp:** +212 645-792457
+- **Phone:** +212 700-006462
+- **WhatsApp:** +212 700-006462
 - **Email:** Available via contact form
 - **Location:** Agadir, Morocco
 - **Instagram:** @thelocalguide

@@ -11,15 +11,19 @@ node_modules/
 *.log
 
 # Backup files
+backups/
 *.bak*
 *.backup
+
+# Python cache
+__pycache__/
+*.pyc
 
 # Environment variables (API keys)
 .env
 .env.local
 *.env
 .env.*
-
 
 
 

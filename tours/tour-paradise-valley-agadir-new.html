@@ -1,0 +1,3806 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<!-- 
+    ============================================
+    TOUR PAGE TEMPLATE - CUSTOMIZATION GUIDE
+    ============================================
+    
+    To create a new tour page, search and replace the following:
+    
+    1. META TAGS (lines ~15-18):
+       - [TOUR_NAME]: Tour title
+       - [TOUR_DESCRIPTION]: SEO description
+       - [TOUR_KEYWORDS]: SEO keywords
+       - [TOUR_URL]: Canonical URL
+       - [TOUR_SLUG]: URL slug (e.g., "paradise-valley")
+    
+    2. HERO SLIDER IMAGES (lines ~2540-2595):
+       - Replace [HERO_IMAGE_X_URL] with tour-specific image URLs (5 images recommended)
+       - Replace [HERO_IMAGE_X_ALT] with descriptive alt text for each image
+       - Replace [TOUR_HERO_TITLE] with the tour title to display on the hero image
+    
+    3. BREADCRUMBS (line ~1890):
+       - [TOUR_NAME]: Final breadcrumb text
+    
+    4. TOUR TITLE SECTION (lines ~1950-1970):
+       - [TOUR_TITLE]: Main tour title
+       - [TOUR_SUBTITLE]: Tour subtitle
+       - [TOUR_DURATION]: Duration (e.g., "4-5 hours")
+       - [TOUR_RATING]: Rating (e.g., "4.8")
+       - [TOUR_REVIEWS]: Number of reviews (e.g., "1,234")
+    
+    5. OVERVIEW SECTION (lines ~2040-2070):
+       - [TOUR_OVERVIEW]: Overview paragraphs
+       - Feature badges (already templated)
+    
+    6. HIGHLIGHTS (lines ~2080-2120):
+       - [HIGHLIGHT_ITEMS]: List of tour highlights
+    
+    7. ITINERARY (lines ~2218-2280):
+       - [ITINERARY_ITEMS]: Timeline items with images, titles, descriptions, durations
+    
+    8. WHAT'S INCLUDED (lines ~2290-2330):
+       - [INCLUDED_ITEMS]: What's included
+       - [NOT_INCLUDED_ITEMS]: What's not included
+    
+    9. IMPORTANT INFO (lines ~2340-2380):
+       - [WHAT_TO_BRING]: Items to bring
+       - [HEALTH_SAFETY]: Health & safety info
+       - [IMPORTANT_NOTES]: Important notes
+    
+    10. FAQ (lines ~2390-2420):
+        - [FAQ_ITEMS]: FAQ questions and answers
+    
+    11. REVIEWS (lines ~2430-2470):
+        - [REVIEW_SCORE]: Overall rating
+        - [REVIEW_COUNT]: Number of reviews
+        - [REVIEW_ITEMS]: Individual reviews
+    
+    12. BOOKING CARD (lines ~2500-2550):
+        - [TOUR_PRICE]: Price per person
+        - [TOUR_DURATION_SHORT]: Short duration text
+    
+    13. RELATED TOURS (lines ~2470-2500):
+        - [RELATED_TOURS]: Related tour cards
+    
+    ============================================
+    -->
+<!-- Google tag (gtag.js) -->
+<script async="" src="https://www.googletagmanager.com/gtag/js?id=G-35EZE671S0"></script>
+<script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-35EZE671S0');
+    </script>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<meta content="Join a Paradise Valley tour from Agadir with hotel pickup, a scenic Atlas Mountain drive, a short walk through the valley, and time to relax near the natural pools." name="description"/>
+<meta content="Paradise Valley Agadir, Paradise Valley tour from Agadir, Paradise Valley day trip, Agadir to Paradise Valley, Paradise Valley Morocco, natural pools Agadir, Atlas Mountains tour, Berber villages Agadir, Paradise Valley excursion" name="keywords"/>
+<title>Paradise Valley Tour from Agadir | Natural Pools & Atlas Mountains</title>
+<link href="https://agadirlocalguide.com/tours/tour-paradise-valley-agadir.html" rel="canonical"/>
+<!-- Open Graph Meta Tags -->
+<meta content="Paradise Valley Tour from Agadir | Natural Pools & Atlas Mountains" property="og:title"/>
+<meta content="Scenic Paradise Valley trip with hotel pickup, a short valley walk, mountain views, and time to relax near the natural pools." property="og:description"/>
+<meta content="website" property="og:type"/>
+<meta content="https://agadirlocalguide.com/tours/tour-paradise-valley-agadir.html" property="og:url"/>
+<meta content="https://agadirlocalguide.com/img/excursions/Paradise Valley/paradise 1.jpeg" property="og:image"/>
+<!-- Twitter Card -->
+<meta content="summary_large_image" name="twitter:card"/>
+<meta content="Paradise Valley Tour from Agadir" name="twitter:title"/>
+<meta content="Relaxing Paradise Valley excursion with hotel pickup, a short walk, and time by the pools in the Atlas foothills." name="twitter:description"/>
+<meta content="https://agadirlocalguide.com/img/excursions/Paradise Valley/paradise 1.jpeg" name="twitter:image"/>
+<!-- Schema.org Structured Data -->
+<script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "TouristTrip",
+      "name": "Paradise Valley Tour from Agadir",
+      "description": "Discover Paradise Valley on a scenic trip from Agadir with hotel pickup, a short walk through the valley, and time to relax near the natural pools.",
+      "image": "https://agadirlocalguide.com/img/excursions/Paradise Valley/paradise 1.jpeg",
+      "provider": {
+        "@type": "TouristInformationCenter",
+        "name": "Agadir Local Guide",
+        "url": "https://agadirlocalguide.com",
+        "address": {
+          "@type": "PostalAddress",
+          "addressLocality": "Agadir",
+          "addressRegion": "Souss-Massa",
+          "addressCountry": "MA"
+        }
+      },
+      "tourBookingPage": "https://agadirlocalguide.com/tours/tour-paradise-valley-agadir-new.html",
+      "itinerary": {
+        "@type": "ItemList",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Hotel Pickup from Agadir"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Scenic Drive to Paradise Valley"
+          },
+          {
+            "@type": "ListItem",
+            "position": 3,
+            "name": "Hike Through Palm Groves"
+          },
+          {
+            "@type": "ListItem",
+            "position": 4,
+            "name": "Swim in Natural Pools"
+          },
+          {
+            "@type": "ListItem",
+            "position": 5,
+            "name": "Explore Berber Villages"
+          }
+        ]
+      },
+      "offers": {
+        "@type": "Offer",
+        "price": "30",
+        "priceCurrency": "EUR",
+        "availability": "https://schema.org/InStock",
+        "url": "https://agadirlocalguide.com/tours/tour-paradise-valley-agadir-new.html"
+      }
+    }
+    </script>
+<!-- Product Schema with AggregateRating -->
+<script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Product",
+      "name": "Paradise Valley Tour from Agadir",
+      "description": "Discover Paradise Valley on a scenic trip from Agadir with hotel pickup, a short walk through the valley, and time to relax near the natural pools.",
+      "image": "https://agadirlocalguide.com/img/excursions/Paradise Valley/paradise 1.jpeg",
+      "brand": {
+        "@type": "Brand",
+        "name": "Agadir Local Guide"
+      },
+      "offers": {
+        "@type": "Offer",
+        "price": "30",
+        "priceCurrency": "EUR",
+        "availability": "https://schema.org/InStock",
+        "url": "https://agadirlocalguide.com/tours/tour-paradise-valley-agadir-new.html"
+      },
+      "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": 4.9,
+        "reviewCount": 342,
+        "bestRating": 5,
+        "worstRating": 1
+      }
+    }
+    </script>
+<link href="../img/alg%20logo.png" rel="icon"/>
+<!-- Google Fonts: Inter + Poppins -->
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&amp;family=Poppins:wght@600;700;800;900&amp;display=swap" rel="stylesheet"/>
+<style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        :root {
+            /* Primary Colors - Brand Terra Cotta */
+            --primary-color: #c1564b;
+            --primary-600: #c1564b;
+            --primary-700: #c1564b;
+            --primary-100: #EEE9FF;
+            --primary-50: #FAF5FF;
+
+            /* Secondary Colors - CTA Yellow */
+            --secondary-color: #FFD400;
+            --cta-yellow: #FFD400;
+            --cta-yellow-dark: #E6C000;
+
+            /* Accent Colors */
+            --accent-color: #14B8A6;
+
+            /* Grays */
+            --gray-50: #F9FAFB;
+            --gray-100: #F3F4F6;
+            --gray-200: #E5E7EB;
+            --gray-300: #D1D5DB;
+            --gray-400: #9CA3AF;
+            --gray-500: #6B7280;
+            --gray-600: #4B5563;
+            --gray-700: #374151;
+            --gray-800: #1F2937;
+            --gray-900: #111827;
+
+            /* Semantic */
+            --success: #10B981;
+            --warning: #F59E0B;
+            --error: #EF4444;
+            --star-color: #FBBF24;
+
+            /* Typography */
+            --font-sans: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+            --font-display: 'Poppins', -apple-system, BlinkMacSystemFont, sans-serif;
+
+            /* Backgrounds */
+            --bg-white: #FFFFFF;
+            --bg-gray: #F8F8F8;
+            --text-dark: #222222;
+            --text-light: #555555;
+        }
+
+        body {
+            font-family: var(--font-sans);
+            color: var(--gray-900);
+            line-height: 1.6;
+            background: #FFFFFF;
+            padding-top: 76px; /* Account for fixed header */
+            overflow-x: hidden;
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+        }
+
+        h1, h2, h3, h4, h5, h6 {
+            font-family: var(--font-display);
+            line-height: 1.2;
+        }
+
+        /* ===== HEADER (FROM INDEX.HTML) ===== */
+        .site-header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 1000;
+            background: #FFFFFF;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+            transition: all 0.3s ease;
+        }
+
+        .site-header.scrolled {
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        .main-nav {
+            padding: 13px 0;
+            background: white;
+        }
+
+        .main-nav .container {
+            max-width: 1360px;
+            margin: 0 auto;
+            padding: 0 40px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            text-decoration: none;
+        }
+
+        .logo img {
+            height: 32px;
+            width: auto;
+            transition: height 0.3s ease;
+        }
+
+        .nav-menu {
+            display: flex;
+            gap: 28px;
+            list-style: none;
+            align-items: center;
+            margin: 0;
+            padding: 0;
+        }
+
+        .nav-menu li {
+            position: relative;
+        }
+
+        .nav-menu a {
+            color: var(--gray-700);
+            font-weight: 500;
+            font-size: 15px;
+            text-decoration: none;
+            transition: color 0.3s ease;
+            padding: 8px 0;
+            display: flex;
+            align-items: center;
+            gap: 4px;
+        }
+
+        .nav-menu a:hover {
+            color: var(--primary-600);
+        }
+
+        .has-dropdown {
+            position: relative;
+        }
+
+        .dropdown-icon {
+            width: 11px;
+            height: 11px;
+            margin-left: 4px;
+            transition: transform 0.2s;
+            fill: currentColor;
+        }
+
+        .has-dropdown:hover .dropdown-icon {
+            transform: rotate(180deg);
+        }
+
+        .dropdown-menu {
+            position: absolute;
+            top: 100%;
+            left: 0;
+            background: white;
+            box-shadow: 0 4px 16px rgba(0,0,0,0.1);
+            border-radius: 8px;
+            padding: 8px 0;
+            min-width: 220px;
+            opacity: 0;
+            visibility: hidden;
+            transform: translateY(-10px);
+            transition: all 0.3s;
+            list-style: none;
+            z-index: 1001;
+        }
+
+        .has-dropdown:hover .dropdown-menu {
+            opacity: 1;
+            visibility: visible;
+            transform: translateY(0);
+        }
+
+        .dropdown-menu li {
+            width: 100%;
+        }
+
+        .dropdown-menu a {
+            padding: 10px 20px;
+            display: block;
+            font-size: 14px;
+        }
+
+        .dropdown-menu a:hover {
+            background: var(--gray-50);
+        }
+
+        .nav-actions {
+            display: flex;
+            gap: 12px;
+            align-items: center;
+        }
+
+        .btn-outline,
+        .btn-primary-nav {
+            background: var(--primary-600);
+            color: white;
+            border: none;
+            padding: 10px 24px;
+            border-radius: 8px;
+            font-weight: 600;
+            font-size: 14px;
+            cursor: pointer;
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            transition: all 0.3s ease;
+            text-decoration: none;
+        }
+
+        .btn-outline:hover,
+        .btn-primary-nav:hover {
+            background: var(--primary-700);
+            transform: translateY(-1px);
+        }
+
+        .btn-outline svg,
+        .btn-primary-nav svg {
+            width: 14px;
+            height: 14px;
+        }
+
+        .mobile-menu-toggle {
+            display: none;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            background: none;
+            border: none;
+            cursor: pointer;
+            padding: 12px;
+            width: 48px;
+            height: 48px;
+        }
+
+        .mobile-menu-toggle span {
+            display: block;
+            width: 24px;
+            height: 2.5px;
+            background: var(--gray-800);
+            margin: 3px 0;
+            transition: all 0.3s;
+            border-radius: 2px;
+        }
+
+        .mobile-menu-toggle.active span:nth-child(1) {
+            transform: rotate(45deg) translate(6px, 6px);
+        }
+
+        .mobile-menu-toggle.active span:nth-child(2) {
+            opacity: 0;
+        }
+
+        .mobile-menu-toggle.active span:nth-child(3) {
+            transform: rotate(-45deg) translate(6px, -6px);
+        }
+
+        /* Mobile Menu */
+        .mobile-menu-overlay {
+            position: fixed;
+            inset: 0;
+            background: rgba(0, 0, 0, 0.6);
+            opacity: 0;
+            visibility: hidden;
+            transition: all 0.3s;
+            z-index: 9998;
+        }
+
+        .mobile-menu-overlay.active {
+            opacity: 1;
+            visibility: visible;
+        }
+
+        .mobile-menu {
+            position: fixed;
+            top: 0;
+            right: -100%;
+            width: 85%;
+            max-width: 400px;
+            height: 100vh;
+            background: white;
+            box-shadow: -4px 0 24px rgba(0, 0, 0, 0.2);
+            z-index: 9999;
+            transition: right 0.4s;
+            overflow-y: auto;
+        }
+
+        .mobile-menu.active {
+            right: 0;
+        }
+
+        .close-menu {
+            background: var(--gray-100);
+            border: none;
+            color: var(--gray-700);
+            font-size: 28px;
+            cursor: pointer;
+            position: absolute;
+            top: 16px;
+            right: 16px;
+            width: 44px;
+            height: 44px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 8px;
+        }
+
+        .menu-content {
+            padding: 80px 24px 24px;
+        }
+
+        .menu-nav {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .menu-nav a {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 16px 0;
+            color: var(--gray-900);
+            font-size: 16px;
+            font-weight: 500;
+            text-decoration: none;
+            border-bottom: 1px solid var(--gray-100);
+        }
+
+        .mobile-menu-actions {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+            padding: 24px;
+            border-top: 1px solid var(--gray-200);
+        }
+
+        .mobile-cta {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+            padding: 14px 20px;
+            border-radius: 8px;
+            font-weight: 600;
+            text-decoration: none;
+        }
+
+        .mobile-cta-primary {
+            background: var(--primary-600);
+            color: white;
+        }
+
+        .mobile-cta-secondary {
+            background: var(--gray-100);
+            color: var(--gray-900);
+        }
+
+        /* ===== HERO SLIDER ===== */
+        .hero-slider {
+            position: relative;
+            width: 100%;
+            max-width: 1360px;
+            margin: 0 auto;
+            padding: 0 40px;
+            padding-bottom: 0;
+        }
+
+        .slider-main-container {
+            position: relative;
+            width: 100%;
+            height: 500px;
+            overflow: hidden;
+            border-radius: 20px;
+        }
+
+        .slider-container {
+            position: relative;
+            width: 100%;
+            height: 100%;
+        }
+
+        .slide {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            opacity: 0;
+            transition: opacity 0.5s ease-in-out;
+        }
+
+        .slide.active {
+            opacity: 1;
+        }
+
+        .slide img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            max-width: 100%;
+        }
+
+        .slider-arrow {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 48px;
+            height: 48px;
+            background: rgba(255, 255, 255, 0.9);
+            border: none;
+            border-radius: 50%;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 20px;
+            color: var(--gray-800);
+            transition: all 0.3s;
+            z-index: 10;
+        }
+
+        .slider-arrow:hover {
+            background: #FFFFFF;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+        }
+
+        .slider-arrow.prev {
+            left: 24px;
+        }
+
+        .slider-arrow.next {
+            right: 24px;
+        }
+
+        /* Thumbnail Navigation */
+        .slider-thumbnails {
+            display: flex;
+            justify-content: center;
+            gap: 12px;
+            padding: 0;
+            background: linear-gradient(to bottom, #f8f8f8 0%, white 100%);
+            border-radius: 20px;
+            padding: 16px;
+            margin-top: 16px;
+            overflow-x: auto;
+            scroll-behavior: smooth;
+            scrollbar-width: none;
+        }
+
+        .slider-thumbnails::-webkit-scrollbar {
+            display: none;
+        }
+
+        .thumbnail {
+            flex-shrink: 0;
+            width: 140px;
+            height: 100px;
+            border-radius: 12px;
+            overflow: hidden;
+            cursor: pointer;
+            border: 3px solid transparent;
+            transition: all 0.3s ease;
+            position: relative;
+        }
+
+        .thumbnail::after {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: rgba(0,0,0,0.3);
+            transition: all 0.3s ease;
+        }
+
+        .thumbnail.active::after,
+        .thumbnail:hover::after {
+            background: rgba(0,0,0,0);
+        }
+
+        .thumbnail.active {
+            border-color: var(--primary-color);
+            box-shadow: 0 4px 12px rgba(193, 86, 75, 0.3);
+        }
+
+        .thumbnail:hover {
+            border-color: var(--primary-color);
+            opacity: 1;
+        }
+
+        .thumbnail img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+        }
+
+        .hero-book-btn {
+            position: absolute;
+            top: 24px;
+            right: 24px;
+            background: var(--cta-yellow);
+            color: var(--gray-900);
+            padding: 12px 28px;
+            border-radius: 8px;
+            border: none;
+            font-weight: 700;
+            font-size: 15px;
+            cursor: pointer;
+            transition: all 0.3s;
+            z-index: 10;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+            text-decoration: none;
+            display: inline-block;
+        }
+
+        .hero-book-btn:hover {
+            background: var(--cta-yellow-dark);
+            transform: translateY(-2px);
+        }
+
+        /* ===== BREADCRUMBS ===== */
+        .breadcrumbs {
+            max-width: 1360px;
+            margin: 0 auto;
+            padding: 20px 40px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            font-size: 14px;
+            color: var(--gray-500);
+        }
+
+        .breadcrumbs a {
+            color: var(--gray-500);
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        .breadcrumbs a:hover {
+            color: var(--primary-color);
+        }
+
+        /* ===== TITLE SECTION ===== */
+        .tour-title-section {
+            max-width: 1360px;
+            margin: 0 auto;
+            padding: 48px 40px 32px;
+        }
+
+        .tour-title {
+            font-size: 42px;
+            font-weight: 800;
+            margin-bottom: 12px;
+        }
+
+        .tour-eyebrow {
+            display: inline-flex;
+            align-items: center;
+            padding: 8px 12px;
+            margin-bottom: 14px;
+            border-radius: 999px;
+            background: #fff5e6;
+            border: 1px solid #ffd89b;
+            color: var(--gray-800);
+            font-size: 12px;
+            font-weight: 700;
+            letter-spacing: 0.04em;
+            text-transform: uppercase;
+        }
+
+        .tour-subtitle {
+            font-size: 18px;
+            color: var(--gray-600);
+            margin-bottom: 20px;
+        }
+
+        .hero-priority-row {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-bottom: 20px;
+        }
+
+        .hero-priority-pill {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 10px 14px;
+            border-radius: 12px;
+            background: var(--gray-50);
+            border: 1px solid var(--gray-200);
+            font-size: 13px;
+            font-weight: 600;
+            color: var(--gray-700);
+        }
+
+        .hero-priority-pill strong {
+            color: var(--gray-900);
+        }
+
+        .tour-meta {
+            display: flex;
+            gap: 12px;
+            flex-wrap: wrap;
+            align-items: center;
+            margin-top: 8px;
+        }
+
+        .meta-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 10px 18px;
+            background: linear-gradient(135deg, #ffffff 0%, #f8f9fa 100%);
+            border: 1.5px solid var(--gray-200);
+            border-radius: 12px;
+            font-size: 14px;
+            font-weight: 600;
+            color: var(--gray-700);
+            transition: all 0.3s ease;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.04);
+        }
+
+        .meta-badge:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 8px rgba(0,0,0,0.08);
+            border-color: var(--primary-color);
+        }
+
+        .meta-badge svg {
+            width: 18px;
+            height: 18px;
+            color: var(--primary-color);
+            flex-shrink: 0;
+        }
+
+        .meta-badge.highlight {
+            background: linear-gradient(135deg, var(--cta-yellow) 0%, #FFE066 100%);
+            color: var(--gray-900);
+            font-weight: 700;
+            border-color: var(--cta-yellow-dark);
+            box-shadow: 0 3px 6px rgba(255, 212, 0, 0.25);
+        }
+
+        .meta-badge.highlight:hover {
+            box-shadow: 0 5px 12px rgba(255, 212, 0, 0.35);
+            transform: translateY(-2px);
+        }
+
+        .meta-badge.highlight svg {
+            color: var(--gray-900);
+        }
+
+        .meta-badge.rating {
+            background: linear-gradient(135deg, #fff5e6 0%, #ffe8cc 100%);
+            border-color: #ffd89b;
+        }
+
+        .meta-badge.rating:hover {
+            border-color: var(--star-color);
+        }
+
+        .stars {
+            color: var(--star-color);
+            font-size: 16px;
+            letter-spacing: 2px;
+            margin-right: 4px;
+        }
+
+        .meta-badge .rating-text {
+            font-weight: 600;
+            color: var(--gray-800);
+        }
+
+        .meta-badge .review-count {
+            color: var(--gray-600);
+            font-weight: 500;
+            font-size: 13px;
+        }
+
+        /* ===== STICKY TABS ===== */
+        .sticky-tabs {
+            position: sticky;
+            top: 76px;
+            background: #FFFFFF;
+            border-bottom: 1px solid var(--gray-200);
+            z-index: 100;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+        }
+
+        .tabs-container {
+            max-width: 1360px;
+            margin: 0 auto;
+            padding: 0 40px;
+            display: flex;
+            gap: 32px;
+            overflow-x: auto;
+            overflow-y: hidden;
+            scrollbar-width: none;
+            -webkit-overflow-scrolling: touch;
+            scroll-behavior: smooth;
+            scroll-snap-type: x proximity;
+        }
+
+        .tabs-container::-webkit-scrollbar {
+            display: none;
+        }
+
+        .tab-link {
+            padding: 16px 0;
+            color: var(--gray-600);
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 15px;
+            white-space: nowrap;
+            border-bottom: 3px solid transparent;
+            transition: all 0.3s;
+            scroll-snap-align: start;
+            flex-shrink: 0;
+        }
+
+        .tab-link:hover {
+            color: var(--primary-color);
+        }
+
+        .tab-link.active {
+            color: var(--primary-color);
+            border-bottom-color: var(--primary-color);
+        }
+
+        /* ===== MAIN LAYOUT ===== */
+        .main-content {
+            max-width: 1360px;
+            margin: 0 auto;
+            padding: 48px 40px;
+            display: grid;
+            grid-template-columns: 1fr 420px;
+            gap: 48px;
+            align-items: start;
+            box-sizing: border-box;
+        }
+
+        .content-column {
+            display: flex;
+            flex-direction: column;
+            gap: 48px;
+        }
+
+        .booking-column {
+            position: sticky;
+            top: 160px;
+        }
+
+        .section {
+            scroll-margin-top: 160px;
+        }
+
+        .section-title {
+            font-size: 28px;
+            font-weight: 700;
+            margin-bottom: 20px;
+        }
+
+        .section-subtitle {
+            font-size: 16px;
+            color: var(--gray-600);
+            margin-bottom: 24px;
+        }
+
+        /* Overview */
+        .overview-text {
+            font-size: 16px;
+            line-height: 1.8;
+            color: var(--gray-700);
+            margin-bottom: 24px;
+        }
+
+        .feature-badges {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 16px;
+            margin-top: 32px;
+        }
+
+        .feature-badge {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            padding: 20px;
+            background: var(--gray-50);
+            border-radius: 12px;
+            gap: 8px;
+        }
+
+        .feature-badge svg {
+            width: 32px;
+            height: 36px;
+            color: var(--primary-color);
+        }
+
+        .feature-badge-title {
+            font-weight: 600;
+            font-size: 14px;
+        }
+
+        .feature-badge-text {
+            font-size: 13px;
+            color: var(--gray-600);
+        }
+
+        /* Highlights */
+        .highlights-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 16px;
+        }
+
+        .highlight-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 12px;
+            padding: 16px;
+            background: var(--gray-50);
+            border-radius: 12px;
+        }
+
+        .highlight-icon {
+            width: 24px;
+            height: 24px;
+            background: var(--primary-color);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+        }
+
+        .highlight-icon svg {
+            width: 14px;
+            height: 14px;
+            color: white;
+        }
+
+        /* Itinerary Timeline */
+        .itinerary-timeline {
+            position: relative;
+            padding-left: 32px;
+        }
+
+        .itinerary-timeline::before {
+            content: '';
+            position: absolute;
+            left: 15px;
+            top: 0;
+            bottom: 0;
+            width: 2px;
+            background: var(--gray-300);
+        }
+
+        .itinerary-timeline-item {
+            position: relative;
+            margin-bottom: 32px;
+            display: flex;
+            gap: 20px;
+        }
+
+        .itinerary-timeline-item:last-child {
+            margin-bottom: 0;
+        }
+
+        .timeline-marker {
+            position: absolute;
+            left: -32px;
+            top: 0;
+            width: 32px;
+            height: 36px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            z-index: 2;
+        }
+
+        .timeline-number {
+            width: 32px;
+            height: 36px;
+            background: var(--gray-900);
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 16px;
+            font-weight: 700;
+            font-family: var(--font-display);
+            box-shadow: 0 2px 6px rgba(0,0,0,0.12);
+        }
+
+        .timeline-content {
+            flex: 1;
+            display: block;
+            background: white;
+            border-radius: 10px;
+            border: 1px solid var(--gray-200);
+            box-shadow: 0 2px 6px rgba(0,0,0,0.06);
+            transition: all 0.3s ease;
+        }
+
+        .itinerary-timeline-item:hover .timeline-content {
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+            transform: translateY(-1px);
+        }
+
+        .timeline-image {
+            display: none;
+        }
+
+        .timeline-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.3s ease;
+        }
+
+        .itinerary-timeline-item:hover .timeline-image img {
+            transform: scale(1.05);
+        }
+
+        .timeline-details {
+            padding: 18px 20px;
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+        }
+
+        .timeline-title {
+            font-size: 19px;
+            font-weight: 700;
+            color: var(--gray-900);
+            margin: 0;
+            font-family: var(--font-display);
+        }
+
+        .timeline-description {
+            font-size: 14px;
+            line-height: 1.6;
+            color: var(--gray-700);
+            margin: 0;
+        }
+
+        .timeline-meta {
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            margin-top: 4px;
+            font-size: 13px;
+            color: var(--gray-600);
+        }
+
+        .timeline-duration {
+            font-weight: 600;
+            color: var(--gray-900);
+        }
+
+        .timeline-separator {
+            color: var(--gray-400);
+        }
+
+        .timeline-included {
+            color: var(--success);
+            font-weight: 500;
+        }
+
+        /* What's Included */
+        .included-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 32px;
+        }
+
+        .included-column h4 {
+            font-size: 18px;
+            font-weight: 700;
+            margin-bottom: 16px;
+        }
+
+        .included-list {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+        }
+
+        .included-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 10px;
+            font-size: 15px;
+        }
+
+        .included-item svg {
+            width: 20px;
+            height: 20px;
+            flex-shrink: 0;
+            margin-top: 2px;
+        }
+
+        .included-item.yes svg {
+            color: var(--success);
+        }
+
+        .included-item.no svg {
+            color: var(--gray-400);
+        }
+
+        /* Important Info */
+        .info-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+        }
+
+        .info-card {
+            padding: 28px;
+            background: white;
+            border: 1.5px solid var(--gray-200);
+            border-radius: 16px;
+            transition: all 0.3s ease;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+        }
+
+        .info-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 8px 24px rgba(0,0,0,0.1);
+            border-color: var(--primary-color);
+        }
+
+        .info-card-header {
+            display: flex;
+            align-items: center;
+            gap: 14px;
+            margin-bottom: 20px;
+        }
+
+        .info-icon {
+            width: 48px;
+            height: 48px;
+            background: var(--primary-color);
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 4px 12px rgba(193, 86, 75, 0.2);
+            flex-shrink: 0;
+        }
+
+        .info-icon svg {
+            width: 24px;
+            height: 24px;
+            color: white;
+            stroke-width: 2.5;
+        }
+
+        .info-card h4 {
+            font-size: 16px;
+            font-weight: 700;
+        }
+
+        .info-card ul {
+            list-style: none;
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+        }
+
+        .info-card li {
+            font-size: 15px;
+            color: var(--gray-700);
+            padding-left: 24px;
+            position: relative;
+            line-height: 1.6;
+            font-weight: 500;
+        }
+
+        .info-card li:before {
+            content: '✓';
+            position: absolute;
+            left: 0;
+            color: var(--success);
+            font-weight: 700;
+            font-size: 16px;
+        }
+
+        /* FAQ */
+        .faq-list {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+        }
+
+        .faq-item {
+            background: white;
+            border: 1px solid var(--gray-200);
+            border-radius: 12px;
+            overflow: hidden;
+        }
+
+        .faq-question {
+            width: 100%;
+            padding: 20px 24px;
+            background: white;
+            border: none;
+            text-align: left;
+            font-size: 16px;
+            font-weight: 600;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .faq-question:hover {
+            background: var(--gray-50);
+        }
+
+        .faq-question svg {
+            width: 20px;
+            height: 20px;
+            transition: transform 0.3s;
+        }
+
+        .faq-item.active .faq-question svg {
+            transform: rotate(180deg);
+        }
+
+        .faq-answer {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s;
+        }
+
+        .faq-item.active .faq-answer {
+            max-height: 500px;
+        }
+
+        .faq-answer-content {
+            padding: 0 24px 20px;
+            font-size: 15px;
+            color: var(--gray-600);
+            line-height: 1.7;
+        }
+
+        /* Reviews */
+        .reviews-header {
+            display: flex;
+            align-items: center;
+            gap: 24px;
+            margin-bottom: 32px;
+            padding: 24px;
+            background: var(--gray-50);
+            border-radius: 12px;
+        }
+
+        .reviews-score {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .score-number {
+            font-size: 48px;
+            font-weight: 800;
+        }
+
+        .score-stars {
+            color: var(--star-color);
+            font-size: 20px;
+        }
+
+        .reviews-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+        }
+
+        .review-card {
+            padding: 24px;
+            background: white;
+            border: 1px solid var(--gray-200);
+            border-radius: 12px;
+        }
+
+        .review-header {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            margin-bottom: 16px;
+        }
+
+        .reviewer-avatar {
+            width: 48px;
+            height: 48px;
+            border-radius: 50%;
+            background: var(--primary-color);
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 700;
+            font-size: 18px;
+        }
+
+        .reviewer-info h5 {
+            font-size: 15px;
+            font-weight: 600;
+            margin-bottom: 2px;
+        }
+
+        .reviewer-stars {
+            color: var(--star-color);
+            font-size: 14px;
+        }
+
+        /* Tour Cards */
+        .tour-cards-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 24px;
+        }
+
+        .tour-card {
+            background: white;
+            border-radius: 16px;
+            overflow: hidden;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+            transition: all 0.3s;
+            text-decoration: none;
+            color: inherit;
+            display: flex;
+            flex-direction: column;
+            min-height: 0;
+        }
+
+        .tour-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 8px 24px rgba(0,0,0,0.12);
+        }
+
+        .tour-card-image {
+            position: relative;
+            height: 220px;
+            overflow: hidden;
+            background: #f3f4f6;
+        }
+
+        .tour-card-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.3s;
+            display: block;
+        }
+
+        .tour-card:hover .tour-card-image img {
+            transform: scale(1.05);
+        }
+
+        .tour-card-badge {
+            position: absolute;
+            top: 12px;
+            left: 12px;
+            background: #DC2626;
+            color: white;
+            padding: 6px 12px;
+            border-radius: 20px;
+            font-size: 12px;
+            font-weight: 700;
+            z-index: 10;
+        }
+
+        .tour-card-content {
+            padding: 20px;
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .tour-card-title {
+            font-size: 18px;
+            font-weight: 700;
+            margin-bottom: 8px;
+        }
+
+        .tour-card-subtitle {
+            font-size: 14px;
+            color: var(--gray-600);
+            margin-bottom: 16px;
+        }
+
+        .tour-card-footer {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding-top: 16px;
+            border-top: 1px solid var(--gray-200);
+            margin-top: auto;
+        }
+
+        .tour-card-meta {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            font-size: 14px;
+            color: var(--gray-600);
+        }
+
+        .tour-card-price {
+            font-size: 24px;
+            font-weight: 800;
+        }
+
+        /* Booking Card */
+        .booking-card {
+            background: white;
+            border: 1px solid var(--gray-200);
+            border-radius: 16px;
+            padding: 28px;
+            box-shadow: 0 4px 16px rgba(0,0,0,0.08);
+        }
+
+        .booking-card-top {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 12px;
+            margin-bottom: 18px;
+        }
+
+        .booking-card-badge {
+            display: inline-flex;
+            align-items: center;
+            padding: 8px 12px;
+            border-radius: 999px;
+            background: rgba(193, 86, 75, 0.08);
+            color: var(--primary-color);
+            font-size: 12px;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.03em;
+        }
+
+        .booking-card-rating {
+            font-size: 13px;
+            font-weight: 700;
+            color: var(--gray-700);
+        }
+
+        .booking-price-block {
+            margin-bottom: 18px;
+        }
+
+        .booking-price-label {
+            font-size: 12px;
+            font-weight: 700;
+            color: var(--gray-500);
+            text-transform: uppercase;
+            letter-spacing: 0.04em;
+            margin-bottom: 6px;
+        }
+
+        .booking-price {
+            display: flex;
+            align-items: baseline;
+            gap: 8px;
+            margin-bottom: 0;
+        }
+
+        .price-amount {
+            font-size: 36px;
+            font-weight: 800;
+        }
+
+        .price-unit {
+            font-size: 16px;
+            color: var(--gray-600);
+        }
+
+        .price-subtext {
+            margin-top: 8px;
+            font-size: 14px;
+            color: var(--gray-600);
+            line-height: 1.5;
+        }
+
+        .booking-benefits {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            margin-bottom: 18px;
+            padding: 16px;
+            background: var(--gray-50);
+            border: 1px solid var(--gray-200);
+            border-radius: 12px;
+        }
+
+        .booking-benefit {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-size: 14px;
+            color: var(--gray-700);
+            line-height: 1.4;
+        }
+
+        .booking-benefit-dot {
+            width: 8px;
+            height: 8px;
+            border-radius: 999px;
+            background: var(--primary-color);
+            flex-shrink: 0;
+        }
+
+        .booking-form {
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+            margin-bottom: 20px;
+        }
+
+        .form-group label {
+            display: block;
+            font-size: 14px;
+            font-weight: 600;
+            color: var(--gray-700);
+            margin-bottom: 8px;
+        }
+
+        .form-input {
+            width: 100%;
+            padding: 12px 16px;
+            border: 1px solid var(--gray-300);
+            border-radius: 8px;
+            font-size: 15px;
+            color: var(--gray-900);
+        }
+
+        .form-input:focus {
+            outline: none;
+            border-color: var(--primary-color);
+            box-shadow: 0 0 0 3px rgba(193, 86, 75, 0.1);
+        }
+
+        .booking-btn {
+            width: 100%;
+            padding: 16px;
+            background: var(--cta-yellow);
+            color: var(--gray-900);
+            border: none;
+            border-radius: 8px;
+            font-size: 16px;
+            font-weight: 700;
+            cursor: pointer;
+            transition: all 0.3s;
+            display: inline-block;
+            text-align: center;
+            text-decoration: none;
+            box-sizing: border-box;
+        }
+
+        .booking-btn:hover {
+            background: var(--cta-yellow-dark);
+            transform: translateY(-2px);
+        }
+
+        .booking-btn.secondary {
+            background: white;
+            color: var(--primary-color);
+            border: 2px solid var(--primary-color);
+            margin-top: 12px;
+        }
+
+        .booking-btn.secondary:hover {
+            background: var(--primary-color);
+            color: white;
+        }
+
+        .booking-note {
+            font-size: 13px;
+            color: var(--gray-500);
+            text-align: center;
+            margin-top: 16px;
+        }
+
+        .key-facts {
+            margin-top: 28px;
+            padding-top: 28px;
+            border-top: 1px solid var(--gray-200);
+        }
+
+        .key-facts h4 {
+            font-size: 16px;
+            font-weight: 700;
+            margin-bottom: 16px;
+        }
+
+        .key-facts-list {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+        }
+
+        .key-fact-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 10px;
+            font-size: 14px;
+        }
+
+        .key-fact-item svg {
+            width: 18px;
+            height: 18px;
+            color: var(--primary-color);
+            flex-shrink: 0;
+        }
+
+        .happy-travelers {
+            margin-top: 24px;
+            padding: 16px;
+            background: var(--gray-50);
+            border-radius: 12px;
+            text-align: center;
+        }
+
+        .happy-travelers-title {
+            font-size: 16px;
+            font-weight: 700;
+            margin-bottom: 8px;
+        }
+
+        .why-travelers-love {
+            margin-top: 24px;
+            padding: 20px;
+            background: var(--primary-100);
+            border-radius: 12px;
+        }
+
+        .why-travelers-love h4 {
+            font-size: 16px;
+            font-weight: 700;
+            margin-bottom: 12px;
+        }
+
+        .testimonial-text {
+            font-size: 14px;
+            color: var(--gray-700);
+            font-style: italic;
+            line-height: 1.6;
+            margin-bottom: 12px;
+        }
+
+        @media (max-width: 768px) {
+            .hero-priority-pill {
+                width: 100%;
+                justify-content: flex-start;
+            }
+
+            .booking-card-top {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+        }
+
+        /* ===== FOOTER (FROM INDEX.HTML) ===== */
+        .site-footer {
+            background: linear-gradient(to bottom, var(--gray-50) 0%, white 100%);
+            color: var(--gray-700);
+            border-top: 1px solid var(--gray-200);
+        }
+
+        .footer-main {
+            padding: 80px 40px;
+        }
+
+        .footer-main .container {
+            max-width: 1360px;
+            margin: 0 auto;
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: 1.5fr 1fr 1fr 1fr 1.2fr;
+            gap: 48px;
+        }
+
+        .footer-column {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .footer-column h4 {
+            font-size: 16px;
+            font-weight: 700;
+            color: var(--gray-900);
+            margin-bottom: 20px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            font-family: var(--font-display);
+        }
+
+        .footer-column ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        .footer-column a {
+            color: var(--gray-600);
+            text-decoration: none;
+            font-size: 14px;
+            transition: all 0.2s;
+        }
+
+        .footer-column a:hover {
+            color: var(--primary-600);
+            padding-left: 4px;
+        }
+
+        .footer-logo {
+            height: 36px;
+            width: auto;
+            max-width: 160px;
+            margin-bottom: 16px;
+        }
+
+        .footer-column p {
+            font-size: 14px;
+            line-height: 1.6;
+            color: var(--gray-600);
+            margin-bottom: 20px;
+        }
+
+        .social-links {
+            display: flex;
+            gap: 12px;
+            margin-top: 8px;
+        }
+
+        .social-links a {
+            width: 40px;
+            height: 40px;
+            background: white;
+            border: 1px solid var(--gray-200);
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.3s;
+            padding: 0;
+        }
+
+        .social-links a:hover {
+            background: var(--primary-600);
+            border-color: var(--primary-600);
+            transform: translateY(-2px);
+        }
+
+        .social-links a:hover svg {
+            fill: white;
+        }
+
+        .social-links svg {
+            width: 20px;
+            height: 20px;
+            fill: var(--gray-600);
+            transition: fill 0.3s;
+        }
+
+        .footer__newsletter {
+            margin-top: 24px;
+        }
+
+        .footer__newsletter-text {
+            font-size: 14px;
+            color: var(--text-light);
+            margin-bottom: 12px;
+        }
+
+        .footer__newsletter-form {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+        }
+
+        .footer__newsletter-input {
+            padding: 12px 16px;
+            background: var(--bg-white);
+            border: 1px solid #D1D5DB;
+            border-radius: 4px;
+            font-size: 14px;
+        }
+
+        .footer__newsletter-input:focus {
+            outline: none;
+            border-color: var(--primary-color);
+            box-shadow: 0 0 0 3px rgba(193, 86, 75, 0.1);
+        }
+
+        .footer__newsletter-button {
+            padding: 12px 24px;
+            background: var(--primary-color);
+            color: white;
+            border: none;
+            border-radius: 4px;
+            font-weight: 600;
+            font-size: 14px;
+            cursor: pointer;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .footer__newsletter-button:hover {
+            background: var(--primary-700);
+        }
+
+        .footer__bottom {
+            padding: 30px 40px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            max-width: 1360px;
+            margin: 0 auto;
+        }
+
+        .footer__bottom-left {
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+        }
+
+        .footer__copyright {
+            font-size: 14px;
+            color: #6B7280;
+        }
+
+        .footer__legal-links {
+            display: flex;
+            gap: 12px;
+            align-items: center;
+        }
+
+        .footer__legal-link {
+            font-size: 13px;
+            color: #6B7280;
+            text-decoration: none;
+        }
+
+        .footer__legal-link:hover {
+            color: var(--primary-color);
+        }
+
+        .footer__separator {
+            color: #D1D5DB;
+        }
+
+        .footer__tagline {
+            font-size: 16px;
+            font-weight: 600;
+            color: var(--primary-color);
+            font-style: italic;
+        }
+
+        /* ===== RESPONSIVE ===== */
+        @media (max-width: 1200px) {
+            .main-content {
+                grid-template-columns: 1fr;
+                padding: 40px 32px;
+            }
+
+            .booking-column {
+                position: static;
+                max-width: 600px;
+                margin: 0 auto;
+                order: -1; /* Show booking card first on tablet */
+            }
+
+            .reviews-grid,
+            .tour-cards-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (max-width: 1024px) {
+            .nav-menu,
+            .nav-actions .btn-outline,
+            .nav-actions .btn-primary-nav {
+                display: none;
+            }
+
+            .mobile-menu-toggle {
+                display: flex;
+            }
+
+            .footer-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .main-nav .container {
+                padding: 0 32px;
+            }
+
+            .tabs-container {
+                padding: 0 32px;
+                gap: 24px;
+                -webkit-overflow-scrolling: touch;
+                scroll-behavior: smooth;
+            }
+
+            .breadcrumbs,
+            .tour-title-section {
+                padding-left: 32px;
+                padding-right: 32px;
+            }
+
+            .tour-title-section {
+                padding-top: 40px;
+            }
+
+            .tour-title {
+                font-size: 36px;
+            }
+
+            .feature-badges {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (max-width: 768px) {
+            body {
+                padding-top: 60px;
+            }
+
+            .main-nav {
+                padding: 10px 0;
+            }
+
+            .main-nav .container {
+                padding: 0 20px;
+            }
+
+            .logo img {
+                height: 30px;
+            }
+
+            .hero-slider {
+                padding: 0 20px;
+            }
+
+            .slider-main-container {
+                height: 320px;
+                border-radius: 16px;
+            }
+
+            .slider-thumbnails {
+                gap: 8px;
+                padding: 12px;
+                border-radius: 16px;
+                margin-top: 12px;
+            }
+
+            .thumbnail {
+                width: 100px;
+                height: 70px;
+                border-radius: 8px;
+                border-width: 2px;
+            }
+
+            .slider-arrow {
+                width: 36px;
+                height: 36px;
+            }
+
+            .slider-arrow.prev {
+                left: 12px;
+            }
+
+            .slider-arrow.next {
+                right: 12px;
+            }
+
+            .breadcrumbs {
+                padding: 12px 20px;
+                font-size: 13px;
+                overflow-x: auto;
+                white-space: nowrap;
+            }
+
+            .breadcrumbs::-webkit-scrollbar {
+                display: none;
+            }
+
+            .sticky-tabs {
+                top: 60px;
+            }
+
+            .tabs-container {
+                padding: 0 20px;
+                gap: 20px;
+                -webkit-overflow-scrolling: touch;
+                scroll-behavior: smooth;
+                scroll-snap-type: x mandatory;
+                padding-right: 40px;
+            }
+
+            .tab-link {
+                padding: 14px 0;
+                font-size: 14px;
+                white-space: nowrap;
+                scroll-snap-align: start;
+                min-width: fit-content;
+            }
+
+            .tour-title-section {
+                padding: 24px 20px;
+            }
+
+            .tour-title {
+                font-size: 28px;
+                line-height: 1.3;
+                margin-bottom: 10px;
+            }
+
+            .tour-subtitle {
+                font-size: 16px;
+                margin-bottom: 16px;
+            }
+
+            .tour-meta {
+                gap: 8px;
+                flex-wrap: wrap;
+            }
+
+            .meta-badge {
+                font-size: 12px;
+                padding: 8px 14px;
+                gap: 6px;
+            }
+
+            .meta-badge svg {
+                width: 14px;
+                height: 14px;
+            }
+
+            .stars {
+                font-size: 13px;
+            }
+
+            .main-content {
+                padding: 24px 20px;
+                gap: 32px;
+            }
+
+            .content-column {
+                gap: 32px;
+            }
+
+            .section {
+                scroll-margin-top: 120px;
+            }
+
+            .section-title {
+                font-size: 24px;
+                margin-bottom: 16px;
+            }
+
+            .section-subtitle {
+                font-size: 15px;
+            }
+
+            .overview-text {
+                font-size: 15px;
+                line-height: 1.7;
+            }
+
+            .booking-card {
+                padding: 20px;
+            }
+
+            .booking-price {
+                margin-bottom: 20px;
+            }
+
+            .price-amount {
+                font-size: 32px;
+            }
+
+            .booking-btn,
+            .booking-btn.secondary {
+                padding: 14px;
+                font-size: 15px;
+            }
+
+            .feature-badges {
+                grid-template-columns: repeat(3, 1fr);
+                gap: 8px;
+            }
+
+            .feature-badge {
+                padding: 10px 8px;
+                flex-direction: row;
+                align-items: center;
+                justify-content: center;
+                gap: 6px;
+            }
+
+            .feature-badge svg {
+                width: 18px;
+                height: 18px;
+                flex-shrink: 0;
+            }
+
+            .feature-badge-title {
+                font-size: 11px;
+                line-height: 1.3;
+                white-space: nowrap;
+            }
+
+            .feature-badge-text {
+                display: none;
+            }
+
+            .highlights-grid {
+                grid-template-columns: 1fr;
+                gap: 12px;
+            }
+
+            .included-grid,
+            .info-grid {
+                grid-template-columns: 1fr;
+                gap: 12px;
+            }
+
+            .info-card {
+                padding: 20px;
+            }
+
+            .info-card-header {
+                gap: 12px;
+                margin-bottom: 12px;
+            }
+
+            .info-icon {
+                width: 40px;
+                height: 40px;
+            }
+
+            .info-icon svg {
+                width: 20px;
+                height: 20px;
+            }
+
+            .itinerary-timeline {
+                padding-left: 28px;
+            }
+
+            .itinerary-timeline::before {
+                left: 13px;
+            }
+
+            .itinerary-timeline-item {
+                margin-bottom: 24px;
+            }
+
+            .timeline-marker {
+                left: -28px;
+            }
+
+            .timeline-number {
+                width: 28px;
+                height: 28px;
+                font-size: 14px;
+            }
+
+            .timeline-content {
+                flex-direction: column;
+                gap: 0;
+            }
+
+            .timeline-image {
+                width: 100%;
+                height: 180px;
+                border-radius: 10px 10px 0 0;
+            }
+
+            .timeline-details {
+                padding: 16px;
+                gap: 8px;
+            }
+
+            .timeline-title {
+                font-size: 18px;
+            }
+
+            .timeline-description {
+                font-size: 13px;
+                line-height: 1.6;
+            }
+
+            .timeline-meta {
+                font-size: 12px;
+                flex-wrap: wrap;
+            }
+
+            .faq-question {
+                padding: 16px 18px;
+                font-size: 15px;
+            }
+
+            .faq-answer-content {
+                padding: 0 18px 16px;
+                font-size: 14px;
+            }
+
+            .reviews-header {
+                flex-direction: column;
+                text-align: center;
+                padding: 20px;
+                gap: 16px;
+            }
+
+            .score-number {
+                font-size: 40px;
+            }
+
+            .reviews-grid,
+            .tour-cards-grid {
+                grid-template-columns: 1fr;
+                gap: 16px;
+            }
+
+            .review-card {
+                padding: 20px;
+            }
+
+            .tour-card {
+                max-width: 100%;
+            }
+
+            .tour-card-image {
+                height: 200px;
+            }
+
+            .key-facts {
+                margin-top: 24px;
+                padding-top: 24px;
+            }
+
+            .key-fact-item {
+                font-size: 13px;
+            }
+
+            .happy-travelers {
+                padding: 14px;
+            }
+
+            .why-travelers-love {
+                padding: 18px;
+            }
+
+            .footer-main {
+                padding: 48px 20px;
+            }
+
+            .footer-grid {
+                grid-template-columns: 1fr;
+                gap: 32px;
+            }
+
+            .footer-column:first-child {
+                order: 1;
+            }
+
+            .footer__bottom {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 16px;
+            }
+
+            .footer__legal-links {
+                flex-direction: column;
+                gap: 8px;
+            }
+
+            .footer__separator {
+                display: none;
+            }
+        }
+
+        @media (max-width: 480px) {
+            html {
+                overflow-x: hidden;
+            }
+
+            body {
+                overflow-x: hidden;
+                max-width: 100vw;
+            }
+
+            * {
+                max-width: 100%;
+            }
+
+            .footer-main {
+                padding: 40px 16px;
+            }
+
+            .hero-slider {
+                padding: 0 16px;
+            }
+
+            .slider-main-container {
+                height: 280px;
+                border-radius: 14px;
+            }
+
+            .slider-thumbnails {
+                gap: 6px;
+                padding: 10px;
+                border-radius: 14px;
+                margin-top: 10px;
+            }
+
+            .thumbnail {
+                width: 80px;
+                height: 60px;
+                border-radius: 6px;
+            }
+
+            .breadcrumbs {
+                padding: 10px 16px;
+                font-size: 12px;
+            }
+
+            .tour-title-section {
+                padding: 20px 16px;
+            }
+
+            .tour-title {
+                font-size: 24px;
+            }
+
+            .tour-subtitle {
+                font-size: 15px;
+            }
+
+            .tour-meta {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 8px;
+            }
+
+            .meta-badge {
+                font-size: 11px;
+                padding: 7px 12px;
+            }
+
+            .tabs-container {
+                padding: 0 16px;
+                gap: 14px;
+                -webkit-overflow-scrolling: touch;
+                scroll-behavior: smooth;
+                scroll-snap-type: x mandatory;
+                padding-right: 32px;
+            }
+
+            .tab-link {
+                font-size: 13px;
+                padding: 12px 0;
+                scroll-snap-align: start;
+                min-width: fit-content;
+            }
+
+            .section-title {
+                font-size: 22px;
+            }
+
+            .section-subtitle {
+                font-size: 14px;
+            }
+
+            .overview-text {
+                font-size: 14px;
+            }
+
+            .price-amount {
+                font-size: 28px;
+            }
+
+            .main-content {
+                padding: 20px 16px;
+                gap: 28px;
+            }
+
+            .content-column {
+                gap: 28px;
+            }
+
+            .breadcrumbs {
+                padding-left: 16px;
+                padding-right: 16px;
+            }
+
+            .itinerary-timeline {
+                padding-left: 24px;
+            }
+
+            .itinerary-timeline::before {
+                left: 11px;
+            }
+
+            .itinerary-timeline-item {
+                margin-bottom: 20px;
+            }
+
+            .timeline-marker {
+                left: -24px;
+            }
+
+            .timeline-number {
+                width: 24px;
+                height: 24px;
+                font-size: 13px;
+            }
+
+            .timeline-image {
+                height: 160px;
+            }
+
+            .timeline-details {
+                padding: 14px;
+                gap: 6px;
+            }
+
+            .timeline-title {
+                font-size: 17px;
+            }
+
+            .timeline-description {
+                font-size: 13px;
+            }
+
+            .timeline-meta {
+                font-size: 12px;
+                flex-wrap: wrap;
+            }
+
+            .booking-card {
+                padding: 18px;
+            }
+
+            .booking-btn,
+            .booking-btn.secondary {
+                padding: 12px;
+                font-size: 14px;
+            }
+
+            .feature-badges {
+                gap: 6px;
+            }
+
+            .feature-badge {
+                padding: 8px 6px;
+                gap: 5px;
+            }
+
+            .feature-badge svg {
+                width: 16px;
+                height: 16px;
+            }
+
+            .feature-badge-title {
+                font-size: 10px;
+            }
+
+            .feature-badge-text {
+                display: none;
+            }
+
+            .highlight-item {
+                padding: 14px;
+            }
+
+            .info-card {
+                padding: 18px;
+            }
+
+            .info-card h4 {
+                font-size: 15px;
+            }
+
+            .info-card li {
+                font-size: 13px;
+            }
+
+            .faq-question {
+                padding: 14px 16px;
+                font-size: 14px;
+            }
+
+            .faq-answer-content {
+                padding: 0 16px 14px;
+                font-size: 13px;
+            }
+
+            .reviews-header {
+                padding: 16px;
+            }
+
+            .score-number {
+                font-size: 36px;
+            }
+
+            .review-card {
+                padding: 16px;
+            }
+
+            .tour-card-image {
+                height: 180px;
+            }
+
+            .tour-card-content {
+                padding: 16px;
+            }
+
+            .tour-card-title {
+                font-size: 16px;
+            }
+
+            .tour-title-section {
+                padding-top: 24px;
+            }
+
+            .booking-card {
+                padding: 20px;
+            }
+
+            .tour-meta {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 8px;
+            }
+
+            .meta-badge {
+                width: 100%;
+                justify-content: flex-start;
+                padding: 10px 14px;
+            }
+        }
+    </style>
+</head>
+<body>
+<!-- ===== HEADER ===== -->
+<header class="site-header">
+<nav class="main-nav">
+<div class="container">
+<a class="logo" href="../index.html">
+<picture>
+<source srcset="../img/alg%20logo.png" type="image/png"/>
+<img src="../img/alg%20logo.png" alt="Agadir Local Guide" loading="lazy" decoding="async">
+</picture>
+</a>
+<ul class="nav-menu">
+<li><a href="../index.html">Home</a></li>
+<li><a href="../all-tours.html">All Tours</a></li>
+<li><a href="../travel-guide.html">Travel Guide</a></li>
+<li><a href="../contact-us.html">Contact</a></li>
+</ul>
+<div class="nav-actions">
+<a class="btn-outline" href="tel:+212700006462">
+<svg fill="none" stroke="currentColor" stroke-width="2" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+<path d="M2.25 6.75c0 8.284 6.716 15 15 15h2.25a2.25 2.25 0 002.25-2.25v-1.372c0-.516-.351-.966-.852-1.091l-4.423-1.106c-.44-.11-.902.055-1.173.417l-.97 1.293c-.282.376-.769.542-1.21.38a12.035 12.035 0 01-7.143-7.143c-.162-.441.004-.928.38-1.21l1.293-.97c.363-.271.527-.734.417-1.173L6.963 3.102a1.125 1.125 0 00-1.091-.852H4.5A2.25 2.25 0 002.25 4.5v2.25z" stroke-linecap="round" stroke-linejoin="round"></path>
+</svg>
+                        Call Us
+                    </a>
+<a class="btn-primary-nav" href="../all-tours.html">
+<svg fill="none" stroke="currentColor" stroke-width="2" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+<path d="M6.75 3v2.25M17.25 3v2.25M3 18.75V7.5a2.25 2.25 0 012.25-2.25h13.5A2.25 2.25 0 0121 7.5v11.25m-18 0A2.25 2.25 0 005.25 21h13.5A2.25 2.25 0 0021 18.75m-18 0v-7.5A2.25 2.25 0 015.25 9h13.5A2.25 2.25 0 0121 11.25v7.5" stroke-linecap="round" stroke-linejoin="round"></path>
+</svg>
+                        Book Now
+                    </a>
+<button aria-label="Menu" class="mobile-menu-toggle">
+<span></span>
+<span></span>
+<span></span>
+</button>
+</div>
+</div>
+</nav>
+</header>
+<!-- Mobile Menu Overlay -->
+<div class="mobile-menu-overlay"></div>
+<!-- Mobile Menu -->
+<div class="mobile-menu">
+<button class="close-menu">×</button>
+<div class="menu-content">
+<nav class="menu-nav">
+<a href="../index.html">Home</a>
+<a href="../all-tours.html">All Tours</a>
+<a href="../travel-guide.html">Travel Guide</a>
+<a href="../contact-us.html">Contact</a>
+</nav>
+</div>
+<div class="mobile-menu-actions">
+<a class="mobile-cta mobile-cta-primary" href="../all-tours.html">Book a Tour</a>
+<a class="mobile-cta mobile-cta-secondary" href="https://wa.me/212700006462" target="_blank">WhatsApp Us</a>
+</div>
+</div>
+<!-- BREADCRUMBS -->
+<!-- TEMPLATE: Replace [TOUR_NAME] with your tour name -->
+<div class="breadcrumbs">
+<a href="../index.html">Home</a>
+<span>›</span>
+<a href="../all-tours.html">Tours</a>
+<span>›</span>
+<span>Paradise Valley Tour</span>
+</div>
+<!-- HERO SLIDER -->
+<!-- TEMPLATE: Replace image URLs, alt text, and tour title for your tour -->
+<div class="hero-slider">
+<div class="slider-main-container">
+<div class="slider-container">
+<div class="slide active">
+<picture>
+<source srcset="../img/excursions/Paradise Valley/paradise 1.webp" type="image/webp"/>
+<img alt="Paradise Valley natural pools and palm groves near Agadir" decoding="async" loading="lazy" src="../img/excursions/Paradise Valley/paradise 1.jpeg"/>
+</picture>
+</div>
+<div class="slide">
+<picture>
+<source srcset="../img/excursions/Paradise Valley/paradise 2.webp" type="image/webp"/>
+<picture>
+<source srcset="../img/excursions/Paradise Valley/paradise 2.webp" type="image/webp"/>
+<img alt="Swimming in crystal clear natural pools at Paradise Valley Morocco" decoding="async" loading="lazy" src="../img/excursions/Paradise Valley/paradise 2.jpeg"/>
+</picture>&gt;
+</picture>&gt;
+
+</div>
+<div class="slide">
+<img alt="Hiking trail through Paradise Valley with stunning mountain views" decoding="async" loading="lazy" src="../img/excursions/Paradise Valley/paradise 3.jpeg"/>
+</div>
+<div class="slide">
+<img alt="Beautiful rock formations and waterfalls at Paradise Valley Agadir" decoding="async" loading="lazy" src="../img/excursions/Paradise Valley/paradise 4.jpeg"/>
+</div>
+<div class="slide">
+<picture>
+<source srcset="../img/excursions/Paradise Valley/paradise 5.webp" type="image/webp"/>
+<img alt="Scenic views of Paradise Valley from Atlas Mountains near Agadir" decoding="async" loading="lazy" src="../img/excursions/Paradise Valley/paradise 5.jpeg"/>
+</picture>
+</div>
+<!-- TEMPLATE: Add more slides if needed -->
+</div>
+<!-- Navigation Arrows -->
+<button aria-label="Previous slide" class="slider-arrow prev" onclick="changeSlide(-1)">‹</button>
+<button aria-label="Next slide" class="slider-arrow next" onclick="changeSlide(1)">›</button>
+</div>
+<!-- Thumbnail Navigation -->
+<div class="slider-thumbnails">
+<div class="thumbnail active" onclick="goToSlide(0)">
+<picture>
+<source srcset="../img/excursions/Paradise Valley/paradise 1.webp" type="image/webp"/>
+<img alt="Paradise Valley natural pools and palm groves near Agadir" decoding="async" loading="lazy" src="../img/excursions/Paradise Valley/paradise 1.jpeg"/>
+</picture>
+</div>
+<div class="thumbnail" onclick="goToSlide(1)">
+<picture>
+<source srcset="../img/excursions/Paradise Valley/paradise 2.webp" type="image/webp"/>
+<img alt="Swimming in crystal clear natural pools at Paradise Valley Morocco" decoding="async" loading="lazy" src="../img/excursions/Paradise Valley/paradise 2.jpeg"/>
+</picture>
+</div>
+<div class="thumbnail" onclick="goToSlide(2)">
+<img alt="Hiking trail through Paradise Valley with stunning mountain views" decoding="async" loading="lazy" src="../img/excursions/Paradise Valley/paradise 3.jpeg"/>
+</div>
+<div class="thumbnail" onclick="goToSlide(3)">
+<img alt="Beautiful rock formations and waterfalls at Paradise Valley Agadir" decoding="async" loading="lazy" src="../img/excursions/Paradise Valley/paradise 4.jpeg"/>
+</div>
+<div class="thumbnail" onclick="goToSlide(4)">
+<picture>
+<source srcset="../img/excursions/Paradise Valley/paradise 5.webp" type="image/webp"/>
+<img alt="Scenic views of Paradise Valley from Atlas Mountains near Agadir" decoding="async" loading="lazy" src="../img/excursions/Paradise Valley/paradise 5.jpeg"/>
+</picture>
+</div>
+<!-- TEMPLATE: Add more thumbnails if you add more slides -->
+</div>
+</div>
+<!-- TITLE SECTION -->
+<!-- TEMPLATE: Replace all [TOUR_*] placeholders with your tour information -->
+<div class="tour-title-section">
+<div class="tour-eyebrow">Nature Escape</div>
+<h1 class="tour-title">Paradise Valley Tour from Agadir</h1>
+<p class="tour-subtitle">A relaxed nature trip with mountain views, a short walk through the valley, and time to enjoy Paradise Valley away from the city</p>
+<div class="hero-priority-row">
+<div class="hero-priority-pill"><strong>5-6h trip</strong> with transfers</div>
+<div class="hero-priority-pill"><strong>Short walk</strong> not a full trek</div>
+<div class="hero-priority-pill"><strong>Swim possible</strong> when conditions allow</div>
+</div>
+<div class="tour-meta">
+<div class="meta-badge">
+<svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" viewbox="0 0 24 24">
+<circle cx="12" cy="12" r="10"></circle>
+<polyline points="12 6 12 12 16 14"></polyline>
+</svg>
+<span>5-6 hours</span>
+</div>
+<div class="meta-badge">
+<svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" viewbox="0 0 24 24">
+<path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+<circle cx="9" cy="7" r="4"></circle>
+<path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
+<path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+</svg>
+<span>Small groups (max 8)</span>
+</div>
+<div class="meta-badge highlight">
+<svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" viewbox="0 0 24 24">
+<path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+<polyline points="22 4 12 14.01 9 11.01"></polyline>
+</svg>
+<span>Free cancellation 24h</span>
+</div>
+<div class="meta-badge rating">
+<span class="stars">★★★★★</span>
+<span class="rating-text">4.9</span>
+<span class="review-count">(342 reviews)</span>
+</div>
+</div>
+</div>
+<!-- STICKY TABS -->
+<div class="sticky-tabs">
+<div class="tabs-container">
+<a class="tab-link active" href="#overview">Overview</a>
+<a class="tab-link" href="#highlights">Highlights</a>
+<a class="tab-link" href="#itinerary">Itinerary</a>
+<a class="tab-link" href="#included">What's Included</a>
+<a class="tab-link" href="#meeting">Meeting Point</a>
+<a class="tab-link" href="#info">Important Info</a>
+<a class="tab-link" href="#faq">FAQ</a>
+<a class="tab-link" href="#reviews">Reviews</a>
+<a class="tab-link" href="#related">You Might Also Like</a>
+</div>
+</div>
+<!-- MAIN CONTENT -->
+<div class="main-content">
+<!-- LEFT COLUMN: CONTENT -->
+<div class="content-column">
+<!-- OVERVIEW -->
+<!-- TEMPLATE: Replace [TOUR_OVERVIEW_PARAGRAPH_1] and [TOUR_OVERVIEW_PARAGRAPH_2] with your tour description -->
+<section class="section" id="overview">
+<h2 class="section-title">Overview</h2>
+<p class="overview-text">
+                    Paradise Valley is one of the most popular nature escapes from Agadir, and this tour keeps the experience simple. We pick you up from your hotel, drive into the Atlas foothills, and take you to the valley for a short walk, scenic viewpoints, and free time near the natural pools. It is a good fit for travelers who want fresh air, mountain scenery, and an easy half-day outing.
+                </p>
+<p class="overview-text">
+                    The route is more relaxed than a serious hike. After the drive, you walk with your guide along the valley path to reach the main viewing and swimming areas. Depending on the season, water level, and recent weather, you may be able to swim or simply relax by the pools and enjoy the landscape. The experience is as much about the setting as the swimming itself.
+                </p>
+<p class="overview-text">
+                    Compared with generic listings that over-explain the destination, the key things most travelers want to know are straightforward: the trip includes pickup, the walking is moderate, the scenery is the main attraction, and conditions in the valley can change through the year. That makes this a better choice for couples, families, and casual travelers than for anyone expecting a long trek or a guaranteed full swimming session.
+                </p>
+<div class="feature-badges">
+<div class="feature-badge">
+<svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24">
+<path d="M5 17H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v10a2 2 0 0 1-2 2h-1"></path>
+<path d="M9 17h6"></path>
+<circle cx="7" cy="17" r="2"></circle>
+<circle cx="17" cy="17" r="2"></circle>
+</svg>
+<div class="feature-badge-title">Free Hotel Pick-Up</div>
+<div class="feature-badge-text">Door to door service</div>
+</div>
+<div class="feature-badge">
+<svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24">
+<path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+<circle cx="9" cy="7" r="4"></circle>
+<path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
+<path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+</svg>
+<div class="feature-badge-title">Small Group</div>
+<div class="feature-badge-text">Max 8 travelers</div>
+</div>
+<div class="feature-badge">
+<svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24">
+<polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon>
+</svg>
+<div class="feature-badge-title">Fast Booking Support</div>
+<div class="feature-badge-text">Quick WhatsApp confirmation</div>
+</div>
+</div>
+</section>
+<!-- HIGHLIGHTS -->
+<!-- TEMPLATE: Replace highlight items with your tour highlights. Copy/paste the highlight-item div for more highlights -->
+<section class="section" id="highlights">
+<h2 class="section-title">Highlights</h2>
+<p class="section-subtitle">What makes this tour special</p>
+<div class="highlights-grid">
+<div class="highlight-item">
+<div class="highlight-icon">
+<svg fill="none" stroke="currentColor" stroke-width="2" viewbox="0 0 24 24">
+<polyline points="20 6 9 17 4 12"></polyline>
+</svg>
+</div>
+<div class="highlight-text">Scenic drive from Agadir into the Atlas foothills with panoramic valley views</div>
+</div>
+<div class="highlight-item">
+<div class="highlight-icon">
+<svg fill="none" stroke="currentColor" stroke-width="2" viewbox="0 0 24 24">
+<polyline points="20 6 9 17 4 12"></polyline>
+</svg>
+</div>
+<div class="highlight-text">Short guided walk to the main Paradise Valley viewpoint and pool area</div>
+</div>
+<div class="highlight-item">
+<div class="highlight-icon">
+<svg fill="none" stroke="currentColor" stroke-width="2" viewbox="0 0 24 24">
+<polyline points="20 6 9 17 4 12"></polyline>
+</svg>
+</div>
+<div class="highlight-text">Time to relax, take photos, and swim when water levels and conditions allow</div>
+</div>
+<div class="highlight-item">
+<div class="highlight-icon">
+<svg fill="none" stroke="currentColor" stroke-width="2" viewbox="0 0 24 24">
+<polyline points="20 6 9 17 4 12"></polyline>
+</svg>
+</div>
+<div class="highlight-text">A relaxed nature trip that is easier than a full hiking excursion</div>
+</div>
+<div class="highlight-item">
+<div class="highlight-icon">
+<svg fill="none" stroke="currentColor" stroke-width="2" viewbox="0 0 24 24">
+<polyline points="20 6 9 17 4 12"></polyline>
+</svg>
+</div>
+<div class="highlight-text">Free pickup from Agadir, Taghazout, Tamraght, and Aourir</div>
+</div>
+<div class="highlight-item">
+<div class="highlight-icon">
+<svg fill="none" stroke="currentColor" stroke-width="2" viewbox="0 0 24 24">
+<polyline points="20 6 9 17 4 12"></polyline>
+</svg>
+</div>
+<div class="highlight-text">Small group setting with local guide support throughout the trip</div>
+</div>
+<!-- TEMPLATE: Add more highlight-item divs as needed -->
+</div>
+</section>
+<!-- ITINERARY -->
+<!-- TEMPLATE: Replace itinerary introduction and all timeline items with your tour itinerary -->
+<section class="section" id="itinerary">
+<h2 class="section-title">Itinerary</h2>
+<p class="overview-text" style="margin-bottom: 32px;">
+                    The day is simple: pickup, scenic drive, a short walk into the valley, free time near the pools, and return transfer to your accommodation.
+                </p>
+<div class="itinerary-timeline">
+<!-- TEMPLATE: Copy this itinerary-timeline-item block for each step. Update number, image, title, description, duration, and included info -->
+<div class="itinerary-timeline-item">
+<div class="timeline-marker">
+<div class="timeline-number">1</div>
+</div>
+<div class="timeline-content">
+<div class="timeline-details">
+<h3 class="timeline-title">Hotel Pickup from Agadir</h3>
+<p class="timeline-description">We collect you from your hotel or the agreed meeting point, then drive toward Paradise Valley through the countryside and mountain foothills. Pickup time depends on your departure and location, and is confirmed after booking.</p>
+<div class="timeline-meta">
+<span class="timeline-duration">45-60 minutes</span>
+<span class="timeline-separator">•</span>
+<span class="timeline-included">Free pickup included</span>
+</div>
+</div>
+</div>
+</div>
+<!-- TEMPLATE: Copy the itinerary-timeline-item block above and update for each step -->
+<div class="itinerary-timeline-item">
+<div class="timeline-marker">
+<div class="timeline-number">2</div>
+</div>
+<div class="timeline-content">
+<div class="timeline-details">
+<h3 class="timeline-title">Walk into the Valley</h3>
+<p class="timeline-description">Once you arrive, your guide leads a short walk along the valley path toward the main viewpoint and pool area. The walk is moderate, with uneven ground in places, but it is much lighter than a full trekking excursion.</p>
+<div class="timeline-meta">
+<span class="timeline-duration">15-30 minutes</span>
+<span class="timeline-separator">•</span>
+<span class="timeline-included">Professional guide included</span>
+</div>
+</div>
+</div>
+</div>
+<div class="itinerary-timeline-item">
+<div class="timeline-marker">
+<div class="timeline-number">3</div>
+</div>
+<div class="timeline-content">
+<div class="timeline-details">
+<h3 class="timeline-title">Free Time at Paradise Valley</h3>
+<p class="timeline-description">You will have time to relax, take photos, enjoy the mountain scenery, and swim if conditions are suitable. Water level and clarity vary by season and recent rainfall, so some days are better for swimming than others.</p>
+<div class="timeline-meta">
+<span class="timeline-duration">1.5-2 hours</span>
+<span class="timeline-separator">•</span>
+<span class="timeline-included">Swimming depends on conditions</span>
+</div>
+</div>
+</div>
+</div>
+<div class="itinerary-timeline-item">
+<div class="timeline-marker">
+<div class="timeline-number">4</div>
+</div>
+<div class="timeline-content">
+<div class="timeline-details">
+<h3 class="timeline-title">Scenic Stop &amp; Return Walk</h3>
+<p class="timeline-description">Before leaving, there is usually time for a final viewpoint stop and more photos, then you walk back to the vehicle with your guide. Depending on the day, your guide may also point out local argan trees, valley features, or nearby village life along the route.</p>
+<div class="timeline-meta">
+<span class="timeline-duration">20-30 minutes</span>
+<span class="timeline-separator">•</span>
+<span class="timeline-included">Photo stops included</span>
+</div>
+</div>
+</div>
+</div>
+<div class="itinerary-timeline-item">
+<div class="timeline-marker">
+<div class="timeline-number">5</div>
+</div>
+<div class="timeline-content">
+<div class="timeline-details">
+<h3 class="timeline-title">Return Journey to Agadir</h3>
+<p class="timeline-description">After your free time in the valley, we drive you back to your hotel or meeting point. Return time depends on your departure, road conditions, and the pace of the group.</p>
+<div class="timeline-meta">
+<span class="timeline-duration">45-60 minutes</span>
+<span class="timeline-separator">•</span>
+<span class="timeline-included">Hotel drop-off included</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- WHAT'S INCLUDED -->
+<!-- TEMPLATE: Replace included and not included items with your tour details -->
+<section class="section" id="included">
+<h2 class="section-title">What's Included</h2>
+<p class="overview-text" style="margin-bottom: 24px;">
+                    This trip covers the essentials: transport, guide support, and the Paradise Valley outing itself.
+                </p>
+<div class="included-grid">
+<div class="included-column">
+<h4>✓ Included</h4>
+<div class="included-list">
+<!-- TEMPLATE: Copy this included-item block for each included item -->
+<div class="included-item yes">
+<svg fill="none" stroke="currentColor" stroke-width="2" viewbox="0 0 24 24">
+<polyline points="20 6 9 17 4 12"></polyline>
+</svg>
+<span>Hotel pickup and drop-off from Agadir</span>
+</div>
+<div class="included-item yes">
+<svg fill="none" stroke="currentColor" stroke-width="2" viewbox="0 0 24 24">
+<polyline points="20 6 9 17 4 12"></polyline>
+</svg>
+<span>Professional English-speaking local guide</span>
+</div>
+<div class="included-item yes">
+<svg fill="none" stroke="currentColor" stroke-width="2" viewbox="0 0 24 24">
+<polyline points="20 6 9 17 4 12"></polyline>
+</svg>
+<span>Transportation in air-conditioned vehicle</span>
+</div>
+<div class="included-item yes">
+<svg fill="none" stroke="currentColor" stroke-width="2" viewbox="0 0 24 24">
+<polyline points="20 6 9 17 4 12"></polyline>
+</svg>
+<span>Guided hike through the valley</span>
+</div>
+<div class="included-item yes">
+<svg fill="none" stroke="currentColor" stroke-width="2" viewbox="0 0 24 24">
+<polyline points="20 6 9 17 4 12"></polyline>
+</svg>
+<span>Cultural insights and local knowledge</span>
+</div>
+<div class="included-item yes">
+<svg fill="none" stroke="currentColor" stroke-width="2" viewbox="0 0 24 24">
+<polyline points="20 6 9 17 4 12"></polyline>
+</svg>
+<span>Time to relax near the pools</span>
+</div>
+<div class="included-item yes">
+<svg fill="none" stroke="currentColor" stroke-width="2" viewbox="0 0 24 24">
+<polyline points="20 6 9 17 4 12"></polyline>
+</svg>
+<span>Small group experience (max 8 travelers)</span>
+</div>
+<div class="included-item yes">
+<svg fill="none" stroke="currentColor" stroke-width="2" viewbox="0 0 24 24">
+<polyline points="20 6 9 17 4 12"></polyline>
+</svg>
+<span>Photo opportunities at best viewpoints</span>
+</div>
+<!-- TEMPLATE: Add more included items as needed -->
+</div>
+</div>
+<div class="included-column">
+<h4>✗ Not Included</h4>
+<div class="included-list">
+<!-- TEMPLATE: Copy this included-item block for each not included item -->
+<div class="included-item no">
+<svg fill="none" stroke="currentColor" stroke-width="2" viewbox="0 0 24 24">
+<line x1="18" x2="6" y1="6" y2="18"></line>
+<line x1="6" x2="18" y1="6" y2="18"></line>
+</svg>
+<span>Food and drinks</span>
+</div>
+<div class="included-item no">
+<svg fill="none" stroke="currentColor" stroke-width="2" viewbox="0 0 24 24">
+<line x1="18" x2="6" y1="6" y2="18"></line>
+<line x1="6" x2="18" y1="6" y2="18"></line>
+</svg>
+<span>Personal expenses and tips</span>
+</div>
+<div class="included-item no">
+<svg fill="none" stroke="currentColor" stroke-width="2" viewbox="0 0 24 24">
+<line x1="18" x2="6" y1="6" y2="18"></line>
+<line x1="6" x2="18" y1="6" y2="18"></line>
+</svg>
+<span>Optional local purchases</span>
+</div>
+<!-- TEMPLATE: Add more not included items as needed -->
+</div>
+</div>
+</div>
+</section>
+<!-- MEETING POINT -->
+<section class="section" id="meeting">
+<h2 class="section-title">Meeting Point &amp; Pickup Details</h2>
+<p class="overview-text" style="margin-bottom: 24px;">
+                    Pickup is included from the main tourist areas around Agadir. If you are staying outside the standard zone, we can usually arrange a nearby meeting point.
+                </p>
+<div class="info-grid" style="margin-bottom: 32px;">
+<div class="info-card">
+<div class="info-card-header">
+<div class="info-icon">
+<svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24">
+<path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+<circle cx="12" cy="10" r="3"></circle>
+</svg>
+</div>
+<h4>Pickup Locations</h4>
+</div>
+<ul>
+<li>All hotels in Agadir city center</li>
+<li>Hotels and riads in Taghazout (15 min north of Agadir)</li>
+<li>Accommodations in Aourir and Tamraght</li>
+<li>Agadir Marina and port area</li>
+<li>If your accommodation is outside these areas, we'll arrange a convenient meeting point</li>
+</ul>
+</div>
+<div class="info-card">
+<div class="info-card-header">
+<div class="info-icon">
+<svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24">
+<circle cx="12" cy="12" r="10"></circle>
+<polyline points="12 6 12 12 16 14"></polyline>
+</svg>
+</div>
+<h4>Pickup Times</h4>
+</div>
+<ul>
+<li>Start times vary by season and pickup area</li>
+<li>Exact pickup time is confirmed after booking</li>
+<li>Please be ready 5 to 10 minutes before pickup</li>
+<li>Total trip time is usually around 5 to 6 hours</li>
+<li>Return time depends on road conditions and the group's pace</li>
+</ul>
+</div>
+</div>
+</section>
+<!-- IMPORTANT INFO -->
+<!-- TEMPLATE: Replace all list items with your tour-specific information -->
+<section class="section" id="info">
+<h2 class="section-title">Important Information</h2>
+<div class="info-grid">
+<div class="info-card">
+<div class="info-card-header">
+<div class="info-icon">
+<svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24">
+<path d="M6 2h12a2 2 0 0 1 2 2v16a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2z"></path>
+<path d="M8 10h8"></path>
+<path d="M8 14h8"></path>
+<path d="M8 6h8"></path>
+<path d="M10 18h4"></path>
+</svg>
+</div>
+<h4>What to Bring</h4>
+</div>
+<ul>
+<!-- TEMPLATE: Replace list items with what guests should bring -->
+<li><strong>Walking shoes:</strong> Wear comfortable closed shoes with decent grip.</li>
+<li><strong>Swimwear and towel:</strong> Bring them if you want to swim when conditions allow.</li>
+<li><strong>Sun protection:</strong> Pack sunscreen, sunglasses, and a cap or hat.</li>
+<li><strong>Light clothing:</strong> Choose comfortable clothes for walking and warm weather.</li>
+<li><strong>Water:</strong> Bring enough for the trip, especially in hotter months.</li>
+<li><strong>Phone or camera:</strong> The valley has excellent photo spots.</li>
+<li><strong>Small bag:</strong> Useful for personal items and anything you buy on the way.</li>
+</ul>
+</div>
+<div class="info-card">
+<div class="info-card-header">
+<div class="info-icon">
+<svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24">
+<path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+<path d="M9 12l2 2 4-4"></path>
+</svg>
+</div>
+<h4>Health &amp; Safety</h4>
+</div>
+<ul>
+<!-- TEMPLATE: Replace list items with health & safety information -->
+<li>A basic to moderate fitness level is recommended</li>
+<li>The walk includes uneven and rocky ground in some areas</li>
+<li>Swimming is optional and depends on water level and weather conditions</li>
+<li>Cliff jumping, if available, is always at your own risk</li>
+<li>Follow your guide's instructions throughout the activity</li>
+<li>Not ideal for travelers with serious mobility limitations</li>
+</ul>
+</div>
+<div class="info-card">
+<div class="info-card-header">
+<div class="info-icon">
+<svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24">
+<circle cx="12" cy="12" r="10"></circle>
+<line x1="12" x2="12" y1="16" y2="12"></line>
+<line x1="12" x2="12.01" y1="8" y2="8"></line>
+</svg>
+</div>
+<h4>Before You Book</h4>
+</div>
+<ul>
+<!-- TEMPLATE: Replace list items with important notes -->
+<li>Water levels in Paradise Valley change through the year</li>
+<li>Some days are better for swimming than others depending on recent rainfall</li>
+<li>Group size is limited to 8 travelers</li>
+<li>Free cancellation is available up to 24 hours before departure</li>
+<li>Your booking is confirmed after availability is checked</li>
+<li>Children should be accompanied by an adult</li>
+</ul>
+</div>
+</div>
+</section>
+<!-- FAQ -->
+<!-- TEMPLATE: Replace FAQ questions and answers with your tour-specific FAQs -->
+<section class="section" id="faq">
+<h2 class="section-title">Frequently Asked Questions</h2>
+<div class="faq-list">
+<!-- TEMPLATE: Copy this faq-item block for each FAQ. Update question and answer -->
+<div class="faq-item">
+<button class="faq-question" onclick="toggleFaq(this)">
+                            Is Paradise Valley worth visiting from Agadir?
+                            <svg fill="none" stroke="currentColor" stroke-width="2" viewbox="0 0 24 24">
+<polyline points="6 9 12 15 18 9"></polyline>
+</svg>
+</button>
+<div class="faq-answer">
+<div class="faq-answer-content">
+                                Yes. It is one of the most popular nature trips near Agadir, especially if you want mountain scenery, fresh air, and a break from the coast. The main appeal is the landscape and relaxed atmosphere, with swimming possible on many days when conditions are good.
+                            </div>
+</div>
+</div>
+<div class="faq-item">
+<button class="faq-question" onclick="toggleFaq(this)">
+                            How difficult is the hike at Paradise Valley?
+                            <svg fill="none" stroke="currentColor" stroke-width="2" viewbox="0 0 24 24">
+<polyline points="6 9 12 15 18 9"></polyline>
+</svg>
+</button>
+<div class="faq-answer">
+<div class="faq-answer-content">
+                                It is a light to moderate walk rather than a long hike. You should still expect uneven ground and some rocky sections, so closed shoes are important.
+                            </div>
+</div>
+</div>
+<div class="faq-item">
+<button class="faq-question" onclick="toggleFaq(this)">
+                            Can I swim in the natural pools?
+                            <svg fill="none" stroke="currentColor" stroke-width="2" viewbox="0 0 24 24">
+<polyline points="6 9 12 15 18 9"></polyline>
+</svg>
+</button>
+<div class="faq-answer">
+<div class="faq-answer-content">
+                                Often yes, but it depends on the season, water level, and recent weather. Bring swimwear and a towel if you want the option, but it is better to treat swimming as possible rather than guaranteed.
+                            </div>
+</div>
+</div>
+<div class="faq-item">
+<button class="faq-question" onclick="toggleFaq(this)">
+                            What should I wear for the Paradise Valley tour?
+                            <svg fill="none" stroke="currentColor" stroke-width="2" viewbox="0 0 24 24">
+<polyline points="6 9 12 15 18 9"></polyline>
+</svg>
+</button>
+<div class="faq-answer">
+<div class="faq-answer-content">
+                                Wear comfortable closed shoes, light clothes, and bring water, sun protection, and swimwear if you may want to swim. A small bag is useful for your phone, towel, and personal items.
+                            </div>
+</div>
+</div>
+<div class="faq-item">
+<button class="faq-question" onclick="toggleFaq(this)">
+                            How long is the Paradise Valley tour from Agadir?
+                            <svg fill="none" stroke="currentColor" stroke-width="2" viewbox="0 0 24 24">
+<polyline points="6 9 12 15 18 9"></polyline>
+</svg>
+</button>
+<div class="faq-answer">
+<div class="faq-answer-content">
+                                The full experience is usually around 5 to 6 hours including pickup and drop-off. Exact timing depends on your pickup area, road conditions, and the pace of the group.
+                            </div>
+</div>
+</div>
+<div class="faq-item">
+<button class="faq-question" onclick="toggleFaq(this)">
+                            Is the tour suitable for children?
+                            <svg fill="none" stroke="currentColor" stroke-width="2" viewbox="0 0 24 24">
+<polyline points="6 9 12 15 18 9"></polyline>
+</svg>
+</button>
+<div class="faq-answer">
+<div class="faq-answer-content">
+                                Yes, for children who are comfortable walking on uneven ground and are supervised by an adult. It is a better fit for active families than for very young children.
+                            </div>
+</div>
+</div>
+<!-- TEMPLATE: Add more FAQ items as needed -->
+</div>
+</section>
+<!-- REVIEWS -->
+<!-- TEMPLATE: Replace review score, count, and individual reviews with your tour reviews -->
+<section class="section" id="reviews">
+<h2 class="section-title">Traveler Reviews</h2>
+<div class="reviews-header">
+<div class="reviews-score">
+<div class="score-number">4.9</div>
+<div class="score-stars">★★★★★</div>
+<div style="font-size: 14px; color: var(--gray-500);">342 reviews</div>
+</div>
+</div>
+<div class="reviews-grid">
+<!-- TEMPLATE: Copy this review-card block for each review. Update avatar initials, name, stars, and review text -->
+<div class="review-card">
+<div class="review-header">
+<div class="reviewer-avatar">SM</div>
+<div class="reviewer-info">
+<h5>Sarah Mitchell</h5>
+<div class="reviewer-stars">★★★★★</div>
+</div>
+</div>
+<p style="font-size: 14px; color: var(--gray-600); line-height: 1.7;">
+                            The scenery was beautiful and the trip felt easy to do even without planning much ourselves. The guide kept a comfortable pace, and the valley was a great change from the beach.
+                        </p>
+</div>
+<div class="review-card">
+<div class="review-header">
+<div class="reviewer-avatar">JD</div>
+<div class="reviewer-info">
+<h5>James Davis</h5>
+<div class="reviewer-stars">★★★★★</div>
+</div>
+</div>
+<p style="font-size: 14px; color: var(--gray-600); line-height: 1.7;">
+                            Very good half-day escape from Agadir. The views were excellent, there was plenty of time to enjoy the valley, and the small group made the day feel relaxed.
+                        </p>
+</div>
+<div class="review-card">
+<div class="review-header">
+<div class="reviewer-avatar">EW</div>
+<div class="reviewer-info">
+<h5>Emma Wilson</h5>
+<div class="reviewer-stars">★★★★★</div>
+</div>
+</div>
+<p style="font-size: 14px; color: var(--gray-600); line-height: 1.7;">
+                            Well organized from pickup to return. Paradise Valley is worth seeing for the landscape alone, and the guide made the whole trip simple and stress-free.
+                        </p>
+</div>
+<!-- TEMPLATE: Add more review cards as needed -->
+</div>
+</section>
+<!-- YOU MIGHT ALSO LIKE -->
+<!-- TEMPLATE: Replace related tour cards with your related tours. Update image, title, subtitle, duration, price, and link -->
+<section class="section" id="related">
+<h2 class="section-title">You Might Also Like</h2>
+<div class="tour-cards-grid">
+<!-- TEMPLATE: Copy this tour-card block for each related tour -->
+<a class="tour-card" href="tour-agadir-half-quad-biking-adventure.html">
+<div class="tour-card-image">
+<picture>
+<source srcset="../img/excursions/Quad Biking/quad new/tinified/1.webp" type="image/webp"/>
+<img alt="Quad biking adventure in Agadir Morocco" decoding="async" loading="lazy" src="../img/excursions/Quad Biking/quad new/tinified/1.jpg"/>
+</picture>
+<span class="tour-card-badge">Adventure</span>
+</div>
+<div class="tour-card-content">
+<h3 class="tour-card-title">Quad Biking Adventure</h3>
+<p class="tour-card-subtitle">Explore Agadir's desert and beaches on an exciting quad bike tour</p>
+<div class="tour-card-footer">
+<div class="tour-card-meta">
+<svg fill="none" stroke="currentColor" stroke-width="2" viewbox="0 0 24 24">
+<circle cx="12" cy="12" r="10"></circle>
+<polyline points="12 6 12 12 16 14"></polyline>
+</svg>
+                                    2-3 hours
+                                </div>
+<div class="tour-card-price">€40</div>
+</div>
+</div>
+</a>
+<a class="tour-card" href="tour-agadir-sunset-camel-ride.html">
+<div class="tour-card-image">
+<picture>
+<source srcset="../img/excursions/Camel Ride/camel ride 1.webp" type="image/webp"/>
+<img alt="Sunset camel ride on Agadir beach Morocco" decoding="async" loading="lazy" src="../img/excursions/Camel Ride/camel ride 1.jpg"/>
+</picture>
+<span class="tour-card-badge">Sunset</span>
+</div>
+<div class="tour-card-content">
+<h3 class="tour-card-title">Sunset Camel Ride</h3>
+<p class="tour-card-subtitle">Experience a magical sunset camel ride along Agadir's beautiful beach</p>
+<div class="tour-card-footer">
+<div class="tour-card-meta">
+<svg fill="none" stroke="currentColor" stroke-width="2" viewbox="0 0 24 24">
+<circle cx="12" cy="12" r="10"></circle>
+<polyline points="12 6 12 12 16 14"></polyline>
+</svg>
+                                    1.5 hours
+                                </div>
+<div class="tour-card-price">€40</div>
+</div>
+</div>
+</a>
+<a class="tour-card" href="day-trip-essaouira-from-agadir-new.html">
+<div class="tour-card-image">
+<picture>
+<source srcset="../img/excursions/Essaouira Day Trip/essaouira 1.avif" type="image/avif"/>
+<source srcset="../img/excursions/Essaouira Day Trip/essaouira 1.webp" type="image/webp"/>
+<img alt="Day trip to Essaouira from Agadir Morocco" decoding="async" loading="lazy" src="../img/excursions/Essaouira Day Trip/essaouira 1.webp"/>
+</picture>
+<span class="tour-card-badge">Day Trip</span>
+</div>
+<div class="tour-card-content">
+<h3 class="tour-card-title">Essaouira Day Trip</h3>
+<p class="tour-card-subtitle">Discover the charming coastal town of Essaouira on a full-day excursion</p>
+<div class="tour-card-footer">
+<div class="tour-card-meta">
+<svg fill="none" stroke="currentColor" stroke-width="2" viewbox="0 0 24 24">
+<circle cx="12" cy="12" r="10"></circle>
+<polyline points="12 6 12 12 16 14"></polyline>
+</svg>
+                                    Full day
+                                </div>
+<div class="tour-card-price">€40</div>
+</div>
+</div>
+</a>
+<!-- TEMPLATE: Add more related tour cards as needed -->
+</div>
+</section>
+</div>
+<!-- RIGHT COLUMN: BOOKING CARD -->
+<!-- TEMPLATE: Replace price with your tour price -->
+<div class="booking-column">
+<div class="booking-card">
+<div class="booking-card-top">
+<div class="booking-card-badge">Most Popular Nature Tour</div>
+<div class="booking-card-rating">4.9 rated experience</div>
+</div>
+<div class="booking-price-block">
+<div class="booking-price-label">From</div>
+<div class="booking-price">
+<span class="price-amount">€30</span>
+<span class="price-unit">per person</span>
+</div>
+<div class="price-subtext">Includes pickup, transport, local guide support, and free time in Paradise Valley.</div>
+</div>
+<div class="booking-benefits">
+<div class="booking-benefit"><span class="booking-benefit-dot"></span><span>Simple half-day escape with easy hotel pickup</span></div>
+<div class="booking-benefit"><span class="booking-benefit-dot"></span><span>Good fit for couples, families, and casual travelers</span></div>
+<div class="booking-benefit"><span class="booking-benefit-dot"></span><span>Swimming is possible on many days, depending on conditions</span></div>
+</div>
+<button class="booking-btn" onclick="window.open('https://wa.me/212700006462?text=Hi! I would like to book the Paradise Valley Tour%0A%0Ahttps://agadirlocalguide.com/tours/tour-paradise-valley-agadir-new.html', '_blank')">
+<svg fill="currentColor" height="18" style="margin-right: 8px;" viewbox="0 0 24 24" width="18">
+<path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"></path>
+</svg>
+                    Check Availability on WhatsApp
+                </button>
+<p class="booking-note">Reserve your spot in minutes. Free cancellation up to 24 hours before.</p>
+<div class="key-facts">
+<h4>Key Facts</h4>
+<div class="key-facts-list">
+<div class="key-fact-item">
+<svg fill="none" stroke="currentColor" stroke-width="2" viewbox="0 0 24 24">
+<circle cx="12" cy="12" r="10"></circle>
+<polyline points="12 6 12 12 16 14"></polyline>
+</svg>
+<span>Duration: 5-6 hours with transfers</span>
+</div>
+<div class="key-fact-item">
+<svg fill="none" stroke="currentColor" stroke-width="2" viewbox="0 0 24 24">
+<polyline points="20 6 9 17 4 12"></polyline>
+</svg>
+<span>Free hotel pickup</span>
+</div>
+<div class="key-fact-item">
+<svg fill="none" stroke="currentColor" stroke-width="2" viewbox="0 0 24 24">
+<path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+<circle cx="9" cy="7" r="4"></circle>
+</svg>
+<span>Small group, max 8 guests</span>
+</div>
+</div>
+</div>
+<div class="happy-travelers">
+<div class="happy-travelers-title">Highly rated by recent guests</div>
+<div style="font-size: 14px; color: var(--gray-600);">based on strong recent demand</div>
+</div>
+<div class="why-travelers-love">
+<h4>Why travelers love this tour</h4>
+<p class="testimonial-text">
+                        "A simple, scenic break from the city with great views and just enough walking. Easy to book and easy to enjoy."
+                    </p>
+</div>
+</div>
+</div>
+</div>
+<!-- ===== FOOTER ===== -->
+<footer class="site-footer">
+<div class="footer-main">
+<div class="container">
+<div class="footer-grid">
+<!-- Brand Column -->
+<div class="footer-column">
+<picture>
+<source srcset="../img/alg%20logo.png" type="image/png"/>
+<img src="../img/alg%20logo.png" alt="Agadir Local Guide" class="footer-logo" loading="lazy" decoding="async">
+</picture>
+<p>Discover the best of Agadir with local expert guides. Authentic experiences, unforgettable adventures.</p>
+<!-- Social Links -->
+<div class="social-links">
+<a aria-label="Facebook" href="#">
+<svg viewbox="0 0 24 24">
+<path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path>
+</svg>
+</a>
+<a aria-label="Instagram" href="#">
+<svg viewbox="0 0 24 24">
+<rect height="20" rx="5" ry="5" width="20" x="2" y="2"></rect>
+<path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+<line x1="17.5" x2="17.51" y1="6.5" y2="6.5"></line>
+</svg>
+</a>
+<a aria-label="Twitter" href="#">
+<svg viewbox="0 0 24 24">
+<path d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z"></path>
+</svg>
+</a>
+</div>
+</div>
+<!-- Quick Links -->
+<div class="footer-column">
+<h4>Quick Links</h4>
+<ul>
+<li><a href="../index.html">Home</a></li>
+<li><a href="../all-tours.html">Tours</a></li>
+<li><a href="../travel-guide.html">Blog</a></li>
+<li><a href="../contact-us.html">Contact</a></li>
+</ul>
+</div>
+<!-- Popular Tours -->
+<div class="footer-column">
+<h4>Popular Tours</h4>
+<ul>
+<li><a href="../tours/tour-paradise-valley-agadir-new.html">Paradise Valley</a></li>
+<li><a href="../tours/tour-agadir-half-quad-biking-adventure.html">Quad Biking</a></li>
+<li><a href="../tours/day-trip-marrakech-from-agadir-new.html">Marrakech Day Trip</a></li>
+<li><a href="../tours/day-trip-essaouira-from-agadir-new.html">Essaouira Day Trip</a></li>
+</ul>
+</div>
+<!-- Support -->
+<div class="footer-column">
+<h4>Support</h4>
+<ul>
+<li><a href="../faq.html">FAQs</a></li>
+<li><a href="#">Booking Terms</a></li>
+<li><a href="#">Privacy Policy</a></li>
+<li><a href="#">Cancellation Policy</a></li>
+</ul>
+</div>
+<!-- Newsletter -->
+<div class="footer-column">
+<h4>Newsletter</h4>
+<div class="footer__newsletter">
+<p class="footer__newsletter-text">Subscribe for exclusive deals and updates</p>
+<form class="footer__newsletter-form">
+<input class="footer__newsletter-input" placeholder="Your email" required="" type="email"/>
+<button class="footer__newsletter-button" type="submit">Subscribe</button>
+</form>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Footer Bottom -->
+<div class="footer__bottom">
+<div class="footer__bottom-left">
+<p class="footer__copyright">© 2024 Agadir Local Guide. All rights reserved.</p>
+<div class="footer__legal-links">
+<a class="footer__legal-link" href="#">Privacy Policy</a>
+<span class="footer__separator">•</span>
+<a class="footer__legal-link" href="#">Terms of Service</a>
+<span class="footer__separator">•</span>
+<a class="footer__legal-link" href="#">Cookie Policy</a>
+</div>
+</div>
+<div class="footer__bottom-right">
+<p class="footer__tagline">Your Adventure Starts Here</p>
+</div>
+</div>
+</footer>
+<script>
+        // Header Scroll (if needed)
+        window.addEventListener('scroll', function() {
+            const header = document.querySelector('.site-header');
+            if (window.scrollY > 50) {
+                header.classList.add('scrolled');
+            } else {
+                header.classList.remove('scrolled');
+            }
+        });
+
+        // Mobile Menu
+        const menuToggle = document.querySelector('.mobile-menu-toggle');
+        const mobileMenu = document.querySelector('.mobile-menu');
+        const menuOverlay = document.querySelector('.mobile-menu-overlay');
+        const closeMenu = document.querySelector('.close-menu');
+
+        menuToggle.addEventListener('click', function() {
+            menuToggle.classList.toggle('active');
+            mobileMenu.classList.toggle('active');
+            menuOverlay.classList.toggle('active');
+            document.body.style.overflow = mobileMenu.classList.contains('active') ? 'hidden' : '';
+        });
+
+        closeMenu.addEventListener('click', function() {
+            menuToggle.classList.remove('active');
+            mobileMenu.classList.remove('active');
+            menuOverlay.classList.remove('active');
+            document.body.style.overflow = '';
+        });
+
+        menuOverlay.addEventListener('click', function() {
+            menuToggle.classList.remove('active');
+            mobileMenu.classList.remove('active');
+            menuOverlay.classList.remove('active');
+            document.body.style.overflow = '';
+        });
+
+        // Slider
+        let currentSlide = 0;
+        const slides = document.querySelectorAll('.slide');
+        const thumbnails = document.querySelectorAll('.thumbnail');
+        let isUserInteraction = false;
+
+        function showSlide(n, scrollThumbnail = false) {
+            slides.forEach(slide => slide.classList.remove('active'));
+            thumbnails.forEach(thumbnail => thumbnail.classList.remove('active'));
+
+            if (n >= slides.length) currentSlide = 0;
+            if (n < 0) currentSlide = slides.length - 1;
+
+            slides[currentSlide].classList.add('active');
+            thumbnails[currentSlide].classList.add('active');
+
+            // Only scroll thumbnail into view if explicitly requested (user interaction)
+            if (scrollThumbnail && thumbnails[currentSlide]) {
+                thumbnails[currentSlide].scrollIntoView({
+                    behavior: 'smooth',
+                    block: 'nearest',
+                    inline: 'center'
+                });
+            }
+        }
+
+        function changeSlide(n) {
+            isUserInteraction = true;
+            currentSlide += n;
+            showSlide(currentSlide, true);
+            // Reset flag after a short delay
+            setTimeout(() => { isUserInteraction = false; }, 1000);
+        }
+
+        function goToSlide(n) {
+            isUserInteraction = true;
+            currentSlide = n;
+            showSlide(currentSlide, true);
+            // Reset flag after a short delay
+            setTimeout(() => { isUserInteraction = false; }, 1000);
+        }
+
+        // Auto-advance slider (without scrolling)
+        setInterval(() => {
+            // Only auto-advance if user hasn't recently interacted
+            if (!isUserInteraction) {
+                currentSlide++;
+                showSlide(currentSlide, false); // Don't scroll during auto-advance
+            }
+        }, 5000);
+
+        // Sticky Tabs
+        const tabs = document.querySelectorAll('.tab-link');
+        const sections = document.querySelectorAll('.section');
+
+        window.addEventListener('scroll', () => {
+            let current = '';
+            sections.forEach(section => {
+                const sectionTop = section.offsetTop - 180;
+                if (window.pageYOffset >= sectionTop) {
+                    current = section.getAttribute('id');
+                }
+            });
+
+            tabs.forEach(tab => {
+                tab.classList.remove('active');
+                if (tab.getAttribute('href') === '#' + current) {
+                    tab.classList.add('active');
+                }
+            });
+        });
+
+        tabs.forEach(tab => {
+            tab.addEventListener('click', (e) => {
+                e.preventDefault();
+                const targetId = tab.getAttribute('href').substring(1);
+                const targetSection = document.getElementById(targetId);
+                const offset = 160;
+                const elementPosition = targetSection.getBoundingClientRect().top;
+                const offsetPosition = elementPosition + window.pageYOffset - offset;
+
+                window.scrollTo({
+                    top: offsetPosition,
+                    behavior: 'smooth'
+                });
+            });
+        });
+
+        // FAQ Toggle
+        function toggleFaq(button) {
+            const faqItem = button.parentElement;
+            const wasActive = faqItem.classList.contains('active');
+
+            document.querySelectorAll('.faq-item').forEach(item => {
+                item.classList.remove('active');
+            });
+
+            if (!wasActive) {
+                faqItem.classList.add('active');
+            }
+        }
+
+        // Toggle Itinerary
+        function toggleItinerary(button) {
+            const itineraryItem = button.parentElement;
+            const wasActive = itineraryItem.classList.contains('active');
+
+            // Optional: Close other items when opening a new one
+            // Uncomment the lines below if you want only one item open at a time
+            // document.querySelectorAll('.itinerary-item').forEach(item => {
+            //     item.classList.remove('active');
+            // });
+
+            if (wasActive) {
+                itineraryItem.classList.remove('active');
+            } else {
+                itineraryItem.classList.add('active');
+            }
+        }
+
+        // Scroll to Booking
+        function scrollToBooking() {
+            const bookingCard = document.querySelector('.booking-card');
+            const offset = 100;
+            const elementPosition = bookingCard.getBoundingClientRect().top;
+            const offsetPosition = elementPosition + window.pageYOffset - offset;
+
+            window.scrollTo({
+                top: offsetPosition,
+                behavior: 'smooth'
+            });
+        }
+    </script>
+</body>
+</html>

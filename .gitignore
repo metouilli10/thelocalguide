@@ -1,0 +1,25 @@
+# macOS
+.DS_Store
+*.dmg
+*.app
+
+# Node modules
+node_modules/
+.venv/
+
+# Logs
+*.log
+
+# Backup files
+*.bak*
+*.backup
+
+# Environment variables (API keys)
+.env
+.env.local
+*.env
+.env.*
+
+
+
+

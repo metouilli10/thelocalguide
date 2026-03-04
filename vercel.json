@@ -1,0 +1,68 @@
+{
+  "redirects": [
+    {
+      "source": "/:path*",
+      "has": [{ "type": "host", "value": "www.agadirlocalguide.com" }],
+      "destination": "https://agadirlocalguide.com/:path*",
+      "permanent": true
+    },
+    {
+      "source": "/tour-paradise-valley-agadir.html",
+      "destination": "/tours/tour-paradise-valley-agadir-new.html",
+      "permanent": true
+    },
+    {
+      "source": "/tours/tour-paradise-valley-agadir.html",
+      "destination": "/tours/tour-paradise-valley-agadir-new.html",
+      "permanent": true
+    },
+    {
+      "source": "/tours/tour-quad-biking-agadir.html",
+      "destination": "/tours/tour-agadir-half-quad-biking-adventure.html",
+      "permanent": true
+    },
+    {
+      "source": "/tour-quad-biking-agadir.html",
+      "destination": "/tours/tour-agadir-half-quad-biking-adventure.html",
+      "permanent": true
+    }
+  ],
+  "headers": [
+    {
+      "source": "/img/:path*",
+      "headers": [
+        {
+          "key": "Cache-Control",
+          "value": "public, max-age=31536000, immutable"
+        }
+      ]
+    },
+    {
+      "source": "/css/:path*",
+      "headers": [
+        {
+          "key": "Cache-Control",
+          "value": "public, max-age=31536000, immutable"
+        }
+      ]
+    },
+    {
+      "source": "/js/:path*",
+      "headers": [
+        {
+          "key": "Cache-Control",
+          "value": "public, max-age=31536000, immutable"
+        }
+      ]
+    },
+    {
+      "source": "/index.html",
+      "headers": [
+        {
+          "key": "Cache-Control",
+          "value": "public, max-age=3600, must-revalidate"
+        }
+      ]
+    }
+  ]
+}

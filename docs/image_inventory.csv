@@ -1,0 +1,25 @@
+Image Filename,Usage Count,Priority,Category,Current Status,Replacement Date,Notes,Recommended Dimensions
+viator.png,33,CRITICAL,Partner Logo,Active,,Official Viator logo - footer on all pages,200x100px transparent PNG
+tripadvisor.png,33,CRITICAL,Partner Logo,Active,,Official TripAdvisor logo - footer on all pages,200x100px transparent PNG
+morocco-coastal-2.jpg,32,CRITICAL,Coastal/Nature,Active,,Most used tour image - coastal scenes,1200x800px
+morocco-week-3.jpg,26,CRITICAL,General/Adventure,Active,,Multi-purpose tour imagery,1200x800px
+morocco-horizon-4.jpg,25,CRITICAL,Landscape,Active,,Horizon/landscape shots across tours,1200x800px
+morocco-market.jpg,20,CRITICAL,Cultural,Active,,Souk/market tours - Marrakech themed,1200x800px
+morocco-heritage-1.jpg,20,CRITICAL,Cultural/Heritage,Active,,Heritage sites - Kasbah - cultural tours,1200x800px
+paradise-valley.jpg,17,HIGH,Nature,Active,,Paradise Valley tours - natural pools,1200x800px
+berber-village.jpg,14,HIGH,Cultural,Active,,Berber villages - Atlas Mountains,1200x800px
+quad-biking.jpg,12,HIGH,Adventure,Active,,Quad biking primary image,1200x800px
+morocco-collage.jpg,11,HIGH,Hero/Background,Active,,Hero backgrounds - wide format,1920x1080px
+camel-ride-sunset.jpg,9,MEDIUM,Animal/Romantic,Active,,Camel rides - sunset beach,1200x800px
+horse-2.jpg,6,MEDIUM,Animal/Sports,Active,,Horse riding - Ranch Tamri,1200x800px
+ranch-tamri.jpg,4,LOW,Location,Active,,Ranch Tamri specific - coastal ranch,1200x800px
+quad-biking.webp,4,LOW,Adventure,Active,,WebP optimized version of quad-biking,1200x800px WebP
+morocco-collage.png,1,LOW,Hero/Background,Active,,Duplicate of JPG version - consider removing,1920x1080px
+rr.png,0,DELETE,Unknown,Unused,,NOT REFERENCED - can be deleted,N/A
+surf-2.jpg,2,HIGH,Sports,MISSING,,UPLOAD NEEDED - surf lessons,1200x800px
+morocco-food-1.jpg,2,HIGH,Cultural/Food,MISSING,,UPLOAD NEEDED - cooking classes,1200x800px
+souss-massa-flamingos.jpg,1,MEDIUM,Wildlife,MISSING,,UPLOAD NEEDED - Souss Massa park,1200x800px
+author-1.jpg,1,LOW,Profile,MISSING,,UPLOAD NEEDED - author profile photo,400x400px
+author-2.jpg,1,LOW,Profile,MISSING,,UPLOAD NEEDED - author profile photo,400x400px
+author-3.jpg,1,LOW,Profile,MISSING,,UPLOAD NEEDED - author profile photo,400x400px
+

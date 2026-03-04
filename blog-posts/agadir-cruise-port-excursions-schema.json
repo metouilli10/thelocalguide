@@ -1,0 +1,88 @@
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Is it safe to book a shore excursion outside the cruise line?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Absolutely! Thousands of cruise passengers book independent tours in Agadir every year without issues. The key is choosing a reputable local operator with good reviews, confirmed meeting procedures, and guaranteed return times. We've been welcoming cruise passengers for 10+ years with a 100% return rate."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How do I know I'll get back to the ship on time?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "We guarantee return 60-90 minutes before your ship's departure. We know Agadir traffic patterns, we track ship schedules, and we've never had a passenger miss their ship. Your guide will have the ship's departure time confirmed and will manage the itinerary accordingly."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What if my cruise ship changes its schedule?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "We monitor schedule changes and adjust accordingly. If your port time is significantly reduced, we'll offer a modified tour or refund. Your guide will have our contact number for real-time updates."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How much money should I bring for a shore excursion?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "For a guided tour: €40-60 per person (tour cost) + €30-50 for shopping/extras. We accept euros and credit cards. For independent exploring, bring €50-100 in cash plus card backup."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What should I wear for a shore excursion in Agadir?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Agadir is relaxed—casual, comfortable clothing is fine. For Paradise Valley, bring swimwear and water shoes. For city tours, comfortable walking shoes. Morocco is Muslim but Agadir is tourist-friendly; modest clothing is appreciated but not strictly required."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can I do a shore excursion on my own without a guide?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes, but we recommend a guide for first-time visitors. Taxis are available at the port, but you'll need to negotiate prices, navigate language barriers, and manage your own timing. A guide provides local knowledge, handles logistics, and ensures you're back on time."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Do you offer private shore excursions?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes! Private tours are available for couples, families, or groups. You'll have your own guide and vehicle with a fully customized itinerary. Private tours typically cost €150-250 for 2-4 people (total, not per person)."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What if I have mobility issues?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Most tours can be adapted for limited mobility. Paradise Valley involves some walking on uneven terrain (not suitable for wheelchairs). City tours and beach/camel rides are more accessible. Contact us with your specific needs and we'll advise."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How far in advance should I book?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "We recommend booking 1-2 weeks before your cruise. During peak season (December-March), book earlier to ensure availability. We can sometimes accommodate last-minute bookings via WhatsApp."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What's included in your shore excursion prices?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "All our tours include: port pickup and drop-off, air-conditioned transport, English-speaking guide, entrance fees, and usually lunch. Tips are not included but appreciated."
+      }
+    }
+  ]
+}
+
+

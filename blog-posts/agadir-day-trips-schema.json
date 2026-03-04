@@ -1,0 +1,72 @@
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "What is the best day trip from Agadir?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "It depends on your interests! Paradise Valley is the most popular for its natural beauty and swimming. Essaouira wins for culture and history. Marrakech is essential for first-time Morocco visitors. For something unique, Tafraout offers spectacular mountain landscapes that few tourists see."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How far in advance should I book day trips?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "For popular trips (Essaouira, Marrakech, Paradise Valley), book 2-3 days ahead during peak season (December-February, July-August). Off-season, same-day booking is usually possible. Specialty trips (birdwatching, cooking classes) should be booked further ahead."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can I do two day trips in one day?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Some combinations work well: Paradise Valley + Imouzzer, Crocoparc + Taroudant, Taghazout + Banana Village. But don't try to combine distant destinations—you'll spend more time in the car than exploring."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Are day trips from Agadir suitable for children?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Many are excellent for families! Crocoparc is perfect for kids. Paradise Valley works for children 5+ with supervision. Essaouira and Marrakech are great for cultural exposure. Avoid very long trips (Tafraout, Sidi Ifni) with young children."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What's the best time of year for day trips?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Spring (March-May) and fall (September-November) offer ideal conditions—pleasant temperatures, green landscapes (spring), and fewer crowds. Summer works but is hot; winter is mild but some waterfalls may be reduced."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Do I need a guide for day trips?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "For Paradise Valley, Anti-Atlas villages, and national parks—yes, a guide significantly enhances the experience. For Essaouira and Marrakech, guides help but aren't essential. For Taghazout or beach trips, you can easily go independently."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How much should I budget for day trips?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Half-day trips typically cost €25-45 per person including transport and guide. Full-day trips range from €40-75. Budget extra for meals (€10-20), entrance fees (€5-15), and shopping. Tip generously—it's expected and appreciated."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can I visit the Sahara Desert on a day trip from Agadir?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "The Sahara Desert (Erg Chebbi dunes near Merzouga) is too far for a day trip—it's 10+ hours each way. Consider a 2-3 day trip instead, or enjoy the closer desert landscapes around Tafraout and the Anti-Atlas."
+      }
+    }
+  ]
+}
+
+

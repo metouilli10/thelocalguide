@@ -1,0 +1,265 @@
+{
+  "tourCategories": [
+    {
+      "category": "Adventure Activities",
+      "tours": [
+        {
+          "name": "Quad Biking Tour",
+          "priceFrom": 25,
+          "currency": "EUR",
+          "duration": "3 hours",
+          "difficulty": "Moderate",
+          "minAge": 16,
+          "availability": "Daily"
+        },
+        {
+          "name": "Buggy Tour",
+          "priceFrom": 30,
+          "currency": "EUR",
+          "duration": "3 hours",
+          "difficulty": "Moderate",
+          "minAge": 16,
+          "availability": "Daily"
+        },
+        {
+          "name": "Sandboarding",
+          "priceFrom": 30,
+          "currency": "EUR",
+          "duration": "5 hours",
+          "difficulty": "Easy to Moderate",
+          "minAge": 8,
+          "availability": "Daily"
+        },
+        {
+          "name": "Hot Air Balloon",
+          "priceFrom": 150,
+          "currency": "EUR",
+          "duration": "4 hours",
+          "difficulty": "Easy",
+          "minAge": 5,
+          "availability": "Daily (weather dependent)"
+        }
+      ]
+    },
+    {
+      "category": "Nature & Day Trips",
+      "tours": [
+        {
+          "name": "Paradise Valley Trip",
+          "priceFrom": 20,
+          "currency": "EUR",
+          "duration": "5 hours",
+          "difficulty": "Easy",
+          "minAge": 0,
+          "availability": "Daily",
+          "highlights": ["Natural pools", "Atlas Mountains", "Argan gardens", "Berber villages"]
+        },
+        {
+          "name": "Sand Dunes Trip",
+          "priceFrom": 30,
+          "currency": "EUR",
+          "duration": "4.5 hours",
+          "difficulty": "Easy",
+          "minAge": 0,
+          "availability": "Daily",
+          "highlights": ["Sahara dunes", "Atlantic Ocean views", "Banana village", "Mint tea"]
+        },
+        {
+          "name": "Souss Massa National Park",
+          "priceFrom": 25,
+          "currency": "EUR",
+          "duration": "4 hours",
+          "difficulty": "Easy",
+          "minAge": 0,
+          "availability": "Daily"
+        }
+      ]
+    },
+    {
+      "category": "Cultural Day Trips",
+      "tours": [
+        {
+          "name": "Marrakech Day Trip",
+          "priceFrom": 40,
+          "currency": "EUR",
+          "duration": "13 hours",
+          "difficulty": "Easy",
+          "minAge": 0,
+          "availability": "Mon, Tue, Thu, Sat",
+          "highlights": ["Jemaa el-Fna", "Koutoubia Mosque", "Medina", "Souks", "Free time"]
+        },
+        {
+          "name": "Essaouira Day Trip",
+          "priceFrom": 30,
+          "currency": "EUR",
+          "duration": "11 hours",
+          "difficulty": "Easy",
+          "minAge": 0,
+          "availability": "Mon, Wed, Fri"
+        },
+        {
+          "name": "Agadir City Tour",
+          "priceFrom": 20,
+          "currency": "EUR",
+          "duration": "3 hours",
+          "difficulty": "Easy",
+          "minAge": 0,
+          "availability": "Daily"
+        },
+        {
+          "name": "Taroudant & Tiout Trip",
+          "priceFrom": 35,
+          "currency": "EUR",
+          "duration": "8 hours",
+          "difficulty": "Easy",
+          "minAge": 0,
+          "availability": "Tue, Thu, Sat"
+        }
+      ]
+    },
+    {
+      "category": "Animal & Wildlife",
+      "tours": [
+        {
+          "name": "Camel Ride Tour",
+          "priceFrom": 25,
+          "currency": "EUR",
+          "duration": "2 hours",
+          "difficulty": "Easy",
+          "minAge": 0,
+          "availability": "Daily",
+          "variants": ["Sunset Camel Ride", "BBQ Camel Ride"]
+        },
+        {
+          "name": "Horse Riding",
+          "priceFrom": 25,
+          "currency": "EUR",
+          "duration": "2 hours",
+          "difficulty": "Easy to Moderate",
+          "minAge": 8,
+          "availability": "Daily"
+        },
+        {
+          "name": "Croco Parc Visit",
+          "priceFrom": 25,
+          "currency": "EUR",
+          "duration": "3 hours",
+          "difficulty": "Easy",
+          "minAge": 0,
+          "availability": "Daily"
+        },
+        {
+          "name": "Dolphin World Visit",
+          "priceFrom": 25,
+          "currency": "EUR",
+          "duration": "3 hours",
+          "difficulty": "Easy",
+          "minAge": 0,
+          "availability": "Daily"
+        }
+      ]
+    },
+    {
+      "category": "Water Activities",
+      "tours": [
+        {
+          "name": "Boat Trip",
+          "priceFrom": 20,
+          "currency": "EUR",
+          "duration": "2 hours",
+          "difficulty": "Easy",
+          "minAge": 0,
+          "availability": "Daily"
+        },
+        {
+          "name": "Surfing Lessons",
+          "priceFrom": 30,
+          "currency": "EUR",
+          "duration": "2 hours",
+          "difficulty": "Moderate",
+          "minAge": 10,
+          "availability": "Daily"
+        }
+      ]
+    },
+    {
+      "category": "Desert Adventures (Multi-day)",
+      "tours": [
+        {
+          "name": "Small Desert Trip",
+          "priceFrom": 35,
+          "currency": "EUR",
+          "duration": "8 hours",
+          "difficulty": "Moderate",
+          "minAge": 0,
+          "availability": "Daily"
+        },
+        {
+          "name": "Zagora Desert Trip",
+          "priceFrom": 120,
+          "currency": "EUR",
+          "duration": "2 days",
+          "difficulty": "Moderate",
+          "minAge": 0,
+          "availability": "Select days"
+        },
+        {
+          "name": "Merzouga Desert Trip",
+          "priceFrom": 180,
+          "currency": "EUR",
+          "duration": "3 days",
+          "difficulty": "Moderate",
+          "minAge": 0,
+          "availability": "Select days"
+        }
+      ]
+    },
+    {
+      "category": "Special Experiences",
+      "tours": [
+        {
+          "name": "Cooking Class",
+          "priceFrom": 35,
+          "currency": "EUR",
+          "duration": "4 hours",
+          "difficulty": "Easy",
+          "minAge": 0,
+          "availability": "Daily"
+        },
+        {
+          "name": "Cable Car Ride",
+          "priceFrom": 30,
+          "currency": "EUR",
+          "duration": "2 hours",
+          "difficulty": "Easy",
+          "minAge": 0,
+          "availability": "Daily"
+        },
+        {
+          "name": "Hiking/Trekking Tour",
+          "priceFrom": 30,
+          "currency": "EUR",
+          "duration": "4-6 hours",
+          "difficulty": "Moderate to Hard",
+          "minAge": 12,
+          "availability": "Daily"
+        }
+      ]
+    }
+  ],
+  "commonInclusions": [
+    "Hotel pickup and drop-off",
+    "Professional local guide",
+    "Air-conditioned transportation",
+    "Moroccan mint tea",
+    "Safety equipment (where applicable)",
+    "Free cancellation"
+  ],
+  "paymentOptions": [
+    "Pay online (Stripe, PayPal)",
+    "Pay cash at pickup",
+    "Multiple currencies accepted (EUR, USD, GBP, MAD)"
+  ],
+  "notes": "All prices are indicative based on market research. Set your own competitive pricing."
+}
+

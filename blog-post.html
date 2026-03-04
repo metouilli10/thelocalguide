@@ -1,0 +1,855 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<!-- 
+    ============================================
+    BLOG POST TEMPLATE - CUSTOMIZATION GUIDE
+    ============================================
+    
+    To create a new blog post, search and replace the following placeholders:
+    
+    1. SEO & META TAGS (lines ~8-11):
+       - [BLOG_TITLE]: Main article title
+       - [BLOG_DESCRIPTION]: Meta description (150-160 characters recommended)
+       - [BLOG_KEYWORDS]: SEO keywords (comma-separated)
+       - [BLOG_URL]: Full canonical URL (e.g., "https://yourdomain.com/blog/article-slug.html")
+       - [BLOG_SLUG]: URL slug (e.g., "top-things-to-do-agadir-2026")
+       - [BLOG_IMAGE]: OG/Twitter image URL (1200x630px recommended)
+       - [BLOG_DATE_PUBLISHED]: Publication date in ISO format (e.g., "2026-01-15T08:00:00+00:00")
+       - [BLOG_DATE_MODIFIED]: Last modified date in ISO format
+    
+    2. STRUCTURED DATA (JSON-LD) (lines ~42-69):
+       - [BLOG_TITLE]: Headline (same as meta title)
+       - [BLOG_DESCRIPTION]: Description (same as meta description)
+       - [BLOG_IMAGE]: Image URL
+       - [AUTHOR_NAME]: Author full name
+       - [AUTHOR_URL]: Author profile page URL
+       - [BLOG_DATE_PUBLISHED]: Publication date (ISO format)
+       - [BLOG_DATE_MODIFIED]: Modified date (ISO format)
+       - [BLOG_URL]: Canonical URL
+    
+    3. BREADCRUMBS (lines ~182-209):
+       - [BREADCRUMB_CATEGORY]: Category name (e.g., "Travel Tips")
+       - [BREADCRUMB_CATEGORY_SLUG]: Category URL slug (e.g., "travel-tips")
+       - [BREADCRUMB_TITLE]: Final breadcrumb text (article title)
+    
+    4. ARTICLE HEADER (lines ~220-273):
+       - [BLOG_CATEGORY]: Category pill text (e.g., "Travel Tips", "Beach Guide")
+       - [BLOG_TITLE]: Article title (h1)
+       - [BLOG_EXCERPT]: Article excerpt/lead paragraph (2-3 sentences)
+       - [AUTHOR_NAME]: Author name
+       - [AUTHOR_AVATAR]: Author avatar image path (e.g., "/img/author-avatar.jpg")
+       - [BLOG_DATE]: Display date (e.g., "Jan 15, 2026")
+       - [BLOG_DATE_ISO]: Date in ISO format for datetime attribute (e.g., "2026-01-15")
+       - [READING_TIME]: Estimated reading time (e.g., "8 min read")
+       - [LAST_UPDATED]: Last updated text (e.g., "Updated: Jan 15, 2026")
+       - [FEATURED_IMAGE]: Hero image path
+       - [FEATURED_IMAGE_ALT]: Hero image alt text
+    
+    5. ARTICLE CONTENT (lines ~391-533):
+       - [LEAD_PARAGRAPH]: Opening paragraph (first paragraph after excerpt)
+       - [ARTICLE_CONTENT]: Replace this placeholder with your full article HTML content (headings, paragraphs, lists, images, callouts, etc.)
+         * See example structure in comments below [ARTICLE_CONTENT] placeholder
+         * Use [CONTENT_IMAGE_X], [INTERNAL_LINK_X], and [CALLOUT_X_*] placeholders within your content
+       - [CONTENT_IMAGE_1]: First article image path
+       - [CONTENT_IMAGE_1_ALT]: First image alt text
+       - [CONTENT_IMAGE_1_CAPTION]: First image caption
+       - [CONTENT_IMAGE_2]: Second article image path (repeat as needed with incrementing numbers)
+       - [CONTENT_IMAGE_2_ALT]: Second image alt text
+       - [CONTENT_IMAGE_2_CAPTION]: Second image caption
+       - [INTERNAL_LINK_1]: Link to tour/page (e.g., "/tours/tour-paradise-valley-agadir-new.html")
+       - [INTERNAL_LINK_1_TEXT]: Link text (display text for the link)
+       - [CALLOUT_1_ICON]: Callout icon (emoji or text, e.g., "💡", "📸", "🍽️")
+       - [CALLOUT_1_TITLE]: Callout title (e.g., "Local Tip", "Photography Tip")
+       - [CALLOUT_1_CONTENT]: Callout content/description
+    
+    6. AUTHOR BOX (lines ~537-551):
+       - [AUTHOR_NAME]: Author name
+       - [AUTHOR_AVATAR]: Author avatar image path
+       - [AUTHOR_BIO]: Author biography (2-3 sentences)
+       - [AUTHOR_WHATSAPP]: WhatsApp contact link (e.g., "https://wa.me/212123456789")
+    
+    7. RELATED POSTS (lines ~554-596):
+       - [RELATED_POST_1_TITLE]: First related post title
+       - [RELATED_POST_1_URL]: First related post URL
+       - [RELATED_POST_1_IMAGE]: First related post image
+       - [RELATED_POST_1_CATEGORY]: First related post category
+       - [RELATED_POST_1_DATE]: First related post date (e.g., "Jan 10, 2026")
+       - [RELATED_POST_1_DATE_ISO]: First related post date ISO (e.g., "2026-01-10")
+       - Repeat for [RELATED_POST_2_*] and [RELATED_POST_3_*]
+    
+    8. SIDEBAR - POPULAR TOURS (lines ~627-674):
+       - [POPULAR_TOUR_1_NAME]: First tour name
+       - [POPULAR_TOUR_1_URL]: First tour URL
+       - [POPULAR_TOUR_1_IMAGE]: First tour thumbnail
+       - [POPULAR_TOUR_1_IMAGE_ALT]: First tour image alt text
+       - [POPULAR_TOUR_1_PRICE]: First tour price (e.g., "From €25")
+       - [POPULAR_TOUR_1_RATING]: First tour rating (e.g., "★★★★★")
+       - [POPULAR_TOUR_1_REVIEWS]: First tour review count (e.g., "(142)")
+       - Repeat for [POPULAR_TOUR_2_*] and [POPULAR_TOUR_3_*]
+    
+    9. SIDEBAR - RELATED ARTICLES (lines ~677-706):
+       - [SIDEBAR_ARTICLE_1_TITLE]: First sidebar article title
+       - [SIDEBAR_ARTICLE_1_URL]: First sidebar article URL
+       - [SIDEBAR_ARTICLE_1_IMAGE]: First sidebar article image
+       - [SIDEBAR_ARTICLE_1_IMAGE_ALT]: First sidebar article image alt
+       - [SIDEBAR_ARTICLE_1_DATE]: First sidebar article date (e.g., "Jan 12, 2026")
+       - [SIDEBAR_ARTICLE_1_DATE_ISO]: First sidebar article date ISO (e.g., "2026-01-12")
+       - Repeat for [SIDEBAR_ARTICLE_2_*] and [SIDEBAR_ARTICLE_3_*]
+    
+    10. SOCIAL SHARING LINKS:
+        - Replace "YOUR_URL" with [BLOG_URL] in social share buttons
+        - Replace "YOUR_TITLE" with [BLOG_TITLE] in social share buttons
+    
+    ============================================
+    NOTES:
+    - Keep all HTML structure and CSS classes intact
+    - Table of Contents is auto-generated by JavaScript
+    - Header and Footer are site-wide components (do not modify)
+    - All placeholders use [UPPERCASE_WITH_UNDERSCORES] format
+    - For multiple items, use numbered placeholders (e.g., [RELATED_POST_1_TITLE])
+    ============================================
+    -->
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<!-- SEO Meta Tags -->
+<title>[BLOG_TITLE] | Agadir Local Guide</title>
+<meta content="[BLOG_DESCRIPTION]" name="description"/>
+<meta content="[BLOG_KEYWORDS]" name="keywords"/>
+<meta content="Agadir Local Guide" name="author"/>
+<!-- Open Graph Meta Tags -->
+<meta content="article" property="og:type"/>
+<meta content="[BLOG_TITLE]" property="og:title"/>
+<meta content="[BLOG_DESCRIPTION]" property="og:description"/>
+<meta content="[BLOG_IMAGE]" property="og:image"/>
+<meta content="[BLOG_URL]" property="og:url"/>
+<meta content="Agadir Local Guide" property="og:site_name"/>
+<!-- Twitter Card Meta Tags -->
+<meta content="summary_large_image" name="twitter:card"/>
+<meta content="[BLOG_TITLE]" name="twitter:title"/>
+<meta content="[BLOG_DESCRIPTION]" name="twitter:description"/>
+<meta content="[BLOG_IMAGE]" name="twitter:image"/>
+<!-- Canonical URL -->
+<link href="[BLOG_URL]" rel="canonical"/>
+<!-- Favicon -->
+<link href="/favicon.ico" rel="icon" type="image/x-icon"/>
+<!-- Stylesheet -->
+<link href="blog.css" rel="stylesheet"/>
+<!-- Google Fonts: Inter + Poppins -->
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&amp;family=Poppins:wght@600;700;800;909&amp;display=swap" rel="stylesheet"/>
+<!-- Structured Data (JSON-LD) -->
+<script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "BlogPosting",
+        "headline": "[BLOG_TITLE]",
+        "description": "[BLOG_DESCRIPTION]",
+        "image": "[BLOG_IMAGE]",
+        "datePublished": "[BLOG_DATE_PUBLISHED]",
+        "dateModified": "[BLOG_DATE_MODIFIED]",
+        "author": {
+            "@type": "Person",
+            "name": "[AUTHOR_NAME]",
+            "url": "[AUTHOR_URL]"
+        },
+        "publisher": {
+            "@type": "Organization",
+            "name": "Agadir Local Guide",
+            "logo": {
+                "@type": "ImageObject",
+                "url": "https://yourdomain.com/img/logo.png"
+            }
+        },
+        "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "[BLOG_URL]"
+        }
+    }
+    </script>
+</head>
+<body>
+<!-- HEADER -->
+<header class="site-header">
+<!-- Main Navigation -->
+<nav class="main-nav">
+<div class="container">
+<a class="logo" href="index.html">
+<picture>
+<source srcset="./img/alg%20logo.png" type="image/png"/>
+<img src="img/alg%20logo.png" alt="Agadir Local Guide" loading="lazy" decoding="async">
+</picture>
+</a>
+<ul class="nav-menu">
+<li><a href="index.html">Home</a></li>
+<li class="has-dropdown">
+<a href="agadir-tours.html">
+                            Tours
+                            <svg class="dropdown-icon" fill="currentColor" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+<path clip-rule="evenodd" d="M12.53 16.28a.75.75 0 01-1.06 0l-7.5-7.5a.75.75 0 011.06-1.06L12 14.69l6.97-6.97a.75.75 0 111.06 1.06l-7.5 7.5z" fill-rule="evenodd"></path>
+</svg>
+</a>
+<ul class="dropdown-menu">
+<li><a href="agadir-tours.html">All Tours</a></li>
+<li><a href="tours/tour-paradise-valley-agadir-new.html">Paradise Valley</a></li>
+<li><a href="tours/tour-agadir-half-quad-biking-adventure.html">Quad Biking</a></li>
+<li><a href="tours/tour-agadir-sunset-camel-ride.html">Sunset Camel Ride</a></li>
+</ul>
+</li>
+<li><a class="active" href="blog.html">Travel Guide</a></li>
+<li><a href="contact-us.html">Contact</a></li>
+</ul>
+<div class="nav-actions">
+<a class="btn-outline" href="tel:+212700006462">
+<svg fill="none" stroke="currentColor" stroke-width="2" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+<path d="M2.25 6.75c0 8.284 6.716 15 15 15h2.25a2.25 2.25 0 002.25-2.25v-1.372c0-.516-.351-.966-.852-1.091l-4.423-1.106c-.44-.11-.902.055-1.173.417l-.97 1.293c-.282.376-.769.542-1.21.38a12.035 12.035 0 01-7.143-7.143c-.162-.441.004-.928.38-1.21l1.293-.97c.363-.271.527-.734.417-1.173L6.963 3.102a1.125 1.125 0 00-1.091-.852H4.5A2.25 2.25 0 002.25 4.5v2.25z" stroke-linecap="round" stroke-linejoin="round"></path>
+</svg>
+                        Call Us
+                    </a>
+<a class="btn-primary-nav" href="agadir-tours.html">
+<svg fill="none" stroke="currentColor" stroke-width="2" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+<path d="M6.75 3v2.25M17.25 3v2.25M3 18.75V7.5a2.25 2.25 0 012.25-2.25h13.5A2.25 2.25 0 0121 7.5v11.25m-18 0A2.25 2.25 0 005.25 21h13.5A2.25 2.25 0 0021 18.75m-18 0v-7.5A2.25 2.25 0 015.25 9h13.5A2.25 2.25 0 0121 11.25v7.5" stroke-linecap="round" stroke-linejoin="round"></path>
+</svg>
+                        Book Now
+                    </a>
+<button aria-label="Menu" class="mobile-menu-toggle" id="hamburger">
+<span></span>
+<span></span>
+<span></span>
+</button>
+</div>
+</div>
+</nav>
+</header>
+<!-- Mobile Menu Overlay -->
+<div class="mobile-menu-overlay" id="mobileMenuOverlay"></div>
+<!-- Mobile Menu -->
+<div class="mobile-menu" id="mobileMenu">
+<button aria-label="Close menu" class="close-menu">×</button>
+<!-- Navigation -->
+<div class="menu-content">
+<nav class="menu-nav">
+<a href="index.html">
+                    Home
+                    <svg fill="none" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+<path d="M8.25 4.5l7.5 7.5-7.5 7.5" stroke-linecap="round" stroke-linejoin="round"></path>
+</svg>
+</a>
+<a href="agadir-tours.html">
+                    Tours &amp; Activities
+                    <svg fill="none" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+<path d="M8.25 4.5l7.5 7.5-7.5 7.5" stroke-linecap="round" stroke-linejoin="round"></path>
+</svg>
+</a>
+<a href="blog.html">
+                    Travel Guide
+                    <svg fill="none" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+<path d="M8.25 4.5l7.5 7.5-7.5 7.5" stroke-linecap="round" stroke-linejoin="round"></path>
+</svg>
+</a>
+<a href="contact-us.html">
+                    Contact Us
+                    <svg fill="none" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+<path d="M8.25 4.5l7.5 7.5-7.5 7.5" stroke-linecap="round" stroke-linejoin="round"></path>
+</svg>
+</a>
+</nav>
+</div>
+<!-- Quick Actions -->
+<div class="mobile-menu-actions">
+<a class="mobile-cta mobile-cta-primary" href="agadir-tours.html">
+<svg fill="none" stroke="currentColor" stroke-width="2" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+<path d="M6.75 3v2.25M17.25 3v2.25M3 18.75V7.5a2.25 2.25 0 012.25-2.25h13.5A2.25 2.25 0 0121 7.5v11.25m-18 0A2.25 2.25 0 005.25 21h13.5A2.25 2.25 0 0021 18.75m-18 0v-7.5A2.25 2.25 0 015.25 9h13.5A2.25 2.25 0 0121 11.25v7.5" stroke-linecap="round" stroke-linejoin="round"></path>
+</svg>
+                Book a Tour
+            </a>
+<a class="mobile-cta mobile-cta-secondary" href="https://wa.me/212700006462" target="_blank">
+<svg fill="currentColor" height="20" viewbox="0 0 24 24" width="20" xmlns="http://www.w3.org/2000/svg">
+<path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"></path>
+</svg>
+                Chat on WhatsApp
+            </a>
+</div>
+</div>
+<!-- END HEADER -->
+<!-- Breadcrumbs -->
+<nav aria-label="Breadcrumb" class="breadcrumbs">
+<div class="container">
+<ol itemscope="" itemtype="https://schema.org/BreadcrumbList">
+<li itemprop="itemListElement" itemscope="" itemtype="https://schema.org/ListItem">
+<a href="/" itemprop="item">
+<span itemprop="name">Home</span>
+</a>
+<meta content="1" itemprop="position">
+</meta></li>
+<li itemprop="itemListElement" itemscope="" itemtype="https://schema.org/ListItem">
+<a href="/blog" itemprop="item">
+<span itemprop="name">Blog</span>
+</a>
+<meta content="2" itemprop="position">
+</meta></li>
+<li itemprop="itemListElement" itemscope="" itemtype="https://schema.org/ListItem">
+<a href="/blog/category/[BREADCRUMB_CATEGORY_SLUG]" itemprop="item">
+<span itemprop="name">[BREADCRUMB_CATEGORY]</span>
+</a>
+<meta content="3" itemprop="position">
+</meta></li>
+<li itemprop="itemListElement" itemscope="" itemtype="https://schema.org/ListItem">
+<span itemprop="name">[BREADCRUMB_TITLE]</span>
+<meta content="4" itemprop="position">
+</meta></li>
+</ol>
+</div>
+</nav>
+<!-- Main Content -->
+<main class="main-content">
+<div class="container">
+<div class="blog-layout">
+<!-- Left Column - Article Content -->
+<article class="blog-article">
+<!-- Hero Section -->
+<header class="article-hero">
+<div class="category-pill">[BLOG_CATEGORY]</div>
+<h1 class="article-title">[BLOG_TITLE]</h1>
+<p class="article-excerpt">
+                            [BLOG_EXCERPT]
+                        </p>
+<div class="article-meta">
+<div class="meta-left">
+<img alt="[AUTHOR_NAME]" class="author-avatar" decoding="async" loading="lazy" src="[AUTHOR_AVATAR]"/>
+<div class="meta-info">
+<span class="author-name">[AUTHOR_NAME]</span>
+<div class="meta-details">
+<time datetime="[BLOG_DATE_ISO]">[BLOG_DATE]</time>
+<span class="meta-separator">•</span>
+<span class="reading-time">[READING_TIME]</span>
+<span class="meta-separator">•</span>
+<span class="last-updated">[LAST_UPDATED]</span>
+</div>
+</div>
+</div>
+<div class="social-share">
+<span class="share-label">Share:</span>
+<button aria-label="Copy link to clipboard" class="share-btn copy-link" title="Copy link">
+<svg fill="none" height="18" stroke="currentColor" stroke-width="2" viewbox="0 0 24 24" width="18">
+<path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path>
+<path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path>
+</svg>
+</button>
+<a aria-label="Share on Facebook" class="share-btn facebook" href="https://www.facebook.com/sharer/sharer.php?u=[BLOG_URL]" rel="noopener noreferrer" target="_blank" title="Share on Facebook">
+<svg fill="currentColor" height="18" viewbox="0 0 24 24" width="18">
+<path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"></path>
+</svg>
+</a>
+<a aria-label="Share on X (Twitter)" class="share-btn twitter" href="https://twitter.com/intent/tweet?url=[BLOG_URL]&amp;text=[BLOG_TITLE]" rel="noopener noreferrer" target="_blank" title="Share on X">
+<svg fill="currentColor" height="18" viewbox="0 0 24 24" width="18">
+<path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"></path>
+</svg>
+</a>
+<a aria-label="Share on WhatsApp" class="share-btn whatsapp" href="https://wa.me/?text=[BLOG_TITLE]%20[BLOG_URL]" rel="noopener noreferrer" target="_blank" title="Share on WhatsApp">
+<svg fill="currentColor" height="18" viewbox="0 0 24 24" width="18">
+<path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"></path>
+</svg>
+</a>
+</div>
+</div>
+<figure class="featured-image">
+<img alt="[FEATURED_IMAGE_ALT]" height="675" loading="eager" src="[FEATURED_IMAGE]" width="1200"/>
+</figure>
+</header>
+<!-- Table of Contents -->
+<aside class="table-of-contents">
+<h2 class="toc-title">Table of Contents</h2>
+<nav aria-label="Table of contents" id="toc-nav">
+<!-- Generated by JavaScript -->
+</nav>
+</aside>
+<!-- Article Content -->
+<div class="article-content prose">
+<p class="lead">
+                            [LEAD_PARAGRAPH]
+                        </p>
+
+                        [ARTICLE_CONTENT]
+
+                        <!-- Example content structure (replace with your actual content):
+
+                        <h2 id="section-1">Your First Section Heading</h2>
+
+                        <p>
+                            Your paragraph content here. You can include <a href="[INTERNAL_LINK_1]">internal links</a> to tours or other pages.
+                        </p>
+
+                        <div class="info-callout">
+                            <div class="callout-icon">[CALLOUT_1_ICON]</div>
+                            <div class="callout-content">
+                                <h3>[CALLOUT_1_TITLE]</h3>
+                                <p>[CALLOUT_1_CONTENT]</p>
+                            </div>
+                        </div>
+
+                        <figure class="article-image">
+                            <img src="[CONTENT_IMAGE_1]" alt="[CONTENT_IMAGE_1_ALT]" width="800" height="533" loading="lazy">
+                            <figcaption>[CONTENT_IMAGE_1_CAPTION]</figcaption>
+                        </figure>
+                        
+                        -->
+<h2 id="agadir-beach">2. Relax on Agadir Beach</h2>
+<p>
+                            Agadir's crown jewel is its 10-kilometer stretch of golden sand beach. With over 300 days of sunshine annually, the beach offers perfect conditions for sunbathing, swimming, and water sports throughout most of the year.
+                        </p>
+<p>
+                            The promenade has been beautifully renovated in recent years, featuring modern cafés, restaurants, and beach clubs. Whether you want to rent a sunbed at a beach club or spread your towel on the public beach, there's space for everyone.
+                        </p>
+<h3>Beach Activities Available:</h3>
+<ul>
+<li><strong>Surfing lessons</strong> - Perfect waves for beginners and intermediates</li>
+<li><strong>Jet skiing</strong> - Rent equipment from various beach vendors</li>
+<li><strong>Beach volleyball</strong> - Free public courts available</li>
+<li><strong>Camel rides</strong> - Sunset camel rides along the shore</li>
+<li><strong>Beach yoga</strong> - Morning sessions offered by local instructors</li>
+</ul>
+<h2 id="souk-el-had">3. Shop at Souk El Had</h2>
+<p>
+                            Souk El Had is North Africa's largest market, covering over 13 acres and housing more than 6,000 vendors. Open every day except Monday, this vibrant marketplace is where locals do their shopping, making it an authentic cultural experience.
+                        </p>
+<blockquote>
+                            "Visiting Souk El Had is like stepping into the heart of Moroccan daily life. The colors, sounds, and aromas create an unforgettable sensory experience that you won't find in any tourist shop." - Ahmed, Local Guide
+                        </blockquote>
+<p>
+                            Here you'll find everything from fresh produce and spices to traditional crafts, leather goods, carpets, and argan oil products. Bargaining is expected and part of the fun - don't be afraid to negotiate prices!
+                        </p>
+<h3>What to Buy:</h3>
+<table>
+<thead>
+<tr>
+<th>Item</th>
+<th>Price Range</th>
+<th>Tips</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Argan Oil (100ml)</td>
+<td>80-150 MAD</td>
+<td>Look for organic, cold-pressed varieties</td>
+</tr>
+<tr>
+<td>Leather Bags</td>
+<td>200-800 MAD</td>
+<td>Check stitching quality before buying</td>
+</tr>
+<tr>
+<td>Moroccan Spices (per 100g)</td>
+<td>10-50 MAD</td>
+<td>Ask to smell before purchasing</td>
+</tr>
+<tr>
+<td>Traditional Carpets</td>
+<td>500-5000 MAD</td>
+<td>Handmade are more expensive but authentic</td>
+</tr>
+</tbody>
+</table>
+<h2 id="agadir-kasbah">4. Visit Agadir Kasbah</h2>
+<p>
+                            Perched on a hilltop 236 meters above sea level, the Agadir Kasbah (Agadir Oufella) offers breathtaking panoramic views of the city, beach, and harbor. While the 1960 earthquake destroyed most of the original structure, the restored entrance gate with its inscription "Fear God and honor the King" still stands as a historic landmark.
+                        </p>
+<p>
+                            The sunset views from the Kasbah are legendary. As the sun dips into the Atlantic Ocean, the entire city lights up in golden hues - it's one of the most romantic spots in Agadir.
+                        </p>
+<div class="info-callout">
+<div class="callout-icon">📸</div>
+<div class="callout-content">
+<h3>Photography Tip</h3>
+<p>The best time for photography is during the "golden hour" - arrive about 45 minutes before sunset. Bring a wide-angle lens to capture the expansive views, and don't forget to photograph the historic Arabic inscription at the entrance.</p>
+</div>
+</div>
+<h2 id="crocoparc">5. Discover Crocoparc</h2>
+<p>
+                            Located 15 km from Agadir, Crocoparc is a unique botanical garden and crocodile park that's home to over 300 Nile crocodiles. This beautifully landscaped park combines wildlife observation with stunning tropical gardens, waterfalls, and walking paths.
+                        </p>
+<p>
+                            The park's design allows visitors to observe these magnificent reptiles from safe viewing platforms while learning about conservation efforts. It's an excellent half-day excursion, especially for families with children.
+                        </p>
+<p>
+<strong>Best features:</strong>
+</p>
+<ul>
+<li>Educational guided tours available in multiple languages</li>
+<li>Feeding demonstrations (check schedule upon arrival)</li>
+<li>Lush botanical gardens with exotic plants</li>
+<li>On-site café with views over the crocodile habitats</li>
+<li>Gift shop with unique souvenirs</li>
+</ul>
+<h2 id="quad-biking">6. Go Quad Biking in the Desert</h2>
+<p>
+                            For adventure seekers, quad biking through the sand dunes and Berber villages around Agadir is an absolute must. These thrilling excursions take you off the beaten path into the stunning Moroccan countryside.
+                        </p>
+<p>
+                            Most tours last 2-4 hours and include stops at traditional Berber villages where you can enjoy mint tea and learn about local life. The combination of adrenaline-pumping riding and cultural immersion makes this one of Agadir's most popular activities.
+                        </p>
+<figure class="article-image">
+<img alt="Quad biking through sand dunes near Agadir" height="533" loading="lazy" src="/img/blog/quad-biking-agadir.jpg" width="800"/>
+<figcaption>Experience the thrill of quad biking through Agadir's stunning desert landscapes</figcaption>
+</figure>
+<p>
+<a class="internal-link" href="/tours/tour-buggy-adventure-agadir.html">Book a quad biking adventure</a> to experience this thrilling activity with experienced guides and quality equipment.
+                        </p>
+<h2 id="taghazout">7. Surf in Taghazout</h2>
+<p>
+                            Just 20 km north of Agadir, the laid-back fishing village of Taghazout has transformed into Morocco's premier surf destination. With world-class waves, a relaxed atmosphere, and a growing community of surf enthusiasts, it's a must-visit for anyone who loves the ocean.
+                        </p>
+<p>
+                            The area boasts numerous surf breaks suitable for all levels, from beginner-friendly beach breaks to challenging point breaks for advanced surfers. Anchor Point, Killer Point, and Hash Point are legendary among the international surf community.
+                        </p>
+<h3>Why Taghazout is Special:</h3>
+<ul>
+<li>Consistent waves year-round (best from October to April)</li>
+<li>Affordable surf lessons and equipment rental</li>
+<li>Vibrant café culture with healthy food options</li>
+<li>Stunning sunset views from clifftop cafés</li>
+<li>Community of friendly surfers from around the world</li>
+</ul>
+<h2 id="moroccan-cuisine">8. Savor Authentic Moroccan Cuisine</h2>
+<p>
+                            No visit to Agadir is complete without indulging in Morocco's incredible culinary traditions. From street food to fine dining, Agadir offers exceptional food experiences that will tantalize your taste buds.
+                        </p>
+<p>
+                            Must-try dishes include tagine (slow-cooked stew), couscous (Friday is traditional couscous day), fresh seafood from the port, and of course, Moroccan mint tea. Don't miss trying a traditional Moroccan breakfast with msemen (Moroccan pancakes), honey, and fresh orange juice.
+                        </p>
+<div class="info-callout">
+<div class="callout-icon">🍽️</div>
+<div class="callout-content">
+<h3>Local Restaurant Recommendations</h3>
+<p><strong>Pure Passion Restaurant</strong> - Best seafood with ocean views | <strong>Restaurant La Scala</strong> - Upscale Moroccan cuisine | <strong>Snack Samir</strong> - Authentic local food at budget prices | <strong>Sunset Beach Club</strong> - Perfect for beachfront dining</p>
+</div>
+</div>
+<h2 id="essaouira-day-trip">9. Take a Day Trip to Essaouira</h2>
+<p>
+                            The charming coastal city of Essaouira, a UNESCO World Heritage site, makes for an excellent day trip from Agadir (approximately 3 hours drive). This walled city offers a completely different atmosphere with its blue-and-white medina, historic ramparts, and artistic vibe.
+                        </p>
+<p>
+                            Essaouira is famous for its wind-swept beaches (popular with kitesurfers), fresh seafood, art galleries, and the iconic blue boats in its picturesque harbor. The medina's narrow streets are filled with craft shops, art studios, and cozy cafés.
+                        </p>
+<p>
+<strong>Highlights include:</strong> The ramparts with Atlantic views, the bustling fish market, woodworking cooperatives producing beautiful thuya wood crafts, and the relaxed beach atmosphere.
+                        </p>
+<h2 id="hammam-experience">10. Experience a Traditional Moroccan Hammam</h2>
+<p>
+                            Complete your Agadir experience with a traditional Moroccan hammam - a steam bath ritual that's been part of Moroccan culture for centuries. This deeply relaxing and cleansing experience is the perfect way to unwind after days of exploration.
+                        </p>
+<p>
+                            A traditional hammam session typically includes time in the steam room, a full-body exfoliation with a kessa glove, application of savon noir (black soap), and sometimes an argan oil massage. You'll emerge feeling refreshed, relaxed, and with incredibly soft skin.
+                        </p>
+<p>
+                            You can choose between public hammams (more authentic but basic) or luxury spa hammams (more comfortable with additional services). Both offer the genuine hammam experience, just with different levels of amenity.
+                        </p>
+<figure class="article-image">
+<img alt="Traditional Moroccan hammam interior with decorative tiles" height="533" loading="lazy" src="/img/blog/moroccan-hammam.jpg" width="800"/>
+<figcaption>Relax and rejuvenate with an authentic Moroccan hammam experience</figcaption>
+</figure>
+<h2 id="planning-your-visit">Planning Your Agadir Adventure</h2>
+<p>
+                            Agadir is accessible year-round, though the best time to visit is from March to May and September to November when temperatures are pleasant and crowds are smaller. The city has excellent tourism infrastructure with accommodations ranging from budget hostels to luxury resorts.
+                        </p>
+<p>
+                            Most of these activities can be easily booked through local tour operators or your hotel. However, for the best experience and local insights, I recommend booking with a knowledgeable local guide who can provide authentic experiences and insider access.
+                        </p>
+<p>
+                            Whether you spend a weekend or a full week in Agadir, these ten experiences will give you a comprehensive taste of what makes this Moroccan coastal city so special. From natural wonders to cultural immersion, adventure sports to culinary delights, Agadir truly has something for everyone.
+                        </p>
+<div class="info-callout">
+<div class="callout-icon">✈️</div>
+<div class="callout-content">
+<h3>Getting Around Agadir</h3>
+<p>Taxis are plentiful and affordable (always use the meter or agree on a price first). Car rentals are available at the airport and city center. For day trips and tours, organized transportation is typically included. The city is generally walkable, especially along the beach promenade.</p>
+</div>
+</div>
+</div>
+<!-- End Article Content -->
+<!-- Author Box -->
+<div class="author-box">
+<img alt="[AUTHOR_NAME]" class="author-box-avatar" decoding="async" loading="lazy" src="[AUTHOR_AVATAR]"/>
+<div class="author-box-content">
+<h3 class="author-box-name">About [AUTHOR_NAME]</h3>
+<p class="author-box-bio">
+                                [AUTHOR_BIO]
+                            </p>
+<a class="btn-whatsapp" href="[AUTHOR_WHATSAPP]" rel="noopener noreferrer" target="_blank">
+<svg fill="currentColor" height="20" viewbox="0 0 24 24" width="20">
+<path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"></path>
+</svg>
+                                Contact [AUTHOR_NAME] on WhatsApp
+                            </a>
+</div>
+</div>
+<!-- Related Posts -->
+<section class="related-posts">
+<h2 class="section-title">Related Articles</h2>
+<div class="related-posts-grid">
+<article class="related-post-card">
+<a class="related-post-image" href="[RELATED_POST_1_URL]">
+<img alt="[RELATED_POST_1_TITLE]" height="250" loading="lazy" src="[RELATED_POST_1_IMAGE]" width="400"/>
+</a>
+<div class="related-post-content">
+<span class="related-post-category">[RELATED_POST_1_CATEGORY]</span>
+<h3 class="related-post-title">
+<a href="[RELATED_POST_1_URL]">[RELATED_POST_1_TITLE]</a>
+</h3>
+<time class="related-post-date" datetime="[RELATED_POST_1_DATE_ISO]">[RELATED_POST_1_DATE]</time>
+</div>
+</article>
+<article class="related-post-card">
+<a class="related-post-image" href="[RELATED_POST_2_URL]">
+<img alt="[RELATED_POST_2_TITLE]" height="250" loading="lazy" src="[RELATED_POST_2_IMAGE]" width="400"/>
+</a>
+<div class="related-post-content">
+<span class="related-post-category">[RELATED_POST_2_CATEGORY]</span>
+<h3 class="related-post-title">
+<a href="[RELATED_POST_2_URL]">[RELATED_POST_2_TITLE]</a>
+</h3>
+<time class="related-post-date" datetime="[RELATED_POST_2_DATE_ISO]">[RELATED_POST_2_DATE]</time>
+</div>
+</article>
+<article class="related-post-card">
+<a class="related-post-image" href="[RELATED_POST_3_URL]">
+<img alt="[RELATED_POST_3_TITLE]" height="250" loading="lazy" src="[RELATED_POST_3_IMAGE]" width="400"/>
+</a>
+<div class="related-post-content">
+<span class="related-post-category">[RELATED_POST_3_CATEGORY]</span>
+<h3 class="related-post-title">
+<a href="[RELATED_POST_3_URL]">[RELATED_POST_3_TITLE]</a>
+</h3>
+<time class="related-post-date" datetime="[RELATED_POST_3_DATE_ISO]">[RELATED_POST_3_DATE]</time>
+</div>
+</article>
+</div>
+</section>
+<!-- CTA Band -->
+<section class="article-cta-band">
+<div class="cta-band-content">
+<h2 class="cta-band-title">Want a Local Guide Experience?</h2>
+<p class="cta-band-text">Join our expertly curated tours and discover Agadir like a local. All tours include pickup, professional guides, and unforgettable memories.</p>
+<a class="btn-primary btn-large" href="/tours">Explore All Tours</a>
+</div>
+</section>
+</article>
+<!-- End Left Column -->
+<!-- Right Column - Sidebar -->
+<aside class="blog-sidebar">
+<!-- Book a Tour CTA -->
+<div class="sidebar-widget cta-widget">
+<h3 class="widget-title">Planning Your Trip to Agadir?</h3>
+<p class="widget-text">Discover authentic experiences with our local expert guides. From adventure tours to cultural immersions, we've got you covered.</p>
+<a class="btn-primary btn-block" href="/tours">View All Tours</a>
+<a class="btn-secondary btn-block" href="https://wa.me/212123456789" rel="noopener noreferrer" target="_blank">
+<svg fill="currentColor" height="18" viewbox="0 0 24 24" width="18">
+<path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"></path>
+</svg>
+                            Book via WhatsApp
+                        </a>
+</div>
+<!-- Popular Tours -->
+<div class="sidebar-widget">
+<h3 class="widget-title">Popular Tours</h3>
+<div class="popular-tours-list">
+<a class="popular-tour-item" href="[POPULAR_TOUR_1_URL]">
+<img alt="[POPULAR_TOUR_1_IMAGE_ALT]" class="tour-thumb" height="80" loading="lazy" src="[POPULAR_TOUR_1_IMAGE]" width="80"/>
+<div class="tour-info">
+<h4 class="tour-name">[POPULAR_TOUR_1_NAME]</h4>
+<div class="tour-meta">
+<span class="tour-price">[POPULAR_TOUR_1_PRICE]</span>
+<div class="tour-rating">
+<span class="stars">[POPULAR_TOUR_1_RATING]</span>
+<span class="rating-count">[POPULAR_TOUR_1_REVIEWS]</span>
+</div>
+</div>
+</div>
+</a>
+<a class="popular-tour-item" href="[POPULAR_TOUR_2_URL]">
+<img alt="[POPULAR_TOUR_2_IMAGE_ALT]" class="tour-thumb" height="80" loading="lazy" src="[POPULAR_TOUR_2_IMAGE]" width="80"/>
+<div class="tour-info">
+<h4 class="tour-name">[POPULAR_TOUR_2_NAME]</h4>
+<div class="tour-meta">
+<span class="tour-price">[POPULAR_TOUR_2_PRICE]</span>
+<div class="tour-rating">
+<span class="stars">[POPULAR_TOUR_2_RATING]</span>
+<span class="rating-count">[POPULAR_TOUR_2_REVIEWS]</span>
+</div>
+</div>
+</div>
+</a>
+<a class="popular-tour-item" href="[POPULAR_TOUR_3_URL]">
+<img alt="[POPULAR_TOUR_3_IMAGE_ALT]" class="tour-thumb" height="80" loading="lazy" src="[POPULAR_TOUR_3_IMAGE]" width="80"/>
+<div class="tour-info">
+<h4 class="tour-name">[POPULAR_TOUR_3_NAME]</h4>
+<div class="tour-meta">
+<span class="tour-price">[POPULAR_TOUR_3_PRICE]</span>
+<div class="tour-rating">
+<span class="stars">[POPULAR_TOUR_3_RATING]</span>
+<span class="rating-count">[POPULAR_TOUR_3_REVIEWS]</span>
+</div>
+</div>
+</div>
+</a>
+</div>
+</div>
+<!-- Related Articles Widget -->
+<div class="sidebar-widget">
+<h3 class="widget-title">You May Also Like</h3>
+<div class="sidebar-articles-list">
+<a class="sidebar-article-item" href="[SIDEBAR_ARTICLE_1_URL]">
+<img alt="[SIDEBAR_ARTICLE_1_IMAGE_ALT]" class="article-thumb" height="80" loading="lazy" src="[SIDEBAR_ARTICLE_1_IMAGE]" width="80"/>
+<div class="article-info">
+<h4 class="article-name">[SIDEBAR_ARTICLE_1_TITLE]</h4>
+<time class="article-date" datetime="[SIDEBAR_ARTICLE_1_DATE_ISO]">[SIDEBAR_ARTICLE_1_DATE]</time>
+</div>
+</a>
+<a class="sidebar-article-item" href="[SIDEBAR_ARTICLE_2_URL]">
+<img alt="[SIDEBAR_ARTICLE_2_IMAGE_ALT]" class="article-thumb" height="80" loading="lazy" src="[SIDEBAR_ARTICLE_2_IMAGE]" width="80"/>
+<div class="article-info">
+<h4 class="article-name">[SIDEBAR_ARTICLE_2_TITLE]</h4>
+<time class="article-date" datetime="[SIDEBAR_ARTICLE_2_DATE_ISO]">[SIDEBAR_ARTICLE_2_DATE]</time>
+</div>
+</a>
+<a class="sidebar-article-item" href="[SIDEBAR_ARTICLE_3_URL]">
+<img alt="[SIDEBAR_ARTICLE_3_IMAGE_ALT]" class="article-thumb" height="80" loading="lazy" src="[SIDEBAR_ARTICLE_3_IMAGE]" width="80"/>
+<div class="article-info">
+<h4 class="article-name">[SIDEBAR_ARTICLE_3_TITLE]</h4>
+<time class="article-date" datetime="[SIDEBAR_ARTICLE_3_DATE_ISO]">[SIDEBAR_ARTICLE_3_DATE]</time>
+</div>
+</a>
+</div>
+</div>
+<!-- Newsletter Widget -->
+<div class="sidebar-widget newsletter-widget">
+<h3 class="widget-title">Stay Updated</h3>
+<p class="widget-text">Get travel tips, tour updates, and exclusive deals delivered to your inbox.</p>
+<form action="/subscribe" class="newsletter-form" method="post">
+<div class="form-group">
+<label class="sr-only" for="email-subscribe">Email address</label>
+<input aria-label="Email address for newsletter" class="form-input" id="email-subscribe" name="email" placeholder="Your email address" required="" type="email"/>
+</div>
+<button class="btn-primary btn-block" type="submit">Subscribe</button>
+<p class="newsletter-privacy">We respect your privacy. Unsubscribe anytime.</p>
+</form>
+</div>
+</aside>
+<!-- End Sidebar -->
+</div>
+</div>
+</main>
+<!-- FOOTER -->
+<footer class="site-footer">
+<div class="footer-main">
+<div class="container">
+<div class="footer-grid">
+<!-- Company Info -->
+<div class="footer-column">
+<picture>
+<source srcset="./img/alg%20logo.png" type="image/png"/>
+<img src="img/alg%20logo.png" alt="Agadir Local Guide" class="footer-logo" loading="lazy" decoding="async">
+</picture>
+<p>Your trusted local guide to authentic Moroccan adventures. Experience the real Agadir with expert guides since 2015.</p>
+<div class="social-links">
+<a aria-label="Facebook" href="https://www.facebook.com/agadirlocalguide" target="_blank">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+<path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"></path>
+</svg>
+</a>
+<a aria-label="Instagram" href="https://www.instagram.com/agadirlocalguide" target="_blank">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+<path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"></path>
+</svg>
+</a>
+<a aria-label="TripAdvisor" href="https://www.tripadvisor.com" target="_blank">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+<path d="M12.006 4.295c-2.67 0-5.338.784-7.645 2.353H1.058l1.097 1.554c-1.276 1.45-2.155 3.284-2.155 5.332C0 17.771 3.579 21.352 8 21.352c2.788 0 5.21-1.433 6.6-3.598.245-.392.453-.808.622-1.24.169.432.377.848.622 1.24 1.39 2.165 3.812 3.598 6.6 3.598 4.421 0 8-3.581 8-8 0-2.048-.879-3.882-2.155-5.332l1.097-1.554h-3.303c-2.307-1.569-4.975-2.353-7.645-2.353-1.828 0-3.607.38-5.244 1.074-1.637-.694-3.416-1.074-5.244-1.074zm0 1.5c1.638 0 3.25.337 4.75.972-2.193 1.17-3.748 3.344-4.124 5.89h-.002c-.045.292-.071.59-.071.895 0 .305.026.603.071.895h.002c.376 2.546 1.931 4.72 4.124 5.89-1.5.635-3.112.972-4.75.972-3.59 0-6.5-2.91-6.5-6.5s2.91-6.5 6.5-6.5zm6 0c3.59 0 6.5 2.91 6.5 6.5s-2.91 6.5-6.5 6.5c-1.638 0-3.25-.337-4.75-.972 2.193-1.17 3.748-3.344 4.124-5.89h.002c.045-.292.071-.59.071-.895 0-.305-.026-.603-.071-.895h-.002c-.376-2.546-1.931-4.72-4.124-5.89 1.5-.635 3.112-.972 4.75-.972zm-6 3.852c2.347 0 4.25 1.903 4.25 4.25s-1.903 4.25-4.25 4.25-4.25-1.903-4.25-4.25 1.903-4.25 4.25-4.25zm6 0c2.347 0 4.25 1.903 4.25 4.25s-1.903 4.25-4.25 4.25-4.25-1.903-4.25-4.25 1.903-4.25 4.25-4.25zm-6 2.125c-1.183 0-2.125.942-2.125 2.125s.942 2.125 2.125 2.125 2.125-.942 2.125-2.125-.942-2.125-2.125-2.125zm6 0c-1.183 0-2.125.942-2.125 2.125s.942 2.125 2.125 2.125 2.125-.942 2.125-2.125-.942-2.125-2.125-2.125z"></path>
+</svg>
+</a>
+<a aria-label="WhatsApp" href="https://wa.me/212700006462" target="_blank">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+<path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"></path>
+</svg>
+</a>
+</div>
+</div>
+<!-- Popular Tours -->
+<div class="footer-column">
+<h4>Popular Tours</h4>
+<ul>
+<li><a href="tours/tour-paradise-valley-agadir-new.html">Paradise Valley</a></li>
+<li><a href="tours/tour-agadir-half-quad-biking-adventure.html">Quad Biking</a></li>
+<li><a href="tours/day-trip-marrakech-from-agadir.html">Marrakech Day Trip</a></li>
+<li><a href="tours/tour-agadir-sunset-camel-ride.html">Sunset Camel Ride</a></li>
+<li><a href="tours/tour-sandboarding-agadir.html">Sandboarding</a></li>
+<li><a href="agadir-tours.html">All Tours →</a></li>
+</ul>
+</div>
+<!-- Company -->
+<div class="footer-column">
+<h4>Company</h4>
+<ul>
+<li><a href="index.html">Home</a></li>
+<li><a href="blog.html">Travel Guide</a></li>
+<li><a href="contact-us.html">About Us</a></li>
+<li><a href="contact-us.html">Contact Us</a></li>
+<li><a href="tel:+212700006462">Call Us</a></li>
+</ul>
+</div>
+<!-- Support -->
+<div class="footer-column">
+<h4>Support</h4>
+<ul>
+<li><a href="faq.html">FAQs</a></li>
+<li><a href="booking-policy.html">Booking Policy</a></li>
+<li><a href="contact-us.html">Cancellation</a></li>
+<li><a href="terms-and-conditions.html">Terms &amp; Conditions</a></li>
+<li><a href="privacy-policy.html">Privacy Policy</a></li>
+</ul>
+</div>
+<!-- Newsletter -->
+<div class="footer-column">
+<h4>Stay Updated</h4>
+<p>Get exclusive deals &amp; travel tips</p>
+<form action="#" class="newsletter-form" method="post">
+<input placeholder="Your email" required="" type="email"/>
+<button type="submit">Subscribe</button>
+</form>
+<div class="footer-contact">
+<p><strong>Call Us:</strong><br/>+212 700-006462</p>
+<p><strong>Email:</strong><br/>info@agadirlocalguide.com</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="footer-bottom">
+<div class="container">
+<p>© 2025 Agadir Local Guide. All rights reserved.</p>
+<div class="footer-legal-links">
+<a href="privacy-policy.html">Privacy</a>
+<span>•</span>
+<a href="terms-and-conditions.html">Terms</a>
+<span>•</span>
+<a href="booking-policy.html">Booking Policy</a>
+</div>
+<div class="payment-methods">
+<span>We accept:</span>
+<div class="payment-icon">💳</div>
+<div class="payment-icon">💰</div>
+<div class="payment-icon">📱</div>
+</div>
+</div>
+</div>
+</footer>
+<!-- END FOOTER -->
+<!-- Toast Notification for Copy Link -->
+<div aria-live="polite" class="toast" id="toast" role="alert"></div>
+<!-- JavaScript -->
+<script src="blog.js"></script>
+</body>
+</html>

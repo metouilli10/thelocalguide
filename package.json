@@ -1,0 +1,28 @@
+{
+  "name": "local-guide-agadir",
+  "version": "1.0.0",
+  "description": "Local guide and tour website for Agadir, Morocco",
+  "main": "index.html",
+  "scripts": {
+    "dev": "browser-sync start --server . --files \"**/*.html,css/**/*.css,js/**/*.js,blog/**/*.html,blog-posts/**/*.html,tours/**/*.json\" --port 3000 --host 127.0.0.1 --no-open --no-ui --no-notify",
+    "serve": "http-server . -p 3000 -c-1",
+    "start": "npm run serve",
+    "dev:public": "browser-sync start --server . --files \"**/*.html,css/**/*.css,js/**/*.js,blog/**/*.html,blog-posts/**/*.html,tours/**/*.json\" --port 3000 --host 0.0.0.0 --no-open --no-ui --no-notify",
+    "setup": "npm install && npm run setup:python",
+    "setup:python": "uv venv --python 3.12 .venv && uv pip install -r requirements.txt",
+    "screenshot": "node scripts/scroll_and_screenshot.js"
+  },
+  "keywords": [
+    "agadir",
+    "tours",
+    "morocco",
+    "travel"
+  ],
+  "author": "",
+  "license": "MIT",
+  "devDependencies": {
+    "browser-sync": "^3.0.4",
+    "http-server": "^14.1.1",
+    "puppeteer": "^24.30.0"
+  }
+}

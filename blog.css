@@ -1831,6 +1831,97 @@ a:focus {
     }
 }
 
+/* FAQ accordion (blog posts) — native details/summary */
+.prose .faq-section {
+    margin-top: var(--space-10);
+    margin-bottom: var(--space-8);
+}
+
+.prose .faq-section > h2 {
+    margin-bottom: var(--space-5);
+}
+
+.prose .faq-accordion {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-3);
+}
+
+.prose .faq-accordion__item {
+    border: 1px solid var(--color-border);
+    border-radius: 10px;
+    background: var(--color-bg);
+    overflow: hidden;
+    transition: box-shadow 0.2s ease, border-color 0.2s ease;
+}
+
+.prose .faq-accordion__item:hover {
+    border-color: var(--gray-300);
+}
+
+.prose .faq-accordion__item[open] {
+    box-shadow: 0 4px 14px rgba(109, 74, 255, 0.08);
+    border-color: var(--primary-200);
+}
+
+.prose .faq-accordion__summary {
+    cursor: pointer;
+    padding: var(--space-4) var(--space-5);
+    padding-right: var(--space-10);
+    font-weight: 600;
+    font-size: 1.0625rem;
+    line-height: 1.4;
+    list-style: none;
+    position: relative;
+    color: var(--color-text);
+    user-select: none;
+}
+
+.prose .faq-accordion__summary::-webkit-details-marker {
+    display: none;
+}
+
+.prose .faq-accordion__summary::marker {
+    content: '';
+}
+
+.prose .faq-accordion__summary::after {
+    content: '';
+    position: absolute;
+    right: var(--space-5);
+    top: 50%;
+    width: 0.5rem;
+    height: 0.5rem;
+    border-right: 2px solid var(--gray-500);
+    border-bottom: 2px solid var(--gray-500);
+    transform: translateY(-50%) rotate(45deg);
+    transition: transform 0.2s ease;
+}
+
+.prose .faq-accordion__item[open] .faq-accordion__summary::after {
+    transform: translateY(-50%) rotate(-135deg);
+}
+
+.prose .faq-accordion__body {
+    padding: 0 var(--space-5) var(--space-4);
+    color: var(--color-text-muted);
+    font-size: 1rem;
+    line-height: 1.65;
+    border-top: 1px solid transparent;
+}
+
+.prose .faq-accordion__item[open] .faq-accordion__body {
+    border-top-color: var(--color-border);
+}
+
+.prose .faq-accordion__body p {
+    margin: var(--space-4) 0 0;
+}
+
+.prose .faq-accordion__body p:first-child {
+    margin-top: var(--space-4);
+}
+
 /* Print styles */
 @media print {
     .site-header,

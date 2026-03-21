@@ -8,7 +8,6 @@ import os
 import re
 from pathlib import Path
 from html.parser import HTMLParser
-from urllib.parse import urlparse, urljoin
 from collections import defaultdict
 
 class LinkExtractor(HTMLParser):
@@ -33,16 +32,19 @@ class LinkExtractor(HTMLParser):
                             'line': self.getpos()[0] if self.getpos() else None
                         })
 
-def normalize_path(href, base_file):
+def normalize_path(href, base_file, root_dir):
     """Convert relative href to absolute file path"""
     base_dir = Path(base_file).parent
+    root_path = Path(root_dir)
     # Remove query strings and anchors
     href = href.split('?')[0].split('#')[0]
     
     # Handle relative paths
     if href.startswith('/'):
         # Root-relative path
-        return Path(base_dir.parts[0]) / href.lstrip('/')
+        if href in ('/', ''):
+            return root_path / 'index.html'
+        return root_path / href.lstrip('/')
     else:
         # Relative path
         return (base_dir / href).resolve()
@@ -94,13 +96,19 @@ def audit_links(root_dir):
     root_path = Path(root_dir)
     parser = LinkExtractor(root_dir)
     
+    template_files = {'TOUR_PAGE_TEMPLATE.html', 'blog-post.html'}
+
     # Find all HTML files
     html_files = []
     for ext in ['*.html', '*.htm']:
         html_files.extend(root_path.rglob(ext))
     
-    # Exclude node_modules, backups, etc.
-    html_files = [f for f in html_files if not any(x in str(f) for x in ['node_modules', '.git', 'backups', '.backup'])]
+    # Exclude node_modules, backups, and non-production templates
+    html_files = [
+        f for f in html_files
+        if not any(x in str(f) for x in ['node_modules', '.git', 'backups', '.backup', '/templates/'])
+        and f.name not in template_files
+    ]
     
     print(f"Found {len(html_files)} HTML files to scan\n")
     
@@ -131,7 +139,7 @@ def audit_links(root_dir):
         
         # Normalize the path
         try:
-            target_path = normalize_path(href, source_file)
+            target_path = normalize_path(href, source_file, root_path)
             exists, status = check_file_exists(target_path, root_path)
             
             if not exists:
@@ -262,4 +270,3 @@ def main():
 
 if __name__ == '__main__':
     exit(main())
-

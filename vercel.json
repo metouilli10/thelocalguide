@@ -25,6 +25,11 @@
       "source": "/tour-quad-biking-agadir.html",
       "destination": "/tours/tour-agadir-half-quad-biking-adventure.html",
       "permanent": true
+    },
+    {
+      "source": "/tours/tour-camel-ride-morning-agadir.html",
+      "destination": "/tours/tour-morning-camel-ride-agadir.html",
+      "permanent": true
     }
   ],
   "headers": [

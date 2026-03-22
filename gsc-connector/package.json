@@ -1,0 +1,19 @@
+{
+  "name": "gsc-connector",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Local OAuth + Search Console API helper for agadirlocalguide.com",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "start:3001": "PORT=3001 node server.js",
+    "cli": "node cli.js",
+    "gsc:start": "npm run gsc:start --prefix .."
+  },
+  "license": "MIT",
+  "dependencies": {
+    "dotenv": "^16.4.7",
+    "express": "^4.21.2",
+    "googleapis": "^144.0.0"
+  }
+}

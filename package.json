@@ -10,7 +10,11 @@
     "dev:public": "browser-sync start --server . --files \"**/*.html,css/**/*.css,js/**/*.js,blog/**/*.html,blog-posts/**/*.html,tours/**/*.json\" --port 3000 --host 0.0.0.0 --no-open --no-ui --no-notify",
     "setup": "npm install && npm run setup:python",
     "setup:python": "uv venv --python 3.12 .venv && uv pip install -r requirements.txt",
-    "screenshot": "node scripts/scroll_and_screenshot.js"
+    "screenshot": "node scripts/scroll_and_screenshot.js",
+    "gsc:start": "npm start --prefix gsc-connector",
+    "gsc:cli": "npm run cli --prefix gsc-connector",
+    "gsc:cli:md": "npm run cli --prefix gsc-connector -- --format md",
+    "gsc:cli:json": "npm run cli --prefix gsc-connector -- --format json"
   },
   "keywords": [
     "agadir",

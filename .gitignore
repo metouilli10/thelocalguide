@@ -27,3 +27,6 @@ __pycache__/
 
 
 
+.vercel
+.env*.local
+gsc-connector/.tokens.json

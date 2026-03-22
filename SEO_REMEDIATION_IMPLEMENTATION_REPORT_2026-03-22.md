@@ -15,7 +15,7 @@ This pass implemented the first full SEO remediation cycle based on the Search C
 3. Content and intent refinement on priority informational and transactional pages
 4. Internal-link and template cleanup to prevent reintroducing legacy URLs
 
-This report was updated later on March 22, 2026 after a follow-up validation pass. That follow-up completed the homepage anchor-text cleanup and reduced redirect chaining for the main `www` + legacy URL combinations.
+This report was updated later on March 22, 2026 after two follow-up passes. The first follow-up completed the homepage anchor-text cleanup and reduced redirect chaining for the main `www` + legacy URL combinations. The second follow-up tightened overlong titles and meta descriptions, corrected the homepage snippet length, and added visible H2 structure to the `all-tours.html` hub.
 
 ## Files Updated
 
@@ -99,6 +99,39 @@ Priority pages received new titles and descriptions aligned with the query clust
 - `og:title` and `og:description` aligned with the new page messaging
 - `twitter:title` and `twitter:description` aligned where they previously diverged or were weak
 - canonical tags preserved on the intended destination URLs
+- second follow-up pass shortened titles and descriptions across the homepage, `all-tours`, five priority blog pages, and two priority tour pages to reduce SERP truncation risk
+
+### Metadata length follow-up completed
+
+Final post-fix lengths:
+
+- `index.html`:
+  - title: `58`
+  - meta description: `146`
+- `all-tours.html`:
+  - title: `47`
+  - meta description: `141`
+- `blog/top-10-things-to-do-agadir-2026.html`:
+  - title: `46`
+  - meta description: `140`
+- `blog/paradise-valley-agadir-guide.html`:
+  - title: `51`
+  - meta description: `136`
+- `blog/quad-biking-agadir-guide.html`:
+  - title: `44`
+  - meta description: `148`
+- `blog/things-to-do-agadir-families.html`:
+  - title: `47`
+  - meta description: `149`
+- `blog/agadir-cruise-excursions.html`:
+  - title: `48`
+  - meta description: `137`
+- `tours/tour-souss-massa-park-agadir.html`:
+  - title: `55`
+  - meta description: `138`
+- `tours/tour-agadir-guided-city-tour-cable-car.html`:
+  - title: `47`
+  - meta description: `125`
 
 ## 4. Content and Intent Refinement
 
@@ -191,6 +224,7 @@ Changes:
 Changes:
 
 - blog-section subtitle rewritten to clarify guide value and planning use cases
+- homepage meta description rewritten and shortened so the main commercial snippet is now within target length
 - blog card titles and excerpts updated for:
   - things to do
   - quad biking
@@ -217,6 +251,10 @@ Changes:
 Changes:
 
 - metadata rewritten to better position the page as a comparison hub for tours, activities, and day trips
+- added visible H2 structure above the tour grid so the page now has clearer topical signals for:
+  - `Adventure Tours in Agadir`
+  - `Day Trips from Agadir`
+  - `Cultural Experiences in Agadir`
 
 ## 6. Reporting and Documentation
 
@@ -240,6 +278,8 @@ Checks completed during implementation:
 - verified redirect-source patterns remain only in config where expected
 - verified homepage priority guide cards now expose direct, intent-matching anchor text to canonical URLs
 - re-tested live redirects for `contact.html`, `agadir-tours.html`, `day-trips-from-agadir.html`, and `tour-souss-massa-park-agadir.html`
+- verified shortened title and meta description lengths across all priority pages
+- confirmed `all-tours.html` now contains `3` visible H2 headings instead of `0`
 - committed and pushed the SEO pass to `origin/main`
 
 ## 8. Push Details
@@ -266,6 +306,8 @@ Near-term expected effects:
 - better CTR on high-impression pages with rewritten titles/descriptions
 - better query-to-page matching on Paradise Valley, quad biking, family, cruise, Souss Massa, and city tour topics
 - stronger internal support from the homepage and travel-guide hub to priority URLs
+- lower SERP truncation risk on key commercial and informational pages
+- stronger topical clarity for the `all-tours.html` hub through visible heading structure
 
 Medium-term success indicators:
 

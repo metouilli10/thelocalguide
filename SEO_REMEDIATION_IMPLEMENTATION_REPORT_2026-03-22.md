@@ -3,8 +3,8 @@
 Date: March 22, 2026  
 Project: `agadirlocalguide.com`  
 Related audit: [SEARCH_CONSOLE_REVIEW_2026-03-21.md](/Users/yassine/Documents/projects/thelocalguide/SEARCH_CONSOLE_REVIEW_2026-03-21.md)  
-Git commit pushed to `main`: `1e31090`  
-Commit message: `Implement SEO remediation pass`
+Initial remediation commit pushed to `main`: `1e31090`  
+Latest follow-up commit pushed to `main`: `cecf919`
 
 ## Summary
 
@@ -15,7 +15,7 @@ This pass implemented the first full SEO remediation cycle based on the Search C
 3. Content and intent refinement on priority informational and transactional pages
 4. Internal-link and template cleanup to prevent reintroducing legacy URLs
 
-This report was updated later on March 22, 2026 after two follow-up passes. The first follow-up completed the homepage anchor-text cleanup and reduced redirect chaining for the main `www` + legacy URL combinations. The second follow-up tightened overlong titles and meta descriptions, corrected the homepage snippet length, and added visible H2 structure to the `all-tours.html` hub.
+This report was updated later on March 22, 2026 after three follow-up passes. The first follow-up completed the homepage anchor-text cleanup and reduced redirect chaining for the main `www` + legacy URL combinations. The second follow-up tightened overlong titles and meta descriptions, corrected the homepage snippet length, and added visible H2 structure to the `all-tours.html` hub. The third follow-up introduced a reusable GSC connector and CLI workflow, then applied a focused click-growth optimization wave to the strongest live Search Console opportunities.
 
 ## Files Updated
 
@@ -33,6 +33,10 @@ This report was updated later on March 22, 2026 after two follow-up passes. The 
 - [blog/agadir-cruise-excursions.html](/Users/yassine/Documents/projects/thelocalguide/blog/agadir-cruise-excursions.html)
 - [tours/tour-souss-massa-park-agadir.html](/Users/yassine/Documents/projects/thelocalguide/tours/tour-souss-massa-park-agadir.html)
 - [tours/tour-agadir-guided-city-tour-cable-car.html](/Users/yassine/Documents/projects/thelocalguide/tours/tour-agadir-guided-city-tour-cable-car.html)
+- [tours/tour-paradise-valley-agadir-new.html](/Users/yassine/Documents/projects/thelocalguide/tours/tour-paradise-valley-agadir-new.html)
+- [gsc-connector/server.js](/Users/yassine/Documents/projects/thelocalguide/gsc-connector/server.js)
+- [gsc-connector/lib/gsc.js](/Users/yassine/Documents/projects/thelocalguide/gsc-connector/lib/gsc.js)
+- [gsc-connector/cli.js](/Users/yassine/Documents/projects/thelocalguide/gsc-connector/cli.js)
 - [SEARCH_CONSOLE_REVIEW_2026-03-21.md](/Users/yassine/Documents/projects/thelocalguide/SEARCH_CONSOLE_REVIEW_2026-03-21.md)
 
 ## 1. Redirects and Canonical Consolidation
@@ -142,7 +146,9 @@ The highest-priority pages were updated to better match the search intent shown 
 Changes:
 
 - repositioned the page around “best things to do in Agadir”
+- retargeted the title and description toward “things to do in Agadir” / “activities in Agadir” demand
 - reframed the intro for first-time visitors, couples, families, and cruise passengers
+- added a quick-picks section to help users choose by trip style before scanning the full list
 - added planning guidance and cross-links to:
   - family guide
   - cruise excursions guide
@@ -155,7 +161,8 @@ Changes:
 Changes:
 
 - shifted positioning toward practical informational intent
-- strengthened metadata around prices, safety, and best time to visit
+- strengthened metadata around prices, swimming conditions, safety, and trip planning
+- added a quick-answer section that immediately addresses worth, drive time, swimming, and who the trip suits
 - expanded body copy around:
   - self-drive vs guided visit
   - parking and arrival expectations
@@ -168,12 +175,23 @@ Changes:
 
 - repositioned around “Agadir with family” / “Agadir with kids” intent
 - strengthened metadata for safety, budget, and child suitability
+- retitled the page messaging more directly around “things to do in Agadir with kids”
+- added a quick family picks section by age to better match family planning searches
 - added body guidance on:
   - stroller-friendly options
   - toddler vs older-kid activity fit
   - heat management
   - realistic half-day planning
   - related internal links for families arriving by cruise or planning broader stays
+
+### `tour-paradise-valley-agadir-new`
+
+Changes:
+
+- retargeted metadata toward high-intent tour searches around pools, walk difficulty, and hotel pickup
+- tightened the hero subtitle so the offer is clearer in the first screen
+- reinforced expectations around walking level, swimming conditions, and who the tour fits best
+- added stronger internal support from the informational Paradise Valley guide
 
 ### `quad-biking-agadir-guide`
 
@@ -217,6 +235,26 @@ Changes:
 - improved subtitle and overview to better match half-day sightseeing intent
 - made the page more useful for first-time visitors seeking orientation and city highlights
 
+### GSC workflow and optimization queue
+
+Changes:
+
+- added a local Search Console connector with reusable OAuth token persistence
+- added a shared GSC helper module for authenticated data pulls
+- added CLI reporting modes for terminal, markdown, and JSON outputs
+- built a stable optimization queue that captures:
+  - page URL
+  - page type
+  - current title
+  - current meta description
+  - clicks
+  - impressions
+  - CTR
+  - average position
+  - recommended action
+  - page-specific top query clusters
+- aligned the queue with live Search Console data so future remediation passes can compare before/after on the same fields
+
 ## 5. Hub Page Improvements
 
 ### `index.html`
@@ -245,6 +283,7 @@ Changes:
 
 - card messaging updated to match the new SEO targeting of the priority articles
 - stronger editorial-hub positioning for informational pages
+- JSON-LD article summaries updated to match the refreshed Paradise Valley and family-guide positioning
 
 ### `all-tours.html`
 
@@ -255,6 +294,7 @@ Changes:
   - `Adventure Tours in Agadir`
   - `Day Trips from Agadir`
   - `Cultural Experiences in Agadir`
+- updated Paradise Valley and Souss Massa tour cards to better match refined trip intent and wildlife/nature messaging
 
 ## 6. Reporting and Documentation
 
@@ -262,6 +302,9 @@ Created:
 
 - [SEARCH_CONSOLE_REVIEW_2026-03-21.md](/Users/yassine/Documents/projects/thelocalguide/SEARCH_CONSOLE_REVIEW_2026-03-21.md)
 - [SEO_REMEDIATION_IMPLEMENTATION_REPORT_2026-03-22.md](/Users/yassine/Documents/projects/thelocalguide/SEO_REMEDIATION_IMPLEMENTATION_REPORT_2026-03-22.md)
+- [gsc-connector/server.js](/Users/yassine/Documents/projects/thelocalguide/gsc-connector/server.js)
+- [gsc-connector/lib/gsc.js](/Users/yassine/Documents/projects/thelocalguide/gsc-connector/lib/gsc.js)
+- [gsc-connector/cli.js](/Users/yassine/Documents/projects/thelocalguide/gsc-connector/cli.js)
 
 ## 7. Verification Performed
 
@@ -280,6 +323,9 @@ Checks completed during implementation:
 - re-tested live redirects for `contact.html`, `agadir-tours.html`, `day-trips-from-agadir.html`, and `tour-souss-massa-park-agadir.html`
 - verified shortened title and meta description lengths across all priority pages
 - confirmed `all-tours.html` now contains `3` visible H2 headings instead of `0`
+- verified the saved-token Search Console connector returns live property data
+- verified `npm run gsc:cli`, `npm run gsc:cli:md`, and `npm run gsc:cli:json` run successfully
+- confirmed the GSC queue outputs stable page-level optimization fields for future comparison
 - committed and pushed the SEO pass to `origin/main`
 
 ## 8. Push Details
@@ -287,7 +333,11 @@ Checks completed during implementation:
 - Branch: `main`
 - Remote: `origin`
 - Pushed successfully to `origin/main`
-- Commit: `1e31090`
+- Push sequence:
+  - `1e31090` — `Implement SEO remediation pass`
+  - `66885ea` — `Finish SEO follow-up fixes`
+  - `df94d6e` — `Tighten SEO metadata and tour hub structure`
+  - `cecf919` — `Implement GSC-driven SEO improvement sprint`
 
 ## 9. Known Follow-Up Items
 
@@ -297,6 +347,12 @@ These were not fully completed in this pass and should be monitored next:
 - CTR movement on the updated page-1/page-2 pages
 - possible future cleanup of `-new.html` slugs if rankings stabilize and a second migration is justified
 - deeper cleanup of additional cross-tour internal links that currently point to canonical pages but could still be tightened further if doing a broader template sweep
+- continued weekly comparison of GSC queue pages after snippet and intro rewrites
+- possible second-wave optimization for:
+  - `blog/agadir-cruise-excursions.html`
+  - `blog/quad-biking-agadir-guide.html`
+  - `tours/tour-agadir-guided-city-tour-cable-car.html`
+  - `tours/tour-agadir-half-quad-biking-adventure.html`
 
 ## Expected SEO Impact
 
@@ -308,6 +364,7 @@ Near-term expected effects:
 - stronger internal support from the homepage and travel-guide hub to priority URLs
 - lower SERP truncation risk on key commercial and informational pages
 - stronger topical clarity for the `all-tours.html` hub through visible heading structure
+- a reusable reporting loop for future GSC-driven optimization sprints instead of one-off manual reviews
 
 Medium-term success indicators:
 
@@ -315,6 +372,7 @@ Medium-term success indicators:
 - improved CTR on `top-10-things-to-do-agadir-2026`
 - better clicks and ranking stability for:
   - Paradise Valley guide
+  - Paradise Valley tour
   - quad biking guide
   - family guide
   - cruise guide

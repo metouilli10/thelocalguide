@@ -7,6 +7,9 @@ const {
   fetchSearchConsoleSnapshot,
   TOKEN_PATH,
   GSC_SITE_URL,
+  getDefaultSitemapUrl,
+  inspectUrl,
+  submitSitemap,
 } = require("./lib/gsc");
 
 const PROJECT_ROOT = path.join(__dirname, "..");
@@ -85,14 +88,28 @@ function priorityLabel(index) {
 
 function parseArgs(argv) {
   const options = {
+    command: "report",
     format: "text",
+    value: null,
   };
 
-  for (let i = 0; i < argv.length; i += 1) {
-    const arg = argv[i];
+  const args = [...argv];
 
-    if (arg === "--format" && argv[i + 1]) {
-      options.format = argv[i + 1];
+  if (args[0] === "inspect") {
+    options.command = "inspect";
+    options.value = args[1] || null;
+    args.splice(0, 2);
+  } else if (args[0] === "submit-sitemap") {
+    options.command = "submit-sitemap";
+    options.value = args[1] || null;
+    args.splice(0, 2);
+  }
+
+  for (let i = 0; i < args.length; i += 1) {
+    const arg = args[i];
+
+    if (arg === "--format" && args[i + 1]) {
+      options.format = args[i + 1];
       i += 1;
     }
   }
@@ -150,6 +167,18 @@ function getPageMetadata(url) {
     title: extractTag(html, /<title>([^<]+)<\/title>/i),
     description: extractMetaDescription(html),
     type: pageTypeFromPathname(pathname),
+  };
+}
+
+function getDateRange() {
+  const end = new Date();
+  end.setDate(end.getDate() - 1);
+  const start = new Date(end);
+  start.setDate(start.getDate() - 27);
+
+  return {
+    startDate: start.toISOString().slice(0, 10),
+    endDate: end.toISOString().slice(0, 10),
   };
 }
 
@@ -216,18 +245,6 @@ async function fetchTopQueriesForPage(searchconsole, pageUrl) {
   }));
 }
 
-function getDateRange() {
-  const end = new Date();
-  end.setDate(end.getDate() - 1);
-  const start = new Date(end);
-  start.setDate(start.getDate() - 27);
-
-  return {
-    startDate: start.toISOString().slice(0, 10),
-    endDate: end.toISOString().slice(0, 10),
-  };
-}
-
 async function buildOptimizationQueue(searchconsole) {
   const pages = await fetchOpportunityPages(searchconsole);
 
@@ -245,6 +262,19 @@ async function buildOptimizationQueue(searchconsole) {
       };
     })
   );
+}
+
+function printSection(title, rows, formatter) {
+  console.log(`\n${title}`);
+
+  if (!rows.length) {
+    console.log("  none");
+    return;
+  }
+
+  rows.forEach((row, index) => {
+    console.log(`  ${index + 1}. ${formatter(row)}`);
+  });
 }
 
 function printQueueText(queue) {
@@ -283,29 +313,26 @@ function printQueueMarkdown(queue, body) {
   });
 }
 
-function printSection(title, rows, formatter) {
-  console.log(`\n${title}`);
+function printInspectionResult(data) {
+  const result = data.inspectionResult || {};
+  const indexResult = result.indexStatusResult || {};
+  const ampResult = result.ampResult || {};
+  const richResults = result.richResultsResult || {};
 
-  if (!rows.length) {
-    console.log("  none");
-    return;
-  }
-
-  rows.forEach((row, index) => {
-    console.log(`  ${index + 1}. ${formatter(row)}`);
-  });
+  console.log(`Inspection URL: ${result.inspectionResultLink || "n/a"}`);
+  console.log(`Coverage state: ${indexResult.coverageState || "n/a"}`);
+  console.log(`Indexing state: ${indexResult.indexingState || "n/a"}`);
+  console.log(`Last crawl: ${indexResult.lastCrawlTime || "n/a"}`);
+  console.log(`Page fetch: ${indexResult.pageFetchState || "n/a"}`);
+  console.log(`Robots.txt: ${indexResult.robotsTxtState || "n/a"}`);
+  console.log(`Canonical (Google): ${indexResult.googleCanonical || "n/a"}`);
+  console.log(`Canonical (user): ${indexResult.userCanonical || "n/a"}`);
+  console.log(`Referring sitemaps: ${(indexResult.referringUrls || []).join(", ") || "none"}`);
+  console.log(`AMP: ${ampResult.ampIndexStatusVerdict || "n/a"}`);
+  console.log(`Rich results: ${richResults.verdict || "n/a"}`);
 }
 
-async function main() {
-  const options = parseArgs(process.argv.slice(2));
-  const searchconsole = getAuthorizedSearchConsoleClient();
-
-  if (!searchconsole) {
-    console.error(`No saved OAuth tokens found at ${TOKEN_PATH}.`);
-    console.error("Open /auth/google once, then rerun this command.");
-    process.exit(1);
-  }
-
+async function runReport(searchconsole, format) {
   const snapshot = await fetchSearchConsoleSnapshot(searchconsole);
 
   if (snapshot.status !== 200) {
@@ -316,7 +343,7 @@ async function main() {
   const { body } = snapshot;
   const queue = await buildOptimizationQueue(searchconsole);
 
-  if (options.format === "json") {
+  if (format === "json") {
     console.log(
       JSON.stringify(
         {
@@ -351,7 +378,7 @@ async function main() {
     return;
   }
 
-  if (options.format === "md") {
+  if (format === "md") {
     printQueueMarkdown(queue, body);
     return;
   }
@@ -376,8 +403,55 @@ async function main() {
   });
 }
 
+async function runInspect(searchconsole, inspectionTarget) {
+  if (!inspectionTarget) {
+    console.error("Usage: npm run gsc:inspect -- <url-or-path>");
+    process.exit(1);
+  }
+
+  const data = await inspectUrl(searchconsole, inspectionTarget);
+  printInspectionResult(data);
+}
+
+async function runSubmitSitemap(searchconsole, sitemapTarget) {
+  const result = await submitSitemap(searchconsole, sitemapTarget);
+  console.log(`Property: ${result.property}`);
+  console.log(`Submitted sitemap: ${result.sitemap}`);
+}
+
+async function main() {
+  const options = parseArgs(process.argv.slice(2));
+  const searchconsole = getAuthorizedSearchConsoleClient();
+
+  if (!searchconsole) {
+    console.error(`No saved OAuth tokens found at ${TOKEN_PATH}.`);
+    console.error("Open /auth/google once, then rerun this command.");
+    process.exit(1);
+  }
+
+  if (options.command === "inspect") {
+    await runInspect(searchconsole, options.value);
+    return;
+  }
+
+  if (options.command === "submit-sitemap") {
+    await runSubmitSitemap(searchconsole, options.value || getDefaultSitemapUrl());
+    return;
+  }
+
+  await runReport(searchconsole, options.format);
+}
+
 main().catch((error) => {
-  console.error("Failed to fetch Search Console opportunities.");
+  console.error("GSC command failed.");
   console.error(error.message);
+  const message = String(error.message || "").toLowerCase();
+  if (
+    message.includes("insufficient") ||
+    message.includes("permission") ||
+    message.includes("403")
+  ) {
+    console.error("Reconnect at /auth/google once to grant the updated Search Console scope, then retry.");
+  }
   process.exit(1);
 });

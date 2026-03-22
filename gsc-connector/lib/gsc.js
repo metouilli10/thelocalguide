@@ -11,6 +11,7 @@ const {
   GOOGLE_CLIENT_SECRET,
   GOOGLE_REDIRECT_URI,
   GSC_SITE_URL,
+  GSC_SITEMAP_URL,
 } = process.env;
 
 const requiredEnv = {
@@ -30,11 +31,7 @@ if (missing.length) {
   process.exit(1);
 }
 
-const oauth2Client = new google.auth.OAuth2(
-  GOOGLE_CLIENT_ID,
-  GOOGLE_CLIENT_SECRET,
-  GOOGLE_REDIRECT_URI
-);
+const SCOPES = ["https://www.googleapis.com/auth/webmasters"];
 
 function getDateNDaysAgo(n) {
   const d = new Date();
@@ -60,8 +57,18 @@ function saveTokens(tokens) {
   fs.writeFileSync(TOKEN_PATH, JSON.stringify(tokens, null, 2));
 }
 
+function createOAuthClient() {
+  return new google.auth.OAuth2(
+    GOOGLE_CLIENT_ID,
+    GOOGLE_CLIENT_SECRET,
+    GOOGLE_REDIRECT_URI
+  );
+}
+
 function setOAuthCredentials(tokens) {
+  const oauth2Client = createOAuthClient();
   oauth2Client.setCredentials(tokens);
+  return oauth2Client;
 }
 
 function getAuthorizedSearchConsoleClient() {
@@ -71,7 +78,7 @@ function getAuthorizedSearchConsoleClient() {
     return null;
   }
 
-  setOAuthCredentials(savedTokens);
+  const oauth2Client = setOAuthCredentials(savedTokens);
 
   return google.searchconsole({
     version: "v1",
@@ -80,7 +87,7 @@ function getAuthorizedSearchConsoleClient() {
 }
 
 function buildSearchConsoleClient(tokens) {
-  setOAuthCredentials(tokens);
+  const oauth2Client = setOAuthCredentials(tokens);
 
   return google.searchconsole({
     version: "v1",
@@ -195,12 +202,76 @@ async function fetchSearchConsoleSnapshot(searchconsole) {
   };
 }
 
+function getDefaultSitemapUrl() {
+  if (GSC_SITEMAP_URL) {
+    return GSC_SITEMAP_URL;
+  }
+
+  if (GSC_SITE_URL.startsWith("sc-domain:")) {
+    return `https://${GSC_SITE_URL.replace("sc-domain:", "")}/sitemap.xml`;
+  }
+
+  const url = new URL(GSC_SITE_URL);
+  return `${url.origin}/sitemap.xml`;
+}
+
+function normalizeUrl(input) {
+  if (!input) {
+    throw new Error("URL is required.");
+  }
+
+  if (/^https?:\/\//i.test(input)) {
+    return input;
+  }
+
+  const pathValue = input.startsWith("/") ? input : `/${input}`;
+
+  if (GSC_SITE_URL.startsWith("sc-domain:")) {
+    return `https://${GSC_SITE_URL.replace("sc-domain:", "")}${pathValue}`;
+  }
+
+  const url = new URL(GSC_SITE_URL);
+  return `${url.origin}${pathValue}`;
+}
+
+async function inspectUrl(searchconsole, inspectionUrl) {
+  const response = await searchconsole.urlInspection.index.inspect({
+    requestBody: {
+      inspectionUrl: normalizeUrl(inspectionUrl),
+      siteUrl: GSC_SITE_URL,
+      languageCode: "en-US",
+    },
+  });
+
+  return response.data;
+}
+
+async function submitSitemap(searchconsole, sitemapUrl) {
+  const feedpath = sitemapUrl ? normalizeUrl(sitemapUrl) : getDefaultSitemapUrl();
+  await searchconsole.sitemaps.submit({
+    siteUrl: GSC_SITE_URL,
+    feedpath,
+  });
+
+  return {
+    success: true,
+    property: GSC_SITE_URL,
+    sitemap: feedpath,
+  };
+}
+
 module.exports = {
+  SCOPES,
   TOKEN_PATH,
   buildSearchConsoleClient,
+  createOAuthClient,
   fetchSearchConsoleSnapshot,
+  getDefaultSitemapUrl,
   getAuthorizedSearchConsoleClient,
   GSC_SITE_URL,
+  inspectUrl,
   loadSavedTokens,
   saveTokens,
+  submitSitemap,
+  normalizeUrl,
 };

@@ -2,19 +2,22 @@ require("dotenv").config();
 
 const express = require("express");
 const {
+  SCOPES,
   TOKEN_PATH,
   buildSearchConsoleClient,
+  createOAuthClient,
   fetchSearchConsoleSnapshot,
+  getDefaultSitemapUrl,
   getAuthorizedSearchConsoleClient,
   GSC_SITE_URL,
+  inspectUrl,
   loadSavedTokens,
   saveTokens,
+  submitSitemap,
 } = require("./lib/gsc");
 
 const app = express();
 const PORT = Number(process.env.PORT) || 3000;
-
-const SCOPES = ["https://www.googleapis.com/auth/webmasters.readonly"];
 
 app.get("/", (_req, res) => {
   const savedTokens = loadSavedTokens();
@@ -23,18 +26,17 @@ app.get("/", (_req, res) => {
     <h1>Google Search Console Connector</h1>
     <p><a href="/auth/google">Connect Google Search Console</a></p>
     <p><a href="/data">Fetch saved Search Console data</a></p>
+    <p><a href="/inspect?url=/">Inspect a URL</a> (pass <code>?url=...</code>)</p>
+    <p><a href="/submit-sitemap">Submit default sitemap</a></p>
     <p>Site property configured: <strong>${GSC_SITE_URL}</strong></p>
+    <p>Default sitemap: <strong>${getDefaultSitemapUrl()}</strong></p>
     <p>Saved tokens present: <strong>${savedTokens ? "yes" : "no"}</strong></p>
+    <p>OAuth scope: <strong>${SCOPES[0]}</strong></p>
   `);
 });
 
 app.get("/auth/google", (_req, res) => {
-  const { google } = require("googleapis");
-  const oauth2Client = new google.auth.OAuth2(
-    process.env.GOOGLE_CLIENT_ID,
-    process.env.GOOGLE_CLIENT_SECRET,
-    process.env.GOOGLE_REDIRECT_URI
-  );
+  const oauth2Client = createOAuthClient();
 
   return res.redirect(
     oauth2Client.generateAuthUrl({
@@ -52,6 +54,7 @@ app.get("/oauth2callback", async (req, res) => {
       return res.status(400).send("Missing authorization code.");
     }
 
+    const oauth2Client = createOAuthClient();
     const { tokens } = await oauth2Client.getToken(code);
     const savedTokens = loadSavedTokens() || {};
     const tokensToSave = {
@@ -72,6 +75,61 @@ app.get("/oauth2callback", async (req, res) => {
       error: "Failed to authenticate or query Search Console.",
       details: error.message,
       hint: "Make sure the redirect URI in Google Cloud exactly matches /oauth2callback and your Google account has access to the configured Search Console property.",
+    });
+  }
+});
+
+app.get("/inspect", async (req, res) => {
+  try {
+    const searchconsole = getAuthorizedSearchConsoleClient();
+
+    if (!searchconsole) {
+      return res.status(401).json({
+        error: "No saved OAuth tokens found.",
+        hint: "Open /auth/google once to connect and save tokens locally.",
+      });
+    }
+
+    if (!req.query.url) {
+      return res.status(400).json({
+        error: "Missing url query parameter.",
+        hint: "Use /inspect?url=/path or /inspect?url=https://agadirlocalguide.com/page",
+      });
+    }
+
+    const data = await inspectUrl(searchconsole, req.query.url);
+    return res.json(data);
+  } catch (error) {
+    console.error(error);
+
+    return res.status(500).json({
+      error: "Failed to inspect URL.",
+      details: error.message,
+      hint: "Reconnect at /auth/google if the saved token predates the current scope.",
+    });
+  }
+});
+
+app.get("/submit-sitemap", async (req, res) => {
+  try {
+    const searchconsole = getAuthorizedSearchConsoleClient();
+
+    if (!searchconsole) {
+      return res.status(401).json({
+        error: "No saved OAuth tokens found.",
+        hint: "Open /auth/google once to connect and save tokens locally.",
+      });
+    }
+
+    const result = await submitSitemap(searchconsole, req.query.url);
+    return res.json(result);
+  } catch (error) {
+    console.error(error);
+
+    return res.status(500).json({
+      error: "Failed to submit sitemap.",
+      details: error.message,
+      hint: "Reconnect at /auth/google once to grant the full Search Console scope, then retry.",
     });
   }
 });

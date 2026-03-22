@@ -14,7 +14,9 @@
     "gsc:start": "npm start --prefix gsc-connector",
     "gsc:cli": "npm run cli --prefix gsc-connector",
     "gsc:cli:md": "npm run cli --prefix gsc-connector -- --format md",
-    "gsc:cli:json": "npm run cli --prefix gsc-connector -- --format json"
+    "gsc:cli:json": "npm run cli --prefix gsc-connector -- --format json",
+    "gsc:inspect": "npm run cli --prefix gsc-connector -- inspect",
+    "gsc:submit-sitemap": "npm run cli --prefix gsc-connector -- submit-sitemap"
   },
   "keywords": [
     "agadir",

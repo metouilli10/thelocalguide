@@ -1,6 +1,54 @@
 {
   "redirects": [
     {
+      "source": "/tour-souss-massa-park-agadir.html",
+      "has": [{ "type": "host", "value": "www.agadirlocalguide.com" }],
+      "destination": "https://agadirlocalguide.com/tours/tour-souss-massa-park-agadir.html",
+      "permanent": true
+    },
+    {
+      "source": "/contact.html",
+      "has": [{ "type": "host", "value": "www.agadirlocalguide.com" }],
+      "destination": "https://agadirlocalguide.com/contact-us.html",
+      "permanent": true
+    },
+    {
+      "source": "/agadir-tours.html",
+      "has": [{ "type": "host", "value": "www.agadirlocalguide.com" }],
+      "destination": "https://agadirlocalguide.com/all-tours.html",
+      "permanent": true
+    },
+    {
+      "source": "/day-trips-from-agadir.html",
+      "has": [{ "type": "host", "value": "www.agadirlocalguide.com" }],
+      "destination": "https://agadirlocalguide.com/blog/agadir-day-trips.html",
+      "permanent": true
+    },
+    {
+      "source": "/tour-paradise-valley-agadir.html",
+      "has": [{ "type": "host", "value": "www.agadirlocalguide.com" }],
+      "destination": "https://agadirlocalguide.com/tours/tour-paradise-valley-agadir-new.html",
+      "permanent": true
+    },
+    {
+      "source": "/tours/tour-paradise-valley-agadir.html",
+      "has": [{ "type": "host", "value": "www.agadirlocalguide.com" }],
+      "destination": "https://agadirlocalguide.com/tours/tour-paradise-valley-agadir-new.html",
+      "permanent": true
+    },
+    {
+      "source": "/tour-quad-biking-agadir.html",
+      "has": [{ "type": "host", "value": "www.agadirlocalguide.com" }],
+      "destination": "https://agadirlocalguide.com/tours/tour-agadir-half-quad-biking-adventure.html",
+      "permanent": true
+    },
+    {
+      "source": "/tours/tour-quad-biking-agadir.html",
+      "has": [{ "type": "host", "value": "www.agadirlocalguide.com" }],
+      "destination": "https://agadirlocalguide.com/tours/tour-agadir-half-quad-biking-adventure.html",
+      "permanent": true
+    },
+    {
       "source": "/:path*",
       "has": [{ "type": "host", "value": "www.agadirlocalguide.com" }],
       "destination": "https://agadirlocalguide.com/:path*",

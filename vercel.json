@@ -30,6 +30,56 @@
       "source": "/tours/tour-camel-ride-morning-agadir.html",
       "destination": "/tours/tour-morning-camel-ride-agadir.html",
       "permanent": true
+    },
+    {
+      "source": "/tour-souss-massa-park-agadir.html",
+      "destination": "/tours/tour-souss-massa-park-agadir.html",
+      "permanent": true
+    },
+    {
+      "source": "/tours/day-trip-marrakech-from-agadir.html",
+      "destination": "/tours/day-trip-marrakech-from-agadir-new.html",
+      "permanent": true
+    },
+    {
+      "source": "/tours/day-trip-taroudant-from-agadir.html",
+      "destination": "/tours/day-trip-taroudant-from-agadir-new.html",
+      "permanent": true
+    },
+    {
+      "source": "/contact.html",
+      "destination": "/contact-us.html",
+      "permanent": true
+    },
+    {
+      "source": "/agadir-tours.html",
+      "destination": "/all-tours.html",
+      "permanent": true
+    },
+    {
+      "source": "/day-trips-from-agadir.html",
+      "destination": "/blog/agadir-day-trips.html",
+      "permanent": true
+    },
+    {
+      "source": "/tour-horse-riding-agadir.html",
+      "destination": "/tours/tour-horse-riding-agadir.html",
+      "permanent": true
+    },
+    {
+      "source": "/tour-sandboarding-agadir.html",
+      "destination": "/tours/tour-sandboarding-agadir.html",
+      "permanent": true
+    },
+    {
+      "source": "/tour-buggy-adventure-agadir.html",
+      "destination": "/tours/tour-buggy-adventure-agadir.html",
+      "permanent": true
+    },
+    {
+      "source": "/tour-cooking-class-agadir.html",
+      "destination": "/tours/tour-cooking-class-agadir.html",
+      "permanent": true
     }
   ],
   "headers": [

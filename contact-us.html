@@ -54,7 +54,7 @@
         "@type": "Organization",
         "name": "Agadir Local Guide",
         "telephone": "+212700006462",
-        "email": "info@agadirlocalguide.com",
+        "email": "agadirlocalguide@gmail.com",
         "url": "https://agadirlocalguide.com"
       }
     }
@@ -1257,11 +1257,11 @@
                 </svg>
                 +212 700-006462
             </a>
-            <a href="mailto:info@agadirlocalguide.com" class="mobile-contact-item">
+            <a href="mailto:agadirlocalguide@gmail.com" class="mobile-contact-item">
                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke-width="2">
                     <path stroke-linecap="round" stroke-linejoin="round" d="M21.75 6.75v10.5a2.25 2.25 0 01-2.25 2.25h-15a2.25 2.25 0 01-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0019.5 4.5h-15a2.25 2.25 0 00-2.25 2.25m19.5 0v.243a2.25 2.25 0 01-1.07 1.916l-7.5 4.615a2.25 2.25 0 01-2.36 0L3.32 8.91a2.25 2.25 0 01-1.07-1.916V6.75" />
                 </svg>
-                info@agadirlocalguide.com
+                agadirlocalguide@gmail.com
             </a>
         </div>
     </div>
@@ -1300,7 +1300,7 @@
                     </svg>
                 </div>
                 <h3>Email Us</h3>
-                <a href="mailto:info@agadirlocalguide.com" class="contact-detail">info@agadirlocalguide.com</a>
+                <a href="mailto:agadirlocalguide@gmail.com" class="contact-detail">agadirlocalguide@gmail.com</a>
                 <p>We respond within 24 hours</p>
             </div>
 
@@ -1739,8 +1739,24 @@
                     data[key] = value;
                 });
 
-                // Show success message
-                alert('Thank you for your message! We will get back to you within 24 hours.');
+                const subjectParts = ['Contact Form Inquiry'];
+                if (data.tourInterest) {
+                    subjectParts.push(`- ${data.tourInterest}`);
+                }
+
+                const bodyLines = [
+                    `Name: ${data.name || ''}`,
+                    `Email: ${data.email || ''}`,
+                    `Phone: ${data.phone || ''}`,
+                    `Tour Interest: ${data.tourInterest || 'General Inquiry'}`,
+                    '',
+                    'Message:',
+                    data.message || ''
+                ];
+
+                const mailtoUrl = `mailto:agadirlocalguide@gmail.com?subject=${encodeURIComponent(subjectParts.join(' '))}&body=${encodeURIComponent(bodyLines.join('\n'))}`;
+
+                window.location.href = mailtoUrl;
 
                 // Reset form
                 this.reset();
@@ -1749,6 +1765,4 @@
     </script>
 </body>
 </html>
-
-
 

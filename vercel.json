@@ -90,6 +90,16 @@
       "permanent": true
     },
     {
+      "source": "/day-trip-essaouira-from-agadir.html",
+      "destination": "/tours/day-trip-essaouira-from-agadir-new.html",
+      "permanent": true
+    },
+    {
+      "source": "/tours/day-trip-essaouira-from-agadir.html",
+      "destination": "/tours/day-trip-essaouira-from-agadir-new.html",
+      "permanent": true
+    },
+    {
       "source": "/tours/day-trip-taroudant-from-agadir.html",
       "destination": "/tours/day-trip-taroudant-from-agadir-new.html",
       "permanent": true

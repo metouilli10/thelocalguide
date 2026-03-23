@@ -1054,6 +1054,7 @@
             display: flex;
             flex-direction: column;
             gap: 48px;
+            min-width: 0;
         }
 
         .booking-column {
@@ -1063,6 +1064,7 @@
 
         .section {
             scroll-margin-top: 160px;
+            min-width: 0;
         }
 
         .section-title {
@@ -1083,6 +1085,7 @@
             line-height: 1.8;
             color: var(--gray-700);
             margin-bottom: 24px;
+            overflow-wrap: anywhere;
         }
 
         .feature-badges {
@@ -2226,8 +2229,8 @@
             }
 
             .feature-badges {
-                grid-template-columns: repeat(3, 1fr);
-                gap: 8px;
+                grid-template-columns: repeat(2, minmax(0, 1fr));
+                gap: 10px;
             }
 
             .feature-badge {
@@ -2247,7 +2250,8 @@
             .feature-badge-title {
                 font-size: 11px;
                 line-height: 1.3;
-                white-space: nowrap;
+                white-space: normal;
+                overflow-wrap: anywhere;
             }
 
             .feature-badge-text {

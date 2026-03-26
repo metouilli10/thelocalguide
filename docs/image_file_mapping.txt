@@ -51,16 +51,7 @@
   - tour-souss-massa-park-agadir.html
   - tour-surf-lessons-agadir.html
 
-### morocco-collage.jpg
-  - agadir-excursions.html
-  - crocoparc-agadir-tour.html
-  - day-trip-essaouira-from-agadir.html
-  - day-trip-marrakech-from-agadir.html
-  - day-trip-taroudant-from-agadir.html
-  - things-to-do-in-agadir.html
-
-### morocco-collage.png
-  - index.html
+### morocco-collage.* (removed — replaced by top-10 hero webp + tour-specific OG images)
 
 ### morocco-heritage-1.jpg
   - agadir-excursions.html

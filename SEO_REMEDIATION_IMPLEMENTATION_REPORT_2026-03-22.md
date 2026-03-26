@@ -73,7 +73,7 @@ Template files were updated so future content does not keep generating legacy li
   - `agadir-tours.html` changed to `all-tours.html`
   - old Marrakech day trip link updated to the canonical `-new.html` URL
 - `TOUR_PAGE_TEMPLATE.html`
-  - `agadir-tours.html` links changed to `all-tours.html`
+  - `agadir-tours.html` links changed to `all-tours.html` 
 
 ### Internal-link cleanup outcome
 

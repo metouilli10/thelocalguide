@@ -1,0 +1,116 @@
+{
+  "tours": [
+    {
+      "name": "Paradise Valley",
+      "url": "/tours/tour-paradise-valley-agadir-new.html",
+      "priceEUR": 30,
+      "duration": "5-6 hours",
+      "type": "nature"
+    },
+    {
+      "name": "Quad Biking",
+      "url": "/tours/tour-agadir-half-quad-biking-adventure.html",
+      "priceEUR": 40,
+      "duration": "2 hours",
+      "type": "adventure"
+    },
+    {
+      "name": "Sunset Camel Ride + BBQ",
+      "url": "/tours/tour-agadir-sunset-camel-ride.html",
+      "priceEUR": 40,
+      "duration": "3-4 hours",
+      "type": "beach"
+    },
+    {
+      "name": "Morning Camel Ride",
+      "url": "/tours/tour-morning-camel-ride-agadir.html",
+      "priceEUR": 30,
+      "duration": "2-3 hours",
+      "type": "beach"
+    },
+    {
+      "name": "Marrakech Day Trip",
+      "url": "/tours/day-trip-marrakech-from-agadir-new.html",
+      "priceEUR": 38,
+      "duration": "12 hours",
+      "type": "day-trip"
+    },
+    {
+      "name": "Essaouira Day Trip",
+      "url": "/tours/day-trip-essaouira-from-agadir-new.html",
+      "priceEUR": 40,
+      "duration": "11 hours",
+      "type": "day-trip"
+    },
+    {
+      "name": "Sandboarding + BBQ",
+      "url": "/tours/tour-sandboarding-agadir.html",
+      "priceEUR": 60,
+      "duration": "4-5 hours",
+      "type": "adventure"
+    },
+    {
+      "name": "Horse Riding",
+      "url": "/tours/tour-horse-riding-agadir.html",
+      "priceEUR": 40,
+      "duration": "2 hours",
+      "type": "beach"
+    },
+    {
+      "name": "Agadir City Tour",
+      "url": "/tours/tour-agadir-guided-city-tour-cable-car.html",
+      "priceEUR": 25,
+      "duration": "3-4 hours",
+      "type": "city"
+    },
+    {
+      "name": "Buggy Adventure",
+      "url": "/tours/tour-buggy-adventure-agadir.html",
+      "priceEUR": 60,
+      "duration": "3 hours",
+      "type": "adventure"
+    },
+    {
+      "name": "Cooking Class",
+      "url": "/tours/tour-cooking-class-agadir.html",
+      "priceEUR": 50,
+      "duration": "4 hours",
+      "type": "cultural"
+    },
+    {
+      "name": "Hammam and Spa",
+      "url": "/tours/tour-moroccan-hammam-agadir.html",
+      "priceEUR": 45,
+      "duration": "2 hours",
+      "type": "wellness"
+    },
+    {
+      "name": "Jet Ski",
+      "url": "/tours/tour-jet-ski-agadir-new.html",
+      "priceEUR": 60,
+      "duration": "30 min",
+      "type": "water"
+    },
+    {
+      "name": "Surf Lessons",
+      "url": "/tours/tour-surf-lessons-agadir.html",
+      "priceEUR": 45,
+      "duration": "2 hours",
+      "type": "water"
+    },
+    {
+      "name": "Boat Trip",
+      "url": "/tours/tour-agadir-half-day-boat-trip.html",
+      "priceEUR": 48,
+      "duration": "4 hours",
+      "type": "water"
+    },
+    {
+      "name": "Taroudant Day Trip",
+      "url": "/tours/day-trip-taroudant-from-agadir-new.html",
+      "priceEUR": 45,
+      "duration": "8 hours",
+      "type": "day-trip"
+    }
+  ]
+}

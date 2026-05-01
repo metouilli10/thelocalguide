@@ -1,0 +1,64 @@
+{
+  "businessName": "Agadir Local Guide",
+  "businessType": "Local tour operator",
+  "location": {
+    "city": "Agadir",
+    "region": "Souss-Massa",
+    "country": "Morocco"
+  },
+  "contact": {
+    "phone": "+212 700-006462",
+    "whatsApp": "+212 700-006462",
+    "email": "info@agadirlocalguide.com"
+  },
+  "brandPositioning": {
+    "summary": "Licensed local tour operator offering small-group excursions and activity tours from Agadir.",
+    "voice": [
+      "local",
+      "practical",
+      "honest",
+      "specific"
+    ],
+    "audiences": [
+      "international tourists planning Agadir holidays",
+      "travelers comparing day trips and activities",
+      "price-conscious visitors who prefer local operators over generic OTAs"
+    ]
+  },
+  "proofPoints": {
+    "ratingSummary": "4.9/5 from 877+ reviews combined",
+    "groupSize": "maximum 8 travelers",
+    "pickupIncluded": true,
+    "cancellationPolicy": "free cancellation up to 24 hours before",
+    "languages": [
+      "English",
+      "French",
+      "Arabic"
+    ],
+    "licensedAndCertified": true
+  },
+  "pickupZones": [
+    "Agadir",
+    "Taghazout",
+    "Tamraght",
+    "Aourir"
+  ],
+  "coreSeoGoals": [
+    "grow bookings from commercial tour and day-trip searches",
+    "capture informational demand with blog content that supports tour pages",
+    "improve existing page performance using Search Console and keyword research",
+    "differentiate from OTAs with local trust and practical detail"
+  ],
+  "primarySiteSurfaces": [
+    "blog/",
+    "tours/",
+    "travel-guide.html",
+    "all-tours.html"
+  ],
+  "guardrails": {
+    "neverInventFacts": true,
+    "useApprovedPricesOnly": true,
+    "useLocalGuideVoice": true,
+    "doNotUseGenericHomeServicesPrompts": true
+  }
+}

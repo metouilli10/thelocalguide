@@ -1,0 +1,81 @@
+{
+  "schemaVersion": "1.0",
+  "auditType": "competitor-tour-pages",
+  "target": {
+    "tourName": "Paradise Valley",
+    "targetKeyword": "paradise valley agadir",
+    "ourPageUrl": "/tours/tour-paradise-valley-agadir-new.html"
+  },
+  "sources": [
+    {
+      "label": "Our page",
+      "url": "/tours/tour-paradise-valley-agadir-new.html",
+      "sourceType": "site"
+    },
+    {
+      "label": "Competitor 1",
+      "url": "https://example.com/paradise-valley-agadir",
+      "sourceType": "local-operator"
+    }
+  ],
+  "comparisonDimensions": [
+    "searchIntentMatch",
+    "titleAndMetaAngle",
+    "heroClarity",
+    "pricingAndInclusions",
+    "faqCoverage",
+    "trustSignals",
+    "ctaStrength",
+    "photoAndMediaUse",
+    "localAuthoritySignals"
+  ],
+  "findings": [
+    {
+      "sourceLabel": "Competitor 1",
+      "observations": {
+        "searchIntentMatch": "Targets booking intent clearly with price and pickup references.",
+        "titleAndMetaAngle": "Leads with tour name and practical booking detail.",
+        "heroClarity": "Hero section states duration, pickup, and top highlights immediately.",
+        "pricingAndInclusions": "Lists transportation, guide, and stop details clearly.",
+        "faqCoverage": "Answers common traveler questions before the CTA.",
+        "trustSignals": "Uses review snippets and cancellation reassurance.",
+        "ctaStrength": "Primary CTA appears above the fold and after FAQs.",
+        "photoAndMediaUse": "Shows realistic activity photos rather than generic destination images.",
+        "localAuthoritySignals": "Mentions guide knowledge and local pickup logistics."
+      },
+      "strengths": [
+        "Clear inclusions section",
+        "Better booking reassurance",
+        "Stronger FAQ coverage"
+      ],
+      "weaknesses": [
+        "Generic destination copy",
+        "Weak local voice"
+      ]
+    }
+  ],
+  "ourPageAssessment": {
+    "strengths": [
+      "Local operator positioning"
+    ],
+    "gaps": [
+      "Needs sharper opening booking promise",
+      "Needs more explicit inclusions and exclusions",
+      "Needs stronger FAQ coverage"
+    ]
+  },
+  "priorityChanges": [
+    {
+      "priority": "high",
+      "change": "Rewrite hero to surface duration, pickup, and booking reassurance."
+    },
+    {
+      "priority": "high",
+      "change": "Add FAQ section around timing, swimming, what to bring, and crowds."
+    }
+  ],
+  "notes": [
+    "Keep observed facts separate from recommendations.",
+    "Use one file per target tour or target keyword."
+  ]
+}

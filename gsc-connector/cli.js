@@ -5,6 +5,7 @@ const path = require("path");
 const {
   getAuthorizedSearchConsoleClient,
   fetchSearchConsoleSnapshot,
+  getPerformanceDateRange,
   TOKEN_PATH,
   GSC_SITE_URL,
   getDefaultSitemapUrl,
@@ -91,6 +92,7 @@ function parseArgs(argv) {
     command: "report",
     format: "text",
     value: null,
+    lookbackDays: 28,
   };
 
   const args = [...argv];
@@ -110,6 +112,12 @@ function parseArgs(argv) {
 
     if (arg === "--format" && args[i + 1]) {
       options.format = args[i + 1];
+      i += 1;
+    } else if (arg === "--days" && args[i + 1]) {
+      const n = Number.parseInt(args[i + 1], 10);
+      if (Number.isFinite(n) && n > 0 && n <= 16 * 30) {
+        options.lookbackDays = n;
+      }
       i += 1;
     }
   }
@@ -170,24 +178,12 @@ function getPageMetadata(url) {
   };
 }
 
-function getDateRange() {
-  const end = new Date();
-  end.setDate(end.getDate() - 1);
-  const start = new Date(end);
-  start.setDate(start.getDate() - 27);
-
-  return {
-    startDate: start.toISOString().slice(0, 10),
-    endDate: end.toISOString().slice(0, 10),
-  };
-}
-
-async function fetchOpportunityPages(searchconsole) {
+async function fetchOpportunityPages(searchconsole, dateRange) {
   const response = await searchconsole.searchanalytics.query({
     siteUrl: GSC_SITE_URL,
     requestBody: {
-      startDate: getDateRange().startDate,
-      endDate: getDateRange().endDate,
+      startDate: dateRange.startDate,
+      endDate: dateRange.endDate,
       dimensions: ["page"],
       rowLimit: DEFAULTS.rowLimit,
       startRow: 0,
@@ -214,12 +210,12 @@ async function fetchOpportunityPages(searchconsole) {
     });
 }
 
-async function fetchTopQueriesForPage(searchconsole, pageUrl) {
+async function fetchTopQueriesForPage(searchconsole, pageUrl, dateRange) {
   const response = await searchconsole.searchanalytics.query({
     siteUrl: GSC_SITE_URL,
     requestBody: {
-      startDate: getDateRange().startDate,
-      endDate: getDateRange().endDate,
+      startDate: dateRange.startDate,
+      endDate: dateRange.endDate,
       dimensions: ["query"],
       rowLimit: DEFAULTS.queryLimit,
       dimensionFilterGroups: [
@@ -245,13 +241,13 @@ async function fetchTopQueriesForPage(searchconsole, pageUrl) {
   }));
 }
 
-async function buildOptimizationQueue(searchconsole) {
-  const pages = await fetchOpportunityPages(searchconsole);
+async function buildOptimizationQueue(searchconsole, dateRange) {
+  const pages = await fetchOpportunityPages(searchconsole, dateRange);
 
   return Promise.all(
     pages.map(async (page, index) => {
       const metadata = getPageMetadata(page.page);
-      const topQueries = await fetchTopQueriesForPage(searchconsole, page.page);
+      const topQueries = await fetchTopQueriesForPage(searchconsole, page.page, dateRange);
 
       return {
         ...page,
@@ -332,8 +328,9 @@ function printInspectionResult(data) {
   console.log(`Rich results: ${richResults.verdict || "n/a"}`);
 }
 
-async function runReport(searchconsole, format) {
-  const snapshot = await fetchSearchConsoleSnapshot(searchconsole);
+async function runReport(searchconsole, format, lookbackDays) {
+  const dateRange = getPerformanceDateRange(lookbackDays);
+  const snapshot = await fetchSearchConsoleSnapshot(searchconsole, { lookbackDays });
 
   if (snapshot.status !== 200) {
     console.error(JSON.stringify(snapshot.body, null, 2));
@@ -341,7 +338,7 @@ async function runReport(searchconsole, format) {
   }
 
   const { body } = snapshot;
-  const queue = await buildOptimizationQueue(searchconsole);
+  const queue = await buildOptimizationQueue(searchconsole, dateRange);
 
   if (format === "json") {
     console.log(
@@ -351,6 +348,7 @@ async function runReport(searchconsole, format) {
           access: body.access.permissionLevel,
           dateRange: body.dateRange,
           filters: {
+            lookbackDays,
             ctrThreshold: DEFAULTS.ctrThreshold,
             minImpressions: DEFAULTS.minImpressions,
             minPosition: DEFAULTS.minPosition,
@@ -439,13 +437,18 @@ async function main() {
     return;
   }
 
-  await runReport(searchconsole, options.format);
+  await runReport(searchconsole, options.format, options.lookbackDays);
 }
 
 main().catch((error) => {
   console.error("GSC command failed.");
   console.error(error.message);
   const message = String(error.message || "").toLowerCase();
+  if (message.includes("invalid_grant")) {
+    console.error(
+      "Refresh token expired or revoked. Run: npm run gsc:start — open /auth/google, sign in, save new tokens, then retry."
+    );
+  }
   if (
     message.includes("insufficient") ||
     message.includes("permission") ||

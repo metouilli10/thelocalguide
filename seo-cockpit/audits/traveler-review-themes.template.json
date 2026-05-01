@@ -1,0 +1,83 @@
+{
+  "schemaVersion": "1.0",
+  "auditType": "traveler-review-themes",
+  "target": {
+    "activityName": "Quad Biking",
+    "targetPageUrl": "/tours/tour-agadir-half-quad-biking-adventure.html"
+  },
+  "reviewSources": [
+    {
+      "platform": "Tripadvisor",
+      "url": "https://example.com/reviews",
+      "reviewsAnalyzed": 50
+    }
+  ],
+  "summary": {
+    "topBookingMotivations": [
+      "Adventure close to Agadir",
+      "Fun group activity",
+      "Easy half-day format"
+    ],
+    "topObjections": [
+      "Unsure about safety",
+      "Unsure if beginners can join",
+      "Confusion around pickup and timing"
+    ],
+    "topPraiseThemes": [
+      "Friendly guides",
+      "Good value",
+      "Scenic route"
+    ],
+    "topComplaints": [
+      "Waiting time",
+      "Dust or clothing prep not explained"
+    ]
+  },
+  "languagePatterns": {
+    "emotionWords": [
+      "fun",
+      "easy",
+      "safe",
+      "worth it"
+    ],
+    "outcomePhrases": [
+      "great for beginners",
+      "pickup was smooth",
+      "views were amazing"
+    ],
+    "trustSignalsCustomersMention": [
+      "guide professionalism",
+      "hotel pickup",
+      "clear instructions"
+    ]
+  },
+  "faqOpportunities": [
+    "Is quad biking in Agadir suitable for beginners?",
+    "What should I wear for quad biking?",
+    "Is hotel pickup included?",
+    "How long is the experience from pickup to drop-off?"
+  ],
+  "copyRecommendations": {
+    "heroCopyNeeds": [
+      "Mention beginner-friendly suitability",
+      "Mention pickup and duration earlier"
+    ],
+    "trustBlockNeeds": [
+      "Safety reassurance",
+      "Guide credibility",
+      "What to expect before arrival"
+    ],
+    "ctaNeeds": [
+      "Reassure around quick booking and local coordination"
+    ],
+    "blogSupportIdeas": [
+      "What to wear for quad biking in Agadir",
+      "Quad biking vs camel ride in Agadir",
+      "Best Agadir adventure tours for first-time visitors"
+    ]
+  },
+  "notes": [
+    "Only include themes clearly supported by multiple reviews.",
+    "Do not convert weak anecdotal points into page-wide claims."
+  ]
+}

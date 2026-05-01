@@ -1,0 +1,60 @@
+{
+  "schemaVersion": "1.0",
+  "auditType": "query-intent-opportunities",
+  "target": {
+    "pageUrl": "/blog/paradise-valley-agadir-guide.html",
+    "pageType": "blog"
+  },
+  "sourceWindow": {
+    "source": "Google Search Console",
+    "dateRange": "last-28-days"
+  },
+  "topQueries": [
+    {
+      "query": "paradise valley agadir",
+      "clicks": 120,
+      "impressions": 3200,
+      "ctr": 0.0375,
+      "position": 6.4
+    }
+  ],
+  "clusters": [
+    {
+      "clusterName": "Core destination query",
+      "intent": "mixed informational and commercial assist",
+      "queries": [
+        "paradise valley agadir",
+        "paradise valley from agadir"
+      ],
+      "recommendedTreatment": "Keep informational lead but support booking intent with practical sections and internal links."
+    }
+  ],
+  "pageAssessment": {
+    "currentIntentFit": "good",
+    "titleMetaFit": "partial",
+    "introFit": "partial",
+    "faqCoverage": "weak",
+    "commercialAssist": "needs-improvement"
+  },
+  "opportunities": [
+    {
+      "priority": "high",
+      "type": "ctr",
+      "recommendation": "Rewrite title and meta to match the strongest query cluster more directly."
+    },
+    {
+      "priority": "high",
+      "type": "faq",
+      "recommendation": "Add questions about distance, timing, swimming conditions, and guide vs self-drive."
+    },
+    {
+      "priority": "medium",
+      "type": "internal-link",
+      "recommendation": "Strengthen links to the Paradise Valley tour page at decision moments."
+    }
+  ],
+  "recommendedNextArtifact": {
+    "artifactType": "page-refresh-brief",
+    "targetFile": "seo-cockpit/briefs/page-refresh-brief.template.md"
+  }
+}

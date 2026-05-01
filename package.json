@@ -12,11 +12,13 @@
     "setup:python": "uv venv --python 3.12 .venv && uv pip install -r requirements.txt",
     "screenshot": "node scripts/scroll_and_screenshot.js",
     "gsc:start": "npm start --prefix gsc-connector",
-    "gsc:cli": "npm run cli --prefix gsc-connector",
+    "gsc:cli": "npm run cli --prefix gsc-connector --",
     "gsc:cli:md": "npm run cli --prefix gsc-connector -- --format md",
     "gsc:cli:json": "npm run cli --prefix gsc-connector -- --format json",
     "gsc:inspect": "npm run cli --prefix gsc-connector -- inspect",
-    "gsc:submit-sitemap": "npm run cli --prefix gsc-connector -- submit-sitemap"
+    "gsc:submit-sitemap": "npm run cli --prefix gsc-connector -- submit-sitemap",
+    "indexnow:submit": "node scripts/submit-indexnow.js",
+    "indexnow:submit:all": "node scripts/submit-indexnow.js --sitemap"
   },
   "keywords": [
     "agadir",

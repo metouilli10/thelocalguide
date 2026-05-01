@@ -1,0 +1,28 @@
+priority,cluster,language,keyword,search_volume,intent,competition_level,current_status,existing_url,recommended_action,notes
+P1,Paradise Valley,en,paradise valley agadir,1900,commercial,LOW,existing_weak_visibility,/blog/paradise-valley-agadir-guide.html,refresh_and_reposition,Turn into definitive local guide and route booking intent to the Paradise Valley tour page
+P1,Agadir Day Trips,en,agadir day trips,880,commercial,MEDIUM,existing_weak_visibility,/blog/agadir-day-trips.html,rebuild_as_money_hub,Add pricing snippets trip cards trust signals and direct links to core excursion pages
+P1,Marrakech From Agadir,en,agadir to marrakech day trip,260,commercial,MEDIUM,existing_weak_visibility,/tours/day-trip-marrakech-from-agadir-new.html,refresh_money_page,Strengthen itinerary price and FAQ coverage around bus train taxi and distance comparisons
+P1,Hammam,en,hammam agadir,320,transactional,LOW,underweighted_existing_page,/tours/tour-moroccan-hammam-agadir.html,upgrade_to_core_money_page,The original research pack underestimated this cluster
+P1,Boat Trip,en,agadir boat trip,260,commercial,MEDIUM,underweighted_existing_page,/tours/tour-agadir-half-day-boat-trip.html,upgrade_to_core_money_page,Commercial demand is stronger than the old master suggested
+P1,Jet Ski,en,jet ski agadir,260,transactional,MEDIUM,underweighted_existing_page,/tours/tour-jet-ski-agadir-new.html,upgrade_to_core_money_page,Strong seasonal activity demand
+P1,Quad,en,quad biking agadir,320,transactional,MEDIUM,existing_mid_visibility,/tours/tour-agadir-half-quad-biking-adventure.html,refresh_and_consolidate,Support with stronger internal links from the quad biking guide blog post
+P1,Camel Ride,en,camel ride agadir,170,transactional,MEDIUM,existing_split_intent,/tours/tour-agadir-sunset-camel-ride.html,clarify_primary_intent,Consolidate supporting intent across sunset and morning camel pages
+P1,Horse Riding,en,horse riding agadir,170,transactional,MEDIUM,existing_mid_visibility,/tours/tour-horse-riding-agadir.html,refresh_money_page,Already ranking but still outside strong conversion positions
+P2,Agadir City Tour,en,agadir city tour,30,commercial,MEDIUM,existing_underweighted_page,/tours/tour-agadir-guided-city-tour-cable-car.html,retarget_page,Pair city tour intent with cable car modifiers and itinerary detail
+P2,Surf Lessons,en,surf lessons agadir,50,commercial,MEDIUM,existing_underweighted_page,/tours/tour-surf-lessons-agadir.html,refresh_money_page,Useful niche product page with clear fit
+P2,Cooking Class,en,agadir cooking class,20,commercial,MEDIUM,existing_underweighted_page,/tours/tour-cooking-class-agadir.html,refresh_money_page,Low volume but very specific and ownable
+P2,Souss Massa,en,souss massa national park,720,informational,LOW,existing_mid_visibility,/tours/tour-souss-massa-park-agadir.html,hybridize_page,Blend guide intent with clear tour conversion blocks
+P2,Taroudant,en,taroudant day trip from agadir,10,commercial,MEDIUM,existing_low_signal_page,/tours/day-trip-taroudant-from-agadir-new.html,refresh_if_capacity_allows,Qualified demand but smaller than other day-trip clusters
+P1,Hammam,fr,hammam agadir,4400,commercial,MEDIUM,underweighted_existing_page,/tours/tour-moroccan-hammam-agadir.html,create_french_keyword_layer,One of the strongest missed clusters in the original research
+P1,Quad,fr,quad agadir,2400,commercial,MEDIUM,underweighted_existing_page,/tours/tour-agadir-half-quad-biking-adventure.html,create_french_keyword_layer,High-demand French activity term
+P1,Souss Massa,fr,parc national souss massa,2400,commercial,LOW,underweighted_existing_page,/tours/tour-souss-massa-park-agadir.html,create_french_keyword_layer,Excellent match to an existing tour
+P1,Jet Ski,fr,jet ski agadir,1600,commercial,MEDIUM,underweighted_existing_page,/tours/tour-jet-ski-agadir-new.html,create_french_keyword_layer,Stronger French demand than expected
+P1,Cable Car,fr,téléphérique agadir,1300,commercial,LOW,existing_underweighted_page,/tours/tour-agadir-guided-city-tour-cable-car.html,retarget_page,Competitors are actively using this term to capture city-tour demand
+P1,French Hub,fr,visite agadir,720,commercial,MEDIUM,missing_dedicated_hub,/travel-guide.html,build_or_retarget_french_hub,KD is low and the term can route into multiple activities
+P1,Buggy,fr,buggy agadir,720,commercial,MEDIUM,underweighted_existing_page,/tours/tour-buggy-adventure-agadir.html,create_french_keyword_layer,Valid French activity demand
+P1,Surf,fr,surf agadir,720,commercial,MEDIUM,underweighted_existing_page,/tours/tour-surf-lessons-agadir.html,create_french_keyword_layer,Broad but commercially aligned when anchored to lessons
+P2,Boat Trip,fr,excursion bateau agadir,90,commercial,MEDIUM,underweighted_existing_page,/tours/tour-agadir-half-day-boat-trip.html,create_french_keyword_layer,Qualified booking term
+P2,Boat Trip,fr,balade bateau agadir,70,commercial,MEDIUM,underweighted_existing_page,/tours/tour-agadir-half-day-boat-trip.html,add_secondary_target,Strong seasonal variant
+P2,Camel Ride,fr,balade chameau agadir,70,commercial,HIGH,underweighted_existing_page,/tours/tour-agadir-sunset-camel-ride.html,create_french_keyword_layer,Useful commercial modifier
+P2,Surf Lessons,fr,cours de surf agadir,50,commercial,MEDIUM,underweighted_existing_page,/tours/tour-surf-lessons-agadir.html,add_secondary_target,Good fit for a French product layer
+P2,Cooking Class,fr,cours de cuisine agadir,30,commercial,MEDIUM,underweighted_existing_page,/tours/tour-cooking-class-agadir.html,add_secondary_target,Small but precise commercial demand

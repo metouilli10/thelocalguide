@@ -206,6 +206,9 @@ Useful local commands:
 - `npm run serve` starts a simple static server on port 3000
 - `npm run setup:python` creates `.venv` and installs `requirements.txt`
 - `npm run screenshot` runs the local Puppeteer screenshot helper against the local dev server
+- `npm run gsc:submit-sitemap` submits `sitemap.xml` to Google Search Console
+- `npm run indexnow:submit:all` submits every URL in `sitemap.xml` to IndexNow
+- `npm run indexnow:submit -- /blog/agadir-day-trips.html` submits specific changed URLs to IndexNow
 
 ## Credits
 

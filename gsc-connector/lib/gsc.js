@@ -33,10 +33,16 @@ if (missing.length) {
 
 const SCOPES = ["https://www.googleapis.com/auth/webmasters"];
 
-function getDateNDaysAgo(n) {
-  const d = new Date();
-  d.setDate(d.getDate() - n);
-  return d.toISOString().slice(0, 10);
+/** Inclusive range ending yesterday (GSC data lag). Default 28 matches historical connector behavior. */
+function getPerformanceDateRange(lookbackDays = 28) {
+  const end = new Date();
+  end.setDate(end.getDate() - 1);
+  const start = new Date();
+  start.setDate(start.getDate() - lookbackDays);
+  return {
+    startDate: start.toISOString().slice(0, 10),
+    endDate: end.toISOString().slice(0, 10),
+  };
 }
 
 function loadSavedTokens() {
@@ -95,7 +101,8 @@ function buildSearchConsoleClient(tokens) {
   });
 }
 
-async function fetchSearchConsoleSnapshot(searchconsole) {
+async function fetchSearchConsoleSnapshot(searchconsole, options = {}) {
+  const lookbackDays = Number(options.lookbackDays) > 0 ? Number(options.lookbackDays) : 28;
   const sitesResponse = await searchconsole.sites.list();
   const sites = sitesResponse.data.siteEntry || [];
 
@@ -115,8 +122,7 @@ async function fetchSearchConsoleSnapshot(searchconsole) {
     };
   }
 
-  const startDate = getDateNDaysAgo(28);
-  const endDate = getDateNDaysAgo(1);
+  const { startDate, endDate } = getPerformanceDateRange(lookbackDays);
 
   const [topQueriesRes, topPagesRes, lowCtrPagesRes] = await Promise.all([
     searchconsole.searchanalytics.query({
@@ -267,6 +273,7 @@ module.exports = {
   createOAuthClient,
   fetchSearchConsoleSnapshot,
   getDefaultSitemapUrl,
+  getPerformanceDateRange,
   getAuthorizedSearchConsoleClient,
   GSC_SITE_URL,
   inspectUrl,

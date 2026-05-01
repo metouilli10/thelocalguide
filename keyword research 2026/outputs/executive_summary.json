@@ -1,0 +1,242 @@
+{
+  "generated_at": "2026-04-12",
+  "source_of_truth": "keyword research 2026/outputs/KEYWORD_RESEARCH_REPORT.md",
+  "methodology": {
+    "baseline_dataset": "Existing merge/filter/build pipeline in keyword research 2026",
+    "fresh_validation": [
+      "dataforseo_labs_google_keyword_overview",
+      "dataforseo_labs_bulk_keyword_difficulty",
+      "dataforseo_labs_google_ranked_keywords",
+      "dataforseo_labs_google_competitors_domain",
+      "dataforseo_labs_google_domain_intersection",
+      "firecrawl_search",
+      "firecrawl_scrape"
+    ],
+    "en_volume_location": "United Kingdom, English",
+    "fr_volume_location": "Morocco, French",
+    "notes": [
+      "English demand is best treated as UK outbound demand for Agadir travel.",
+      "Many commercial product phrases return no DataForSEO KD, so fit and current SERP quality matter more than KD alone.",
+      "French validation surfaced several important clusters that the original research pack underweighted."
+    ]
+  },
+  "core_thesis": [
+    "The site has topic recognition but most valuable English rankings still sit in weak or mid SERP positions.",
+    "The largest near-term gains come from refreshing commercial pages and hubs, not publishing random informational content.",
+    "French commercial demand is materially stronger than the first-pass pack suggested for hammam, quad, jet ski, Souss Massa, telepherique, and city-visit terms.",
+    "Winning local and OTA pages consistently show pricing, itinerary detail, pickup messaging, reviews, and bundle or cross-sell logic."
+  ],
+  "current_visibility_snapshot": {
+    "en_examples": [
+      {
+        "keyword": "quad bike agadir",
+        "search_volume": 320,
+        "rank_group": 31,
+        "url": "/blog/quad-biking-agadir-guide.html"
+      },
+      {
+        "keyword": "horse riding in agadir",
+        "search_volume": 170,
+        "rank_group": 23,
+        "url": "/tours/tour-horse-riding-agadir.html"
+      },
+      {
+        "keyword": "agadir day trips",
+        "search_volume": 880,
+        "rank_group": 62,
+        "url": "/blog/agadir-day-trips.html"
+      },
+      {
+        "keyword": "agadir to marrakech day trip",
+        "search_volume": 260,
+        "rank_group": 59,
+        "url": "/tours/day-trip-marrakech-from-agadir-new.html"
+      },
+      {
+        "keyword": "agadir morocco paradise valley",
+        "search_volume": 1900,
+        "rank_group": 58,
+        "url": "/blog/paradise-valley-agadir-guide.html"
+      }
+    ]
+  },
+  "priority_page_actions": [
+    {
+      "page": "/blog/agadir-day-trips.html",
+      "role": "commercial_hub",
+      "why_now": "High-value day-trip intent is present but the page ranks weakly and OTAs dominate the space."
+    },
+    {
+      "page": "/blog/paradise-valley-agadir-guide.html",
+      "role": "hybrid_guide_plus_conversion",
+      "why_now": "The topic is a core commercial cluster and needs stronger entity and logistics coverage."
+    },
+    {
+      "page": "/tours/day-trip-marrakech-from-agadir-new.html",
+      "role": "money_page",
+      "why_now": "Clear commercial intent with meaningful demand and room to improve conversion structure."
+    },
+    {
+      "page": "/tours/tour-moroccan-hammam-agadir.html",
+      "role": "money_page",
+      "why_now": "Validated demand is much stronger than the original research pack suggested, especially in French."
+    },
+    {
+      "page": "/tours/tour-agadir-half-day-boat-trip.html",
+      "role": "money_page",
+      "why_now": "Commercial demand is real in both English and French and should be treated as a core sellable activity."
+    },
+    {
+      "page": "/tours/tour-jet-ski-agadir-new.html",
+      "role": "money_page",
+      "why_now": "High-fit activity with strong French demand and useful English seasonal demand."
+    },
+    {
+      "page": "/tours/tour-agadir-guided-city-tour-cable-car.html",
+      "role": "money_page",
+      "why_now": "Competitors are already capturing cable car and telepherique demand."
+    },
+    {
+      "page": "/tours/tour-souss-massa-park-agadir.html",
+      "role": "hybrid_money_page",
+      "why_now": "The site has an exact-fit product for a stronger-than-expected French and English cluster."
+    }
+  ],
+  "validated_product_terms": {
+    "en": [
+      {
+        "keyword": "hammam agadir",
+        "search_volume": 320,
+        "intent": "transactional",
+        "competition_level": "LOW",
+        "recommended_url": "/tours/tour-moroccan-hammam-agadir.html"
+      },
+      {
+        "keyword": "agadir boat trip",
+        "search_volume": 260,
+        "intent": "commercial",
+        "competition_level": "MEDIUM",
+        "recommended_url": "/tours/tour-agadir-half-day-boat-trip.html"
+      },
+      {
+        "keyword": "jet ski agadir",
+        "search_volume": 260,
+        "intent": "transactional",
+        "competition_level": "MEDIUM",
+        "recommended_url": "/tours/tour-jet-ski-agadir-new.html"
+      },
+      {
+        "keyword": "quad biking agadir",
+        "search_volume": 320,
+        "intent": "transactional",
+        "competition_level": "MEDIUM",
+        "recommended_url": "/tours/tour-agadir-half-quad-biking-adventure.html"
+      },
+      {
+        "keyword": "camel ride agadir",
+        "search_volume": 170,
+        "intent": "transactional",
+        "competition_level": "MEDIUM",
+        "recommended_url": "/tours/tour-agadir-sunset-camel-ride.html"
+      },
+      {
+        "keyword": "horse riding agadir",
+        "search_volume": 170,
+        "intent": "transactional",
+        "competition_level": "MEDIUM",
+        "recommended_url": "/tours/tour-horse-riding-agadir.html"
+      },
+      {
+        "keyword": "souss massa national park",
+        "search_volume": 720,
+        "intent": "informational",
+        "competition_level": "LOW",
+        "recommended_url": "/tours/tour-souss-massa-park-agadir.html"
+      }
+    ],
+    "fr": [
+      {
+        "keyword": "hammam agadir",
+        "search_volume": 4400,
+        "intent": "commercial",
+        "competition_level": "MEDIUM",
+        "recommended_url": "/tours/tour-moroccan-hammam-agadir.html"
+      },
+      {
+        "keyword": "quad agadir",
+        "search_volume": 2400,
+        "intent": "commercial",
+        "competition_level": "MEDIUM",
+        "recommended_url": "/tours/tour-agadir-half-quad-biking-adventure.html"
+      },
+      {
+        "keyword": "parc national souss massa",
+        "search_volume": 2400,
+        "intent": "commercial",
+        "competition_level": "LOW",
+        "recommended_url": "/tours/tour-souss-massa-park-agadir.html"
+      },
+      {
+        "keyword": "jet ski agadir",
+        "search_volume": 1600,
+        "intent": "commercial",
+        "competition_level": "MEDIUM",
+        "recommended_url": "/tours/tour-jet-ski-agadir-new.html"
+      },
+      {
+        "keyword": "téléphérique agadir",
+        "search_volume": 1300,
+        "intent": "commercial",
+        "competition_level": "LOW",
+        "recommended_url": "/tours/tour-agadir-guided-city-tour-cable-car.html"
+      },
+      {
+        "keyword": "visite agadir",
+        "search_volume": 720,
+        "intent": "commercial",
+        "competition_level": "MEDIUM",
+        "keyword_difficulty": 2,
+        "recommended_url": "/travel-guide.html"
+      }
+    ]
+  },
+  "competitor_signals": {
+    "uk_en_overlap_domains": [
+      "tripadvisor.co.uk",
+      "getyourguide.com",
+      "viator.com",
+      "tripadvisor.com",
+      "tui.co.uk",
+      "admiremorocco.com",
+      "agadir-visite.com",
+      "excursionmania.com"
+    ],
+    "local_operator_gap_examples": [
+      {
+        "domain": "admiremorocco.com",
+        "keyword": "agadir cable car",
+        "search_volume": 590,
+        "note": "Competitor uses a dedicated product page with pricing, itinerary details, and pickup messaging."
+      },
+      {
+        "domain": "admiremorocco.com",
+        "keyword": "things to do in agadir",
+        "search_volume": 8100,
+        "note": "Competitor uses a multi-product hub with bundles and cross-sells."
+      },
+      {
+        "domain": "agadir-visite.com",
+        "keyword": "agadir old town",
+        "search_volume": 720,
+        "note": "Broader destination coverage helps support local commercial visibility."
+      }
+    ]
+  },
+  "counts": {
+    "baseline_master_rows": 163,
+    "baseline_long_tail_5plus_words": 73,
+    "priority_page_actions": 8,
+    "validated_en_terms": 7,
+    "validated_fr_terms": 6
+  }
+}

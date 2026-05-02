@@ -990,30 +990,6 @@
             }
         }
 
-        .hero__contextual-links {
-            font-size: clamp(0.9rem, 1.5vw, 1.05rem);
-            margin-bottom: 22px;
-            margin-top: -8px;
-            line-height: 1.65;
-            max-width: 42rem;
-            color: rgba(255, 255, 255, 0.95);
-            text-shadow: 0 1px 12px rgba(0, 0, 0, 0.35);
-            opacity: 0;
-            transform: translateY(16px);
-            animation: fadeUp 0.8s ease-out 0.34s forwards;
-        }
-
-        .hero__contextual-links a {
-            color: #FFF4B8;
-            text-decoration: underline;
-            text-underline-offset: 3px;
-            font-weight: 600;
-        }
-
-        .hero__contextual-links a:hover {
-            color: #FFD400;
-        }
-
         .hero__subtitle {
             font-size: clamp(1rem, 2vw, 1.25rem);
             margin-bottom: 28px;
@@ -3997,12 +3973,6 @@
                 Award-winning tours from Paradise Valley to the Sahara. Small groups, expert guides, authentic experiences.
                 <strong>Free cancellation • Best price guarantee</strong>
             </p>
-            <p class="hero__contextual-links">
-                Book a <a href="tours/tour-paradise-valley-agadir-new.html">Paradise Valley day trip from Agadir</a>,
-                explore <a href="tours/tour-souss-massa-park-agadir.html">Souss-Massa National Park with a local guide</a>,
-                or see the city on an <a href="tours/tour-agadir-guided-city-tour-cable-car.html">Agadir city tour with cable car</a>.
-                <a href="all-tours.html">Compare every tour and price in one place</a>.
-            </p>
             <div class="hero__cta">
                 <a href="all-tours.html" class="btn-primary-large">View All Tours</a>
                 <a href="https://wa.me/212700006462" class="btn-secondary-large" target="_blank">
@@ -4083,21 +4053,6 @@
                 </div>
                 </div>
             </div>
-    </section>
-
-    <!-- PILLAR TRAVEL GUIDES (internal discovery) -->
-    <section class="trip-cards-section" id="travel-guides" style="padding-top: 48px; padding-bottom: 24px;">
-        <div class="trip-cards-section__wrapper">
-            <div class="trip-cards-section__header">
-                <h2 class="trip-cards-section__title">Free Agadir travel guides</h2>
-                <p class="trip-cards-section__subtitle">Plan with our most-read articles—then book small-group tours with <a href="all-tours.html">hotel pickup and clear prices</a>.</p>
-            </div>
-            <div style="display: flex; flex-wrap: wrap; gap: 12px; justify-content: center; max-width: 960px; margin: 0 auto 8px;">
-                <a href="blog/top-10-things-to-do-agadir-2026.html" style="display: inline-block; padding: 12px 18px; border-radius: 10px; border: 2px solid var(--primary-500); color: var(--primary-700); font-weight: 600; text-decoration: none;">Top things to do in Agadir 2026</a>
-                <a href="blog/paradise-valley-agadir-guide.html" style="display: inline-block; padding: 12px 18px; border-radius: 10px; border: 2px solid var(--primary-500); color: var(--primary-700); font-weight: 600; text-decoration: none;">Paradise Valley planning guide</a>
-                <a href="blog/agadir-cruise-excursions.html" style="display: inline-block; padding: 12px 18px; border-radius: 10px; border: 2px solid var(--primary-500); color: var(--primary-700); font-weight: 600; text-decoration: none;">Cruise port excursions</a>
-            </div>
-        </div>
     </section>
 
     <!-- POPULAR TOURS SECTION -->
@@ -4412,7 +4367,7 @@
                             <div class="trip-card__footer">
                                 <div class="trip-card__price-wrapper">
                                     <p class="trip-card__price-label">From</p>
-                                    <p class="trip-card__price">€45</p>
+                                    <p class="trip-card__price">€30</p>
                             </div>
                                 <div class="trip-card__cta">
                                     <button class="trip-card__btn">View Details</button>
@@ -4663,6 +4618,21 @@
                 </div>
             </div>
         </section>
+
+    <!-- PILLAR TRAVEL GUIDES (internal discovery) -->
+    <section class="trip-cards-section" id="travel-guides" style="padding-top: 48px; padding-bottom: 24px;">
+        <div class="trip-cards-section__wrapper">
+            <div class="trip-cards-section__header">
+                <h2 class="trip-cards-section__title">Free Agadir travel guides</h2>
+                <p class="trip-cards-section__subtitle">Plan with our most-read articles—then book small-group tours with <a href="all-tours.html">hotel pickup and clear prices</a>.</p>
+            </div>
+            <div style="display: flex; flex-wrap: wrap; gap: 12px; justify-content: center; max-width: 960px; margin: 0 auto 8px;">
+                <a href="blog/top-10-things-to-do-agadir-2026.html" style="display: inline-block; padding: 12px 18px; border-radius: 10px; border: 2px solid var(--primary-500); color: var(--primary-700); font-weight: 600; text-decoration: none;">Top things to do in Agadir 2026</a>
+                <a href="blog/paradise-valley-agadir-guide.html" style="display: inline-block; padding: 12px 18px; border-radius: 10px; border: 2px solid var(--primary-500); color: var(--primary-700); font-weight: 600; text-decoration: none;">Paradise Valley planning guide</a>
+                <a href="blog/agadir-cruise-excursions.html" style="display: inline-block; padding: 12px 18px; border-radius: 10px; border: 2px solid var(--primary-500); color: var(--primary-700); font-weight: 600; text-decoration: none;">Cruise port excursions</a>
+            </div>
+        </div>
+    </section>
 
     <!-- BLOG SECTION -->
     <section class="blog-section">
@@ -5411,5 +5381,7 @@
             scrollObserver.observe(card);
         });
     </script>
+    <script src="js/tour-data.js"></script>
+    <script src="js/tour-prices.js"></script>
 </body>
 </html>

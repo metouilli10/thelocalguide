@@ -5,7 +5,7 @@
       "tours": [
         {
           "name": "Quad Biking Tour",
-          "priceFrom": 25,
+          "priceFrom": 30,
           "currency": "EUR",
           "duration": "3 hours",
           "difficulty": "Moderate",
@@ -46,7 +46,7 @@
       "tours": [
         {
           "name": "Paradise Valley Trip",
-          "priceFrom": 20,
+          "priceFrom": 15,
           "currency": "EUR",
           "duration": "5 hours",
           "difficulty": "Easy",

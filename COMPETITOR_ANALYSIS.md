@@ -184,7 +184,7 @@ Based on competitor analysis:
 | Tour Type | Competitor Range | Your Sweet Spot | Value Add |
 |-----------|-----------------|-----------------|-----------|
 | Paradise Valley | €15-25 | €18 | Include snacks free |
-| Quad Biking 2hr | €35-65 | €40 | Include photos free |
+| Quad Biking 2hr | €35-65 | €30 | Include photos free |
 | Marrakech Day Trip | €35-50 | €40 | Include lunch |
 | Camel Ride | €15-20 | €17 | Include Berber tea |
 | Desert Safari | €50-80 | €55 | All-inclusive |
@@ -380,5 +380,4 @@ Get links competitors don't have:
 
 *Report generated: December 2024*  
 *Next review: March 2025*
-
 

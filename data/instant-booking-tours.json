@@ -1,0 +1,82 @@
+[
+  {
+    "slug": "paradise-valley",
+    "name": "Paradise Valley Tour",
+    "pagePath": "/tours/tour-paradise-valley-agadir-new.html",
+    "price": 15,
+    "currency": "eur",
+    "duration": "4-5 hours",
+    "pickup": "Hotel pickup included",
+    "tagline": "Natural pools, mountain views, and an easy half-day format."
+  },
+  {
+    "slug": "quad-biking",
+    "name": "Half Day Quad Biking Adventure",
+    "pagePath": "/tours/tour-agadir-half-quad-biking-adventure.html",
+    "price": 30,
+    "currency": "eur",
+    "duration": "3 hours",
+    "pickup": "Hotel pickup included",
+    "tagline": "A reliable fixed-price off-road session with pickup included."
+  },
+  {
+    "slug": "surf-lessons",
+    "name": "Surf Lesson in Taghazout",
+    "pagePath": "/tours/tour-surf-lessons-agadir.html",
+    "price": 45,
+    "currency": "eur",
+    "duration": "2 hours",
+    "pickup": "Free hotel pickup",
+    "tagline": "Beginner-friendly surf lesson with gear, instructor, and transport."
+  },
+  {
+    "slug": "morning-camel-ride",
+    "name": "Morning Camel Ride",
+    "pagePath": "/tours/tour-morning-camel-ride-agadir.html",
+    "price": 30,
+    "currency": "eur",
+    "duration": "2 hours",
+    "pickup": "Hotel pickup included",
+    "tagline": "Simple fixed-price morning ride with easy logistics."
+  },
+  {
+    "slug": "sunset-camel-ride",
+    "name": "Sunset Camel Ride in Agadir",
+    "pagePath": "/tours/tour-agadir-sunset-camel-ride.html",
+    "price": 40,
+    "currency": "eur",
+    "duration": "2 hours",
+    "pickup": "Hotel pickup included",
+    "tagline": "Popular sunset slot with a clear per-person price."
+  },
+  {
+    "slug": "cooking-class",
+    "name": "Cooking Class in Agadir",
+    "pagePath": "/tours/tour-cooking-class-agadir.html",
+    "price": 50,
+    "currency": "eur",
+    "duration": "Half day",
+    "pickup": "Venue details sent after booking",
+    "tagline": "Hands-on cooking class with a straightforward full-payment booking."
+  },
+  {
+    "slug": "city-tour-cable-car",
+    "name": "Agadir Guided City Tour with Cable Car",
+    "pagePath": "/tours/tour-agadir-guided-city-tour-cable-car.html",
+    "price": 25,
+    "currency": "eur",
+    "duration": "Half day",
+    "pickup": "Hotel pickup included",
+    "tagline": "Low-friction city tour that fits instant booking well."
+  },
+  {
+    "slug": "half-day-boat-trip",
+    "name": "Agadir Half Day Boat Trip",
+    "pagePath": "/tours/tour-agadir-half-day-boat-trip.html",
+    "price": 48,
+    "currency": "eur",
+    "duration": "Half day",
+    "pickup": "Marina meeting point",
+    "tagline": "Fixed-price boat trip with simple availability handling."
+  }
+]

@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Instant Booking | Agadir Local Guide</title>
+  <meta name="description" content="Book fixed-price Agadir tours online and pay securely with Stripe.">
+  <link rel="stylesheet" href="css/instant-booking.css">
+</head>
+<body class="booking-body">
+  <main class="booking-shell">
+    <a class="booking-back" href="/all-tours.html">← Back to tours</a>
+    <section class="booking-layout">
+      <div class="booking-panel">
+        <span class="booking-eyebrow">Instant Booking</span>
+        <h1 data-tour-name>Loading tour...</h1>
+        <p data-tour-tagline>Secure your place now. We will confirm pickup details by WhatsApp or email after payment.</p>
+
+        <form class="booking-form" data-booking-form>
+          <div class="booking-grid">
+            <div class="booking-field">
+              <label for="booking-date">Tour date</label>
+              <input id="booking-date" name="booking-date" type="date" required>
+            </div>
+            <div class="booking-field">
+              <label for="travelers">Number of travelers</label>
+              <input id="travelers" name="travelers" type="number" min="1" max="12" value="2" required>
+            </div>
+            <div class="booking-field">
+              <label for="customer-name">Full name</label>
+              <input id="customer-name" name="customer-name" type="text" autocomplete="name" required>
+            </div>
+            <div class="booking-field">
+              <label for="customer-email">Email address</label>
+              <input id="customer-email" name="customer-email" type="email" autocomplete="email" required>
+            </div>
+            <div class="booking-field">
+              <label for="customer-phone">WhatsApp or phone</label>
+              <input id="customer-phone" name="customer-phone" type="tel" autocomplete="tel" required>
+            </div>
+            <div class="booking-field">
+              <label for="hotel-name">Hotel or accommodation</label>
+              <input id="hotel-name" name="hotel-name" type="text" autocomplete="address-line1" placeholder="Optional, but helpful for pickup">
+            </div>
+            <div class="booking-field booking-field--full">
+              <label for="booking-notes">Notes</label>
+              <textarea id="booking-notes" name="booking-notes" placeholder="Optional: children, pickup area, special requests, or anything we should know"></textarea>
+            </div>
+          </div>
+
+          <button class="booking-submit" data-booking-submit type="submit">Pay securely with Stripe</button>
+          <div class="booking-error" data-booking-error></div>
+          <p class="booking-help">By paying, you are requesting this specific date and traveler count. We keep the tour live only for simple fixed-price excursions with reliable availability.</p>
+        </form>
+      </div>
+
+      <aside class="booking-summary">
+        <h2>Your booking summary</h2>
+        <div class="booking-price-card">
+          <div class="booking-price-label">Price per person</div>
+          <div class="booking-price-amount" data-tour-price>€0.00</div>
+        </div>
+
+        <div class="booking-summary-list">
+          <div class="booking-summary-item">
+            <span class="booking-summary-label">Tour</span>
+            <span class="booking-summary-value" data-tour-name>Loading...</span>
+          </div>
+          <div class="booking-summary-item">
+            <span class="booking-summary-label">Duration</span>
+            <span class="booking-summary-value" data-tour-duration>-</span>
+          </div>
+          <div class="booking-summary-item">
+            <span class="booking-summary-label">Pickup</span>
+            <span class="booking-summary-value" data-tour-pickup>-</span>
+          </div>
+          <div class="booking-summary-item">
+            <span class="booking-summary-label">Estimated total</span>
+            <span class="booking-summary-value" data-total>€0.00</span>
+          </div>
+        </div>
+
+        <a class="booking-secondary-link" data-tour-link href="/all-tours.html">Review tour page</a>
+        <a class="booking-secondary-link" data-whatsapp-fallback href="https://wa.me/212700006462" target="_blank" rel="noopener">Need help first? Chat on WhatsApp</a>
+      </aside>
+    </section>
+  </main>
+
+  <script src="js/tour-data.js"></script>
+  <script src="js/instant-booking.js"></script>
+</body>
+</html>

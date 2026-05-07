@@ -18,7 +18,8 @@
     "gsc:inspect": "npm run cli --prefix gsc-connector -- inspect",
     "gsc:submit-sitemap": "npm run cli --prefix gsc-connector -- submit-sitemap",
     "indexnow:submit": "node scripts/submit-indexnow.js",
-    "indexnow:submit:all": "node scripts/submit-indexnow.js --sitemap"
+    "indexnow:submit:all": "node scripts/submit-indexnow.js --sitemap",
+    "sync:tour-prices": "node scripts/sync-tour-prices.js"
   },
   "keywords": [
     "agadir",
@@ -32,5 +33,8 @@
     "browser-sync": "^3.0.4",
     "http-server": "^14.1.1",
     "puppeteer": "^24.30.0"
+  },
+  "dependencies": {
+    "stripe": "^18.5.0"
   }
 }

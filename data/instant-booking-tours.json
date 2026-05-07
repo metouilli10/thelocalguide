@@ -11,13 +11,13 @@
   },
   {
     "slug": "quad-biking",
-    "name": "Half Day Quad Biking Adventure",
+    "name": "Agadir Quad Biking Tour",
     "pagePath": "/tours/tour-agadir-half-quad-biking-adventure.html",
-    "price": 30,
+    "price": 40,
     "currency": "eur",
     "duration": "3 hours",
     "pickup": "Hotel pickup included",
-    "tagline": "A reliable fixed-price off-road session with pickup included."
+    "tagline": "Half-day desert quad biking adventure with hotel pickup from Agadir."
   },
   {
     "slug": "surf-lessons",

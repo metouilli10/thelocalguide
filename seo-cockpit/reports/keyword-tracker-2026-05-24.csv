@@ -1,0 +1,20 @@
+priority,keyword_cluster,best_target_url,gsc_clicks_28d,gsc_impressions_28d,gsc_ctr,current_position,position_source,status,next_action,wave
+P0,agadir to marrakech transport,/blog/agadir-to-marrakech-train-bus-day-tour.html,18,5001,0.36%,9.6,GSC May 2026,refreshed_2026-05-24,"Shipped: quick-answer table, FAQ schema, title/meta, day-trip CTA. Re-measure 2026-06-21.",1
+P0,agadir vs marrakech,/blog/agadir-vs-marrakech-2026.html,19,3755,0.51%,7.8,GSC May 2026,refreshed_2026-05-24,"Shipped: decision table above fold, title/meta, transport links. Re-measure 2026-06-21.",1
+P1,best time to visit agadir,/blog/best-time-visit-agadir-2026.html,6,2586,0.23%,6.4,GSC May 2026,refreshed_2026-05-24,"Shipped: °C/°F table, worth-visiting H2, title/meta. Re-measure 2026-06-21.",2
+P1,things to do in agadir,/blog/top-10-things-to-do-agadir-2026.html,0,642,0%,7.6,GSC May 2026,refreshed_2026-05-24,"Shipped: numbered table, ItemList schema, title/meta. Re-measure 2026-06-21.",2
+P1,wave 4 active,,,,,,,in_progress,"Current sprint: day-trips hub rebuild",4
+P1,paradise valley agadir,/blog/paradise-valley-agadir-guide.html,12,2497,0.48%,8.6,GSC May 2026,refreshed_2026-05-24,"Shipped: distance/taxi-vs-tour tables, swim + who-should-visit H2s, €25 pricing. Re-measure 2026-06-21.",3
+P1,agadir day trips,/blog/agadir-day-trips.html,0,173,0%,21.0,GSC May 2026,ready_to_rebuild,"Execute existing brief; route cards + tour links",4
+P0,jet ski agadir,/tours/tour-jet-ski-agadir-new.html,2,2641,0.08%,6.1,GSC May 2026,ready_to_refresh,"Price table, duration in title, marina context",5
+P1,marrakech day trip from agadir,/tours/day-trip-marrakech-from-agadir-new.html,0,49,0%,21.8,GSC May 2026,ready_to_refresh,"Execute existing brief; link from transport guide",5
+P2,souss massa national park,/blog/souss-massa-national-park-agadir-guide.html,8,1227,0.65%,7.4,GSC May 2026,refreshed_2026-05-24,"Shipped: quick-answer table, who-should-book H2, mid-article CTA. Re-measure 2026-06-21.",3
+P2,is agadir cheap,/blog/budget-travel-agadir.html,5,817,0.61%,5.9,GSC May 2026,support_refresh,"Sharpen title around budget question",3
+P2,agadir vs essaouira,/blog/agadir-vs-essaouira-2026.html,20,1727,1.16%,7.3,GSC May 2026,maintain,"Link polish only; consolidate fragments",4
+P3,3 days in agadir,/blog/agadir-3-day-itinerary.html,23,1478,1.56%,4.0,GSC May 2026,support_refresh,"Internal links only — do not rewrite",4
+P1,where to stay in agadir,/blog/where-to-stay-in-agadir.html,0,1,0%,1.0,GSC May 2026,ready_to_publish,"Publish after Wave 1-2; link from travel guide",5
+P1,hammam agadir,/tours/tour-moroccan-hammam-agadir.html,3,185,1.62%,9.4,GSC May 2026,ready_to_refresh,"Upgrade as core activity page",5
+P2,quad biking agadir,/tours/tour-agadir-half-quad-biking-adventure.html,0,74,0%,17.2,GSC May 2026,backlog_refresh,"Support with quad guides + internal links",backlog
+P2,boat trip agadir,/tours/tour-agadir-half-day-boat-trip.html,0,140,0%,10.1,GSC May 2026,backlog_refresh,"Refresh inclusions and seasonal framing",backlog
+P2,horse riding agadir,/tours/tour-horse-riding-agadir.html,2,169,1.18%,10.3,GSC May 2026,backlog_refresh,"Trust cues and comparison detail",backlog
+P3,visite agadir,/fr/visite-agadir.html,0,0,0%,>100,research,new_page_candidate,"French hub after Wave 1-3 complete",backlog

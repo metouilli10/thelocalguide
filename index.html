@@ -1654,85 +1654,6 @@
             transform: translateX(4px);
         }
 
-        /* ===== QUICK LINKS SECTION ===== */
-        .quick-links-section {
-            background: linear-gradient(180deg, #fff 0%, #faf8ff 100%);
-            padding: 28px 20px 12px;
-        }
-
-        .quick-links-section__wrapper {
-            max-width: 1360px;
-            margin: 0 auto;
-        }
-
-        .quick-links-section__intro {
-            text-align: center;
-            max-width: 760px;
-            margin: 0 auto 28px;
-        }
-
-        .quick-links-section__title {
-            margin: 0 0 12px;
-            font-size: clamp(1.75rem, 3vw, 2.4rem);
-            font-weight: 800;
-            color: var(--text-dark);
-        }
-
-        .quick-links-section__text {
-            margin: 0;
-            font-size: 1rem;
-            line-height: 1.7;
-            color: var(--text-light);
-        }
-
-        .quick-links-grid {
-            display: grid;
-            grid-template-columns: repeat(3, minmax(0, 1fr));
-            gap: 16px;
-        }
-
-        .quick-link-card {
-            display: block;
-            text-decoration: none;
-            background: #fff;
-            border: 1px solid #ece7ff;
-            border-radius: 18px;
-            padding: 18px 20px;
-            box-shadow: 0 10px 30px rgba(75, 43, 233, 0.06);
-            transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
-        }
-
-        .quick-link-card:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 16px 40px rgba(75, 43, 233, 0.12);
-            border-color: #d8ccff;
-        }
-
-        .quick-link-card__eyebrow {
-            display: inline-block;
-            margin-bottom: 10px;
-            font-size: 0.76rem;
-            letter-spacing: 0.08em;
-            text-transform: uppercase;
-            font-weight: 700;
-            color: var(--primary-700);
-        }
-
-        .quick-link-card__title {
-            display: block;
-            margin-bottom: 8px;
-            font-size: 1.08rem;
-            font-weight: 800;
-            color: var(--text-dark);
-        }
-
-        .quick-link-card__text {
-            display: block;
-            font-size: 0.96rem;
-            line-height: 1.6;
-            color: var(--text-light);
-        }
-
         /* ===== TRIP CARDS SECTION ===== */
         .trip-cards-section {
             background: var(--bg-white);
@@ -2451,11 +2372,6 @@
             text-align: center;
             gap: 20px;
             padding-bottom: 20px;
-            border-bottom: 1px solid rgba(0, 0, 0, 0.08);
-        }
-
-        .feature-item:last-child {
-            border-bottom: none;
         }
 
         .feature-item__icon {
@@ -2744,14 +2660,6 @@
                 max-width: 100%;
             }
 
-            .quick-links-section {
-                padding: 24px 16px 8px;
-            }
-
-            .quick-links-grid {
-                grid-template-columns: 1fr;
-            }
-
             .blog-section {
                 padding: 60px 20px;
             }
@@ -2904,10 +2812,6 @@
 
             .feature-item {
                 padding-bottom: 18px;
-            }
-
-            .feature-item:last-child {
-                border-bottom: none;
             }
 
             .features-section {
@@ -4235,47 +4139,6 @@
             </div>
     </section>
 
-    <section class="quick-links-section" aria-labelledby="quick-links-title">
-        <div class="quick-links-section__wrapper">
-            <div class="quick-links-section__intro">
-                <h2 class="quick-links-section__title" id="quick-links-title">Plan Your Agadir Trip Faster</h2>
-                <p class="quick-links-section__text">These are the pages we want both travelers and Google to understand as the core of your site: compare tours, book your most important excursions, read local guides, or contact us directly.</p>
-            </div>
-            <div class="quick-links-grid">
-                <a href="all-tours.html" class="quick-link-card">
-                    <span class="quick-link-card__eyebrow">Main collection</span>
-                    <span class="quick-link-card__title">All Tours</span>
-                    <span class="quick-link-card__text">Compare Agadir tours, prices, pickup details, and tour types in one place.</span>
-                </a>
-                <a href="tours/tour-paradise-valley-agadir-new.html" class="quick-link-card">
-                    <span class="quick-link-card__eyebrow">Best seller</span>
-                    <span class="quick-link-card__title">Paradise Valley Tour</span>
-                    <span class="quick-link-card__text">Book the most popular Agadir nature trip with natural pools and Atlas scenery.</span>
-                </a>
-                <a href="tours/tour-agadir-half-quad-biking-adventure.html" class="quick-link-card">
-                    <span class="quick-link-card__eyebrow">Adventure</span>
-                    <span class="quick-link-card__title">Quad Biking in Agadir</span>
-                    <span class="quick-link-card__text">See routes, timing, and pricing for one of the top adventure tours near Agadir.</span>
-                </a>
-                <a href="tours/day-trip-marrakech-from-agadir-new.html" class="quick-link-card">
-                    <span class="quick-link-card__eyebrow">Day trip</span>
-                    <span class="quick-link-card__title">Marrakech Day Trip</span>
-                    <span class="quick-link-card__text">Check the itinerary, hotel pickup, and full-day logistics for Marrakech from Agadir.</span>
-                </a>
-                <a href="travel-guide.html" class="quick-link-card">
-                    <span class="quick-link-card__eyebrow">Research first</span>
-                    <span class="quick-link-card__title">Travel Guide</span>
-                    <span class="quick-link-card__text">Read planning guides for Paradise Valley, family travel, cruises, and Agadir day trips.</span>
-                </a>
-                <a href="contact-us.html" class="quick-link-card">
-                    <span class="quick-link-card__eyebrow">Need help?</span>
-                    <span class="quick-link-card__title">Contact Us</span>
-                    <span class="quick-link-card__text">Call, email, or message us on WhatsApp to confirm prices, pickup, or availability.</span>
-                </a>
-            </div>
-        </div>
-    </section>
-
     <!-- POPULAR TOURS SECTION -->
     <section class="trip-cards-section" id="popular-tours">
         <div class="trip-cards-section__wrapper">
@@ -4786,9 +4649,8 @@
                             </div>
                         </div>
                     </a>
-                </div>
-                </div>
             </div>
+        </div>
         </section>
 
     <!-- FEATURES SECTION -->
@@ -4839,21 +4701,6 @@
                 </div>
             </div>
         </section>
-
-    <!-- PILLAR TRAVEL GUIDES (internal discovery) -->
-    <section class="trip-cards-section" id="travel-guides" style="padding-top: 48px; padding-bottom: 24px;">
-        <div class="trip-cards-section__wrapper">
-            <div class="trip-cards-section__header">
-                <h2 class="trip-cards-section__title">Free Agadir travel guides</h2>
-                <p class="trip-cards-section__subtitle">Plan with our most-read articles—then book small-group tours with <a href="all-tours.html">hotel pickup and clear prices</a>.</p>
-            </div>
-            <div style="display: flex; flex-wrap: wrap; gap: 12px; justify-content: center; max-width: 960px; margin: 0 auto 8px;">
-                <a href="blog/top-10-things-to-do-agadir-2026.html" style="display: inline-block; padding: 12px 18px; border-radius: 10px; border: 2px solid var(--primary-500); color: var(--primary-700); font-weight: 600; text-decoration: none;">Top things to do in Agadir 2026</a>
-                <a href="blog/paradise-valley-agadir-guide.html" style="display: inline-block; padding: 12px 18px; border-radius: 10px; border: 2px solid var(--primary-500); color: var(--primary-700); font-weight: 600; text-decoration: none;">Paradise Valley planning guide</a>
-                <a href="blog/agadir-cruise-excursions.html" style="display: inline-block; padding: 12px 18px; border-radius: 10px; border: 2px solid var(--primary-500); color: var(--primary-700); font-weight: 600; text-decoration: none;">Cruise port excursions</a>
-            </div>
-        </div>
-    </section>
 
     <!-- BLOG SECTION -->
     <section class="blog-section">

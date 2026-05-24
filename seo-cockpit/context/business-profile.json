@@ -13,6 +13,11 @@
   },
   "brandPositioning": {
     "summary": "Licensed local tour operator offering small-group excursions and activity tours from Agadir.",
+    "sisterBrand": {
+      "name": "Ranch Tamri",
+      "url": "https://ranchtamri.com/",
+      "focus": "Tamri desert experiences, ranch horse riding, sunset BBQ combos"
+    },
     "voice": [
       "local",
       "practical",

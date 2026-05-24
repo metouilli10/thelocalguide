@@ -157,3 +157,57 @@ If you are not sure where to link:
 1. link to the best supporting blog guide
 2. link to the strongest matching tour page
 3. link to `all-tours.html` only when the user still needs a broader choice set
+
+## Cross-Brand Linking (Ranch Tamri × Agadir Local Guide)
+
+Both brands are owned by the same local team. Cross-links should help users and clarify entity relationships — not create a reciprocal link farm.
+
+### Keyword lanes
+
+| Topic cluster | Primary site | Secondary site role |
+| --- | --- | --- |
+| Tamri desert, Banana Beach, sunset BBQ combos | `ranchtamri.com` | ALG links out contextually |
+| Horse riding at Tamri / Banana Beach | `ranchtamri.com` | ALG assist page links to RT for booking context |
+| Paradise Valley, Marrakech/Essaouira day trips, city tour, jet ski, cooking class | `agadirlocalguide.com` | RT blog/tour pages link out to ALG |
+| Broad "things to do in Agadir" pillar | `agadirlocalguide.com` | RT links to ALG pillar; RT owns Tamri desert angle |
+| Quad biking Agadir (generic) | Split by intent: ALG = standard desert from Agadir; RT = Tamri wild coast + BBQ signature | Cross-link between related guides only |
+
+### From Agadir Local Guide → Ranch Tamri
+
+Link when the content is genuinely Tamri/ranch/desert-BBQ related:
+- `blog/quad-biking-tamri-banana-beach.html` → `https://ranchtamri.com/quad-biking-agadir`
+- `tours/tour-horse-riding-agadir.html` → `https://ranchtamri.com/tours/horse-riding-in-agadir/`
+- Desert/adventure items in `blog/top-10-things-to-do-agadir-2026.html` or `blog/agadir-3-day-itinerary.html`
+- `contact-us.html` partner line
+
+Rules:
+- Max **1–2 contextual outbound links** per page
+- Keep **dofollow** (`rel="noopener"` only)
+- Do **not** add Ranch Tamri links to every tour page
+
+### From Ranch Tamri → Agadir Local Guide
+
+Link when the reader needs day trips, city tours, or broader Agadir planning:
+- Homepage travel guides → `https://agadirlocalguide.com/travel-guide.html`
+- `best-things-to-do-in-agadir` blog → ALG top-10 + day trips hub
+- Desert tour pages → ALG Paradise Valley / Marrakech / day trips pages
+- Footer: one sitewide link to `https://agadirlocalguide.com/`
+
+### Sitewide footer partner line
+
+- ALG footer: `Tamri desert tours & ranch experiences → Ranch Tamri`
+- RT footer: `Agadir day trips & travel guides → Agadir Local Guide`
+
+Max **one footer link per direction**. No keyword-stuffed partner blocks.
+
+### Schema
+
+- ALG `LocalBusiness` `sameAs` includes `https://ranchtamri.com/`
+- RT `LocalBusiness` / `Organization` `sameAs` includes `https://agadirlocalguide.com/`
+- Shared `founder` Person: Yassine
+
+### Guardrails
+
+- Never duplicate the same tour title + meta on both sites without differentiation
+- Author boxes may mention both brands once
+- Re-check GSC for cannibalization on shared queries (target: 2026-06-21)

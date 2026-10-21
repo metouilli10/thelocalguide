@@ -211,33 +211,11 @@ Useful local commands:
 - `npm run indexnow:submit:all` submits every URL in `sitemap.xml` to IndexNow
 - `npm run indexnow:submit -- /blog/agadir-day-trips.html` submits specific changed URLs to IndexNow
 
-## Stripe Instant Booking
+## Tour booking
 
-Selected fixed-price tours now support direct payment with Stripe through Vercel serverless functions.
+Tour pages use a single primary "Book Now on WhatsApp" action. It opens a prefilled message to `+212700006467` containing the tour name and canonical URL. The old Bokun widgets are removed from tour pages. Existing `instant-booking.html?tour=...` links redirect to the matching tour page, so visitors no longer reach the Stripe form.
 
-Files involved:
-- `instant-booking.html` - shared booking form and checkout entry page
-- `booking-success.html` / `booking-cancelled.html` - post-checkout pages
-- `js/instant-booking.js` - client-side booking logic
-- `js/tour-data.js` - shared tour catalog used for prices and instant-booking availability
-- `api/create-checkout-session.js` - creates Stripe Checkout Sessions
-- `api/checkout-session.js` - loads booking details for the success page
-- `api/stripe-webhook.js` - verifies Stripe webhook events
-
-Environment variables:
-- `STRIPE_SECRET_KEY`
-- `STRIPE_WEBHOOK_SECRET`
-- `SITE_URL`
-
-Stripe setup checklist:
-1. Copy `.env.example` values into your Vercel environment settings.
-2. In Stripe, create a webhook endpoint pointing to `/api/stripe-webhook`.
-3. Subscribe that webhook to `checkout.session.completed`.
-4. Test the flow with a Stripe test key before switching to live mode.
-
-Tour prices now come from `js/tour-data.js`, which is shared by the homepage, tour pages, blog sidebars, and instant-booking flow.
-
-To enable more tours for instant booking, add or update the tour entry in `js/tour-data.js`, set `instantBooking: true`, and link the tour page button to `instant-booking.html?tour=your-slug`.
+The Stripe API endpoints and payment status pages remain in the repository for historical transactions, but the public tour booking flow does not call them. `js/tour-data.js` still supplies shared tour details and prices.
 
 After changing prices in `js/tour-data.js`, run `npm run sync:tour-prices` to refresh the static HTML source prices, matching schema blocks, and `data/instant-booking-tours.json`.
 

@@ -35,10 +35,12 @@
     return map;
   }
 
-  function formatPriceText(price, currentText) {
+  function formatPriceText(price, currency, currentText) {
     const trimmed = (currentText || "").replace(/\s+/g, " ").trim();
     const prefix = /^from\b/i.test(trimmed) ? "From " : "";
-    return `${prefix}€${price}`;
+    const amount = Number(price).toLocaleString("en-US");
+    const formatted = String(currency).toLowerCase() === "mad" ? `${amount} MAD` : `€${amount}`;
+    return `${prefix}${formatted}`;
   }
 
   function updateCurrentTourBookingPrice(tourByPath) {
@@ -49,7 +51,7 @@
     }
 
     document.querySelectorAll(".booking-column .price-amount").forEach(function (node) {
-      node.textContent = formatPriceText(currentTour.price, node.textContent);
+      node.textContent = formatPriceText(currentTour.price, currentTour.currency, node.textContent);
     });
   }
 
@@ -80,7 +82,7 @@
           return;
         }
 
-        node.textContent = formatPriceText(tour.price, node.textContent);
+        node.textContent = formatPriceText(tour.price, tour.currency, node.textContent);
       });
   }
 

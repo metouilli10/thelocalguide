@@ -134,6 +134,16 @@
       currency: "eur"
     },
     {
+      slug: "timlaline-experience",
+      name: "Timlaline Experience from Agadir",
+      pagePath: "/tours/tour-timlaline-experience-agadir.html",
+      price: 35,
+      currency: "eur",
+      duration: "Morning 4.5 hours; sunset typically 5 hours",
+      pickup: "Agadir hotel pickup included",
+      tagline: "Taghazout, colorful Aghroud, Timlaline sandboarding and canyon views."
+    },
+    {
       slug: "souss-massa",
       name: "Souss Massa National Park Tour",
       pagePath: "/tours/tour-souss-massa-park-agadir.html",

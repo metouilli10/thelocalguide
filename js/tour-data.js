@@ -144,6 +144,16 @@
       tagline: "Taghazout, colorful Aghroud, Timlaline sandboarding and canyon views."
     },
     {
+      slug: "timlaline-quad-camel-bbq",
+      name: "Timlaline Quad & Camel Ride with BBQ",
+      pagePath: "/tours/tour-timlaline-quad-camel-bbq-agadir.html",
+      price: 80,
+      currency: "eur",
+      duration: "About 6 hours; typically 16:00–22:00",
+      pickup: "Agadir and Taghazout hotel pickup included",
+      tagline: "One hour of quad riding, one hour of camel riding, then BBQ at Ranch Tamri."
+    },
+    {
       slug: "souss-massa",
       name: "Souss Massa National Park Tour",
       pagePath: "/tours/tour-souss-massa-park-agadir.html",

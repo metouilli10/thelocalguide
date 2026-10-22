@@ -19,16 +19,17 @@
     const pickup = form.elements.namedItem("pickup").value;
     const hotel = form.elements.namedItem("hotel").value.trim().replace(/\s+/g, " ");
 
-    totalNode.textContent = `€${(adults * 80).toLocaleString("en-US")}`;
+    const total = adults * 55 + children * 30;
+    totalNode.textContent = `€${total.toLocaleString("en-US")}`;
 
     const lines = [
       "Hi! I would like to inquire about the Timlaline Quad & Camel Ride with BBQ.",
       `Guests: ${adults} adult${adults === 1 ? "" : "s"}, ${children} child${children === 1 ? "" : "ren"}`,
-      `Adult subtotal: €${adults * 80} (€80 per adult; please confirm child price and participation)`,
+      `Promotional total: €${total} (€55 per adult, €30 per child)`,
       `Preferred date: ${date || "Please ask me"}`,
       `Pickup area: ${pickup}`,
       `Hotel or accommodation: ${hotel || "I will confirm"}`,
-      "Please confirm availability, exact pickup time, rider eligibility, and any child price.",
+      "Please confirm availability, exact pickup time, and rider eligibility for children.",
       "https://agadirlocalguide.com/tours/tour-timlaline-quad-camel-bbq-agadir.html"
     ];
     bookingLink.href = `https://wa.me/212700006467?text=${encodeURIComponent(lines.join("\n"))}`;

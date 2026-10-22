@@ -9,7 +9,7 @@
     },
     {
       "name": "Quad Biking",
-      "url": "/tours/tour-agadir-half-quad-biking-adventure.html",
+      "url": "/tours/tour-quad-biking-adventure-in-timlaline.html",
       "priceEUR": 40,
       "duration": "2 hours",
       "type": "adventure"
@@ -22,11 +22,11 @@
       "type": "beach"
     },
     {
-      "name": "Morning Camel Ride",
-      "url": "/tours/tour-morning-camel-ride-agadir.html",
-      "priceEUR": 30,
+      "name": "Morning Camel Ride in Timlaline",
+      "url": "/tours/tour-morning-camel-ride-timlaline.html",
+      "priceEUR": 20,
       "duration": "2-3 hours",
-      "type": "beach"
+      "type": "dunes"
     },
     {
       "name": "Marrakech Day Trip",

@@ -21,13 +21,13 @@
     },
     {
       slug: "quad-biking",
-      name: "Agadir Quad Biking Tour",
-      pagePath: "/tours/tour-agadir-half-quad-biking-adventure.html",
-      price: 40,
+      name: "Quad Biking Adventure in Timlaline",
+      pagePath: "/tours/tour-quad-biking-adventure-in-timlaline.html",
+      price: 25,
       currency: "eur",
       duration: "3 hours",
       pickup: "Hotel pickup included",
-      tagline: "Half-day desert quad biking adventure with hotel pickup from Agadir.",
+      tagline: "Guided quad biking adventure in Timlaline with hotel pickup from Agadir.",
       instantBooking: true
     },
     {
@@ -43,13 +43,13 @@
     },
     {
       slug: "morning-camel-ride",
-      name: "Morning Camel Ride",
-      pagePath: "/tours/tour-morning-camel-ride-agadir.html",
-      price: 40,
+      name: "Morning Camel Ride in Timlaline",
+      pagePath: "/tours/tour-morning-camel-ride-timlaline.html",
+      price: 20,
       currency: "eur",
       duration: "2 hours",
       pickup: "Hotel pickup included",
-      tagline: "Simple fixed-price morning ride with easy logistics.",
+      tagline: "Guided morning camel ride through Timlaline with hotel pickup from Agadir.",
       instantBooking: true
     },
     {
@@ -137,7 +137,7 @@
       slug: "timlaline-experience",
       name: "Timlaline Experience from Agadir",
       pagePath: "/tours/tour-timlaline-experience-agadir.html",
-      price: 35,
+      price: 30,
       currency: "eur",
       duration: "Morning 4.5 hours; sunset typically 5 hours",
       pickup: "Agadir hotel pickup included",
@@ -147,7 +147,7 @@
       slug: "timlaline-quad-camel-bbq",
       name: "Timlaline Quad & Camel Ride with BBQ",
       pagePath: "/tours/tour-timlaline-quad-camel-bbq-agadir.html",
-      price: 80,
+      price: 55,
       currency: "eur",
       duration: "About 6 hours; typically 16:00–22:00",
       pickup: "Agadir and Taghazout hotel pickup included",

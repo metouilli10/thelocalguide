@@ -12,17 +12,27 @@
     },
     {
       "source": "/tours/tour-quad-biking-agadir.html",
-      "destination": "https://agadirlocalguide.com/tours/tour-agadir-half-quad-biking-adventure.html",
+      "destination": "https://agadirlocalguide.com/tours/tour-quad-biking-adventure-in-timlaline.html",
       "permanent": true
     },
     {
       "source": "/tour-quad-biking-agadir.html",
-      "destination": "https://agadirlocalguide.com/tours/tour-agadir-half-quad-biking-adventure.html",
+      "destination": "https://agadirlocalguide.com/tours/tour-quad-biking-adventure-in-timlaline.html",
+      "permanent": true
+    },
+    {
+      "source": "/tours/tour-agadir-half-quad-biking-adventure.html",
+      "destination": "https://agadirlocalguide.com/tours/tour-quad-biking-adventure-in-timlaline.html",
       "permanent": true
     },
     {
       "source": "/tours/tour-camel-ride-morning-agadir.html",
-      "destination": "https://agadirlocalguide.com/tours/tour-morning-camel-ride-agadir.html",
+      "destination": "https://agadirlocalguide.com/tours/tour-morning-camel-ride-timlaline.html",
+      "permanent": true
+    },
+    {
+      "source": "/tours/tour-morning-camel-ride-agadir.html",
+      "destination": "https://agadirlocalguide.com/tours/tour-morning-camel-ride-timlaline.html",
       "permanent": true
     },
     {

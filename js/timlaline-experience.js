@@ -3,7 +3,7 @@
   if (!form) return;
 
   const packages = {
-    morning: { label: "Morning Explorer (09:00–13:30)", adult: 35, child: 20 },
+    morning: { label: "Morning Explorer (09:00–13:30) — promotion", adult: 30, child: 20 },
     sunset: { label: "Sunset & BBQ (typically 15:00–20:00; timing confirmed seasonally)", adult: 50, child: 35 }
   };
   const rideLabels = {

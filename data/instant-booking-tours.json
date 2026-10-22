@@ -11,13 +11,13 @@
   },
   {
     "slug": "quad-biking",
-    "name": "Agadir Quad Biking Tour",
-    "pagePath": "/tours/tour-agadir-half-quad-biking-adventure.html",
-    "price": 40,
+    "name": "Quad Biking Adventure in Timlaline",
+    "pagePath": "/tours/tour-quad-biking-adventure-in-timlaline.html",
+    "price": 25,
     "currency": "eur",
     "duration": "3 hours",
     "pickup": "Hotel pickup included",
-    "tagline": "Half-day desert quad biking adventure with hotel pickup from Agadir."
+    "tagline": "Guided quad biking adventure in Timlaline with hotel pickup from Agadir."
   },
   {
     "slug": "surf-lessons",
@@ -31,13 +31,13 @@
   },
   {
     "slug": "morning-camel-ride",
-    "name": "Morning Camel Ride",
-    "pagePath": "/tours/tour-morning-camel-ride-agadir.html",
-    "price": 30,
+    "name": "Morning Camel Ride in Timlaline",
+    "pagePath": "/tours/tour-morning-camel-ride-timlaline.html",
+    "price": 20,
     "currency": "eur",
     "duration": "2 hours",
     "pickup": "Hotel pickup included",
-    "tagline": "Simple fixed-price morning ride with easy logistics."
+    "tagline": "Guided morning camel ride through Timlaline with hotel pickup from Agadir."
   },
   {
     "slug": "sunset-camel-ride",

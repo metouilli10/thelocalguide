@@ -43,7 +43,7 @@
       `Base package estimate: €${baseTotal} (€${offer.adult} per adult; €${offer.child} per child under 12)`,
       `Travel to Timlaline: ${rideLabels[ride] || rideLabels.none}`,
       `Preferred date: ${date || "Please ask me"}`,
-      `Agadir hotel: ${hotel || "I will confirm"}`,
+      `Pickup hotel/location (Agadir, Tamraght or Taghazout): ${hotel || "I will confirm"}`,
       "Please confirm availability, exact pickup time, and any optional ride price and eligibility.",
       "https://agadirlocalguide.com/tours/tour-timlaline-experience-agadir.html"
     ];

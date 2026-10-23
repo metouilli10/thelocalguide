@@ -133,11 +133,14 @@
         {
           "name": "Horse Riding",
           "priceFrom": 25,
+          "adultPrice": 45,
           "currency": "EUR",
-          "duration": "2 hours",
+          "duration": "approximately 1.5 hours riding",
           "difficulty": "Easy to Moderate",
           "minAge": 8,
-          "availability": "Daily"
+          "availability": "Daily",
+          "childPrice": 25,
+          "bbqDinnerAdultPrice": 55
         },
         {
           "name": "Croco Parc Visit",

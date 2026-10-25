@@ -14,7 +14,7 @@
       pagePath: "/tours/tour-paradise-valley-agadir-new.html",
       price: 25,
       currency: "eur",
-      duration: "4-5 hours",
+      duration: "5-6 hours",
       pickup: "Hotel pickup included",
       tagline: "Natural pools, mountain views, and an easy half-day format.",
       instantBooking: true

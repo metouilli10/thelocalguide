@@ -1,0 +1,114 @@
+<body data-tour-name="Paradise Valley Agadir Tour" data-whatsapp="212700006467">
+  <noscript><img height="1" width="1" style="display:none" alt="" src="https://www.facebook.com/tr?id=728752433893635&amp;ev=PageView&amp;noscript=1"></noscript>
+  <header class="site-header">
+    <div class="shell header-inner">
+      <a class="brand" href="../index.html" aria-label="Agadir Local Guide home">ALG<span class="brand-dot">.</span></a>
+      <nav class="desktop-nav" aria-label="Main navigation">
+        <a href="../index.html">Home</a><a href="../all-tours.html">All Tours</a><a href="../travel-guide.html">Travel Guide</a><a href="../contact-us.html">Contact</a>
+      </nav>
+      <a class="header-cta" href="#booking"><i class="bi bi-whatsapp" aria-hidden="true"></i> Book Now on WhatsApp</a>
+      <button class="menu-toggle" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="mobile-nav"><i class="bi bi-list" aria-hidden="true"></i></button>
+    </div>
+    <nav class="mobile-nav" id="mobile-nav" aria-label="Mobile navigation" hidden>
+      <a href="../index.html">Home</a><a href="../all-tours.html">All Tours</a><a href="../travel-guide.html">Travel Guide</a><a href="../contact-us.html">Contact</a>
+    </nav>
+  </header>
+
+  <main>
+    <div class="shell">
+      <nav class="breadcrumbs" aria-label="Breadcrumb"><a href="../index.html">Home</a><span aria-hidden="true">›</span><a href="../all-tours.html">Tours</a><span aria-hidden="true">›</span><span aria-current="page">Paradise Valley Agadir Tour</span></nav>
+      <div class="hero-grid">
+        <div class="hero-main">
+          <p class="eyebrow">Paradise Valley · Nature Escape</p>
+          <h1>Paradise Valley Agadir Tour</h1>
+          <p class="hero-subtitle">A half-day escape from Agadir with hotel pickup, a short walk, natural pools and mountain views. Swim, relax and enjoy the real Morocco.</p>
+          <div class="fact-row" aria-label="Tour facts">
+            <a href="#reviews"><i class="bi bi-star" aria-hidden="true"></i><strong>4.9</strong> <span>(342 reviews)</span></a>
+            <span><i class="bi bi-clock" aria-hidden="true"></i>5–6 hours</span>
+            <span><i class="bi bi-car-front" aria-hidden="true"></i>Pickup included</span>
+            <span><i class="bi bi-calendar-check" aria-hidden="true"></i>Free cancellation</span>
+          </div>
+          <div class="gallery" aria-label="Paradise Valley tour photos">
+            <button class="gallery-photo gallery-photo-main" type="button" data-photo="0" aria-label="Open main Paradise Valley photo"><img src="../img/excursions/Paradise%20Valley/paradiise/paradise2.webp" alt="Family enjoying a Paradise Valley natural pool" fetchpriority="high"></button>
+            <button class="gallery-photo" type="button" data-photo="1" aria-label="Open second Paradise Valley photo"><img src="../img/excursions/Paradise%20Valley/paradiise/paradise%201.webp" alt="Travelers walking through Paradise Valley" loading="lazy"></button>
+            <button class="gallery-photo" type="button" data-photo="2" aria-label="Open third Paradise Valley photo"><img src="../img/excursions/Paradise%20Valley/paradiise/paradise3.webp" alt="Travelers at a Paradise Valley pool" loading="lazy"></button>
+          </div>
+        </div>
+        <aside class="booking-column" id="booking" aria-labelledby="booking-heading">
+          <div class="booking-card">
+            <p class="booking-from" id="booking-heading">From</p>
+            <p class="booking-price"><strong class="price-amount">€25</strong><span>per person</span></p>
+            <p class="booking-description">Includes pickup, transport, local guide support and free time in Paradise Valley.</p>
+            <form id="booking-form">
+              <label class="field-label" for="tour-date">Select date</label>
+              <div class="field-wrap"><i class="bi bi-calendar3" aria-hidden="true"></i><input id="tour-date" name="date" type="date" required aria-label="Select tour date"></div>
+              <label class="field-label" for="tour-guests">Guests</label>
+              <div class="field-wrap"><i class="bi bi-person" aria-hidden="true"></i><select id="tour-guests" name="guests" aria-label="Number of guests"><option value="1">1 adult</option><option value="2" selected>2 adults</option><option value="3">3 adults</option><option value="4">4 adults</option><option value="5">5 adults</option><option value="6">6 adults</option><option value="7">7 adults</option><option value="8">8 adults</option></select></div>
+              <button class="booking-button" type="submit"><i class="bi bi-whatsapp" aria-hidden="true"></i> Book now on WhatsApp <i class="bi bi-arrow-right" aria-hidden="true"></i></button>
+            </form>
+            <p class="booking-reassurance">Check availability before paying.<br>Our team will confirm your booking details on WhatsApp.</p>
+            <div class="booking-perks"><span><i class="bi bi-shield-check" aria-hidden="true"></i>Free cancellation</span><span><i class="bi bi-people" aria-hidden="true"></i>Small groups<br>(max 8)</span><span><i class="bi bi-chat-dots" aria-hidden="true"></i>Quick confirmation</span></div>
+          </div>
+        </aside>
+      </div>
+    </div>
+
+    <section class="benefits section-surface" id="highlights" aria-labelledby="benefits-heading"><div class="shell">
+      <div class="section-kicker"></div><h2 class="benefits-heading" id="benefits-heading">Why you’ll love this trip</h2>
+      <div class="benefits-grid">
+        <article class="benefit"><div class="benefit-icon"><i class="bi bi-water" aria-hidden="true"></i></div><div><h3>Swim in natural pools</h3><p>Cool off beneath palm trees and mountain scenery when conditions allow.</p></div></article>
+        <article class="benefit"><div class="benefit-icon"><i class="bi bi-image" aria-hidden="true"></i></div><div><h3>A relaxed, scenic experience</h3><p>A short guided walk, time to take photos and space to enjoy the landscape.</p></div></article>
+        <article class="benefit"><div class="benefit-icon"><i class="bi bi-people" aria-hidden="true"></i></div><div><h3>Great for small groups</h3><p>A friendly half-day escape for couples, friends and active families.</p></div></article>
+      </div>
+    </div></section>
+
+    <section class="itinerary section-surface" id="itinerary" aria-labelledby="itinerary-heading"><div class="shell">
+      <div class="section-kicker"></div><h2 id="itinerary-heading">Itinerary</h2><p class="section-intro">A simple plan for an unforgettable half-day in Paradise Valley.</p>
+      <div class="itinerary-grid">
+        <article class="itinerary-step"><div class="step-top"><span class="step-number">1</span><div><h3>Hotel pickup</h3><p>Pickup time confirmed</p></div></div><img src="../img/excursions/Paradise%20Valley/paradise-pickup-van.jpg" alt="Passenger minibus on a scenic road near Agadir" loading="lazy"><p>We collect you from your hotel in Agadir or the agreed meeting point and drive toward Paradise Valley.</p></article>
+        <article class="itinerary-step"><div class="step-top"><span class="step-number">2</span><div><h3>Walk to the valley</h3><p>15–30 minute walk</p></div></div><img src="../img/excursions/Paradise%20Valley/paradiise/paradise4.webp" alt="Rocky route into Paradise Valley" loading="lazy"><p>Enjoy a short guided walk on uneven ground to the valley’s main viewpoint and pool area.</p></article>
+        <article class="itinerary-step"><div class="step-top"><span class="step-number">3</span><div><h3>Free time to relax</h3><p>About 1½–2 hours</p></div></div><img src="../img/excursions/Paradise%20Valley/paradiise/paradise3.webp" alt="Visitors enjoying the Paradise Valley pools" loading="lazy"><p>Relax, take photos and swim if water levels and safety conditions allow before returning to Agadir.</p></article>
+      </div>
+    </div></section>
+
+    <section class="included section-surface" id="included" aria-labelledby="included-heading"><div class="shell included-grid">
+      <div><div class="section-kicker"></div><h2 id="included-heading">What’s included</h2><ul class="check-list"><li>Hotel pickup and drop-off from Agadir</li><li>English-speaking local guide</li><li>Transport in an air-conditioned vehicle</li><li>Guided walk through the valley</li><li>Time to relax by the natural pools</li></ul></div>
+      <div><div class="section-kicker"></div><h2>Not included</h2><ul class="cross-list"><li>Food and drinks</li><li>Personal expenses and tips</li><li>Optional local purchases</li></ul></div>
+      <div class="signature"><p>Real places.<br>Local people.<br>Unforgettable memories.</p></div>
+    </div></section>
+
+    <section class="people-section section-surface"><div class="shell people-grid">
+      <div class="people-panel"><div class="section-kicker"></div><h2>Guided by locals</h2><div class="people-content"><img src="../img/excursions/Paradise%20Valley/paradise-valley-local-guide.webp" alt="Local guide smiling beside a Paradise Valley pool" width="1000" height="750" loading="lazy"><p>Our English-speaking local guides know the valley and its changing conditions. They’ll help you enjoy the walk and make the most of your time in nature.</p></div></div>
+      <div class="people-panel" id="reviews"><div class="section-kicker"></div><h2>What travelers say</h2><div class="review-summary"><div class="review-stars" aria-label="4.9 out of 5 stars">★★★★★</div><strong>Rated 4.9/5 by travelers</strong><p>Based on 342 reviews</p><a href="https://www.google.com/maps/search/?api=1&amp;query=Agadir+Local+Guide" target="_blank" rel="noopener noreferrer">Explore traveler feedback <i class="bi bi-arrow-up-right" aria-hidden="true"></i></a></div></div>
+    </div></section>
+
+    <section class="practical section-surface" id="practical"><div class="shell practical-grid">
+      <div><div class="section-kicker"></div><h2>Good to know</h2><p class="practical-intro">A few useful details before you head into the valley.</p><div class="practical-tips">
+        <div class="practical-tip"><span class="practical-tip-icon"><i class="bi bi-geo-alt" aria-hidden="true"></i></span><div><h3>Easy pickup</h3><p>From central Agadir and main Taghazout coast resorts. We confirm your time and place after booking.</p></div></div>
+        <div class="practical-tip"><span class="practical-tip-icon"><i class="bi bi-sun" aria-hidden="true"></i></span><div><h3>Come prepared</h3><p>Wear shoes with grip. Bring water, sun protection and swimwear if you’d like to dip in.</p></div></div>
+        <div class="practical-tip"><span class="practical-tip-icon"><i class="bi bi-water" aria-hidden="true"></i></span><div><h3>Nature sets the pace</h3><p>Pool levels change with the season and rainfall, so swimming depends on conditions.</p></div></div>
+        <div class="practical-tip"><span class="practical-tip-icon"><i class="bi bi-calendar2-check" aria-hidden="true"></i></span><div><h3>Plans can change</h3><p>Cancel free up to 24 hours before your trip.</p></div></div>
+      </div></div>
+      <div id="faq"><div class="section-kicker"></div><h2>Frequently asked questions</h2><details><summary>Is Paradise Valley worth visiting from Agadir?</summary><p>Yes. It is one of the most popular nature trips near Agadir, especially if you want mountain scenery, fresh air, and a break from the coast. The main appeal is the landscape and relaxed atmosphere, with swimming possible on many days when conditions are good.</p></details><details><summary>How difficult is the hike at Paradise Valley?</summary><p>It is a light to moderate walk rather than a long hike. You should still expect uneven ground and some rocky sections, so closed shoes are important.</p></details><details><summary>Can I swim in the natural pools?</summary><p>Often yes, but it depends on the season, water level, and recent weather. Bring swimwear and a towel if you want the option, but it is better to treat swimming as possible rather than guaranteed.</p></details><details><summary>What should I wear for the Paradise Valley tour?</summary><p>Wear comfortable closed shoes, light clothes, and bring water, sun protection, and swimwear if you may want to swim. A small bag is useful for your phone, towel, and personal items.</p></details><details><summary>How long is the Paradise Valley tour from Agadir?</summary><p>The full experience is usually around 5 to 6 hours including pickup and drop-off. Exact timing depends on your pickup area, road conditions, and the pace of the group.</p></details><details><summary>Is the tour suitable for children?</summary><p>Yes, for children who are comfortable walking on uneven ground and are supervised by an adult. It is a better fit for active families than for very young children.</p></details></div>
+    </div></section>
+
+    <section class="extra-info section-surface" id="more-details"><div class="shell extra-grid">
+      <div><div class="section-kicker"></div><h2>A little more about the day</h2><p>Paradise Valley is a relaxed nature escape from Agadir into the Anti-Atlas foothills. The scenery is the main attraction: rocky paths, palms, mountain views and natural pools. The drive and short guided walk are part of the experience, with time to pause for photos and enjoy the valley at your own pace.</p><p>The full outing is usually 5–6 hours door to door. It works well for couples, friends and active families who want a break from the coast without committing to a long trek. Water levels vary through the year, so swimming is an option when conditions are good rather than a guarantee. For season notes and self-drive advice, read our <a href="../blog/paradise-valley-agadir-guide.html">complete Paradise Valley guide</a>.</p></div>
+      <div><div class="section-kicker"></div><h2>Pickup and preparation</h2><p>We can collect guests from hotels in central Agadir, the Marina and port area, and the main resorts in Taghazout, Aourir and Tamraght. If you are outside those areas, we can usually agree on a convenient meeting point. Your exact pickup time is confirmed after availability is checked; please be ready 5–10 minutes early.</p><p>Wear closed shoes with grip for uneven, rocky ground. Bring water, sun protection and a small bag. Pack a towel and swimwear if you would like to swim. Children should be supervised by an adult, and the walk is not ideal for visitors with serious mobility limitations. Follow your guide’s advice around the pools and changing water conditions.</p></div>
+    </div></section>
+    <section class="related section-surface" aria-labelledby="related-heading"><div class="shell related-inner"><div class="section-kicker"></div><h2 id="related-heading">More good days around Agadir</h2><div class="related-grid">
+      <a class="related-card" href="tour-quad-biking-adventure-in-timlaline.html"><div class="related-photo"><img src="../img/excursions/Quad%20Biking/quad%20new/tinified/1.webp" alt="Quad biking near Agadir" loading="lazy"><span class="related-badge">Adventure</span></div><div class="related-card-body"><span class="related-duration"><i class="bi bi-clock" aria-hidden="true"></i> 3 hours</span><strong>Quad Biking Adventure</strong><p>Ride the dunes and desert trails near Agadir.</p><div class="related-card-footer"><span class="related-price"><small>From</small> <b class="tour-card-price">€25</b> <small>/ person</small></span><span class="related-arrow" aria-hidden="true"><i class="bi bi-arrow-up-right"></i></span></div></div></a>
+      <a class="related-card" href="tour-agadir-sunset-camel-ride.html"><div class="related-photo"><img src="../img/excursions/Camel%20Ride/camel%20ride%201.webp" alt="Sunset camel ride near Agadir" loading="lazy"><span class="related-badge">At sunset</span></div><div class="related-card-body"><span class="related-duration"><i class="bi bi-clock" aria-hidden="true"></i> 2 hours</span><strong>Sunset Camel Ride</strong><p>A gentle beach ride in the evening light.</p><div class="related-card-footer"><span class="related-price"><small>From</small> <b class="tour-card-price">€40</b> <small>/ person</small></span><span class="related-arrow" aria-hidden="true"><i class="bi bi-arrow-up-right"></i></span></div></div></a>
+      <a class="related-card" href="day-trip-essaouira-from-agadir-new.html"><div class="related-photo"><img src="../img/excursions/Essaouira%20Day%20Trip/essaouira%201.webp" alt="Essaouira coastal town" loading="lazy"><span class="related-badge">Coastal escape</span></div><div class="related-card-body"><span class="related-duration"><i class="bi bi-clock" aria-hidden="true"></i> Full day</span><strong>Essaouira Day Trip</strong><p>Explore the medina and Atlantic coast.</p><div class="related-card-footer"><span class="related-price"><small>From</small> <b class="tour-card-price">€30</b> <small>/ person</small></span><span class="related-arrow" aria-hidden="true"><i class="bi bi-arrow-up-right"></i></span></div></div></a>
+    </div></div></section>
+
+    <section class="final-cta"><div class="shell final-cta-inner"><div><p class="eyebrow">Your Paradise Valley day starts here</p><h2>Ready to explore the valley?</h2><p>Choose your date and we’ll confirm the details with you directly.</p></div><a href="#booking" class="booking-button">Check availability <i class="bi bi-arrow-right" aria-hidden="true"></i></a></div></section>
+  </main>
+
+  <footer class="site-footer"><div class="container footer-main"><div class="footer-about"><a class="brand" href="/" aria-label="Agadir Local Guide home">ALG<span class="brand-dot">.</span></a><p>Discover the best of Agadir with local experts. Authentic experiences, unforgettable adventures.</p><div class="social-links"><a href="https://web.facebook.com/Agadirlocalguide/" target="_blank" rel="noopener" aria-label="Facebook"><i class="bi bi-facebook"></i></a><a href="https://www.instagram.com/localguide117/" target="_blank" rel="noopener" aria-label="Instagram"><i class="bi bi-instagram"></i></a><a href="https://wa.me/212700006467" target="_blank" rel="noopener" aria-label="WhatsApp"><i class="bi bi-whatsapp"></i></a></div></div><div class="footer-col"><h3>Quick Links</h3><a href="/">Home</a><a href="/all-tours.html">All Tours</a><a href="/#guides">Travel Guide</a><a href="/#reviews">Reviews</a><a href="/contact-us.html">Contact</a></div><div class="footer-col"><h3>Popular Tours</h3><a href="/tours/tour-paradise-valley-agadir-new.html">Paradise Valley</a><a href="/tours/tour-quad-biking-adventure-in-timlaline.html">Quad Biking</a><a href="/tours/tour-agadir-sunset-camel-ride.html">Sunset Camel Ride</a><a href="/tours/day-trip-essaouira-from-agadir-new.html">Essaouira Day Trip</a></div><div class="footer-col"><h3>Support</h3><a href="/faq.html">FAQs</a><a href="/privacy-policy.html">Privacy Policy</a><a href="/terms-and-conditions.html">Terms &amp; Conditions</a><a href="/cookie-policy.html">Cookie Policy</a></div><div class="footer-col footer-contact"><h3>Plan your trip</h3><p>Tell us where you want to go. We’ll help you choose the right day.</p><a class="footer-contact__button" href="https://wa.me/212700006467?text=Hello%2C%20can%20you%20help%20me%20plan%20an%20Agadir%20trip%3F" target="_blank" rel="noopener"><i class="bi bi-whatsapp" aria-hidden="true"></i> Chat with a local</a><a class="footer-email" href="mailto:info@agadirlocalguide.com">info@agadirlocalguide.com</a></div></div><div class="container footer-bottom"><span>© 2026 Agadir Local Guide. All rights reserved.</span><span>Made for good days in Agadir.</span></div></footer>
+
+  <dialog class="photo-dialog" id="photo-dialog" aria-label="Tour photo viewer"><button class="dialog-close" type="button" aria-label="Close photo viewer"><i class="bi bi-x-lg" aria-hidden="true"></i></button><img id="dialog-image" alt=""><div class="dialog-controls"><button type="button" data-direction="-1" aria-label="Previous photo"><i class="bi bi-arrow-left" aria-hidden="true"></i></button><span id="photo-count"></span><button type="button" data-direction="1" aria-label="Next photo"><i class="bi bi-arrow-right" aria-hidden="true"></i></button></div></dialog>
+  <div class="mobile-booking-bar"><span>From <strong>€25</strong> / person</span><a href="#booking">Check availability</a></div>
+  <script src="../js/tour-data.js"></script><script src="../js/tour-prices.js"></script><script defer src="../js/tour-page-v2.js"></script>
+</body>
+</html>

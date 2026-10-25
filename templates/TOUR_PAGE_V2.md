@@ -2,8 +2,6 @@
 
 The Paradise Valley page at `tours/tour-paradise-valley-agadir-new.html` is the working example. Its layout is shared through `css/tour-page-v2.css` and `js/tour-page-v2.js`. `tour-page-v2-body.partial.html.txt` is the editable body pattern used to create it.
 
-All 19 canonical tour pages now use this layout. The older Marrakech and Taroudant URLs are local redirect pages; Vercel also redirects those URLs to their canonical versions.
-
 To make another tour page:
 
 1. Copy the Paradise Valley HTML file to the new tour URL. Keep the shared stylesheet and script links.
@@ -13,8 +11,6 @@ To make another tour page:
 5. Use tour-specific images with descriptive alt text. The gallery buttons and lightbox are handled by the shared JavaScript.
 6. Add or update the tour entry in `js/tour-data.js` so the shared price synchronizer stays accurate.
 7. Review the page at desktop and mobile widths, and test the date, guest, gallery, menu, and WhatsApp actions.
-
-For tours with multiple packages, add a `#tour-package` select to the booking form. Package cards can use `data-package-choice` links; the shared JavaScript includes the selected package in the WhatsApp request.
 
 Keep the footer markup in the page and `tour-page-v2-body.partial.html.txt` aligned with the homepage footer. Tour-page footer links to homepage sections use `/#guides` and `/#reviews` so they work from `/tours/` URLs.
 

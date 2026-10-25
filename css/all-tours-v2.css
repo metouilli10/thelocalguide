@@ -1,0 +1,46 @@
+/* All tours page: builds on homepage-v2.css */
+.hero--catalog{height:auto;min-height:620px;align-items:flex-end}
+.hero--catalog .hero__image{object-position:center 40%}
+.hero--catalog .hero__shade{background:linear-gradient(90deg,rgba(5,15,22,.86) 0%,rgba(6,18,25,.66) 32%,rgba(8,20,29,.28) 62%,rgba(8,20,29,.06) 85%),linear-gradient(0deg,rgba(13,14,15,.35),transparent 45%)}
+.hero--catalog .hero__content{padding-block:170px 64px}
+.hero--catalog h1{font-size:clamp(58px,6vw,96px);margin:20px 0 20px}
+.hero--catalog .hero__content>p{max-width:600px;margin-bottom:28px}
+.catalog-breadcrumbs{display:flex;gap:10px;font-size:13px;color:rgba(255,255,255,.78);margin-bottom:26px}
+.catalog-breadcrumbs a:hover{color:var(--yellow)}
+.catalog-facts{display:flex;flex-wrap:wrap;gap:12px}
+.catalog-facts span{display:inline-flex;align-items:center;gap:9px;padding:10px 16px;border:1px solid rgba(255,255,255,.28);border-radius:999px;background:rgba(44,34,30,.5);backdrop-filter:blur(10px);font-size:14px;font-weight:600;color:#fff}
+.catalog-facts i{color:var(--yellow);font-size:17px}
+
+.catalog-section .section-head{align-items:flex-end}
+.catalog-count{margin:0;color:var(--muted);font-size:15px}
+.catalog-count strong{color:var(--ink);font-family:var(--font-heading);font-size:22px}
+.filter-bar{display:flex;flex-wrap:wrap;gap:10px;margin:0 0 30px}
+.filter-chip{display:inline-flex;align-items:center;gap:8px;min-height:44px;padding:0 18px;border:1px solid var(--color-border);border-radius:999px;background:#fff;color:var(--ink);font-size:14px;font-weight:700;cursor:pointer;transition:background .2s,border-color .2s,color .2s}
+.filter-chip span{display:inline-grid;place-items:center;min-width:24px;height:24px;padding:0 6px;border-radius:999px;background:var(--color-background-warm);color:var(--muted);font-size:12px}
+.filter-chip:hover{border-color:var(--ink)}
+.filter-chip.is-active{background:var(--color-navy);border-color:var(--color-navy);color:#fff}
+.filter-chip.is-active span{background:var(--yellow);color:var(--ink)}
+.filter-chip:focus-visible{outline:3px solid var(--yellow);outline-offset:2px}
+.tour-grid--catalog .tour-card[hidden]{display:none}
+.tour-grid--catalog .tour-card:first-child .tour-card__badge{background:var(--color-navy)}
+.tour-grid--catalog .tour-card[href*="paradise-valley"] .tour-card__badge{background:var(--color-terracotta)}
+
+.catalog-help{display:flex;align-items:center;justify-content:space-between;gap:28px;margin-top:44px;padding:30px 34px;border-radius:18px;background:var(--color-background-warm);border:1px solid var(--color-border)}
+.catalog-help h3{margin:0 0 6px;font-family:var(--font-heading);font-size:22px;letter-spacing:-.03em}
+.catalog-help p{margin:0;max-width:620px;color:var(--muted);font-size:15px;line-height:1.6}
+.catalog-help .button{flex:none;min-height:54px;padding-inline:26px;font-size:15px;font-weight:700}
+
+@media(max-width:760px){
+  .hero--catalog{min-height:600px}
+  .hero--catalog .hero__image{object-position:44% center}
+  .hero--catalog .hero__shade{background:linear-gradient(0deg,rgba(5,15,22,.9) 0%,rgba(6,18,25,.7) 45%,rgba(8,20,29,.25) 100%)}
+  .hero--catalog .hero__content{padding-block:130px 44px}
+  .hero--catalog h1{font-size:clamp(42px,12vw,54px)}
+  .catalog-facts span{font-size:13px;padding:8px 13px}
+  .catalog-section .section-head{flex-direction:column;align-items:flex-start;gap:10px}
+  .filter-bar{flex-wrap:nowrap;overflow-x:auto;max-width:100%;margin-inline:0;padding:0 0 6px;scrollbar-width:none}
+  .filter-bar::-webkit-scrollbar{display:none}
+  .filter-chip{flex:none}
+  .catalog-help{flex-direction:column;align-items:flex-start;padding:24px}
+  .catalog-help .button{width:100%;justify-content:center}
+}

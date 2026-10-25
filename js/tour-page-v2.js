@@ -14,16 +14,6 @@
   dateInput.min = localDate;
 
   const bookingForm = document.querySelector('#booking-form');
-  const packageSelect = document.querySelector('#tour-package');
-  document.querySelectorAll('[data-package-choice]').forEach((link) => {
-    link.addEventListener('click', () => {
-      if (!packageSelect) return;
-      const option = Array.from(packageSelect.options).find(
-        (item) => item.dataset.choice === link.dataset.packageChoice
-      );
-      if (option) packageSelect.value = option.value;
-    });
-  });
   bookingForm?.addEventListener('submit', (event) => {
     event.preventDefault();
     if (!bookingForm.reportValidity()) return;
@@ -33,8 +23,7 @@
     const tour = document.body.dataset.tourName;
     const phone = document.body.dataset.whatsapp;
     const pageUrl = document.querySelector('link[rel="canonical"]')?.href || window.location.href;
-    const packageChoice = packageSelect ? ` Package: ${packageSelect.value}.` : '';
-    const message = `Hi! I would like to check availability for the ${tour} on ${dateLabel} for ${guests} ${guests === '1' ? 'adult' : 'adults'}.${packageChoice} Please confirm the pickup details and total price. ${pageUrl}`;
+    const message = `Hi! I would like to check availability for the ${tour} on ${dateLabel} for ${guests} ${guests === '1' ? 'adult' : 'adults'}. Please confirm the pickup details and total price. ${pageUrl}`;
     window.open(`https://wa.me/${phone}?text=${encodeURIComponent(message)}`, '_blank', 'noopener,noreferrer');
   });
 

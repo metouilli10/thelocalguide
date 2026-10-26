@@ -1,5 +1,8 @@
 RewriteEngine On
 
+# Serve the branded page with a real 404 status for missing URLs.
+ErrorDocument 404 /404.html
+
 # Force non-www canonical host
 RewriteCond %{HTTP_HOST} ^www\.agadirlocalguide\.com$ [NC]
 RewriteRule ^(.*)$ https://agadirlocalguide.com/$1 [L,R=301]

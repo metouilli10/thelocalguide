@@ -1,0 +1,131 @@
+.error-page {
+  background: var(--cream);
+}
+
+.error-page .site-header {
+  position: relative;
+  inset: auto;
+  height: 72px;
+  background: #fff;
+  color: var(--ink);
+  box-shadow: 0 1px 0 rgba(23, 36, 56, .09);
+}
+
+.error-page .site-header .brand {
+  font-size: 36px;
+  background: linear-gradient(100deg, #f5bd00, #db4c2f 75%);
+  color: transparent;
+  background-clip: text;
+  -webkit-background-clip: text;
+}
+
+.error-page .site-header .brand-dot { color: #dd502f; }
+.error-page .desktop-nav a { color: var(--ink); }
+.error-page .desktop-nav a:hover { color: var(--coral); }
+.error-page .menu-toggle { color: var(--ink); background: #fff; }
+
+.error-hero {
+  position: relative;
+  isolation: isolate;
+  display: flex;
+  align-items: center;
+  min-height: clamp(570px, 68vh, 760px);
+  overflow: hidden;
+  color: #fff;
+  background: #172438;
+}
+
+.error-hero__image,
+.error-hero__shade {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.error-hero__image {
+  z-index: -2;
+  object-fit: cover;
+  object-position: center 52%;
+}
+
+.error-hero__shade {
+  z-index: -1;
+  background: linear-gradient(90deg, rgba(7, 20, 33, .94) 0%, rgba(7, 20, 33, .79) 42%, rgba(7, 20, 33, .18) 100%);
+}
+
+.error-hero__content { padding-block: 92px 100px; }
+.error-hero__eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  margin: 0 0 24px;
+  color: var(--yellow);
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: .17em;
+  text-transform: uppercase;
+}
+.error-hero__eyebrow::before { content: ""; width: 32px; height: 2px; background: currentColor; }
+.error-hero h1 {
+  max-width: 820px;
+  margin: 0 0 24px;
+  font: 800 clamp(56px, 6.5vw, 94px)/1.02 "Plus Jakarta Sans", sans-serif;
+  letter-spacing: -.065em;
+  text-wrap: balance;
+}
+.error-hero h1 em { color: var(--yellow); font-style: normal; }
+.error-hero__text {
+  max-width: 590px;
+  margin: 0 0 34px;
+  color: rgba(255, 255, 255, .87);
+  font-size: clamp(17px, 1.6vw, 20px);
+  line-height: 1.6;
+}
+.error-hero__actions { display: flex; flex-wrap: wrap; align-items: center; gap: 16px 27px; }
+.error-hero__secondary {
+  display: inline-flex;
+  align-items: center;
+  gap: 9px;
+  font-size: 15px;
+  font-weight: 800;
+  border-bottom: 1px solid rgba(255, 255, 255, .65);
+  padding-block: 10px;
+}
+.error-hero__secondary:hover { color: var(--yellow); border-color: var(--yellow); }
+.error-hero__secondary i { font-size: 17px; }
+
+.error-paths { background: var(--cream); padding-block: 39px 46px; }
+.error-paths__inner { display: flex; flex-wrap: wrap; align-items: center; gap: 17px 30px; }
+.error-paths p { margin: 0; font-size: 14px; font-weight: 800; }
+.error-paths__links { display: flex; flex-wrap: wrap; gap: 12px 25px; }
+.error-paths__links a { font-size: 14px; font-weight: 800; color: #40536b; }
+.error-paths__links a:hover { color: var(--coral); }
+.error-paths__links i { color: var(--coral); margin-left: 4px; }
+
+@media (max-width: 900px) {
+  .error-page .site-header { height: 76px; }
+  .error-page .site-header .brand { font-size: 38px; }
+  .error-page .mobile-nav:not([hidden]) { top: 76px; background: #fff; color: var(--ink); }
+  .error-page .mobile-nav a { border-color: var(--line); }
+  .error-page .mobile-nav a:last-child { color: var(--coral); }
+  .error-hero { min-height: 660px; }
+}
+
+@media (max-width: 760px) {
+  .error-page .site-header { height: 68px; }
+  .error-page .site-header .brand { font-size: 35px; }
+  .error-page .mobile-nav:not([hidden]) { top: 68px; }
+  .error-hero { min-height: 680px; align-items: flex-end; }
+  .error-hero__image { object-position: 63% center; }
+  .error-hero__shade { background: linear-gradient(0deg, rgba(7, 20, 33, .95), rgba(7, 20, 33, .7) 61%, rgba(7, 20, 33, .25)); }
+  .error-hero__content { padding-block: 130px 65px; }
+  .error-hero h1 { font-size: clamp(48px, 10vw, 68px); }
+  .error-hero__text { font-size: 16px; }
+  .error-paths { padding-block: 32px 38px; }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .error-hero__content { animation: error-appear .7s ease-out both; }
+  @keyframes error-appear { from { opacity: 0; transform: translateY(14px); } to { opacity: 1; transform: translateY(0); } }
+}

@@ -1,0 +1,379 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>{{PAGE_TITLE}}</title>
+    <meta name="description" content="{{META_DESCRIPTION}}" />
+    <meta name="author" content="Agadir Local Guide" />
+    <!-- Remove noindex only when the article is ready to publish at its canonical URL. -->
+    <meta name="robots" content="noindex,nofollow" />
+    <link rel="canonical" href="{{CANONICAL_URL}}" />
+    <link rel="icon" href="../img/alg%20logo.png" />
+    <meta property="og:type" content="article" />
+    <meta property="og:site_name" content="Agadir Local Guide" />
+    <meta property="og:title" content="{{PAGE_TITLE}}" />
+    <meta property="og:description" content="{{META_DESCRIPTION}}" />
+    <meta property="og:url" content="{{CANONICAL_URL}}" />
+    <meta property="og:image" content="{{ABSOLUTE_HERO_IMAGE_URL}}" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="{{PAGE_TITLE}}" />
+    <meta name="twitter:description" content="{{META_DESCRIPTION}}" />
+    <meta name="twitter:image" content="{{ABSOLUTE_HERO_IMAGE_URL}}" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@700;800&amp;family=DM+Sans:wght@400;500;600;700;800&amp;display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
+      rel="stylesheet"
+    />
+    <link href="../css/homepage-v2.css" rel="stylesheet" />
+    <link href="../css/blog-post-v2.css" rel="stylesheet" />
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "BlogPosting",
+        "headline": "{{ARTICLE_HEADING}}",
+        "description": "{{META_DESCRIPTION}}",
+        "image": "{{ABSOLUTE_HERO_IMAGE_URL}}",
+        "datePublished": "{{PUBLISHED_ISO}}",
+        "dateModified": "{{UPDATED_ISO}}",
+        "author": { "@type": "Person", "name": "{{AUTHOR_NAME}}" },
+        "publisher": {
+          "@type": "Organization",
+          "name": "Agadir Local Guide",
+          "logo": {
+            "@type": "ImageObject",
+            "url": "https://agadirlocalguide.com/img/alg%20logo.png"
+          }
+        },
+        "mainEntityOfPage": { "@type": "WebPage", "@id": "{{CANONICAL_URL}}" }
+      }
+    </script>
+  </head>
+  <body class="post-page">
+    <a class="skip-link" href="#article-content">Skip to article</a>
+    <div class="post-progress" aria-hidden="true"></div>
+    <header class="site-header">
+      <div class="container header-inner">
+        <a aria-label="Agadir Local Guide home" class="brand" href="/"
+          >ALG<span class="brand-dot">.</span></a
+        >
+        <nav aria-label="Main navigation" class="desktop-nav">
+          <a href="../all-tours.html">Experiences</a
+          ><a href="/#why-us">About us</a
+          ><a aria-current="page" href="../travel-guide.html">Travel guide</a
+          ><a href="../contact-us.html">Contact</a>
+        </nav>
+        <a
+          class="header-book"
+          href="https://wa.me/212700006467?text=Hello%2C%20I%27d%20like%20to%20book%20an%20Agadir%20tour"
+          rel="noopener"
+          target="_blank"
+          ><i aria-hidden="true" class="bi bi-whatsapp"></i> Chat on WhatsApp</a
+        ><button
+          aria-controls="mobile-nav"
+          aria-expanded="false"
+          aria-label="Open menu"
+          class="menu-toggle"
+          type="button"
+        >
+          <i aria-hidden="true" class="bi bi-list"></i>
+        </button>
+      </div>
+      <nav
+        aria-label="Mobile navigation"
+        class="mobile-nav"
+        hidden=""
+        id="mobile-nav"
+      >
+        <a href="../all-tours.html">Experiences</a
+        ><a href="/#why-us">About us</a
+        ><a aria-current="page" href="../travel-guide.html">Travel guide</a
+        ><a href="../contact-us.html">Contact</a
+        ><a
+          href="https://wa.me/212700006467?text=Hello%2C%20I%27d%20like%20to%20book%20an%20Agadir%20tour"
+          rel="noopener"
+          target="_blank"
+          >Chat on WhatsApp</a
+        >
+      </nav>
+    </header>
+    <main>
+      <section class="post-hero" aria-labelledby="post-title">
+        <img
+          class="post-hero__image"
+          src="{{HERO_IMAGE_PATH}}"
+          alt="{{HERO_IMAGE_ALT}}"
+          fetchpriority="high"
+        />
+        <div class="post-hero__shade" aria-hidden="true"></div>
+        <div class="container post-hero__inner">
+          <nav class="post-breadcrumbs" aria-label="Breadcrumb">
+            <a href="../index.html">Home</a
+            ><i class="bi bi-chevron-right" aria-hidden="true"></i
+            ><a href="../travel-guide.html">Travel guide</a
+            ><i class="bi bi-chevron-right" aria-hidden="true"></i
+            ><span>{{BREADCRUMB_LABEL}}</span>
+          </nav>
+          <span class="post-kicker">{{CATEGORY}} · Local guide</span>
+          <h1 id="post-title">{{ARTICLE_HEADING}}</h1>
+          <p class="post-dek">{{ARTICLE_DEK}}</p>
+          <div class="post-byline">
+            <img
+              src="{{AUTHOR_IMAGE_PATH}}"
+              alt="{{AUTHOR_NAME}}, local guide"
+              width="45"
+              height="45"
+            /><strong>By {{AUTHOR_NAME}}</strong
+            ><span class="post-byline__dot" aria-hidden="true">·</span
+            ><span>Local guide</span
+            ><span class="post-byline__dot" aria-hidden="true">·</span
+            ><time datetime="{{UPDATED_ISO}}">Updated {{UPDATED_DISPLAY}}</time
+            ><span class="post-byline__dot" aria-hidden="true">·</span
+            ><span>{{READING_TIME}} min read</span>
+          </div>
+        </div>
+      </section>
+      <div class="post-introbar">
+        <div class="container post-introbar__inner">
+          <div class="post-introbar__note">
+            <strong>Local insight, practical answers.</strong> Plan your day
+            with confidence.
+          </div>
+          <div class="post-share">
+            <span>Share guide</span
+            ><button
+              type="button"
+              class="post-copy"
+              aria-label="Copy article link"
+            >
+              <i class="bi bi-link-45deg" aria-hidden="true"></i></button
+            ><a
+              class="post-whatsapp"
+              href="https://wa.me/?text={{ENCODED_SHARE_TEXT_AND_URL}}"
+              target="_blank"
+              rel="noopener"
+              aria-label="Share on WhatsApp"
+              ><i class="bi bi-whatsapp" aria-hidden="true"></i
+            ></a>
+          </div>
+        </div>
+      </div>
+      <div class="container post-layout">
+        <article class="post-article" id="article-content">
+          <div class="post-prose">
+            <p class="lead">{{OPENING_SUMMARY_WITH_MAIN_ANSWER}}</p>
+            <h2 id="first-section">{{FIRST_SECTION_HEADING}}</h2>
+            <p>{{FIRST_SECTION_PARAGRAPH}}</p>
+            <!-- Optional content patterns: headings with unique IDs, lists, tables, figures,
+     .info-callout and .faq-section details. Keep one H1 in the hero. -->
+            <div class="info-callout">
+              <div class="callout-icon">✦</div>
+              <div class="callout-content">
+                <h3>{{CALLOUT_TITLE}}</h3>
+                <p>{{CALLOUT_TEXT}}</p>
+              </div>
+            </div>
+            <h2 id="practical-details">{{SECOND_SECTION_HEADING}}</h2>
+            <p>{{SECOND_SECTION_PARAGRAPH}}</p>
+            <!-- Add article sections here. The sidebar contents list is built from h2[id]. -->
+            <section class="faq-section">
+              <h2 id="faqs">Frequently asked questions</h2>
+              <div class="faq-accordion">
+                <details class="faq-accordion__item">
+                  <summary class="faq-accordion__summary">
+                    {{FAQ_QUESTION}}
+                  </summary>
+                  <div class="faq-accordion__body"><p>{{FAQ_ANSWER}}</p></div>
+                </details>
+              </div>
+            </section>
+          </div>
+          <section class="post-author" aria-label="About the author">
+            <img
+              src="{{AUTHOR_IMAGE_PATH}}"
+              alt="{{AUTHOR_NAME}}, local guide"
+              width="88"
+              height="88"
+              loading="lazy"
+            />
+            <div>
+              <span class="post-author__eyebrow">Your local perspective</span>
+              <h2>Written by {{AUTHOR_NAME}}</h2>
+              <p>{{AUTHOR_BIO}}</p>
+              <a href="../contact-us.html"
+                >Meet the local guide
+                <i class="bi bi-arrow-up-right" aria-hidden="true"></i
+              ></a>
+            </div>
+          </section>
+          <section class="post-cta" aria-labelledby="post-cta-title">
+            <span class="post-cta__eyebrow">Make it a good day</span>
+            <h2 id="post-cta-title">{{CTA_HEADING}}</h2>
+            <p>{{CTA_DESCRIPTION}}</p>
+            <a class="button button--yellow" href="{{TOUR_LINK}}"
+              >{{CTA_LABEL}} <i class="bi bi-arrow-right" aria-hidden="true"></i
+            ></a>
+          </section>
+        </article>
+        <aside class="post-sidebar" aria-label="Article navigation">
+          <p class="post-sidebar__label">In this guide</p>
+          <nav class="post-toc" aria-label="On this page" id="post-toc"></nav>
+          <div class="post-sidecard">
+            <i class="bi bi-compass post-sidecard__icon" aria-hidden="true"></i>
+            <h3>{{SIDEBAR_HEADING}}</h3>
+            <p>{{SIDEBAR_DESCRIPTION}}</p>
+            <a href="{{TOUR_LINK}}"
+              >Explore the tour
+              <i class="bi bi-arrow-right" aria-hidden="true"></i
+            ></a>
+          </div>
+        </aside>
+      </div>
+      <section class="post-related" aria-labelledby="related-title">
+        <div class="container">
+          <div class="post-related__head">
+            <div>
+              <span class="eyebrow">KEEP EXPLORING</span>
+              <h2 id="related-title">
+                More local stories<span class="dot">.</span>
+              </h2>
+            </div>
+            <a class="post-related__all" href="../travel-guide.html"
+              >All travel guides
+              <i class="bi bi-arrow-up-right" aria-hidden="true"></i
+            ></a>
+          </div>
+          <div class="post-related__grid">
+            <!-- Repeat 2–3 cards; use real related posts and descriptive image alt text. -->
+            <a class="post-related__card" href="{{RELATED_1_LINK}}"
+              ><img
+                src="{{RELATED_1_IMAGE}}"
+                alt="{{RELATED_1_IMAGE_ALT}}"
+                loading="lazy" />
+              <div>
+                <small>{{RELATED_1_CATEGORY}}</small>
+                <h3>{{RELATED_1_TITLE}}</h3>
+                <span
+                  >Read guide
+                  <i class="bi bi-arrow-right" aria-hidden="true"></i
+                ></span></div
+            ></a>
+            <a class="post-related__card" href="{{RELATED_2_LINK}}"
+              ><img
+                src="{{RELATED_2_IMAGE}}"
+                alt="{{RELATED_2_IMAGE_ALT}}"
+                loading="lazy" />
+              <div>
+                <small>{{RELATED_2_CATEGORY}}</small>
+                <h3>{{RELATED_2_TITLE}}</h3>
+                <span
+                  >Read guide
+                  <i class="bi bi-arrow-right" aria-hidden="true"></i
+                ></span></div
+            ></a>
+            <a class="post-related__card" href="{{RELATED_3_LINK}}"
+              ><img
+                src="{{RELATED_3_IMAGE}}"
+                alt="{{RELATED_3_IMAGE_ALT}}"
+                loading="lazy" />
+              <div>
+                <small>{{RELATED_3_CATEGORY}}</small>
+                <h3>{{RELATED_3_TITLE}}</h3>
+                <span
+                  >Read guide
+                  <i class="bi bi-arrow-right" aria-hidden="true"></i
+                ></span></div
+            ></a>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer class="site-footer">
+      <div class="container footer-main">
+        <div class="footer-about">
+          <a aria-label="Agadir Local Guide home" class="brand" href="/"
+            >ALG<span class="brand-dot">.</span></a
+          >
+          <p>
+            Discover the best of Agadir with local experts. Authentic
+            experiences, unforgettable adventures.
+          </p>
+          <div class="social-links">
+            <a
+              aria-label="Facebook"
+              href="https://web.facebook.com/Agadirlocalguide/"
+              rel="noopener"
+              target="_blank"
+              ><i class="bi bi-facebook"></i></a
+            ><a
+              aria-label="Instagram"
+              href="https://www.instagram.com/localguide117/"
+              rel="noopener"
+              target="_blank"
+              ><i class="bi bi-instagram"></i></a
+            ><a
+              aria-label="WhatsApp"
+              href="https://wa.me/212700006467"
+              rel="noopener"
+              target="_blank"
+              ><i class="bi bi-whatsapp"></i
+            ></a>
+          </div>
+        </div>
+        <div class="footer-col">
+          <h3>Quick Links</h3>
+          <a href="/">Home</a><a href="../all-tours.html">All Tours</a
+          ><a href="../travel-guide.html">Travel Guide</a
+          ><a href="/#reviews">Reviews</a
+          ><a href="../contact-us.html">Contact</a>
+        </div>
+        <div class="footer-col">
+          <h3>Popular Tours</h3>
+          <a href="/tours/tour-paradise-valley-agadir-new.html"
+            >Paradise Valley</a
+          ><a href="/tours/tour-quad-biking-adventure-in-timlaline.html"
+            >Quad Biking</a
+          ><a href="/tours/tour-agadir-sunset-camel-ride.html"
+            >Sunset Camel Ride</a
+          ><a href="/tours/day-trip-essaouira-from-agadir-new.html"
+            >Essaouira Day Trip</a
+          >
+        </div>
+        <div class="footer-col">
+          <h3>Support</h3>
+          <a href="../faq.html">FAQs</a
+          ><a href="../privacy-policy.html">Privacy Policy</a
+          ><a href="../terms-and-conditions.html">Terms &amp; Conditions</a
+          ><a href="../cookie-policy.html">Cookie Policy</a>
+        </div>
+        <div class="footer-col footer-contact">
+          <h3>Plan your trip</h3>
+          <p>
+            Tell us where you want to go. We’ll help you choose the right day.
+          </p>
+          <a
+            class="footer-contact__button"
+            href="https://wa.me/212700006467?text=Hello%2C%20can%20you%20help%20me%20plan%20an%20Agadir%20trip%3F"
+            rel="noopener"
+            target="_blank"
+            ><i aria-hidden="true" class="bi bi-whatsapp"></i> Chat with a
+            local</a
+          ><a class="footer-email" href="mailto:info@agadirlocalguide.com"
+            >info@agadirlocalguide.com</a
+          >
+        </div>
+      </div>
+      <div class="container footer-bottom">
+        <span>© 2026 Agadir Local Guide. All rights reserved.</span
+        ><span>Made for good days in Agadir.</span>
+      </div>
+    </footer>
+    <script defer src="../js/homepage-v2.js"></script>
+    <script defer src="../js/blog-post-v2.js"></script>
+  </body>
+</html>

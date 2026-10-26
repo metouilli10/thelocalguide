@@ -14,6 +14,23 @@
   dateInput.min = localDate;
 
   const bookingForm = document.querySelector('#booking-form');
+  const optionSelect = document.querySelector('#tour-option');
+  const updateOptionPrice = () => {
+    const price = optionSelect?.selectedOptions[0]?.dataset.price;
+    if (!price) return;
+    document.querySelector('.price-amount').textContent = price;
+    document.querySelector('.mobile-booking-bar strong').textContent = price;
+  };
+  optionSelect?.addEventListener('change', updateOptionPrice);
+  document.querySelectorAll('[data-select-option]').forEach((button) => {
+    button.addEventListener('click', () => {
+      if (optionSelect) {
+        optionSelect.value = button.dataset.selectOption;
+        updateOptionPrice();
+      }
+      document.querySelector('#booking')?.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    });
+  });
   bookingForm?.addEventListener('submit', (event) => {
     event.preventDefault();
     if (!bookingForm.reportValidity()) return;
@@ -23,7 +40,8 @@
     const tour = document.body.dataset.tourName;
     const phone = document.body.dataset.whatsapp;
     const pageUrl = document.querySelector('link[rel="canonical"]')?.href || window.location.href;
-    const message = `Hi! I would like to check availability for the ${tour} on ${dateLabel} for ${guests} ${guests === '1' ? 'adult' : 'adults'}. Please confirm the pickup details and total price. ${pageUrl}`;
+    const option = optionSelect ? ` (${optionSelect.selectedOptions[0].textContent.trim()})` : '';
+    const message = `Hi! I would like to check availability for the ${tour}${option} on ${dateLabel} for ${guests} ${guests === '1' ? 'adult' : 'adults'}. Please confirm the pickup details and total price. ${pageUrl}`;
     window.open(`https://wa.me/${phone}?text=${encodeURIComponent(message)}`, '_blank', 'noopener,noreferrer');
   });
 

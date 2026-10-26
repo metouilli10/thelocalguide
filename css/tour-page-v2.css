@@ -190,3 +190,29 @@ details p{color:var(--muted);font-size:14px;margin:12px 20px 3px 0}
 .booking-button:hover,.mobile-booking-bar a:hover{background:var(--color-primary-hover)}
 .final-cta{background:var(--color-background-warm)}
 .final-cta .eyebrow{color:var(--terra)}
+
+/* Longer tour names and itineraries use the same layout without clipping. */
+.tour-page--expanded .hero-main h1{white-space:normal;font-size:clamp(40px,4.3vw,64px);text-wrap:balance}
+.tour-page--expanded .benefits-grid>.benefit:nth-child(3n),.tour-page--expanded .itinerary-grid>.itinerary-step:nth-child(3n){border-right:0}
+.tour-page--expanded .benefits-grid>.benefit:nth-child(n+4),.tour-page--expanded .itinerary-grid>.itinerary-step:nth-child(n+4){border-top:1px solid var(--line);padding-top:24px}
+.tour-detail{padding:15px 0;border-bottom:1px solid var(--line)}
+.tour-detail:first-of-type{padding-top:5px}
+.tour-detail h3,.tour-details>h3{font:800 17px/1.3 var(--display);margin:0 0 5px}
+.tour-detail p{margin:5px 0!important}
+.detail-list{list-style:none;margin:11px 0 0;padding:0;display:grid;gap:8px}
+.detail-list li{position:relative;padding-left:22px;color:var(--muted);font-size:14px;line-height:1.55}
+.detail-list li::before{content:'✓';position:absolute;left:0;color:var(--terra);font-weight:800}
+.tour-options{background:#fffdfa}
+.tour-options-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:20px;margin-top:26px}
+.tour-options-grid--three{grid-template-columns:repeat(3,minmax(0,1fr))}
+.tour-option{display:flex;flex-direction:column;align-items:flex-start;padding:25px;border:1px solid var(--line);border-radius:12px;background:#fff;box-shadow:0 8px 22px rgba(25,30,40,.04)}
+.tour-option .option-label{color:var(--terra);font-size:12px;font-weight:800;text-transform:uppercase;letter-spacing:.08em}
+.tour-option h3{font:800 23px/1.2 var(--display);margin:10px 0}
+.tour-option p{color:var(--muted);font-size:14px;line-height:1.6;margin-bottom:19px}
+.tour-option strong{font:800 27px var(--display);margin-top:auto}
+.tour-option>span:not(.option-label){font-size:13px;color:var(--muted)}
+.tour-option button{margin-top:18px;padding:11px 16px;border:0;border-radius:7px;background:var(--yellow);color:var(--ink);font-weight:800}
+.tour-option button:hover{background:var(--color-primary-hover)}
+.option-note{margin:17px 0 0;color:var(--muted);font-size:13px}
+@media(max-width:800px){.tour-page--expanded .benefits-grid>.benefit:nth-child(n+4),.tour-page--expanded .itinerary-grid>.itinerary-step:nth-child(n+4){border-top:0;padding-top:0}.tour-options-grid,.tour-options-grid--three{grid-template-columns:1fr}}
+@media(max-width:560px){.tour-page--expanded .hero-main h1{font-size:clamp(36px,10vw,50px)}}

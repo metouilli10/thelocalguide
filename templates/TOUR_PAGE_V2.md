@@ -1,13 +1,13 @@
 # Tour page v2 template
 
-The Paradise Valley page at `tours/tour-paradise-valley-agadir-new.html` is the working example. Its layout is shared through `css/tour-page-v2.css` and `js/tour-page-v2.js`. `tour-page-v2-body.partial.html.txt` is the editable body pattern used to create it.
+The Paradise Valley page at `tours/tour-paradise-valley-agadir-new.html` is the original design reference. All tour HTML pages now share the layout through `css/tour-page-v2.css` and `js/tour-page-v2.js`. `tour-page-v2-body.partial.html.txt` is the editable body pattern used to create it. Pages with longer titles and itineraries use the `tour-page--expanded` body class.
 
 To make another tour page:
 
 1. Copy the Paradise Valley HTML file to the new tour URL. Keep the shared stylesheet and script links.
 2. Replace the title, description, canonical URL, Open Graph tags, and structured data in the `<head>` with facts for that tour.
 3. Replace the visible title, subtitle, price, duration, rating, gallery, itinerary, inclusions, practical details, and FAQ in the body. Remove any rating or review count that cannot be verified.
-4. Set `data-tour-name` and `data-whatsapp` on `<body>`. The date and guest controls will create a tour-specific WhatsApp availability request.
+4. Set `data-tour-name` and `data-whatsapp` on `<body>`. The date and guest controls will create a tour-specific WhatsApp availability request. Tours with package choices can add a `#tour-option` select with `data-price` on each option; the shared script updates the displayed price and includes the choice in the request.
 5. Use tour-specific images with descriptive alt text. The gallery buttons and lightbox are handled by the shared JavaScript.
 6. Add or update the tour entry in `js/tour-data.js` so the shared price synchronizer stays accurate.
 7. Review the page at desktop and mobile widths, and test the date, guest, gallery, menu, and WhatsApp actions.

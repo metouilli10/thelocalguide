@@ -99,9 +99,9 @@
         },
         {
           "name": "Agadir City Tour",
-          "priceFrom": 20,
+          "priceFrom": 25,
           "currency": "EUR",
-          "duration": "3 hours",
+          "duration": "3-4 hours",
           "difficulty": "Easy",
           "minAge": 0,
           "availability": "Daily"

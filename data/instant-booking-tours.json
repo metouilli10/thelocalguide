@@ -61,13 +61,13 @@
   },
   {
     "slug": "city-tour-cable-car",
-    "name": "Agadir Guided City Tour with Cable Car",
+    "name": "Agadir Guided City Tour (optional cable car)",
     "pagePath": "/tours/tour-agadir-guided-city-tour-cable-car.html",
     "price": 25,
     "currency": "eur",
     "duration": "Half day",
     "pickup": "Hotel pickup included",
-    "tagline": "Low-friction city tour that fits instant booking well."
+    "tagline": "La Medina entrance included; add the cable car for €10 per person."
   },
   {
     "slug": "half-day-boat-trip",
